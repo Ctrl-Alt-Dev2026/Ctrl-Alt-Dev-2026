@@ -12,6 +12,8 @@ from pydantic import BaseModel
 from ai.router import register_ai
 from ai.patterns.router import register_patterns
 from api.review_router import register_review
+from api.safecross_router import register_safecross
+from safecross.setup import MODEL_PATH
 from api.snapshots import SnapshotError, load_snapshot
 
 
@@ -39,7 +41,7 @@ class EventsResponse(SnapshotMetadata):
     events: list[dict[str, Any]]
 
 
-def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None):
+def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None, safecross_directory: str | Path | None = None, safecross_model_path: str | Path | None = None):
     directory = Path(
         snapshot_directory if snapshot_directory is not None
         else os.environ.get("SAFEIASI_SNAPSHOT_DIR", DEFAULT_SNAPSHOT_DIRECTORY)
@@ -56,20 +58,29 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
         yield
 
     application = FastAPI(
-        title="SafeIași API", version="0.4.0", lifespan=lifespan,
+        title="SafeIași API", version="0.5.0", lifespan=lifespan,
         description=(
             "API local cu citire de snapshot sintetic validat. /health confirmă doar serverul. "
             "Datele lipsă/invalide produc HTTP 503 pe rutele de date. "
             "Extracția AI produce candidați neverificați; /imports îi salvează pentru review local. "
             "Corectarea și deciziile operatorului sunt versionate, fără publicare automată pe hartă. "
-            "Procesarea live necesită Ollama; reluările salvate sunt etichetate explicit."
-            " /patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
+            "Extracția live a textului necesită Ollama; reluările salvate sunt etichetate explicit. "
+            "SafeCross opțional analizează local video CFR cu YOLOX și review uman, separat de accidente. "
+            "/patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
             "fără modificarea snapshot-ului sau a datelor de review."
         ),
     )
     application.state.review_directory = Path(
         review_directory if review_directory is not None
         else os.environ.get("SAFEIASI_REVIEW_DIR", DEFAULT_REVIEW_DIRECTORY)
+    ).resolve()
+    application.state.safecross_directory = Path(
+        safecross_directory if safecross_directory is not None
+        else os.environ.get("SAFEIASI_SAFECROSS_DIR", DEFAULT_REVIEW_DIRECTORY.parent / "safecross")
+    ).resolve()
+    application.state.safecross_model_path = Path(
+        safecross_model_path if safecross_model_path is not None
+        else os.environ.get("SAFEIASI_SAFECROSS_MODEL", MODEL_PATH)
     ).resolve()
 
     def snapshot_or_error(request):
@@ -115,7 +126,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return register_patterns(register_review(register_ai(application)))
+    return register_patterns(register_safecross(register_review(register_ai(application))))
 
 
 app = create_app()

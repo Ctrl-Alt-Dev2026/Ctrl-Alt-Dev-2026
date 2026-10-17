@@ -25,6 +25,8 @@ class ApiStartupTests(unittest.TestCase):
             self.assertIn("/health", schema.json()["paths"])
             self.assertIn("/api/v1/ai/extract", schema.json()["paths"])
             self.assertIn("/api/v1/ai/replays/{article_id}", schema.json()["paths"])
+            self.assertIn("/api/v1/ai/patterns/discover", schema.json()["paths"])
+            self.assertIn("/api/v1/safecross/jobs", schema.json()["paths"])
             home = client.get("/", follow_redirects=False)
             self.assertEqual(307, home.status_code)
             self.assertEqual("/docs", home.headers["location"])

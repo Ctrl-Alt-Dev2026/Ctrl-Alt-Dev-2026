@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>SafeCross · SafeIași</title>
+  <link rel="stylesheet" href="/safecross/assets/styles.css">
+  <script src="/safecross/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/safecross" aria-label="SafeIași, pagina SafeCross"><span class="brand-mark" aria-hidden="true">S</span><span>SafeIași <small>/ SafeCross</small></span></a>
+    <a class="api-link" href="/docs">Documentație API <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">ASISTENȚĂ PENTRU VERIFICAREA VIDEO</p><h1 id="page-title">Oprește-te la momentele<br>care merită verificate.</h1><p class="intro-copy">Identifică persoane și vehicule, urmărește interacțiunile candidate și revizuiește dovezile din filmare.</p></div>
+      <div class="system-status"><span class="status-dot" id="model-dot"></span><span id="model-status" role="status">Verific motorul de analiză…</span></div>
+    </section>
+
+    <div id="global-message" class="notice hidden" role="alert"></div>
+
+    <div class="workspace">
+      <section class="panel setup-panel" aria-labelledby="setup-heading">
+        <div class="section-heading"><span class="step">01</span><h2 id="setup-heading">Pregătește filmarea</h2></div>
+        <form id="upload-form">
+          <label class="upload-zone" for="video-file"><span class="upload-icon" aria-hidden="true">↑</span><strong>Alege un clip video</strong><span>MP4, MOV, WebM, AVI sau MKV · fișier local</span><span class="file-name" id="file-name">Niciun fișier selectat</span></label>
+          <input class="visually-hidden" id="video-file" name="video" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-msvideo,video/x-matroska,.mp4,.mov,.webm,.avi,.mkv" required>
+          <p class="hint" id="upload-limits">Limitele de procesare se încarcă…</p>
+
+          <label for="operator">Operator</label><input id="operator" name="operator" type="text" placeholder="Numele sau identificatorul tău" maxlength="100" autocomplete="name" required>
+          <label for="data-mode">Originea datelor</label><select id="data-mode" name="data_mode"><option value="synthetic">Sintetic / demonstrație</option><option value="observed">Observat / filmare reală</option></select>
+          <p class="hint">Folosește „observat” doar pentru o înregistrare reală pe care o poți utiliza.</p>
+          <label class="check-label camera-confirmation"><input id="fixed-camera" name="fixed_camera_confirmed" type="checkbox" required> Confirm că imaginea este stabilă (cameră fixă sau clip stabilizat documentat).</label>
+          <p class="hint">Mișcarea camerei poate produce traiectorii false. Stabilizarea unui clip derivat trebuie documentată în proveniență.</p>
+          <details class="source-details"><summary>Sursă, atribuire și drept de utilizare</summary><p class="hint">Opțional pentru o filmare proprie. Completează proveniența dacă utilizezi un clip public.</p><label for="source-url">URL-ul sursei</label><input id="source-url" type="url" maxlength="2000" placeholder="https://…"><label for="attribution">Atribuire</label><input id="attribution" type="text" maxlength="1000" placeholder="Autor / instituție / platformă"><label for="license">Licență sau permisiune</label><input id="license" type="text" maxlength="1000" placeholder="Licența indicată de autor sau permisiunea obținută"></details>
+
+          <div class="roi-heading"><label for="roi-json">Zona urmărită <span class="optional">opțional</span></label><button id="clear-roi" type="button" class="text-button">Șterge zona</button></div>
+          <p class="hint">Activează delimitarea, apoi apasă pe imagine pentru un poligon cu minimum 3 puncte. Fără poligon, se analizează întregul cadru.</p>
+          <button id="edit-roi" type="button" class="secondary-button roi-edit-button" aria-pressed="false" disabled>Delimitează zona în imagine</button>
+          <details class="roi-details"><summary>Introdu coordonatele manual</summary><textarea id="roi-json" rows="3" spellcheck="false" placeholder="[[0.1,0.2],[0.8,0.2],[0.8,0.9]]" aria-describedby="roi-help"></textarea><p class="hint" id="roi-help">Perechi [x, y] normalizate între 0 și 1; originea este colțul din stânga sus.</p></details>
+          <p id="roi-status" class="hint" aria-live="polite">Întregul cadru · fără zonă delimitată</p>
+          <button id="analyze-button" class="primary-button" type="submit"><span>Analizează clipul</span><span aria-hidden="true">→</span></button>
+        </form>
+        <div class="method-note"><strong>Cum apare un candidat?</strong><p>AI-ul detectează obiecte. Reguli deterministe semnalează apropieri între traiectorii. Operatorul verifică fiecare moment.</p></div>
+      </section>
+
+      <section class="panel video-panel" aria-labelledby="video-heading">
+        <div class="section-heading video-heading"><div class="heading-group"><span class="step">02</span><h2 id="video-heading">Verifică dovezile</h2></div><span id="mode-badge" class="badge hidden"></span></div>
+        <div class="video-stage" id="video-stage">
+          <div class="empty-video" id="empty-video"><span class="crossing-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span><strong>De la filmare la observații verificabile</strong><p>Încarcă un clip pentru previzualizare și delimitarea zonei.</p></div>
+          <div class="video-wrap hidden" id="video-wrap"><video id="source-video" controls playsinline preload="metadata" aria-label="Filmarea analizată"></video><canvas id="overlay" aria-label="Poligonul zonei urmărite și obiectele detectate"></canvas></div>
+        </div>
+        <div class="video-toolbar"><label class="check-label"><input id="show-tracks" type="checkbox" checked> Obiecte și traiectorii</label><span id="video-metadata" class="hint">Previzualizare locală</span></div>
+        <div class="processing hidden" id="processing" aria-live="polite"><div class="progress-copy"><strong id="progress-title">Se pregătește analiza</strong><span id="progress-percent">0%</span></div><progress id="progress-bar" max="1" value="0" aria-label="Progresul analizei"></progress><p class="hint" id="progress-detail">Fișierul este procesat pe server.</p></div>
+        <div class="analysis-meta hidden" id="analysis-meta"></div>
+        <div class="limitations"><span aria-hidden="true">ⓘ</span><p><strong>O interacțiune semnalată nu este un accident confirmat.</strong> Perspectiva camerei, obstacolele și erorile de detecție pot schimba rezultatul. Această analiză nu măsoară viteze reale, TTC/PET sau probabilități de accident.</p></div>
+      </section>
+    </div>
+
+    <section class="panel results-panel" aria-labelledby="results-heading">
+      <div class="results-header"><div class="heading-group"><span class="step">03</span><h2 id="results-heading">Interacțiuni de verificat</h2><span class="count" id="candidate-count">0</span></div><a id="export-button" class="secondary-button hidden" download>Exportă analiza JSON <span aria-hidden="true">↓</span></a></div>
+      <p class="results-description" id="results-description">După analiză, fiecare candidat va avea un moment în filmare și o imagine pentru revizuire.</p>
+      <div id="candidates" class="candidate-grid"><p class="empty-results">Dovezile vor apărea aici. Confirmarea rămâne la operator.</p></div>
+    </section>
+    <footer>SafeCross este o extensie opțională SafeIași. Rezultatele video rămân separate de inventarul accidentelor și de prioritizarea locațiilor.</footer>
+  </main>
+</body>
+</html>
