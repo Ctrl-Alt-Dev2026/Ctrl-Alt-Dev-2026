@@ -100,7 +100,7 @@ def validate_extraction(article, result, mode):
 class ReviewStore:
     def __init__(self, directory, mode):
         self.directory, self.mode = Path(directory).resolve(), mode
-        if any(self.directory.is_relative_to(_REPOSITORY / name) for name in ("false_data", "ai/benchmarks", ".git")):
+        if any(self.directory.is_relative_to(_REPOSITORY / name) for name in ("false_data", "ai", "context", "risk", "coordonate", ".git")):
             raise ReviewError(503, "protected_review_directory", "Alege un director de lucru separat de sursele și fixture-urile comune.")
         self.path = self.directory / f"{mode}.json"
 

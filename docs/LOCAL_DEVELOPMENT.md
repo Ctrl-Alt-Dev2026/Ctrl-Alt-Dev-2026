@@ -1,6 +1,6 @@
 # Pornirea locală a backend-ului SafeIași
 
-Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. [SafeCross](SAFECROSS.md) adaugă separat interfața video `/safecross`, cu instalare opțională, model YOLOX Nano și FFprobe pentru verificarea timpului. Frontend-ul hărții/dosarelor și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția și review-ul sunt disponibile independent de acestea.
+Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. [SafeCross](SAFECROSS.md) adaugă separat interfața video `/safecross`, cu instalare opțională, model YOLOX Nano și FFprobe pentru verificarea timpului. [Publicarea explicită](PUBLICATION_WORKFLOW.md) adaugă context/scor, API de locații/GeoJSON și dosare JSON/HTML imprimabile. Datele reale revizuite, catalogul de măsuri și ecranele principale rămân de pregătit/integrat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar celelalte fluxuri sunt independente de acestea.
 
 ## Prima instalare — Windows / PowerShell
 
@@ -98,6 +98,12 @@ Dacă datele de intrare se schimbă, rutele de tipare întorc **503 `patterns_un
 Datele sunt separate în `runtime/review/synthetic.json` și `observed.json`, ignorate de Git. Directorul se poate selecta cu `SAFEIASI_REVIEW_DIR`. Rulează un singur proces local, fără `--workers`; rutele de review refuză accesul de la distanță și din altă origine. Stocarea nu necesită o bază de date și nu modifică `false_data/`. Aprobarea nu schimbă snapshot-ul hărții.
 
 Vezi [contractul și exemplul PowerShell complet](REVIEW_WORKFLOW.md) pentru import, păstrarea necunoscutelor, corectare, aprobare/respingere și asocierea surselor. Actorul din istoric este declarat de operator; nu există autentificare cu conturi. Inferența nereușită nu este salvată ca import reușit, iar răspunsurile recitite sunt marcate `stored_review`.
+
+## Publicare și dosare pentru frontend
+
+Instalează `requirements-publication.txt` pentru geometrie și scor. După aprobare, rutele `/api/v1/publications/preview` și `/api/v1/publications` verifică selecția și îngheață o versiune locală. `/api/v1/locations`, `/api/v1/locations.geojson` și dosarele/exporturile citesc aceeași versiune. În lipsa unei publicații apare 404; nu se servește automat un set din celălalt mod.
+
+Urmează [ghidul de publicare](PUBLICATION_WORKFLOW.md) pentru contract, configurație și repetiția completă `python -m api.demo_publication`. Aceasta folosește un director sintetic nou, nu repară și nu modifică `false_data/` și nu schimbă analizele SafeCross sau corpusul lui Emi. Aprobarea simplă nu publică automat, iar rutele vechi de snapshot își păstrează contractul.
 
 ## Teste și audit
 

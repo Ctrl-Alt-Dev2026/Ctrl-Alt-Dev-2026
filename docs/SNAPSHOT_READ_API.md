@@ -4,6 +4,8 @@ Acesta este pasul backend 2b: citire fără scrieri, pe schema `2.0`, pentru dez
 
 [Importul și review-ul local](REVIEW_WORKFLOW.md) salvează candidați și evenimente canonice într-un director distinct. Nici aprobarea, nici asocierea surselor nu modifică acest snapshot sau filtrul său de eligibilitate; publicarea cere o etapă ulterioară explicită.
 
+Această etapă este disponibilă separat în [fluxul de publicații și dosare](PUBLICATION_WORKFLOW.md). Rutele descrise aici păstrează contractul sintetic inițial; publicațiile noi se citesc prin `/api/v1/publications/*` și `/api/v1/locations*`.
+
 ## Rutele disponibile
 
 | Rută | Răspuns |

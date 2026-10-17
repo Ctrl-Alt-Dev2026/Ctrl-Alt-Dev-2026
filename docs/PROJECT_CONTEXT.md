@@ -24,6 +24,10 @@ La `0e8d1ae`, Emi a integrat [investigatorul de tipare — opțiunea 6](../ai/pa
 
 ## Scope-ul MVP propus
 
+Actualizarea backend v0.6 adaugă [publicare explicită și dosare](PUBLICATION_WORKFLOW.md): evenimente canonice aprobate → asociere la contextul de același mod → verificarea geometriei → formula de scor existentă → versiune locală înghețată → listă/GeoJSON/dosar/export JSON sau HTML imprimabil. Repetiția izolată conține șapte articole fictive pentru șase evenimente la trei locații fictive; nu modifică sursele comune. Modul observat este suportat, fără să pretindă că au fost colectate sau validate accidente reale. Mențiunile de mai sus despre publicarea neimplementată descriu etapele anterioare. Ecranele principale, catalogul de măsuri cu surse și integrarea unui set real rămân necesare.
+
+La `22cbb51`, colegul a adăugat [modulul de coordonate](../coordonate/README.md), bazat pe index OSM local, fără rețea la rezolvare. Acesta nu este încă un pas HTTP al review-ului: poate returna un punct reprezentativ pentru precizia `strada`, în timp ce contractul candidaților API permite puncte numai pentru precizii exacte. Integrarea viitoare trebuie să arate propunerea și proveniența înaintea aprobării; rezultatele aproximative nu se copiază într-un pin precis și evenimentele deja aprobate nu se rescriu automat. Nodurile cunoscute neverificate nu sunt dovadă de localizare.
+
 Fluxul principal: **surse despre accidente → extracție AI cu proveniență → verificare umană → localizare → hartă și prioritizare → măsuri candidate → fișă exportabilă**.
 
 1. **Harta locațiilor prioritare:** filtre, perioada analizată și limitele eșantionului.

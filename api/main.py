@@ -12,6 +12,7 @@ from pydantic import BaseModel
 from ai.router import register_ai
 from ai.patterns.router import register_patterns
 from api.review_router import register_review
+from api.publication_router import register_publication
 from api.safecross_router import register_safecross
 from safecross.setup import MODEL_PATH
 from api.snapshots import SnapshotError, load_snapshot
@@ -41,7 +42,7 @@ class EventsResponse(SnapshotMetadata):
     events: list[dict[str, Any]]
 
 
-def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None, safecross_directory: str | Path | None = None, safecross_model_path: str | Path | None = None):
+def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None, safecross_directory: str | Path | None = None, safecross_model_path: str | Path | None = None, publication_directory: str | Path | None = None, publication_context_directory: str | Path | None = None):
     directory = Path(
         snapshot_directory if snapshot_directory is not None
         else os.environ.get("SAFEIASI_SNAPSHOT_DIR", DEFAULT_SNAPSHOT_DIRECTORY)
@@ -58,7 +59,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
         yield
 
     application = FastAPI(
-        title="SafeIași API", version="0.5.0", lifespan=lifespan,
+        title="SafeIași API", version="0.6.0", lifespan=lifespan,
         description=(
             "API local cu citire de snapshot sintetic validat. /health confirmă doar serverul. "
             "Datele lipsă/invalide produc HTTP 503 pe rutele de date. "
@@ -67,7 +68,8 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             "Extracția live a textului necesită Ollama; reluările salvate sunt etichetate explicit. "
             "SafeCross opțional analizează local video CFR cu YOLOX și review uman, separat de accidente. "
             "/patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
-            "fără modificarea snapshot-ului sau a datelor de review."
+            "fără modificarea snapshot-ului sau a datelor de review. "
+            "Publicarea locală este explicită, cu versiuni înghețate, context verificat și dosare exportabile."
         ),
     )
     application.state.review_directory = Path(
@@ -81,6 +83,14 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     application.state.safecross_model_path = Path(
         safecross_model_path if safecross_model_path is not None
         else os.environ.get("SAFEIASI_SAFECROSS_MODEL", MODEL_PATH)
+    ).resolve()
+    application.state.publication_directory = Path(
+        publication_directory if publication_directory is not None
+        else os.environ.get("SAFEIASI_PUBLICATION_DIR", DEFAULT_REVIEW_DIRECTORY.parent / "publications")
+    ).resolve()
+    application.state.publication_context_directory = Path(
+        publication_context_directory if publication_context_directory is not None
+        else os.environ.get("SAFEIASI_PUBLICATION_CONTEXT_DIR", DEFAULT_REVIEW_DIRECTORY.parents[1] / "context" / "output" / "observed" / "iasi")
     ).resolve()
 
     def snapshot_or_error(request):
@@ -126,7 +136,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return register_patterns(register_safecross(register_review(register_ai(application))))
+    return register_publication(register_patterns(register_safecross(register_review(register_ai(application)))))
 
 
 app = create_app()

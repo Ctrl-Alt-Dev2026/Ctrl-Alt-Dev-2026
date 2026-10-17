@@ -18,6 +18,8 @@ Verificarea comună după integrarea opțiunilor 4 și 6: **95 teste backend/vid
 
 Prioritatea următoare rămâne fluxul comun: surse observate și evenimente canonice verificate, un contract de publicare către context/scor, apoi harta și dosarele. Pentru un corpus observat al opțiunii 6 trebuie păstrate proveniența pe câmp, deduplicarea și regenerarea explicită. Nu legăm clipul din Toronto de o locație din Iași și nu folosim similaritatea semantică drept scor rutier. Demo-urile separate sunt disponibile pentru pregătirea prezentării, fără să ascundă aceste dependențe.
 
+Etapa următoare este acum implementată la nivel de backend în [PUBLICATION_WORKFLOW.md](PUBLICATION_WORKFLOW.md): preview și publicare explicită pe versiuni, context geometric verificat, formula existentă, listă/GeoJSON/dosar și export JSON/HTML imprimabil. Repetiția izolată folosește șapte articole fictive pentru șase evenimente la trei locații; nu modifică fixture-urile și vectorii lui Emi. Suportul `observed` nu înlocuiește colectarea și revizuirea evenimentelor reale. Urmează conectarea ecranelor principale, catalogul de măsuri cu surse, setul real și repetiția de pitch.
+
 ## Baza de lucru verificată
 
 - Bază Git: `origin/main`, commit `77b0a09`; nu exista aplicație sau fișier de dependențe.
@@ -43,14 +45,14 @@ Estimările sunt ore de lucru activ, nu un nou calendar de 25 de ore. Dependenț
 | 3a. Integrarea extracției lui Emi | Router AI în pornirea standard, contract `2.0`, erori explicite, reluări etichetate, compatibilitate cu snapshot-ul | 30 min | Implementat; nu persistă și nu aprobă candidații |
 | 3b. Importul cu salvare | Validează rezultatele și salvează candidații/proveniența separat de evenimentele aprobate; tratare repetări și erori | 60–90 min | Implementat; JSON local, moduri separate, idempotență și dovezi verificate în text |
 | 4. Corectare și aprobare | Operatorul vede dovezile, corectează și aprobă/respinge; actualizări atomice, istoric de verificare și versiune pentru evitarea suprascrierilor; duplicatele păstrează un ID canonic | 90 min | API implementat; asociere explicită a surselor; ecranul de review urmează la frontend |
-| 5. Integrarea cu frontend-ul | Listă și dosar de locație, citite din exportul modulului de prioritizare; GeoJSON în ordinea lon/lat; filtrele și totalurile coincid | 45–60 min | De făcut; depinde de frontend și P3/P4 |
-| 6. Repetiția și rezerva | Fluxul import → verificare → date publicabile funcționează pe laptopul demo; testele de consistență trec; reluare locală explicită dacă AI nu răspunde | 45–60 min | De făcut |
+| 5. Integrarea cu frontend-ul | Listă și dosar de locație, citite din exportul modulului de prioritizare; GeoJSON în ordinea lon/lat; filtrele și totalurile coincid | 45–60 min | API, publicare și export implementate; ecranele principale și catalogul de măsuri rămân de conectat |
+| 6. Repetiția și rezerva | Fluxul import → verificare → date publicabile funcționează pe laptopul demo; testele de consistență trec; reluare locală explicită dacă AI nu răspunde | 45–60 min | Repetiție API sintetică implementată; datele reale și prezentarea completă rămân de verificat |
 
-**Pașii 2a–4 sunt implementați la nivel de API local. Următorul pas este 5:** conectarea frontend-ului și reconcilierea datelor pentru hartă cu modulele colegilor. Importul și review-ul funcționează independent de snapshot-ul incomplet, fără a ascunde erorile acestuia. Încărcarea unui set pentru hartă așteaptă corectarea sau înlocuirea fixture-urilor incomplete și o etapă explicită de publicare. Cititorul sintetic nu publică date observate. Detalii în [contractul citirii](SNAPSHOT_READ_API.md).
+**Pașii 2a–4 și partea API a pasului 5 sunt implementați.** Publicarea nouă funcționează independent de snapshot-ul sintetic incomplet, fără a ascunde erorile acestuia. Consumă evenimente canonice aprobate și un context de același mod, cu asociere verificată; nu cere repararea `false_data/` pentru repetiția izolată. Cititorul sintetic vechi nu publică date observate. Detalii în [contractul citirii](SNAPSHOT_READ_API.md) și [publicarea explicită](PUBLICATION_WORKFLOW.md).
 
 ## API implementat și operații propuse
 
-Sunt implementate `GET /health`, `/docs`/OpenAPI, citirea sintetică prin manifest/evenimente, extracția AI și importul/review-ul de mai jos. Dosarul locației rămâne o propunere. `POST /extract` este aliasul compatibil al aceluiași handler AI, fără un al doilea extractor.
+Sunt implementate `GET /health`, `/docs`/OpenAPI, citirea sintetică prin manifest/evenimente, extracția AI, importul/review-ul și rutele noi de publicare/dosar de mai jos. `POST /extract` este aliasul compatibil al aceluiași handler AI, fără un al doilea extractor.
 
 | Operație | Comportament așteptat |
 |---|---|
@@ -64,9 +66,11 @@ Sunt implementate `GET /health`, `/docs`/OpenAPI, citirea sintetică prin manife
 | `POST /api/v1/candidates/{id}/review` | Implementat: aprobă/respinge sau asociază unui eveniment canonic, cu operator, moment și verificări explicite |
 | `GET /api/v1/reviewed-events` | Implementat: evenimente canonice locale cu toate sursele; nu sunt publicate automat în snapshot |
 | `GET /api/v1/events` | Implementat pentru evenimente sintetice eligibile; etichetă permanentă și filtrare după review/municipiu/perioadă/precizie |
-| `GET /api/v1/locations/{id}` | Dosar: evenimente unice, surse, context, scor și recomandări furnizate de modulele colegilor |
+| `POST /api/v1/publications/preview` și `/api/v1/publications` | Implementat: eligibilitate, asociere verificată și publicare atomică pe versiuni, fără suprascrierea review-ului |
+| `GET /api/v1/locations` și `/api/v1/locations.geojson` | Implementat: listă/hartă din aceeași versiune, cu ID-uri, totaluri și scoruri comune |
+| `GET /api/v1/locations/{id}` și `/{id}/export` | Implementat: dosar, surse, context, scor și JSON/HTML imprimabil; măsurile candidate așteaptă catalogul integrat |
 
-Pentru MVP: fișiere JSON locale, fără bază de date sau cloud nou; extensia video se instalează separat și nu este o dependență a importului de articole. Scrierile se proiectează pentru un singur proces local, cu blocare și înlocuire atomică; procesele multiple necesită alt mecanism de persistență. Nu expunem operațiile de scriere public fără un control de acces proiectat separat. Nu implementăm încă o formulă de scor; alegerea între cele două planuri aparține echipei înainte de clasament.
+Pentru MVP: fișiere JSON locale, fără bază de date sau cloud nou; extensia video se instalează separat și nu este o dependență a importului de articole. Scrierile se proiectează pentru un singur proces local, cu blocare și înlocuire atomică; procesele multiple necesită alt mecanism de persistență. Nu expunem operațiile de scriere public fără un control de acces proiectat separat. Publicarea apelează formula existentă `risk.pipeline.score_location`, fără rescriere; diferența față de scorul alternativ din planul inițial rămâne vizibilă.
 
 ## Verificarea etapelor implementate
 
@@ -81,7 +85,9 @@ Din rădăcina repository-ului, cu Python 3.12 disponibil în mediul inspectat:
 
 Auditul doar citește și emite un raport JSON: cod `0` pentru fixture-uri coerente, `1` pentru neconcordanțe. Acceptă numai fixture-uri **sintetice**, pe schema `2.0`; nu este validator pentru publicarea datelor observate. Testele verifică date lipsă, dubluri, referințe rupte și coordonate invalide pe fișiere temporare sintetice, plus răspunsurile HTTP și pornirea fără chei sau fișiere de date.
 
-Există serverul local, citirea de snapshot sintetic validat, integrarea extractorului lui Emi și importul/review-ul cu persistență locală. Inferența live necesită Ollama/model disponibil; regulile și reluările sintetice pot fi verificate fără el. Publicarea datelor observate și conexiunea cu frontend-ul nu sunt încă implementate. Deciziile finalizate nu pot fi redeschise/editate în acest MVP; operatorul declarat nu este autentificat. Această etapă nu înseamnă finalizarea backend-ului.
+Există serverul local, citirea de snapshot sintetic validat, extractorul lui Emi, review-ul și publicarea explicită cu persistență locală. Inferența live a textului necesită Ollama/model disponibil; regulile și reluările sintetice pot fi verificate fără el. Publicarea observată este suportată cu surse și context verificate; nu avem prin această livrare un set de accidente reale revizuite sau ecranele principale conectate. Deciziile finalizate nu pot fi redeschise/editate în acest MVP; operatorul declarat nu este autentificat. Catalogul de măsuri și integrarea datelor reale rămân necesare.
+
+Modulul [coordonate](../coordonate/README.md), adăugat de coleg la `22cbb51`, trece separat 43 de verificări offline. Integrarea API urmează: sugestiile se verifică înainte de aprobare, iar coordonatele aproximative de stradă nu trec drept puncte precise. Toate cele 1.210 treceri din contextul publicării există în indexul modulului; celelalte treceri, intersecțiile și segmentele nu devin automat eligibile pentru acest context. Contractul actual de review nu acceptă coordonate pentru precizia `strada`.
 
 ## Timp și reguli de lucru
 
