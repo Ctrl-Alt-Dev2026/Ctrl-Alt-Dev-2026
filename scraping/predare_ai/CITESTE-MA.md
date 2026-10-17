@@ -8,14 +8,8 @@ Textul provine din HTML-ul paginii fiecărui articol, nu doar din listări, href
 
 Nu se garantează că fiecare body este complet sau lipsit de orice alt element de interfață. Nu s-a făcut o verificare vizuală pagină cu pagină. Articolele sunt candidați de presă nevalidați; pot include controale, accidente fără pietoni, evenimente din alte localități și relatări despre accidente vechi.
 
-Din rădăcina repository-ului, cu Ollama pornit și qwen2.5:1.5b instalat:
+Acesta este un export de texte, fără rulare sau rezultate AI. Nu sunt necesare cache-ul HTML sau baza SQLite pentru citirea lui. Integrarea cu modulul de extracție și selecția după criteriile proiectului vor fi realizate separat de utilizator.
 
-    python -m ai --articles scraping/predare_ai/articole_v2.json --pipelines direct --model qwen2.5:1.5b --base-url http://127.0.0.1:11434 --out ai/work/presa --cache ai/work/cache_presa
+Regenerarea acestui fișier, fără accesarea publicațiilor:
 
-Test pe un articol: adaugă --limit 1. Nu este nevoie de cache-ul HTML al scraperului sau de bazele lui SQLite.
-
-Modulul AI extrage informațiile despre eveniment din câmpul text; nu descarcă URL-ul. Rezultatele lui rămân candidați pentru review, fără aprobare sau coordonate. Poziția pietonului pe trecere și apartenența la municipiul Iași necesită verificare explicită suplimentară.
-
-Regenerarea acestui fișier, fără Ollama și fără accesarea publicațiilor:
-
-    python -m scraping.procesare_articole_ai --doar-pregatire --intrare scraping/articole_extrase_accident_raw.csv --director scraping/predare_ai
+    python -m scraping.curata_si_exporta_articole --intrare scraping/articole_extrase_accident_raw.csv --director scraping/predare_ai

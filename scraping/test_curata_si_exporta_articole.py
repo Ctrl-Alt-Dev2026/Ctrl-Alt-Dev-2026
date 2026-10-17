@@ -3,10 +3,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scraping.procesare_articole_ai import main, read_articles, exporta_csv_curatat
+from scraping.curata_si_exporta_articole import main, read_articles, exporta_csv_curatat
 
 
-class ProcesareArticoleAiTests(unittest.TestCase):
+class CuratareSiExportArticoleTests(unittest.TestCase):
     def test_clean_csv_preserves_rows_urls_and_other_columns(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as tmp:
             source, target = Path(tmp) / "raw.csv", Path(tmp) / "clean.csv"
@@ -54,12 +54,12 @@ class ProcesareArticoleAiTests(unittest.TestCase):
             self.assertEqual(articles[0]["text"], "Text sintetic.\nAl doilea paragraf.")
             self.assertEqual(articles[0]["colectat_la"], "")
             self.assertEqual(set(articles[0]), {"article_id", "sursa", "url", "titlu", "text", "publicat_la", "colectat_la"})
-            self.assertEqual(main(["--intrare", str(path), "--director", str(Path(tmp) / "out"), "--pipeline", "rules"]), 0)
-            self.assertTrue((Path(tmp) / "out" / "toate.csv").exists())
-            with (Path(tmp) / "out" / "toate.csv").open(encoding="utf-8-sig", newline="") as handle:
+            self.assertEqual(main(["--intrare", str(path), "--director", str(Path(tmp) / "out")]), 0)
+            self.assertTrue((Path(tmp) / "out" / "articole_curatate.csv").exists())
+            with (Path(tmp) / "out" / "articole_curatate.csv").open(encoding="utf-8-sig", newline="") as handle:
                 row = next(csv.DictReader(handle))
-            self.assertEqual(row["verificat"], "False")
-            self.assertEqual(row["in_iasi"], "")
+            self.assertEqual(row["text"], articles[0]["text"])
+            self.assertEqual(row["url"], articles[0]["url"])
 
 
 if __name__ == "__main__":
