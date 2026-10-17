@@ -15,7 +15,7 @@ LOCATION_PRECISIONS = PRECISE_LOCATIONS | {"strada", "vag"}
 
 
 def _number(value):
-    return type(value) in (int, float) and math.isfinite(value)
+    return type(value) is int or (type(value) is float and math.isfinite(value))
 
 
 def _coordinates(lon, lat):
@@ -41,6 +41,27 @@ def audit_fixtures(directory):
             documents[name] = json.loads((directory / name).read_text(encoding="utf-8-sig"))
         except (OSError, ValueError) as error:
             issue("unreadable_json", name, str(error))
+    if issues:
+        return report
+
+    return audit_documents(documents)
+
+
+def audit_documents(documents):
+    """Audit decoded synthetic documents without rereading mutable files."""
+    issues = []
+
+    def issue(code, filename, detail):
+        issues.append({"code": code, "file": filename, "detail": detail})
+
+    report = {
+        "scope": "synthetic_fixtures_only",
+        "warning": "DATE SINTETICE - audit de consistenta, fara validare factuala.",
+        "counts": {}, "issues": issues,
+    }
+    for name in FILES:
+        if name not in documents:
+            issue("missing_document", name, "Required document is missing.")
     if issues:
         return report
 
