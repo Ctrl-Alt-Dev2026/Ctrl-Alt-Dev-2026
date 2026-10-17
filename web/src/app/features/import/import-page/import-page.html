@@ -38,7 +38,12 @@
         </div>
         <label>Procesare<select id="import-pipeline" formControlName="pipeline"><option value="rules">Reguli deterministe — fără model AI</option><option value="hybrid">AI hibrid — necesită serviciul modelului</option></select></label>
         <p class="hint muted">Nu descărcăm articolul din URL. Textul și metadatele sunt furnizate de operator. Data publicării rămâne separată de data accidentului. O eroare AI este afișată; nu este înlocuită cu o extracție simulată.</p>
-        <button type="submit" class="btn primary" [disabled]="busy() !== null || source.invalid || !operator.controls.operator.value.trim()">{{ busy() === 'import' ? 'Se importă…' : 'Importă și extrage candidați' }}</button>
+        @for (problem of importProblems(); track problem) { <p class="hint" role="status">{{ problem }}</p> }
+        <button type="submit" class="btn primary" [disabled]="busy() !== null">{{ busy() === 'import' ? 'Se importă…' : 'Importă și extrage candidați' }}</button>
+        @if (busy() === 'import') {
+          <p role="status">Se așteaptă răspunsul serverului. Limita este de {{ source.controls.pipeline.value === 'rules' ? '30 de secunde pentru reguli' : '3 minute pentru AI' }}. Formularul este păstrat.</p>
+          <button type="button" class="btn" (click)="stopWaitingForImport()">Oprește așteptarea</button>
+        }
       </form>
     </details>
 

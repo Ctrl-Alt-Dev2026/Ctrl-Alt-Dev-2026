@@ -2,7 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { forkJoin } from 'rxjs';
+import { forkJoin, Subscription } from 'rxjs';
 import { BackendSession } from '../../../core/api/backend-session';
 import { ReviewApi, reviewError } from '../../../core/api/review-api';
 import { CAUZA, GRAVITATE, PRECIZIE } from '../../../core/format/labels';
@@ -73,10 +73,12 @@ export class ImportPage {
   private epoch = 0;
   private selectionSequence = 0;
   private importDraft: { signature: string; body: ImportArticleRequest } | null = null;
+  private importRequest: Subscription | null = null;
 
   constructor() {
     effect(() => {
       const mode = this.session.dataMode();
+      this.importRequest?.unsubscribe(); this.importRequest = null;
       this.epoch++;
       this.selectionSequence++;
       this.selected.set(null); this.imported.set(null); this.proposal.set(null); this.manualContext.set(null);
@@ -114,9 +116,9 @@ export class ImportPage {
   }
 
   protected extract(): void {
-    if (!this.writable || this.source.invalid || !this.operator.controls.operator.value.trim()) {
-      this.error.set('Completează identitatea articolului, sursa, URL-ul, titlul, textul, colectarea și operatorul.'); return;
-    }
+    if (!this.writable || this.busy() !== null) return;
+    const problems = this.importProblems();
+    if (problems.length) { this.error.set(problems.join(' ')); return; }
     const epoch = this.epoch;
     const value = this.source.getRawValue();
     const { pipeline, ...article } = value;
@@ -124,15 +126,35 @@ export class ImportPage {
     const signature = JSON.stringify(payload);
     if (this.importDraft?.signature !== signature) this.importDraft = { signature, body: { ...payload, request_id: crypto.randomUUID() } };
     this.busy.set('import'); this.error.set(null); this.notice.set(null);
-    this.api.imports(this.importDraft!.body).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
+    this.importRequest = this.api.imports(this.importDraft!.body).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
       next: (result) => {
         if (epoch !== this.epoch) return;
+        this.importRequest = null;
         this.busy.set(null);
         this.notice.set(`${result.reused ? 'Import recitit' : 'Import salvat'}: ${result.import.candidate_ids.length} candidați neaprobați. Niciun eveniment nu a fost publicat.`);
         this.refresh();
         if (result.import.candidate_ids[0]) this.open(result.import.candidate_ids[0]);
-      }, error: (error: unknown) => this.fail(error, epoch),
+      }, error: (error: unknown) => { this.importRequest = null; this.fail(error, epoch); },
     });
+  }
+
+  protected importProblems(): string[] {
+    const article = this.source.getRawValue();
+    const required = { article_id: 'ID articol', sursa: 'Sursa', url: 'URL sursă', titlu: 'Titlul articolului', text: 'Textul integral', colectat_la: 'Colectat la' };
+    const missing = Object.entries(required).filter(([key]) => !article[key as keyof typeof required].trim()).map(([, label]) => label);
+    if (!this.operator.controls.operator.value.trim()) missing.push('Operator');
+    const problems = missing.length ? [`Completează: ${missing.join(', ')}.`] : [];
+    if (this.session.dataMode() === 'observed' && article.sursa === 'SINTETIC') {
+      problems.push('Articolul este SINTETIC, iar modul selectat este Date observate. Copiază formularul în Demo sintetic înainte de import.');
+    }
+    return problems;
+  }
+
+  protected stopWaitingForImport(): void {
+    if (this.busy() !== 'import') return;
+    this.importRequest?.unsubscribe(); this.importRequest = null;
+    this.busy.set(null);
+    this.error.set('Așteptarea a fost oprită în interfață. Serverul poate încă procesa importul. Recitește lista sau reîncearcă formularul neschimbat; cheia cererii este păstrată.');
   }
 
   protected open(id: string): void {

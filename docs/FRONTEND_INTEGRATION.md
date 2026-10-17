@@ -43,6 +43,10 @@ Lista urmărește verificările din `.claude/skills/ui-honesty-check/SKILL.md`. 
 
 Corecțiile făcute în integrare: contractele HTTP provizorii au fost înlocuite, navigarea păstrează modul și pinul versiunii, coordonatele numerice/golite se salvează fără conversii greșite, iar textele surselor nu sunt injectate ca HTML în tooltip.
 
+## Recuperarea unui import fără răspuns
+
+Corecția formularului de import: câmpurile obligatorii lipsă și combinația sursă `SINTETIC` / mod `observed` sunt explicate înainte de trimitere. Importul are limită de așteptare (30 s pentru reguli, 180 s pentru AI) și buton „Oprește așteptarea”. Oprirea sau expirarea nu confirmă anularea procesării pe server; formularul și cheia cererii sunt păstrate pentru retry identic. Verificarea în browser include cerere ținută intenționat fără răspuns, expirare, oprire manuală și retry cu același `request_id`, pe un proxy local care nu transmite importuri backend-ului. Exemplul utilizatorului `mock-ui-001` a fost importat separat, în modul sintetic, ca un candidat pending; nu a fost aprobat sau publicat.
+
 ## Limite rămase pentru demo
 
 Nu sunt pregătite accidentele observate verificate, catalogul de măsuri cu surse sau modelul local Ollama. `rules` este extracție deterministă, fără AI; `hybrid` depinde de serviciul modelului. Rezultatele arhivate nu sunt procesare live. `/patterns`, SafeCross și camerele rămân extensii separate; importul/publicarea nu le reantrenează și nu transformă observațiile video în accidente.

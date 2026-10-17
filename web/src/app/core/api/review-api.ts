@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timeout, TimeoutError } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   Candidate, CandidateCorrection, CandidateDecision, GeocodingProposal,
@@ -18,7 +18,9 @@ export class ReviewApi {
   private mode(mode: ReviewDataMode): HttpParams { return new HttpParams().set('data_mode', mode); }
 
   imports(body: ImportArticleRequest): Observable<{ import: ImportRecord; reused: boolean; persisted: boolean }> {
-    return this.http.post<{ import: ImportRecord; reused: boolean; persisted: boolean }>(this.url(BACKEND_ENDPOINTS.imports), body);
+    return this.http.post<{ import: ImportRecord; reused: boolean; persisted: boolean }>(this.url(BACKEND_ENDPOINTS.imports), body).pipe(
+      timeout({ first: body.pipeline === 'rules' ? 30_000 : 180_000 }),
+    );
   }
   import(id: string, mode: ReviewDataMode): Observable<{ import: ImportRecord }> {
     return this.http.get<{ import: ImportRecord }>(this.url(BACKEND_ENDPOINTS.import(id)), { params: this.mode(mode) });
@@ -60,6 +62,9 @@ export class ReviewApi {
 }
 
 export function reviewError(error: unknown): string {
+  if (error instanceof TimeoutError) {
+    return 'Importul nu a răspuns în timpul permis. Serverul poate încă procesa cererea. Recitește lista sau reîncearcă formularul neschimbat; aceeași cheie de import este păstrată pentru a evita dublarea.';
+  }
   if (error instanceof HttpErrorResponse) {
     const detail: unknown = error.error?.detail;
     const prefix = error.status === 409 ? 'Versiune schimbată. Recitește datele înainte de altă decizie. '
