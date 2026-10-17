@@ -1,6 +1,8 @@
-# Citirea unui snapshot sintetic validat — API v0.3
+# Citirea unui snapshot sintetic validat — API v0.4
 
 Acesta este pasul backend 2b: citire fără scrieri, pe schema `2.0`, pentru dezvoltare. Aceste rute nu implementează aprobarea sau publicarea datelor reale. Extractorul AI este disponibil separat în același server, conform [instrucțiunilor locale](LOCAL_DEVELOPMENT.md#extracția-ai), și nu modifică snapshot-ul. Codul nu repară și nu completează datele colegilor.
+
+[Importul și review-ul local](REVIEW_WORKFLOW.md) salvează candidați și evenimente canonice într-un director distinct. Nici aprobarea, nici asocierea surselor nu modifică acest snapshot sau filtrul său de eligibilitate; publicarea cere o etapă ulterioară explicită.
 
 ## Rutele disponibile
 
