@@ -30,6 +30,8 @@ La `22cbb51`, colegul a adăugat [modulul de coordonate](../coordonate/README.md
 
 Fluxul principal: **surse despre accidente → extracție AI cu proveniență → verificare umană → localizare → hartă și prioritizare → măsuri candidate → fișă exportabilă**.
 
+La `27510e9`, echipa a adăugat [prototipul Angular](../web/README.md) pentru hartă/dosar/import și o extensie de camere publice. Prototipul folosește implicit fixture-uri sintetice și reluări. Contractele sale HTTP sunt provizorii și diferă de API-ul existent; [handoff-ul de integrare](FRONTEND_HANDOFF.md) documentează reconcilierea necesară. Mențiunile din `web/PLAN.md` și `web/CLAUDE.md` despre backend inexistent descriu ipoteza inițială a colegului. Nu activăm scrieri printr-un adaptor care ar ocoli operatorul, versiunea sau verificarea localizării.
+
 1. **Harta locațiilor prioritare:** filtre, perioada analizată și limitele eșantionului.
 2. **Dosarul unei locații:** evenimente unice și surse, explicația priorității, precizia localizării, context și recomandări candidate.
 3. **Import și verificare:** câmpuri extrase cu dovezi, corectare și aprobare înainte de publicare.

@@ -15,6 +15,7 @@ Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat c
 - [Context OSM pentru Iași](context/CITY.md) și [pipeline-ul offline de scor](risk/IMPLEMENTATION.md) — integrate prin publicare explicită și asociere verificată, cu instalarea `requirements-publication.txt`.
 - [Geocodare asistată înainte de aprobare: API și contract pentru frontend](docs/GEOCODING_WORKFLOW.md) — integrează [modulul de coordonate](coordonate/README.md), cu dovezi OSM, preview și aplicare confirmată.
 - [Contractele backend pentru conectarea frontend-ului](docs/FRONTEND_HANDOFF.md)
+- [Prototipul Angular din `web/`](web/README.md) — livrat la `27510e9`, folosește implicit fixture-uri sintetice și reluări; conectarea la API v0.7 este documentată în contractul de mai sus.
 - [Contractul API pentru citirea snapshot-ului](docs/SNAPSHOT_READ_API.md)
 - [Planul inițial pentru șase persoane și aproximativ 25 de ore](docs/HACKATHON_PLAN.md) — atașamentul păstrat integral; observația despre accesul GitHub din introducere este istorică.
 - [Planificarea existentă: „Harta pietonului – Iași · Plan v2”](Planificare.md) — păstrată integral; conține propuneri care diferă de planul SafeIași.

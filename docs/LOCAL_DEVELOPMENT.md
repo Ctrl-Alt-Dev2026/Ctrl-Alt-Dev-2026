@@ -6,6 +6,10 @@ Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire 
 
 ## Prima instalare — Windows / PowerShell
 
+Frontend-ul Angular nou din `web/` se pornește separat: `npm ci`, `npm run build`, apoi `npm start`, din acel director, pe `http://localhost:4200`. Folosește o versiune Node compatibilă cu Angular 21; verificarea locală folosește Node 24.19, deoarece Node 20.11.1 din PATH este prea vechi. Modul implicit este mock, cu fixture-uri sintetice copiate la prestart/prebuild; nu este încă fluxul conectat la backend. Diferențele de contract și origine sunt în [FRONTEND_HANDOFF.md](FRONTEND_HANDOFF.md).
+
+Build-ul de producție a trecut local cu `CI=true`, care dezactivează cache-ul persistent în configurația Angular actuală. Build-ul cu cache a întâmpinat eroarea LMDB `Not enough space`; în PowerShell se poate folosi `$env:CI='true'` înainte de `npm run build`. Navigarea între hartă, dosar, import și fișa imprimabilă a fost verificată în modul mock, cu eticheta sintetică și fără erori JavaScript. Camerele live și corectitudinea datelor din fixture-uri nu sunt validate prin această verificare.
+
 Python 3.12 este versiunea verificată în acest mediu. Din folderul repository-ului, cu versiunea integrată a backend-ului:
 
 ```powershell

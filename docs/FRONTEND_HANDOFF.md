@@ -1,6 +1,18 @@
 # Contract de integrare frontend — API v0.7
 
-Acesta este contractul pentru construirea celor trei ecrane principale; nu declară că interfața produsului este implementată. Detalii: [review](REVIEW_WORKFLOW.md), [geocodare](GEOCODING_WORKFLOW.md), [publicare](PUBLICATION_WORKFLOW.md). Schemele exacte sunt în `/openapi.json` și `/docs`.
+Acesta este contractul pentru conectarea celor trei ecrane principale la API v0.7. Detalii: [review](REVIEW_WORKFLOW.md), [geocodare](GEOCODING_WORKFLOW.md), [publicare](PUBLICATION_WORKFLOW.md). Schemele exacte sunt în `/openapi.json` și `/docs`.
+
+La `27510e9` a fost adăugat prototipul Angular din `web/`, cu hartă, dosar și import. Rulează implicit cu date mock; `HttpDataApi` folosește alte rute și corpuri decât API v0.7, iar proxy-ul nu este configurat. Existența ecranelor nu confirmă integrarea backend. Pentru verificarea build-ului se folosește Node 24.19 disponibil în runtime-ul bundled; Node 20.11 global este insuficient. Rezultatul build-ului se verifică separat.
+
+Verificarea locală: build-ul de producție trece cu `CI=true` (cache persistent dezactivat după eroarea LMDB), iar rutele hartă/dosar/import/fișă se încarcă fără erori JavaScript. Prototipul citește direct fixture-urile comune: manifestul declară 18 articole, deși există patru texte; costurile și reducerile sunt sintetice. Aceste valori nu devin o publicație validată și nu sunt dovezi pentru pitch. Pentru prezentarea fluxului verificat, folosește publicația izolată de șapte articole / șase evenimente / trei locații, până este conectată interfața la API.
+
+| Contractul HTTP propus în `web/` | Contractul backend de conectat explicit |
+|---|---|
+| `/api/{manifest,accidents,hotspots,crossings}` | `/api/v1/publications/...`, `/api/v1/locations`, `/api/v1/locations.geojson` și dosarele; adaptează și structurile răspunsurilor. |
+| `POST /api/extract` cu `{text?,url?}` | `POST /api/v1/imports` cu articol complet, mod, pipeline, operator și cheie de idempotență; un URL singur nu importă articolul. |
+| `POST /api/events/{id}/review` cu `{decision,corrections}` | `PATCH /api/v1/candidates/{id}`, apoi `POST .../review`, cu versiuni și confirmări; publicarea rămâne separată. |
+
+`/api/measures` și `/api/cameras` nu au un înlocuitor direct în acest contract. Integrarea adaptează frontend-ul și configurarea aceleiași origini; nu introduce rute de scriere compatibile care ascund verificările sau aprobă/publică automat.
 
 ## Ecrane și date disponibile
 
