@@ -10,9 +10,11 @@ Clientul principal vizat este **Primăria Iași**, cu utilizatori din mobilitate
 
 La inspecția din 17 octombrie 2026, ramura implicită `main`, la commitul `fc61ae58995f21a654b603af77134dcc8605ac89`, conținea doar [Planificare.md](../Planificare.md). Nu existau cod de aplicație, dependențe, teste, seturi de date, README sau `AGENTS.md`; nu există un stack funcțional demonstrat.
 
-[HACKATHON_PLAN.md](HACKATHON_PLAN.md) reproduce integral atașamentul `Plan_SafeIasi_6_persoane_25h (1).md`. Observația sa despre un răspuns GitHub 404 aparține sesiunii anterioare: în sesiunea curentă clonarea prin Git a reușit și autentificarea locală are drept de push, deși conectorul GitHub continuă să răspundă cu 404. Contractele, căile de fișiere, fixture-urile, backlog-ul și funcționalitățile descrise în ambele planuri sunt propuneri, nu artefacte implementate sau date deja colectate.
+[HACKATHON_PLAN.md](HACKATHON_PLAN.md) reproduce integral atașamentul `Plan_SafeIasi_6_persoane_25h (1).md`. Observația sa despre un răspuns GitHub 404 aparține sesiunii anterioare: la adăugarea documentației, clonarea prin Git a reușit și autentificarea locală avea drept de push, deși conectorul GitHub răspundea cu 404. La acel moment, contractele, căile de fișiere, fixture-urile, backlog-ul și funcționalitățile descrise în ambele planuri erau propuneri, nu artefacte implementate sau date deja colectate.
 
-Această schimbare adaugă numai documentație. Alegerea stack-ului și reconcilierea contractelor revin coordonatorului tehnic la începutul implementării. Propunerea existentă de stack trebuie evaluată; Python + Streamlit + pydeck este alternativa din planul atașat pentru pornirea de la zero. Orice stack funcțional găsit ulterior are prioritate față de o rescriere.
+Ulterior, la commitul `77b0a09`, echipa a adăugat `false_data/`: fixture-uri sintetice pe schema `2.0`, fără date reale verificate sau aplicație. Auditul și pașii pentru backend sunt în [BACKEND_WORK_PLAN.md](BACKEND_WORK_PLAN.md). Fixture-urile sunt păstrate în forma colegilor; neconcordanțele lor trebuie rezolvate înaintea integrării.
+
+Alegerea stack-ului și reconcilierea contractelor revin coordonatorului tehnic la începutul implementării. Propunerea existentă de stack trebuie evaluată; Python + Streamlit + pydeck este alternativa din planul atașat pentru pornirea de la zero. Orice stack funcțional găsit ulterior are prioritate față de o rescriere.
 
 ## Scope-ul MVP propus
 
@@ -37,7 +39,13 @@ Fluxul principal: **surse despre accidente → extracție AI cu proveniență �
 | P5 — frontend | Cele trei ecrane și experiența demo-ului |
 | P6 — produs, verificare și pitch | Revizuirea datelor, scenarii, prezentare și rezervă |
 
-Rolurile nu sunt atribuite unor persoane reale și nu se deduc din proprietarul repository-ului. P5 și P6 sunt responsabili diferiți. Integrarea începe devreme pe exemple sintetice conforme contractelor; P1 coordonează singur contractele și dependențele comune. Backlog-ul rămâne în plan; această sarcină nu publică issues și nu atribuie colegi.
+Actualizare din 17 octombrie 2026, conform discuției cu Mihnea:
+
+- **Mihnea — backend/API, alocare provizorie:** validarea intrărilor, API-ul pentru frontend, fluxul de verificare/aprobare și integrarea modulelor. Aceasta nu îl desemnează automat P1 și nu îi atribuie toate modulele de date.
+- **Emi — extracție AI:** modulul care produce informațiile structurate și dovezile; backend-ul se integrează cu acesta, fără o implementare paralelă a extracției.
+- Celelalte responsabilități și coordonatorul P1 rămân de nominalizat de echipă. Numerele P1–P6 din planul atașat nu se confundă cu „Persoana 1–6” din planificarea inițială.
+
+P5 și P6 sunt responsabili diferiți. Integrarea începe devreme pe exemple sintetice conforme contractelor; P1 coordonează singur contractele și dependențele comune. Planul inițial rămâne nemodificat; alocările curente sunt consemnate aici. Backlog-ul rămâne documentat, fără publicare de issues sau atribuiri automate pe GitHub.
 
 ## Principii obligatorii
 
