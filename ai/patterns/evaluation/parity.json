@@ -1,0 +1,9 @@
+{
+  "label": "Python/browser-engine parity",
+  "passed": 684,
+  "failed": 0,
+  "thresholds": 18,
+  "exclusion_sets": 19,
+  "scopes": 2,
+  "numeric_tolerance": 0.000001
+}
