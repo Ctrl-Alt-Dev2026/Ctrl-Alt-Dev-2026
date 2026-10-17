@@ -1,0 +1,11 @@
+{
+  "schema_version": "2.0",
+  "data_mode": "synthetic",
+  "perioada": ["2024-10-01", "2026-10-17"],
+  "generat_la": "2026-10-17T14:00:00+03:00",
+  "nr_articole": 18,
+  "nr_evenimente": 17,
+  "nr_localizate_precis": 14,
+  "nr_verificate": 4,
+  "avertisment": "DATE SINTETICE - doar pentru dezvoltare. Nu se folosesc în demo sau în pitch."
+}

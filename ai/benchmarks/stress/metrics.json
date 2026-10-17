@@ -1,0 +1,1534 @@
+{
+  "rules": {
+    "articles": 10,
+    "gold_events": 8,
+    "candidate_groups": 9,
+    "detection": {
+      "tp": 8,
+      "tn": 1,
+      "fp": 1,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 9,
+      "total": 10
+    },
+    "fields_correct": 54,
+    "fields_total": 56,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 6,
+        "known_expected": 6,
+        "known_predicted": 6,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "ora": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 6,
+        "unknown_correct": 6
+      },
+      "loc_text": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 8,
+        "known_expected": 8,
+        "known_predicted": 8,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 8,
+        "known_expected": 8,
+        "known_predicted": 8,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 1,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      },
+      "gravitate": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 5,
+        "known_expected": 6,
+        "known_predicted": 5,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "noapte": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 8
+      }
+    },
+    "known_correct": 29,
+    "known_expected": 30,
+    "known_predicted": 30,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 0,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 34,
+    "evidence_quotes": 34,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 0,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 0,
+    "median_original_inference_seconds": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "errors": [
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": "viteza",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      }
+    ],
+    "gold_unique_events": 8,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "direct": {
+    "articles": 10,
+    "gold_events": 8,
+    "candidate_groups": 7,
+    "detection": {
+      "tp": 7,
+      "tn": 2,
+      "fp": 0,
+      "fn": 1,
+      "abstained": 1,
+      "correct": 8,
+      "total": 10
+    },
+    "fields_correct": 25,
+    "fields_total": 56,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 2,
+        "total": 8,
+        "known_correct": 1,
+        "known_expected": 6,
+        "known_predicted": 1,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "ora": {
+        "correct": 5,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 2,
+        "known_predicted": 0,
+        "unknown_expected": 6,
+        "unknown_correct": 5
+      },
+      "loc_text": {
+        "correct": 0,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 8,
+        "known_predicted": 1,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 3,
+        "total": 8,
+        "known_correct": 3,
+        "known_expected": 8,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      },
+      "gravitate": {
+        "correct": 1,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 6,
+        "known_predicted": 0,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "noapte": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      }
+    },
+    "known_correct": 4,
+    "known_expected": 30,
+    "known_predicted": 6,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 0,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 6,
+    "evidence_quotes": 6,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 8,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 80.428,
+    "median_original_inference_seconds": 6.739,
+    "input_tokens": 10922,
+    "output_tokens": 1386,
+    "errors": [
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "data_eveniment",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "ora",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bulevardul Carol I",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "gravitate",
+        "expected": "necunoscut",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "noapte",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-hospital_not_severity",
+        "article_ids": [
+          "stress-hospital_not_severity"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": "Strada Arcu",
+        "candidate_ids": [
+          "stress-hospital_not_severity"
+        ]
+      },
+      {
+        "event_id": "stress-hospital_not_severity",
+        "article_ids": [
+          "stress-hospital_not_severity"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-hospital_not_severity"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-03-01",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Sărărie",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-06-12",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "ora",
+        "expected": "23:10",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Gării",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-15",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "loc_text",
+        "expected": "în comuna Tomești, pe strada principală",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoutilitara"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-18",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "ora",
+        "expected": "11:25",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bd. Independenței",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [
+          "pieton"
+        ],
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-19",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      }
+    ],
+    "gold_unique_events": 8,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "evidence": {
+    "articles": 10,
+    "gold_events": 8,
+    "candidate_groups": 7,
+    "detection": {
+      "tp": 7,
+      "tn": 2,
+      "fp": 0,
+      "fn": 1,
+      "abstained": 1,
+      "correct": 8,
+      "total": 10
+    },
+    "fields_correct": 40,
+    "fields_total": 56,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 6,
+        "known_expected": 6,
+        "known_predicted": 6,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "ora": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 6,
+        "unknown_correct": 5
+      },
+      "loc_text": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 7,
+        "known_expected": 8,
+        "known_predicted": 7,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 5,
+        "total": 8,
+        "known_correct": 5,
+        "known_expected": 8,
+        "known_predicted": 7,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 6,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 1,
+        "unknown_expected": 8,
+        "unknown_correct": 6
+      },
+      "gravitate": {
+        "correct": 1,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 6,
+        "known_predicted": 0,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "noapte": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      }
+    },
+    "known_correct": 20,
+    "known_expected": 30,
+    "known_predicted": 23,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 0,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 24,
+    "evidence_quotes": 24,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 8,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 43.736,
+    "median_original_inference_seconds": 3.627,
+    "input_tokens": 8382,
+    "output_tokens": 656,
+    "errors": [
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "data_eveniment",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "ora",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bulevardul Carol I",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "gravitate",
+        "expected": "necunoscut",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "noapte",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [
+          "pieton"
+        ],
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [
+          "pieton"
+        ],
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": "viteza",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      }
+    ],
+    "gold_unique_events": 8,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "agreement": {
+    "articles": 10,
+    "gold_events": 8,
+    "candidate_groups": 7,
+    "detection": {
+      "tp": 7,
+      "tn": 2,
+      "fp": 0,
+      "fn": 1,
+      "abstained": 1,
+      "correct": 8,
+      "total": 10
+    },
+    "fields_correct": 23,
+    "fields_total": 56,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 2,
+        "total": 8,
+        "known_correct": 1,
+        "known_expected": 6,
+        "known_predicted": 1,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "ora": {
+        "correct": 5,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 2,
+        "known_predicted": 0,
+        "unknown_expected": 6,
+        "unknown_correct": 5
+      },
+      "loc_text": {
+        "correct": 0,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 8,
+        "known_predicted": 0,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 1,
+        "total": 8,
+        "known_correct": 1,
+        "known_expected": 8,
+        "known_predicted": 1,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      },
+      "gravitate": {
+        "correct": 1,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 6,
+        "known_predicted": 0,
+        "unknown_expected": 2,
+        "unknown_correct": 1
+      },
+      "noapte": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      }
+    },
+    "known_correct": 2,
+    "known_expected": 30,
+    "known_predicted": 2,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 0,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 3,
+    "evidence_quotes": 3,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 8,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 0,
+    "median_original_inference_seconds": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "errors": [
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "data_eveniment",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "ora",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bulevardul Carol I",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "gravitate",
+        "expected": "necunoscut",
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-publication_trap",
+        "article_ids": [
+          "stress-publication_trap"
+        ],
+        "field": "noapte",
+        "expected": null,
+        "predicted": null,
+        "candidate_ids": []
+      },
+      {
+        "event_id": "stress-hospital_not_severity",
+        "article_ids": [
+          "stress-hospital_not_severity"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-hospital_not_severity"
+        ]
+      },
+      {
+        "event_id": "stress-hospital_not_severity",
+        "article_ids": [
+          "stress-hospital_not_severity"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-hospital_not_severity"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-03-01",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Sărărie",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-embedded_instruction",
+        "article_ids": [
+          "stress-embedded_instruction"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-embedded_instruction"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-06-12",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "ora",
+        "expected": "23:10",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Gării",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-old_context_date",
+        "article_ids": [
+          "stress-old_context_date"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-old_context_date"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-15",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "loc_text",
+        "expected": "în comuna Tomești, pe strada principală",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoutilitara"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-outside_city",
+        "article_ids": [
+          "stress-outside_city"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-outside_city"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-18",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "ora",
+        "expected": "11:25",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bd. Independenței",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-abbreviated_road",
+        "article_ids": [
+          "stress-abbreviated_road"
+        ],
+        "field": "gravitate",
+        "expected": "grav",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-abbreviated_road"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "data_eveniment",
+        "expected": "2026-04-19",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "loc_text",
+        "expected": "pe Strada Arcu",
+        "predicted": null,
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton",
+          "autoturism"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      }
+    ],
+    "gold_unique_events": 8,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "hybrid": {
+    "articles": 10,
+    "gold_events": 8,
+    "candidate_groups": 9,
+    "detection": {
+      "tp": 8,
+      "tn": 1,
+      "fp": 1,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 9,
+      "total": 10
+    },
+    "fields_correct": 54,
+    "fields_total": 56,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 6,
+        "known_expected": 6,
+        "known_predicted": 6,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "ora": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 6,
+        "unknown_correct": 6
+      },
+      "loc_text": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 8,
+        "known_expected": 8,
+        "known_predicted": 8,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 8,
+        "known_expected": 8,
+        "known_predicted": 8,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 1,
+        "unknown_expected": 8,
+        "unknown_correct": 7
+      },
+      "gravitate": {
+        "correct": 7,
+        "total": 8,
+        "known_correct": 5,
+        "known_expected": 6,
+        "known_predicted": 5,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "noapte": {
+        "correct": 8,
+        "total": 8,
+        "known_correct": 0,
+        "known_expected": 0,
+        "known_predicted": 0,
+        "unknown_expected": 8,
+        "unknown_correct": 8
+      }
+    },
+    "known_correct": 29,
+    "known_expected": 30,
+    "known_predicted": 30,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 0,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 34,
+    "evidence_quotes": 34,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 8,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 43.736,
+    "median_original_inference_seconds": 3.627,
+    "input_tokens": 8382,
+    "output_tokens": 656,
+    "errors": [
+      {
+        "event_id": "stress-negated_fatality",
+        "article_ids": [
+          "stress-negated_fatality"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "stress-negated_fatality"
+        ]
+      },
+      {
+        "event_id": "stress-hypothetical_cause",
+        "article_ids": [
+          "stress-hypothetical_cause"
+        ],
+        "field": "cauza_raportata",
+        "expected": null,
+        "predicted": "viteza",
+        "candidate_ids": [
+          "stress-hypothetical_cause"
+        ]
+      }
+    ],
+    "gold_unique_events": 8,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  }
+}

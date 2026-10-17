@@ -1,0 +1,843 @@
+{
+  "pipeline": "agreement",
+  "version": "p2-2.1-repository-bounded",
+  "generated_at": "2026-10-17T12:58:47.124841+00:00",
+  "data_mode": "synthetic",
+  "wall_seconds": 0.0027,
+  "rows": [
+    {
+      "article_id": "stress-publication_trap",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": false,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": []
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "fb1363219732c4a7e2da3d79401f302d9b8d19abc790bc66bda8171b56c933b6",
+      "title": "[SYNTHETIC CHALLENGE] publication_trap",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-publication_trap",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-hospital_not_severity",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-04-12",
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 2,
+          "time": 3,
+          "location": 1,
+          "participants": 0,
+          "severity": 2,
+          "cause": 1,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:noapte",
+          "evidence_does_not_normalize:ora",
+          "unsupported:cauza_raportata",
+          "unsupported:gravitate",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "unsupported:participanti",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "f326f7c8d10754e1816e924abde0c88fb2cfd60375d43ee4c34f4b119585d641",
+      "title": "[SYNTHETIC CHALLENGE] hospital_not_severity",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-hospital_not_severity",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-negated_fatality",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 0,
+          "severity": 3,
+          "cause": 0,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:noapte",
+          "evidence_does_not_normalize:ora",
+          "unsupported:data_eveniment",
+          "unsupported:gravitate",
+          "unsupported:loc_text",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "disagreement:data_eveniment",
+          "disagreement:loc_text"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "7f3c382bfcfd23a725771314df3688ee5adf0a15637a69cb262e89ec83783d9c",
+      "title": "[SYNTHETIC CHALLENGE] negated_fatality",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-negated_fatality",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-prevention_only",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": null,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": [
+          "relevance_uncertain"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "c456017a0152d35eeea54edb10919576034295dac275b27392846deb96335a38",
+      "title": "[SYNTHETIC CHALLENGE] prevention_only",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-prevention_only",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-no_pedestrian_paraphrase",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": false,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": []
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "a93b1426cfc10ba50cdc1ce7f668d41e67e0ceb7f948365fc1b5f50862a92976",
+      "title": "[SYNTHETIC CHALLENGE] no_pedestrian_paraphrase",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-no_pedestrian_paraphrase",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-embedded_instruction",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 3,
+          "severity": 4,
+          "cause": 3,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:data_eveniment",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:noapte",
+          "evidence_does_not_normalize:ora",
+          "unsupported:data_eveniment",
+          "unsupported:loc_text",
+          "unsupported:ora",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "5ce82053f32fb54430365ecf2f475bb0c83c1f1766c4116e5c0e873767391513",
+      "title": "[SYNTHETIC CHALLENGE] embedded_instruction",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-embedded_instruction",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-old_context_date",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 1,
+          "date": 2,
+          "time": 4,
+          "location": 3,
+          "participants": 1,
+          "severity": 3,
+          "cause": 1,
+          "night": null
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "unsupported:data_eveniment",
+          "unsupported:gravitate",
+          "unsupported:loc_text",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "unsupported:participanti",
+          "disagreement:data_eveniment",
+          "disagreement:ora",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "1a7126f250eb397a7ba4e0d6db24b1a3e05018f27c9e65a25be15c8a4f6671b9",
+      "title": "[SYNTHETIC CHALLENGE] old_context_date",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-old_context_date",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-outside_city",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 0,
+          "severity": 2,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:noapte",
+          "evidence_does_not_normalize:ora",
+          "unsupported:data_eveniment",
+          "unsupported:gravitate",
+          "unsupported:loc_text",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "unsupported:participanti",
+          "disagreement:data_eveniment",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "d0785c2478d6d38eb920dcb905ba39ec9989e244266722c5804d800d8a0c5cde",
+      "title": "[SYNTHETIC CHALLENGE] outside_city",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-outside_city",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-abbreviated_road",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 4,
+          "date": 1,
+          "time": 3,
+          "location": 2,
+          "participants": 0,
+          "severity": 2,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:noapte",
+          "unsupported:data_eveniment",
+          "unsupported:gravitate",
+          "unsupported:loc_text",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "disagreement:data_eveniment",
+          "disagreement:ora",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "bd63c3f4f40a21c80855e06ba50f5a46eae6f0918fe24ed2d7a5936399d8b345",
+      "title": "[SYNTHETIC CHALLENGE] abbreviated_road",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-abbreviated_road",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-hypothetical_cause",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 3,
+          "severity": 4,
+          "cause": 5,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:noapte",
+          "evidence_does_not_normalize:ora",
+          "unsupported:data_eveniment",
+          "unsupported:loc_text",
+          "unsupported:noapte",
+          "unsupported:ora",
+          "disagreement:data_eveniment",
+          "disagreement:loc_text",
+          "disagreement:participanti",
+          "disagreement:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "a366e348e9fc1012ca0c9306747aa0d82bbf754e418a77eca4596795d0a4e036",
+      "title": "[SYNTHETIC CHALLENGE] hypothetical_cause",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-hypothetical_cause",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    }
+  ],
+  "accidents": [
+    {
+      "event_id": "candidate-985858c7700c1c",
+      "article_ids": [
+        "stress-hospital_not_severity"
+      ],
+      "urls": [
+        "https://example.invalid/stress-hospital_not_severity"
+      ],
+      "data_eveniment": "2026-04-12",
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-04-12."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-hospital_not_severity",
+            "quote": "Evenimentul s-a produs la data de 2026-04-12.",
+            "start": 76,
+            "end": 121
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:loc_text",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora",
+        "unsupported:cauza_raportata",
+        "unsupported:gravitate",
+        "unsupported:noapte",
+        "unsupported:ora",
+        "unsupported:participanti"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-a903af71124c67",
+      "article_ids": [
+        "stress-negated_fatality"
+      ],
+      "urls": [
+        "https://example.invalid/stress-negated_fatality"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "participanti": "Un accident rutier a implicat un pieton și un autoturism."
+      },
+      "evidence_refs": {
+        "participanti": [
+          {
+            "article_id": "stress-negated_fatality",
+            "quote": "Un accident rutier a implicat un pieton și un autoturism.",
+            "start": 0,
+            "end": 57
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora",
+        "unsupported:data_eveniment",
+        "unsupported:gravitate",
+        "unsupported:loc_text",
+        "unsupported:noapte",
+        "unsupported:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-636dde58fb922c",
+      "article_ids": [
+        "stress-embedded_instruction"
+      ],
+      "urls": [
+        "https://example.invalid/stress-embedded_instruction"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {},
+      "evidence_refs": {},
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:loc_text",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:data_eveniment",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora",
+        "unsupported:data_eveniment",
+        "unsupported:loc_text",
+        "unsupported:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-ca068c44c39ef5",
+      "article_ids": [
+        "stress-old_context_date"
+      ],
+      "urls": [
+        "https://example.invalid/stress-old_context_date"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {},
+      "evidence_refs": {},
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "disagreement:ora",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "unsupported:data_eveniment",
+        "unsupported:gravitate",
+        "unsupported:loc_text",
+        "unsupported:noapte",
+        "unsupported:ora",
+        "unsupported:participanti"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-98a52d5abfe4cd",
+      "article_ids": [
+        "stress-outside_city"
+      ],
+      "urls": [
+        "https://example.invalid/stress-outside_city"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {},
+      "evidence_refs": {},
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora",
+        "unsupported:data_eveniment",
+        "unsupported:gravitate",
+        "unsupported:loc_text",
+        "unsupported:noapte",
+        "unsupported:ora",
+        "unsupported:participanti"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-668f30f11fb6db",
+      "article_ids": [
+        "stress-abbreviated_road"
+      ],
+      "urls": [
+        "https://example.invalid/stress-abbreviated_road"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {},
+      "evidence_refs": {},
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "disagreement:ora",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "unsupported:data_eveniment",
+        "unsupported:gravitate",
+        "unsupported:loc_text",
+        "unsupported:noapte",
+        "unsupported:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-cdeb591904488a",
+      "article_ids": [
+        "stress-hypothetical_cause"
+      ],
+      "urls": [
+        "https://example.invalid/stress-hypothetical_cause"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "gravitate": "Nu a fost precizată cauza accidentului."
+      },
+      "evidence_refs": {
+        "gravitate": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Nu a fost precizată cauza accidentului.",
+            "start": 171,
+            "end": 210
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:cauza_raportata",
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora",
+        "unsupported:data_eveniment",
+        "unsupported:loc_text",
+        "unsupported:noapte",
+        "unsupported:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    }
+  ],
+  "duplicate_review_queue": []
+}

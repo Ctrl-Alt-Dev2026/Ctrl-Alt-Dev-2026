@@ -1,0 +1,38 @@
+[
+  {
+    "article_id": "syn-001",
+    "sursa": "SINTETIC",
+    "url": "https://example.com/syn-001",
+    "titlu": "[SINTETIC] Pieton rănit grav pe o trecere din zona Podu Roș",
+    "text": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș. Victima a fost transportată la spital cu traumatisme grave. Poliția a deschis o anchetă.",
+    "publicat_la": "2025-03-13",
+    "colectat_la": "2026-10-17"
+  },
+  {
+    "article_id": "syn-002",
+    "sursa": "SINTETIC",
+    "url": "https://example.com/syn-002",
+    "titlu": "[SINTETIC] Accident mortal la Podu Roș",
+    "text": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45. Șoferul ar fi circulat cu viteză excesivă, susțin martorii.",
+    "publicat_la": "2025-11-20",
+    "colectat_la": "2026-10-17"
+  },
+  {
+    "article_id": "syn-003",
+    "sursa": "SINTETIC",
+    "url": "https://example.com/syn-003",
+    "titlu": "[SINTETIC] Dosar penal pentru șoferul care a lovit mortal o femeie la Podu Roș",
+    "text": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș. Ancheta continuă.",
+    "publicat_la": "2025-11-21",
+    "colectat_la": "2026-10-17"
+  },
+  {
+    "article_id": "syn-004",
+    "sursa": "SINTETIC",
+    "url": "https://example.com/syn-004",
+    "titlu": "[SINTETIC] Copil acroșat de o mașină în zona Gării",
+    "text": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării. Din fericire, acesta a scăpat doar cu câteva zgârieturi.",
+    "publicat_la": "2025-04-08",
+    "colectat_la": "2026-10-17"
+  }
+]

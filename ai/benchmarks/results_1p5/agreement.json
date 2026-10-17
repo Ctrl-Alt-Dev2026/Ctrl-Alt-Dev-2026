@@ -1,0 +1,299 @@
+{
+  "pipeline": "agreement",
+  "version": "p2-2.1-repository-bounded",
+  "generated_at": "2026-10-17T12:57:35.996432+00:00",
+  "data_mode": "synthetic",
+  "wall_seconds": 0.0013,
+  "rows": [
+    {
+      "article_id": "syn-001",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "grav",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 0,
+          "location": 0,
+          "participants": 0,
+          "severity": 1,
+          "cause": 1,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "unsupported:noapte",
+          "disagreement:data_eveniment",
+          "disagreement:ora",
+          "disagreement:loc_text",
+          "disagreement:participanti",
+          "disagreement:noapte"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "20f7e4fdc83e1c6f53a0e63bc1d773c16d8e87a74e07af564cc737a1652a967d",
+      "title": "[SINTETIC] Pieton rănit grav pe o trecere din zona Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-001",
+      "published_at": "2025-03-13",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-002",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": null,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": [
+          "disagreement:is_event"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "2c45f97166bbcd8fb3aba720e95cd2e8cc302dbd1e9aa1ccf6243d5bcc5ae7f8",
+      "title": "[SINTETIC] Accident mortal la Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-002",
+      "published_at": "2025-11-20",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-003",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": null,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": [
+          "disagreement:is_event"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "d40552582a03100f896bbccc47e3f32f2f87883ea2f516e2902e870aa762964f",
+      "title": "[SINTETIC] Dosar penal pentru șoferul care a lovit mortal o femeie la Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-003",
+      "published_at": "2025-11-21",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-004",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2025-04-07",
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": false,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 0,
+          "location": 0,
+          "participants": 0,
+          "severity": 0,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:ora",
+          "unsupported:gravitate",
+          "unsupported:ora",
+          "disagreement:loc_text",
+          "disagreement:participanti"
+        ]
+      },
+      "trace": {
+        "component_pipelines": [
+          "direct",
+          "evidence"
+        ],
+        "additional_model_calls": 0
+      },
+      "content_hash": "18b80d31a4c28c214a06d3d1798206b8b41e55c6f698df5841344e6dc6f7a0b6",
+      "title": "[SINTETIC] Copil acroșat de o mașină în zona Gării",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-004",
+      "published_at": "2025-04-08",
+      "retrieved_at": "2026-10-17"
+    }
+  ],
+  "accidents": [
+    {
+      "event_id": "candidate-01b328f503b418",
+      "article_ids": [
+        "syn-001"
+      ],
+      "urls": [
+        "https://example.com/syn-001"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "grav",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "gravitate": "Victima a fost transportată la spital cu traumatisme grave."
+      },
+      "evidence_refs": {
+        "gravitate": [
+          {
+            "article_id": "syn-001",
+            "quote": "Victima a fost transportată la spital cu traumatisme grave.",
+            "start": 143,
+            "end": 202
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:data_eveniment",
+        "disagreement:loc_text",
+        "disagreement:noapte",
+        "disagreement:ora",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "unsupported:noapte"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-03-13",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-b7083d632930f8",
+      "article_ids": [
+        "syn-004"
+      ],
+      "urls": [
+        "https://example.com/syn-004"
+      ],
+      "data_eveniment": "2025-04-07",
+      "ora": null,
+      "loc_text": null,
+      "participanti": [],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": false,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+        "noapte": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ],
+        "noapte": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "",
+      "issues": [
+        "disagreement:loc_text",
+        "disagreement:participanti",
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:ora",
+        "unsupported:gravitate",
+        "unsupported:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-04-08",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    }
+  ],
+  "duplicate_review_queue": []
+}

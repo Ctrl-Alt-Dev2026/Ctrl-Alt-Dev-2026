@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "cache_mode": "cache",
+  "replay_mode": "replay",
+  "replay_label": "SYNTHETIC REPLAY \u2014 saved extraction, not live AI",
+  "live_mode": "live",
+  "all_pending": true,
+  "live_original_inference_seconds": 4.9681,
+  "note": "Extra generated fictional transport test; excluded from all accuracy scores"
+}

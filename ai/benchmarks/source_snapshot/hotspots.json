@@ -1,0 +1,54 @@
+[
+  {"id": "h-1", "crossing_id": "x-001", "nume": "Demo – Podu Roș", "lat": 47.1532, "lon": 27.5958, "h3": null,
+   "scor": 13, "componente_scor": {"evenimente": 4, "deces": 4, "grav": 2, "context": 3},
+   "event_ids": ["ev-001", "ev-002", "ev-003", "ev-004"], "nr_evenimente": 4,
+   "pe_ore": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0],
+   "explicatie": "4 pietoni loviți (1 deces, 1 rănit grav), 2 noaptea; 4 benzi fără semafor; stație la mai puțin de 100 m",
+   "date_lipsa": ["iluminat necunoscut", "ora necunoscută la 1 eveniment"],
+   "masuri": [
+     {"measure_id": "iluminat_trecere", "motiv": "2 evenimente noaptea", "de_verificat": ["iluminatul existent", "poziția stâlpilor", "vizibilitatea din ambele sensuri"]},
+     {"measure_id": "semafor_pietonal", "motiv": "trecere fără semafor pe 4 benzi, cu 4 evenimente", "de_verificat": ["volumul de trafic", "fluxul de pietoni", "semafoarele din apropiere"]}
+   ],
+   "verificat": true},
+  {"id": "h-2", "crossing_id": "x-002", "nume": "Demo – Păcurari", "lat": 47.1702, "lon": 27.5553, "h3": null,
+   "scor": 11, "componente_scor": {"evenimente": 3, "deces": 0, "grav": 4, "context": 4},
+   "event_ids": ["ev-005", "ev-006", "ev-007"], "nr_evenimente": 3,
+   "pe_ore": [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0],
+   "explicatie": "3 pietoni loviți (2 răniți grav), 2 noaptea; 4 benzi fără semafor; școală la mai puțin de 150 m; stație aproape",
+   "date_lipsa": ["cauza necunoscută la 1 eveniment"],
+   "masuri": [
+     {"measure_id": "semafor_pietonal", "motiv": "trecere fără semafor pe 4 benzi, lângă școală", "de_verificat": ["volumul de trafic", "fluxul de elevi la orele de program"]},
+     {"measure_id": "insula_refugiu", "motiv": "traversare lungă, pe 4 benzi", "de_verificat": ["lățimea disponibilă", "accesul vehiculelor mari"]}
+   ],
+   "verificat": false},
+  {"id": "h-3", "crossing_id": "x-005", "nume": "Demo – Copou", "lat": 47.1745, "lon": 27.5718, "h3": null,
+   "scor": 6, "componente_scor": {"evenimente": 2, "deces": 0, "grav": 2, "context": 2},
+   "event_ids": ["ev-012", "ev-013"], "nr_evenimente": 2,
+   "pe_ore": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+   "explicatie": "2 pietoni loviți (1 rănit grav); intersecție semaforizată; școală și stație aproape; cauze necunoscute",
+   "date_lipsa": ["cauzele necunoscute la ambele evenimente", "ora necunoscută la 1 eveniment"],
+   "masuri": [
+     {"measure_id": "observatie_teren", "motiv": "date insuficiente pentru o măsură concretă", "de_verificat": ["fazele semaforului", "conflictele la viraj", "fluxul de la stație"]}
+   ],
+   "verificat": false},
+  {"id": "h-4", "crossing_id": "x-003", "nume": "Demo – Tătărași", "lat": 47.1668, "lon": 27.6098, "h3": null,
+   "scor": 5, "componente_scor": {"evenimente": 2, "deces": 0, "grav": 2, "context": 1},
+   "event_ids": ["ev-008", "ev-009"], "nr_evenimente": 2,
+   "pe_ore": [0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0],
+   "explicatie": "2 pietoni loviți (1 rănit grav), ziua; școală la mai puțin de 150 m; stradă cu 2 benzi fără semafor",
+   "date_lipsa": ["iluminat necunoscut"],
+   "masuri": [
+     {"measure_id": "trecere_inaltata", "motiv": "traversări documentate lângă școală", "de_verificat": ["intrările școlii", "dacă strada e traseu de autobuz sau ambulanță"]}
+   ],
+   "verificat": false},
+  {"id": "h-5", "crossing_id": "x-004", "nume": "Demo – Nicolina", "lat": 47.1432, "lon": 27.5902, "h3": null,
+   "scor": 5, "componente_scor": {"evenimente": 2, "deces": 0, "grav": 2, "context": 1},
+   "event_ids": ["ev-010", "ev-011"], "nr_evenimente": 2,
+   "pe_ore": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0],
+   "explicatie": "2 pietoni loviți (1 rănit grav), ambii noaptea; trecere neiluminată conform OSM; stație aproape",
+   "date_lipsa": [],
+   "masuri": [
+     {"measure_id": "iluminat_trecere", "motiv": "2 evenimente noaptea, iluminat absent în OSM", "de_verificat": ["confirmarea în teren a lipsei iluminatului", "vizibilitatea din ambele sensuri"]}
+   ],
+   "verificat": false}
+]

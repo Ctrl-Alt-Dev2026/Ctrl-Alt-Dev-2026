@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-10-17T12:59:36.178749+00:00",
+  "source_url": "https://github.com/andrei-vladjitaru/Ctrl-Alt-Dev-2026/tree/77b0a0908ecf2b6a919a13ef003056f1c815705e/false_data",
+  "repository_commit": "77b0a0908ecf2b6a919a13ef003056f1c815705e",
+  "data_mode": "synthetic",
+  "available_articles": 4,
+  "source_annotated_unique_events": 3,
+  "reference_event_fixtures": 17,
+  "missing_source_articles": 14,
+  "source_file_sha256": {
+    "accidents.json": "3366aeb06032a3225ceb30b875c362842b5e24ade0bb6c55f617da7f5ad731de",
+    "articles.json": "50af730c8f8b4124bc137d76d7772462c1ec1097a55ee9762d898af02a77663b",
+    "crossings.geojson": "155d84325bd36be3c0f244b15b51acf09ea1ca08e9933952e82a200282a2d340",
+    "hotspots.json": "804446e34ba08a048fb411bb02a0e79bb05e83c75a22da13f1f0a92b72fe87ac",
+    "manifest.json": "bdd9a69a5c2ed6e24852b39014bc85b31e55fb63fe22d0dda413b34bb9ecdfca",
+    "measure.json": "52e3c47bf55964362e286b9dfb40aa465676b7ba6947235262e5b3ae1e355330"
+  },
+  "engine_version": "p2-2.1-repository-bounded",
+  "generation": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 650
+  },
+  "runtime": "Ollama local CPU; exact identities in runtime_metadata.json",
+  "api_endpoint": "http://127.0.0.1:11435",
+  "models": [
+    "qwen2.5:1.5b",
+    "qwen2.5:3b"
+  ],
+  "evaluation": "development + author-created synthetic challenge; not independent real-news evaluation"
+}

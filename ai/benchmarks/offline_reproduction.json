@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": {
+    "qwen2.5:1.5b/direct": "identical grounded fields; 4/4 cache hits; AI server stopped",
+    "qwen2.5:1.5b/evidence": "identical grounded fields; 4/4 cache hits; AI server stopped",
+    "qwen2.5:3b/direct": "identical grounded fields; 4/4 cache hits; AI server stopped",
+    "qwen2.5:3b/evidence": "identical grounded fields; 4/4 cache hits; AI server stopped"
+  }
+}

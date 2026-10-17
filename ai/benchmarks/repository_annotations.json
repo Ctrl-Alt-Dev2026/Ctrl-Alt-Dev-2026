@@ -1,0 +1,20 @@
+{
+  "annotation_status": "Author-annotated from the four repository source texts before inspecting repository-model predictions; synthetic only, not independent real-news validation",
+  "date_policy": "Explicit yesterday/evening references anchor to publication date minus one day; weekday means most recent on/before publication. Every inferred date remains pending review.",
+  "article_annotations": [
+    {"event_id":"source-syn-001","article_ids":["syn-001"],"data_eveniment":"2025-03-12","ora":"21:30","loc_text":"pe Bulevardul Demo, în zona Podu Roș","participanti":["pieton","autoturism"],"cauza_raportata":"viteza","gravitate":"grav","noapte":true},
+    {"event_id":"source-syn-002","article_ids":["syn-002"],"data_eveniment":"2025-11-19","ora":"22:45","loc_text":"trecerea de pietoni din zona Podu Roș","participanti":["pieton"],"cauza_raportata":"viteza","gravitate":"deces","noapte":true},
+    {"event_id":"source-syn-003","article_ids":["syn-003"],"data_eveniment":"2025-11-19","ora":null,"loc_text":"trecerea de pietoni de la Podu Roș","participanti":["pieton"],"cauza_raportata":null,"gravitate":"deces","noapte":true},
+    {"event_id":"source-syn-004","article_ids":["syn-004"],"data_eveniment":"2025-04-07","ora":null,"loc_text":"în zona Gării","participanti":["pieton","autoturism"],"cauza_raportata":null,"gravitate":"usor","noapte":false}
+  ],
+  "event_groups": [
+    {"event_id":"ev-001","article_ids":["syn-001"],"data_eveniment":"2025-03-12","ora":"21:30","loc_text":"pe Bulevardul Demo, în zona Podu Roș","participanti":["pieton","autoturism"],"cauza_raportata":"viteza","gravitate":"grav","noapte":true},
+    {"event_id":"ev-003","article_ids":["syn-002","syn-003"],"data_eveniment":"2025-11-19","ora":"22:45","loc_text":"trecerea de pietoni din zona Podu Roș","participanti":["pieton"],"cauza_raportata":"viteza","gravitate":"deces","noapte":true},
+    {"event_id":"ev-016","article_ids":["syn-004"],"data_eveniment":"2025-04-07","ora":null,"loc_text":"în zona Gării","participanti":["pieton","autoturism"],"cauza_raportata":null,"gravitate":"usor","noapte":false}
+  ],
+  "reference_corrections": [
+    "The repository accident fixture is not a complete extraction oracle: 14 of its source article IDs are absent.",
+    "syn-002 and syn-003 mention a driver but do not explicitly establish the vehicle category autoturism. Do not score copying that category from accidents.json as correct extraction.",
+    "Coordinates, municipality membership, location precision, and verificat flags in accidents.json are downstream synthetic fixture annotations, not extracted source facts."
+  ]
+}

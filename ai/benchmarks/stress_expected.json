@@ -1,0 +1,130 @@
+[
+  {
+    "event_id": "stress-publication_trap",
+    "article_ids": [
+      "stress-publication_trap"
+    ],
+    "data_eveniment": null,
+    "ora": null,
+    "loc_text": "pe Bulevardul Carol I",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "necunoscut",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-hospital_not_severity",
+    "article_ids": [
+      "stress-hospital_not_severity"
+    ],
+    "data_eveniment": "2026-04-12",
+    "ora": null,
+    "loc_text": "pe Strada Arcu",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "necunoscut",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-negated_fatality",
+    "article_ids": [
+      "stress-negated_fatality"
+    ],
+    "data_eveniment": "2026-03-01",
+    "ora": null,
+    "loc_text": "pe Strada Sărărie",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-embedded_instruction",
+    "article_ids": [
+      "stress-embedded_instruction"
+    ],
+    "data_eveniment": null,
+    "ora": null,
+    "loc_text": "pe Strada Arcu",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-old_context_date",
+    "article_ids": [
+      "stress-old_context_date"
+    ],
+    "data_eveniment": "2026-06-12",
+    "ora": "23:10",
+    "loc_text": "pe Strada Gării",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-outside_city",
+    "article_ids": [
+      "stress-outside_city"
+    ],
+    "data_eveniment": "2026-04-15",
+    "ora": null,
+    "loc_text": "în comuna Tomești, pe strada principală",
+    "participanti": [
+      "pieton",
+      "autoutilitara"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-abbreviated_road",
+    "article_ids": [
+      "stress-abbreviated_road"
+    ],
+    "data_eveniment": "2026-04-18",
+    "ora": "11:25",
+    "loc_text": "pe Bd. Independenței",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": null
+  },
+  {
+    "event_id": "stress-hypothetical_cause",
+    "article_ids": [
+      "stress-hypothetical_cause"
+    ],
+    "data_eveniment": "2026-04-19",
+    "ora": null,
+    "loc_text": "pe Strada Arcu",
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": null
+  }
+]

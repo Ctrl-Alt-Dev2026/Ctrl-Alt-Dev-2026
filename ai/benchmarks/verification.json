@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "checks": [
+    "test_safety.py passed",
+    "test_endpoint.py passed",
+    "all six source files preserved by SHA256; four available inputs",
+    "two models x five pipelines; 28-field denominator; no transport failures; exact source quotes; no geocoding or approval",
+    "ten challenge articles, eight positive events, 56-field denominator",
+    "three explicitly synthetic pending replay candidates; null-geometry v1 handoff",
+    "real HTTP live inference, cache hit and labeled replay all passed",
+    "Offline reproduction passed for both models with the temporary AI server stopped"
+  ],
+  "test_logs": {
+    "test_safety.py": "test_abbreviation_does_not_truncate_location (test_safety.SafetyTests.test_abbreviation_does_not_truncate_location) ... ok\ntest_conflicting_severity_is_review_not_auto_merge (test_safety.SafetyTests.test_conflicting_severity_is_review_not_auto_merge) ... ok\ntest_evidence_offsets_match_source (test_safety.SafetyTests.test_evidence_offsets_match_source) ... ok\ntest_hybrid_provider_failure_keeps_pending_rules_candidate (test_safety.SafetyTests.test_hybrid_provider_failure_keeps_pending_rules_candidate) ... ok\ntest_invalid_calendar_date (test_safety.SafetyTests.test_invalid_calendar_date) ... ok\ntest_invalid_evidence_drops_value (test_safety.SafetyTests.test_invalid_evidence_drops_value) ... ok\ntest_invalid_json_retries_then_succeeds_and_cache_replays (test_safety.SafetyTests.test_invalid_json_retries_then_succeeds_and_cache_replays) ... ok\ntest_later_pedestrian_mention_does_not_erase_car (test_safety.SafetyTests.test_later_pedestrian_mention_does_not_erase_car) ... ok\ntest_missing_event_date_does_not_use_publication (test_safety.SafetyTests.test_missing_event_date_does_not_use_publication) ... ok\ntest_missing_time_is_review_not_auto_merge (test_safety.SafetyTests.test_missing_time_is_review_not_auto_merge) ... ok\ntest_mixed_modes_rejected (test_safety.SafetyTests.test_mixed_modes_rejected) ... ok\ntest_no_coordinates_or_automatic_approval (test_safety.SafetyTests.test_no_coordinates_or_automatic_approval) ... ok\ntest_relative_dates_use_explicit_publication_anchor (test_safety.SafetyTests.test_relative_dates_use_explicit_publication_anchor) ... ok\ntest_schema_rejects_boolean_sentence_id (test_safety.SafetyTests.test_schema_rejects_boolean_sentence_id) ... ok\ntest_schema_rejects_nonexistent_sentence_id (test_safety.SafetyTests.test_schema_rejects_nonexistent_sentence_id) ... ok\ntest_street_abbreviations_and_diacritics (test_safety.SafetyTests.test_street_abbreviations_and_diacritics) ... ok\ntest_timeout_does_not_cache_bad_result (test_safety.SafetyTests.test_timeout_does_not_cache_bad_result) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.051s\n\nOK\n",
+    "test_endpoint.py": "test_bad_contract_rejected (test_endpoint.EndpointTests.test_bad_contract_rejected) ... ok\ntest_nonobject_json_rejected (test_endpoint.EndpointTests.test_nonobject_json_rejected) ... ok\ntest_provider_failure_is_503 (test_endpoint.EndpointTests.test_provider_failure_is_503) ... ok\ntest_replay_is_explicitly_labeled (test_endpoint.EndpointTests.test_replay_is_explicitly_labeled) ... ok\ntest_rules_candidate_is_pending (test_endpoint.EndpointTests.test_rules_candidate_is_pending) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 6.038s\n\nOK\n"
+  },
+  "code_sha256": {
+    "build_report.py": "536ebe4d72e88d7de3d1ac655a085ceab72749b11de7beb942cb5310d0a3227f",
+    "create_stress.py": "3011dbb8033a40cedefe43fb7bc5b5cba86d42edd1bc63c76125707e7eeb586e",
+    "engine.py": "14a9fac9eedace0d63ddb87faa90109a05aacd70b40cd7d700990057e784da6d",
+    "evaluate.py": "a72de2bc5fd9bad13f47a5f3945a1f1c74ddfdbe04117d45c532c232e2ce37df",
+    "export_contracts.py": "e074945b2cba8d5858131b96a827f483fa3a3aa0a0e70f7298c7701126b340c2",
+    "run_lab.py": "03f2e41e6d7375d5f57b75f5f324b231b3c85841697c09e116ff5b4ba6a3622c",
+    "serve.py": "85123f78bd2d03f8480301316a73735c816d069664011f19c6e4313e7aa97c39",
+    "verify_package.py": "9495269e3d485f037df94168f5b37f94d65b2cea78f77ed81559b6405c533108",
+    "tests/test_endpoint.py": "b0398e70b84b08a6291512be7a1d53692258b9736715521c287df093e681dff1",
+    "tests/test_safety.py": "ba8afe8f48c88a1ef3986d353a8374ec16afed9607fbfe372e64321556728297",
+    "tests/validate_repository.py": "56055d93d5a57f5f321f5d6c3293513a0c3fb1a5f0af6b062a8d0f5373519796"
+  }
+}

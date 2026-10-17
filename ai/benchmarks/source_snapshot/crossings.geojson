@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.5958, 47.1532]}, "properties": {"id": "x-001", "tip": "trecere", "nume": "Demo – Podu Roș", "semafor": false, "benzi": 4, "iluminat": null, "tip_strada": "bulevard", "scoala_150m": false, "statie_100m": true, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.5553, 47.1702]}, "properties": {"id": "x-002", "tip": "trecere", "nume": "Demo – Păcurari", "semafor": false, "benzi": 4, "iluminat": true, "tip_strada": "bulevard", "scoala_150m": true, "statie_100m": true, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.6098, 47.1668]}, "properties": {"id": "x-003", "tip": "trecere", "nume": "Demo – Tătărași", "semafor": false, "benzi": 2, "iluminat": null, "tip_strada": "strada", "scoala_150m": true, "statie_100m": false, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.5902, 47.1432]}, "properties": {"id": "x-004", "tip": "trecere", "nume": "Demo – Nicolina", "semafor": false, "benzi": 2, "iluminat": false, "tip_strada": "strada", "scoala_150m": false, "statie_100m": true, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.5718, 47.1745]}, "properties": {"id": "x-005", "tip": "intersectie", "nume": "Demo – Copou", "semafor": true, "benzi": 4, "iluminat": true, "tip_strada": "bulevard", "scoala_150m": true, "statie_100m": true, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.5468, 47.1592]}, "properties": {"id": "x-006", "tip": "trecere", "nume": "Demo – Alexandru cel Bun", "semafor": false, "benzi": 2, "iluminat": null, "tip_strada": "strada", "scoala_150m": true, "statie_100m": false, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.6205, 47.1612]}, "properties": {"id": "x-007", "tip": "trecere", "nume": "Demo – Tudor Vladimirescu", "semafor": false, "benzi": 4, "iluminat": null, "tip_strada": "bulevard", "scoala_150m": false, "statie_100m": false, "sursa": "SINTETIC", "descarcat_la": "2026-10-17"}}
+  ]
+}

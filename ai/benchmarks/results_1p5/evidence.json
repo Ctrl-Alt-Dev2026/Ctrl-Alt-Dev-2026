@@ -1,0 +1,564 @@
+{
+  "pipeline": "evidence",
+  "version": "p2-2.1-repository-bounded",
+  "generated_at": "2026-10-17T12:57:35.982902+00:00",
+  "data_mode": "synthetic",
+  "wall_seconds": 0.0117,
+  "rows": [
+    {
+      "article_id": "syn-001",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2025-03-12",
+        "ora": "21:30",
+        "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "grav",
+        "noapte": true,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 0,
+          "location": 0,
+          "participants": 0,
+          "severity": 1,
+          "cause": 1,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": true,
+        "duration_s": 6.0623,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 75,
+        "prompt_eval_count": 817,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 6054560600,
+        "cache_key": "b84b8b2578f62924f8178160bdb71dd921ff5f211cf1fb82a799b7c33bc69ecd"
+      },
+      "content_hash": "20f7e4fdc83e1c6f53a0e63bc1d773c16d8e87a74e07af564cc737a1652a967d",
+      "title": "[SINTETIC] Pieton rănit grav pe o trecere din zona Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-001",
+      "published_at": "2025-03-13",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-002",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2025-11-19",
+        "ora": null,
+        "loc_text": "trecerea de pietoni din zona Podu Roș",
+        "participanti": [
+          "pieton"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "deces",
+        "noapte": true,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 1,
+          "location": 0,
+          "participants": 0,
+          "severity": 0,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": true,
+        "duration_s": 5.1744,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 60,
+        "prompt_eval_count": 785,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 5167683600,
+        "cache_key": "d9321b27834a9c6b71d9343fd32ff7233dff26896b000f1f9451d551deee0fd8"
+      },
+      "content_hash": "2c45f97166bbcd8fb3aba720e95cd2e8cc302dbd1e9aa1ccf6243d5bcc5ae7f8",
+      "title": "[SINTETIC] Accident mortal la Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-002",
+      "published_at": "2025-11-20",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-003",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2025-11-19",
+        "ora": null,
+        "loc_text": "trecerea de pietoni de la Podu Roș",
+        "participanti": [
+          "pieton"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "deces",
+        "noapte": true,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 0,
+          "location": 0,
+          "participants": 0,
+          "severity": 0,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": true,
+        "duration_s": 4.8066,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 60,
+        "prompt_eval_count": 768,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 4778637100,
+        "cache_key": "e01f65e1d7c28bdfdeeb85b615aab031e89c521fa9435e637b705f04c7d4d553"
+      },
+      "content_hash": "d40552582a03100f896bbccc47e3f32f2f87883ea2f516e2902e870aa762964f",
+      "title": "[SINTETIC] Dosar penal pentru șoferul care a lovit mortal o femeie la Podu Roș",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-003",
+      "published_at": "2025-11-21",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "syn-004",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2025-04-07",
+        "ora": null,
+        "loc_text": "în zona Gării",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": false,
+        "evidence_ids": {
+          "event": 0,
+          "date": 0,
+          "time": 0,
+          "location": 0,
+          "participants": 0,
+          "severity": 0,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": true,
+        "duration_s": 4.8374,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 60,
+        "prompt_eval_count": 759,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 4829585000,
+        "cache_key": "e0c11c1ec9bec8b8dd9e3917c340fcab55d3c66286ba4b46e3c8c179aa8bdb8d"
+      },
+      "content_hash": "18b80d31a4c28c214a06d3d1798206b8b41e55c6f698df5841344e6dc6f7a0b6",
+      "title": "[SINTETIC] Copil acroșat de o mașină în zona Gării",
+      "publisher": "SINTETIC",
+      "url": "https://example.com/syn-004",
+      "published_at": "2025-04-08",
+      "retrieved_at": "2026-10-17"
+    }
+  ],
+  "accidents": [
+    {
+      "event_id": "candidate-01b328f503b418",
+      "article_ids": [
+        "syn-001"
+      ],
+      "urls": [
+        "https://example.com/syn-001"
+      ],
+      "data_eveniment": "2025-03-12",
+      "ora": "21:30",
+      "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "grav",
+      "noapte": true,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+        "ora": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+        "loc_text": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+        "participanti": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+        "gravitate": "Victima a fost transportată la spital cu traumatisme grave.",
+        "noapte": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "syn-001",
+            "quote": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+            "start": 0,
+            "end": 142
+          }
+        ],
+        "ora": [
+          {
+            "article_id": "syn-001",
+            "quote": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+            "start": 0,
+            "end": 142
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "syn-001",
+            "quote": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+            "start": 0,
+            "end": 142
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "syn-001",
+            "quote": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+            "start": 0,
+            "end": 142
+          }
+        ],
+        "gravitate": [
+          {
+            "article_id": "syn-001",
+            "quote": "Victima a fost transportată la spital cu traumatisme grave.",
+            "start": 143,
+            "end": 202
+          }
+        ],
+        "noapte": [
+          {
+            "article_id": "syn-001",
+            "quote": "Un bărbat de 45 de ani a fost lovit aseară, în jurul orei 21:30, de un autoturism care circula cu viteză pe Bulevardul Demo, în zona Podu Roș.",
+            "start": 0,
+            "end": 142
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe bulevardul demo in zona podu ros",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-03-13",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-e5aede6f9ef86e",
+      "article_ids": [
+        "syn-002"
+      ],
+      "urls": [
+        "https://example.com/syn-002"
+      ],
+      "data_eveniment": "2025-11-19",
+      "ora": null,
+      "loc_text": "trecerea de pietoni din zona Podu Roș",
+      "participanti": [
+        "pieton"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "deces",
+      "noapte": true,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+        "loc_text": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+        "participanti": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+        "gravitate": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+        "noapte": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "syn-002",
+            "quote": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+            "start": 0,
+            "end": 130
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "syn-002",
+            "quote": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+            "start": 0,
+            "end": 130
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "syn-002",
+            "quote": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+            "start": 0,
+            "end": 130
+          }
+        ],
+        "gravitate": [
+          {
+            "article_id": "syn-002",
+            "quote": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+            "start": 0,
+            "end": 130
+          }
+        ],
+        "noapte": [
+          {
+            "article_id": "syn-002",
+            "quote": "O femeie de 67 de ani a murit după ce a fost lovită pe trecerea de pietoni din zona Podu Roș, miercuri seara, în jurul orei 22:45.",
+            "start": 0,
+            "end": 130
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "trecerea de pietoni din zona podu ros",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-11-20",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-ce7a996ef2f170",
+      "article_ids": [
+        "syn-003"
+      ],
+      "urls": [
+        "https://example.com/syn-003"
+      ],
+      "data_eveniment": "2025-11-19",
+      "ora": null,
+      "loc_text": "trecerea de pietoni de la Podu Roș",
+      "participanti": [
+        "pieton"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "deces",
+      "noapte": true,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+        "loc_text": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+        "participanti": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+        "gravitate": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+        "noapte": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "syn-003",
+            "quote": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+            "start": 0,
+            "end": 152
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "syn-003",
+            "quote": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+            "start": 0,
+            "end": 152
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "syn-003",
+            "quote": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+            "start": 0,
+            "end": 152
+          }
+        ],
+        "gravitate": [
+          {
+            "article_id": "syn-003",
+            "quote": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+            "start": 0,
+            "end": 152
+          }
+        ],
+        "noapte": [
+          {
+            "article_id": "syn-003",
+            "quote": "Polițiștii au întocmit dosar penal pe numele șoferului de 24 de ani care, miercuri seara, a lovit mortal o femeie pe trecerea de pietoni de la Podu Roș.",
+            "start": 0,
+            "end": 152
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "trecerea de pietoni de la podu ros",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-11-21",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-b7083d632930f8",
+      "article_ids": [
+        "syn-004"
+      ],
+      "urls": [
+        "https://example.com/syn-004"
+      ],
+      "data_eveniment": "2025-04-07",
+      "ora": null,
+      "loc_text": "în zona Gării",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": false,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+        "loc_text": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+        "participanti": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+        "noapte": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ],
+        "noapte": [
+          {
+            "article_id": "syn-004",
+            "quote": "Un copil de 10 ani a fost acroșat ieri dimineață de o mașină în zona Gării.",
+            "start": 0,
+            "end": 75
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "in zona garii",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2025-04-08",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    }
+  ],
+  "duplicate_review_queue": [
+    {
+      "article_ids": [
+        "syn-002",
+        "syn-003"
+      ],
+      "reason": "same_date_landmark_and_severity_requires_review"
+    }
+  ]
+}

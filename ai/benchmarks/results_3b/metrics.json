@@ -1,0 +1,847 @@
+{
+  "rules": {
+    "articles": 4,
+    "gold_events": 4,
+    "candidate_groups": 4,
+    "detection": {
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 4,
+      "total": 4
+    },
+    "fields_correct": 28,
+    "fields_total": 28,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "ora": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "loc_text": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "gravitate": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "noapte": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      }
+    },
+    "known_correct": 24,
+    "known_expected": 24,
+    "known_predicted": 24,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 1,
+      "recall_including_review": 1
+    },
+    "evidence_exact": 24,
+    "evidence_quotes": 24,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 0,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 0,
+    "median_original_inference_seconds": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "errors": [],
+    "gold_unique_events": 3,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "direct": {
+    "articles": 4,
+    "gold_events": 4,
+    "candidate_groups": 4,
+    "detection": {
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 4,
+      "total": 4
+    },
+    "fields_correct": 16,
+    "fields_total": 28,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 2,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 4,
+        "known_predicted": 2,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "ora": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "loc_text": {
+        "correct": 1,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 2,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 4,
+        "known_predicted": 2,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 2,
+        "known_predicted": 1,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "gravitate": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 3,
+        "known_expected": 4,
+        "known_predicted": 3,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "noapte": {
+        "correct": 1,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 4,
+        "known_predicted": 1,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      }
+    },
+    "known_correct": 12,
+    "known_expected": 24,
+    "known_predicted": 15,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 1,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 15,
+    "evidence_quotes": 15,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 4,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 86.494,
+    "median_original_inference_seconds": 21.953,
+    "input_tokens": 4145,
+    "output_tokens": 669,
+    "errors": [
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "data_eveniment",
+        "expected": "2025-03-12",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bulevardul Demo, în zona Podu Roș",
+        "predicted": "Bulevardul Demo, în zona Podu Roș",
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "cauza_raportata",
+        "expected": "viteza",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "noapte",
+        "expected": true,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "loc_text",
+        "expected": "trecerea de pietoni din zona Podu Roș",
+        "predicted": "zona Podu Roș, miercuri seara",
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "noapte",
+        "expected": true,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-003",
+        "article_ids": [
+          "syn-003"
+        ],
+        "field": "data_eveniment",
+        "expected": "2025-11-19",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-003"
+        ]
+      },
+      {
+        "event_id": "source-syn-003",
+        "article_ids": [
+          "syn-003"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "syn-003"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "loc_text",
+        "expected": "în zona Gării",
+        "predicted": "Zona Gării",
+        "candidate_ids": [
+          "syn-004"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "syn-004"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "noapte",
+        "expected": false,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-004"
+        ]
+      }
+    ],
+    "gold_unique_events": 3,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "evidence": {
+    "articles": 4,
+    "gold_events": 4,
+    "candidate_groups": 4,
+    "detection": {
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 4,
+      "total": 4
+    },
+    "fields_correct": 25,
+    "fields_total": 28,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "ora": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "loc_text": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 2,
+        "known_predicted": 1,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "gravitate": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 3,
+        "known_expected": 4,
+        "known_predicted": 3,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "noapte": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 3,
+        "known_expected": 4,
+        "known_predicted": 3,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      }
+    },
+    "known_correct": 21,
+    "known_expected": 24,
+    "known_predicted": 21,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 1,
+      "recall_including_review": 1
+    },
+    "evidence_exact": 21,
+    "evidence_quotes": 21,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 4,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 46.486,
+    "median_original_inference_seconds": 11.575,
+    "input_tokens": 3129,
+    "output_tokens": 300,
+    "errors": [
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "cauza_raportata",
+        "expected": "viteza",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "noapte",
+        "expected": true,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "syn-004"
+        ]
+      }
+    ],
+    "gold_unique_events": 3,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "agreement": {
+    "articles": 4,
+    "gold_events": 4,
+    "candidate_groups": 4,
+    "detection": {
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 4,
+      "total": 4
+    },
+    "fields_correct": 16,
+    "fields_total": 28,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 2,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 4,
+        "known_predicted": 2,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "ora": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "loc_text": {
+        "correct": 1,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 4,
+        "known_predicted": 1,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 2,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 4,
+        "known_predicted": 2,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 2,
+        "known_predicted": 1,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "gravitate": {
+        "correct": 3,
+        "total": 4,
+        "known_correct": 3,
+        "known_expected": 4,
+        "known_predicted": 3,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "noapte": {
+        "correct": 1,
+        "total": 4,
+        "known_correct": 1,
+        "known_expected": 4,
+        "known_predicted": 1,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      }
+    },
+    "known_correct": 12,
+    "known_expected": 24,
+    "known_predicted": 12,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 1,
+      "recall_including_review": 0
+    },
+    "evidence_exact": 12,
+    "evidence_quotes": 12,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 4,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 0,
+    "median_original_inference_seconds": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "errors": [
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "data_eveniment",
+        "expected": "2025-03-12",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "loc_text",
+        "expected": "pe Bulevardul Demo, în zona Podu Roș",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "cauza_raportata",
+        "expected": "viteza",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-001",
+        "article_ids": [
+          "syn-001"
+        ],
+        "field": "noapte",
+        "expected": true,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-001"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "loc_text",
+        "expected": "trecerea de pietoni din zona Podu Roș",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-002",
+        "article_ids": [
+          "syn-002"
+        ],
+        "field": "noapte",
+        "expected": true,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-002"
+        ]
+      },
+      {
+        "event_id": "source-syn-003",
+        "article_ids": [
+          "syn-003"
+        ],
+        "field": "data_eveniment",
+        "expected": "2025-11-19",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-003"
+        ]
+      },
+      {
+        "event_id": "source-syn-003",
+        "article_ids": [
+          "syn-003"
+        ],
+        "field": "participanti",
+        "expected": [
+          "pieton"
+        ],
+        "predicted": [],
+        "candidate_ids": [
+          "syn-003"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "loc_text",
+        "expected": "în zona Gării",
+        "predicted": null,
+        "candidate_ids": [
+          "syn-004"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "gravitate",
+        "expected": "usor",
+        "predicted": "necunoscut",
+        "candidate_ids": [
+          "syn-004"
+        ]
+      },
+      {
+        "event_id": "source-syn-004",
+        "article_ids": [
+          "syn-004"
+        ],
+        "field": "noapte",
+        "expected": false,
+        "predicted": null,
+        "candidate_ids": [
+          "syn-004"
+        ]
+      }
+    ],
+    "gold_unique_events": 3,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  },
+  "hybrid": {
+    "articles": 4,
+    "gold_events": 4,
+    "candidate_groups": 4,
+    "detection": {
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstained": 0,
+      "correct": 4,
+      "total": 4
+    },
+    "fields_correct": 28,
+    "fields_total": 28,
+    "by_field": {
+      "data_eveniment": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "ora": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "loc_text": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "participanti": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "cauza_raportata": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 2,
+        "known_expected": 2,
+        "known_predicted": 2,
+        "unknown_expected": 2,
+        "unknown_correct": 2
+      },
+      "gravitate": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      },
+      "noapte": {
+        "correct": 4,
+        "total": 4,
+        "known_correct": 4,
+        "known_expected": 4,
+        "known_predicted": 4,
+        "unknown_expected": 0,
+        "unknown_correct": 0
+      }
+    },
+    "known_correct": 24,
+    "known_expected": 24,
+    "known_predicted": 24,
+    "duplicate_pairs": {
+      "correct": 0,
+      "predicted": 0,
+      "expected": 1,
+      "recall_including_review": 1
+    },
+    "evidence_exact": 24,
+    "evidence_quotes": 24,
+    "no_coordinates_or_approval": true,
+    "rows_with_issues": 3,
+    "model_failed_rows": 0,
+    "original_inference_seconds": 46.486,
+    "median_original_inference_seconds": 11.575,
+    "input_tokens": 3129,
+    "output_tokens": 300,
+    "errors": [],
+    "gold_unique_events": 3,
+    "evaluation_unit": "source article; 7 fields each; separate duplicate identity scoring"
+  }
+}

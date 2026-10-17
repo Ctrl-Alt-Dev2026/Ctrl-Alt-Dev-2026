@@ -1,0 +1,1022 @@
+{
+  "pipeline": "evidence",
+  "version": "p2-2.1-repository-bounded",
+  "generated_at": "2026-10-17T12:58:47.112058+00:00",
+  "data_mode": "synthetic",
+  "wall_seconds": 43.7919,
+  "rows": [
+    {
+      "article_id": "stress-publication_trap",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": false,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": []
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 6.1908,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 67,
+        "prompt_eval_count": 817,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 6184275800,
+        "cache_key": "a6eba853dc05345857fc93ec1dd51cf7c1f9ac8ac9db654afaa238b32d493bc8"
+      },
+      "content_hash": "fb1363219732c4a7e2da3d79401f302d9b8d19abc790bc66bda8171b56c933b6",
+      "title": "[SYNTHETIC CHALLENGE] publication_trap",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-publication_trap",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-hospital_not_severity",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-04-12",
+        "ora": null,
+        "loc_text": "pe Strada Arcu",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 2,
+          "time": 3,
+          "location": 1,
+          "participants": 0,
+          "severity": 2,
+          "cause": 1,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 3.4001,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 75,
+        "prompt_eval_count": 831,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 3391839000,
+        "cache_key": "2f99737b34b53516a86ace188f775f4d2653feefc21b7e2421b5bbf5448b59ee"
+      },
+      "content_hash": "f326f7c8d10754e1816e924abde0c88fb2cfd60375d43ee4c34f4b119585d641",
+      "title": "[SYNTHETIC CHALLENGE] hospital_not_severity",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-hospital_not_severity",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-negated_fatality",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-03-01",
+        "ora": null,
+        "loc_text": "pe Strada Sărărie",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 0,
+          "severity": 3,
+          "cause": 0,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 3.5368,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 75,
+        "prompt_eval_count": 832,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 3528199800,
+        "cache_key": "e9f3e65c4dfc38b8ddacb7b000ceecd5dc8e2faf4447e2fa0de6ce1f8883ca96"
+      },
+      "content_hash": "7f3c382bfcfd23a725771314df3688ee5adf0a15637a69cb262e89ec83783d9c",
+      "title": "[SYNTHETIC CHALLENGE] negated_fatality",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-negated_fatality",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-prevention_only",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": null,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": [
+          "relevance_uncertain"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 4.5947,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 52,
+        "prompt_eval_count": 748,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 4587780300,
+        "cache_key": "104016a49248539160ec83c7dfcd63196ffdd6512c5ff5e4b94305c9a12bfb04"
+      },
+      "content_hash": "c456017a0152d35eeea54edb10919576034295dac275b27392846deb96335a38",
+      "title": "[SYNTHETIC CHALLENGE] prevention_only",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-prevention_only",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-no_pedestrian_paraphrase",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": false,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": null,
+        "participanti": [],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": null,
+          "date": null,
+          "time": null,
+          "location": null,
+          "participants": null,
+          "severity": null,
+          "cause": null,
+          "night": null
+        },
+        "issues": []
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 1.9953,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 43,
+        "prompt_eval_count": 746,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 1972286700,
+        "cache_key": "13c14b4c9f1f5d8c879beeb6c604561637c7b20f23b5f97a3d98f006ac980bca"
+      },
+      "content_hash": "a93b1426cfc10ba50cdc1ce7f668d41e67e0ceb7f948365fc1b5f50862a92976",
+      "title": "[SYNTHETIC CHALLENGE] no_pedestrian_paraphrase",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-no_pedestrian_paraphrase",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-embedded_instruction",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": null,
+        "ora": null,
+        "loc_text": "pe Strada Arcu",
+        "participanti": [
+          "pieton"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 3,
+          "severity": 4,
+          "cause": 3,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:data_eveniment",
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 6.765,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 75,
+        "prompt_eval_count": 881,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 6756811900,
+        "cache_key": "4135da33b3886ed2121f81b260b9dbdf6743a268afa7299b9e900f9b8886e91e"
+      },
+      "content_hash": "5ce82053f32fb54430365ecf2f475bb0c83c1f1766c4116e5c0e873767391513",
+      "title": "[SYNTHETIC CHALLENGE] embedded_instruction",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-embedded_instruction",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-old_context_date",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-06-12",
+        "ora": "23:10",
+        "loc_text": "pe Strada Gării",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 1,
+          "date": 2,
+          "time": 4,
+          "location": 3,
+          "participants": 1,
+          "severity": 3,
+          "cause": 1,
+          "night": null
+        },
+        "issues": [
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 7.5682,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 74,
+        "prompt_eval_count": 920,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 7561154200,
+        "cache_key": "3308adc94e0f4e6607fdd0c1e3810534443b8b7781905da30eaa19d087eee042"
+      },
+      "content_hash": "1a7126f250eb397a7ba4e0d6db24b1a3e05018f27c9e65a25be15c8a4f6671b9",
+      "title": "[SYNTHETIC CHALLENGE] old_context_date",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-old_context_date",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-outside_city",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-04-15",
+        "ora": null,
+        "loc_text": "în comuna Tomești, pe strada principală",
+        "participanti": [
+          "pieton",
+          "autoutilitara"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 0,
+          "severity": 2,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 3.0154,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 60,
+        "prompt_eval_count": 832,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 3007212800,
+        "cache_key": "9ca8ce6566e22784faed8d353303725ad0769b7414a40d8b4b2c01ffdd29d9c0"
+      },
+      "content_hash": "d0785c2478d6d38eb920dcb905ba39ec9989e244266722c5804d800d8a0c5cde",
+      "title": "[SYNTHETIC CHALLENGE] outside_city",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-outside_city",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-abbreviated_road",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-04-18",
+        "ora": "11:25",
+        "loc_text": "pe Bd. Independenței",
+        "participanti": [
+          "pieton",
+          "autoturism"
+        ],
+        "cauza_raportata": null,
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 4,
+          "date": 1,
+          "time": 3,
+          "location": 2,
+          "participants": 0,
+          "severity": 2,
+          "cause": 0,
+          "night": 0
+        },
+        "issues": [
+          "evidence_does_not_normalize:gravitate",
+          "evidence_does_not_normalize:cauza_raportata",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 2.9524,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 60,
+        "prompt_eval_count": 864,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 2931522700,
+        "cache_key": "9da63e2d840ee1b1d72f78acf5a5d80a011f2e47ec727f95ce4f3aed1f19a4a9"
+      },
+      "content_hash": "bd63c3f4f40a21c80855e06ba50f5a46eae6f0918fe24ed2d7a5936399d8b345",
+      "title": "[SYNTHETIC CHALLENGE] abbreviated_road",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-abbreviated_road",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    },
+    {
+      "article_id": "stress-hypothetical_cause",
+      "review_status": "pending",
+      "extracted": {
+        "is_event": true,
+        "data_eveniment": "2026-04-19",
+        "ora": null,
+        "loc_text": "pe Strada Arcu",
+        "participanti": [
+          "pieton"
+        ],
+        "cauza_raportata": "viteza",
+        "gravitate": "necunoscut",
+        "noapte": null,
+        "evidence_ids": {
+          "event": 0,
+          "date": 1,
+          "time": 2,
+          "location": 2,
+          "participants": 3,
+          "severity": 4,
+          "cause": 5,
+          "night": 2
+        },
+        "issues": [
+          "evidence_does_not_normalize:ora",
+          "evidence_does_not_normalize:noapte"
+        ]
+      },
+      "trace": {
+        "model": "qwen2.5:1.5b",
+        "prompt_version": "p2-2.1-repository-bounded/evidence",
+        "cache_hit": false,
+        "duration_s": 3.7176,
+        "attempts": 1,
+        "errors": [],
+        "eval_count": 75,
+        "prompt_eval_count": 911,
+        "raw_model": "qwen2.5:1.5b",
+        "provider_duration_ns": 3687412500,
+        "cache_key": "eab42a9b576978a4ed894eaeabcd9b7c4f4ebfde91fab3f89acae45e75cef015"
+      },
+      "content_hash": "a366e348e9fc1012ca0c9306747aa0d82bbf754e418a77eca4596795d0a4e036",
+      "title": "[SYNTHETIC CHALLENGE] hypothetical_cause",
+      "publisher": "SINTETIC",
+      "url": "https://example.invalid/stress-hypothetical_cause",
+      "published_at": "2026-10-01",
+      "retrieved_at": "2026-10-17"
+    }
+  ],
+  "accidents": [
+    {
+      "event_id": "candidate-985858c7700c1c",
+      "article_ids": [
+        "stress-hospital_not_severity"
+      ],
+      "urls": [
+        "https://example.invalid/stress-hospital_not_severity"
+      ],
+      "data_eveniment": "2026-04-12",
+      "ora": null,
+      "loc_text": "pe Strada Arcu",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-04-12.",
+        "loc_text": "Locul indicat este pe Strada Arcu.",
+        "participanti": "Un pieton a fost lovit de un autoturism."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-hospital_not_severity",
+            "quote": "Evenimentul s-a produs la data de 2026-04-12.",
+            "start": 76,
+            "end": 121
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-hospital_not_severity",
+            "quote": "Locul indicat este pe Strada Arcu.",
+            "start": 41,
+            "end": 75
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-hospital_not_severity",
+            "quote": "Un pieton a fost lovit de un autoturism.",
+            "start": 0,
+            "end": 40
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe strada arcu",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-a903af71124c67",
+      "article_ids": [
+        "stress-negated_fatality"
+      ],
+      "urls": [
+        "https://example.invalid/stress-negated_fatality"
+      ],
+      "data_eveniment": "2026-03-01",
+      "ora": null,
+      "loc_text": "pe Strada Sărărie",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-03-01.",
+        "loc_text": "Locul indicat este pe Strada Sărărie.",
+        "participanti": "Un accident rutier a implicat un pieton și un autoturism."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-negated_fatality",
+            "quote": "Evenimentul s-a produs la data de 2026-03-01.",
+            "start": 58,
+            "end": 103
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-negated_fatality",
+            "quote": "Locul indicat este pe Strada Sărărie.",
+            "start": 104,
+            "end": 141
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-negated_fatality",
+            "quote": "Un accident rutier a implicat un pieton și un autoturism.",
+            "start": 0,
+            "end": 57
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe strada sararie",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-636dde58fb922c",
+      "article_ids": [
+        "stress-embedded_instruction"
+      ],
+      "urls": [
+        "https://example.invalid/stress-embedded_instruction"
+      ],
+      "data_eveniment": null,
+      "ora": null,
+      "loc_text": "pe Strada Arcu",
+      "participanti": [
+        "pieton"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "loc_text": "Locul indicat este pe Strada Arcu.",
+        "participanti": "Pietonul a suferit răni ușoare."
+      },
+      "evidence_refs": {
+        "loc_text": [
+          {
+            "article_id": "stress-embedded_instruction",
+            "quote": "Locul indicat este pe Strada Arcu.",
+            "start": 106,
+            "end": 140
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-embedded_instruction",
+            "quote": "Pietonul a suferit răni ușoare.",
+            "start": 141,
+            "end": 172
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe strada arcu",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:data_eveniment",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-ca068c44c39ef5",
+      "article_ids": [
+        "stress-old_context_date"
+      ],
+      "urls": [
+        "https://example.invalid/stress-old_context_date"
+      ],
+      "data_eveniment": "2026-06-12",
+      "ora": "23:10",
+      "loc_text": "pe Strada Gării",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-06-12.",
+        "ora": "Ora indicată în relatare este 23:10.",
+        "loc_text": "Locul indicat este pe Strada Gării.",
+        "participanti": "Un accident rutier a implicat un pieton și un autoturism."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-old_context_date",
+            "quote": "Evenimentul s-a produs la data de 2026-06-12.",
+            "start": 116,
+            "end": 161
+          }
+        ],
+        "ora": [
+          {
+            "article_id": "stress-old_context_date",
+            "quote": "Ora indicată în relatare este 23:10.",
+            "start": 198,
+            "end": 234
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-old_context_date",
+            "quote": "Locul indicat este pe Strada Gării.",
+            "start": 162,
+            "end": 197
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-old_context_date",
+            "quote": "Un accident rutier a implicat un pieton și un autoturism.",
+            "start": 58,
+            "end": 115
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe strada garii",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-98a52d5abfe4cd",
+      "article_ids": [
+        "stress-outside_city"
+      ],
+      "urls": [
+        "https://example.invalid/stress-outside_city"
+      ],
+      "data_eveniment": "2026-04-15",
+      "ora": null,
+      "loc_text": "în comuna Tomești, pe strada principală",
+      "participanti": [
+        "pieton",
+        "autoutilitara"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-04-15.",
+        "loc_text": "Locul indicat este în comuna Tomești, pe strada principală.",
+        "participanti": "Un accident rutier a implicat un pieton și o autoutilitară."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-outside_city",
+            "quote": "Evenimentul s-a produs la data de 2026-04-15.",
+            "start": 60,
+            "end": 105
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-outside_city",
+            "quote": "Locul indicat este în comuna Tomești, pe strada principală.",
+            "start": 106,
+            "end": 165
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-outside_city",
+            "quote": "Un accident rutier a implicat un pieton și o autoutilitară.",
+            "start": 0,
+            "end": 59
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "in comuna tomesti pe strada principala",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-668f30f11fb6db",
+      "article_ids": [
+        "stress-abbreviated_road"
+      ],
+      "urls": [
+        "https://example.invalid/stress-abbreviated_road"
+      ],
+      "data_eveniment": "2026-04-18",
+      "ora": "11:25",
+      "loc_text": "pe Bd. Independenței",
+      "participanti": [
+        "pieton",
+        "autoturism"
+      ],
+      "cauza_raportata": null,
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-04-18.",
+        "ora": "Ora indicată în relatare este 11:25.",
+        "loc_text": "Locul indicat este pe Bd. Independenței.",
+        "participanti": "Un accident rutier a implicat un pieton și un autoturism."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-abbreviated_road",
+            "quote": "Evenimentul s-a produs la data de 2026-04-18.",
+            "start": 58,
+            "end": 103
+          }
+        ],
+        "ora": [
+          {
+            "article_id": "stress-abbreviated_road",
+            "quote": "Ora indicată în relatare este 11:25.",
+            "start": 145,
+            "end": 181
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-abbreviated_road",
+            "quote": "Locul indicat este pe Bd. Independenței.",
+            "start": 104,
+            "end": 144
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-abbreviated_road",
+            "quote": "Un accident rutier a implicat un pieton și un autoturism.",
+            "start": 0,
+            "end": 57
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe bulevardul independentei",
+      "issues": [
+        "evidence_does_not_normalize:cauza_raportata",
+        "evidence_does_not_normalize:gravitate",
+        "evidence_does_not_normalize:noapte"
+      ],
+      "cause_claim_status": null,
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    },
+    {
+      "event_id": "candidate-cdeb591904488a",
+      "article_ids": [
+        "stress-hypothetical_cause"
+      ],
+      "urls": [
+        "https://example.invalid/stress-hypothetical_cause"
+      ],
+      "data_eveniment": "2026-04-19",
+      "ora": null,
+      "loc_text": "pe Strada Arcu",
+      "participanti": [
+        "pieton"
+      ],
+      "cauza_raportata": "viteza",
+      "gravitate": "necunoscut",
+      "noapte": null,
+      "lat": null,
+      "lon": null,
+      "precizie_loc": null,
+      "in_iasi": null,
+      "verificat": false,
+      "review_status": "pending",
+      "dovezi": {
+        "data_eveniment": "Evenimentul s-a produs la data de 2026-04-19.",
+        "loc_text": "Locul indicat este pe Strada Arcu.",
+        "participanti": "Pietonul a suferit răni ușoare.",
+        "gravitate": "Nu a fost precizată cauza accidentului.",
+        "cauza_raportata": "Separat, campania explică faptul că viteza poate fi periculoasă."
+      },
+      "evidence_refs": {
+        "data_eveniment": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Evenimentul s-a produs la data de 2026-04-19.",
+            "start": 58,
+            "end": 103
+          }
+        ],
+        "loc_text": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Locul indicat este pe Strada Arcu.",
+            "start": 104,
+            "end": 138
+          }
+        ],
+        "participanti": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Pietonul a suferit răni ușoare.",
+            "start": 139,
+            "end": 170
+          }
+        ],
+        "gravitate": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Nu a fost precizată cauza accidentului.",
+            "start": 171,
+            "end": 210
+          }
+        ],
+        "cauza_raportata": [
+          {
+            "article_id": "stress-hypothetical_cause",
+            "quote": "Separat, campania explică faptul că viteza poate fi periculoasă.",
+            "start": 211,
+            "end": 275
+          }
+        ]
+      },
+      "data_mode": "synthetic",
+      "loc_normalizat": "pe strada arcu",
+      "issues": [
+        "evidence_does_not_normalize:noapte",
+        "evidence_does_not_normalize:ora"
+      ],
+      "cause_claim_status": "reported_possible",
+      "derived": {
+        "data_eveniment": "Relative phrases are anchored to publication date; weekday means most recent on/before publication; requires review",
+        "publication_date_anchor": "2026-10-01",
+        "noapte": "source language only, not inferred from clock",
+        "participant_mapping": "person struck by vehicle / at crossing -> pieton; masina -> autoturism; sofer alone does not establish car class"
+      }
+    }
+  ],
+  "duplicate_review_queue": []
+}
