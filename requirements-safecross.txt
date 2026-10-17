@@ -1,0 +1,5 @@
+-r requirements.txt
+# Optional local video processing; verified on Python 3.12 / Windows.
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+python-multipart==0.0.32

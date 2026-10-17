@@ -1,6 +1,6 @@
 # Pornirea locală a backend-ului SafeIași
 
-Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. Frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția și review-ul sunt disponibile independent de acestea.
+Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. [SafeCross](SAFECROSS.md) adaugă separat interfața video `/safecross`, cu instalare opțională, model YOLOX Nano și FFprobe pentru verificarea timpului. Frontend-ul hărții/dosarelor și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția și review-ul sunt disponibile independent de acestea.
 
 ## Prima instalare — Windows / PowerShell
 
