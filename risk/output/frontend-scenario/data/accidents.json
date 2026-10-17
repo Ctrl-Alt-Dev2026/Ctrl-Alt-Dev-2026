@@ -1,0 +1,218 @@
+[
+  {
+    "event_id": "scenario-ev-001",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-03-12",
+    "ora": "21:30",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Aleea Grigore Ghica Vodă; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1862438,
+    "lon": 27.5625588,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-001."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-002",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-06-03",
+    "ora": "19:10",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Aleea Grigore Ghica Vodă; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1862438,
+    "lon": 27.5625588,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": false,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-002."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-003",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-11-19",
+    "ora": "22:45",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Aleea Grigore Ghica Vodă; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1862438,
+    "lon": 27.5625588,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "deces",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-003."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-005",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2024-12-05",
+    "ora": "18:20",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Strada Sfântul Lazăr; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1566586,
+    "lon": 27.5910071,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-005."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-006",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-09-15",
+    "ora": "07:45",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Strada Sfântul Lazăr; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1566586,
+    "lon": 27.5910071,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": false,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-006."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-007",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2026-04-22",
+    "ora": "20:30",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Strada Sfântul Lazăr; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1566586,
+    "lon": 27.5910071,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-007."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-010",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-02-27",
+    "ora": "20:50",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Bulevardul Dacia; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1667342,
+    "lon": 27.5559725,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-010."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-011",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2025-12-11",
+    "ora": "19:30",
+    "loc_text": "SCENARIU IPOTETIC la trecerea Bulevardul Dacia; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1667342,
+    "lon": 27.5559725,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "usor",
+    "noapte": true,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-011."
+    },
+    "verificat": false
+  },
+  {
+    "event_id": "scenario-ev-013",
+    "article_ids": [],
+    "urls": [],
+    "data_eveniment": "2026-01-30",
+    "ora": null,
+    "loc_text": "SCENARIU IPOTETIC la trecerea Bulevardul Dacia; nu este accident documentat aici.",
+    "precizie_loc": "trecere",
+    "lat": 47.1667342,
+    "lon": 27.5559725,
+    "in_iasi": true,
+    "participanti": [
+      "pieton",
+      "autoturism"
+    ],
+    "cauza_raportata": null,
+    "gravitate": "grav",
+    "noapte": null,
+    "dovezi": {
+      "loc_text": "Plasare ipotetică pentru test; nu este geocodare dintr-un articol.",
+      "gravitate": "Severitate preluată din fixture-ul sintetic ev-013."
+    },
+    "verificat": false
+  }
+]

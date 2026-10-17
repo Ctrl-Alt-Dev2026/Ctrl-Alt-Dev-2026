@@ -1,0 +1,3 @@
+# Local compiled copies of the teammate's frontend, not source deliverables.
+/output/*
+!/output/frontend-scenario/

@@ -1,0 +1,171 @@
+[
+  {
+    "id": "scenario-osm-node-3372032447",
+    "crossing_id": "osm-node-3372032447",
+    "nume": "SCENARIU — Aleea Grigore Ghica Vodă",
+    "lat": 47.1862438,
+    "lon": 27.5625588,
+    "h3": "891e556e08fffff",
+    "scor": 13,
+    "componente_scor": {
+      "evenimente": 3,
+      "deces": 4,
+      "grav": 2,
+      "context": 4
+    },
+    "event_ids": [
+      "scenario-ev-001",
+      "scenario-ev-002",
+      "scenario-ev-003"
+    ],
+    "nr_evenimente": 3,
+    "pe_ore": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "explicatie": "SCENARIU, nu accidente reale aici: 9 puncte din accidente DEMO; +2 Trecere fara semafor pe minimum 4 benzi; +1 Scoala la sub 150 m (OSM: 78.9 m); +1 Statie la sub 100 m (OSM: 14.1 m). Total 13. Infrastructura și coordonatele provin din OSM real. Viteza nu adaugă puncte.",
+    "date_lipsa": [
+      "SCENARIU: accidente ipotetice; nu există dovezi de accidente reale la această locație.",
+      "iluminat necunoscut",
+      "cauza_raportata necunoscut la 3 evenimente"
+    ],
+    "masuri": [],
+    "verificat": false
+  },
+  {
+    "id": "scenario-osm-node-6910606104",
+    "crossing_id": "osm-node-6910606104",
+    "nume": "SCENARIU — Bulevardul Dacia",
+    "lat": 47.1667342,
+    "lon": 27.5559725,
+    "h3": "891e556e2afffff",
+    "scor": 11,
+    "componente_scor": {
+      "evenimente": 3,
+      "deces": 0,
+      "grav": 4,
+      "context": 4
+    },
+    "event_ids": [
+      "scenario-ev-010",
+      "scenario-ev-011",
+      "scenario-ev-013"
+    ],
+    "nr_evenimente": 3,
+    "pe_ore": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "explicatie": "SCENARIU, nu accidente reale aici: 7 puncte din accidente DEMO; +2 Trecere fara semafor pe minimum 4 benzi; +1 Scoala la sub 150 m (OSM: 82.8 m); +1 Statie la sub 100 m (OSM: 17.4 m). Total 11. Infrastructura și coordonatele provin din OSM real. Viteza nu adaugă puncte.",
+    "date_lipsa": [
+      "SCENARIU: accidente ipotetice; nu există dovezi de accidente reale la această locație.",
+      "iluminat necunoscut",
+      "noapte necunoscut la 1 evenimente",
+      "cauza_raportata necunoscut la 3 evenimente",
+      "ora necunoscută la 1 evenimente"
+    ],
+    "masuri": [],
+    "verificat": false
+  },
+  {
+    "id": "scenario-osm-node-6194970559",
+    "crossing_id": "osm-node-6194970559",
+    "nume": "SCENARIU — Strada Sfântul Lazăr",
+    "lat": 47.1566586,
+    "lon": 27.5910071,
+    "h3": "891e556e32fffff",
+    "scor": 9,
+    "componente_scor": {
+      "evenimente": 3,
+      "deces": 0,
+      "grav": 4,
+      "context": 2
+    },
+    "event_ids": [
+      "scenario-ev-005",
+      "scenario-ev-006",
+      "scenario-ev-007"
+    ],
+    "nr_evenimente": 3,
+    "pe_ore": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "explicatie": "SCENARIU, nu accidente reale aici: 7 puncte din accidente DEMO; +2 Trecere fara semafor pe minimum 4 benzi; +0 Scoala la sub 150 m; +0 Statie la sub 100 m. Total 9. Infrastructura și coordonatele provin din OSM real. Viteza nu adaugă puncte.",
+    "date_lipsa": [
+      "SCENARIU: accidente ipotetice; nu există dovezi de accidente reale la această locație.",
+      "iluminat necunoscut",
+      "scoala_150m necunoscut",
+      "statie_100m necunoscut",
+      "cauza_raportata necunoscut la 3 evenimente"
+    ],
+    "masuri": [],
+    "verificat": false
+  }
+]

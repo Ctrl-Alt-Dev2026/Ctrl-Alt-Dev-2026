@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { delay, map, Observable, of, throwError } from 'rxjs';
+import { delay, forkJoin, map, Observable, of, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Camera } from '../models/camera';
 import { Accident, CrossingCollection, Hotspot, Manifest, Measure } from '../models/contract';
 import { ExtractionResult, ExtractRequest, ReviewRequest } from '../models/extraction';
+import { LoadedDataset, LocationDossierPayload } from '../models/publication';
 import { DataApi } from './data-api';
 import { ENDPOINTS } from './endpoints';
 
@@ -13,6 +14,17 @@ const LATENCY_MS = 1500;
 @Injectable()
 export class MockDataApi extends DataApi {
   private readonly http = inject(HttpClient);
+
+  loadDataset(): Observable<LoadedDataset> {
+    return forkJoin({
+      manifest: this.manifest(), accidents: this.accidents(), hotspots: this.hotspots(),
+      crossings: this.crossings(), measures: this.measures(),
+    }).pipe(map((data) => ({ ...data, publication: null })));
+  }
+
+  dossier(_locationId: string): Observable<LocationDossierPayload> {
+    return throwError(() => new Error('Prototipul static nu conține publicații versionate.'));
+  }
 
   manifest() {
     return this.http.get<Manifest>(ENDPOINTS.manifest.mock);

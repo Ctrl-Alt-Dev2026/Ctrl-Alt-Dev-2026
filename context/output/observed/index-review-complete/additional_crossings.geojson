@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5812132,
+          47.1677987
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3682801813",
+        "tip": "trecere",
+        "nume": "Bulevardul Independenței",
+        "semafor": true,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": null,
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    }
+  ]
+}

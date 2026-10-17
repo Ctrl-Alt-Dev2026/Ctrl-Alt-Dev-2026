@@ -1,12 +1,16 @@
 # Importul și verificarea locală — API v0.4
 
+Actualizare v0.7: [geocodarea asistată](GEOCODING_WORKFLOW.md) se aplică numai candidaților pending, cu preview, confirmare explicită și proveniență în istoric. Schimbarea textului locației invalidează vechile coordonate și dovezi, dacă operatorul nu furnizează un set nou coerent. Aprobarea rămâne separată.
+
 Backend-ul salvează articolul, extracția originală și candidații `pending`, apoi permite corectare și decizia explicită a operatorului. Aprobarea creează un eveniment canonic local; asocierea unui al doilea articol la acel eveniment păstrează un singur accident și ambele surse. Citirea pentru hartă prin `/api/v1/events` rămâne independentă: acest flux nu publică automat evenimente.
+
+După review, [publicarea explicită din API v0.6](PUBLICATION_WORKFLOW.md) poate îngheța evenimentele eligibile și asocierea verificată la locații. Frontend-ul consumă rutele noi de publicații/locații; cititorul sintetic vechi rămâne separat.
 
 ## Pornire și stocare
 
 Folosește comanda standard din [instrucțiunile locale](LOCAL_DEVELOPMENT.md). Rutele apar în secțiunea `review` din [Swagger](http://127.0.0.1:8000/docs). Sunt disponibile numai pentru conexiuni locale, pe host loopback și aceeași origine în browser. `operator` este un nume declarat pentru istoric, nu o identitate autentificată; această etapă nu introduce conturi sau acces la distanță.
 
-Implicit, fișierele sunt `runtime/review/synthetic.json` și `runtime/review/observed.json`, ignorate de Git. Fiecare fișier conține importuri, candidați și evenimente canonice distincte. `SAFEIASI_REVIEW_DIR` poate selecta alt director de lucru înainte de pornire. Directoarele comune `false_data/`, `ai/benchmarks/` și `.git/` sunt refuzate ca destinații.
+Implicit, fișierele sunt `runtime/review/synthetic.json` și `runtime/review/observed.json`, ignorate de Git. Fiecare fișier conține importuri, candidați și evenimente canonice distincte. `SAFEIASI_REVIEW_DIR` poate selecta alt director de lucru înainte de pornire. Directoarele comune `false_data/`, `ai/`, `context/`, `risk/`, `coordonate/` și `.git/` sunt refuzate ca destinații.
 
 MVP-ul folosește **un singur proces Uvicorn**, fără `--workers`. O blocare comună protejează tranzacțiile între fire și instanțe din acel proces; un fișier temporar în același director este sincronizat și înlocuiește atomic versiunea anterioară. Procesarea AI are loc înaintea tranzacției. Mai multe procese/laptopuri care scriu în același director nu sunt suportate. Fișierele persistă după restart; pentru backup, copiază directorul cu serverul oprit. Un fișier invalid produce 503 și nu este înlocuit automat cu unul gol.
 

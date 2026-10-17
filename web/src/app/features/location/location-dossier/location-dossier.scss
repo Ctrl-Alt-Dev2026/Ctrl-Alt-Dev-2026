@@ -187,4 +187,31 @@ p {
 
 .actions {
   padding-top: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  p { flex-basis: 100%; }
+}
+
+.synthetic {
+  margin-top: var(--space-3);
+  padding: var(--space-2);
+  border: var(--hair) solid var(--heat-4);
+  color: var(--heat-4);
+  font-size: var(--step--1);
+}
+.unranked { color: var(--muted); font-size: var(--step--1); }
+.source-details, .quotes, .audit { padding-left: 1.1rem; }
+.source-details li { padding: var(--space-2) 0; }
+details { margin: var(--space-2) 0; }
+summary { cursor: pointer; color: var(--accent); font-size: var(--step--1); }
+blockquote { margin: var(--space-1) 0 var(--space-3); border-left: 0.15rem solid var(--line); padding-left: var(--space-2); }
+.source-text, pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: var(--step--1); }
+.evidence { padding: var(--space-2); border: var(--hair) solid var(--line); border-radius: var(--radius-s); }
+.audit li { border: 0; }
+:host { overflow-wrap: anywhere; }
+
+@media (max-width: 30rem) {
+  .title { gap: var(--space-2); }
+  .infra { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-1) var(--space-2); }
 }

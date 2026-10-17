@@ -10,21 +10,7 @@ import { TopBar } from './shared/top-bar/top-bar';
   template: `
     <app-top-bar />
     <main class="page">
-      @switch (store.state()) {
-        @case ('loading') {
-          <p class="status muted">Se încarcă datele…</p>
-        }
-        @case ('error') {
-          <div class="status" role="alert">
-            <p>Datele nu s-au putut încărca: {{ store.error() }}</p>
-            <p class="muted">Rulează <code>npm run sync-data</code> în <code>web/</code>, apoi reîncarcă pagina.</p>
-            <button class="btn" type="button" (click)="store.load()">Încearcă din nou</button>
-          </div>
-        }
-        @default {
-          <router-outlet />
-        }
-      }
+      <router-outlet />
     </main>
   `,
   styles: `
@@ -49,8 +35,4 @@ import { TopBar } from './shared/top-bar/top-bar';
 })
 export class App {
   protected readonly store = inject(DataStore);
-
-  constructor() {
-    this.store.load();
-  }
 }

@@ -6,6 +6,7 @@ import math
 from pathlib import Path
 
 from pyproj import Transformer
+from risk.statistics import event_statistics, unique_events
 
 
 PROJECT = Transformer.from_crs(4326, 32635, always_xy=True)
@@ -20,6 +21,8 @@ def point(lon, lat):
 
 
 def score_location(feature, events):
+    events = unique_events(events)
+    stats = event_statistics(events)
     p = feature['properties']
     components = dict(evenimente=len(events), deces=4 * sum(e['gravitate'] == 'deces' for e in events),
                       grav=2 * sum(e['gravitate'] == 'grav' for e in events), context=0)
@@ -36,16 +39,7 @@ def score_location(feature, events):
     missing = [f'{key} necunoscut' for key in
                ('semafor', 'benzi', 'iluminat', 'tip_strada', 'scoala_150m', 'statie_100m')
                if p.get(key) is None]
-    hours = [0] * 24
-    unknown_hours = 0
-    for event in events:
-        hour = event.get('ora')
-        if hour is None:
-            unknown_hours += 1
-        else:
-            import datetime
-            parsed = datetime.datetime.strptime(hour, '%H:%M')
-            hours[parsed.hour] += 1
+    hours, unknown_hours = stats['pe_ore'], stats['ora_necunoscuta']
     for field in ('gravitate', 'noapte', 'cauza_raportata'):
         count = sum(e.get(field) in (None, 'necunoscut') for e in events)
         if count:
@@ -70,12 +64,7 @@ def analyze(events, crossings):
         if f['geometry']['type'] != 'Point':
             raise ValueError('Expected Point')
         indexed[p['id']] = (f, point(*f['geometry']['coordinates']))
-    unique = {}
-    for e in events:
-        identifier = e['event_id']
-        if identifier in unique and unique[identifier] != e:
-            raise ValueError(f'Conflicting duplicate event_id: {identifier}')
-        unique[identifier] = e
+    unique = {e['event_id']: e for e in unique_events(events)}
     groups = defaultdict(list)
     diagnostics = []
     for e in unique.values():
@@ -103,10 +92,7 @@ def analyze(events, crossings):
                                 candidates=[dict(id=i, distance_m=d) for i, d in candidates]))
     hotspots = [score_location(indexed[i][0], group) for i, group in groups.items() if len(group) >= 2]
     hotspots.sort(key=lambda h: (-h['scor'], h['crossing_id']))
-    statistics = {i: dict(noapte=sum(e.get('noapte') is True for e in group),
-                         zi=sum(e.get('noapte') is False for e in group),
-                         necunoscut=sum(e.get('noapte') is None for e in group),
-                         cauze=dict(Counter(e.get('cauza_raportata') or 'necunoscut' for e in group)))
+    statistics = {i: dict(event_ids=[e['event_id'] for e in group], **event_statistics(group))
                   for i, group in groups.items()}
     return hotspots, dict(associations=diagnostics, statistics=statistics,
                           warning='Asocieri provizorii prin proximitate; necesită verificare. Scorul nu este probabilitate.')

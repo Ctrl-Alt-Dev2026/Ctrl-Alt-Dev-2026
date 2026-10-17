@@ -14,6 +14,18 @@
       <b>{{ m.nr_localizate_precis }}</b> localizate precis, <b>{{ m.nr_verificate }}</b> verificate manual
     </p>
   }
+  @if (store.isHttp) {
+    <div class="mode-switch" role="group" aria-label="Setul de date">
+      <button type="button" [attr.aria-pressed]="store.session.dataMode() === 'observed'" (click)="setMode('observed')">Date observate</button>
+      <button type="button" [attr.aria-pressed]="store.session.dataMode() === 'synthetic'" (click)="setMode('synthetic')">Demo sintetic</button>
+    </div>
+    @if (store.publication(); as publication) {
+      <p class="version muted" title="{{ publication.snapshot_id }}">Versiune publicată: {{ publication.snapshot_id.slice(0, 12) }}… · clasament fix pe perioadă</p>
+    }
+    @if (store.state() === 'loading') { <p class="muted" role="status">Se încarcă versiunea publicată…</p> }
+    @if (store.state() === 'empty') { <p class="muted" role="status">Nicio versiune publicată în acest mod. Importul și verificarea sunt disponibile.</p> }
+    @if (store.state() === 'error') { <p class="load-error" role="alert">Publicația nu s-a încărcat: {{ store.error() }}</p> }
+  }
 </header>
 
 <nav class="nav glass" aria-label="Ecrane">
@@ -28,11 +40,15 @@
 @if (aboutOpen()) {
   <section class="about glass" aria-label="Despre date">
     @if (store.isSynthetic()) {
-      <p class="warn">{{ store.manifest()?.avertisment }}</p>
+      <p class="warn">{{ store.manifest()?.avertisment ?? 'DATE SINTETICE: scenariu de demonstrație, fără accidente observate.' }}</p>
     }
     <p>Presa scrie selectiv, mai ales despre accidentele grave. Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
     <p>Scorul e o regulă de prioritizare pe acest eșantion, nu o probabilitate de accident.</p>
     <p>Măsurile sunt candidate, de verificat în teren. Decizia aparține Comisiei de circulație.</p>
+    @if (store.publication(); as publication) {
+      <p>Context: {{ publication.provenance.context.attribution }}</p>
+      <p class="muted">Versiune integrală: {{ publication.snapshot_id }}</p>
+    }
     <button type="button" class="btn" (click)="aboutOpen.set(false)">Închide</button>
   </section>
 }

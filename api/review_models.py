@@ -87,6 +87,25 @@ class CorrectionRequest(Contract):
     changes: Annotated[dict[str, Any], Field(min_length=1)]
 
 
+class GeocodingPreviewRequest(Contract):
+    data_mode: DataMode
+    expected_version: Version
+
+
+class GeocodingApplyRequest(GeocodingPreviewRequest):
+    operator: Operator
+    reason: Note
+    suggestion_id: Annotated[StrictStr, Field(pattern=r"^[a-f0-9]{64}$")]
+    location_checked: Literal[True]
+
+    @field_validator("location_checked", mode="before")
+    @classmethod
+    def explicit_location_check(cls, value):
+        if value is not True:
+            raise ValueError("location_checked must be the boolean true")
+        return value
+
+
 class ReviewRequest(Contract):
     data_mode: DataMode
     expected_version: Version

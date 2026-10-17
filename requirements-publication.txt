@@ -1,0 +1,5 @@
+-r requirements.txt
+# Optional local publication geometry and the existing deterministic risk scorer.
+pyproj==3.8.0
+shapely==2.2.0
+numpy==2.5.4

@@ -1,0 +1,4 @@
+# Person 4 only. Common dependency files are unchanged.
+pyproj==3.8.0
+shapely==2.2.0
+h3==4.5.0

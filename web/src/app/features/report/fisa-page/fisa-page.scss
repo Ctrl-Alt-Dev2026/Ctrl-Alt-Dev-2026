@@ -72,6 +72,24 @@ ul {
   font-size: var(--step--1);
 }
 
+.selector {
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  border: var(--hair) solid #b7c0c5;
+  border-radius: var(--radius-s);
+  label { display: flex; align-items: baseline; gap: var(--space-2); margin: var(--space-2) 0; }
+  input { accent-color: #176c7e; }
+}
+.selection-actions, .exports { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-2) 0; }
+.sheet .btn { color: #1b2128; border: var(--hair) solid #aab6bd; font-size: var(--step--1); text-decoration: none; }
+.sheet .btn.primary { color: #071a21; }
+.source-meta { display: block; color: #4a535c; font-size: var(--step--1); }
+.event { margin: var(--space-3) 0; }
+.event p { margin: var(--space-1) 0; }
+.version { font-size: var(--step--1); overflow-wrap: anywhere; }
+footer { padding-top: var(--space-4); font-size: var(--step--1); color: #4a535c; }
+.sheet { overflow-wrap: anywhere; }
+
 @media print {
   :host {
     padding: 0;

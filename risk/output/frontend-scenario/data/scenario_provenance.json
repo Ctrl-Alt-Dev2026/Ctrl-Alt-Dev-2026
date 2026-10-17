@@ -1,0 +1,197 @@
+{
+  "data_mode": "simulation_mixed_sources",
+  "avertisment": "SCENARIU DEMONSTRATIV: infrastructură OSM reală + accidente sintetice plasate ipotetic la treceri reale. Accidentele NU sunt documentate aici. Scorurile NU reprezintă riscul real sau un clasament real de pericol.",
+  "assignments": [
+    {
+      "event_id": "scenario-ev-001",
+      "source_template": "ev-001",
+      "assigned_crossing_id": "osm-node-3372032447",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-002",
+      "source_template": "ev-002",
+      "assigned_crossing_id": "osm-node-3372032447",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-003",
+      "source_template": "ev-003",
+      "assigned_crossing_id": "osm-node-3372032447",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-005",
+      "source_template": "ev-005",
+      "assigned_crossing_id": "osm-node-6194970559",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-006",
+      "source_template": "ev-006",
+      "assigned_crossing_id": "osm-node-6194970559",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-007",
+      "source_template": "ev-007",
+      "assigned_crossing_id": "osm-node-6194970559",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-010",
+      "source_template": "ev-010",
+      "assigned_crossing_id": "osm-node-6910606104",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-011",
+      "source_template": "ev-011",
+      "assigned_crossing_id": "osm-node-6910606104",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    },
+    {
+      "event_id": "scenario-ev-013",
+      "source_template": "ev-013",
+      "assigned_crossing_id": "osm-node-6910606104",
+      "assignment": "explicit_hypothetical_not_geocoding"
+    }
+  ],
+  "location_statistics": {
+    "osm-node-3372032447": {
+      "nr_evenimente": 3,
+      "pe_ore": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "ora_necunoscuta": 0,
+      "noapte": 2,
+      "zi": 1,
+      "necunoscut": 0,
+      "cauze": {
+        "necunoscut": 3
+      },
+      "gravitati": {
+        "deces": 1,
+        "grav": 1,
+        "usor": 1
+      }
+    },
+    "osm-node-6194970559": {
+      "nr_evenimente": 3,
+      "pe_ore": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "ora_necunoscuta": 0,
+      "noapte": 2,
+      "zi": 1,
+      "necunoscut": 0,
+      "cauze": {
+        "necunoscut": 3
+      },
+      "gravitati": {
+        "grav": 2,
+        "usor": 1
+      }
+    },
+    "osm-node-6910606104": {
+      "nr_evenimente": 3,
+      "pe_ore": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "ora_necunoscuta": 1,
+      "noapte": 2,
+      "zi": 0,
+      "necunoscut": 1,
+      "cauze": {
+        "necunoscut": 3
+      },
+      "gravitati": {
+        "grav": 2,
+        "usor": 1
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\eu\\Documents\\GitHub\\Ctrl-Alt-Dev-2026\\context\\output\\observed\\iasi\\crossings.geojson",
+      "sha256": "6501643f7e01bf033ae751a4ccbf970416eaea4a6b3cf9f1c6ec31aace003e41"
+    },
+    {
+      "path": "C:\\Users\\eu\\Documents\\GitHub\\Ctrl-Alt-Dev-2026\\context\\output\\observed\\iasi\\geometry_report.json",
+      "sha256": "6488525afd25995c0a54a06ea32d2426c97cd971bb1c458b40494e531bc154db"
+    },
+    {
+      "path": "C:\\Users\\eu\\Documents\\GitHub\\Ctrl-Alt-Dev-2026\\false_data\\accidents.json",
+      "sha256": "3366aeb06032a3225ceb30b875c362842b5e24ade0bb6c55f617da7f5ad731de"
+    }
+  ]
+}

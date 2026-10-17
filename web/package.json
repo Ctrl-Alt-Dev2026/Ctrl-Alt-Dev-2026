@@ -8,7 +8,9 @@
     "start": "ng serve",
     "prebuild": "node scripts/sync-data.mjs",
     "build": "ng build",
-    "build:pages": "npm run prebuild && ng build --base-href /Ctrl-Alt-Dev-2026/"
+    "build:local": "node scripts/build-local.mjs --base-href /ui/",
+    "build:mock": "node scripts/build-local.mjs --configuration production,mock",
+    "build:pages": "node scripts/build-local.mjs --configuration production,mock --base-href /Ctrl-Alt-Dev-2026/"
   },
   "private": true,
   "packageManager": "npm@11.3.0",
