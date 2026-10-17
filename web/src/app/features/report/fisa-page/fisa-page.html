@@ -1,0 +1,51 @@
+<article class="sheet">
+  <header>
+    <h1>Fișă de verificare pentru primărie</h1>
+    @if (store.manifest(); as m) {
+      <p>
+        Accidente rutiere raportate în presă, {{ dateRo(m.perioada[0]) }} – {{ dateRo(m.perioada[1]) }}.
+        {{ m.nr_evenimente }} evenimente unice din {{ m.nr_articole }} articole; {{ m.nr_localizate_precis }} localizate precis,
+        {{ m.nr_verificate }} verificate manual.
+      </p>
+      @if (m.data_mode === 'synthetic') {
+        <p class="synthetic"><strong>DATE SINTETICE.</strong> Fișa nu descrie locuri reale.</p>
+      }
+    }
+    <p class="limits">
+      Nu e un audit certificat, ci o listă de priorități de verificat. Presa relatează selectiv: absența din date nu înseamnă
+      o zonă sigură. Scorul e o regulă de prioritizare pe acest eșantion. Decizia aparține Comisiei de circulație.
+    </p>
+    <button type="button" class="btn primary no-print" (click)="print()">Tipărește sau salvează PDF</button>
+  </header>
+
+  @for (r of rows(); track r.h.id) {
+    <section class="loc">
+      <h2><span class="rank">{{ r.rank }}</span> {{ r.h.nume }} <span class="score">scor {{ r.h.scor }}</span></h2>
+      <p>{{ r.h.explicatie }}</p>
+
+      <h3>Dovezi ({{ r.events.length }} evenimente)</h3>
+      <ul>
+        @for (e of r.events; track e.event_id) {
+          <li>
+            {{ dateRo(e.data_eveniment) }}, {{ e.ora | nullLabel: 'oră necunoscută' }}: „{{ e.loc_text }}”.
+            @for (u of e.urls; track u; let first = $first) {@if (!first) {<span>, </span>}<a [href]="u" target="_blank" rel="noopener">{{ u }}</a>}
+          </li>
+        }
+      </ul>
+
+      <h3>Măsuri candidate și ce trebuie verificat</h3>
+      @for (m of r.measures; track m.measure_id) {
+        <p class="measure">
+          <strong>{{ m.name }}</strong> ({{ m.cost | nullLabel: 'cost nedocumentat' }}). {{ m.motiv }}.
+          De verificat: {{ m.de_verificat.join('; ') }}.
+        </p>
+      }
+
+      @if (r.h.date_lipsa.length > 0) {
+        <p class="gaps">Date lipsă: {{ r.h.date_lipsa.join('; ') }}.</p>
+      }
+    </section>
+  } @empty {
+    <p>Nicio locație de inclus în fișă.</p>
+  }
+</article>

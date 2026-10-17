@@ -1,0 +1,25 @@
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.axis {
+  stroke: var(--line);
+}
+.hit {
+  fill: transparent;
+}
+.mark {
+  fill: var(--heat-2);
+}
+.col:hover .hit {
+  fill: var(--night-800);
+}
+.tick {
+  font: 600 10px var(--f); // SVG user units: scales with the chart viewBox
+  fill: var(--muted);
+}
+.note {
+  margin: var(--space-1) 0 0;
+  font-size: var(--step--1);
+}

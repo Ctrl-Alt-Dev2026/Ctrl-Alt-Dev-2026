@@ -1,0 +1,151 @@
+<div class="page">
+  <header class="intro">
+    <h2>Import și verificare</h2>
+    <ol class="flow" aria-label="Pașii">
+      <li [class.on]="step() === 'input' || step() === 'extracting' || step() === 'error'">Lipești articolul</li>
+      <li [class.on]="step() === 'extracting'">AI-ul extrage câmpurile și arată dovezile</li>
+      <li [class.on]="step() === 'review' || step() === 'saving'">Corectezi și aprobi</li>
+      <li>Evenimentul apare pe hartă</li>
+    </ol>
+  </header>
+
+  @if (step() === 'input' || step() === 'extracting' || step() === 'error') {
+    <form class="source glass" [formGroup]="source" (ngSubmit)="extract()">
+      <label for="url">Link articol</label>
+      <input id="url" type="url" formControlName="url" placeholder="https://www.bzi.ro/…" />
+      <label for="text">sau textul articolului</label>
+      <textarea id="text" rows="8" formControlName="text" placeholder="Lipește aici textul știrii"></textarea>
+      <p class="hint muted">Pe link-ul public, extragerea rulează în modul reluare: se afișează un rezultat salvat dinainte, etichetat ca atare.</p>
+      @if (error(); as e) {
+        <p class="error" role="alert">{{ e }} Încearcă din nou; datele deja aprobate nu au fost afectate.</p>
+      }
+      <button type="submit" class="btn primary" [disabled]="step() === 'extracting'">
+        {{ step() === 'extracting' ? 'Se extrag câmpurile…' : 'Extrage cu AI' }}
+      </button>
+    </form>
+  }
+
+  @if (result(); as r) {
+    @if (step() === 'review' || step() === 'saving') {
+      <div class="review">
+        <section class="article glass" aria-labelledby="art-h">
+          <div class="meta">
+            @if (r.mode === 'replay') {
+              <span class="replay">Rezultat salvat (reluare), nu extragere live</span>
+            } @else {
+              <span class="live">Extragere live</span>
+            }
+            <span class="muted">model {{ r.model ?? 'necunoscut' }}, prompt {{ r.prompt_version ?? 'necunoscut' }}</span>
+          </div>
+          <h3 id="art-h">{{ r.article.titlu ?? 'Articol fără titlu' }}</h3>
+          @if (r.article.url) {
+            <a class="src" [href]="r.article.url" target="_blank" rel="noopener">{{ r.article.url }}</a>
+          }
+          <app-evidence-text
+            [text]="r.article.text"
+            [evidence]="r.dovezi"
+            [labels]="labels"
+            [active]="activeField()"
+            (hover)="activeField.set($event)"
+          />
+          @if (r.avertismente.length > 0) {
+            <ul class="warnings">
+              @for (w of r.avertismente; track w) {
+                <li>{{ w }}</li>
+              }
+            </ul>
+          }
+        </section>
+
+        <form class="fields glass" [formGroup]="fields" (ngSubmit)="approve()">
+          <h3>Câmpuri extrase</h3>
+          <p class="muted hint">Câmp gol = necunoscut. AI-ul nu completează ce lipsește din text.</p>
+
+          <div class="row" [class.active]="activeField() === 'loc_text'" (focusin)="activeField.set('loc_text')">
+            <label for="f-loc">Locul, cum apare în text</label>
+            <input id="f-loc" formControlName="loc_text" />
+            <small [class.none]="!evidenceFor('loc_text')">{{ evidenceFor('loc_text') ? '„' + evidenceFor('loc_text') + '”' : 'fără dovadă în text' }}</small>
+          </div>
+
+          <div class="pair">
+            <div class="row" [class.active]="activeField() === 'data_eveniment'" (focusin)="activeField.set('data_eveniment')">
+              <label for="f-date">Data accidentului</label>
+              <input id="f-date" type="date" formControlName="data_eveniment" />
+              <small [class.none]="!evidenceFor('data_eveniment')">{{ evidenceFor('data_eveniment') ? '„' + evidenceFor('data_eveniment') + '”' : 'necunoscută; nu folosim data publicării' }}</small>
+            </div>
+            <div class="row" [class.active]="activeField() === 'ora'" (focusin)="activeField.set('ora')">
+              <label for="f-ora">Ora</label>
+              <input id="f-ora" type="time" formControlName="ora" />
+              <small [class.none]="!evidenceFor('ora')">{{ evidenceFor('ora') ? '„' + evidenceFor('ora') + '”' : 'fără dovadă în text' }}</small>
+            </div>
+          </div>
+
+          <div class="pair">
+            <div class="row" [class.active]="activeField() === 'gravitate'" (focusin)="activeField.set('gravitate')">
+              <label for="f-grav">Gravitatea</label>
+              <select id="f-grav" formControlName="gravitate">
+                @for (g of gravitate; track g[0]) {
+                  <option [value]="g[0]">{{ g[1] }}</option>
+                }
+              </select>
+              <small [class.none]="!evidenceFor('gravitate')">{{ evidenceFor('gravitate') ? '„' + evidenceFor('gravitate') + '”' : 'fără dovadă în text' }}</small>
+            </div>
+            <div class="row" [class.active]="activeField() === 'cauza_raportata'" (focusin)="activeField.set('cauza_raportata')">
+              <label for="f-cauza">Cauza relatată de presă</label>
+              <select id="f-cauza" formControlName="cauza_raportata">
+                <option value="">nespecificată</option>
+                @for (c of cauze; track c[0]) {
+                  <option [value]="c[0]">{{ c[1] }}</option>
+                }
+              </select>
+              <small [class.none]="!evidenceFor('cauza_raportata')">{{ evidenceFor('cauza_raportata') ? '„' + evidenceFor('cauza_raportata') + '”' : 'fără dovadă în text' }}</small>
+            </div>
+          </div>
+
+          <div class="pair">
+            <div class="row">
+              <label for="f-part">Participanți</label>
+              <input id="f-part" formControlName="participanti" />
+            </div>
+            <div class="row">
+              <label for="f-noapte">Noaptea</label>
+              <select id="f-noapte" formControlName="noapte">
+                <option value="">necunoscut</option>
+                <option value="true">da</option>
+                <option value="false">nu</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="location">
+            <h4>Localizare propusă</h4>
+            @if (r.localizare_propusa; as l) {
+              <p>
+                {{ l.lat.toFixed(5) }}, {{ l.lon.toFixed(5) }}, precizie
+                <select formControlName="precizie_loc" aria-label="Precizia localizării">
+                  @for (p of precizie; track p[0]) {
+                    <option [value]="p[0]">{{ p[1] }}</option>
+                  }
+                </select>
+              </p>
+              <p class="muted hint">Din geocodare ({{ l.metoda }}), nu din AI. Confirmă pinul pe hartă după aprobare.</p>
+            } @else {
+              <p class="none">Locul nu a putut fi localizat. Evenimentul se salvează fără pin și nu intră în clasament.</p>
+            }
+          </div>
+
+          @if (error(); as e) {
+            <p class="error" role="alert">{{ e }} Câmpurile tale au rămas aici; încearcă din nou.</p>
+          }
+          <div class="actions">
+            <button type="submit" class="btn primary" [disabled]="step() === 'saving'">
+              {{ step() === 'saving' ? 'Se salvează…' : hasLocation() ? 'Aprobă și pune pe hartă' : 'Aprobă' }}
+            </button>
+            <button type="button" class="btn" (click)="reset()">Respinge</button>
+          </div>
+          <p class="muted hint">Scorul locației se recalculează la următoarea rulare a analizei, nu în interfață.</p>
+        </form>
+      </div>
+    }
+  }
+</div>

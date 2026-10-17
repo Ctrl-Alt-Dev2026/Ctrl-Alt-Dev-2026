@@ -1,0 +1,104 @@
+// Floats above every page; only its cards take pointer events, the map stays draggable around them.
+:host {
+  position: fixed;
+  z-index: 10;
+  inset: var(--gutter) var(--gutter) auto var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  pointer-events: none;
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.title {
+  padding: var(--space-2) var(--space-4) var(--space-2);
+  max-width: min(36rem, 100%);
+  p {
+    margin: 0;
+    font-size: var(--step--1);
+  }
+  b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  h1 {
+    font-size: var(--step-2);
+    letter-spacing: 0.01em;
+  }
+}
+.coverage {
+  margin-top: 0.1rem !important;
+}
+.synthetic {
+  padding: 0.1em 0.6em;
+  border: var(--hair) solid var(--alert);
+  border-radius: 999px;
+  color: var(--alert);
+  background: var(--alert-bg);
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  a,
+  .about-btn {
+    padding: 0.45em 0.9em;
+    border-radius: var(--radius-s);
+    border: 0;
+    background: none;
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      color: var(--ink);
+      background: var(--night-800);
+    }
+  }
+  a.active {
+    color: var(--accent-ink);
+    background: var(--accent);
+  }
+}
+
+.about {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  width: min(26rem, 100%);
+  padding: var(--space-4);
+  font-size: var(--step--1);
+  p {
+    margin: 0 0 var(--space-2);
+  }
+  .warn {
+    color: var(--alert);
+  }
+}
+
+@media (max-width: 55.99rem) {
+  :host {
+    position: relative;
+    inset: auto;
+    padding: var(--gutter) var(--gutter) 0;
+  }
+  .title,
+  .nav {
+    width: 100%;
+    max-width: none;
+  }
+}

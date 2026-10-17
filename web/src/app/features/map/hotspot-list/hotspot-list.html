@@ -1,0 +1,35 @@
+<header>
+  <h2>Locații de verificat</h2>
+  <p class="muted">
+    {{ hotspots().length }} {{ hotspots().length === 1 ? 'locație' : 'locații' }}, ordonate după scorul de prioritizare.
+  </p>
+</header>
+
+@if (hotspots().length === 0) {
+  <p class="empty">Nicio locație nu are încă evenimente localizate precis. Aprobă evenimente din ecranul Import.</p>
+} @else {
+  <ol>
+    @for (h of hotspots(); track h.id) {
+      <li>
+        <button type="button" (click)="select.emit(h.id)">
+          <span class="rank">{{ rankOf(h.id) }}</span>
+          <span class="body">
+            <span class="name">{{ h.nume }}</span>
+            <span class="meta">{{ h.nr_evenimente }} {{ h.nr_evenimente === 1 ? 'eveniment' : 'evenimente' }}@if (h.masuri[0]; as m) {, propus: {{ measureName(m.measure_id) }}}</span>
+          </span>
+          <app-score-badge [score]="h.scor" [max]="max()" />
+        </button>
+      </li>
+    }
+  </ol>
+}
+
+<footer class="muted">
+  <p>Scorul e o regulă de prioritizare pe acest eșantion de presă, nu o probabilitate de accident.</p>
+  @if (excludedCount() > 0) {
+    <p>
+      {{ excludedCount() }} {{ excludedCount() === 1 ? 'eveniment localizat aproximativ nu intră' : 'evenimente localizate aproximativ nu intră' }}
+      în clasament.
+    </p>
+  }
+</footer>

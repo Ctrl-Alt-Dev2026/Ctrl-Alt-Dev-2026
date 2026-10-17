@@ -1,0 +1,98 @@
+<app-city-map
+  class="map"
+  [accidents]="store.mappable()"
+  [hotspots]="store.visibleHotspots()"
+  [rankOf]="store.rankOf()"
+  [selectedId]="store.selectedId()"
+  [applied]="applied()"
+  [rightInset]="rightInset()"
+  [flyToPoint]="addedPoint()"
+  [cameras]="store.showCameras() ? store.cameras() : []"
+  [selectedCameraId]="store.selectedCameraId()"
+  (selectCamera)="store.selectedCameraId.set($event)"
+  (select)="open($event)"
+  (basemapFailed)="basemapFailed.set(true)"
+/>
+
+@if (added(); as a) {
+  <div class="added glass" role="status">
+    <p><b>Eveniment adăugat pe hartă:</b> „{{ a.loc_text }}”. Confirmă că pinul e la locul potrivit.</p>
+    <p class="muted">Scorul locațiilor se actualizează la următoarea rulare a analizei.</p>
+    <button type="button" class="btn" (click)="dismissAdded()">Am verificat</button>
+  </div>
+}
+
+@if (basemapFailed()) {
+  <p class="notice glass" role="status">Harta de bază nu s-a încărcat (fără internet?). Datele sunt afișate pe fundal simplu.</p>
+}
+
+@if (store.showCameras() && store.selectedCamera(); as c) {
+  <app-camera-viewer class="camera glass" [camera]="c" (close)="store.selectedCameraId.set(null)" />
+}
+
+<aside class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
+  @if (store.selected(); as h) {
+    <app-location-dossier [hotspot]="h" [rank]="rank()" (close)="close()" />
+  } @else {
+    <app-hotspot-list [hotspots]="store.visibleHotspots()" [excludedCount]="approxCount()" (select)="open($event)" />
+  }
+</aside>
+
+<div class="legend glass" aria-label="Legendă" [hidden]="applied() || (store.showCameras() && store.selectedCamera())">
+  <div class="ramp">
+    <span class="bar" aria-hidden="true"></span>
+    <span class="ends"><span>mai puține</span><span>mai multe evenimente</span></span>
+  </div>
+  <ul>
+    <li><i class="rank-chip" aria-hidden="true">1</i>locație clasată (după scor)</li>
+    <li><i class="dot" aria-hidden="true"></i>eveniment localizat precis</li>
+    <li><i class="ring" aria-hidden="true"></i>localizat aproximativ, în afara clasamentului</li>
+    @if (store.showCameras()) {
+      <li><i class="cam" aria-hidden="true"></i>cameră publică (clic pentru imagine)</li>
+    }
+  </ul>
+</div>
+
+<div class="dock">
+  @if (applied()) {
+    <output class="counter glass" aria-live="polite">
+      <span><b>{{ counter().locations }}</b> locații vizate</span>
+      <span><b>{{ counter().events }}</b> accidente documentate acolo</span>
+      <span>
+        cost estimat <b>{{ counter().cost ?? 'nedocumentat' }}</b>
+        @if (counter().unknown > 0) {
+          <small class="muted">+ {{ counter().unknown }} {{ counter().unknown === 1 ? 'măsură' : 'măsuri' }} fără cost documentat</small>
+        }
+      </span>
+    </output>
+  }
+
+  <div class="bar glass">
+    <div class="chips" role="group" aria-label="Filtrează după participanți">
+      <button type="button" class="chip" [attr.aria-pressed]="store.participant() === null" (click)="setParticipant(null)">Toate</button>
+      @for (p of store.participants(); track p) {
+        <button type="button" class="chip" [attr.aria-pressed]="store.participant() === p" (click)="setParticipant(p)">
+          {{ participantLabel(p) }}
+        </button>
+      }
+    </div>
+    <div class="actions">
+      <button type="button" class="btn list-toggle" [attr.aria-pressed]="panelOpen()" (click)="panelOpen.set(!panelOpen())">Listă</button>
+      @if (touring()) {
+        <button type="button" class="btn" (click)="stopTour()">Oprește turul</button>
+      } @else {
+        <button type="button" class="btn" (click)="startTour()" [disabled]="store.visibleHotspots().length === 0">
+          Tur prin top {{ store.visibleHotspots().length }}
+        </button>
+      }
+      @if (store.cameras().length > 0) {
+        <button type="button" class="btn" [attr.aria-pressed]="store.showCameras()" (click)="toggleCameras()">
+          Camere live ({{ store.cameras().length }})
+        </button>
+      }
+      <button type="button" class="btn primary" [attr.aria-pressed]="applied()" (click)="toggleApplied()">
+        {{ applied() ? 'Arată situația documentată' : 'Aplică măsurile' }}
+      </button>
+    </div>
+  </div>
+</div>

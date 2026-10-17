@@ -1,0 +1,120 @@
+<div class="head">
+  <button type="button" class="back" (click)="close.emit()">Înapoi la clasament</button>
+  <div class="title">
+    <span class="rank" aria-label="Locul {{ rank() }}">{{ rank() }}</span>
+    <div>
+      <h2>{{ hotspot().nume }}</h2>
+      <p class="muted">{{ hotspot().nr_evenimente }} {{ hotspot().nr_evenimente === 1 ? 'eveniment' : 'evenimente' }}, @if (hotspot().verificat) {<span class="ok">verificată manual</span>} @else {<span>neverificată încă</span>}</p>
+    </div>
+    <app-score-badge [score]="hotspot().scor" [max]="max()" />
+  </div>
+</div>
+
+<section aria-labelledby="score-h">
+  <h3 id="score-h">Din ce e compus scorul</h3>
+  <div class="mix" role="img" [attr.aria-label]="'Scor ' + hotspot().scor">
+    @for (c of components(); track c.key) {
+      <span [style.width.%]="c.pct" [style.background]="c.color"></span>
+    }
+  </div>
+  <ul class="mix-legend">
+    @for (c of components(); track c.key) {
+      <li><i [style.background]="c.color"></i>{{ c.label }} <strong>{{ c.value }}</strong></li>
+    }
+  </ul>
+  <p>{{ hotspot().explicatie }}</p>
+</section>
+
+<section aria-labelledby="hours-h">
+  <h3 id="hours-h">Ora evenimentelor</h3>
+  <app-hour-chart [hours]="hotspot().pe_ore" [unknownCount]="unknownHours()" />
+</section>
+
+<section aria-labelledby="events-h">
+  <h3 id="events-h">Evenimente și surse</h3>
+  <ol class="events">
+    @for (e of events(); track e.event_id) {
+      <li>
+        <div class="ev-top">
+          <span class="sev" [attr.data-g]="e.gravitate">{{ gravitate[e.gravitate] }}</span>
+          <span>{{ dateRo(e.data_eveniment) }}, {{ hour(e) }}</span>
+          @if (night(e); as n) {
+            <span class="muted">{{ n }}</span>
+          }
+        </div>
+        <p class="loc">„{{ e.loc_text }}” <span class="muted">({{ precizie[e.precizie_loc] }})</span></p>
+        <p class="muted small">
+          Cauza relatată de presă: {{ cause(e) | nullLabel: 'nespecificată' }}@if (!e.verificat) {, neverificat}
+        </p>
+        <p class="sources">
+          @for (u of e.urls; track u; let i = $index) {
+            <a [href]="u" target="_blank" rel="noopener">Sursa {{ i + 1 }}</a>
+          }
+        </p>
+      </li>
+    }
+  </ol>
+  @if (missingEventIds().length > 0) {
+    <p class="muted small">Lipsesc din accidents.json: {{ missingEventIds().join(', ') }}</p>
+  }
+</section>
+
+<section aria-labelledby="infra-h">
+  <h3 id="infra-h">Ce știm despre loc</h3>
+  @if (crossing(); as c) {
+    <dl class="infra">
+      <dt>Semafor</dt><dd [class.unknown]="c.semafor === null">{{ c.semafor | nullLabel }}</dd>
+      <dt>Benzi</dt><dd [class.unknown]="c.benzi === null">{{ c.benzi | nullLabel }}</dd>
+      <dt>Iluminat</dt><dd [class.unknown]="c.iluminat === null">{{ c.iluminat | nullLabel }}</dd>
+      <dt>Tip stradă</dt><dd [class.unknown]="c.tip_strada === null">{{ c.tip_strada | nullLabel }}</dd>
+      <dt>Școală sub 150 m</dt><dd [class.unknown]="c.scoala_150m === null">{{ c.scoala_150m | nullLabel }}</dd>
+      <dt>Stație sub 100 m</dt><dd [class.unknown]="c.statie_100m === null">{{ c.statie_100m | nullLabel }}</dd>
+    </dl>
+    <p class="muted small">Sursa: {{ c.sursa }}, descărcat la {{ dateRo(c.descarcat_la) }}. Un tag lipsă din OSM nu înseamnă că obiectul lipsește.</p>
+  } @else {
+    <p class="muted">Nu avem date de infrastructură pentru această locație.</p>
+  }
+
+  @if (hotspot().date_lipsa.length > 0) {
+    <h4>Date lipsă</h4>
+    <ul class="gaps">
+      @for (g of hotspot().date_lipsa; track g) {
+        <li>{{ g }}</li>
+      }
+    </ul>
+  }
+</section>
+
+<section aria-labelledby="measures-h">
+  <h3 id="measures-h">Măsuri candidate</h3>
+  <p class="muted small">Propuneri de analizat de Comisia de circulație, nu decizii.</p>
+  @for (m of measures(); track m.measure_id) {
+    <article class="measure">
+      <h4>{{ m.def?.nume ?? m.measure_id }}</h4>
+      <p>De ce: {{ m.motiv }}</p>
+      <p>
+        Cost estimat: {{ m.cost | nullLabel: 'cost nedocumentat' }}
+        @if (m.cost && m.def?.sursa_cost) {
+          <span class="muted small">({{ m.def?.sursa_cost }})</span>
+        }
+      </p>
+      @if (m.reduction) {
+        <p class="muted small">
+          Reducere tipică raportată în literatură: {{ m.reduction }} ({{ m.def?.sursa_reducere | nullLabel: 'fără sursă' }}). Informativ, nu o predicție pentru acest loc.
+        </p>
+      }
+      <p class="check-h">De verificat în teren:</p>
+      <ul class="checks">
+        @for (c of m.de_verificat; track c) {
+          <li>{{ c }}</li>
+        }
+      </ul>
+    </article>
+  } @empty {
+    <p class="muted">Nicio măsură propusă încă.</p>
+  }
+</section>
+
+<div class="actions">
+  <a class="btn primary" routerLink="/fisa" [queryParams]="{ ids: hotspot().id }">Deschide fișa de verificare</a>
+</div>
