@@ -1,4 +1,4 @@
-"""Opt-in AI routes; approval/persistence remain the backend owner's responsibility."""
+"""AI routes; approval/persistence remain the backend owner's responsibility."""
 from functools import lru_cache
 from typing import Literal
 
@@ -40,6 +40,15 @@ def get_service():
 
 
 router = APIRouter(tags=["ai"])
+
+
+def register_ai(application):
+    """Compose the backend once, including when a legacy entry point is imported."""
+    if not getattr(application.state, "safeiasi_ai_routes_registered", False):
+        application.include_router(router)
+        application.state.safeiasi_ai_routes_registered = True
+        application.openapi_schema = None
+    return application
 
 
 @router.post("/api/v1/ai/extract", summary="Extract pending candidates; never approve events")

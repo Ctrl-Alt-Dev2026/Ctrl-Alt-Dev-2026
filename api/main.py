@@ -1,4 +1,4 @@
-"""Local API and read-only synthetic snapshot access for SafeIasi."""
+"""Local API with pending AI extraction and read-only synthetic snapshot access."""
 
 from contextlib import asynccontextmanager
 import os
@@ -9,6 +9,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
+from ai.router import register_ai
 from api.snapshots import SnapshotError, load_snapshot
 
 
@@ -52,11 +53,12 @@ def create_app(snapshot_directory: str | Path | None = None):
         yield
 
     application = FastAPI(
-        title="SafeIași API", version="0.2.0", lifespan=lifespan,
+        title="SafeIași API", version="0.3.0", lifespan=lifespan,
         description=(
             "API local cu citire de snapshot sintetic validat. /health confirmă doar serverul. "
             "Datele lipsă/invalide produc HTTP 503 pe rutele de date. "
-            "Extracția AI și publicarea datelor observate urmează separat."
+            "Extracția AI produce candidați pentru verificare, fără salvare sau aprobare automată. "
+            "Procesarea live necesită Ollama; reluările salvate sunt etichetate explicit."
         ),
     )
 
@@ -103,7 +105,7 @@ def create_app(snapshot_directory: str | Path | None = None):
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return application
+    return register_ai(application)
 
 
 app = create_app()

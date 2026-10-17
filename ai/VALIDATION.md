@@ -2,6 +2,15 @@
 
 Verified on 17 October 2026 with Python 3.12. Pulled `main` initially through `46eecde`, then pulled the concurrent backend/snapshot updates through `2f523ff` and repeated compatibility checks.
 
+## Standard backend entry point integration
+
+The subsequent integration starts from `main` at `282ed36`, which already contains the AI delivery. `api.main:app` now includes extraction/replay routes by default; `ai.app:app` aliases the same app and factory. Registration is idempotent, and fresh processes can import either entry point first without contacting the provider.
+
+- **28 backend tests and 42 AI tests passed**; `pip check` reported no broken requirements.
+- Actual HTTP checks on the restarted `api.main:app` server confirmed health/docs/OpenAPI, rules extraction, the legacy alias, GET/POST replay, invalid-input 422, and missing-replay 404. Candidates remain pending, unverified and without coordinates.
+- Ollama was unavailable on the default local endpoint. A hybrid request returned 503 with explicitly marked pending rules fallback; no live-model success is claimed.
+- Manifest/events continue returning the expected `invalid_snapshot` 503 for the incomplete shared fixture. Shared fixture file hashes were unchanged after extraction. Saving candidates and approving/rejecting them are subsequent backend work.
+
 ## Checks completed
 
 - **42 AI tests passed**: 17 extraction safety/regression checks and 25 service/router/CLI/cache integration checks.
