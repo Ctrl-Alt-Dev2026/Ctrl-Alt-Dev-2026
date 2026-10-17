@@ -1,0 +1,28 @@
+<svg [attr.viewBox]="'0 0 ' + width + ' ' + height" role="img" aria-label="Evenimente pe ore ale zilei">
+  <line x1="0" [attr.x2]="width" [attr.y1]="base + 0.5" [attr.y2]="base + 0.5" class="axis" />
+  @for (b of bars(); track b.hour) {
+    <g class="col">
+      <title>{{ b.label }}</title>
+      <rect [attr.x]="b.x" y="0" [attr.width]="bar + 2" [attr.height]="base" class="hit" />
+      @if (b.h > 0) {
+        <path class="mark" [attr.d]="'M' + b.x + ',' + base + 'v-' + (b.h - 3) + 'q0,-3 3,-3h' + (bar - 6) + 'q3,0 3,3v' + (b.h - 3) + 'z'" />
+      }
+    </g>
+  }
+  @for (t of ticks; track t) {
+    <text [attr.x]="x(t)" [attr.y]="height - 2" class="tick">{{ t }}:00</text>
+  }
+</svg>
+@if (unknownCount() > 0) {
+  <p class="muted note">+ {{ unknownCount() }} {{ unknownCount() === 1 ? 'eveniment' : 'evenimente' }} cu oră necunoscută, neincluse în grafic</p>
+}
+<table class="sr-only">
+  <caption>Evenimente pe ore</caption>
+  <tbody>
+    @for (b of bars(); track b.hour) {
+      @if (b.v > 0) {
+        <tr><th scope="row">{{ b.hour }}:00</th><td>{{ b.v }}</td></tr>
+      }
+    }
+  </tbody>
+</table>

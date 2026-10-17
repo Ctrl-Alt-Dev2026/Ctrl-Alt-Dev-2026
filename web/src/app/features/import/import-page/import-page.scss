@@ -1,0 +1,224 @@
+:host {
+  display: block;
+  overflow: auto;
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgb(143 211 255 / 0.07), transparent 70%),
+    var(--night-950);
+}
+
+.page {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: calc(var(--chrome-top) + var(--space-5)) var(--gutter) var(--space-6);
+}
+
+.intro {
+  margin-bottom: var(--space-5);
+  h2 {
+    font-size: var(--step-3);
+  }
+}
+
+// The four steps of the AI flow; the current one is lit.
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+  counter-reset: step;
+  li {
+    counter-increment: step;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.35em 0.9em 0.35em 0.4em;
+    border: var(--hair) solid var(--line);
+    border-radius: 999px;
+    font-size: var(--step--1);
+    color: var(--muted);
+    &::before {
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 50%;
+      background: var(--night-800);
+      font-weight: 700;
+    }
+    &.on {
+      color: var(--ink);
+      border-color: var(--accent);
+      &::before {
+        background: var(--accent);
+        color: var(--accent-ink);
+      }
+    }
+  }
+}
+
+label {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: var(--space-1);
+}
+input,
+textarea,
+select {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--night-950);
+  border: var(--hair) solid var(--line);
+  border-radius: var(--radius-s);
+  padding: 0.5em 0.7em;
+  &:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+}
+textarea {
+  resize: vertical;
+}
+
+.hint {
+  font-size: var(--step--1);
+  margin: var(--space-2) 0;
+}
+.error {
+  color: var(--alert);
+}
+
+.source {
+  max-width: 46rem;
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-2);
+  input {
+    margin-bottom: var(--space-2);
+  }
+  .btn {
+    justify-self: start;
+  }
+}
+
+.review {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.article {
+  padding: var(--space-5);
+  h3 {
+    font-size: var(--step-2);
+    margin: var(--space-3) 0 var(--space-1);
+  }
+  .src {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+    font-size: var(--step--1);
+    color: var(--muted);
+    word-break: break-all;
+  }
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: center;
+  font-size: var(--step--1);
+}
+.replay,
+.live {
+  padding: 0.15em 0.7em;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.replay {
+  color: var(--unknown);
+  border: var(--hair) solid var(--unknown);
+}
+.live {
+  color: var(--ok);
+  border: var(--hair) solid var(--ok);
+}
+.warnings {
+  margin: var(--space-4) 0 0;
+  padding-left: 1.1rem;
+  font-size: var(--step--1);
+  color: var(--unknown);
+}
+
+.fields {
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+  h3 {
+    font-size: var(--step-2);
+  }
+  .hint {
+    margin: 0;
+  }
+}
+.pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-3);
+}
+.row {
+  padding: var(--space-2);
+  margin: calc(-1 * var(--space-2));
+  border-radius: var(--radius-s);
+  transition: background 0.2s;
+  &.active {
+    background: rgb(143 211 255 / 0.08);
+  }
+  small {
+    display: block;
+    margin-top: var(--space-1);
+    font-size: var(--step--1);
+    color: var(--accent);
+    &.none {
+      color: var(--unknown);
+      font-style: italic;
+    }
+  }
+}
+.location {
+  border-top: var(--hair) solid var(--line);
+  padding-top: var(--space-3);
+  h4 {
+    margin-bottom: var(--space-1);
+  }
+  p {
+    margin: 0;
+  }
+  select {
+    width: auto;
+    display: inline-block;
+  }
+  .none {
+    color: var(--unknown);
+  }
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+@media (max-width: 55.99rem) {
+  .review {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

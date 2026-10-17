@@ -1,0 +1,177 @@
+// Video with its analysis overlay; in full screen the signal list moves to a side column.
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: transparent;
+}
+
+.stage {
+  position: relative;
+  flex: none;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  background: #000;
+  border: var(--hair) solid var(--line);
+}
+
+video,
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hud {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  font-size: 0.72rem;
+}
+
+.top {
+  top: var(--space-2);
+  left: var(--space-2);
+  right: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  pointer-events: none;
+}
+
+.chip {
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  background: rgb(11 16 23 / 0.8);
+  color: var(--ink);
+  white-space: nowrap;
+  &[data-level='slabă'] {
+    color: var(--unknown);
+  }
+}
+
+.live i {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.live.on i {
+  background: var(--heat-4);
+}
+
+.controls {
+  right: var(--space-2);
+  bottom: var(--space-2);
+  display: flex;
+  gap: var(--space-1);
+}
+
+.ctl {
+  border: var(--hair) solid var(--line);
+  background: rgb(11 16 23 / 0.85);
+  color: var(--ink);
+  border-radius: var(--radius-s);
+  padding: 0.3em 0.7em;
+  font: inherit;
+  cursor: pointer;
+  &:hover {
+    border-color: var(--accent);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+  }
+}
+
+.status {
+  left: var(--space-2);
+  bottom: var(--space-2);
+  max-width: 60%;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-s);
+  background: rgb(11 16 23 / 0.85);
+  color: var(--unknown);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-height: 0;
+  h3 {
+    margin: 0;
+    font-size: var(--step-0);
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.signals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+  li {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border-radius: var(--radius-s);
+    background: var(--night-800);
+    border-left: 0.2rem solid var(--heat-4);
+    &[data-kind='iluminat'] {
+      border-left-color: var(--unknown);
+    }
+  }
+  img {
+    width: 100%;
+    border-radius: 0.2rem;
+    display: block;
+  }
+}
+
+.dismiss {
+  margin-top: var(--space-1);
+  border: var(--hair) solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  border-radius: var(--radius-s);
+  padding: 0.1em 0.6em;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 0.75rem;
+}
+
+// Full screen: video fills the screen, signals in a column on the right.
+:host(.full) {
+  flex-direction: row;
+  padding: var(--space-3);
+  background: var(--night-950);
+  font-size: var(--step-0);
+  .stage {
+    flex: 1;
+    aspect-ratio: auto;
+  }
+  .hud {
+    font-size: var(--step--1);
+  }
+  .side {
+    flex: none;
+    width: clamp(16rem, 24vw, 24rem);
+    overflow: auto;
+  }
+  .signals li {
+    grid-template-columns: 1fr;
+  }
+}

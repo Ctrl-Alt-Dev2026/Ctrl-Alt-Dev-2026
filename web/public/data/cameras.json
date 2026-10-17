@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cam-piata-unirii",
+    "nume": "Piața Unirii",
+    "lat": 47.165489,
+    "lon": 27.579009,
+    "sursa_coordonate": "listarea furnizorului (webcamromania.ro)",
+    "sursa": "public",
+    "furnizor": "webcamromania.ro",
+    "pagina_url": "https://webcamromania.ro/webcam-orase/webcam-iasi/",
+    "embed_url": "https://webcamromania.ro/embed/webcam-iasi/",
+    "stream_url": "https://w1.webcamromania.ro/piatauniriiiasi/index.m3u8"
+  },
+  {
+    "id": "cam-palatul-culturii",
+    "nume": "Palatul Culturii",
+    "lat": 47.158729,
+    "lon": 27.586742,
+    "sursa_coordonate": "listarea furnizorului (webcamromania.ro)",
+    "sursa": "public",
+    "furnizor": "webcamromania.ro",
+    "pagina_url": "https://webcamromania.ro/webcam-orase/webcam-iasi-palatul-culturii/",
+    "embed_url": "https://webcamromania.ro/embed/webcam-iasi-palatul-culturii/",
+    "stream_url": "https://w3.webcamromania.ro/ispalatulculturii/index.m3u8"
+  }
+]
