@@ -8,6 +8,7 @@ Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat c
 - [Responsabilitățile și planul de lucru pentru backend](docs/BACKEND_WORK_PLAN.md) — Mihnea: backend/API, provizoriu; Emi: extracție AI.
 - [Pornire locală, verificări și depanare](docs/LOCAL_DEVELOPMENT.md)
 - [Modulul AI: contract, Ollama, teste și limite](ai/README.md)
+- [Investigatorul de tipare: demo interactiv, dovezi și contestarea ipotezelor](ai/patterns/README.md)
 - [Import, corectare și review: contract și exemplu complet](docs/REVIEW_WORKFLOW.md)
 - [Contractul API pentru citirea snapshot-ului](docs/SNAPSHOT_READ_API.md)
 - [Planul inițial pentru șase persoane și aproximativ 25 de ore](docs/HACKATHON_PLAN.md) — atașamentul păstrat integral; observația despre accesul GitHub din introducere este istorică.
@@ -25,6 +26,8 @@ Deschide [verificarea serverului](http://127.0.0.1:8000/health) sau [documentaț
 
 Aceeași pornire include `POST /api/v1/ai/extract` și `GET /api/v1/ai/replays/{article_id}`. Procesarea implicită `hybrid` necesită Ollama local cu `qwen2.5:1.5b`; modul `rules` și reluările sintetice etichetate funcționează fără model. Endpoint-ul de extracție nu salvează sau aprobă candidați. Pentru salvare folosește `/api/v1/imports`, apoi rutele locale de review; fiecare decizie cere operator și versiune, fără publicare automată pe hartă. Exemplele sunt în [instrucțiunile locale](docs/LOCAL_DEVELOPMENT.md#extracția-ai) și [fluxul de review](docs/REVIEW_WORKFLOW.md).
 
+Deschide [investigatorul de tipare](http://127.0.0.1:8000/patterns) pentru grupare semantică între locuri, inspecția dovezilor și eliminarea temporară a cazurilor cu recalcularea ipotezelor. Demo-ul folosește vectori multilingvi calculați local și fixture-uri fictive; funcționează fără model sau conexiune externă la vizualizare. Pentru varianta fără server, deschide `ai/patterns/static/index.html`. Cele 17 evenimente au numai 4 texte pentru 3 cazuri; modul bazat exclusiv pe fragmente din articole se abține. Explorarea nu modifică datele de review sau snapshot-ul și nu demonstrează cauze ori riscuri reale.
+
 Rutele [manifest](http://127.0.0.1:8000/api/v1/manifest) și [evenimente](http://127.0.0.1:8000/api/v1/events) citesc același snapshot, încărcat la pornire. Implicit folosesc `false_data/`; deoarece setul actual este incomplet, răspund **HTTP 503 `invalid_snapshot`**, cu diagnostice. Nu servesc date parțiale. Un director sintetic coerent se poate selecta prin `SAFEIASI_SNAPSHOT_DIR`, urmat de repornire. Datele observate nu sunt încă acceptate.
 
 Teste și audit, într-un al doilea terminal:
@@ -33,6 +36,7 @@ Teste și audit, într-un al doilea terminal:
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe -m unittest discover -s ai/tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s ai/patterns/tests -v
 .\.venv\Scripts\python.exe -m api.validate_fixtures false_data
 ```
 

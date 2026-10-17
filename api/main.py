@@ -10,6 +10,7 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from ai.router import register_ai
+from ai.patterns.router import register_patterns
 from api.review_router import register_review
 from api.snapshots import SnapshotError, load_snapshot
 
@@ -62,6 +63,8 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             "Extracția AI produce candidați neverificați; /imports îi salvează pentru review local. "
             "Corectarea și deciziile operatorului sunt versionate, fără publicare automată pe hartă. "
             "Procesarea live necesită Ollama; reluările salvate sunt etichetate explicit."
+            " /patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
+            "fără modificarea snapshot-ului sau a datelor de review."
         ),
     )
     application.state.review_directory = Path(
@@ -112,7 +115,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return register_review(register_ai(application))
+    return register_patterns(register_review(register_ai(application)))
 
 
 app = create_app()

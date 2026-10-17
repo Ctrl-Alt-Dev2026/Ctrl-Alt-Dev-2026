@@ -1,0 +1,3 @@
+# Preparation/evaluation only; serving the prepared demo uses the existing backend environment.
+sentence-transformers==5.5.0
+scikit-learn==1.8.0

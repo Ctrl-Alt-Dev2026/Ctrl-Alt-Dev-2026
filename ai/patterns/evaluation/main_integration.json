@@ -1,0 +1,63 @@
+{
+  "label": "Recurring-pattern explorer integration with latest main",
+  "upstream_main": "b6cecb9e0d50bcda31aee3f5de3ad4d170570ec4",
+  "textual_merge_conflicts": 0,
+  "integration_fixes": [
+    "Register pattern routes in standard api.main without duplicated operations.",
+    "Preserve extraction, snapshot lifespan and persisted-review factory settings across compatibility entry points.",
+    "Reject missing/corrupt/stale pattern data and stale HTTP HTML exports with explicit 503.",
+    "Preserve reviewed candidates and initial synthetic source files during exploration."
+  ],
+  "python_suites": [
+    {
+      "name": "backend",
+      "tests": 48,
+      "exit_code": 0
+    },
+    {
+      "name": "extraction",
+      "tests": 42,
+      "exit_code": 0
+    },
+    {
+      "name": "patterns",
+      "tests": 21,
+      "exit_code": 0
+    },
+    {
+      "name": "geo_and_risk",
+      "tests": 23,
+      "exit_code": 0
+    }
+  ],
+  "python_tests_passed": 134,
+  "python_tests_failed": 0,
+  "dependencies": "pip check: No broken requirements found.",
+  "engine_parity": {
+    "passed": 684,
+    "failed": 0,
+    "thresholds": 18,
+    "exclusion_sets": 19,
+    "scopes": 2
+  },
+  "http_smoke": {
+    "transport": "http://127.0.0.1:8016",
+    "entrypoint": "api.main:app",
+    "health": "ok",
+    "extraction_review_patterns_in_schema": true,
+    "demo_http_status": 200,
+    "initial_patterns": 2,
+    "exclusion_support": [
+      4,
+      3
+    ],
+    "source_only_patterns": 0,
+    "strict_threshold_patterns": 0,
+    "input_sha256": "5a1f13e42e13929660411a643e98c4899b0fb36b067437ad3c2b1af9b7190dbd"
+  },
+  "limitations": [
+    "Source data are fictional and incomplete; source-only mode abstains.",
+    "Approved-snapshot routes correctly retain invalid_snapshot 503 for the unchanged incomplete fixtures.",
+    "Engineering checks do not establish causal or real-world model accuracy."
+  ]
+}
