@@ -4,6 +4,8 @@ Importable extraction module for the existing **Romanian schema 2.0**, integrate
 
 The extraction engine uses the Python standard library. The HTTP adapter uses FastAPI/Pydantic already pinned in the root requirements. It does not install packages or connect to an AI provider at import/startup.
 
+The same backend now also serves the [recurring-pattern investigator](patterns/README.md) at `/patterns`, alongside the extraction and persisted review workflows. It uses prepared multilingual embeddings, exposes evidence and differences, and supports removing cases to reassess a hypothesis. Its synthetic exploration does not modify reviewed records or publish events. No embedding model is loaded or downloaded by normal server startup.
+
 ## Backend integration
 
 The proposed backend seam in `docs/BACKEND_WORK_PLAN.md` is available:

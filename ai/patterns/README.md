@@ -1,6 +1,6 @@
 # Investigator de tipare — idea 6
 
-An implemented, opt-in module for SafeIași that proposes **recurring reported patterns across locations**, shows the underlying cases and provenance, and lets a reviewer challenge a pattern by removing a case and recomputing the groups.
+An implemented module for SafeIași that proposes **recurring reported patterns across locations**, shows the underlying cases and provenance, and lets a reviewer challenge a pattern by removing a case and recomputing the groups.
 
 ## Try the demo
 
@@ -9,10 +9,10 @@ Open `ai/patterns/static/index.html` in a browser. It is a complete offline appl
 For the integrated API, from the repository root with the existing backend dependencies installed:
 
 ```powershell
-python -m uvicorn ai.patterns.app:app --host 127.0.0.1 --port 8016
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8016
 ```
 
-Open `http://127.0.0.1:8016/patterns`. This opt-in app preserves the backend and extraction routes. The original `ai.app` and `api.main` entry points stay unchanged.
+Open `http://127.0.0.1:8016/patterns`. The standard backend now includes pattern, extraction and local review routes. `ai.app` and `ai.patterns.app` are compatibility aliases for the same application and factory, including `snapshot_directory` and `review_directory` settings. Repeated registration never duplicates routes.
 
 | Route | Purpose |
 |---|---|
@@ -26,7 +26,7 @@ Example request body:
 {"scope":"fixtures","threshold":0.35,"excluded":["ev-001"]}
 ```
 
-Use `scope: "sources"` for the stricter matched-excerpt mode. Controls are validated; no publishing or mutation endpoints exist. Corpus/discovery routes return an explicit 503 if prepared vectors are missing, corrupt or stale relative to the input-file SHA-256. The standalone HTML is a frozen export of the prepared data and displays its hash in the method dialog.
+Use `scope: "sources"` for the stricter matched-excerpt mode. Controls are validated; the pattern module has no publishing or mutation endpoints. Pattern routes return an explicit 503 if prepared vectors are missing, corrupt or stale relative to the input-file SHA-256. The HTTP demo also rejects an HTML export that no longer matches the prepared bundle. The standalone HTML is a frozen export of the prepared data and displays its hash in the method dialog.
 
 ## What is actually AI?
 
@@ -49,7 +49,7 @@ The map is an offline geographic coordinate plot with points aggregated by expli
 
 ## What the present data supports
 
-Input: the user's requested repository `false_data/`, frozen from the base repository at commit `7765748`.
+Input: the user's requested repository `false_data/`, prepared at commit `7765748` and unchanged by the subsequent integration with `main` at `b6cecb9`. The input SHA-256 is checked independently of Git history.
 
 | Available | Count |
 |---|---:|
@@ -99,7 +99,7 @@ node ai/patterns/tests/check_parity.cjs python ai/patterns/evaluation/parity.jso
 python -m ai.patterns.evaluate --model-path ai/patterns/work/model
 ```
 
-The new unit/integration tests cover event deduplication, unknowns, explicit associations, exact source excerpts, source-only abstention, pairwise support, exclusion/restore semantics, unchanged input files, stale/corrupt vectors, offline export and composition with existing backend/extraction routes. The Node check compares every result field against independently executed Python for 18 thresholds × 19 exclusion sets × 2 scopes: **684 matching scenarios**.
+The new unit/integration tests cover event deduplication, unknowns, explicit associations, exact source excerpts, source-only abstention, pairwise support, exclusion/restore semantics, unchanged input files, stale/corrupt vectors and HTML, offline export, unified startup, idempotent route registration, custom review directories and unchanged persisted review data after exploration. The Node check compares every result field against independently executed Python for 18 thresholds × 19 exclusion sets × 2 scopes: **684 matching scenarios**.
 
 `evaluation/semantic_probes.json` stores an actual run of ten authored Romanian, English and Italian paraphrase retrieval probes against a basic TF-IDF baseline. **Embedding hit@1: 5/10; TF-IDF: 0/10. MRR: 0.634 vs 0.033.** The five embedding misses are retained. These development probes were written after inspecting the schema, are not held-out field validation, and do not establish clustering quality. The shared threshold in the supplementary cluster comparison is exploratory, not a calibrated comparison between vector methods.
 

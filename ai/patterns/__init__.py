@@ -1,1 +1,1 @@
-"""Opt-in semantic exploration of recurring reported patterns."""
+"""Semantic exploration of recurring reported patterns."""
