@@ -1,0 +1,626 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5896262,
+          47.1556633
+        ]
+      },
+      "properties": {
+        "id": "osm-node-1771653545",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5866299,
+          47.1551262
+        ]
+      },
+      "properties": {
+        "id": "osm-node-1771688773",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5903737,
+          47.1570696
+        ]
+      },
+      "properties": {
+        "id": "osm-node-1781766381",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5843156,
+          47.1537041
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3100723591",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 3,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5858502,
+          47.1589113
+        ]
+      },
+      "properties": {
+        "id": "osm-node-3102528275",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 6,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": true,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5842726,
+          47.1538069
+        ]
+      },
+      "properties": {
+        "id": "osm-node-4854449747",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 2,
+        "iluminat": null,
+        "tip_strada": "tertiary",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5902502,
+          47.1554875
+        ]
+      },
+      "properties": {
+        "id": "osm-node-6194970558",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5910071,
+          47.1566586
+        ]
+      },
+      "properties": {
+        "id": "osm-node-6194970559",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": 4,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5858384,
+          47.1587324
+        ]
+      },
+      "properties": {
+        "id": "osm-node-8210182453",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 4,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": true,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5862698,
+          47.1549699
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10553239154",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": null,
+        "benzi": 2,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5870518,
+          47.1542435
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10553239163",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5875574,
+          47.1537567
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10553239164",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": null,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5860738,
+          47.1548148
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10553239173",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": 2,
+        "iluminat": null,
+        "tip_strada": "tertiary",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5854079,
+          47.1554717
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10553239176",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 2,
+        "iluminat": null,
+        "tip_strada": "tertiary",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5850139,
+          47.156877
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10584481372",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": 4,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5904672,
+          47.1570298
+        ]
+      },
+      "properties": {
+        "id": "osm-node-10742420064",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5853029,
+          47.1587206
+        ]
+      },
+      "properties": {
+        "id": "osm-node-11435192267",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": null,
+        "benzi": 2,
+        "iluminat": null,
+        "tip_strada": "tertiary",
+        "scoala_150m": true,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5890662,
+          47.1556742
+        ]
+      },
+      "properties": {
+        "id": "osm-node-11549366035",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5855929,
+          47.158771
+        ]
+      },
+      "properties": {
+        "id": "osm-node-11553251503",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": null,
+        "scoala_150m": true,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5889719,
+          47.1557941
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12063312823",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5891005,
+          47.1556239
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12063312839",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5900378,
+          47.1554593
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12167789621",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5852367,
+          47.1563252
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12650822593",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": null,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5840861,
+          47.1537163
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12870861989",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 3,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5839645,
+          47.1537692
+        ]
+      },
+      "properties": {
+        "id": "osm-node-12870861990",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": 3,
+        "iluminat": null,
+        "tip_strada": "secondary",
+        "scoala_150m": null,
+        "statie_100m": true,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5903496,
+          47.155286
+        ]
+      },
+      "properties": {
+        "id": "osm-node-14013888045",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": true,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5900168,
+          47.1554659
+        ]
+      },
+      "properties": {
+        "id": "osm-node-14173707076",
+        "tip": "trecere",
+        "nume": null,
+        "semafor": false,
+        "benzi": null,
+        "iluminat": null,
+        "tip_strada": "service",
+        "scoala_150m": null,
+        "statie_100m": null,
+        "sursa": "OSM",
+        "descarcat_la": "2026-10-17"
+      }
+    }
+  ]
+}

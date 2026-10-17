@@ -1,10 +1,10 @@
 # Pornirea locală a backend-ului SafeIași
 
-Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit și citire de snapshot sintetic validat. Extracția AI, review-ul, frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de date refuză seturile invalide.
+Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. Frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția și review-ul sunt disponibile independent de acestea.
 
 ## Prima instalare — Windows / PowerShell
 
-Python 3.12 este versiunea verificată în acest mediu. Din folderul repository-ului, pe ramura `codex/backend-foundation`:
+Python 3.12 este versiunea verificată în acest mediu. Din folderul repository-ului, cu versiunea integrată a backend-ului:
 
 ```powershell
 python -m venv .venv
@@ -53,16 +53,55 @@ Pentru reîncărcare automată în dezvoltare, adaugă `--reload` la comanda de 
 
 `/health` și `/openapi.json` funcționează fără internet după instalare. Interfața Swagger de la `/docs` folosește implicit resurse CDN, deci în lipsa internetului verifică direct primele două adrese.
 
+## Extracția AI
+
+Comanda standard `uvicorn api.main:app` include acum rutele lui Emi. Vechea pornire `uvicorn ai.app:app` este un alias compatibil, fără rute duplicate.
+
+| Rută/mod | Comportament |
+|---|---|
+| `POST /api/v1/ai/extract` | Primește un articol pe schema `2.0`; implicit `pipeline: "hybrid"` |
+| `POST /extract` | Alias compatibil, cu același handler; nu este afișat separat în Swagger |
+| `GET /api/v1/ai/replays/syn-003` | Exemplu de reluare sintetică salvată, etichetată explicit |
+| `pipeline: "rules"` | Extracție prin reguli, fără apel de model; nu este AI live |
+
+Poți verifica integrarea fără model, pe un articol sintetic deja existent:
+
+```powershell
+$article = (Get-Content -Raw -Encoding utf8 false_data/articles.json | ConvertFrom-Json)[0]
+$body = @{ article = $article; pipeline = 'rules' } | ConvertTo-Json -Depth 10
+Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/api/v1/ai/extract -ContentType 'application/json; charset=utf-8' -Body ([System.Text.Encoding]::UTF8.GetBytes($body))
+Invoke-RestMethod http://127.0.0.1:8000/api/v1/ai/replays/syn-003
+```
+
+Răspunsurile indică `processing_mode`, `data_mode` și `review_status: "pending"`. Candidații au `verificat: false`, iar localizarea rămâne necunoscută până la verificare/geocodare. Endpoint-ul returnează extracția fără a o salva, fără a aproba evenimente și fără a modifica snapshot-ul.
+
+Pentru extracție AI live, modulul presupune Ollama disponibil la `http://127.0.0.1:11434`, cu modelul `qwen2.5:1.5b` deja instalat. Alege `pipeline = 'hybrid'` în cererea de mai sus. Configurația prin `SAFEIASI_AI_MODEL`, `SAFEIASI_AI_OLLAMA_URL` și `SAFEIASI_AI_CACHE_DIR` este descrisă în [README-ul AI](../ai/README.md#local-model-configuration). Integrarea nu instalează sau descarcă modelul; `/health` nu verifică disponibilitatea lui.
+
+Erorile de contract produc **422**, o reluare inexistentă produce **404**, iar indisponibilitatea modelului produce **503** cu `errors` și eventuali candidați `rules_fallback`, încă neverificați. Nu tratăm acest fallback ca procesare AI reușită. `cache` și `replay` sunt răspunsuri salvate, nu inferență live; `replay` folosește și eticheta explicită „SYNTHETIC REPLAY”.
+
+Un articol real poate produce candidați `observed` pentru verificare. Aceasta nu autorizează publicarea lor prin cititorul de snapshot, care acceptă în continuare numai date sintetice validate. Limitele actuale ale extractorului, inclusiv articolele lungi și cele cu mai multe evenimente, sunt documentate în modulul AI.
+
+## Import și review cu salvare
+
+`POST /api/v1/imports` salvează articolul și candidații neverificați; rutele `/api/v1/candidates` permit citire, corectare și decizie explicită, cu istoric și versiuni. `/api/v1/reviewed-events` arată evenimentele canonice locale și sursele lor. Un duplicat se asociază prin `action=link`, nu prin crearea automată a unui al doilea accident.
+
+Datele sunt separate în `runtime/review/synthetic.json` și `observed.json`, ignorate de Git. Directorul se poate selecta cu `SAFEIASI_REVIEW_DIR`. Rulează un singur proces local, fără `--workers`; rutele de review refuză accesul de la distanță și din altă origine. Stocarea nu necesită o bază de date și nu modifică `false_data/`. Aprobarea nu schimbă snapshot-ul hărții.
+
+Vezi [contractul și exemplul PowerShell complet](REVIEW_WORKFLOW.md) pentru import, păstrarea necunoscutelor, corectare, aprobare/respingere și asocierea surselor. Actorul din istoric este declarat de operator; nu există autentificare cu conturi. Inferența nereușită nu este salvată ca import reușit, iar răspunsurile recitite sunt marcate `stored_review`.
+
 ## Teste și audit
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s ai/tests -v
 .\.venv\Scripts\python.exe -m api.validate_fixtures false_data
 ```
 
 Testele HTTP folosesc clientul ASGI local și verifică inclusiv pornirea dintr-un folder temporar gol, fără credențiale AI. Auditul doar citește fixture-urile sintetice pe schema `2.0`. În setul actual raportează intenționat codul de ieșire **1**: există patru articole în loc de cele 18 declarate și 14 referințe de articole lipsă. Această eroare de date nu împiedică pornirea serverului.
+
+Testele AI folosesc mock-uri și cache-ul experimental sintetic; nu descarcă modele și nu necesită un serviciu Ollama. Integrarea verifică și importul ambelor puncte de pornire, fără rute duplicate sau apeluri de provider la pornire.
 
 ## Probleme uzuale
 
@@ -74,4 +113,4 @@ Testele HTTP folosesc clientul ASGI local și verifică inclusiv pornirea dintr-
 | `/docs` gol fără internet | Deschide `/health` sau `/openapi.json`; Swagger are resurse CDN |
 | Auditul întoarce `1` | Citește raportul; nu este un eșec de instalare și nu trebuie ascuns prin inventarea datelor lipsă |
 
-Pasul următor este contractul de import cu Emi; publicarea datelor observate necesită validarea și fluxul de review aferente, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/), [încărcare la pornire](https://fastapi.tiangolo.com/advanced/events/).
+Pasul următor este conectarea ecranului de verificare la API și reconcilierea datelor pentru hartă cu modulele geo/prioritizare, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/), [încărcare la pornire](https://fastapi.tiangolo.com/advanced/events/).
