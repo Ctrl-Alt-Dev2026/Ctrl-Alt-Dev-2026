@@ -1,0 +1,119 @@
+[
+  {
+    "id": "iluminat_trecere",
+    "nume": "Analiza iluminatului dedicat trecerii",
+    "conditie": "Minimum două evenimente cu noapte=true la trecere",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "iluminatul existent și măsurători nocturne",
+      "poziția stâlpilor și vizibilitatea din ambele sensuri"
+    ]
+  },
+  {
+    "id": "semafor_pietonal",
+    "nume": "Analiza semaforizării pietonale",
+    "conditie": "Trecere cu semafor=false și minimum patru benzi",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "necesitatea semaforizării conform normelor locale",
+      "traficul și fluxul pietonal măsurate",
+      "coordonarea cu semafoarele apropiate"
+    ]
+  },
+  {
+    "id": "insula_refugiu",
+    "nume": "Analiza unei insule de refugiu",
+    "conditie": "Trecere cu semafor=false și minimum patru benzi",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "existența unei insule",
+      "lățimea disponibilă și accesibilitatea",
+      "traficul, vitezele și fluxul pietonal"
+    ]
+  },
+  {
+    "id": "trecere_inaltata",
+    "nume": "Analiza unei treceri înălțate",
+    "conditie": "Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "intrările școlii și fluxul real de elevi",
+      "traseele de autobuz și intervenție",
+      "drenajul și compatibilitatea tipului de drum"
+    ]
+  },
+  {
+    "id": "limitator_viteza",
+    "nume": "Analiza calmării vitezei",
+    "conditie": "Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "vitezele măsurate și soluția adecvată",
+      "traseele de autobuz și intervenție",
+      "accesibilitatea, zgomotul și drenajul"
+    ]
+  },
+  {
+    "id": "analiza_intersectie",
+    "nume": "Analiza vizibilității și organizării intersecției",
+    "conditie": "Minimum două cauze raportate explicit ca neacordare de prioritate la intersecție",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "geometria și vizibilitatea",
+      "semnalizarea existentă",
+      "tipul conflictului; cauza relatată nu demonstrează cauza tehnică"
+    ]
+  },
+  {
+    "id": "analiza_statie",
+    "nume": "Analiza traversărilor în apropierea stației",
+    "conditie": "Stație la sub 100 m și minimum un eveniment la trecere",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "fluxurile reale între stație și trecere",
+      "vizibilitatea în jurul vehiculelor oprite",
+      "poziția stației și alternativele; mutarea nu este decisă automat"
+    ]
+  },
+  {
+    "id": "observatie_teren",
+    "nume": "Observație în teren",
+    "conditie": "Informații de infrastructură esențiale necunoscute",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "completarea câmpurilor de infrastructură necunoscute"
+    ]
+  }
+]

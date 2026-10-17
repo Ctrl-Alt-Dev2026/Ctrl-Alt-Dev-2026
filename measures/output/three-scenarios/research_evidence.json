@@ -1,0 +1,264 @@
+{
+  "reviewed_at": "2026-10-17",
+  "scope": "Repere documentate pentru catalog; nu devize pentru Iași și nu predicții.",
+  "policy": {
+    "currency": "RON pentru exemplele de cost",
+    "inflation_adjustment": false,
+    "unit_costs_derived_from_project_totals": true,
+    "automatic_catalog_promotion": false,
+    "cmf_interpretation": "CRF = 1 - CMF, pentru populația și intervenția studiului; nu procent de scădere a scorului.",
+    "evidence_access": "Pagini oficiale și rezultate indexate ale paginilor oficiale. Unele deschideri directe CMF/PDF au eșuat; acest lucru este consemnat. Nu sunt arhive integrale descărcate.",
+    "approximation_policy": "Medii orientative autorizate de utilizator; cost al lucrării, nu al analizei; fără actualizare la prețurile curente."
+  },
+  "cost_references": [
+    {
+      "id": "cost-cluj-lighting-188",
+      "measure_id": "iluminat_trecere",
+      "publisher": "Consiliul Județean Cluj",
+      "url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+      "source_access": "official_page_opened",
+      "year": 2024,
+      "amount_ron": 26312475.5,
+      "vat": "not_explicit_on_page",
+      "quantity": 188,
+      "unit": "întregul proiect pentru 188 de treceri pe drumuri județene",
+      "value_kind": "project_budget",
+      "scope": "Proiect de iluminare; include buget eligibil și neeligibil, nu numai execuția unei instalații.",
+      "limitations": "Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cost-cluj-signal-2020",
+      "measure_id": "semafor_pietonal",
+      "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+      "url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+      "source_access": "official_search_index_direct_open_failed",
+      "year": 2020,
+      "amount_ron": 881010.27,
+      "vat": "excluded",
+      "quantity": 3,
+      "unit": "investiție pentru trei treceri",
+      "value_kind": "approved_investment_estimate",
+      "scope": "Butoane, stâlpi, corpuri semafor, automat, instalație electrică, dispozitive acustice și detectori.",
+      "limitations": "Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cost-sector3-raised-2023",
+      "measure_id": "trecere_inaltata",
+      "publisher": "Primăria Sectorului 3, documentație Zona G din ședința 22.02.2024",
+      "url": "https://www.primarie3.ro/images/uploads/consiliu_local/Punctul_12_din_22.02.2024.pdf",
+      "source_access": "official_pdf_indexed_budget_table_pdf_opened_screenshot_unavailable",
+      "year": 2023,
+      "amount_ron": 127949.7,
+      "vat": "included_19_percent_in_historical_document",
+      "quantity": null,
+      "unit": "total general al unui deviz din documentația de supraînălțare",
+      "value_kind": "design_estimate",
+      "scope": "Construcții, instalații, dotări și alte capitole de deviz; prețuri la 01.07.2023.",
+      "limitations": "Cantitatea și geometria aferente acestui subtotal nu au fost confirmate vizual. Nu se publică drept lei pe trecere; nu este valoare de execuție constatată.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cost-rubber-module-dgk200g",
+      "measure_id": "limitator_viteza",
+      "publisher": "Protrafic, produs DGK200G",
+      "url": "https://www.protrafic.ro/p/bumper-pentru-viteza-500-x-300-x-45-mm-din-cauciuc-galben",
+      "source_access": "supplier_search_index_direct_open_failed",
+      "year": null,
+      "amount_ron": 99,
+      "vat": "included",
+      "quantity": 1,
+      "unit": "modul din cauciuc 500×300×45 mm, cu prinderi",
+      "value_kind": "listed_supply_price",
+      "scope": "Un element și prinderile, nu o amenajare completă.",
+      "limitations": "Listat fără stoc. Nu include proiectare, instalare, transport, capete sau semnalizare. Prețul trebuie reconfirmat; un speed bump de cauciuc nu este automat speed hump din studiile CMF.",
+      "catalog_eligible": false
+    }
+  ],
+  "effect_references": [
+    {
+      "id": "cmf-2873",
+      "measure_id": "iluminat_trecere",
+      "url": "https://cmfclearinghouse.fhwa.dot.gov/detail.php?facid=2873",
+      "source_access": "official_search_index",
+      "study": "Wanvik, 2009, Effects of road lighting; date 1987–2006",
+      "treatment": "Instalarea iluminatului pe drumuri neiluminate",
+      "cmf": 0.3,
+      "crf_fraction": 0.7,
+      "standard_error": 0.04082,
+      "standard_error_kind": "unadjusted",
+      "quality": "Stelele nu au fost extrase; fără clasificare inventată.",
+      "conditions": "Țările de Jos; rural; noapte; accidente vehicul-pieton cu vătămări A/B/C; regresie transversală.",
+      "decision": "rejected_for_current_urban_scenarios",
+      "reason": "Drumuri rurale inițial neiluminate; la noi context urban și iluminat necunoscut, nu absent confirmat.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cmf-1370",
+      "measure_id": "semafor_pietonal",
+      "url": "https://cmfclearinghouse.fhwa.dot.gov/detail.php?facid=1370",
+      "source_access": "official_search_index",
+      "study": "Gan et al., 2005, Update of Florida Crash Reduction Factors",
+      "treatment": "Install pedestrian signal",
+      "cmf": 0.75,
+      "crf_fraction": 0.25,
+      "standard_error": null,
+      "standard_error_kind": null,
+      "quality": "Cannot Be Rated",
+      "conditions": "Toate tipurile de accidente și toate gravitățile; multe condiții de drum/volum neprecizate.",
+      "decision": "literature_only",
+      "reason": "Rezultat general neclasificabil; nu demonstrează efectul instalării unei treceri semaforizate în cele trei locații.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cmf-175",
+      "measure_id": "insula_refugiu",
+      "url": "https://cmfclearinghouse.fhwa.dot.gov/detail.php?facid=175",
+      "source_access": "official_search_index_direct_open_502",
+      "study": "Zegeer et al., 2002; date 1994–1998, SUA",
+      "treatment": "Mediană înălțată la trecere marcată nesemaforizată, inițial fără mediană",
+      "cmf": 0.54,
+      "crf_fraction": 0.46,
+      "standard_error": 0.1,
+      "standard_error_kind": "unadjusted",
+      "quality": "Stelele nu au fost extrase; comparație transversală, nu experiment local.",
+      "conditions": "Urban/suburban; arteră principală; 3–8 benzi; minimum 15.000 vehicule/zi; accidente vehicul-pieton, toate gravitățile.",
+      "decision": "conditional_literature_reference",
+      "reason": "Lipsesc volumele de trafic și confirmarea medianei existente; orice insulă modulară nu este echivalentă automat cu intervenția studiată.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cmf-1703",
+      "measure_id": "trecere_inaltata",
+      "url": "https://cmfclearinghouse.fhwa.dot.gov/detail.php?facid=1703",
+      "source_access": "official_search_index_direct_open_502",
+      "study": "ITE, 2004, Toolbox of Countermeasures and Their Potential Effectiveness to Make Intersections Safer",
+      "treatment": "Install raised pedestrian crosswalks",
+      "cmf": 0.92,
+      "crf_fraction": 0.08,
+      "standard_error": null,
+      "standard_error_kind": null,
+      "quality": "Cannot Be Rated",
+      "conditions": "Accidente vehicul-pieton, toate gravitățile; condițiile de drum nu sunt detaliate în înregistrare.",
+      "decision": "literature_only",
+      "reason": "Nu se generalizează un procent dintr-o fișă neclasificabilă la orice configurație urbană.",
+      "catalog_eligible": false
+    },
+    {
+      "id": "cmf-132",
+      "measure_id": "limitator_viteza",
+      "url": "https://cmfclearinghouse.fhwa.dot.gov/detail.php?facid=132",
+      "source_access": "official_search_index_direct_open_timeout",
+      "study": "Elvik și Vaa, 2004, Handbook of Road Safety Measures",
+      "treatment": "Install speed humps — profil alungit în carosabil",
+      "cmf": 0.6,
+      "crf_fraction": 0.4,
+      "standard_error": 0.16,
+      "standard_error_kind": "adjusted",
+      "quality": "Stelele nu au fost extrase; meta-analiză.",
+      "conditions": "Drum local urban/suburban cu două benzi; toate tipurile de accidente cu vătămări A/B/C.",
+      "decision": "rejected_for_current_four_lane_scenarios",
+      "reason": "Cele trei scenarii au patru benzi. Nu este procent specific pietonilor și nu se atribuie automat modulului de cauciuc din referința comercială.",
+      "catalog_eligible": false
+    }
+  ],
+  "coverage": [
+    {
+      "measure_id": "iluminat_trecere",
+      "cost_ids": [
+        "cost-cluj-lighting-188"
+      ],
+      "effect_ids": [
+        "cmf-2873"
+      ],
+      "remaining": "Cost pe amplasament urban, starea iluminatului și CMF urban comparabil."
+    },
+    {
+      "measure_id": "semafor_pietonal",
+      "cost_ids": [
+        "cost-cluj-signal-2020"
+      ],
+      "effect_ids": [
+        "cmf-1370"
+      ],
+      "remaining": "Deviz local actual și alegerea exactă a intervenției; CMF comparabil."
+    },
+    {
+      "measure_id": "insula_refugiu",
+      "cost_ids": [],
+      "effect_ids": [
+        "cmf-175"
+      ],
+      "remaining": "Cost românesc izolat și documentat, geometrie, mediană existentă și volume de trafic."
+    },
+    {
+      "measure_id": "trecere_inaltata",
+      "cost_ids": [
+        "cost-sector3-raised-2023"
+      ],
+      "effect_ids": [
+        "cmf-1703"
+      ],
+      "remaining": "Confirmarea cantității/devizului, cost de execuție și studiu cu aplicabilitate suficientă."
+    },
+    {
+      "measure_id": "limitator_viteza",
+      "cost_ids": [
+        "cost-rubber-module-dgk200g"
+      ],
+      "effect_ids": [
+        "cmf-132"
+      ],
+      "remaining": "Definirea soluției bump/hump, cost instalat complet, compatibilitate și două benzi."
+    },
+    {
+      "measure_id": "analiza_intersectie",
+      "cost_ids": [],
+      "effect_ids": [],
+      "remaining": "Caiet de sarcini și ofertă pentru analiză; analiza nu are un CMF generic de lucrare."
+    },
+    {
+      "measure_id": "analiza_statie",
+      "cost_ids": [],
+      "effect_ids": [],
+      "remaining": "Definirea intervenției după măsurarea fluxurilor; analiza nu are un cost sau CMF generic."
+    },
+    {
+      "measure_id": "observatie_teren",
+      "cost_ids": [],
+      "effect_ids": [],
+      "remaining": "Durată, echipă, instrumente și ofertă de servicii; observația nu are CMF de reducere a accidentelor."
+    }
+  ],
+  "indicative_unit_estimates": [
+    {
+      "measure_id": "iluminat_trecere",
+      "source_id": "cost-cluj-lighting-188",
+      "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+      "calculation": "26312475.5 / 188",
+      "arithmetic_average_ron": 139959.98,
+      "indicative_rounded_ron": 140000,
+      "unit": "RON pe trecere, medie de proiect",
+      "year": 2024,
+      "vat": "not_explicit_on_page",
+      "estimate_type": "historical_project_average_not_quote",
+      "uncertainty_range_ron": null,
+      "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban."
+    },
+    {
+      "measure_id": "semafor_pietonal",
+      "source_id": "cost-cluj-signal-2020",
+      "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+      "calculation": "881010.27 / 3",
+      "arithmetic_average_ron": 293670.09,
+      "indicative_rounded_ron": 294000,
+      "unit": "RON pe trecere, medie de proiect",
+      "year": 2020,
+      "vat": "excluded",
+      "estimate_type": "historical_project_average_not_quote",
+      "uncertainty_range_ron": null,
+      "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre."
+    }
+  ]
+}

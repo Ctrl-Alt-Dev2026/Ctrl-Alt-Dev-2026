@@ -1,0 +1,829 @@
+{
+  "data_mode": "simulation_mixed_sources",
+  "warning": "SCENARIU DEMONSTRATIV: infrastructură OSM reală + accidente sintetice plasate ipotetic la treceri reale. Accidentele NU sunt documentate aici. Scorurile NU reprezintă riscul real sau un clasament real de pericol. Măsuri candidate pentru verificare, nu decizii de lucrări.",
+  "sources": {
+    "manifest.json": "71b844ec76d33cfaca340705cb42d7dc017b7660a90d6aa0b3c5e7f85f054941",
+    "crossings.geojson": "a64125b81ed342ce1a39621e1e50ee1da5f182715bee18c7d71bd504bf1dff76",
+    "hotspots.json": "3e2cb8b9c582edb04ce9339a4e31cb72ddccee6fd4a476f40ca2655733666318",
+    "accidents.json": "5b014964c4cbedb7eeec4b3e4ba780a2c448cc652fbe2eb29f04ef74f9285130",
+    "scenario_provenance.json": "d9a1812e68487795652fbadd4b63148afdb4c3993a4b758c001a0b2aa86b6161"
+  },
+  "locations": [
+    {
+      "location_id": "osm-node-3372032447",
+      "data_mode": "simulation_mixed_sources",
+      "event_ids": [
+        "scenario-ev-001",
+        "scenario-ev-002",
+        "scenario-ev-003"
+      ],
+      "statistics": {
+        "nr_evenimente": 3,
+        "pe_ore": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "ora_necunoscuta": 0,
+        "noapte": 2,
+        "zi": 1,
+        "necunoscut": 0,
+        "cauze": {
+          "necunoscut": 3
+        },
+        "gravitati": {
+          "deces": 1,
+          "grav": 1,
+          "usor": 1
+        }
+      },
+      "candidates": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ]
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ]
+        }
+      ],
+      "suggested": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        }
+      ],
+      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "rules": [
+        {
+          "measure_id": "iluminat_trecere",
+          "status": "matched",
+          "motiv": "2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate."
+        },
+        {
+          "measure_id": "trecere_inaltata",
+          "status": "not_matched",
+          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+        },
+        {
+          "measure_id": "limitator_viteza",
+          "status": "not_matched",
+          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+        },
+        {
+          "measure_id": "analiza_intersectie",
+          "status": "not_matched",
+          "motiv": "0 evenimente cu cauza explicită neacordare_prioritate."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "status": "matched",
+          "motiv": "Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată."
+        },
+        {
+          "measure_id": "observatie_teren",
+          "status": "matched",
+          "motiv": "Câmpuri necunoscute: iluminat"
+        }
+      ],
+      "missing_fields": [
+        "iluminat"
+      ],
+      "nume": "SCENARIU — Aleea Grigore Ghica Vodă",
+      "hotspot_id": "scenario-osm-node-3372032447",
+      "scenario_score_unchanged": 13,
+      "measure_details": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ],
+          "nume": "Analiza traversărilor în apropierea stației",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ]
+    },
+    {
+      "location_id": "osm-node-6910606104",
+      "data_mode": "simulation_mixed_sources",
+      "event_ids": [
+        "scenario-ev-010",
+        "scenario-ev-011",
+        "scenario-ev-013"
+      ],
+      "statistics": {
+        "nr_evenimente": 3,
+        "pe_ore": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "ora_necunoscuta": 1,
+        "noapte": 2,
+        "zi": 0,
+        "necunoscut": 1,
+        "cauze": {
+          "necunoscut": 3
+        },
+        "gravitati": {
+          "grav": 2,
+          "usor": 1
+        }
+      },
+      "candidates": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 1 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ]
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ]
+        }
+      ],
+      "suggested": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 1 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        }
+      ],
+      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "rules": [
+        {
+          "measure_id": "iluminat_trecere",
+          "status": "matched",
+          "motiv": "2 evenimente nocturne explicite; 1 necunoscute. Iluminatul existent trebuie evaluat."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate."
+        },
+        {
+          "measure_id": "trecere_inaltata",
+          "status": "not_matched",
+          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+        },
+        {
+          "measure_id": "limitator_viteza",
+          "status": "not_matched",
+          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+        },
+        {
+          "measure_id": "analiza_intersectie",
+          "status": "not_matched",
+          "motiv": "0 evenimente cu cauza explicită neacordare_prioritate."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "status": "matched",
+          "motiv": "Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată."
+        },
+        {
+          "measure_id": "observatie_teren",
+          "status": "matched",
+          "motiv": "Câmpuri necunoscute: iluminat"
+        }
+      ],
+      "missing_fields": [
+        "iluminat"
+      ],
+      "nume": "SCENARIU — Bulevardul Dacia",
+      "hotspot_id": "scenario-osm-node-6910606104",
+      "scenario_score_unchanged": 11,
+      "measure_details": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 1 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ],
+          "nume": "Analiza traversărilor în apropierea stației",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ]
+    },
+    {
+      "location_id": "osm-node-6194970559",
+      "data_mode": "simulation_mixed_sources",
+      "event_ids": [
+        "scenario-ev-005",
+        "scenario-ev-006",
+        "scenario-ev-007"
+      ],
+      "statistics": {
+        "nr_evenimente": 3,
+        "pe_ore": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "ora_necunoscuta": 0,
+        "noapte": 2,
+        "zi": 1,
+        "necunoscut": 0,
+        "cauze": {
+          "necunoscut": 3
+        },
+        "gravitati": {
+          "grav": 2,
+          "usor": 1
+        }
+      },
+      "candidates": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat, scoala_150m, statie_100m",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat",
+            "scoala_150m",
+            "statie_100m"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ]
+        }
+      ],
+      "suggested": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat, scoala_150m, statie_100m",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat",
+            "scoala_150m",
+            "statie_100m"
+          ]
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ]
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ]
+        }
+      ],
+      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "rules": [
+        {
+          "measure_id": "iluminat_trecere",
+          "status": "matched",
+          "motiv": "2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "status": "matched",
+          "motiv": "Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate."
+        },
+        {
+          "measure_id": "trecere_inaltata",
+          "status": "not_matched",
+          "motiv": "Școală=None; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+        },
+        {
+          "measure_id": "limitator_viteza",
+          "status": "not_matched",
+          "motiv": "Școală=None; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+        },
+        {
+          "measure_id": "analiza_intersectie",
+          "status": "not_matched",
+          "motiv": "0 evenimente cu cauza explicită neacordare_prioritate."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "status": "insufficient_data",
+          "motiv": "Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată."
+        },
+        {
+          "measure_id": "observatie_teren",
+          "status": "matched",
+          "motiv": "Câmpuri necunoscute: iluminat, scoala_150m, statie_100m"
+        }
+      ],
+      "missing_fields": [
+        "iluminat",
+        "scoala_150m",
+        "statie_100m"
+      ],
+      "nume": "SCENARIU — Strada Sfântul Lazăr",
+      "hotspot_id": "scenario-osm-node-6194970559",
+      "scenario_score_unchanged": 9,
+      "measure_details": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat, scoala_150m, statie_100m",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat",
+            "scoala_150m",
+            "statie_100m"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ]
+    }
+  ]
+}
