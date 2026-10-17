@@ -1,8 +1,8 @@
 # Person 2 — AI extraction
 
-Importable extraction module for the existing **Romanian schema 2.0**, plus an opt-in router for the team's FastAPI backend. This change only adds `ai/`; it does not edit `api/`, shared requirements, `false_data/`, root tests, or the team's documentation.
+Importable extraction module for the existing **Romanian schema 2.0**, integrated into the team's FastAPI backend. The initial delivery at `7765748` only added `ai/`; the backend integration now registers its router through the standard `api.main` entry point. Shared requirements and `false_data/` are unchanged.
 
-The extraction engine uses the Python standard library. The optional HTTP adapter uses FastAPI/Pydantic already pinned in the root requirements. It does not install packages or connect to an AI provider at import/startup.
+The extraction engine uses the Python standard library. The HTTP adapter uses FastAPI/Pydantic already pinned in the root requirements. It does not install packages or connect to an AI provider at import/startup.
 
 ## Backend integration
 
@@ -40,10 +40,10 @@ From the repository root, use the existing environment and dependencies:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\.venv\Scripts\python.exe -m uvicorn ai.app:app --host 127.0.0.1 --port 8000
+.\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8000
 ```
 
-`ai.app` extends the **same** `api.main.app` object with the AI router. Existing `/`, `/health`, `/docs`, `/api/v1/manifest`, `/api/v1/events`, and the validated-snapshot lifespan are preserved. `ai.app.create_app(snapshot_directory)` also mirrors the latest backend factory. `api/main.py` is untouched; starting `api.main:app` alone remains supported. A future backend-owned integration can instead call `app.include_router(router)` with `from ai.router import router`.
+`api.main.create_app(snapshot_directory)` includes the AI router by default. Existing `/`, `/health`, `/docs`, `/api/v1/manifest`, `/api/v1/events`, and the validated-snapshot lifespan are preserved. `ai.app:app` remains a compatibility alias to the **same** application and factory; importing either entry point first does not duplicate routes. `register_ai` remains available for existing callers and is idempotent. Startup does not contact Ollama or create an extraction service.
 
 | Route | Behavior |
 |---|---|

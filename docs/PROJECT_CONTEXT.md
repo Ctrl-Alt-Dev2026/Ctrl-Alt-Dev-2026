@@ -14,7 +14,7 @@ La inspecția din 17 octombrie 2026, ramura implicită `main`, la commitul `fc61
 
 Ulterior, la commitul `77b0a09`, echipa a adăugat `false_data/`: fixture-uri sintetice pe schema `2.0`, fără date reale verificate sau aplicație. Auditul și pașii pentru backend sunt în [BACKEND_WORK_PLAN.md](BACKEND_WORK_PLAN.md). Fixture-urile sunt păstrate în forma colegilor; neconcordanțele lor trebuie rezolvate înaintea integrării.
 
-În ramura `codex/backend-foundation` sunt implementate pornirea FastAPI/Uvicorn cu `/health`/OpenAPI și [citirea unui snapshot sintetic validat](SNAPSHOT_READ_API.md) prin manifest/evenimente. [Instrucțiunile locale](LOCAL_DEVELOPMENT.md) explică instalarea și verificarea. Setul actual este refuzat cu diagnostice din cauza inconsistențelor; nu se publică date parțiale. Publicarea datelor observate, extracția, review-ul și ecranele produsului rămân de implementat.
+Sunt implementate pornirea FastAPI/Uvicorn cu `/health`/OpenAPI, [citirea unui snapshot sintetic validat](SNAPSHOT_READ_API.md) prin manifest/evenimente și [extractorul AI al lui Emi](../ai/README.md), integrat în `api.main:app`. Extracția returnează candidați neverificați și poate funcționa independent de snapshot; procesarea live necesită Ollama/model disponibil. [Instrucțiunile locale](LOCAL_DEVELOPMENT.md) explică instalarea și verificarea. Setul actual este refuzat cu diagnostice din cauza inconsistențelor; nu se publică date parțiale. Salvarea candidaților, review-ul, publicarea datelor observate și ecranele produsului rămân de implementat.
 
 Alegerea stack-ului și reconcilierea contractelor revin coordonatorului tehnic la începutul implementării. Propunerea existentă de stack trebuie evaluată; Python + Streamlit + pydeck este alternativa din planul atașat pentru pornirea de la zero. Orice stack funcțional găsit ulterior are prioritate față de o rescriere.
 
@@ -80,7 +80,7 @@ La pornirea efectivă se recalculează timpul rămas: după 17 octombrie, 15:30,
 | Aspect | Planificare.md existent | Planul SafeIași atașat / contextul curent |
 |---|---|---|
 | Produs și arie | „Harta pietonului – Iași”; accidente cu pietoni | „SafeIași”; siguranță rutieră, cu participanții explicitați; limita exactă a colectării trebuie fixată |
-| Stack și directoare | Python pentru date, HTML + MapLibre GL + deck.gl, FastAPI `/extract`; directoare pe arii | Python + Streamlit + pydeck dacă se pornește de la zero; `src/` pe module; nicio variantă nu este implementată |
+| Stack și directoare | Python pentru date, HTML + MapLibre GL + deck.gl, FastAPI `/extract`; directoare pe arii | Python + Streamlit + pydeck era alternativa de la zero; backend-ul existent este acum FastAPI cu module `api/` și `ai/`; frontend-ul rămâne de implementat |
 | Contracte | `schema_version: "2.0"`; `articles.json`, `accidents.json`, `hotspots.json`, `crossings.geojson`, `measures.json` | `schema_version: "1.0"`; `articles.jsonl`, `accidents.geojson`, `hotspots.geojson`, `context.geojson`; necesită o singură schemă agreată înaintea implementării |
 | Unitatea clasamentului | Locație concretă; H3 pentru vizualizare; asociere la cel mai apropiat obiect în 50 m | Hotspot reprezentat ca poligon H3, recomandare legată de locație/segment; precizia și asocierea cer verificare, nu doar proximitate |
 | Scor | Evenimente + gravitate + bonusuri de infrastructură cunoscută | Evenimente + gravitate + bonus pentru evenimente cu pietoni; ponderile diferă și trebuie fixate înainte de clasament |

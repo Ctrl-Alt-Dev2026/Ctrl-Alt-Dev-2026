@@ -6,7 +6,7 @@ Actualizat la 17 octombrie 2026. Responsabil propus: **Mihnea**, conform intenț
 
 Backend-ul conectează modulele și frontend-ul: validează rezultatele extracției, păstrează candidații separat de evenimentele aprobate, expune operațiile de corectare/aprobare și livrează datele pentru hartă și dosare. Extracția AI aparține lui Emi; geocodarea, scorul, recomandările, frontend-ul și pitch-ul rămân responsabilități distincte. Mihnea nu este desemnat automat coordonator P1.
 
-Interfața de discutat cu Emi este `extract_article(article) -> candidates`: câmpuri posibil necunoscute, referințe la surse și pasaje-dovadă, identificarea rulării/modelului/promptului, plus erori explicite. Backend-ul validează răspunsul și îl pune în așteptarea operatorului; extracția nu aprobă automat un accident. Aceasta este o propunere de integrare, nu un contract deja acceptat de Emi.
+Emi a livrat `extract_article(article) -> candidates` în commitul `7765748`, cu câmpuri posibil necunoscute, referințe la surse și pasaje-dovadă, identificarea rulării/modelului/promptului și erori explicite. `ExtractionService` și routerul său sunt acum integrate în pornirea standard `api.main:app`. Extracția returnează candidați `pending` și nu aprobă automat un accident. Salvarea lor pentru operator și validarea înaintea publicării rămân de implementat; contractul este descris în [modulul AI](../ai/README.md).
 
 ## Baza de lucru verificată
 
@@ -30,21 +30,24 @@ Estimările sunt ore de lucru activ, nu un nou calendar de 25 de ore. Dependenț
 | 1. Auditul contractului existent | Comandă repetabilă, erori explicite pentru referințe/totaluri/mod de date; fixture-urile originale rămân nemodificate | 30–45 min | Implementat; auditul semnalează problemele de mai sus |
 | 2a. Pornirea locală | Mediu `.venv`, FastAPI/Uvicorn, `/health`, OpenAPI și instrucțiuni; fără chei sau date necesare pentru pornire | 30 min | Implementat și verificat în ramura backend |
 | 2b. Citirea datelor | Snapshot sintetic `2.0` validat la pornire, manifest/evenimente, identificator comun și erori explicite | 30 min | Implementat; setul actual este refuzat corect; datele observate nu sunt încă suportate |
-| 3. Contractul cu Emi și importul | Format agreat cu P1/Emi, adaptor către extracție, tratare timeout/JSON invalid; niciun candidat publicat automat; răspunsurile salvate sunt etichetate reluare | 60–90 min | De făcut; depinde de contractul și modulul lui Emi |
+| 3a. Integrarea extracției lui Emi | Router AI în pornirea standard, contract `2.0`, erori explicite, reluări etichetate, compatibilitate cu snapshot-ul | 30 min | Implementat; nu persistă și nu aprobă candidații |
+| 3b. Importul cu salvare | Validează rezultatele și salvează candidații/proveniența separat de evenimentele aprobate; tratare repetări și erori | 60–90 min | De făcut; modulul AI este disponibil |
 | 4. Corectare și aprobare | Operatorul vede dovezile, corectează și aprobă/respinge; actualizări atomice, istoric de verificare și versiune pentru evitarea suprascrierilor; duplicatele păstrează un ID canonic | 90 min | De făcut |
 | 5. Integrarea cu frontend-ul | Listă și dosar de locație, citite din exportul modulului de prioritizare; GeoJSON în ordinea lon/lat; filtrele și totalurile coincid | 45–60 min | De făcut; depinde de frontend și P3/P4 |
 | 6. Repetiția și rezerva | Fluxul import → verificare → date publicabile funcționează pe laptopul demo; testele de consistență trec; reluare locală explicită dacă AI nu răspunde | 45–60 min | De făcut |
 
-**Pașii 2a și 2b sunt implementați pentru dezvoltare. Următorul pas este 3:** contractul de import cu Emi. Încărcarea unui set pentru integrare așteaptă corectarea sau înlocuirea fixture-urilor incomplete. Publicarea datelor observate cere validarea și fluxul de review corespunzătoare; cititorul sintetic nu o autorizează. Detalii în [contractul citirii](SNAPSHOT_READ_API.md).
+**Pașii 2a, 2b și 3a sunt implementați pentru dezvoltare. Următorul pas este 3b:** importul cu salvarea candidaților. Extracția poate fi verificată independent de snapshot-ul incomplet, fără a ascunde erorile acestuia. Încărcarea unui set pentru hartă așteaptă corectarea sau înlocuirea fixture-urilor incomplete. Publicarea datelor observate cere validarea și fluxul de review corespunzătoare; cititorul sintetic nu o autorizează. Detalii în [contractul citirii](SNAPSHOT_READ_API.md).
 
 ## API implementat și operații propuse
 
-Sunt implementate `GET /health`, `/docs`/OpenAPI și citirea sintetică prin `GET /api/v1/manifest` și `GET /api/v1/events`. Importul, review-ul și dosarul locației din tabel rămân propuneri. `POST /extract` din planificarea existentă rămâne un punct de integrare de reconciliat, nu un al doilea extractor.
+Sunt implementate `GET /health`, `/docs`/OpenAPI, citirea sintetică prin manifest/evenimente și extracția AI de mai jos. Importul cu salvare, review-ul și dosarul locației rămân propuneri. `POST /extract` este aliasul compatibil al aceluiași handler AI, fără un al doilea extractor.
 
 | Operație | Comportament așteptat |
 |---|---|
 | `GET /health` | Confirmă că serverul rulează; nu pretinde că AI sau setul de date sunt disponibile |
 | `GET /api/v1/manifest` | Implementat pentru snapshot sintetic: manifest, versiune SHA-256 și număr eligibil; 503 pentru set invalid |
+| `POST /api/v1/ai/extract` | Implementat: articol `2.0` → candidați `pending`, dovezi/proveniență, mod de procesare și erori; fără salvare |
+| `GET /api/v1/ai/replays/{article_id}` | Implementat: reluare sintetică salvată, explicit etichetată și neverificată |
 | `POST /api/v1/imports` | Primește textul și identificarea sursei; apelează modulul lui Emi și produce candidați pentru review |
 | `PATCH /api/v1/candidates/{id}` | Corectează câmpurile, cu proveniență și verificarea versiunii |
 | `POST /api/v1/candidates/{id}/review` | Aprobă/respinge sau asociază unui eveniment canonic, cu operator și moment |
@@ -60,12 +63,13 @@ Din rădăcina repository-ului, cu Python 3.12 disponibil în mediul inspectat:
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s ai/tests -v
 .\.venv\Scripts\python.exe -m api.validate_fixtures false_data
 ```
 
 Auditul doar citește și emite un raport JSON: cod `0` pentru fixture-uri coerente, `1` pentru neconcordanțe. Acceptă numai fixture-uri **sintetice**, pe schema `2.0`; nu este validator pentru publicarea datelor observate. Testele verifică date lipsă, dubluri, referințe rupte și coordonate invalide pe fișiere temporare sintetice, plus răspunsurile HTTP și pornirea fără chei sau fișiere de date.
 
-Există serverul local și citirea de snapshot sintetic validat. Extracția reală, publicarea datelor observate, stocarea de review și conexiunea cu frontend-ul nu sunt încă implementate. Această etapă nu înseamnă finalizarea backend-ului.
+Există serverul local, citirea de snapshot sintetic validat și integrarea extractorului lui Emi. Inferența live necesită Ollama/model disponibil; regulile și reluările sintetice pot fi verificate fără el. Publicarea datelor observate, salvarea candidaților, stocarea de review și conexiunea cu frontend-ul nu sunt încă implementate. Această etapă nu înseamnă finalizarea backend-ului.
 
 ## Timp și reguli de lucru
 
