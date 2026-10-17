@@ -417,8 +417,9 @@ def main(argv=None):
     start, end = args.de_la.isoformat(), args.pana_la.isoformat()
     if not args.export_only:
         known_urls = {row[0] for row in db.execute("SELECT url FROM tasks WHERE kind='article'")} if args.noutati else None
-        if not args.exhaustiv:
-            # Migrate an existing broad queue without deleting its cache or progress.
+        if args.noutati:
+            # Only news refresh pauses the historical frontier. Ordinary resume
+            # must retain pending listings even when no HTML cache was transferred.
             db.execute("UPDATE tasks SET status='paused_listing' WHERE kind='listing' AND status='pending'")
         for row in ([] if args.noutati else db.execute("SELECT * FROM tasks WHERE kind='listing' AND status='done'").fetchall()):
             cached = cache / (hashlib.sha256(row["url"].encode()).hexdigest() + ".body")

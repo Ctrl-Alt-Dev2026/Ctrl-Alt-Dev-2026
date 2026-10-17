@@ -80,6 +80,29 @@ class ScraperStiriTests(unittest.TestCase):
         discover(self.db, row, html, 100, known_urls={article})
         self.assertEqual(self.db.execute("SELECT count(*) FROM tasks WHERE url LIKE '%/page/2'").fetchone()[0], 0)
 
+    def test_resume_from_database_without_html_cache(self):
+        from urllib.robotparser import RobotFileParser
+        directory = self.directory / "resume"
+        directory.mkdir()
+        db = database(directory / "colectare.sqlite3")
+        seed = "https://www.bzi.ro/local-s14"
+        frontier = seed + "/page/179"
+        enqueue(db, seed, "bzi", "listing", "config")
+        enqueue(db, frontier, "bzi", "listing", seed, 178)
+        db.execute("UPDATE tasks SET status='done' WHERE url=?", (seed,))
+        db.commit()
+        db.close()
+        visited = []
+        rp = RobotFileParser()
+        rp.parse(["User-agent: *", "Allow: /"])
+        def fake_get(fetcher, url, source):
+            visited.append(url)
+            fetcher.robots[source] = rp
+            return "<main>Pagina de listare fără alte rezultate.</main>"
+        with patch.object(Fetcher, "get", fake_get):
+            main(["--director", str(directory), "--surse", "bzi", "--max-taskuri", "1"])
+        self.assertEqual(visited, [frontier])
+
     def test_news_mode_refreshes_next_page_but_keeps_article_payload(self):
         url = 'https://www.bzi.ro/local-s14'
         next_url = url + '/page/2'
