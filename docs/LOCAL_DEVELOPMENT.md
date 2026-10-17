@@ -1,6 +1,6 @@
 # Pornirea locală a backend-ului SafeIași
 
-Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat și modulul de extracție AI al lui Emi. Salvarea/review-ul candidaților, frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția este disponibilă independent de acestea.
+Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. Frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar extracția și review-ul sunt disponibile independent de acestea.
 
 ## Prima instalare — Windows / PowerShell
 
@@ -81,6 +81,14 @@ Erorile de contract produc **422**, o reluare inexistentă produce **404**, iar 
 
 Un articol real poate produce candidați `observed` pentru verificare. Aceasta nu autorizează publicarea lor prin cititorul de snapshot, care acceptă în continuare numai date sintetice validate. Limitele actuale ale extractorului, inclusiv articolele lungi și cele cu mai multe evenimente, sunt documentate în modulul AI.
 
+## Import și review cu salvare
+
+`POST /api/v1/imports` salvează articolul și candidații neverificați; rutele `/api/v1/candidates` permit citire, corectare și decizie explicită, cu istoric și versiuni. `/api/v1/reviewed-events` arată evenimentele canonice locale și sursele lor. Un duplicat se asociază prin `action=link`, nu prin crearea automată a unui al doilea accident.
+
+Datele sunt separate în `runtime/review/synthetic.json` și `observed.json`, ignorate de Git. Directorul se poate selecta cu `SAFEIASI_REVIEW_DIR`. Rulează un singur proces local, fără `--workers`; rutele de review refuză accesul de la distanță și din altă origine. Stocarea nu necesită o bază de date și nu modifică `false_data/`. Aprobarea nu schimbă snapshot-ul hărții.
+
+Vezi [contractul și exemplul PowerShell complet](REVIEW_WORKFLOW.md) pentru import, păstrarea necunoscutelor, corectare, aprobare/respingere și asocierea surselor. Actorul din istoric este declarat de operator; nu există autentificare cu conturi. Inferența nereușită nu este salvată ca import reușit, iar răspunsurile recitite sunt marcate `stored_review`.
+
 ## Teste și audit
 
 ```powershell
@@ -105,4 +113,4 @@ Testele AI folosesc mock-uri și cache-ul experimental sintetic; nu descarcă mo
 | `/docs` gol fără internet | Deschide `/health` sau `/openapi.json`; Swagger are resurse CDN |
 | Auditul întoarce `1` | Citește raportul; nu este un eșec de instalare și nu trebuie ascuns prin inventarea datelor lipsă |
 
-Pasul următor este importul cu salvarea candidaților separat de evenimentele aprobate, apoi fluxul de review, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/), [încărcare la pornire](https://fastapi.tiangolo.com/advanced/events/).
+Pasul următor este conectarea ecranului de verificare la API și reconcilierea datelor pentru hartă cu modulele geo/prioritizare, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/), [încărcare la pornire](https://fastapi.tiangolo.com/advanced/events/).

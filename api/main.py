@@ -1,4 +1,4 @@
-"""Local API with pending AI extraction and read-only synthetic snapshot access."""
+"""Local API with persisted human review and read-only synthetic snapshots."""
 
 from contextlib import asynccontextmanager
 import os
@@ -10,10 +10,12 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from ai.router import register_ai
+from api.review_router import register_review
 from api.snapshots import SnapshotError, load_snapshot
 
 
 DEFAULT_SNAPSHOT_DIRECTORY = Path(__file__).resolve().parents[1] / "false_data"
+DEFAULT_REVIEW_DIRECTORY = Path(__file__).resolve().parents[1] / "runtime" / "review"
 
 
 class HealthResponse(BaseModel):
@@ -36,7 +38,7 @@ class EventsResponse(SnapshotMetadata):
     events: list[dict[str, Any]]
 
 
-def create_app(snapshot_directory: str | Path | None = None):
+def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None):
     directory = Path(
         snapshot_directory if snapshot_directory is not None
         else os.environ.get("SAFEIASI_SNAPSHOT_DIR", DEFAULT_SNAPSHOT_DIRECTORY)
@@ -53,14 +55,19 @@ def create_app(snapshot_directory: str | Path | None = None):
         yield
 
     application = FastAPI(
-        title="SafeIași API", version="0.3.0", lifespan=lifespan,
+        title="SafeIași API", version="0.4.0", lifespan=lifespan,
         description=(
             "API local cu citire de snapshot sintetic validat. /health confirmă doar serverul. "
             "Datele lipsă/invalide produc HTTP 503 pe rutele de date. "
-            "Extracția AI produce candidați pentru verificare, fără salvare sau aprobare automată. "
+            "Extracția AI produce candidați neverificați; /imports îi salvează pentru review local. "
+            "Corectarea și deciziile operatorului sunt versionate, fără publicare automată pe hartă. "
             "Procesarea live necesită Ollama; reluările salvate sunt etichetate explicit."
         ),
     )
+    application.state.review_directory = Path(
+        review_directory if review_directory is not None
+        else os.environ.get("SAFEIASI_REVIEW_DIR", DEFAULT_REVIEW_DIRECTORY)
+    ).resolve()
 
     def snapshot_or_error(request):
         error = getattr(request.app.state, "snapshot_error", None)
@@ -105,7 +112,7 @@ def create_app(snapshot_directory: str | Path | None = None):
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return register_ai(application)
+    return register_review(register_ai(application))
 
 
 app = create_app()
