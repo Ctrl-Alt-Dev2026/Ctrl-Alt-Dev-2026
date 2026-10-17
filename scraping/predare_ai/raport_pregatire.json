@@ -1,0 +1,11 @@
+{
+  "sursa_csv": "scraping\\articole_extrase_accident_raw.csv",
+  "randuri_csv": 94,
+  "urluri_unice": 94,
+  "randuri_duplicate_url": 0,
+  "texte_curatate": 37,
+  "regula_cleanup": "Elimină exclusiv eticheta finală: Lasă un răspuns Anulează răspunsul",
+  "filtrare_relevanta": false,
+  "limita": null,
+  "articole_exportate": 94
+}
