@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, inject, input, signal } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { lei, participantLabel, PRECISE } from '../../../core/format/labels';
 import { DataStore } from '../../../core/state/data.store';
 import { LocationDossier } from '../../location/location-dossier/location-dossier';
@@ -11,7 +11,7 @@ const TOUR_STEP_MS = 7000;
 
 @Component({
   selector: 'app-map-page',
-  imports: [CityMap, HotspotList, LocationDossier, CameraViewer],
+  imports: [CityMap, HotspotList, LocationDossier, CameraViewer, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './map-page.html',
   styleUrl: './map-page.scss',
@@ -43,6 +43,7 @@ export class MapPage {
   protected readonly approxCount = computed(
     () => this.store.mappable().filter((a) => !PRECISE.has(a.precizie_loc)).length,
   );
+  protected readonly hasMeasures = computed(() => this.store.visibleHotspots().some((row) => row.masuri.length > 0));
 
   // Panel width in px for the map's fly-to padding; 0 when the panel stacks under the map.
   protected readonly rightInset = signal(0);
@@ -73,7 +74,15 @@ export class MapPage {
   });
 
   constructor() {
-    effect(() => this.store.select(this.id() ?? null));
+    effect(() => {
+      this.store.state();
+      this.store.select(this.id() ?? null);
+    });
+    effect(() => {
+      this.store.session.dataMode();
+      this.applied.set(false);
+      this.stopTour();
+    });
 
     const wide = matchMedia('(min-width: 56rem)');
     const measure = () => {

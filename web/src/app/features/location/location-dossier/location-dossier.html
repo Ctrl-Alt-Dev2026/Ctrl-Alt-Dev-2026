@@ -1,33 +1,54 @@
 <div class="head">
   <button type="button" class="back" (click)="close.emit()">Înapoi la clasament</button>
   <div class="title">
-    <span class="rank" aria-label="Locul {{ rank() }}">{{ rank() }}</span>
+    @if (givenRank() !== null) {
+      <span class="rank" [attr.aria-label]="'Locul ' + givenRank()">{{ givenRank() }}</span>
+    } @else {
+      <span class="unranked">Neclasat</span>
+    }
     <div>
-      <h2>{{ hotspot().nume }}</h2>
-      <p class="muted">{{ hotspot().nr_evenimente }} {{ hotspot().nr_evenimente === 1 ? 'eveniment' : 'evenimente' }}, @if (hotspot().verificat) {<span class="ok">verificată manual</span>} @else {<span>neverificată încă</span>}</p>
+      <h2>{{ title() }}</h2>
+      <p class="muted">{{ eventCount() }} {{ eventCount() === 1 ? 'eveniment distinct' : 'evenimente distincte' }} · {{ articleCount() }} articole</p>
     </div>
-    <app-score-badge [score]="hotspot().scor" [max]="max()" />
+    @if (score() !== null) {
+      <app-score-badge [score]="score()!" [max]="max()" />
+    }
   </div>
+  @if (publication(); as p) {
+    @if (p.data_mode === 'synthetic') {
+      <p class="synthetic"><strong>DATE SINTETICE.</strong> Scenariu fictiv, fără dovezi despre accidente reale.</p>
+    }
+    <p class="muted small">Perioadă: {{ dateRo(p.period.start) }} – {{ dateRo(p.period.end) }}. Asociere verificată de operator; fără audit în teren.</p>
+  } @else {
+    <p class="muted small">Prototip cu date demonstrative. Verificarea manuală a informațiilor nu reprezintă un audit în teren.</p>
+  }
 </div>
 
 <section aria-labelledby="score-h">
-  <h3 id="score-h">Din ce e compus scorul</h3>
-  <div class="mix" role="img" [attr.aria-label]="'Scor ' + hotspot().scor">
-    @for (c of components(); track c.key) {
-      <span [style.width.%]="c.pct" [style.background]="c.color"></span>
-    }
-  </div>
-  <ul class="mix-legend">
-    @for (c of components(); track c.key) {
-      <li><i [style.background]="c.color"></i>{{ c.label }} <strong>{{ c.value }}</strong></li>
-    }
-  </ul>
-  <p>{{ hotspot().explicatie }}</p>
+  <h3 id="score-h">Explicația priorității</h3>
+  @if (components().length > 0) {
+    <div class="mix" role="img" [attr.aria-label]="'Componentele scorului ' + score()">
+      @for (c of components(); track c.key) {
+        <span [style.width.%]="c.pct" [style.background]="c.color"></span>
+      }
+    </div>
+    <ul class="mix-legend">
+      @for (c of components(); track c.key) {
+        <li><i [style.background]="c.color"></i>{{ c.label }} <strong>{{ c.value }}</strong></li>
+      }
+    </ul>
+  }
+  <p>{{ explanation() }}</p>
+  <p class="muted small">Scor determinist de prioritizare în eșantion, nu probabilitate validată de accident. Filtrele nu recalculează scorul sau poziția.</p>
 </section>
 
 <section aria-labelledby="hours-h">
   <h3 id="hours-h">Ora evenimentelor</h3>
-  <app-hour-chart [hours]="hotspot().pe_ore" [unknownCount]="unknownHours()" />
+  @if (hours(); as values) {
+    <app-hour-chart [hours]="values" [unknownCount]="unknownHours()" />
+  } @else {
+    <p class="muted">Distribuția orară nu este calculată pentru locațiile neclasate. Orele cunoscute apar în evenimentele de mai jos.</p>
+  }
 </section>
 
 <section aria-labelledby="events-h">
@@ -38,24 +59,72 @@
         <div class="ev-top">
           <span class="sev" [attr.data-g]="e.gravitate">{{ gravitate[e.gravitate] }}</span>
           <span>{{ dateRo(e.data_eveniment) }}, {{ hour(e) }}</span>
-          @if (night(e); as n) {
-            <span class="muted">{{ n }}</span>
-          }
+          <span class="muted">{{ night(e) | nullLabel: 'moment al zilei necunoscut' }}</span>
         </div>
         <p class="loc">„{{ e.loc_text }}” <span class="muted">({{ precizie[e.precizie_loc] }})</span></p>
-        <p class="muted small">
-          Cauza relatată de presă: {{ cause(e) | nullLabel: 'nespecificată' }}@if (!e.verificat) {, neverificat}
-        </p>
-        <p class="sources">
-          @for (u of e.urls; track u; let i = $index) {
-            <a [href]="u" target="_blank" rel="noopener">Sursa {{ i + 1 }}</a>
-          }
-        </p>
+        <p class="muted small">Cauza relatată de presă: {{ cause(e) | nullLabel: 'nespecificată' }}.</p>
+        @if (publishedById().get(e.event_id); as sourceEvent) {
+          <p class="muted small">{{ sourceEvent.source_articles.length }} {{ sourceEvent.source_articles.length === 1 ? 'articol pentru acest eveniment' : 'articole pentru același eveniment' }} · verificat de operator.</p>
+          <ul class="source-details">
+            @for (article of sourceEvent.source_articles; track article.article_id) {
+              <li>
+                @if (safeUrl(article.url); as url) {
+                  <a [href]="url" target="_blank" rel="noopener noreferrer">{{ article.titlu }}</a>
+                } @else {
+                  <span>{{ article.titlu }} · {{ article.url }}</span>
+                }
+                <p class="muted small">{{ article.sursa }} · publicat: {{ timestamp(article.publicat_la) }} · colectat: {{ timestamp(article.colectat_la) }}</p>
+                <details>
+                  <summary>Textul sursei arhivate</summary>
+                  <p class="source-text">{{ article.text }}</p>
+                </details>
+              </li>
+            } @empty {
+              <li>Textele articolelor nu sunt disponibile în această versiune.</li>
+            }
+          </ul>
+          <p class="small"><strong>Dovada localizării:</strong> {{ sourceEvent.fields.location_evidence | nullLabel }}</p>
+          <p class="small"><strong>Asociere la locație:</strong> {{ sourceEvent.association.note }} · {{ sourceEvent.association.operator }}</p>
+          <details class="evidence">
+            <summary>Pasaje extrase și verificarea operatorului</summary>
+            <p class="muted small">Pasajele sunt păstrate din extracția inițială. Câmpurile afișate mai sus includ corecturile operatorului.</p>
+            <ul class="quotes">
+              @for (item of evidence(sourceEvent); track $index) {
+                <li><span class="muted small">{{ item.field }} · {{ item.articleId | nullLabel }}</span><blockquote>{{ item.quote }}</blockquote></li>
+              } @empty {
+                <li>Nu există pasaje arhivate în această versiune.</li>
+              }
+            </ul>
+            <h4>Corecturi și decizii</h4>
+            <ol class="audit">
+              @for (entry of audit(sourceEvent); track $index) {
+                <li>
+                  <strong>{{ entry.action }}</strong> · {{ entry.operator | nullLabel }} · {{ timestamp(entry.at) }}
+                  @if (entry.articleId) { <span class="muted small">· {{ entry.articleId }}</span> }
+                  <p>{{ entry.note | nullLabel }}</p>
+                  @if (entry.changes !== '{}') { <pre>{{ entry.changes }}</pre> }
+                </li>
+              } @empty {
+                <li>Istoric indisponibil.</li>
+              }
+            </ol>
+          </details>
+        } @else {
+          <p class="sources">
+            @for (u of e.urls; track u; let i = $index) {
+              @if (safeUrl(u); as url) {
+                <a [href]="url" target="_blank" rel="noopener noreferrer">Sursa {{ i + 1 }}</a>
+              } @else { <span>{{ u }}</span> }
+            }
+          </p>
+        }
       </li>
+    } @empty {
+      <li>Niciun eveniment disponibil în această versiune.</li>
     }
   </ol>
   @if (missingEventIds().length > 0) {
-    <p class="muted small">Lipsesc din accidents.json: {{ missingEventIds().join(', ') }}</p>
+    <p class="muted small">Evenimente indisponibile în versiunea încărcată: {{ missingEventIds().join(', ') }}.</p>
   }
 </section>
 
@@ -70,18 +139,13 @@
       <dt>Școală sub 150 m</dt><dd [class.unknown]="c.scoala_150m === null">{{ c.scoala_150m | nullLabel }}</dd>
       <dt>Stație sub 100 m</dt><dd [class.unknown]="c.statie_100m === null">{{ c.statie_100m | nullLabel }}</dd>
     </dl>
-    <p class="muted small">Sursa: {{ c.sursa }}, descărcat la {{ dateRo(c.descarcat_la) }}. Un tag lipsă din OSM nu înseamnă că obiectul lipsește.</p>
+    <p class="muted small">Sursa: {{ c.sursa }}, descărcat la {{ timestamp(c.descarcat_la) }}. Un tag lipsă din OSM nu demonstrează absența infrastructurii.</p>
   } @else {
     <p class="muted">Nu avem date de infrastructură pentru această locație.</p>
   }
-
-  @if (hotspot().date_lipsa.length > 0) {
+  @if (gaps().length > 0) {
     <h4>Date lipsă</h4>
-    <ul class="gaps">
-      @for (g of hotspot().date_lipsa; track g) {
-        <li>{{ g }}</li>
-      }
-    </ul>
+    <ul class="gaps">@for (gap of gaps(); track gap) { <li>{{ gap }}</li> }</ul>
   }
 </section>
 
@@ -92,29 +156,24 @@
     <article class="measure">
       <h4>{{ m.def?.nume ?? m.measure_id }}</h4>
       <p>De ce: {{ m.motiv }}</p>
-      <p>
-        Cost estimat: {{ m.cost | nullLabel: 'cost nedocumentat' }}
-        @if (m.cost && m.def?.sursa_cost) {
-          <span class="muted small">({{ m.def?.sursa_cost }})</span>
-        }
-      </p>
+      <p>Cost estimat: {{ m.cost | nullLabel: 'cost nedocumentat' }} @if (m.cost && m.def?.sursa_cost) { <span class="muted small">({{ m.def?.sursa_cost }})</span> }</p>
       @if (m.reduction) {
-        <p class="muted small">
-          Reducere tipică raportată în literatură: {{ m.reduction }} ({{ m.def?.sursa_reducere | nullLabel: 'fără sursă' }}). Informativ, nu o predicție pentru acest loc.
-        </p>
+        <p class="muted small">Reducere tipică raportată în literatură: {{ m.reduction }} ({{ m.def?.sursa_reducere | nullLabel: 'fără sursă' }}). Informativ, nu o predicție pentru acest loc.</p>
       }
       <p class="check-h">De verificat în teren:</p>
-      <ul class="checks">
-        @for (c of m.de_verificat; track c) {
-          <li>{{ c }}</li>
-        }
-      </ul>
+      <ul class="checks">@for (check of m.de_verificat; track check) { <li>{{ check }}</li> }</ul>
     </article>
   } @empty {
-    <p class="muted">Nicio măsură propusă încă.</p>
+    <p class="muted">Catalogul de măsuri cu surse și verificarea aplicabilității nu sunt încă integrate. Nu există costuri sau efecte estimate pentru această locație.</p>
   }
 </section>
 
 <div class="actions">
-  <a class="btn primary" routerLink="/fisa" [queryParams]="{ ids: hotspot().id }">Deschide fișa de verificare</a>
+  <a class="btn primary" routerLink="/fisa" [queryParams]="{ ids: id() }">Deschide fișa de verificare</a>
+  @if (publication()) {
+    <a class="btn" [href]="htmlExport()" target="_blank" rel="noopener noreferrer">Fișă HTML / tipărire</a>
+    <a class="btn" [href]="jsonExport()">Descarcă dosarul JSON</a>
+    <p class="muted small">Exporturile folosesc aceeași versiune publicată: {{ publication()!.snapshot_id }}.</p>
+    <p class="muted small">Context: {{ publication()!.provenance.context.attribution }}</p>
+  }
 </div>

@@ -222,3 +222,27 @@ textarea {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.panel { padding: var(--space-4); margin-bottom: var(--space-4); }
+.mode-notice { border: var(--hair) solid var(--accent); padding: var(--space-3); border-radius: var(--radius-s); }
+.mode-notice.synthetic { border-color: var(--alert); color: var(--alert); }
+.feedback { padding: var(--space-3); border: var(--hair) solid currentColor; border-radius: var(--radius-s); overflow-wrap: anywhere; }
+.notice { color: var(--ok); overflow-wrap: anywhere; }
+.section-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); }
+.candidate-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--space-2); }
+.candidate-button { display: grid; gap: var(--space-1); color: var(--ink); background: var(--night-950); border: var(--hair) solid var(--line); border-radius: var(--radius-s); padding: var(--space-3); text-align: left; overflow-wrap: anywhere; }
+.candidate-button span, .candidate-button small { font-size: var(--step--1); color: var(--muted); }
+.candidate-button.selected { border-color: var(--accent); }
+.source-panel .source { max-width: none; padding: var(--space-3) 0 0; }
+.source-panel summary h3 { display: inline; }
+label input, label select, label textarea { margin-top: var(--space-1); }
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+fieldset label, .decision label { margin-block: var(--space-2); }
+.check { display: flex; align-items: start; gap: var(--space-2); font-weight: 400; color: var(--ink); }
+.check input { width: auto; margin-top: .2em; accent-color: var(--accent); }
+.processing { border: var(--hair) solid var(--unknown); color: var(--unknown); padding: var(--space-2); border-radius: var(--radius-s); font-size: var(--step--1); }
+details { margin-block: var(--space-3); }
+summary { cursor: pointer; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: var(--step--1); max-height: 28rem; overflow: auto; background: var(--night-950); padding: var(--space-2); border-radius: var(--radius-s); }
+.mono { overflow-wrap: anywhere; }
+.decision { border-top: var(--hair) solid var(--line); padding-top: var(--space-3); }

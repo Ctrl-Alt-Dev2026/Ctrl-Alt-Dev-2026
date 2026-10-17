@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 
 from ai.router import get_service
 from ai.service import ExtractionService
-from api.review_models import CorrectionRequest, DataMode, ImportRequest, ReviewRequest
+from api.review_models import CorrectionRequest, DataMode, GeocodingApplyRequest, GeocodingPreviewRequest, ImportRequest, ReviewRequest
 from api.review_store import ReviewError, ReviewStore
 from api.snapshots import SYNTHETIC_WARNING
 
@@ -84,6 +84,20 @@ def correct_candidate(candidate_id: str, body: CorrectionRequest, request: Reque
     return _metadata(body.data_mode) | {"candidate": _store(request, body.data_mode).correct(candidate_id, body)}
 
 
+@router.post("/api/v1/candidates/{candidate_id}/geocoding/preview", summary="Suggest a location for a pending candidate, without writes")
+def preview_geocoding(candidate_id: str, body: GeocodingPreviewRequest, request: Request):
+    from api.geocoding import get_service as get_geocoding
+    proposal = _store(request, body.data_mode).preview_geocoding(candidate_id, body, get_geocoding())
+    return _metadata(body.data_mode) | {"proposal": proposal}
+
+
+@router.post("/api/v1/candidates/{candidate_id}/geocoding/apply", summary="Apply a server-recomputed suggestion with explicit operator confirmation")
+def apply_geocoding(candidate_id: str, body: GeocodingApplyRequest, request: Request):
+    from api.geocoding import get_service as get_geocoding
+    candidate = _store(request, body.data_mode).apply_geocoding(candidate_id, body, get_geocoding())
+    return _metadata(body.data_mode) | {"candidate": candidate}
+
+
 @router.post("/api/v1/candidates/{candidate_id}/review", summary="Explicitly approve, reject, or link a duplicate to a canonical event", responses={409: {"description": "Stale candidate/event version or finalized candidate."}, 404: {"description": "Unknown candidate/canonical event in this data mode."}})
 def review_candidate(candidate_id: str, body: ReviewRequest, request: Request):
     return _metadata(body.data_mode) | _store(request, body.data_mode).review(candidate_id, body)
@@ -102,6 +116,8 @@ def register_review(application):
     if not getattr(application.state, "safeiasi_review_routes_registered", False):
         application.include_router(router)
         application.add_exception_handler(ReviewError, review_error_handler)
+        from api.geocoding import GeocodingError
+        application.add_exception_handler(GeocodingError, review_error_handler)
         application.state.safeiasi_review_routes_registered = True
         application.openapi_schema = None
     return application

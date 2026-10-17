@@ -438,22 +438,22 @@ export class CityMap {
     });
   }
 
-  private tooltip(info: PickingInfo): { html: string; style: Record<string, string> } | null {
+  private tooltip(info: PickingInfo): { text: string; style: Record<string, string> } | null {
     const o = info.object as (Accident & { count?: number; points?: unknown[] }) | undefined;
     if (!o) return null;
-    let html: string;
+    let text: string;
     if (info.layer?.id === 'density') {
       const n = o.count ?? o.points?.length ?? 0;
-      html = `${n} ${n === 1 ? 'eveniment localizat precis' : 'evenimente localizate precis'} în această zonă`;
+      text = `${n} ${n === 1 ? 'eveniment localizat precis' : 'evenimente localizate precis'} în această zonă`;
     } else if (info.layer?.id.startsWith('camera')) {
-      html = `Cameră: ${(o as unknown as Camera).nume}<br>Clic pentru imagine`;
+      text = `Cameră: ${(o as unknown as Camera).nume}\nClic pentru imagine`;
     } else if ('event_id' in o) {
-      html = `${dateRo(o.data_eveniment)}, ${o.ora ?? 'oră necunoscută'}<br>${GRAVITATE[o.gravitate]}: „${o.loc_text}”`;
+      text = `${dateRo(o.data_eveniment)}, ${o.ora ?? 'oră necunoscută'}\n${GRAVITATE[o.gravitate]}: „${o.loc_text}”`;
     } else {
       return null;
     }
     return {
-      html,
+      text,
       style: {
         background: 'rgb(16 23 34 / 0.94)',
         color: '#e8edf4',
@@ -462,6 +462,7 @@ export class CityMap {
         borderRadius: '0.375rem',
         border: '1px solid #263243',
         maxWidth: '18rem',
+        whiteSpace: 'pre-line',
       },
     };
   }

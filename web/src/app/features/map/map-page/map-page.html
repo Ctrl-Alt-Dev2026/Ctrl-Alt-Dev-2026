@@ -31,8 +31,18 @@
 }
 
 <aside class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
-  @if (store.selected(); as h) {
+  @if (store.state() === 'loading') {
+    <div class="dataset-status" role="status"><h2>Se încarcă publicația…</h2><p class="muted">Harta și dosarele vor folosi aceeași versiune.</p></div>
+  } @else if (store.state() === 'error') {
+    <div class="dataset-status" role="alert"><h2>Publicația este indisponibilă</h2><p>{{ store.error() }}</p><button type="button" class="btn" (click)="store.load()">Încearcă din nou</button><p><a routerLink="/import">Deschide importul și verificarea</a></p></div>
+  } @else if (store.state() === 'empty') {
+    <div class="dataset-status"><h2>Nicio versiune publicată</h2><p>În modul {{ store.isSynthetic() ? 'sintetic' : 'observat' }} nu există încă evenimente publicate. Aprobarea unui candidat nu îl publică automat.</p><a class="btn" routerLink="/import">Importă și verifică surse</a></div>
+  } @else if (store.selectedLocation(); as location) {
+    <app-location-dossier [locationId]="location.location_id" [hotspot]="store.selected()" [rank]="rank() || null" (close)="close()" />
+  } @else if (store.selected(); as h) {
     <app-location-dossier [hotspot]="h" [rank]="rank()" (close)="close()" />
+  } @else if (id()) {
+    <div class="dataset-status"><h2>Locație negăsită</h2><p>Identificatorul nu apare în versiunea publicată selectată.</p><button type="button" class="btn" (click)="close()">Înapoi la listă</button></div>
   } @else {
     <app-hotspot-list [hotspots]="store.visibleHotspots()" [excludedCount]="approxCount()" (select)="open($event)" />
   }
@@ -90,7 +100,7 @@
           Camere live ({{ store.cameras().length }})
         </button>
       }
-      <button type="button" class="btn primary" [attr.aria-pressed]="applied()" (click)="toggleApplied()">
+      <button type="button" class="btn primary" [disabled]="!hasMeasures()" [attr.aria-pressed]="applied()" (click)="toggleApplied()" [title]="hasMeasures() ? 'Explorează măsurile candidate' : 'Catalogul cu surse și aplicabilitatea măsurilor nu sunt încă verificate'">
         {{ applied() ? 'Arată situația documentată' : 'Aplică măsurile' }}
       </button>
     </div>

@@ -2,9 +2,12 @@ import { Observable } from 'rxjs';
 import { Camera } from '../models/camera';
 import { Accident, CrossingCollection, Hotspot, Manifest, Measure } from '../models/contract';
 import { ExtractionResult, ExtractRequest, ReviewRequest } from '../models/extraction';
+import { LoadedDataset, LocationDossierPayload } from '../models/publication';
 
 // The only way components reach data. Implementations: MockDataApi, HttpDataApi.
 export abstract class DataApi {
+  abstract loadDataset(): Observable<LoadedDataset>;
+  abstract dossier(locationId: string): Observable<LocationDossierPayload>;
   abstract manifest(): Observable<Manifest>;
   abstract accidents(): Observable<Accident[]>;
   abstract hotspots(): Observable<Hotspot[]>;

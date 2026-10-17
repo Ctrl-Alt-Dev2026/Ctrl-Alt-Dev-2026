@@ -1,59 +1,25 @@
-# WebTmp
+# SafeIași — interfața Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.27.
+Angular 21, MapLibre 5 și deck.gl. Mediul implicit folosește API-ul real `/api/v1`; harta și dosarele citesc aceeași publicație imuabilă. Aprobarea și publicarea sunt acțiuni distincte ale operatorului.
 
-## Development server
+Cu Node 24 verificat, din `web/`:
 
-To start a local development server, run:
-
-```bash
-ng serve
+```sh
+npm ci
+npm run build:local
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Pornește FastAPI din rădăcina repository-ului conform [ghidului local](../docs/LOCAL_DEVELOPMENT.md). Interfața este servită la [8000/ui/](http://127.0.0.1:8000/ui/), pe aceeași origine cu API-ul. Modul implicit este observat; fără publicație, harta explică starea goală și permite importul. Repetiția sintetică trebuie pregătită separat, conform ghidului.
 
-## Code scaffolding
+Pentru dezvoltare, `npm start` pornește Angular pe portul 4200, cu proxy `/api` către 127.0.0.1:8000. Proxy-ul păstrează Host/Origin; nu adăuga CORS larg pentru a ocoli verificările locale.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Comandă | Rezultat |
+|---|---|
+| `npm run build:local` | Build HTTP cu baza `/ui/`, servit de FastAPI |
+| `npm run build:mock` | Prototip static sintetic, fără scrieri |
+| `npm run build:pages` | Același prototip static, cu baza GitHub Pages |
+| `npm run build` | Build HTTP cu baza implicită, pentru altă găzduire |
 
-```bash
-ng generate component component-name
-```
+Build-urile statice nu sunt fallback pentru API și nu validează fixture-urile vechi. După un build static, reconstruiește `build:local` pentru `/ui/`. Helper-ul limitează paralelismul local; dependențele nu sunt schimbate.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Contracte și reguli: [PLAN.md](PLAN.md), [CLAUDE.md](CLAUDE.md), [handoff API](../docs/FRONTEND_HANDOFF.md). Rezultate și limite: [verificarea integrării](../docs/FRONTEND_INTEGRATION.md). Repository-ul nu configurează un runner Angular de teste; integrarea a fost verificată prin build și browser, plus testele Python ale backend-ului.

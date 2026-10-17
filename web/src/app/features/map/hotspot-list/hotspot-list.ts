@@ -11,7 +11,7 @@ import { ScoreBadge } from '../../../shared/score-badge/score-badge';
   styleUrl: './hotspot-list.scss',
 })
 export class HotspotList {
-  private readonly store = inject(DataStore);
+  protected readonly store = inject(DataStore);
 
   readonly hotspots = input.required<Hotspot[]>();
   readonly excludedCount = input(0);
