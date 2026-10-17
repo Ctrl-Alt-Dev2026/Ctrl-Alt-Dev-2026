@@ -1,0 +1,31 @@
+{
+  "rule_source": "Planificare.md, secțiunea 7",
+  "thresholds": "Convenții MVP ale echipei, nu praguri validate științific.",
+  "applicability": "Surse internaționale orientative; proiectarea și normele românești necesită verificare.",
+  "numeric_status": "Repere cercetate în research_evidence.json; fără cost sau efect transferabil automat locațiilor. Valorile din catalog rămân null.",
+  "research_file": "research_evidence.json",
+  "sources": {
+    "iluminat_trecere": [
+      "https://highways.dot.gov/safety/proven-safety-countermeasures/crosswalk-visibility-enhancements"
+    ],
+    "semafor_pietonal": [
+      "https://highways.dot.gov/safety/pedestrian-bicyclist/step"
+    ],
+    "insula_refugiu": [
+      "https://highways.dot.gov/safety/proven-safety-countermeasures/medians-and-pedestrian-refuge-islands-urban-and-suburban-areas"
+    ],
+    "trecere_inaltata": [
+      "https://highways.dot.gov/safety/pedestrian-bicyclist/step"
+    ],
+    "limitator_viteza": [
+      "https://highways.dot.gov/safety/speed-management/traffic-calming-eprimer/module-3-part-3"
+    ],
+    "analiza_intersectie": [
+      "https://highways.dot.gov/safety/proven-safety-countermeasures/crosswalk-visibility-enhancements"
+    ],
+    "analiza_statie": [
+      "https://highways.dot.gov/safety/pedestrian-bicyclist/step"
+    ],
+    "observatie_teren": []
+  }
+}

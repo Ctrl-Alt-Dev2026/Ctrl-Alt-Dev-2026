@@ -1,0 +1,347 @@
+{
+  "schema_version": "measures-preview-1",
+  "data_mode": "simulation_mixed_sources",
+  "warning": "SCENARIU DEMONSTRATIV: infrastructură OSM reală + accidente sintetice plasate ipotetic la treceri reale. Accidentele NU sunt documentate aici. Scorurile NU reprezintă riscul real sau un clasament real de pericol. Măsuri candidate pentru verificare, nu decizii de lucrări.",
+  "cost_warning": "Medii istorice de proiect, nu oferte sau prețuri actualizate. Nu însumați automat: TVA și acoperirea diferă; unele costuri lipsesc.",
+  "source_dataset_sha256": {
+    "manifest.json": "71b844ec76d33cfaca340705cb42d7dc017b7660a90d6aa0b3c5e7f85f054941",
+    "crossings.geojson": "a64125b81ed342ce1a39621e1e50ee1da5f182715bee18c7d71bd504bf1dff76",
+    "hotspots.json": "3e2cb8b9c582edb04ce9339a4e31cb72ddccee6fd4a476f40ca2655733666318",
+    "accidents.json": "5b014964c4cbedb7eeec4b3e4ba780a2c448cc652fbe2eb29f04ef74f9285130",
+    "scenario_provenance.json": "d9a1812e68487795652fbadd4b63148afdb4c3993a4b758c001a0b2aa86b6161"
+  },
+  "locations": [
+    {
+      "location_id": "osm-node-3372032447",
+      "crossing_id": "osm-node-3372032447",
+      "hotspot_id": "scenario-osm-node-3372032447",
+      "nume": "SCENARIU — Aleea Grigore Ghica Vodă",
+      "scenario_score": 13,
+      "measures": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ],
+          "nume": "Analiza traversărilor în apropierea stației",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ],
+      "total_cost_ron": null
+    },
+    {
+      "location_id": "osm-node-6910606104",
+      "crossing_id": "osm-node-6910606104",
+      "hotspot_id": "scenario-osm-node-6910606104",
+      "nume": "SCENARIU — Bulevardul Dacia",
+      "scenario_score": 11,
+      "measures": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 1 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "analiza_statie",
+          "motiv": "SCENARIU: Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.",
+          "de_verificat": [
+            "fluxurile reale între stație și trecere",
+            "vizibilitatea în jurul vehiculelor oprite",
+            "poziția stației și alternativele; mutarea nu este decisă automat"
+          ],
+          "nume": "Analiza traversărilor în apropierea stației",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ],
+      "total_cost_ron": null
+    },
+    {
+      "location_id": "osm-node-6194970559",
+      "crossing_id": "osm-node-6194970559",
+      "hotspot_id": "scenario-osm-node-6194970559",
+      "nume": "SCENARIU — Strada Sfântul Lazăr",
+      "scenario_score": 9,
+      "measures": [
+        {
+          "measure_id": "observatie_teren",
+          "motiv": "SCENARIU: Câmpuri necunoscute: iluminat, scoala_150m, statie_100m",
+          "de_verificat": [
+            "completarea câmpurilor de infrastructură necunoscute",
+            "iluminat",
+            "scoala_150m",
+            "statie_100m"
+          ],
+          "nume": "Observație în teren",
+          "selected_for_display": true,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "iluminat_trecere",
+          "motiv": "SCENARIU: 2 evenimente nocturne explicite; 0 necunoscute. Iluminatul existent trebuie evaluat.",
+          "de_verificat": [
+            "iluminatul existent și măsurători nocturne",
+            "poziția stâlpilor și vizibilitatea din ambele sensuri"
+          ],
+          "nume": "Analiza iluminatului dedicat trecerii",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "iluminat_trecere",
+            "source_id": "cost-cluj-lighting-188",
+            "source_url": "https://cjcluj.ro/proiect/iluminarea-trecerilor-pentru-pietoni-pe-drumurile-judetene-din-judetul-cluj-etapa-i/",
+            "calculation": "26312475.5 / 188",
+            "arithmetic_average_ron": 139959.98,
+            "indicative_rounded_ron": 140000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2024,
+            "vat": "not_explicit_on_page",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Proiect început în 2024; pagina descrie contestații ale achiziției în 2026. Nu reprezintă plăți finale sau preț unitar urban.",
+            "publisher": "Consiliul Județean Cluj",
+            "display_label": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~140.000 lei/trecere, TVA neprecizat în sursă — reper 2024",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "semafor_pietonal",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Necesitatea semaforizării nu este stabilită automat.",
+          "de_verificat": [
+            "necesitatea semaforizării conform normelor locale",
+            "traficul și fluxul pietonal măsurate",
+            "coordonarea cu semafoarele apropiate"
+          ],
+          "nume": "Analiza semaforizării pietonale",
+          "selected_for_display": true,
+          "indicative_cost": {
+            "measure_id": "semafor_pietonal",
+            "source_id": "cost-cluj-signal-2020",
+            "source_url": "https://primariaclujnapoca.ro/consiliu-local/hotarare-de-consiliu/hotararea-251-din-2020/",
+            "calculation": "881010.27 / 3",
+            "arithmetic_average_ron": 293670.09,
+            "indicative_rounded_ron": 294000,
+            "unit": "RON pe trecere, medie de proiect",
+            "year": 2020,
+            "vat": "excluded",
+            "estimate_type": "historical_project_average_not_quote",
+            "uncertainty_range_ron": null,
+            "limitations": "Include cota medie a componentelor proiectului; diferențele între amplasamente nu sunt cuantificate. Indicatori de investiție, nu factură finală; cost istoric al proiectului, fără deviz pentru locațiile noastre.",
+            "publisher": "Primăria Cluj-Napoca, HCL 251/2020",
+            "display_label": "~294.000 lei/trecere, fără TVA — reper 2020",
+            "applies_to": "possible_implementation_not_analysis_service"
+          },
+          "cost_display": "~294.000 lei/trecere, fără TVA — reper 2020",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        },
+        {
+          "measure_id": "insula_refugiu",
+          "motiv": "SCENARIU: Semafor=False; benzi=4. Existența și fezabilitatea insulei trebuie verificate.",
+          "de_verificat": [
+            "existența unei insule",
+            "lățimea disponibilă și accesibilitatea",
+            "traficul, vitezele și fluxul pietonal"
+          ],
+          "nume": "Analiza unei insule de refugiu",
+          "selected_for_display": false,
+          "indicative_cost": null,
+          "cost_display": "Cost necunoscut — necesită evaluare/ofertă",
+          "applicable_reduction": null,
+          "note": "Măsură candidată de analizat. Estimarea, dacă există, privește lucrarea ulterioară, nu serviciul de analiză."
+        }
+      ],
+      "total_cost_ron": null
+    }
+  ]
+}
