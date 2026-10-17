@@ -4,7 +4,7 @@ Flux implementat: **import → extracție → corectare/review → eveniment can
 
 Backend v0.7 adaugă [preview și aplicare asistată a geocodării](GEOCODING_WORKFLOW.md) pentru candidații observați încă pending. Nu înlocuiește confirmarea operatorului sau asocierea explicită la publicare.
 
-Publicarea înseamnă o versiune locală pentru consumul frontend-ului. Nu publică date pe internet și nu înlocuiește verificarea administrației. Datele reale ale unui pilot și ecranele principale ale produsului nu sunt furnizate de acest modul.
+Publicarea înseamnă o versiune locală pentru consumul frontend-ului. Nu publică date pe internet și nu înlocuiește verificarea administrației. Cele trei ecrane Angular sunt [conectate la acest flux](FRONTEND_INTEGRATION.md); datele reale ale unui pilot trebuie pregătite și verificate separat.
 
 ## Instalare și configurare
 
@@ -42,10 +42,11 @@ Pentru vizualizare într-un server de demo separat, într-un **al doilea termina
 $env:SAFEIASI_REVIEW_DIR = (Resolve-Path 'runtime/publication-demo/review').Path
 $env:SAFEIASI_PUBLICATION_DIR = (Resolve-Path 'runtime/publication-demo/publications').Path
 $env:SAFEIASI_PUBLICATION_CONTEXT_DIR = (Resolve-Path 'runtime/publication-demo/context').Path
+$env:SAFEIASI_SAFECROSS_DIR = Join-Path (Resolve-Path 'runtime/publication-demo').Path 'safecross'
 .\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8001
 ```
 
-[Swagger demo](http://127.0.0.1:8001/docs), [lista locațiilor](http://127.0.0.1:8001/api/v1/locations?data_mode=synthetic), [GeoJSON](http://127.0.0.1:8001/api/v1/locations.geojson?data_mode=synthetic), [fișa imprimabilă Alfa](http://127.0.0.1:8001/api/v1/locations/demo-crossing-01/export?data_mode=synthetic&format=html). HTML-ul se poate tipări/salva PDF din browser; serverul nu generează PDF. Închide terminalul de demo pentru a elimina configurarea sa de mediu.
+[UI conectată, după `npm run build:local` în `web/`](http://127.0.0.1:8001/ui/?data_mode=synthetic), [Swagger demo](http://127.0.0.1:8001/docs), [lista locațiilor](http://127.0.0.1:8001/api/v1/locations?data_mode=synthetic), [GeoJSON](http://127.0.0.1:8001/api/v1/locations.geojson?data_mode=synthetic), [fișa imprimabilă Alfa](http://127.0.0.1:8001/api/v1/locations/demo-crossing-01/export?data_mode=synthetic&format=html). HTML-ul se poate tipări/salva PDF din browser; serverul nu generează PDF. Închide terminalul de demo pentru a elimina configurarea sa de mediu. Directorul video separat protejează analizele SafeCross ale serverului normal.
 
 ## Asociere și eligibilitate
 

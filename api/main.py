@@ -14,6 +14,7 @@ from ai.patterns.router import register_patterns
 from api.review_router import register_review
 from api.publication_router import register_publication
 from api.safecross_router import register_safecross
+from api.frontend import register_frontend
 from safecross.setup import MODEL_PATH
 from api.snapshots import SnapshotError, load_snapshot
 
@@ -42,7 +43,7 @@ class EventsResponse(SnapshotMetadata):
     events: list[dict[str, Any]]
 
 
-def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None, safecross_directory: str | Path | None = None, safecross_model_path: str | Path | None = None, publication_directory: str | Path | None = None, publication_context_directory: str | Path | None = None):
+def create_app(snapshot_directory: str | Path | None = None, review_directory: str | Path | None = None, safecross_directory: str | Path | None = None, safecross_model_path: str | Path | None = None, publication_directory: str | Path | None = None, publication_context_directory: str | Path | None = None, frontend_directory: str | Path | None = None):
     directory = Path(
         snapshot_directory if snapshot_directory is not None
         else os.environ.get("SAFEIASI_SNAPSHOT_DIR", DEFAULT_SNAPSHOT_DIRECTORY)
@@ -137,6 +138,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
+    register_frontend(application, frontend_directory)
     return register_publication(register_patterns(register_safecross(register_review(register_ai(application)))))
 
 

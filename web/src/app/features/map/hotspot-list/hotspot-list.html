@@ -6,7 +6,7 @@
 </header>
 
 @if (hotspots().length === 0) {
-  <p class="empty">Nicio locație nu are încă evenimente localizate precis. Aprobă evenimente din ecranul Import.</p>
+  <p class="empty">Nicio locație nu îndeplinește condițiile de clasare în această versiune și cu filtrul selectat. Publicarea și verificarea se fac în ecranul Import.</p>
 } @else {
   <ol>
     @for (h of hotspots(); track h.id) {
@@ -22,6 +22,16 @@
       </li>
     }
   </ol>
+}
+
+@if (store.visibleUnrankedLocations().length > 0) {
+  <section class="unranked">
+    <h3>Dosare fără clasament</h3>
+    <p class="muted">Date insuficiente pentru scor. Evenimentele și sursele rămân consultabile.</p>
+    @for (location of store.visibleUnrankedLocations(); track location.location_id) {
+      <button type="button" class="btn" (click)="select.emit(location.location_id)">{{ location.feature.properties.nume || location.location_id }} · {{ location.event_count }} evenimente</button>
+    }
+  </section>
 }
 
 <footer class="muted">

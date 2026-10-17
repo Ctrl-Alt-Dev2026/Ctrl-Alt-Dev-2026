@@ -2,7 +2,7 @@
 
 SafeIași este numele de lucru al unui proiect pentru Hackathon AI Iași 2026 (16–18 octombrie), realizat de o echipă de șase persoane. Produsul propus ajută administrația să identifice locațiile de verificat prioritar pentru siguranță rutieră, pe baza unor evenimente documentate, extrase cu AI și verificate de operator.
 
-Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat confirmat. Repository-ul conține documentație, fixture-uri sintetice în `false_data/`, auditul lor și un server local FastAPI cu `/health`, citire de snapshot sintetic validat și extracția AI a lui Emi. Backend-ul importă/corectează candidați, păstrează evenimente canonice și poate publica explicit versiuni locale cu context, scor, GeoJSON și dosare exportabile. Extensia opțională **SafeCross** are o interfață locală pentru analiză video, verificarea interacțiunilor candidate și export. Datele reale verificate, măsurile candidate și ecranele principale ale hărții rămân de pregătit/integrat.
+Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat confirmat. Aplicația locală folosește **FastAPI + Angular 21**: import și corectare de candidați, verificare umană, evenimente canonice și publicare explicită pe hartă, cu scor explicabil, dosare și exporturi. Harta, dosarul și exportul păstrează aceeași versiune publicată; aprobarea unui candidat nu îl publică automat. **SafeCross** și investigatorul de tipare sunt extensii separate. Nu avem încă un set de accidente reale verificate sau un catalog integrat de măsuri candidate.
 
 - [Contextul proiectului, principiile și diferențele dintre planuri](docs/PROJECT_CONTEXT.md)
 - [Responsabilitățile și planul de lucru pentru backend](docs/BACKEND_WORK_PLAN.md) — Mihnea: backend/API, provizoriu; Emi: extracție AI.
@@ -14,8 +14,9 @@ Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat c
 - [SafeCross: analiză video, instalare separată și demo cu sursă publică](docs/SAFECROSS.md)
 - [Context OSM pentru Iași](context/CITY.md) și [pipeline-ul offline de scor](risk/IMPLEMENTATION.md) — integrate prin publicare explicită și asociere verificată, cu instalarea `requirements-publication.txt`.
 - [Geocodare asistată înainte de aprobare: API și contract pentru frontend](docs/GEOCODING_WORKFLOW.md) — integrează [modulul de coordonate](coordonate/README.md), cu dovezi OSM, preview și aplicare confirmată.
-- [Contractele backend pentru conectarea frontend-ului](docs/FRONTEND_HANDOFF.md)
-- [Prototipul Angular din `web/`](web/README.md) — livrat la `27510e9`, folosește implicit fixture-uri sintetice și reluări; conectarea la API v0.7 este documentată în contractul de mai sus.
+- [Contractele și comportamentul integrării Angular–API](docs/FRONTEND_HANDOFF.md)
+- [Verificarea integrării și limitele demo-ului](docs/FRONTEND_INTEGRATION.md)
+- [Frontend-ul Angular din `web/`](web/README.md) — conectat implicit la API; build-urile `mock` și GitHub Pages sunt demonstrații statice, sintetice.
 - [Contractul API pentru citirea snapshot-ului](docs/SNAPSHOT_READ_API.md)
 - [Planul inițial pentru șase persoane și aproximativ 25 de ore](docs/HACKATHON_PLAN.md) — atașamentul păstrat integral; observația despre accesul GitHub din introducere este istorică.
 - [Planificarea existentă: „Harta pietonului – Iași · Plan v2”](Planificare.md) — păstrată integral; conține propuneri care diferă de planul SafeIași.
@@ -29,6 +30,17 @@ python -m venv .venv
 ```
 
 Deschide [verificarea serverului](http://127.0.0.1:8000/health) sau [documentația API](http://127.0.0.1:8000/docs). `/health` confirmă numai că serverul rulează; nu are nevoie de chei AI sau de date. Oprire: **Ctrl+C** în terminalul serverului. Pentru repornire este suficientă ultima comandă.
+
+Pentru interfața conectată, instalează și dependențele de publicare, apoi construiește Angular cu **Node 24** verificat local:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-publication.txt
+Set-Location web
+npm ci
+npm run build:local
+```
+
+Cu serverul de mai sus pornit, deschide [aplicația locală](http://127.0.0.1:8000/ui/). Build-ul este servit de FastAPI din aceeași origine; nu este necesar un server frontend separat. Modul implicit este `observed`: lipsa unei publicații este afișată explicit, iar importul rămâne accesibil. [Repetiția izolată](docs/PUBLICATION_WORKFLOW.md) pornește separat pe 8001, cu **șase evenimente, șapte articole și trei locații fictive**, la [interfața sintetică](http://127.0.0.1:8001/ui/?data_mode=synthetic). Datele runtime nu sunt incluse în Git. Pentru dezvoltare cu `npm start` și build-uri statice, vezi [ghidul local](docs/LOCAL_DEVELOPMENT.md).
 
 Pentru video, urmează [instalarea SafeCross](docs/SAFECROSS.md): `requirements-safecross.txt`, model YOLOX Nano descărcat explicit și FFmpeg/FFprobe local. Interfața este la [localhost:8000/safecross](http://127.0.0.1:8000/safecross). Observațiile video nu sunt accidente confirmate și nu alimentează automat clasamentul.
 

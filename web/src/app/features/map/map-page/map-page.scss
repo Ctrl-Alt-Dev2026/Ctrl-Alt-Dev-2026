@@ -10,6 +10,7 @@
   position: absolute;
   inset: 0;
 }
+.dataset-status { padding: var(--space-4); overflow: auto; p { margin-block: var(--space-3); } }
 
 // Floating UI stays above the map and deck.gl canvases.
 .panel,

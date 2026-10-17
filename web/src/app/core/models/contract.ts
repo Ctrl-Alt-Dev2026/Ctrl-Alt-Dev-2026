@@ -87,6 +87,9 @@ export interface Hotspot {
   date_lipsa: string[];
   masuri: HotspotMeasure[];
   verificat: boolean;
+  // Supplied by the frozen publication; never inferred as a field audit.
+  rank?: number | null;
+  association_status?: 'operator_checked';
 }
 
 export interface Measure {

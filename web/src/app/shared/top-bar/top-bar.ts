@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, computed, DestroyRef, ElementRef, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { dateRo } from '../../core/format/labels';
 import { DataStore } from '../../core/state/data.store';
+import { DataMode } from '../../core/models/publication';
 
 // Provisional product name (see docs/PROJECT_CONTEXT.md); change it here only.
 export const APP_NAME = 'SafeIași';
@@ -37,4 +38,24 @@ export class TopBar {
     const p = this.store.manifest()?.perioada;
     return p ? `${dateRo(p[0])} – ${dateRo(p[1])}` : null;
   });
+
+  protected setMode(mode: DataMode): void {
+    this.store.setDataMode(mode);
+  }
+
+  constructor() {
+    const host = inject(ElementRef<HTMLElement>).nativeElement;
+    const destroy = inject(DestroyRef);
+    afterNextRender(() => {
+      const update = () => {
+        const wide = matchMedia('(min-width: 56rem)').matches;
+        const gutter = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        document.documentElement.style.setProperty('--chrome-top', wide ? `${host.offsetHeight + gutter * 2}px` : '0rem');
+      };
+      const observer = new ResizeObserver(update);
+      observer.observe(host);
+      update();
+      destroy.onDestroy(() => observer.disconnect());
+    });
+  }
 }

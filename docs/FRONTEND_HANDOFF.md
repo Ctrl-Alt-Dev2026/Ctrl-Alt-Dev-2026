@@ -1,18 +1,18 @@
 # Contract de integrare frontend — API v0.7
 
-Acesta este contractul pentru conectarea celor trei ecrane principale la API v0.7. Detalii: [review](REVIEW_WORKFLOW.md), [geocodare](GEOCODING_WORKFLOW.md), [publicare](PUBLICATION_WORKFLOW.md). Schemele exacte sunt în `/openapi.json` și `/docs`.
+Cele trei ecrane Angular din `web/` sunt conectate la API v0.7: hartă, dosar și import/review cu publicare explicită. Acest document descrie contractul și comportamentul curent. Detalii: [review](REVIEW_WORKFLOW.md), [geocodare](GEOCODING_WORKFLOW.md), [publicare](PUBLICATION_WORKFLOW.md), [verificarea integrării](FRONTEND_INTEGRATION.md). Schemele exacte sunt în `/openapi.json` și `/docs`.
 
-La `27510e9` a fost adăugat prototipul Angular din `web/`, cu hartă, dosar și import. Rulează implicit cu date mock; `HttpDataApi` folosește alte rute și corpuri decât API v0.7, iar proxy-ul nu este configurat. Existența ecranelor nu confirmă integrarea backend. Pentru verificarea build-ului se folosește Node 24.19 disponibil în runtime-ul bundled; Node 20.11 global este insuficient. Rezultatul build-ului se verifică separat.
+La `27510e9`, prototipul folosea implicit fixture-uri și contracte HTTP provizorii. Integrarea curentă folosește implicit `HttpDataApi`, cu `/api/v1`, un singur snapshot de publicație pentru hartă/dosar și o fațadă separată pentru operațiile operatorului. Nu a fost introdus un adaptor backend care ocolește verificările. `MockDataApi` rămâne numai pentru build-urile statice alese explicit.
 
-Verificarea locală: build-ul de producție trece cu `CI=true` (cache persistent dezactivat după eroarea LMDB), iar rutele hartă/dosar/import/fișă se încarcă fără erori JavaScript. Prototipul citește direct fixture-urile comune: manifestul declară 18 articole, deși există patru texte; costurile și reducerile sunt sintetice. Aceste valori nu devin o publicație validată și nu sunt dovezi pentru pitch. Pentru prezentarea fluxului verificat, folosește publicația izolată de șapte articole / șase evenimente / trei locații, până este conectată interfața la API.
+`npm run build:local`, cu Node 24.19 verificat local, produce build-ul cu baza `/ui/`, servit de FastAPI din aceeași origine. Helper-ul limitează paralelismul și dezactivează implicit cache-ul persistent pentru laptopuri cu resurse limitate. `npm start` folosește proxy-ul `/api` către 127.0.0.1:8000, cu `changeOrigin:false`. Comenzile sunt în [ghidul local](LOCAL_DEVELOPMENT.md). Build-urile `build:mock` și `build:pages` folosesc fixture-uri și reluări sintetice, fără scrieri de review/publicare. Inconsistențele fixture-urilor vechi nu sunt reparate prin această integrare și nu devin dovezi pentru pitch.
 
-| Contractul HTTP propus în `web/` | Contractul backend de conectat explicit |
+| Contractul inițial al prototipului | Contractul folosit acum |
 |---|---|
-| `/api/{manifest,accidents,hotspots,crossings}` | `/api/v1/publications/...`, `/api/v1/locations`, `/api/v1/locations.geojson` și dosarele; adaptează și structurile răspunsurilor. |
+| `/api/{manifest,accidents,hotspots,crossings}` | `GET /api/v1/publications/latest` sau o versiune explicită; proiecție locală a aceluiași snapshot pentru hartă și dosar, fără recalcularea scorului. API-urile de locații/GeoJSON rămân disponibile. |
 | `POST /api/extract` cu `{text?,url?}` | `POST /api/v1/imports` cu articol complet, mod, pipeline, operator și cheie de idempotență; un URL singur nu importă articolul. |
 | `POST /api/events/{id}/review` cu `{decision,corrections}` | `PATCH /api/v1/candidates/{id}`, apoi `POST .../review`, cu versiuni și confirmări; publicarea rămâne separată. |
 
-`/api/measures` și `/api/cameras` nu au un înlocuitor direct în acest contract. Integrarea adaptează frontend-ul și configurarea aceleiași origini; nu introduce rute de scriere compatibile care ascund verificările sau aprobă/publică automat.
+`/api/measures` și `/api/cameras` nu au un înlocuitor direct în acest contract. Catalogul gol al publicației este afișat ca neintegrat. Metadatele camerelor rămân o extensie statică separată; nu sunt accidente, dovezi de verificare sau o sursă de clasament.
 
 ## Ecrane și date disponibile
 
@@ -22,12 +22,12 @@ Verificarea locală: build-ul de producție trece cu `CI=true` (cache persistent
 
 | Server local | Stare la verificarea din 17 octombrie 2026 |
 |---|---|
-| `http://127.0.0.1:8000` | API normal; fără publicație și fără set de accidente observate pregătit. Infrastructura OSM nu este un set de accidente. |
-| `http://127.0.0.1:8001` | Repetiție separată, integral **SINTETICĂ**: șapte articole fictive, șase evenimente, trei locații. [Lista](http://127.0.0.1:8001/api/v1/locations?data_mode=synthetic), [fișa Alfa](http://127.0.0.1:8001/api/v1/locations/demo-crossing-01/export?data_mode=synthetic&format=html). |
+| `http://127.0.0.1:8000` | API normal și [UI observată](http://127.0.0.1:8000/ui/); fără publicație și fără set de accidente observate pregătit. Importul rămâne accesibil. Infrastructura OSM nu este un set de accidente. |
+| `http://127.0.0.1:8001` | Repetiție separată, integral **SINTETICĂ**: șapte articole fictive, șase evenimente, trei locații. [UI conectată](http://127.0.0.1:8001/ui/?data_mode=synthetic), [lista](http://127.0.0.1:8001/api/v1/locations?data_mode=synthetic), [fișa Alfa](http://127.0.0.1:8001/api/v1/locations/demo-crossing-01/export?data_mode=synthetic&format=html). |
 
 Datele runtime nu sunt livrate prin Git și disponibilitatea serverelor depinde de pornirea lor locală; comenzile sunt în ghidul de publicare. Ollama și `qwen2.5:1.5b` lipsesc momentan pe laptopul verificat. Alege explicit `pipeline=rules` pentru extracție deterministă fără model. Reluările `/api/v1/ai/replays/{article_id}` sunt sintetice, salvate și etichetate **reluare**, fără import/aprobare automată. `cache` și extracțiile istorice nu se prezintă ca procesare live.
 
-Toate rutele de lucru/publicare sunt locale și cer aceeași origine. Servește frontend-ul din originea API-ului; alt port este altă origine și primește 403. `operator` este declarat pentru istoric, fără autentificare. Trimite `data_mode=synthetic|observed` explicit în fiecare cerere relevantă și nu combina modurile, serverele sau contextele. Un import sintetic cere `article.sursa=SINTETIC`; eticheta `observed` nu certifică autenticitatea sursei.
+Toate rutele de lucru/publicare sunt locale și cer aceeași origine. `/ui/` este servit direct de API; la dezvoltare, proxy-ul păstrează Host și Origin. O cerere directă din altă origine primește 403. `operator` este declarat pentru istoric, fără autentificare. Clientul trimite `data_mode=synthetic|observed` explicit și golește starea la schimbarea modului; nu combină modurile, serverele sau contextele. Un import sintetic cere `article.sursa=SINTETIC`; eticheta `observed` nu certifică autenticitatea sursei.
 
 ## Ordinea operațiilor
 
@@ -52,7 +52,7 @@ Corpul de publicare are `{request_id, data_mode, operator, note, period_start, p
 
 ## Citire coerentă pentru hartă, dosar și export
 
-1. Citește `GET /api/v1/publications/latest?data_mode=...` o dată și fixează `snapshot_id`; selectorul de versiuni poate folosi `GET /api/v1/publications?data_mode=...`.
+1. Clientul citește `GET /api/v1/publications/latest?data_mode=...` o dată și fixează `snapshot_id`. Un `snapshot_id` explicit în URL încarcă acea versiune prin `GET /api/v1/publications/{snapshot_id}`. Harta și dosarul se proiectează din acest răspuns complet; exportul trimite aceeași versiune.
 2. Folosește **același `data_mode` și `snapshot_id`** pe toate citirile de mai jos, inclusiv exportul; astfel o publicare concurentă nu schimbă totalurile în timpul navigării.
 
 | Rută GET | Conținut / parametri suplimentari |
@@ -79,7 +79,9 @@ Afișează perioada, eticheta modului, `warnings`, `context_attribution` și nec
 
 Folosește `detail.code`, `detail.message`, `detail.issues` când există; validarea FastAPI poate avea `detail` listă. La import AI indisponibil se întoarce și `persisted=false`. Nu transforma un 503 în listă goală sau date sintetice. Rutele legacy `/api/v1/events` și `/api/v1/manifest` pot da 503 pentru fixture-uri incomplete; ecranele noi consumă publicațiile/locațiile. `publication_status=not_published` din review rămâne starea documentului de lucru; publicarea se verifică în snapshot.
 
-## Acceptanță smoke pentru integrarea viitoare
+Interfața permite reîncărcarea explicită a ultimei versiuni. După publicare fixează exact ID-ul returnat, fără să rămână pe o versiune veche din URL și fără să sară la o publicație concurentă. Locațiile cu un singur eveniment au dosar și export, însă rămân neclasate; un scor necunoscut nu devine zero.
+
+## Acceptanță pentru integrare
 
 1. Pe demo 8001, modul sintetic este vizibil; lista, GeoJSON și dosarele au același `snapshot_id`, trei locații și șase evenimente din șapte articole.
 2. Dosarul Alfa păstrează două evenimente și trei articole; articolul duplicat nu crește numărul accidentelor.
