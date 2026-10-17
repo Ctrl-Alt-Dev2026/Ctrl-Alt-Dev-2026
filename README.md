@@ -2,7 +2,7 @@
 
 SafeIași este numele de lucru al unui proiect pentru Hackathon AI Iași 2026 (16–18 octombrie), realizat de o echipă de șase persoane. Produsul propus ajută administrația să identifice locațiile de verificat prioritar pentru siguranță rutieră, pe baza unor evenimente documentate, extrase cu AI și verificate de operator.
 
-Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat confirmat. Repository-ul conține în prezent documentație de planificare, fără aplicație, stack implementat sau set de accidente verificat.
+Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat confirmat. Ramura backend conține documentație, fixture-uri sintetice în `false_data/`, auditul lor și un server local FastAPI cu `/health`. Fluxul produsului și setul de accidente reale verificate urmează separat.
 
 - [Contextul proiectului, principiile și diferențele dintre planuri](docs/PROJECT_CONTEXT.md)
 - [Planul complet de execuție pentru concurs](docs/HACKATHON_EXECUTION_STRATEGY.md) — livrabile, criterii de acceptare, echipă, calendar, demo și pilot; include clarificările primite privind participarea și predarea.
