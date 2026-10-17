@@ -1,1 +1,1 @@
-"""Backend integration tools for SafeIasi; no HTTP API is implemented yet."""
+"""SafeIasi local API foundation and synthetic fixture auditing tools."""

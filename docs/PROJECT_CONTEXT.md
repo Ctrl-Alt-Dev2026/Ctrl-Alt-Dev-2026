@@ -14,6 +14,8 @@ La inspecția din 17 octombrie 2026, ramura implicită `main`, la commitul `fc61
 
 Ulterior, la commitul `77b0a09`, echipa a adăugat `false_data/`: fixture-uri sintetice pe schema `2.0`, fără date reale verificate sau aplicație. Auditul și pașii pentru backend sunt în [BACKEND_WORK_PLAN.md](BACKEND_WORK_PLAN.md). Fixture-urile sunt păstrate în forma colegilor; neconcordanțele lor trebuie rezolvate înaintea integrării.
 
+În ramura `codex/backend-foundation`, etapa următoare implementează pornirea locală FastAPI/Uvicorn cu `/health` și documentație OpenAPI. [Instrucțiunile locale](LOCAL_DEVELOPMENT.md) explică instalarea și verificarea. `/health` confirmă procesul; încărcarea datelor, extracția, review-ul și ecranele produsului rămân de implementat.
+
 Alegerea stack-ului și reconcilierea contractelor revin coordonatorului tehnic la începutul implementării. Propunerea existentă de stack trebuie evaluată; Python + Streamlit + pydeck este alternativa din planul atașat pentru pornirea de la zero. Orice stack funcțional găsit ulterior are prioritate față de o rescriere.
 
 ## Scope-ul MVP propus

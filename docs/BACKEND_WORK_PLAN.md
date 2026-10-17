@@ -14,7 +14,7 @@ Interfața de discutat cu Emi este `extract_article(article) -> candidates`: câ
 - Echipa a adăugat `false_data/`, cu manifest `schema_version: "2.0"`, `data_mode: "synthetic"`.
 - Fișierele existente sunt `articles.json`, `accidents.json`, `crossings.geojson`, `hotspots.json`, **`measure.json`**. Ultimul are numele la singular; nu îl redenumim în locul colegului.
 - Continuăm întâi compatibilitatea cu aceste fixture-uri. Schema `1.0` GeoJSON din [planul atașat](HACKATHON_PLAN.md) rămâne o propunere alternativă; nu migrăm în tăcere contractele comune.
-- Python + FastAPI pentru API este propunerea deja prezentă în [Planificare.md](../Planificare.md). Nu instalăm un framework și nu declarăm stack-ul implementat prin acest prim pas.
+- Python + FastAPI pentru API este direcția deja propusă în [Planificare.md](../Planificare.md). Primul pas a fost auditul fără framework; etapa de pornire adaugă acum FastAPI/Uvicorn, `/health` și instrucțiunile din [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md), în ramura backend. Acesta este scheletul serverului, nu fluxul produsului implementat.
 
 Auditul inițial a găsit **4 articole, 17 evenimente, 7 obiecte de infrastructură, 5 locații și 6 măsuri**. Manifestul declară **18 articole**, iar evenimentele referă **14 ID-uri de articole lipsă** (`syn-005`–`syn-018`). Nu completăm aceste articole prin invenție. Cele patru evenimente cu `verificat: true` sunt tot sintetice, nu accidente reale confirmate.
 
@@ -28,17 +28,18 @@ Estimările sunt ore de lucru activ, nu un nou calendar de 25 de ore. Dependenț
 |---|---|---|---|
 | 0. Delimitarea responsabilităților | Mihnea: backend/API, provizoriu; Emi: extracție; modulele colegilor nu sunt duplicate | 15 min | Documentat |
 | 1. Auditul contractului existent | Comandă repetabilă, erori explicite pentru referințe/totaluri/mod de date; fixture-urile originale rămân nemodificate | 30–45 min | Implementat; auditul semnalează problemele de mai sus |
-| 2. Scheletul API | Aplicație Python/FastAPI, `/health`, instrucțiuni de pornire și citire dintr-un snapshot validat; fără chei sau servicii necesare pentru pornire | 45–60 min | De făcut |
+| 2a. Pornirea locală | Mediu `.venv`, FastAPI/Uvicorn, `/health`, OpenAPI și instrucțiuni; fără chei sau date necesare pentru pornire | 30 min | Implementat și verificat în ramura backend |
+| 2b. Citirea datelor | Încărcarea numai a unui snapshot validat și stări explicite pentru date indisponibile/invalide | 30 min | De făcut; fixture-urile actuale sunt incomplete |
 | 3. Contractul cu Emi și importul | Format agreat cu P1/Emi, adaptor către extracție, tratare timeout/JSON invalid; niciun candidat publicat automat; răspunsurile salvate sunt etichetate reluare | 60–90 min | De făcut; depinde de contractul și modulul lui Emi |
 | 4. Corectare și aprobare | Operatorul vede dovezile, corectează și aprobă/respinge; actualizări atomice, istoric de verificare și versiune pentru evitarea suprascrierilor; duplicatele păstrează un ID canonic | 90 min | De făcut |
 | 5. Integrarea cu frontend-ul | Listă și dosar de locație, citite din exportul modulului de prioritizare; GeoJSON în ordinea lon/lat; filtrele și totalurile coincid | 45–60 min | De făcut; depinde de frontend și P3/P4 |
 | 6. Repetiția și rezerva | Fluxul import → verificare → date publicabile funcționează pe laptopul demo; testele de consistență trec; reluare locală explicită dacă AI nu răspunde | 45–60 min | De făcut |
 
-**Următorul pas este 2**, după ce echipa corectează sau înlocuiește fixture-urile incomplete pentru integrare. Scheletul și `/health` pot fi construite între timp fără date, iar testele pot folosi seturi sintetice minimale izolate. Auditul trebuie să rămână strict; nu transformăm erorile în succes pentru a încărca un snapshot incomplet.
+**Pornirea locală, pasul 2a, este finalizată. Următorul pas este 2b:** definirea citirii unui snapshot validat, în paralel cu contractul de import cu Emi. Încărcarea datelor pentru integrare așteaptă corectarea sau înlocuirea fixture-urilor incomplete. Auditul rămâne strict; nu transformăm erorile în succes pentru a încărca un snapshot incomplet.
 
-## API propus, încă neimplementat
+## API implementat și operații propuse
 
-Prefix de lucru pentru operațiile aplicației: `/api/v1`. `POST /extract` din planificarea existentă rămâne un punct de integrare de reconciliat, nu un al doilea extractor.
+Doar `GET /health`, redirecționarea `/` către `/docs` și documentația OpenAPI sunt implementate în această etapă. Celelalte operații din tabel sunt propuneri. Prefix de lucru pentru operațiile aplicației: `/api/v1`. `POST /extract` din planificarea existentă rămâne un punct de integrare de reconciliat, nu un al doilea extractor.
 
 | Operație | Comportament așteptat |
 |---|---|
@@ -52,18 +53,19 @@ Prefix de lucru pentru operațiile aplicației: `/api/v1`. `POST /extract` din p
 
 Pentru MVP: fișiere JSON locale, fără bază de date, cloud nou sau integrare video. Scrierile se proiectează pentru un singur proces local, cu blocare și înlocuire atomică; procesele multiple necesită alt mecanism de persistență. Nu expunem operațiile de scriere public fără un control de acces proiectat separat. Nu implementăm încă o formulă de scor; alegerea între cele două planuri aparține echipei înainte de clasament.
 
-## Verificarea primului pas
+## Verificarea etapelor implementate
 
 Din rădăcina repository-ului, cu Python 3.12 disponibil în mediul inspectat:
 
 ```powershell
-python -m api.validate_fixtures false_data
-python -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m api.validate_fixtures false_data
 ```
 
-Prima comandă doar citește și emite un raport JSON: cod `0` pentru fixture-uri coerente, `1` pentru neconcordanțe. Acceptă numai fixture-uri **sintetice**, pe schema `2.0`; nu este validator pentru publicarea datelor observate. Testele verifică situații cu date lipsă, dubluri, referințe rupte și coordonate invalide, folosind fișiere temporare sintetice.
+Auditul doar citește și emite un raport JSON: cod `0` pentru fixture-uri coerente, `1` pentru neconcordanțe. Acceptă numai fixture-uri **sintetice**, pe schema `2.0`; nu este validator pentru publicarea datelor observate. Testele verifică date lipsă, dubluri, referințe rupte și coordonate invalide pe fișiere temporare sintetice, plus răspunsurile HTTP și pornirea fără chei sau fișiere de date.
 
-Nu există în acest pas API, extracție reală, stocare de review sau conexiune cu frontend-ul. Finalizarea auditului nu înseamnă finalizarea backend-ului.
+Există serverul local de pornire; extracția reală, citirea snapshot-ului, stocarea de review și conexiunea cu frontend-ul nu sunt încă implementate. Această etapă nu înseamnă finalizarea backend-ului.
 
 ## Timp și reguli de lucru
 
