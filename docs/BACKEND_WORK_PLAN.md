@@ -29,26 +29,26 @@ Estimările sunt ore de lucru activ, nu un nou calendar de 25 de ore. Dependenț
 | 0. Delimitarea responsabilităților | Mihnea: backend/API, provizoriu; Emi: extracție; modulele colegilor nu sunt duplicate | 15 min | Documentat |
 | 1. Auditul contractului existent | Comandă repetabilă, erori explicite pentru referințe/totaluri/mod de date; fixture-urile originale rămân nemodificate | 30–45 min | Implementat; auditul semnalează problemele de mai sus |
 | 2a. Pornirea locală | Mediu `.venv`, FastAPI/Uvicorn, `/health`, OpenAPI și instrucțiuni; fără chei sau date necesare pentru pornire | 30 min | Implementat și verificat în ramura backend |
-| 2b. Citirea datelor | Încărcarea numai a unui snapshot validat și stări explicite pentru date indisponibile/invalide | 30 min | De făcut; fixture-urile actuale sunt incomplete |
+| 2b. Citirea datelor | Snapshot sintetic `2.0` validat la pornire, manifest/evenimente, identificator comun și erori explicite | 30 min | Implementat; setul actual este refuzat corect; datele observate nu sunt încă suportate |
 | 3. Contractul cu Emi și importul | Format agreat cu P1/Emi, adaptor către extracție, tratare timeout/JSON invalid; niciun candidat publicat automat; răspunsurile salvate sunt etichetate reluare | 60–90 min | De făcut; depinde de contractul și modulul lui Emi |
 | 4. Corectare și aprobare | Operatorul vede dovezile, corectează și aprobă/respinge; actualizări atomice, istoric de verificare și versiune pentru evitarea suprascrierilor; duplicatele păstrează un ID canonic | 90 min | De făcut |
 | 5. Integrarea cu frontend-ul | Listă și dosar de locație, citite din exportul modulului de prioritizare; GeoJSON în ordinea lon/lat; filtrele și totalurile coincid | 45–60 min | De făcut; depinde de frontend și P3/P4 |
 | 6. Repetiția și rezerva | Fluxul import → verificare → date publicabile funcționează pe laptopul demo; testele de consistență trec; reluare locală explicită dacă AI nu răspunde | 45–60 min | De făcut |
 
-**Pornirea locală, pasul 2a, este finalizată. Următorul pas este 2b:** definirea citirii unui snapshot validat, în paralel cu contractul de import cu Emi. Încărcarea datelor pentru integrare așteaptă corectarea sau înlocuirea fixture-urilor incomplete. Auditul rămâne strict; nu transformăm erorile în succes pentru a încărca un snapshot incomplet.
+**Pașii 2a și 2b sunt implementați pentru dezvoltare. Următorul pas este 3:** contractul de import cu Emi. Încărcarea unui set pentru integrare așteaptă corectarea sau înlocuirea fixture-urilor incomplete. Publicarea datelor observate cere validarea și fluxul de review corespunzătoare; cititorul sintetic nu o autorizează. Detalii în [contractul citirii](SNAPSHOT_READ_API.md).
 
 ## API implementat și operații propuse
 
-Doar `GET /health`, redirecționarea `/` către `/docs` și documentația OpenAPI sunt implementate în această etapă. Celelalte operații din tabel sunt propuneri. Prefix de lucru pentru operațiile aplicației: `/api/v1`. `POST /extract` din planificarea existentă rămâne un punct de integrare de reconciliat, nu un al doilea extractor.
+Sunt implementate `GET /health`, `/docs`/OpenAPI și citirea sintetică prin `GET /api/v1/manifest` și `GET /api/v1/events`. Importul, review-ul și dosarul locației din tabel rămân propuneri. `POST /extract` din planificarea existentă rămâne un punct de integrare de reconciliat, nu un al doilea extractor.
 
 | Operație | Comportament așteptat |
 |---|---|
 | `GET /health` | Confirmă că serverul rulează; nu pretinde că AI sau setul de date sunt disponibile |
-| `GET /api/v1/manifest` | Modul datelor, versiune, perioadă și totaluri validate |
+| `GET /api/v1/manifest` | Implementat pentru snapshot sintetic: manifest, versiune SHA-256 și număr eligibil; 503 pentru set invalid |
 | `POST /api/v1/imports` | Primește textul și identificarea sursei; apelează modulul lui Emi și produce candidați pentru review |
 | `PATCH /api/v1/candidates/{id}` | Corectează câmpurile, cu proveniență și verificarea versiunii |
 | `POST /api/v1/candidates/{id}/review` | Aprobă/respinge sau asociază unui eveniment canonic, cu operator și moment |
-| `GET /api/v1/events` | Evenimente publicabile din modul de date selectat, fără amestec sintetic/observat |
+| `GET /api/v1/events` | Implementat pentru evenimente sintetice eligibile; etichetă permanentă și filtrare după review/municipiu/perioadă/precizie |
 | `GET /api/v1/locations/{id}` | Dosar: evenimente unice, surse, context, scor și recomandări furnizate de modulele colegilor |
 
 Pentru MVP: fișiere JSON locale, fără bază de date, cloud nou sau integrare video. Scrierile se proiectează pentru un singur proces local, cu blocare și înlocuire atomică; procesele multiple necesită alt mecanism de persistență. Nu expunem operațiile de scriere public fără un control de acces proiectat separat. Nu implementăm încă o formulă de scor; alegerea între cele două planuri aparține echipei înainte de clasament.
@@ -65,7 +65,7 @@ Din rădăcina repository-ului, cu Python 3.12 disponibil în mediul inspectat:
 
 Auditul doar citește și emite un raport JSON: cod `0` pentru fixture-uri coerente, `1` pentru neconcordanțe. Acceptă numai fixture-uri **sintetice**, pe schema `2.0`; nu este validator pentru publicarea datelor observate. Testele verifică date lipsă, dubluri, referințe rupte și coordonate invalide pe fișiere temporare sintetice, plus răspunsurile HTTP și pornirea fără chei sau fișiere de date.
 
-Există serverul local de pornire; extracția reală, citirea snapshot-ului, stocarea de review și conexiunea cu frontend-ul nu sunt încă implementate. Această etapă nu înseamnă finalizarea backend-ului.
+Există serverul local și citirea de snapshot sintetic validat. Extracția reală, publicarea datelor observate, stocarea de review și conexiunea cu frontend-ul nu sunt încă implementate. Această etapă nu înseamnă finalizarea backend-ului.
 
 ## Timp și reguli de lucru
 

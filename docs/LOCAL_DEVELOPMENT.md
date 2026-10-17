@@ -1,6 +1,6 @@
 # Pornirea locală a backend-ului SafeIași
 
-Etapa curentă: server FastAPI cu `/health`, documentație interactivă și auditul fixture-urilor sintetice. Extracția AI, încărcarea unui snapshot validat, review-ul și frontend-ul urmează separat. Pornirea nu necesită chei API, conturi, date reale sau corectarea fixture-urilor incomplete.
+Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit și citire de snapshot sintetic validat. Extracția AI, review-ul, frontend-ul și publicarea datelor reale urmează separat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de date refuză seturile invalide.
 
 ## Prima instalare — Windows / PowerShell
 
@@ -30,6 +30,8 @@ Păstrează terminalul deschis. Oprești serverul cu **Ctrl+C** în terminalul c
 - [Verificarea serverului](http://127.0.0.1:8000/health)
 - [Documentația interactivă](http://127.0.0.1:8000/docs)
 - [Contractul OpenAPI JSON](http://127.0.0.1:8000/openapi.json)
+- [Manifestul snapshot-ului](http://127.0.0.1:8000/api/v1/manifest)
+- [Evenimentele eligibile](http://127.0.0.1:8000/api/v1/events)
 
 Răspunsul așteptat de la `/health`:
 
@@ -38,6 +40,8 @@ Răspunsul așteptat de la `/health`:
 ```
 
 Acesta confirmă numai că serverul răspunde. Nu certifică datele, disponibilitatea LLM sau finalizarea backend-ului. Adresa `/` redirecționează către `/docs`. Serverul ascultă pe laptopul local; în această etapă nu îl expunem în rețea.
+
+Manifestul și evenimentele folosesc același snapshot încărcat la pornire. Implicit acesta este `false_data/`, care este încă incomplet: cele două rute răspund **503 `invalid_snapshot`** cu diagnostice, în timp ce `/health` rămâne 200. Pentru selectarea unui director sintetic coerent, filtrare și coduri de eroare, vezi [contractul citirii](SNAPSHOT_READ_API.md). După corectarea sau schimbarea fișierelor trebuie repornit serverul; nu sunt reîncărcate automat la fiecare cerere.
 
 Dintr-un al doilea terminal PowerShell poți verifica răspunsul astfel:
 
@@ -70,4 +74,4 @@ Testele HTTP folosesc clientul ASGI local și verifică inclusiv pornirea dintr-
 | `/docs` gol fără internet | Deschide `/health` sau `/openapi.json`; Swagger are resurse CDN |
 | Auditul întoarce `1` | Citește raportul; nu este un eșec de instalare și nu trebuie ascuns prin inventarea datelor lipsă |
 
-Pașii următori sunt citirea unui snapshot validat și contractul de import cu Emi, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/).
+Pasul următor este contractul de import cu Emi; publicarea datelor observate necesită validarea și fluxul de review aferente, conform [planului backend](BACKEND_WORK_PLAN.md). Surse pentru convențiile framework-ului: [FastAPI — pornire](https://fastapi.tiangolo.com/tutorial/first-steps/), [medii virtuale](https://fastapi.tiangolo.com/virtual-environments/), [testare](https://fastapi.tiangolo.com/tutorial/testing/), [încărcare la pornire](https://fastapi.tiangolo.com/advanced/events/).

@@ -36,12 +36,14 @@ class ApiStartupTests(unittest.TestCase):
         script = (
             "from fastapi.testclient import TestClient; "
             "from api.main import app; "
-            "client = TestClient(app); "
-            "response = client.get('/health'); "
-            "assert response.status_code == 200, response.text; "
-            "assert response.json()['status'] == 'ok'"
+            "\nwith TestClient(app) as client:\n"
+            " response = client.get('/health')\n"
+            " assert response.status_code == 200, response.text\n"
+            " assert response.json()['status'] == 'ok'\n"
+            " assert client.get('/api/v1/manifest').status_code == 503\n"
         )
         with tempfile.TemporaryDirectory() as directory:
+            environment["SAFEIASI_SNAPSHOT_DIR"] = directory
             result = subprocess.run(
                 [sys.executable, "-c", script], cwd=directory, env=environment,
                 capture_output=True, text=True, timeout=30,
