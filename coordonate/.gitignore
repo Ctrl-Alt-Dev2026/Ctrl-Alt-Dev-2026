@@ -1,0 +1,5 @@
+# Răspunsurile brute Overpass din osmnx (~20 MB); indexul din date_referinta/osm le înlocuiește.
+cache/
+__pycache__/
+*.py[cod]
+*.tmp

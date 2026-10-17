@@ -1,0 +1,485 @@
+[
+ {
+  "event_id": "ev-001",
+  "article_ids": [
+   "syn-001"
+  ],
+  "urls": [
+   "https://example.com/syn-001"
+  ],
+  "data_eveniment": "2025-03-12",
+  "ora": "21:30",
+  "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "viteza",
+  "gravitate": "grav",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+   "gravitate": "cu traumatisme grave",
+   "cauza_raportata": "circula cu viteză",
+   "ora": "în jurul orei 21:30"
+  },
+  "verificat": true
+ },
+ {
+  "event_id": "ev-002",
+  "article_ids": [
+   "syn-005"
+  ],
+  "urls": [
+   "https://example.com/syn-005"
+  ],
+  "data_eveniment": "2025-06-03",
+  "ora": "19:10",
+  "loc_text": "trecerea de la Podu Roș",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "traversare_neregulamentara",
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "trecerea de la Podu Roș",
+   "gravitate": "răni ușoare"
+  },
+  "verificat": true
+ },
+ {
+  "event_id": "ev-003",
+  "article_ids": [
+   "syn-002",
+   "syn-003"
+  ],
+  "urls": [
+   "https://example.com/syn-002",
+   "https://example.com/syn-003"
+  ],
+  "data_eveniment": "2025-11-19",
+  "ora": "22:45",
+  "loc_text": "trecerea de pietoni din zona Podu Roș",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "viteza",
+  "gravitate": "deces",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "trecerea de pietoni din zona Podu Roș",
+   "gravitate": "a murit",
+   "cauza_raportata": "ar fi circulat cu viteză excesivă, susțin martorii",
+   "ora": "în jurul orei 22:45"
+  },
+  "verificat": true
+ },
+ {
+  "event_id": "ev-004",
+  "article_ids": [
+   "syn-006"
+  ],
+  "urls": [
+   "https://example.com/syn-006"
+  ],
+  "data_eveniment": "2026-02-08",
+  "ora": null,
+  "loc_text": "intersecția de la Podu Roș",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": null,
+  "dovezi": {
+   "loc_text": "intersecția de la Podu Roș",
+   "gravitate": "ușor rănit"
+  },
+  "verificat": true
+ },
+ {
+  "event_id": "ev-005",
+  "article_ids": [
+   "syn-007"
+  ],
+  "urls": [
+   "https://example.com/syn-007"
+  ],
+  "data_eveniment": "2024-12-05",
+  "ora": "18:20",
+  "loc_text": "Bd. Demo, zona Păcurari",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "neacordare_prioritate",
+  "gravitate": "grav",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "Bd. Demo, zona Păcurari",
+   "gravitate": "în stare gravă"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-006",
+  "article_ids": [
+   "syn-008"
+  ],
+  "urls": [
+   "https://example.com/syn-008"
+  ],
+  "data_eveniment": "2025-09-15",
+  "ora": "07:45",
+  "loc_text": "trecerea din Păcurari",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "trecerea din Păcurari",
+   "gravitate": "răni ușoare"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-007",
+  "article_ids": [
+   "syn-009"
+  ],
+  "urls": [
+   "https://example.com/syn-009"
+  ],
+  "data_eveniment": "2026-04-22",
+  "ora": "20:30",
+  "loc_text": "trecerea de pietoni din Păcurari",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "viteza",
+  "gravitate": "grav",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "trecerea de pietoni din Păcurari",
+   "gravitate": "răni grave"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-008",
+  "article_ids": [
+   "syn-010"
+  ],
+  "urls": [
+   "https://example.com/syn-010"
+  ],
+  "data_eveniment": "2025-01-14",
+  "ora": "08:05",
+  "loc_text": "trecerea de lângă școala din Tătărași",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "traversare_neregulamentara",
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "trecerea de lângă școala din Tătărași",
+   "gravitate": "ușor rănit"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-009",
+  "article_ids": [
+   "syn-011"
+  ],
+  "urls": [
+   "https://example.com/syn-011"
+  ],
+  "data_eveniment": "2025-10-02",
+  "ora": "13:15",
+  "loc_text": "intersecția din Tătărași",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "neacordare_prioritate",
+  "gravitate": "grav",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "intersecția din Tătărași",
+   "gravitate": "în stare gravă"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-010",
+  "article_ids": [
+   "syn-012"
+  ],
+  "urls": [
+   "https://example.com/syn-012"
+  ],
+  "data_eveniment": "2025-02-27",
+  "ora": "20:50",
+  "loc_text": "trecerea din Nicolina",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "vizibilitate",
+  "gravitate": "grav",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "trecerea din Nicolina",
+   "gravitate": "răni grave",
+   "cauza_raportata": "șoferul nu a observat pietonul pe întuneric"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-011",
+  "article_ids": [
+   "syn-013"
+  ],
+  "urls": [
+   "https://example.com/syn-013"
+  ],
+  "data_eveniment": "2025-12-11",
+  "ora": "19:30",
+  "loc_text": "trecerea de pietoni din Nicolina",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "trecerea de pietoni din Nicolina",
+   "gravitate": "ușor rănită"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-012",
+  "article_ids": [
+   "syn-014"
+  ],
+  "urls": [
+   "https://example.com/syn-014"
+  ],
+  "data_eveniment": "2025-05-19",
+  "ora": "16:40",
+  "loc_text": "trecerea din Copou, lângă stație",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autobuz"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "trecerea din Copou, lângă stație",
+   "gravitate": "răni ușoare"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-013",
+  "article_ids": [
+   "syn-015"
+  ],
+  "urls": [
+   "https://example.com/syn-015"
+  ],
+  "data_eveniment": "2026-01-30",
+  "ora": null,
+  "loc_text": "intersecția din Copou",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "grav",
+  "noapte": null,
+  "dovezi": {
+   "loc_text": "intersecția din Copou",
+   "gravitate": "în stare gravă"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-014",
+  "article_ids": [
+   "syn-016"
+  ],
+  "urls": [
+   "https://example.com/syn-016"
+  ],
+  "data_eveniment": "2025-09-08",
+  "ora": "07:55",
+  "loc_text": "trecerea de pe Alexandru cel Bun",
+  "precizie_loc": "strada",
+  "lat": 47.163082,
+  "lon": 27.564712,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": "viteza",
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "trecerea de pe Alexandru cel Bun",
+   "gravitate": "răni ușoare"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-015",
+  "article_ids": [
+   "syn-017"
+  ],
+  "urls": [
+   "https://example.com/syn-017"
+  ],
+  "data_eveniment": "2025-07-21",
+  "ora": "23:10",
+  "loc_text": "pe Bulevardul Socola",
+  "precizie_loc": "strada",
+  "lat": 47.144385,
+  "lon": 27.5958,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "pe Bulevardul Socola",
+   "gravitate": "ușor rănit"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-016",
+  "article_ids": [
+   "syn-004"
+  ],
+  "urls": [
+   "https://example.com/syn-004"
+  ],
+  "data_eveniment": "2025-04-07",
+  "ora": null,
+  "loc_text": "în zona Gării",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": true,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "usor",
+  "noapte": false,
+  "dovezi": {
+   "loc_text": "în zona Gării",
+   "gravitate": "doar cu câteva zgârieturi"
+  },
+  "verificat": false
+ },
+ {
+  "event_id": "ev-017",
+  "article_ids": [
+   "syn-018"
+  ],
+  "urls": [
+   "https://example.com/syn-018"
+  ],
+  "data_eveniment": "2025-08-30",
+  "ora": "21:00",
+  "loc_text": "în Valea Lupului, la intersecția cu drumul spre Iași",
+  "precizie_loc": "vag",
+  "lat": null,
+  "lon": null,
+  "in_iasi": false,
+  "participanti": [
+   "pieton",
+   "autoturism"
+  ],
+  "cauza_raportata": null,
+  "gravitate": "grav",
+  "noapte": true,
+  "dovezi": {
+   "loc_text": "în Valea Lupului",
+   "gravitate": "în stare gravă"
+  },
+  "verificat": false
+ }
+]

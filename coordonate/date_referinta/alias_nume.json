@@ -1,0 +1,15 @@
+{
+  "_citeste_ma": [
+    "Alias-uri de nume pentru căutarea în indexul OSM local. Doar text -> text.",
+    "Nu puneți coordonate aici: ele vin din OSM (index_osm.json.gz).",
+    "Cheile se scriu fără diacritice și cu litere mici.",
+    "alias_nume: se aplică oricărui nume (străzi, zone, repere), după prefix (ex. 'al i cuza').",
+    "repere: se aplică DOAR la căutarea reperelor (POI), nu și a străzilor.",
+    "Adăugați doar forme confirmate de echipă."
+  ],
+  "alias_nume": {},
+  "repere": {
+    "palas": "Palas Mall"
+  },
+  "prefixe": {}
+}

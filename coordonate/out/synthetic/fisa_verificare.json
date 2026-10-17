@@ -1,0 +1,567 @@
+[
+ {
+  "event_id": "ev-001",
+  "data_eveniment": "2025-03-12",
+  "ora": "21:30",
+  "gravitate": "grav",
+  "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/5964858917"
+  ],
+  "avertismente": [
+   "strada negăsită în OSM: „Bulevardul Demo”"
+  ],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-001"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-002",
+  "data_eveniment": "2025-06-03",
+  "ora": "19:10",
+  "gravitate": "usor",
+  "loc_text": "trecerea de la Podu Roș",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/5964858917"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
+   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-005"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-003",
+  "data_eveniment": "2025-11-19",
+  "ora": "22:45",
+  "gravitate": "deces",
+  "loc_text": "trecerea de pietoni din zona Podu Roș",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/5964858917"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-002",
+   "https://example.com/syn-003"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-004",
+  "data_eveniment": "2026-02-08",
+  "ora": null,
+  "gravitate": "usor",
+  "loc_text": "intersecția de la Podu Roș",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/5964858917"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
+   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-006"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-005",
+  "data_eveniment": "2024-12-05",
+  "ora": "18:20",
+  "gravitate": "grav",
+  "loc_text": "Bd. Demo, zona Păcurari",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944301"
+  ],
+  "avertismente": [
+   "strada negăsită în OSM: „Bulevardul Demo”"
+  ],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-007"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-006",
+  "data_eveniment": "2025-09-15",
+  "ora": "07:45",
+  "gravitate": "usor",
+  "loc_text": "trecerea din Păcurari",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944301"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-008"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-007",
+  "data_eveniment": "2026-04-22",
+  "ora": "20:30",
+  "gravitate": "grav",
+  "loc_text": "trecerea de pietoni din Păcurari",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944301"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-009"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-008",
+  "data_eveniment": "2025-01-14",
+  "ora": "08:05",
+  "gravitate": "usor",
+  "loc_text": "trecerea de lângă școala din Tătărași",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944302"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Tătărași”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-010"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-009",
+  "data_eveniment": "2025-10-02",
+  "ora": "13:15",
+  "gravitate": "grav",
+  "loc_text": "intersecția din Tătărași",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944302"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Tătărași”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-011"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-010",
+  "data_eveniment": "2025-02-27",
+  "ora": "20:50",
+  "gravitate": "grav",
+  "loc_text": "trecerea din Nicolina",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944300"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Nicolina”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-012"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-011",
+  "data_eveniment": "2025-12-11",
+  "ora": "19:30",
+  "gravitate": "usor",
+  "loc_text": "trecerea de pietoni din Nicolina",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944300"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Nicolina”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-013"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-012",
+  "data_eveniment": "2025-05-19",
+  "ora": "16:40",
+  "gravitate": "usor",
+  "loc_text": "trecerea din Copou, lângă stație",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "way/670147612"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Copou”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-014"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-013",
+  "data_eveniment": "2026-01-30",
+  "ora": null,
+  "gravitate": "grav",
+  "loc_text": "intersecția din Copou",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "way/670147612"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Copou”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-015"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-014",
+  "data_eveniment": "2025-09-08",
+  "ora": "07:55",
+  "gravitate": "usor",
+  "loc_text": "trecerea de pe Alexandru cel Bun",
+  "precizie_loc": "strada",
+  "in_iasi": true,
+  "lat": 47.163082,
+  "lon": 27.564712,
+  "metoda": "strada_osm",
+  "incredere": "medie",
+  "referinte_osm": [
+   "way/23024291",
+   "node/2468944285"
+  ],
+  "avertismente": [
+   "„Alexandru cel Bun” potrivit fără prefix cu „Bulevardul Alexandru cel Bun”"
+  ],
+  "de_verificat": [
+   "9 treceri pe „Bulevardul Alexandru cel Bun”: care anume?",
+   "se știe doar strada; locul pe stradă e neconfirmat"
+  ],
+  "urls": [
+   "https://example.com/syn-016"
+  ],
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.163082&mlon=27.564712#map=19/47.163082/27.564712",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.163082,27.564712",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.163082&lng=27.564712&z=18"
+  },
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-015",
+  "data_eveniment": "2025-07-21",
+  "ora": "23:10",
+  "gravitate": "usor",
+  "loc_text": "pe Bulevardul Socola",
+  "precizie_loc": "strada",
+  "in_iasi": true,
+  "lat": 47.144385,
+  "lon": 27.5958,
+  "metoda": "strada_osm",
+  "incredere": "medie",
+  "referinte_osm": [
+   "way/22776494"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "se știe doar strada; locul pe stradă e neconfirmat"
+  ],
+  "urls": [
+   "https://example.com/syn-017"
+  ],
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.144385&mlon=27.5958#map=19/47.144385/27.5958",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.144385,27.5958",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.144385&lng=27.5958&z=18"
+  },
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-016",
+  "data_eveniment": "2025-04-07",
+  "ora": null,
+  "gravitate": "usor",
+  "loc_text": "în zona Gării",
+  "precizie_loc": "vag",
+  "in_iasi": true,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/2468944297"
+  ],
+  "avertismente": [],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Gară”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-004"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ },
+ {
+  "event_id": "ev-017",
+  "data_eveniment": "2025-08-30",
+  "ora": "21:00",
+  "gravitate": "grav",
+  "loc_text": "în Valea Lupului, la intersecția cu drumul spre Iași",
+  "precizie_loc": "vag",
+  "in_iasi": false,
+  "lat": null,
+  "lon": null,
+  "metoda": "zona_osm",
+  "incredere": "scazuta",
+  "referinte_osm": [
+   "node/260953135"
+  ],
+  "avertismente": [
+   "textul indică altă localitate: Valea Lupului"
+  ],
+  "de_verificat": [
+   "localizare doar la nivel de zonă („Valea Lupului”): fără coordonate"
+  ],
+  "urls": [
+   "https://example.com/syn-018"
+  ],
+  "linkuri_harta": {},
+  "corectura": {
+   "lat_corect": null,
+   "lon_corect": null,
+   "precizie_corecta": null,
+   "in_iasi_corect": null,
+   "nota": null,
+   "verificat_de": null
+  }
+ }
+]

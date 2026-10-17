@@ -1,0 +1,139 @@
+{
+ "_citeste_ma": [
+  "Noduri pe care presa le numește ca intersecții (ex. „intersecția de la Podu Roș”).",
+  "Fiecare intrare trimite la un nod OSM real; nu se scriu coordonate de mână.",
+  "CUM VERIFICI: deschide `link`, confirmă că nodul e intersecția pe care o știți",
+  "sub acel nume. Dacă e corect: verificat=true, verificat_de, verificat_la.",
+  "Dacă e greșit: înlocuiește `osm` cu nodul corect (node/<id> de pe openstreetmap.org)",
+  "sau șterge intrarea. Intrările cu verificat=false NU sunt folosite la localizare."
+ ],
+ "generat_la": "2026-10-17T17:53:18+0300",
+ "noduri": [
+  {
+   "id": "podu-ros",
+   "nume": "Podu Roș",
+   "alias": [
+    "Podul Roș"
+   ],
+   "osm": "node/244529560",
+   "link": "https://www.openstreetmap.org/node/244529560",
+   "strazi_osm": [
+    "Bulevardul Țuțora",
+    "Piața Podu Roș",
+    "Podu Roș"
+   ],
+   "sursa_propunere": "loc OSM „Podu Roș” (node/5964858917, neighbourhood); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "piata-unirii",
+   "nume": "Piața Unirii",
+   "alias": [
+    "Unirii"
+   ],
+   "osm": "node/2176166633",
+   "link": "https://www.openstreetmap.org/node/2176166633",
+   "strazi_osm": [
+    "Piața Unirii",
+    "Strada Cuza Vodă"
+   ],
+   "sursa_propunere": "strada OSM „Piața Unirii” (way/252595530); nodul ei cu cele mai multe străzi",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "piata-mihai-eminescu",
+   "nume": "Piața Mihai Eminescu",
+   "alias": [],
+   "osm": "node/246590088",
+   "link": "https://www.openstreetmap.org/node/246590088",
+   "strazi_osm": [
+    "Bulevardul Independenței",
+    "Piața Mihail Eminescu",
+    "Strada Vasile Conta"
+   ],
+   "sursa_propunere": "poi OSM „Piața Mihai Eminescu” (node/10565928150, stop_position); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "podu-de-fier",
+   "nume": "Podu de Fier",
+   "alias": [
+    "Podul de Fier"
+   ],
+   "osm": "node/246753900",
+   "link": "https://www.openstreetmap.org/node/246753900",
+   "strazi_osm": [
+    "Bulevardul Constantin Alexandru Rosetti",
+    "Bulevardul Tudor Vladimirescu",
+    "Strada Cucu",
+    "Strada Eternitate"
+   ],
+   "sursa_propunere": "poi OSM „Podu de Fier” (node/12857033786, stop_position); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "agronomie",
+   "nume": "Agronomie",
+   "alias": [
+    "Rond Agronomie",
+    "Rondul Agronomie"
+   ],
+   "osm": "node/267914671",
+   "link": "https://www.openstreetmap.org/node/267914671",
+   "strazi_osm": [
+    "Aleea Mihail Sadoveanu",
+    "Strada Dumitrașcu Cantacuzino",
+    "Strada Grigore Ghica Vodă"
+   ],
+   "sursa_propunere": "loc OSM „Rond Agronomie” (way/240129473, square); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "piata-independentei",
+   "nume": "Piața Independenței",
+   "alias": [],
+   "osm": "node/262013893",
+   "link": "https://www.openstreetmap.org/node/262013893",
+   "strazi_osm": [
+    "Strada Mihai Eminescu",
+    "Strada Veronica Micle"
+   ],
+   "sursa_propunere": "loc OSM „Piața Independenței” (relation/7918377, square); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  },
+  {
+   "id": "piata-nicolina",
+   "nume": "Piața Nicolina",
+   "alias": [],
+   "osm": "node/9857985000",
+   "link": "https://www.openstreetmap.org/node/9857985000",
+   "strazi_osm": [
+    "Bulevardul Nicolae Iorga",
+    "Strada Broscăriei"
+   ],
+   "sursa_propunere": "poi OSM „Piața Nicolina” (node/10573422754, stop_position); intersecția cu cele mai multe străzi în 150 m",
+   "verificat": false,
+   "verificat_de": null,
+   "verificat_la": null,
+   "nota": null
+  }
+ ]
+}

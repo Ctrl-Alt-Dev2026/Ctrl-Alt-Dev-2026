@@ -1,0 +1,22 @@
+# Aria C (coordonate). Versiuni verificate cu Python 3.12, în .venv din rădăcina repo-ului:
+#   py -3.12 -m venv .venv
+#   .venv\Scripts\python -m pip install -r coordonate/requirements.txt
+# osmnx e necesar doar pentru `python -m coordonate descarca`; rezolvarea folosește
+# numai biblioteca standard și indexul local.
+osmnx==2.1.1
+certifi==2026.7.22
+charset-normalizer==3.5.2
+geopandas==1.2.0
+idna==3.20
+networkx==3.7
+numpy==2.5.4
+packaging==26.3
+pandas==3.0.6
+pyogrio==0.13.0
+pyproj==3.8.0
+python-dateutil==2.9.0.post0
+requests==2.34.2
+shapely==2.2.0
+six==1.17.0
+tzdata==2026.5
+urllib3==2.8.0

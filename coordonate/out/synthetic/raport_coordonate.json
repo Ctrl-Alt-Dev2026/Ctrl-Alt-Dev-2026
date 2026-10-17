@@ -1,0 +1,1013 @@
+{
+ "generat_la": "2026-10-17T18:10:10+0300",
+ "data_mode": "synthetic",
+ "intrare": "false_data/accidents.json",
+ "iesire": "coordonate/out/synthetic/accidents.json",
+ "granita": {
+  "metoda": "poligon_osm",
+  "sursa": "relation/1207838",
+  "nume": "Iași",
+  "nr_unitati_vecine": 44
+ },
+ "statistici": {
+  "nr_evenimente": 17,
+  "nr_localizate_precis": 0,
+  "nr_cu_coordonate": 2,
+  "nr_fara_coordonate": 15,
+  "nr_in_iasi": 16,
+  "nr_in_afara_iasi": 1,
+  "nr_in_iasi_necunoscut": 0,
+  "pe_precizie": {
+   "vag": 15,
+   "strada": 2
+  },
+  "pe_metoda": {
+   "zona_osm": 15,
+   "strada_osm": 2
+  },
+  "pe_incredere": {
+   "scazuta": 15,
+   "medie": 2
+  },
+  "nr_procesate_acum": 17,
+  "nr_de_verificat_manual": 17,
+  "noduri_neverificate_potrivite": {
+   "podu-ros": 2
+  }
+ },
+ "retea": {
+  "sursa": "index OSM local (osmnx)",
+  "index_descarcat_la": "2026-10-17T17:36:57+0300",
+  "numere_index": {
+   "nume_strazi": 1834,
+   "componente_strazi": 2456,
+   "noduri": 38667,
+   "treceri": 1614,
+   "poi": 5160,
+   "locuri": 288,
+   "strazi_cu_adrese": 892,
+   "unitati_admin": 45
+  },
+  "cereri_retea": 0
+ },
+ "sursa_date": "OpenStreetMap contributors, ODbL 1.0 (index local construit cu osmnx)",
+ "evenimente": [
+  {
+   "event_id": "ev-001",
+   "loc_text": "pe Bulevardul Demo, în zona Podu Roș",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1505621,
+    "lon": 27.5865091
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/5964858917"
+   ],
+   "avertismente": [
+    "strada negăsită în OSM: „Bulevardul Demo”"
+   ],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": false,
+    "strazi": [
+     "Bulevardul Demo"
+    ],
+    "pe": [],
+    "la": [],
+    "din": [],
+    "zone": [
+     "Podu Roș"
+    ],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": []
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/5964858917",
+     "nume": "Podu Roș",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1505621,
+     "lon": 27.5865091
+    }
+   ]
+  },
+  {
+   "event_id": "ev-002",
+   "loc_text": "trecerea de la Podu Roș",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1505621,
+    "lon": 27.5865091
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/5964858917"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
+    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+   ],
+   "noduri_neverificate": [
+    "podu-ros"
+   ],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [
+     "Podu Roș"
+    ],
+    "din": [],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/5964858917",
+     "nume": "Podu Roș",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1505621,
+     "lon": 27.5865091
+    }
+   ]
+  },
+  {
+   "event_id": "ev-003",
+   "loc_text": "trecerea de pietoni din zona Podu Roș",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1505621,
+    "lon": 27.5865091
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/5964858917"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [],
+    "zone": [
+     "Podu Roș"
+    ],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/5964858917",
+     "nume": "Podu Roș",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1505621,
+     "lon": 27.5865091
+    }
+   ]
+  },
+  {
+   "event_id": "ev-004",
+   "loc_text": "intersecția de la Podu Roș",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1505621,
+    "lon": 27.5865091
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/5964858917"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
+    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
+   ],
+   "noduri_neverificate": [
+    "podu-ros"
+   ],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": true,
+    "strazi": [],
+    "pe": [],
+    "la": [
+     "Podu Roș"
+    ],
+    "din": [],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/5964858917",
+     "nume": "Podu Roș",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1505621,
+     "lon": 27.5865091
+    }
+   ]
+  },
+  {
+   "event_id": "ev-005",
+   "loc_text": "Bd. Demo, zona Păcurari",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1740452,
+    "lon": 27.5578839
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944301"
+   ],
+   "avertismente": [
+    "strada negăsită în OSM: „Bulevardul Demo”"
+   ],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": false,
+    "strazi": [
+     "Bulevardul Demo"
+    ],
+    "pe": [],
+    "la": [],
+    "din": [],
+    "zone": [
+     "Păcurari"
+    ],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": []
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944301",
+     "nume": "Păcurari",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1740452,
+     "lon": 27.5578839
+    }
+   ]
+  },
+  {
+   "event_id": "ev-006",
+   "loc_text": "trecerea din Păcurari",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1740452,
+    "lon": 27.5578839
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944301"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Păcurari"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944301",
+     "nume": "Păcurari",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1740452,
+     "lon": 27.5578839
+    }
+   ]
+  },
+  {
+   "event_id": "ev-007",
+   "loc_text": "trecerea de pietoni din Păcurari",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1740452,
+    "lon": 27.5578839
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944301"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Păcurari”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Păcurari"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944301",
+     "nume": "Păcurari",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1740452,
+     "lon": 27.5578839
+    }
+   ]
+  },
+  {
+   "event_id": "ev-008",
+   "loc_text": "trecerea de lângă școala din Tătărași",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1610399,
+    "lon": 27.6113534
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944302"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Tătărași”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Tătărași"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [
+     "scoala"
+    ],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944302",
+     "nume": "Tătărași",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1610399,
+     "lon": 27.6113534
+    }
+   ]
+  },
+  {
+   "event_id": "ev-009",
+   "loc_text": "intersecția din Tătărași",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1610399,
+    "lon": 27.6113534
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944302"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Tătărași”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": true,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Tătărași"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944302",
+     "nume": "Tătărași",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1610399,
+     "lon": 27.6113534
+    }
+   ]
+  },
+  {
+   "event_id": "ev-010",
+   "loc_text": "trecerea din Nicolina",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1468516,
+    "lon": 27.5838661
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944300"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Nicolina”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Nicolina"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944300",
+     "nume": "Nicolina",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1468516,
+     "lon": 27.5838661
+    }
+   ]
+  },
+  {
+   "event_id": "ev-011",
+   "loc_text": "trecerea de pietoni din Nicolina",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1468516,
+    "lon": 27.5838661
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944300"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Nicolina”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Nicolina"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944300",
+     "nume": "Nicolina",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "neighbourhood",
+     "lat": 47.1468516,
+     "lon": 27.5838661
+    }
+   ]
+  },
+  {
+   "event_id": "ev-012",
+   "loc_text": "trecerea din Copou, lângă stație",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1801944,
+    "lon": 27.5656845
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "way/670147612"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Copou”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Copou"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "way/670147612",
+     "nume": "Copou",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "quarter",
+     "lat": 47.1801944,
+     "lon": 27.5656845
+    }
+   ]
+  },
+  {
+   "event_id": "ev-013",
+   "loc_text": "intersecția din Copou",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1801944,
+    "lon": 27.5656845
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "way/670147612"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Copou”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": true,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Copou"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "way/670147612",
+     "nume": "Copou",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "quarter",
+     "lat": 47.1801944,
+     "lon": 27.5656845
+    }
+   ]
+  },
+  {
+   "event_id": "ev-014",
+   "loc_text": "trecerea de pe Alexandru cel Bun",
+   "lat": 47.163082,
+   "lon": 27.564712,
+   "precizie_loc": "strada",
+   "in_iasi": true,
+   "metoda": "strada_osm",
+   "incredere": "medie",
+   "punct_orientativ": {
+    "lat": 47.163082,
+    "lon": 27.5647123
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "way/23024291",
+    "node/2468944285"
+   ],
+   "avertismente": [
+    "„Alexandru cel Bun” potrivit fără prefix cu „Bulevardul Alexandru cel Bun”"
+   ],
+   "de_verificat": [
+    "9 treceri pe „Bulevardul Alexandru cel Bun”: care anume?",
+    "se știe doar strada; locul pe stradă e neconfirmat"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": true,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [
+     "Alexandru cel Bun"
+    ],
+    "la": [],
+    "din": [],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": []
+   },
+   "candidati_osm": [
+    {
+     "osm": "way/23024291",
+     "nume": "Bulevardul Alexandru cel Bun",
+     "fel": "strada",
+     "highway": [
+      "secondary",
+      "tertiary"
+     ],
+     "unitate": "Iași",
+     "lat": 47.163082,
+     "lon": 27.5647123
+    },
+    {
+     "osm": "node/2468944285",
+     "nume": "Alexandru cel Bun",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.163837,
+     "lon": 27.5630556
+    }
+   ]
+  },
+  {
+   "event_id": "ev-015",
+   "loc_text": "pe Bulevardul Socola",
+   "lat": 47.144385,
+   "lon": 27.5958,
+   "precizie_loc": "strada",
+   "in_iasi": true,
+   "metoda": "strada_osm",
+   "incredere": "medie",
+   "punct_orientativ": {
+    "lat": 47.1443846,
+    "lon": 27.5957999
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "way/22776494"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "se știe doar strada; locul pe stradă e neconfirmat"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": false,
+    "strazi": [
+     "Bulevardul Socola"
+    ],
+    "pe": [],
+    "la": [],
+    "din": [],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": []
+   },
+   "candidati_osm": [
+    {
+     "osm": "way/22776494",
+     "nume": "Bulevardul Socola",
+     "fel": "strada",
+     "highway": [
+      "primary",
+      "secondary",
+      "secondary_link"
+     ],
+     "unitate": "Iași",
+     "lat": 47.1443846,
+     "lon": 27.5957999
+    }
+   ]
+  },
+  {
+   "event_id": "ev-016",
+   "loc_text": "în zona Gării",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": true,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1667423,
+    "lon": 27.571759
+   },
+   "unitate_admin": "Iași",
+   "referinte_osm": [
+    "node/2468944297"
+   ],
+   "avertismente": [],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Gară”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": false,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [],
+    "zone": [
+     "Gării"
+    ],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/2468944297",
+     "nume": "Gară",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "suburb",
+     "lat": 47.1667423,
+     "lon": 27.571759
+    }
+   ]
+  },
+  {
+   "event_id": "ev-017",
+   "loc_text": "în Valea Lupului, la intersecția cu drumul spre Iași",
+   "lat": null,
+   "lon": null,
+   "precizie_loc": "vag",
+   "in_iasi": false,
+   "metoda": "zona_osm",
+   "incredere": "scazuta",
+   "punct_orientativ": {
+    "lat": 47.1773857,
+    "lon": 27.5021393
+   },
+   "unitate_admin": "Valea Lupului",
+   "referinte_osm": [
+    "node/260953135"
+   ],
+   "avertismente": [
+    "textul indică altă localitate: Valea Lupului"
+   ],
+   "de_verificat": [
+    "localizare doar la nivel de zonă („Valea Lupului”): fără coordonate"
+   ],
+   "noduri_neverificate": [],
+   "intentie": {
+    "este_trecere": false,
+    "este_intersectie": true,
+    "strazi": [],
+    "pe": [],
+    "la": [],
+    "din": [
+     "Valea Lupului"
+    ],
+    "zone": [],
+    "repere": [],
+    "poi": [],
+    "poi_generic": [],
+    "localitati": [],
+    "perechi": [],
+    "numar": null,
+    "semnale": [
+     "doar_zona"
+    ]
+   },
+   "candidati_osm": [
+    {
+     "osm": "node/260953135",
+     "nume": "Valea Lupului",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "village",
+     "lat": 47.1773857,
+     "lon": 27.5021393
+    },
+    {
+     "osm": "node/260953135",
+     "nume": "Valea Lupului",
+     "fel": "loc",
+     "clasa": null,
+     "tip": "village",
+     "lat": 47.1773857,
+     "lon": 27.5021393
+    }
+   ]
+  }
+ ]
+}
