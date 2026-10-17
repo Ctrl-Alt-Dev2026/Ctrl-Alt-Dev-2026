@@ -13,7 +13,8 @@ Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat c
 - [Publicare explicită, hartă GeoJSON și dosare exportabile; repetiție sintetică completă](docs/PUBLICATION_WORKFLOW.md)
 - [SafeCross: analiză video, instalare separată și demo cu sursă publică](docs/SAFECROSS.md)
 - [Context OSM pentru Iași](context/CITY.md) și [pipeline-ul offline de scor](risk/IMPLEMENTATION.md) — integrate prin publicare explicită și asociere verificată, cu instalarea `requirements-publication.txt`.
-- [Modulul de coordonate](coordonate/README.md) — disponibil separat; sugestiile necesită reconcilierea contractului și verificare înainte de aprobarea candidatului.
+- [Geocodare asistată înainte de aprobare: API și contract pentru frontend](docs/GEOCODING_WORKFLOW.md) — integrează [modulul de coordonate](coordonate/README.md), cu dovezi OSM, preview și aplicare confirmată.
+- [Contractele backend pentru conectarea frontend-ului](docs/FRONTEND_HANDOFF.md)
 - [Contractul API pentru citirea snapshot-ului](docs/SNAPSHOT_READ_API.md)
 - [Planul inițial pentru șase persoane și aproximativ 25 de ore](docs/HACKATHON_PLAN.md) — atașamentul păstrat integral; observația despre accesul GitHub din introducere este istorică.
 - [Planificarea existentă: „Harta pietonului – Iași · Plan v2”](Planificare.md) — păstrată integral; conține propuneri care diferă de planul SafeIași.

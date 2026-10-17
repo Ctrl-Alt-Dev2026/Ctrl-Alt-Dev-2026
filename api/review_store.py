@@ -13,7 +13,7 @@ from uuid import uuid4
 from pydantic import ValidationError
 
 from ai.engine import digest as extraction_digest
-from api.review_models import CandidateFields, CandidateRecord, HistoryEntry, ImportRecord, ReviewedEvent, StoreDocument
+from api.review_models import CandidateFields, CandidateRecord, CorrectionRequest, HistoryEntry, ImportRecord, ReviewedEvent, StoreDocument
 
 
 _LOCK = threading.RLock()  # Shared by factory instances pointing at the same file.
@@ -231,23 +231,71 @@ class ReviewStore:
                 raise ReviewError(409, "review_finalized", "Candidatul are deja o decizie; nu poate fi suprascris prin acest flux.")
         return record
 
-    def correct(self, candidate_id, request):
+    def correct(self, candidate_id, request, *, geocoding=None):
         with _LOCK:
             document = self._read()
             record = self._candidate(document, candidate_id, request.expected_version)
             if not set(request.changes) <= CandidateFields.model_fields.keys():
                 raise ReviewError(422, "invalid_correction", "Corectează doar câmpurile editabile; proveniența și identitatea sunt păstrate.")
+            before = record.fields.model_dump()
+            base = dict(before)
+            if "loc_text" in request.changes and request.changes["loc_text"] != before["loc_text"]:
+                # A pin/evidence for the previous text is no longer applicable.
+                # An operator may explicitly supply a coherent new location in this patch.
+                base.update(lat=None, lon=None, precizie_loc=None, in_iasi=None, location_evidence=None)
             try:
-                corrected = CandidateFields.model_validate(record.fields.model_dump() | request.changes)
+                corrected = CandidateFields.model_validate(base | request.changes)
             except ValidationError as error:
                 raise ReviewError(422, "invalid_correction", "Câmpuri invalide sau localizare incoerentă.") from error
-            changes = {key: {"before": getattr(record.fields, key), "after": getattr(corrected, key)} for key in request.changes if getattr(record.fields, key) != getattr(corrected, key)}
+            changes = {key: {"before": value, "after": getattr(corrected, key)} for key, value in before.items() if value != getattr(corrected, key)}
+            if geocoding is not None:
+                changes["geocoding"] = {"before": None, "after": deepcopy(geocoding)}
             if not changes:
                 raise ReviewError(422, "empty_correction", "Cererea nu schimbă niciun câmp.")
             record.fields, record.version = corrected, record.version + 1
             record.history.append(HistoryEntry(version=record.version, action="corrected", operator=request.operator, at=_now(), note=request.reason, changes=changes))
             self._write(document)
             return record.model_dump()
+
+    def _geocoding_proposal(self, record, service):
+        proposal = {
+            "schema_version": "geocoding-proposal-1", "candidate_id": record.candidate_id,
+            "data_mode": self.mode, "expected_version": record.version,
+            "loc_text": record.fields.loc_text,
+            "current_location": {key: getattr(record.fields, key) for key in ("lat", "lon", "precizie_loc", "in_iasi", "location_evidence")},
+        } | service.suggest(record.fields.loc_text, self.mode)
+        raw = json.dumps(proposal, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+        proposal["suggestion_id"] = hashlib.sha256(raw.encode("utf-8")).hexdigest()
+        return proposal
+
+    def preview_geocoding(self, candidate_id, request, service):
+        with _LOCK:
+            record = self._candidate(self._read(), candidate_id, request.expected_version)
+            return self._geocoding_proposal(record, service)
+
+    def apply_geocoding(self, candidate_id, request, service):
+        with _LOCK:
+            record = self._candidate(self._read(), candidate_id, request.expected_version)
+            # Recompute from server-owned inputs; never trust coordinates or a report
+            # supplied by the client. Any changed input invalidates the preview token.
+            proposal = self._geocoding_proposal(record, service)
+            if proposal["suggestion_id"] != request.suggestion_id:
+                raise ReviewError(409, "geocoding_proposal_changed", "Sugestia sau datele de referință s-au schimbat; solicită un preview nou.")
+            changes = dict(proposal["proposed_changes"])
+            # The resolver supplies evidence, not an operator's verification.
+            # The complete note/report remain in history; this is a compact reference.
+            report = proposal["report"]
+            references = ", ".join(report.get("referinte_osm", [])[:8]) or "fără referință precisă"
+            changes["location_evidence"] = (
+                f"Verificare declarată de {request.operator}: {request.reason[:2500]} · "
+                f"Metodă: {str(report.get('metoda', 'necunoscut'))[:160]} · OSM: {references}"
+            )
+            correction = CorrectionRequest(
+                data_mode=self.mode, expected_version=request.expected_version,
+                operator=request.operator, reason=request.reason, changes=changes,
+            )
+            archived = proposal | {"location_checked": True, "applied_changes": changes}
+            return self.correct(candidate_id, correction, geocoding=archived)
 
     def review(self, candidate_id, request):
         with _LOCK:

@@ -1,5 +1,7 @@
 # Pornirea locală a backend-ului SafeIași
 
+Backend v0.7 include [geocodarea asistată în review](GEOCODING_WORKFLOW.md), fără instalare suplimentară: candidat pending → preview OSM offline → confirmare și corectură versionată → aprobare separată. Indexul este citit numai la cerere.
+
 Etapa curentă: FastAPI cu `/health`, documentație interactivă, audit, citire de snapshot sintetic validat, extracția AI a lui Emi și import/corectare/review cu persistență locală. [SafeCross](SAFECROSS.md) adaugă separat interfața video `/safecross`, cu instalare opțională, model YOLOX Nano și FFprobe pentru verificarea timpului. [Publicarea explicită](PUBLICATION_WORKFLOW.md) adaugă context/scor, API de locații/GeoJSON și dosare JSON/HTML imprimabile. Datele reale revizuite, catalogul de măsuri și ecranele principale rămân de pregătit/integrat. Pornirea serverului nu necesită chei, conturi sau corectarea fixture-urilor; rutele de snapshot refuză seturile invalide, iar celelalte fluxuri sunt independente de acestea.
 
 ## Prima instalare — Windows / PowerShell

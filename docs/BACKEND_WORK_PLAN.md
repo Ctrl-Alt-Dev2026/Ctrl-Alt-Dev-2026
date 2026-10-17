@@ -63,6 +63,7 @@ Sunt implementate `GET /health`, `/docs`/OpenAPI, citirea sintetică prin manife
 | `POST /api/v1/imports` | Implementat: articol, mod explicit și cheie idempotentă; validează extracția și salvează candidați neverificați |
 | `GET /api/v1/candidates/{id}` | Implementat: articol, extracție originală, valori curente, istoric și versiune; există și listă filtrabilă |
 | `PATCH /api/v1/candidates/{id}` | Implementat: corectează numai câmpurile editabile, cu motiv și versiune; păstrează dovezile originale |
+| `POST /api/v1/candidates/{id}/geocoding/preview` și `/apply` | Implementat: sugestie OSM offline pentru pending observed, aplicare confirmată și proveniență arhivată; fără aprobare automată |
 | `POST /api/v1/candidates/{id}/review` | Implementat: aprobă/respinge sau asociază unui eveniment canonic, cu operator, moment și verificări explicite |
 | `GET /api/v1/reviewed-events` | Implementat: evenimente canonice locale cu toate sursele; nu sunt publicate automat în snapshot |
 | `GET /api/v1/events` | Implementat pentru evenimente sintetice eligibile; etichetă permanentă și filtrare după review/municipiu/perioadă/precizie |
@@ -87,7 +88,7 @@ Auditul doar citește și emite un raport JSON: cod `0` pentru fixture-uri coere
 
 Există serverul local, citirea de snapshot sintetic validat, extractorul lui Emi, review-ul și publicarea explicită cu persistență locală. Inferența live a textului necesită Ollama/model disponibil; regulile și reluările sintetice pot fi verificate fără el. Publicarea observată este suportată cu surse și context verificate; nu avem prin această livrare un set de accidente reale revizuite sau ecranele principale conectate. Deciziile finalizate nu pot fi redeschise/editate în acest MVP; operatorul declarat nu este autentificat. Catalogul de măsuri și integrarea datelor reale rămân necesare.
 
-Modulul [coordonate](../coordonate/README.md), adăugat de coleg la `22cbb51`, trece separat 43 de verificări offline. Integrarea API urmează: sugestiile se verifică înainte de aprobare, iar coordonatele aproximative de stradă nu trec drept puncte precise. Toate cele 1.210 treceri din contextul publicării există în indexul modulului; celelalte treceri, intersecțiile și segmentele nu devin automat eligibile pentru acest context. Contractul actual de review nu acceptă coordonate pentru precizia `strada`.
+Modulul [coordonate](../coordonate/README.md), adăugat de coleg la `22cbb51`, trece separat 43 de verificări offline. Backend v0.7 adaugă [integrarea API](GEOCODING_WORKFLOW.md): preview fără scriere, aplicare cu versiune și confirmare explicită, raport/proveniență în istoric și verificare înainte de aprobare. Coordonatele aproximative de stradă rămân în raport, cu `lat/lon=null` pe candidat. Toate cele 1.210 treceri din contextul publicării există în indexul modulului; celelalte treceri, intersecțiile și segmentele nu devin automat eligibile. Geocodarea sintetică este refuzată explicit. Schimbarea textului locației invalidează vechiul pin și dovezile, dacă operatorul nu furnizează un set nou coerent.
 
 ## Timp și reguli de lucru
 

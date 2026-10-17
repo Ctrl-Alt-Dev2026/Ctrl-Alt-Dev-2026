@@ -1,5 +1,7 @@
 # Importul și verificarea locală — API v0.4
 
+Actualizare v0.7: [geocodarea asistată](GEOCODING_WORKFLOW.md) se aplică numai candidaților pending, cu preview, confirmare explicită și proveniență în istoric. Schimbarea textului locației invalidează vechile coordonate și dovezi, dacă operatorul nu furnizează un set nou coerent. Aprobarea rămâne separată.
+
 Backend-ul salvează articolul, extracția originală și candidații `pending`, apoi permite corectare și decizia explicită a operatorului. Aprobarea creează un eveniment canonic local; asocierea unui al doilea articol la acel eveniment păstrează un singur accident și ambele surse. Citirea pentru hartă prin `/api/v1/events` rămâne independentă: acest flux nu publică automat evenimente.
 
 După review, [publicarea explicită din API v0.6](PUBLICATION_WORKFLOW.md) poate îngheța evenimentele eligibile și asocierea verificată la locații. Frontend-ul consumă rutele noi de publicații/locații; cititorul sintetic vechi rămâne separat.

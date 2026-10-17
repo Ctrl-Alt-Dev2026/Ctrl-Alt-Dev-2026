@@ -2,6 +2,8 @@
 
 Flux implementat: **import → extracție → corectare/review → eveniment canonic → asociere verificată la locație → preview → publicare explicită → listă/hartă GeoJSON → dosar → export JSON/HTML**.
 
+Backend v0.7 adaugă [preview și aplicare asistată a geocodării](GEOCODING_WORKFLOW.md) pentru candidații observați încă pending. Nu înlocuiește confirmarea operatorului sau asocierea explicită la publicare.
+
 Publicarea înseamnă o versiune locală pentru consumul frontend-ului. Nu publică date pe internet și nu înlocuiește verificarea administrației. Datele reale ale unui pilot și ecranele principale ale produsului nu sunt furnizate de acest modul.
 
 ## Instalare și configurare
@@ -129,4 +131,4 @@ Testele includ dubluri, versiuni concurente, date necunoscute, geometrie și mod
 
 Verificarea din 17 octombrie 2026: **225 teste trecute** — 139 backend/video/publicare, 42 extracție, 21 tipare și 23 context/scor. `pip check` nu a găsit conflicte. Repetiția reală prin API a produs cele trei fișe sintetice, iar verificarea în browser a confirmat totalurile, absența erorilor JavaScript și afișarea mobilă fără depășire orizontală. Serverul normal citește cele 1.210 treceri OSM, fără să preia automat publicația sintetică a serverului de demo. Analiza SafeCross și review-ul salvat au rămas intacte.
 
-Separat, `python -m coordonate autotest` trece 43 de verificări offline. Modulul nou nu este încă legat la import/review; limitele de compatibilitate sunt documentate în [planul backend](BACKEND_WORK_PLAN.md).
+Separat, `python -m coordonate autotest` trece 43 de verificări offline. Integrarea v0.7 în review este documentată în [fluxul geocodării](GEOCODING_WORKFLOW.md); punctele aproximative rămân în raport, iar aprobarea și publicarea rămân explicite.

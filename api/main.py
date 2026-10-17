@@ -59,7 +59,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
         yield
 
     application = FastAPI(
-        title="SafeIași API", version="0.6.0", lifespan=lifespan,
+        title="SafeIași API", version="0.7.0", lifespan=lifespan,
         description=(
             "API local cu citire de snapshot sintetic validat. /health confirmă doar serverul. "
             "Datele lipsă/invalide produc HTTP 503 pe rutele de date. "
@@ -69,7 +69,8 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             "SafeCross opțional analizează local video CFR cu YOLOX și review uman, separat de accidente. "
             "/patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
             "fără modificarea snapshot-ului sau a datelor de review. "
-            "Publicarea locală este explicită, cu versiuni înghețate, context verificat și dosare exportabile."
+            "Publicarea locală este explicită, cu versiuni înghețate, context verificat și dosare exportabile. "
+            "Geocodarea offline propune localizări înainte de aprobare, cu dovezi OSM și confirmarea operatorului."
         ),
     )
     application.state.review_directory = Path(
