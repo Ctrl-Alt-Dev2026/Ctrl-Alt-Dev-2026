@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "data_mode": "synthetic",
+  "perioada": [
+    "2024-12-05",
+    "2026-04-22"
+  ],
+  "generat_la": "2026-10-17T17:12:21.393255+00:00",
+  "nr_articole": 0,
+  "nr_evenimente": 9,
+  "nr_localizate_precis": 9,
+  "nr_verificate": 0,
+  "avertisment": "SCENARIU DEMONSTRATIV: infrastructură OSM reală + accidente sintetice plasate ipotetic la treceri reale. Accidentele NU sunt documentate aici. Scorurile NU reprezintă riscul real sau un clasament real de pericol."
+}

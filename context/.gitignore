@@ -1,0 +1,5 @@
+# Local Overpass responses. Already tracked snapshots are unchanged.
+/cache/
+# Keep only the reviewed delivery among new generated outputs.
+/output/observed/*
+!/output/observed/index-review-complete/

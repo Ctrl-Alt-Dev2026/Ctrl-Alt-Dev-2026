@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.5812132,
+          47.1677987
+        ]
+      },
+      "properties": {
+        "osm_id": 3682801813,
+        "button_operated": "no",
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "kerb": "lowered",
+        "traffic_signals:sound": "yes",
+        "traffic_signals:vibration": "no"
+      }
+    }
+  ]
+}

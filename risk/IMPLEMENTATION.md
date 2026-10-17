@@ -1,5 +1,10 @@
 # Persoana 4 — starea implementării
 
+Actualizare E4/E5: statisticile complete, agregarea H3 r9 și runnerul pentru
+integrarea observată sunt implementate în `risk.run`. Vezi `risk/E4_E5.md`.
+Comanda veche `risk.pipeline` rămâne compatibilă pentru analiza sintetică inițială;
+runnerul nou produce și statistici separate, H3 și verificarea limitei municipale.
+
 Contract: schema 2.0 din Planificare.md și false_data/. Instrucțiunea utilizatoarei
 fixează rolul: context urban și scor, fără recomandări, API sau frontend.
 Planul alternativ din docs/HACKATHON_PLAN.md are alte roluri, alte fișiere și
