@@ -1,0 +1,1011 @@
+{
+  "label": "Authored development probes on synthetic fixtures; not a real-world validity study",
+  "input_sha256": "5a1f13e42e13929660411a643e98c4899b0fb36b067437ad3c2b1af9b7190dbd",
+  "probe_count": 10,
+  "method": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "summary": {
+    "embedding": {
+      "hit_at_1": 0.5,
+      "mrr": 0.6337301587301587
+    },
+    "tfidf": {
+      "hit_at_1": 0.0,
+      "mrr": 0.032692307692307694
+    }
+  },
+  "probes": [
+    {
+      "id": "ro_speed",
+      "query": "Mașina ar fi mers mult prea repede.",
+      "expected_ids": [
+        "ev-001",
+        "ev-003",
+        "ev-007",
+        "ev-014"
+      ],
+      "embedding_top3": [
+        "ev-014",
+        "ev-011",
+        "ev-001"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": true,
+      "embedding_reciprocal_rank": 1.0,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "en_speed",
+      "query": "A motorist was driving much too fast.",
+      "expected_ids": [
+        "ev-001",
+        "ev-003",
+        "ev-007",
+        "ev-014"
+      ],
+      "embedding_top3": [
+        "ev-014",
+        "ev-001",
+        "ev-003"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": true,
+      "embedding_reciprocal_rank": 1.0,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "it_speed",
+      "query": "La macchina procedeva a velocità eccessiva.",
+      "expected_ids": [
+        "ev-001",
+        "ev-003",
+        "ev-007",
+        "ev-014"
+      ],
+      "embedding_top3": [
+        "ev-014",
+        "ev-001",
+        "ev-003"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": true,
+      "embedding_reciprocal_rank": 1.0,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "ro_visibility",
+      "query": "Șoferului i-a fost greu să vadă pietonul în întuneric.",
+      "expected_ids": [
+        "ev-010"
+      ],
+      "embedding_top3": [
+        "ev-001",
+        "ev-003",
+        "ev-011"
+      ],
+      "tfidf_top3": [
+        "ev-013",
+        "ev-006",
+        "ev-007"
+      ],
+      "embedding_hit1": false,
+      "embedding_reciprocal_rank": 0.25,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0.07692307692307693
+    },
+    {
+      "id": "en_visibility",
+      "query": "Poor visibility at night: the driver did not see the person crossing.",
+      "expected_ids": [
+        "ev-010"
+      ],
+      "embedding_top3": [
+        "ev-010",
+        "ev-011",
+        "ev-001"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": true,
+      "embedding_reciprocal_rank": 1.0,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "ro_yield",
+      "query": "Conducătorul nu a lăsat pietonul să treacă primul.",
+      "expected_ids": [
+        "ev-005",
+        "ev-009"
+      ],
+      "embedding_top3": [
+        "ev-014",
+        "ev-004",
+        "ev-011"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": false,
+      "embedding_reciprocal_rank": 0.14285714285714285,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "en_yield",
+      "query": "The motorist failed to give way to someone crossing.",
+      "expected_ids": [
+        "ev-005",
+        "ev-009"
+      ],
+      "embedding_top3": [
+        "ev-002",
+        "ev-004",
+        "ev-011"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": false,
+      "embedding_reciprocal_rank": 0.1111111111111111,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "ro_crossing",
+      "query": "Pietonul a traversat printr-un loc nepermis.",
+      "expected_ids": [
+        "ev-002",
+        "ev-008"
+      ],
+      "embedding_top3": [
+        "ev-014",
+        "ev-004",
+        "ev-008"
+      ],
+      "tfidf_top3": [
+        "ev-014",
+        "ev-001",
+        "ev-003"
+      ],
+      "embedding_hit1": false,
+      "embedding_reciprocal_rank": 0.3333333333333333,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0.25
+    },
+    {
+      "id": "en_crossing",
+      "query": "A pedestrian crossed where crossing was not permitted.",
+      "expected_ids": [
+        "ev-002",
+        "ev-008"
+      ],
+      "embedding_top3": [
+        "ev-008",
+        "ev-002",
+        "ev-009"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": true,
+      "embedding_reciprocal_rank": 1.0,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    },
+    {
+      "id": "en_school",
+      "query": "A school close to an unsignalized crossing over two lanes.",
+      "expected_ids": [
+        "ev-008",
+        "ev-009"
+      ],
+      "embedding_top3": [
+        "ev-013",
+        "ev-008",
+        "ev-006"
+      ],
+      "tfidf_top3": [],
+      "embedding_hit1": false,
+      "embedding_reciprocal_rank": 0.5,
+      "tfidf_hit1": false,
+      "tfidf_reciprocal_rank": 0
+    }
+  ],
+  "embedding_patterns": {
+    "scope": "fixtures",
+    "threshold": 0.35,
+    "excluded": [],
+    "eligible_ids": [
+      "ev-001",
+      "ev-002",
+      "ev-003",
+      "ev-004",
+      "ev-005",
+      "ev-006",
+      "ev-007",
+      "ev-008",
+      "ev-009",
+      "ev-010",
+      "ev-011",
+      "ev-012",
+      "ev-013",
+      "ev-014"
+    ],
+    "patterns": [
+      {
+        "id": "p-ev-001-ev-003-ev-010-ev-011",
+        "title": "Eveniment noaptea · Stație la <100 m în fixture",
+        "member_ids": [
+          "ev-001",
+          "ev-003",
+          "ev-010",
+          "ev-011"
+        ],
+        "site_count": 2,
+        "facets": [
+          {
+            "key": "night",
+            "label": "Eveniment noaptea",
+            "count": 4,
+            "total": 4,
+            "other_count": 2,
+            "other_total": 10
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 4,
+            "total": 4,
+            "other_count": 7,
+            "other_total": 10
+          },
+          {
+            "key": "unsignalized",
+            "label": "Fără semafor în fixture",
+            "count": 4,
+            "total": 4,
+            "other_count": 7,
+            "other_total": 10
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-001",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.744952
+          },
+          {
+            "id": "ev-003",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.744952
+          },
+          {
+            "id": "ev-011",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.697923
+          },
+          {
+            "id": "ev-010",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.652916
+          }
+        ],
+        "comparison_ids": [
+          "ev-007",
+          "ev-004"
+        ],
+        "article_event_count": 2,
+        "article_count": 3,
+        "mean_similarity": 0.710186,
+        "min_similarity": 0.583673
+      },
+      {
+        "id": "p-ev-006-ev-012-ev-013",
+        "title": "Iluminat prezent în fixture · Cu semafor în fixture",
+        "member_ids": [
+          "ev-006",
+          "ev-012",
+          "ev-013"
+        ],
+        "site_count": 2,
+        "facets": [
+          {
+            "key": "lit",
+            "label": "Iluminat prezent în fixture",
+            "count": 3,
+            "total": 3,
+            "other_count": 2,
+            "other_total": 11
+          },
+          {
+            "key": "signalized",
+            "label": "Cu semafor în fixture",
+            "count": 2,
+            "total": 3,
+            "other_count": 0,
+            "other_total": 11
+          },
+          {
+            "key": "school",
+            "label": "Școală la <150 m în fixture",
+            "count": 3,
+            "total": 3,
+            "other_count": 4,
+            "other_total": 11
+          },
+          {
+            "key": "four_lanes",
+            "label": "Patru benzi în fixture",
+            "count": 3,
+            "total": 3,
+            "other_count": 6,
+            "other_total": 11
+          },
+          {
+            "key": "day",
+            "label": "Eveniment ziua",
+            "count": 2,
+            "total": 3,
+            "other_count": 4,
+            "other_total": 11
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 3,
+            "total": 3,
+            "other_count": 8,
+            "other_total": 11
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-006",
+            "shared": [
+              "lit",
+              "school",
+              "four_lanes",
+              "day",
+              "transit"
+            ],
+            "not_recorded": [
+              "signalized"
+            ],
+            "mean_similarity": 0.646563
+          },
+          {
+            "id": "ev-012",
+            "shared": [
+              "lit",
+              "signalized",
+              "school",
+              "four_lanes",
+              "day",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.68298
+          },
+          {
+            "id": "ev-013",
+            "shared": [
+              "lit",
+              "signalized",
+              "school",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [
+              "day"
+            ],
+            "mean_similarity": 0.439252
+          }
+        ],
+        "comparison_ids": [
+          "ev-008",
+          "ev-004"
+        ],
+        "article_event_count": 0,
+        "article_count": 0,
+        "mean_similarity": 0.589598,
+        "min_similarity": 0.402835
+      }
+    ],
+    "unassigned_ids": [
+      "ev-002",
+      "ev-004",
+      "ev-005",
+      "ev-007",
+      "ev-008",
+      "ev-009",
+      "ev-014"
+    ],
+    "note": null,
+    "engine": "multilingual_sentence_embeddings"
+  },
+  "tfidf_patterns_same_exploratory_threshold": {
+    "scope": "fixtures",
+    "threshold": 0.35,
+    "excluded": [],
+    "eligible_ids": [
+      "ev-001",
+      "ev-002",
+      "ev-003",
+      "ev-004",
+      "ev-005",
+      "ev-006",
+      "ev-007",
+      "ev-008",
+      "ev-009",
+      "ev-010",
+      "ev-011",
+      "ev-012",
+      "ev-013",
+      "ev-014"
+    ],
+    "patterns": [
+      {
+        "id": "p-ev-004-ev-005-ev-006-ev-007-ev-012-ev-013",
+        "title": "Iluminat prezent în fixture · Patru benzi în fixture",
+        "member_ids": [
+          "ev-004",
+          "ev-005",
+          "ev-006",
+          "ev-007",
+          "ev-012",
+          "ev-013"
+        ],
+        "site_count": 3,
+        "facets": [
+          {
+            "key": "lit",
+            "label": "Iluminat prezent în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 0,
+            "other_total": 8
+          },
+          {
+            "key": "four_lanes",
+            "label": "Patru benzi în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 3,
+            "other_total": 8
+          },
+          {
+            "key": "school",
+            "label": "Școală la <150 m în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 2,
+            "other_total": 8
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 5,
+            "other_total": 8
+          },
+          {
+            "key": "unsignalized",
+            "label": "Fără semafor în fixture",
+            "count": 4,
+            "total": 6,
+            "other_count": 7,
+            "other_total": 8
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-006",
+            "shared": [
+              "lit",
+              "four_lanes",
+              "school",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.784133
+          },
+          {
+            "id": "ev-012",
+            "shared": [
+              "lit",
+              "four_lanes",
+              "school",
+              "transit"
+            ],
+            "not_recorded": [
+              "unsignalized"
+            ],
+            "mean_similarity": 0.748057
+          },
+          {
+            "id": "ev-007",
+            "shared": [
+              "lit",
+              "four_lanes",
+              "school",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.750189
+          },
+          {
+            "id": "ev-013",
+            "shared": [
+              "lit",
+              "four_lanes",
+              "school",
+              "transit"
+            ],
+            "not_recorded": [
+              "unsignalized"
+            ],
+            "mean_similarity": 0.735659
+          },
+          {
+            "id": "ev-005",
+            "shared": [
+              "lit",
+              "four_lanes",
+              "school",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.693393
+          },
+          {
+            "id": "ev-004",
+            "shared": [
+              "four_lanes",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "lit",
+              "school"
+            ],
+            "mean_similarity": 0.609147
+          }
+        ],
+        "comparison_ids": [
+          "ev-001",
+          "ev-003"
+        ],
+        "article_event_count": 0,
+        "article_count": 0,
+        "mean_similarity": 0.720096,
+        "min_similarity": 0.552554
+      },
+      {
+        "id": "p-ev-001-ev-003-ev-005-ev-006-ev-007-ev-012",
+        "title": "Patru benzi în fixture · Iluminat prezent în fixture",
+        "member_ids": [
+          "ev-001",
+          "ev-003",
+          "ev-005",
+          "ev-006",
+          "ev-007",
+          "ev-012"
+        ],
+        "site_count": 3,
+        "facets": [
+          {
+            "key": "four_lanes",
+            "label": "Patru benzi în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 3,
+            "other_total": 8
+          },
+          {
+            "key": "lit",
+            "label": "Iluminat prezent în fixture",
+            "count": 4,
+            "total": 6,
+            "other_count": 1,
+            "other_total": 8
+          },
+          {
+            "key": "night",
+            "label": "Eveniment noaptea",
+            "count": 4,
+            "total": 6,
+            "other_count": 2,
+            "other_total": 8
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 5,
+            "other_total": 8
+          },
+          {
+            "key": "school",
+            "label": "Școală la <150 m în fixture",
+            "count": 4,
+            "total": 6,
+            "other_count": 3,
+            "other_total": 8
+          },
+          {
+            "key": "unsignalized",
+            "label": "Fără semafor în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 6,
+            "other_total": 8
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-007",
+            "shared": [
+              "four_lanes",
+              "lit",
+              "night",
+              "transit",
+              "school",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.807551
+          },
+          {
+            "id": "ev-006",
+            "shared": [
+              "four_lanes",
+              "lit",
+              "transit",
+              "school",
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "night"
+            ],
+            "mean_similarity": 0.727323
+          },
+          {
+            "id": "ev-001",
+            "shared": [
+              "four_lanes",
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "lit",
+              "school"
+            ],
+            "mean_similarity": 0.708627
+          },
+          {
+            "id": "ev-003",
+            "shared": [
+              "four_lanes",
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "lit",
+              "school"
+            ],
+            "mean_similarity": 0.708627
+          },
+          {
+            "id": "ev-005",
+            "shared": [
+              "four_lanes",
+              "lit",
+              "night",
+              "transit",
+              "school",
+              "unsignalized"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.705618
+          },
+          {
+            "id": "ev-012",
+            "shared": [
+              "four_lanes",
+              "lit",
+              "transit",
+              "school"
+            ],
+            "not_recorded": [
+              "night",
+              "unsignalized"
+            ],
+            "mean_similarity": 0.647688
+          }
+        ],
+        "comparison_ids": [
+          "ev-013",
+          "ev-004"
+        ],
+        "article_event_count": 2,
+        "article_count": 3,
+        "mean_similarity": 0.717572,
+        "min_similarity": 0.485893
+      },
+      {
+        "id": "p-ev-001-ev-002-ev-003-ev-004-ev-007-ev-011",
+        "title": "Eveniment noaptea · Stație la <100 m în fixture",
+        "member_ids": [
+          "ev-001",
+          "ev-002",
+          "ev-003",
+          "ev-004",
+          "ev-007",
+          "ev-011"
+        ],
+        "site_count": 3,
+        "facets": [
+          {
+            "key": "night",
+            "label": "Eveniment noaptea",
+            "count": 4,
+            "total": 6,
+            "other_count": 2,
+            "other_total": 8
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 5,
+            "other_total": 8
+          },
+          {
+            "key": "unsignalized",
+            "label": "Fără semafor în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 5,
+            "other_total": 8
+          },
+          {
+            "key": "four_lanes",
+            "label": "Patru benzi în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 4,
+            "other_total": 8
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-001",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized",
+              "four_lanes"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.785931
+          },
+          {
+            "id": "ev-003",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized",
+              "four_lanes"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.785931
+          },
+          {
+            "id": "ev-007",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized",
+              "four_lanes"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.705532
+          },
+          {
+            "id": "ev-004",
+            "shared": [
+              "transit",
+              "unsignalized",
+              "four_lanes"
+            ],
+            "not_recorded": [
+              "night"
+            ],
+            "mean_similarity": 0.692829
+          },
+          {
+            "id": "ev-011",
+            "shared": [
+              "night",
+              "transit",
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "four_lanes"
+            ],
+            "mean_similarity": 0.657808
+          },
+          {
+            "id": "ev-002",
+            "shared": [
+              "transit",
+              "unsignalized",
+              "four_lanes"
+            ],
+            "not_recorded": [
+              "night"
+            ],
+            "mean_similarity": 0.629215
+          }
+        ],
+        "comparison_ids": [
+          "ev-006",
+          "ev-005"
+        ],
+        "article_event_count": 2,
+        "article_count": 3,
+        "mean_similarity": 0.709541,
+        "min_similarity": 0.550185
+      },
+      {
+        "id": "p-ev-001-ev-002-ev-003-ev-004-ev-006-ev-008",
+        "title": "Fără semafor în fixture · Patru benzi în fixture",
+        "member_ids": [
+          "ev-001",
+          "ev-002",
+          "ev-003",
+          "ev-004",
+          "ev-006",
+          "ev-008"
+        ],
+        "site_count": 3,
+        "facets": [
+          {
+            "key": "unsignalized",
+            "label": "Fără semafor în fixture",
+            "count": 6,
+            "total": 6,
+            "other_count": 5,
+            "other_total": 8
+          },
+          {
+            "key": "four_lanes",
+            "label": "Patru benzi în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 4,
+            "other_total": 8
+          },
+          {
+            "key": "transit",
+            "label": "Stație la <100 m în fixture",
+            "count": 5,
+            "total": 6,
+            "other_count": 6,
+            "other_total": 8
+          }
+        ],
+        "members": [
+          {
+            "id": "ev-002",
+            "shared": [
+              "unsignalized",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.707976
+          },
+          {
+            "id": "ev-008",
+            "shared": [
+              "unsignalized"
+            ],
+            "not_recorded": [
+              "four_lanes",
+              "transit"
+            ],
+            "mean_similarity": 0.580456
+          },
+          {
+            "id": "ev-004",
+            "shared": [
+              "unsignalized",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.659515
+          },
+          {
+            "id": "ev-006",
+            "shared": [
+              "unsignalized",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.630056
+          },
+          {
+            "id": "ev-001",
+            "shared": [
+              "unsignalized",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.694772
+          },
+          {
+            "id": "ev-003",
+            "shared": [
+              "unsignalized",
+              "four_lanes",
+              "transit"
+            ],
+            "not_recorded": [],
+            "mean_similarity": 0.694772
+          }
+        ],
+        "comparison_ids": [
+          "ev-007",
+          "ev-011"
+        ],
+        "article_event_count": 2,
+        "article_count": 3,
+        "mean_similarity": 0.661258,
+        "min_similarity": 0.45068
+      }
+    ],
+    "unassigned_ids": [
+      "ev-009",
+      "ev-010",
+      "ev-014"
+    ],
+    "note": null,
+    "engine": "tfidf_lexical_baseline"
+  },
+  "limitations": [
+    "Queries authored after inspecting fixture schema; development only.",
+    "Lexical baseline is intentionally simple and not tuned.",
+    "A shared threshold is not a calibrated comparison of clustering quality.",
+    "No human-labelled cluster ground truth or causality evaluation exists.",
+    "No traffic or pedestrian exposure denominators are provided."
+  ]
+}

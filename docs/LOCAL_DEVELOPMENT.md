@@ -81,6 +81,16 @@ Erorile de contract produc **422**, o reluare inexistentă produce **404**, iar 
 
 Un articol real poate produce candidați `observed` pentru verificare. Aceasta nu autorizează publicarea lor prin cititorul de snapshot, care acceptă în continuare numai date sintetice validate. Limitele actuale ale extractorului, inclusiv articolele lungi și cele cu mai multe evenimente, sunt documentate în modulul AI.
 
+## Explorarea tiparelor recurente
+
+Aceeași pornire `uvicorn api.main:app` include [demo-ul interactiv](http://127.0.0.1:8000/patterns), `GET /api/v1/ai/patterns/corpus` și `POST /api/v1/ai/patterns/discover`. `ai.patterns.app:app` este un alias compatibil pentru aceeași aplicație, inclusiv setările de snapshot și review. Nu trebuie pornit un al doilea server.
+
+Interfața arată grupuri semantice între locuri, pasajele disponibile, diferențele și proveniența câmpurilor. Eliminarea unui caz recalculează grupurile fără să modifice fișierele sau deciziile operatorului. Există controale pentru prag, restabilirea cazurilor, modul de surse și exportul analizei. Harta este o diagramă geografică pe coordonate sintetice, fără fundal stradal.
+
+Vectorii modelului multilingv sunt pregătiți în repository; vizualizarea și regruparea nu descarcă modele și nu trimit date către un serviciu AI. `ai/patterns/static/index.html` funcționează și fără server. Sunt 17 evenimente fictive, dar numai 3 au articole atașate; potrivirea exactă a fragmentelor explicative există pentru 2. Modul de surse se abține, iar fixture-urile rămân etichetate explicit. Similaritatea nu este probabilitate de accident sau dovadă a unei cauze.
+
+Dacă datele de intrare se schimbă, rutele de tipare întorc **503 `patterns_unprepared`** până la regenerare. Demo-ul HTTP refuză și un HTML care nu mai corespunde vectorilor pregătiți; versiunea HTML deschisă direct este un export înghețat. Instrucțiunile de pregătire, modelul fixat și testele sunt în [README-ul investigatorului](../ai/patterns/README.md). Regulile de publicare ale snapshot-ului și protecțiile review-ului rămân active.
+
 ## Import și review cu salvare
 
 `POST /api/v1/imports` salvează articolul și candidații neverificați; rutele `/api/v1/candidates` permit citire, corectare și decizie explicită, cu istoric și versiuni. `/api/v1/reviewed-events` arată evenimentele canonice locale și sursele lor. Un duplicat se asociază prin `action=link`, nu prin crearea automată a unui al doilea accident.
@@ -96,6 +106,7 @@ Vezi [contractul și exemplul PowerShell complet](REVIEW_WORKFLOW.md) pentru imp
 .\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe -m unittest discover -s ai/tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s ai/patterns/tests -v
 .\.venv\Scripts\python.exe -m api.validate_fixtures false_data
 ```
 

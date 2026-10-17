@@ -20,6 +20,8 @@ Alegerea stack-ului și reconcilierea contractelor revin coordonatorului tehnic 
 
 Actualizare la baza `b6cecb9`: colegul a adăugat [context OSM pentru Iași](../context/CITY.md), exporturi observate de infrastructură și [pipeline offline de scor](../risk/IMPLEMENTATION.md). Acestea au instrucțiuni și dependențe proprii; încă nu sunt conectate la API sau la observațiile SafeCross. Nu confundăm infrastructura OSM observată cu accidente verificate și nu combinăm automat aceste exporturi cu fixture-urile sintetice. Mențiunile anterioare despre lipsa codului descriu inspecția inițială.
 
+La `0e8d1ae`, Emi a integrat [investigatorul de tipare — opțiunea 6](../ai/patterns/README.md). `/patterns` și rutele `/api/v1/ai/patterns/*` folosesc vectori MiniLM multilingvi pregătiți local pe fixture-urile existente; excluderea/restabilirea cazurilor recalculează grupurile fără să schimbe datele de review. Sunt 17 evenimente fictive, 4 articole pentru 3 evenimente și numai 2 evenimente cu fragmente explicative potrivite exact. Modul bazat exclusiv pe surse se abține. Nu este analiză validată de cauze și nu descoperă tipare din filmarea SafeCross. Datele sintetice ale opțiunii 6, observațiile video din Toronto și infrastructura OSM observată din Iași rămân explicit distincte; o legătură între ele cere date și asociere verificate.
+
 ## Scope-ul MVP propus
 
 Fluxul principal: **surse despre accidente → extracție AI cu proveniență → verificare umană → localizare → hartă și prioritizare → măsuri candidate → fișă exportabilă**.

@@ -8,7 +8,7 @@ This document lists **nine independent feature options** from the conversation a
 
 **Status:** These are proposals. Their innovation/demo ratings and effort estimates are design judgments, not official judging scores or measured results. None of these new features has been implemented or benchmarked.
 
-**Implementation update, 17 October 2026:** The status above records this note at creation. Option 4 now has a [local SafeCross prototype](../docs/SAFECROSS.md), implemented at Mihnea's request: video detection/tracking, candidate image interactions, human review and export. It does not implement calibrated TTC/PET or validated conflict detection; the other options retain their proposal status in this note.
+**Implementation update, 17 October 2026:** The status above records this note at creation. Option 4 now has a [local SafeCross prototype](../docs/SAFECROSS.md), implemented at Mihnea's request: video detection/tracking, candidate image interactions, human review and export. It does not implement calibrated TTC/PET or validated conflict detection. Emi's [option 6 investigator](patterns/README.md), merged into main at `0e8d1ae`, groups prepared multilingual vectors, exposes provenance and supports excluding/restoring cases. Its current corpus is synthetic and source-only mode abstains on sparse evidence. Both run in the unified backend; the other options retain their proposal status in this note.
 
 ## Quick comparison
 

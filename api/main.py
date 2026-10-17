@@ -10,6 +10,7 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 
 from ai.router import register_ai
+from ai.patterns.router import register_patterns
 from api.review_router import register_review
 from api.safecross_router import register_safecross
 from safecross.setup import MODEL_PATH
@@ -64,7 +65,9 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             "Extracția AI produce candidați neverificați; /imports îi salvează pentru review local. "
             "Corectarea și deciziile operatorului sunt versionate, fără publicare automată pe hartă. "
             "Extracția live a textului necesită Ollama; reluările salvate sunt etichetate explicit. "
-            "SafeCross opțional analizează local video CFR cu YOLOX și review uman, separat de accidente."
+            "SafeCross opțional analizează local video CFR cu YOLOX și review uman, separat de accidente. "
+            "/patterns explorează ipoteze pe fixture-uri sintetice cu vectori semantici pregătiți, "
+            "fără modificarea snapshot-ului sau a datelor de review."
         ),
     )
     application.state.review_directory = Path(
@@ -123,7 +126,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
     async def events(request: Request):
         return snapshot_or_error(request).events_payload()
 
-    return register_safecross(register_review(register_ai(application)))
+    return register_patterns(register_safecross(register_review(register_ai(application))))
 
 
 app = create_app()

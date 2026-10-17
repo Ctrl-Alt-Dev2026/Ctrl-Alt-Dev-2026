@@ -12,6 +12,12 @@ Actualizare de scope cerută de Mihnea: opțiunea AI 4 este implementată ca [Sa
 
 Actualizare din `main`, commit `b6cecb9`: există acum modulele colegului pentru [context OSM](../context/CITY.md) și [scor offline](../risk/IMPLEMENTATION.md). Integrarea lor cu API-ul rămâne pasul 5; formulările de mai jos despre scorul de implementat se referă la backend și la reconcilierea contractelor comune.
 
+Emi a livrat și [investigatorul de tipare, opțiunea 6](../ai/patterns/README.md), integrat în `main` la `0e8d1ae`. Backend-ul comun înregistrează atât `/patterns`, cât și `/safecross`, alături de extracție și review. Nu construim alt motor de grupare. Pregătirea vectorilor folosește sursele fixate din `false_data/`; importurile și evenimentele aprobate ulterior nu intră automat în acest corpus. Până la un contract pentru un corpus observat și regenerare explicită, opțiunea 6 rămâne explorare sintetică separată de publicare și de video.
+
+Verificarea comună după integrarea opțiunilor 4 și 6: **95 teste backend/video, 42 extracție și 21 tipare trecute**, plus **684 comparații Python/JavaScript**. În browser au fost verificate dovezile, excluderea unui caz (suport 4 → 3), abținerea în modul surse, resetarea și exportul. Rezultatul video și review-ul salvat au rămas neschimbate. Vizualizarea opțiunii 6 regrupează vectori pregătiți; nu prezentăm acest pas drept inferență nouă a modelului.
+
+Prioritatea următoare rămâne fluxul comun: surse observate și evenimente canonice verificate, un contract de publicare către context/scor, apoi harta și dosarele. Pentru un corpus observat al opțiunii 6 trebuie păstrate proveniența pe câmp, deduplicarea și regenerarea explicită. Nu legăm clipul din Toronto de o locație din Iași și nu folosim similaritatea semantică drept scor rutier. Demo-urile separate sunt disponibile pentru pregătirea prezentării, fără să ascundă aceste dependențe.
+
 ## Baza de lucru verificată
 
 - Bază Git: `origin/main`, commit `77b0a09`; nu exista aplicație sau fișier de dependențe.
