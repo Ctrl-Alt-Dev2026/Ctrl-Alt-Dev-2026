@@ -28,6 +28,26 @@ def states(result):
 
 
 class RulesTests(unittest.TestCase):
+    def test_reported_speed_visible_without_school_but_no_automatic_bump(self):
+        f = feature(benzi=4, scoala_150m=False)
+        result = run(f, [event(1, cauza_raportata='viteza')])
+        self.assertEqual(states(result)['analiza_viteza'], 'matched')
+        self.assertIn('analiza_viteza', [r['measure_id'] for r in result['suggested']])
+        self.assertEqual(states(result)['limitator_viteza'], 'not_matched')
+
+    def test_speed_can_support_calming_only_with_two_lanes_and_checks(self):
+        f, es = feature(benzi=2, scoala_150m=False), [event(1, cauza_raportata='viteza')]
+        self.assertEqual(states(run(f, es))['limitator_viteza'], 'insufficient_data')
+        checks = dict(no_bus_route=True, no_emergency_route=True, calming_road_compatible=True)
+        self.assertEqual(states(run(f, es, checks=checks))['limitator_viteza'], 'matched')
+        checks['no_emergency_route'] = False
+        self.assertEqual(states(run(f, es, checks=checks))['limitator_viteza'], 'not_matched')
+
+    def test_speed_limit_is_not_a_reported_speed_cause(self):
+        f = feature(benzi=4, maxspeed=70)
+        self.assertEqual(states(run(f, [event(1, cauza_raportata='vizibilitate')]))['analiza_viteza'], 'not_matched')
+        self.assertEqual(states(run(f, [event(1)]))['analiza_viteza'], 'insufficient_data')
+
     def test_unknowns_do_not_trigger_construction(self):
         result = run(feature(), [event(1), event(2)])
         self.assertEqual([c['measure_id'] for c in result['candidates']], ['observatie_teren'])

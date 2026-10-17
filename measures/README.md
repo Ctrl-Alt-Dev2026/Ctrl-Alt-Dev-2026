@@ -1,5 +1,29 @@
 # Măsuri candidate — Persoana 5, etapa inițială
 
+Extensie separată: [sugestii AI locale](LOCAL_AI.md), cu cache, propoziții-sursă
+și verificare explicită a pasajelor. Nu înlocuiește regulile și nu publică date.
+
+## Extensie: viteza raportată
+
+Contractul existent folosește cauza_raportata="viteza". Nu schimbăm enum-ul și
+nu clasificăm noi textul articolului: extracția și verificarea rămân la colegi.
+Minimum un eveniment cu această cauză declanșează analiza_viteza, vizibilă în
+lista scurtă după observația în teren. Se propun evaluarea limitei adecvate,
+controlului vitezei/radarului și calmării traficului. Nu se deduce o depășire
+măsurată ori vinovăția și nu alegem automat o limită nouă sau un radar fix.
+
+Pentru limitator/trecere înălțată, viteza raportată poate înlocui condiția școlii
+apropiate, dar rămân necesare două benzi și confirmările privind compatibilitatea
+drumului și traseele de autobuz/intervenție. Pe patru benzi rămâne analiza
+generală a vitezei, fără limitator automat. Costul noii analize și efectele
+ei sunt necunoscute. O limită maxspeed din OSM nu declanșează regula.
+
+Referință: [FHWA, gestionarea vitezei](https://highways.dot.gov/safety/speed-management/speed-concepts-informational-guide/chapter-7-managing-traffic-speed).
+Acestea sunt opțiuni pentru analiză locală, nu norme juridice românești.
+Catalogul are acum nouă intrări. Cele trei scenarii existente păstrează cauzele
+necunoscute, deci nu primesc artificial această propunere; regula este verificată
+prin cazuri sintetice de test separate.
+
 Modul separat: citește cele trei scenarii existente și produce un catalog și
 propuneri explicabile. Nu modifică scorurile, hotspot-urile originale, frontend-ul,
 backend-ul, documentele comune sau false_data/measure.json. Nu generează PDF,

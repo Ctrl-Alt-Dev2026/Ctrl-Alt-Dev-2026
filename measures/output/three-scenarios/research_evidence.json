@@ -165,6 +165,12 @@
   ],
   "coverage": [
     {
+      "measure_id": "analiza_viteza",
+      "cost_ids": [],
+      "effect_ids": [],
+      "remaining": "Măsurarea vitezelor și definirea intervenției; costul analizei, al radarului ori al schimbării limitei și efectul aplicabil rămân necunoscute."
+    },
+    {
       "measure_id": "iluminat_trecere",
       "cost_ids": [
         "cost-cluj-lighting-188"

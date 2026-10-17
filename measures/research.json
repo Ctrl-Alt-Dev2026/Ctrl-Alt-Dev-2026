@@ -163,6 +163,7 @@
     }
   ],
   "coverage": [
+    {"measure_id": "analiza_viteza", "cost_ids": [], "effect_ids": [], "remaining": "Măsurarea vitezelor și definirea intervenției; costul analizei, al radarului ori al schimbării limitei și efectul aplicabil rămân necunoscute."},
     {"measure_id": "iluminat_trecere", "cost_ids": ["cost-cluj-lighting-188"], "effect_ids": ["cmf-2873"], "remaining": "Cost pe amplasament urban, starea iluminatului și CMF urban comparabil."},
     {"measure_id": "semafor_pietonal", "cost_ids": ["cost-cluj-signal-2020"], "effect_ids": ["cmf-1370"], "remaining": "Deviz local actual și alegerea exactă a intervenției; CMF comparabil."},
     {"measure_id": "insula_refugiu", "cost_ids": [], "effect_ids": ["cmf-175"], "remaining": "Cost românesc izolat și documentat, geometrie, mediană existentă și volume de trafic."},

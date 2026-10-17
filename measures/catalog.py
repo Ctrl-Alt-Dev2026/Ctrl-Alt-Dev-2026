@@ -5,17 +5,24 @@ VISIBILITY = 'https://highways.dot.gov/safety/proven-safety-countermeasures/cros
 REFUGE = 'https://highways.dot.gov/safety/proven-safety-countermeasures/medians-and-pedestrian-refuge-islands-urban-and-suburban-areas'
 STEP = 'https://highways.dot.gov/safety/pedestrian-bicyclist/step'
 CALMING = 'https://highways.dot.gov/safety/speed-management/traffic-calming-eprimer/module-3-part-3'
+SPEED = 'https://highways.dot.gov/safety/speed-management/speed-concepts-informational-guide/chapter-7-managing-traffic-speed'
 
 ROWS = [
+    ('analiza_viteza', 'Analiza gestionării vitezei', 'Minimum un eveniment cu cauza_raportata=viteza',
+     ['verificarea pasajului-sursă: viteză raportată nu înseamnă depășire măsurată',
+      'măsurarea vitezelor reale, traficului și verificarea limitei existente',
+      'evaluarea unei limite adecvate și a semnalizării, fără alegerea automată a unei valori',
+      'evaluarea controlului vitezei/radarului cu autoritatea competentă și verificarea cadrului local',
+      'evaluarea calmării fizice: limitator/trecere înălțată numai dacă drumul și traseele sunt compatibile'], [SPEED]),
     ('iluminat_trecere', 'Analiza iluminatului dedicat trecerii', 'Minimum două evenimente cu noapte=true la trecere',
      ['iluminatul existent și măsurători nocturne', 'poziția stâlpilor și vizibilitatea din ambele sensuri'], [VISIBILITY]),
     ('semafor_pietonal', 'Analiza semaforizării pietonale', 'Trecere cu semafor=false și minimum patru benzi',
      ['necesitatea semaforizării conform normelor locale', 'traficul și fluxul pietonal măsurate', 'coordonarea cu semafoarele apropiate'], [STEP]),
     ('insula_refugiu', 'Analiza unei insule de refugiu', 'Trecere cu semafor=false și minimum patru benzi',
      ['existența unei insule', 'lățimea disponibilă și accesibilitatea', 'traficul, vitezele și fluxul pietonal'], [REFUGE]),
-    ('trecere_inaltata', 'Analiza unei treceri înălțate', 'Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată',
+    ('trecere_inaltata', 'Analiza unei treceri înălțate', 'Școală apropiată sau viteză raportată, evenimente la trecere, două benzi și compatibilitate confirmată',
      ['intrările școlii și fluxul real de elevi', 'traseele de autobuz și intervenție', 'drenajul și compatibilitatea tipului de drum'], [STEP]),
-    ('limitator_viteza', 'Analiza calmării vitezei', 'Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată',
+    ('limitator_viteza', 'Analiza calmării fizice a vitezei', 'Școală apropiată sau viteză raportată, evenimente la trecere, două benzi și compatibilitate confirmată',
      ['vitezele măsurate și soluția adecvată', 'traseele de autobuz și intervenție', 'accesibilitatea, zgomotul și drenajul'], [CALMING]),
     ('analiza_intersectie', 'Analiza vizibilității și organizării intersecției', 'Minimum două cauze raportate explicit ca neacordare de prioritate la intersecție',
      ['geometria și vizibilitatea', 'semnalizarea existentă', 'tipul conflictului; cauza relatată nu demonstrează cauza tehnică'], [VISIBILITY]),
@@ -33,7 +40,7 @@ def catalog():
 
 
 def provenance():
-    return dict(rule_source='Planificare.md, secțiunea 7',
+    return dict(rule_source='Planificare.md, secțiunea 7; extensie autorizată de utilizator pentru cauza viteza',
                 thresholds='Convenții MVP ale echipei, nu praguri validate științific.',
                 applicability='Surse internaționale orientative; proiectarea și normele românești necesită verificare.',
                 numeric_status='Repere cercetate în research_evidence.json; fără cost sau efect transferabil automat locațiilor. Valorile din catalog rămân null.',

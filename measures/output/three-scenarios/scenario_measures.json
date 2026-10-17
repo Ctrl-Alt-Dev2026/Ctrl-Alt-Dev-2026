@@ -130,8 +130,13 @@
           ]
         }
       ],
-      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "selection_policy": "Maximum trei afișate: observație în teren, analiza vitezei dacă este raportată, apoi ordinea catalogului; fără clasament de eficacitate.",
       "rules": [
+        {
+          "measure_id": "analiza_viteza",
+          "status": "insufficient_data",
+          "motiv": "0 evenimente cu viteza raportată explicit; event_ids=[]. Se analizează limita adecvată, controlul vitezei/radarul și calmarea traficului; nu se deduce viteza măsurată sau vinovăția."
+        },
         {
           "measure_id": "iluminat_trecere",
           "status": "matched",
@@ -150,12 +155,12 @@
         {
           "measure_id": "trecere_inaltata",
           "status": "not_matched",
-          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+          "motiv": "Școală=True; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
         },
         {
           "measure_id": "limitator_viteza",
           "status": "not_matched",
-          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+          "motiv": "Școală=True; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
         },
         {
           "measure_id": "analiza_intersectie",
@@ -407,8 +412,13 @@
           ]
         }
       ],
-      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "selection_policy": "Maximum trei afișate: observație în teren, analiza vitezei dacă este raportată, apoi ordinea catalogului; fără clasament de eficacitate.",
       "rules": [
+        {
+          "measure_id": "analiza_viteza",
+          "status": "insufficient_data",
+          "motiv": "0 evenimente cu viteza raportată explicit; event_ids=[]. Se analizează limita adecvată, controlul vitezei/radarul și calmarea traficului; nu se deduce viteza măsurată sau vinovăția."
+        },
         {
           "measure_id": "iluminat_trecere",
           "status": "matched",
@@ -427,12 +437,12 @@
         {
           "measure_id": "trecere_inaltata",
           "status": "not_matched",
-          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+          "motiv": "Școală=True; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
         },
         {
           "measure_id": "limitator_viteza",
           "status": "not_matched",
-          "motiv": "Școală=True; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+          "motiv": "Școală=True; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
         },
         {
           "measure_id": "analiza_intersectie",
@@ -679,8 +689,13 @@
           ]
         }
       ],
-      "selection_policy": "Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.",
+      "selection_policy": "Maximum trei afișate: observație în teren, analiza vitezei dacă este raportată, apoi ordinea catalogului; fără clasament de eficacitate.",
       "rules": [
+        {
+          "measure_id": "analiza_viteza",
+          "status": "insufficient_data",
+          "motiv": "0 evenimente cu viteza raportată explicit; event_ids=[]. Se analizează limita adecvată, controlul vitezei/radarul și calmarea traficului; nu se deduce viteza măsurată sau vinovăția."
+        },
         {
           "measure_id": "iluminat_trecere",
           "status": "matched",
@@ -699,12 +714,12 @@
         {
           "measure_id": "trecere_inaltata",
           "status": "not_matched",
-          "motiv": "Școală=None; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
+          "motiv": "Școală=None; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}."
         },
         {
           "measure_id": "limitator_viteza",
           "status": "not_matched",
-          "motiv": "Școală=None; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
+          "motiv": "Școală=None; evenimente cu viteza=0; evenimente=3; benzi=4 (necesar 2); confirmări de compatibilitate={}. Vitezele măsurate rămân de verificat."
         },
         {
           "measure_id": "analiza_intersectie",

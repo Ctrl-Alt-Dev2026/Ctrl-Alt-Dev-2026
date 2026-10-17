@@ -1,0 +1,47 @@
+{
+  "reviewed_at": "2026-10-18",
+  "review_kind": "assistant_code_and_content_audit_not_human_approval",
+  "prompt_version": "measures-ai-3",
+  "structural_verification": {
+    "completed": true,
+    "articles": 3,
+    "suggestions": 3,
+    "exact_passages_verified": true,
+    "semantic_review_required": true
+  },
+  "offline_replay_identical_suggestions": true,
+  "approved_suggestions": 0,
+  "readiness": "experimental_review_only_not_automatic_recommendations",
+  "model_limitations": [
+    "False positive on police controls article.",
+    "Generic suggestions on the two incident articles.",
+    "Some text is awkward/incomplete at field length limits; exact quotations do not prove semantic support."
+  ],
+  "articles": [
+    {
+      "article_id": "press-cfd4d425b05574fbd870",
+      "assessment": "reject_nonincident",
+      "reason": "Article describes police controls, not a specific pedestrian collision; model relevance claim is false."
+    },
+    {
+      "article_id": "press-4c90cf502cce2cbed684",
+      "assessment": "needs_rewrite_and_technical_review",
+      "reason": "Quotes describe a pedestrian incident, but proposal is generic; identifying responsible parties is outside an infrastructure recommendation."
+    },
+    {
+      "article_id": "press-fd82fd128c4b861174e4",
+      "assessment": "generic_not_actionable",
+      "reason": "Proposal broadly asks for pedestrian safety checks; medical quotation does not establish a specific engineering intervention."
+    }
+  ],
+  "earlier_attempts": [
+    {
+      "prompt_version": "measures-ai-1",
+      "result": "2 invalid envelopes and one false-negative relevance claim in the three-article attempt."
+    },
+    {
+      "prompt_version": "measures-ai-2",
+      "result": "One truncated response and one false-positive control article; no automatic publication."
+    }
+  ]
+}

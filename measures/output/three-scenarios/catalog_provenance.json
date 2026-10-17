@@ -1,10 +1,13 @@
 {
-  "rule_source": "Planificare.md, secțiunea 7",
+  "rule_source": "Planificare.md, secțiunea 7; extensie autorizată de utilizator pentru cauza viteza",
   "thresholds": "Convenții MVP ale echipei, nu praguri validate științific.",
   "applicability": "Surse internaționale orientative; proiectarea și normele românești necesită verificare.",
   "numeric_status": "Repere cercetate în research_evidence.json; fără cost sau efect transferabil automat locațiilor. Valorile din catalog rămân null.",
   "research_file": "research_evidence.json",
   "sources": {
+    "analiza_viteza": [
+      "https://highways.dot.gov/safety/speed-management/speed-concepts-informational-guide/chapter-7-managing-traffic-speed"
+    ],
     "iluminat_trecere": [
       "https://highways.dot.gov/safety/proven-safety-countermeasures/crosswalk-visibility-enhancements"
     ],

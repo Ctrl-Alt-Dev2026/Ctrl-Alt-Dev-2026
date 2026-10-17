@@ -1,5 +1,18 @@
 # Măsuri și costuri orientative pentru cele trei scenarii
 
+Extensia AI este separată: measures/output/ai-real-pilot/ai_suggestions.json și
+pilot_review.json. Nu o combina cu recomandările deterministe sau cu cele trei
+locații: articolele nu au asociere OSM verificată. Proba a găsit un fals pozitiv
+și propuneri prea generale; nicio sugestie nu este aprobată. Eventuala afișare
+este numai într-un panou explicit de review, cu eticheta „Sugestie AI — necesită
+verificare”, citate și erorile/limitele din pilot_review.json. Nu este o sursă
+pentru marcatori, costuri, scoruri sau recomandări automate de lucrări.
+
+Catalogul include și analiza_viteza când cauza raportată este explicit viteza.
+Folosește selected_for_display, fără o listă fixă de ID-uri: analiza vitezei
+poate intra în primele trei propuneri. Costul său rămâne null. În aceste trei
+scenarii cauzele sunt necunoscute și regula nu este declanșată artificial.
+
 Fișierul de încărcat: `measures/output/three-scenarios/frontend_measures.json`.
 Este un fișier separat, opțional, pentru datasetul static mixed-source existent
 din `risk/output/frontend-scenario/data/`. Nu înlocuiește measures.json comun,

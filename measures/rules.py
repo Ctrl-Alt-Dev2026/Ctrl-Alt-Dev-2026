@@ -50,18 +50,21 @@ def evaluate(feature, events, *, mode, checks=None):
     two_lanes = None if lanes is None else lanes == 2
     night = True if stats['noapte'] >= 2 else None if stats['noapte'] + stats['necunoscut'] >= 2 else False
     priority = sum(e.get('cauza_raportata') == 'neacordare_prioritate' for e in events)
+    speed_ids = [e['event_id'] for e in events if e.get('cauza_raportata') == 'viteza']
+    speed_condition = True if speed_ids else None if any(e.get('cauza_raportata') is None for e in events) else False
     unknown_causes = sum(e.get('cauza_raportata') is None for e in events)
     repeated = True if priority >= 2 else None if priority + unknown_causes >= 2 else False
     missing = [k for k in FIELDS if p.get(k) is None]
-    school = conjunction(crossing, bool(events), p.get('scoala_150m'), two_lanes,
+    school = conjunction(crossing, bool(events), True if speed_ids else p.get('scoala_150m'), two_lanes,
                          checks.get('no_bus_route'), checks.get('no_emergency_route'),
                          checks.get('calming_road_compatible'))
     conditions = {
+        'analiza_viteza': (speed_condition, f'{len(speed_ids)} evenimente cu viteza raportată explicit; event_ids={speed_ids}. Se analizează limita adecvată, controlul vitezei/radarul și calmarea traficului; nu se deduce viteza măsurată sau vinovăția.'),
         'iluminat_trecere': (conjunction(crossing, night), f"{stats['noapte']} evenimente nocturne explicite; {stats['necunoscut']} necunoscute. Iluminatul existent trebuie evaluat."),
         'semafor_pietonal': (conjunction(crossing, no_signal, multilane), f"Semafor={p.get('semafor')}; benzi={lanes}. Necesitatea semaforizării nu este stabilită automat."),
         'insula_refugiu': (conjunction(crossing, no_signal, multilane), f"Semafor={p.get('semafor')}; benzi={lanes}. Existența și fezabilitatea insulei trebuie verificate."),
-        'trecere_inaltata': (school, f"Școală={p.get('scoala_150m')}; evenimente={len(events)}; benzi={lanes} (necesar 2); confirmări de compatibilitate={checks}."),
-        'limitator_viteza': (school, f"Școală={p.get('scoala_150m')}; evenimente={len(events)}; benzi={lanes} (necesar 2); confirmări de compatibilitate={checks}. Vitezele măsurate rămân de verificat."),
+        'trecere_inaltata': (school, f"Școală={p.get('scoala_150m')}; evenimente cu viteza={len(speed_ids)}; evenimente={len(events)}; benzi={lanes} (necesar 2); confirmări de compatibilitate={checks}."),
+        'limitator_viteza': (school, f"Școală={p.get('scoala_150m')}; evenimente cu viteza={len(speed_ids)}; evenimente={len(events)}; benzi={lanes} (necesar 2); confirmări de compatibilitate={checks}. Vitezele măsurate rămân de verificat."),
         'analiza_intersectie': (conjunction(p['tip'] == 'intersectie', repeated), f'{priority} evenimente cu cauza explicită neacordare_prioritate.'),
         'analiza_statie': (conjunction(crossing, bool(events), p.get('statie_100m')), 'Stație apropiată și evenimente asociate; legătura cu deplasările la stație trebuie verificată.'),
         'observatie_teren': (bool(missing), 'Câmpuri necunoscute: ' + ', '.join(missing)),
@@ -73,9 +76,9 @@ def evaluate(feature, events, *, mode, checks=None):
         if state is True:
             matched.append(dict(measure_id=row['id'], motiv=('SCENARIU: ' if mode != 'observed' else '') + reason,
                                 de_verificat=row['de_verificat'] + (missing if row['id'] == 'observatie_teren' else [])))
-    # Field observation first when necessary, then catalog order; not an efficacy rank.
-    matched.sort(key=lambda row: row['measure_id'] != 'observatie_teren')
+    # Make the explicit reported speed cause visible; not an efficacy rank.
+    matched.sort(key=lambda row: {'observatie_teren': 0, 'analiza_viteza': 1}.get(row['measure_id'], 2))
     return dict(location_id=p['id'], data_mode=mode, event_ids=[e['event_id'] for e in events],
                 statistics=stats, candidates=matched, suggested=matched[:3],
-                selection_policy='Maximum trei afișate: observație în teren, apoi ordinea catalogului; fără clasament de eficacitate.',
+                selection_policy='Maximum trei afișate: observație în teren, analiza vitezei dacă este raportată, apoi ordinea catalogului; fără clasament de eficacitate.',
                 rules=audit, missing_fields=missing)

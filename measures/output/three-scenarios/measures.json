@@ -1,5 +1,22 @@
 [
   {
+    "id": "analiza_viteza",
+    "nume": "Analiza gestionării vitezei",
+    "conditie": "Minimum un eveniment cu cauza_raportata=viteza",
+    "cost_lei_min": null,
+    "cost_lei_max": null,
+    "sursa_cost": null,
+    "reducere_tipica": null,
+    "sursa_reducere": null,
+    "de_verificat": [
+      "verificarea pasajului-sursă: viteză raportată nu înseamnă depășire măsurată",
+      "măsurarea vitezelor reale, traficului și verificarea limitei existente",
+      "evaluarea unei limite adecvate și a semnalizării, fără alegerea automată a unei valori",
+      "evaluarea controlului vitezei/radarului cu autoritatea competentă și verificarea cadrului local",
+      "evaluarea calmării fizice: limitator/trecere înălțată numai dacă drumul și traseele sunt compatibile"
+    ]
+  },
+  {
     "id": "iluminat_trecere",
     "nume": "Analiza iluminatului dedicat trecerii",
     "conditie": "Minimum două evenimente cu noapte=true la trecere",
@@ -46,7 +63,7 @@
   {
     "id": "trecere_inaltata",
     "nume": "Analiza unei treceri înălțate",
-    "conditie": "Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată",
+    "conditie": "Școală apropiată sau viteză raportată, evenimente la trecere, două benzi și compatibilitate confirmată",
     "cost_lei_min": null,
     "cost_lei_max": null,
     "sursa_cost": null,
@@ -60,8 +77,8 @@
   },
   {
     "id": "limitator_viteza",
-    "nume": "Analiza calmării vitezei",
-    "conditie": "Școală apropiată, evenimente la trecere, două benzi și compatibilitate confirmată",
+    "nume": "Analiza calmării fizice a vitezei",
+    "conditie": "Școală apropiată sau viteză raportată, evenimente la trecere, două benzi și compatibilitate confirmată",
     "cost_lei_min": null,
     "cost_lei_max": null,
     "sursa_cost": null,
