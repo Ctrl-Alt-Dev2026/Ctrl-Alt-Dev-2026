@@ -1,0 +1,1096 @@
+{
+  "data_mode": "observed",
+  "area": "Palas pilot",
+  "crs": "EPSG:32635",
+  "crossing_downloaded": "2026-10-17",
+  "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+  "sources": {
+    "roads": {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "fetched_at": "2026-10-17T13:12:12.380823+00:00",
+      "bbox": [
+        47.1517,
+        27.5807,
+        47.1611,
+        27.5946
+      ],
+      "timestamp_osm_base": "2026-10-17T13:09:47Z"
+    },
+    "schools": {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "fetched_at": "2026-10-17T13:12:35.764112+00:00",
+      "bbox": [
+        47.1517,
+        27.5807,
+        47.1611,
+        27.5946
+      ],
+      "timestamp_osm_base": "2026-10-17T13:10:48Z"
+    },
+    "stops": {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "fetched_at": "2026-10-17T13:12:52.882954+00:00",
+      "bbox": [
+        47.1517,
+        27.5807,
+        47.1611,
+        27.5946
+      ],
+      "timestamp_osm_base": "2026-10-17T13:10:48Z"
+    }
+  },
+  "rejected_pois": [],
+  "crossings": [
+    {
+      "id": "osm-node-1771653545",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 30824261,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-1771688773",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 98601269,
+          "tags": {
+            "description": "acces parcare",
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "service": "parking_aisle",
+            "smoothness": "intermediate",
+            "surface": "asphalt",
+            "surface_survey": "2022SEP_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-1781766381",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1302518750,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-3100723591",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 29201176,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Bulevardul Regele Ferdinand I al României",
+            "old_name": "Splai Bahlui Mal Stâng",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "sidewalk:both:surface": "paving_stones",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023JUN_supremealex@peundemerg.ro",
+            "turn:lanes": "left|through|through;right"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [
+        {
+          "type": "way",
+          "id": 198901731,
+          "name": null,
+          "amenity": "kindergarten",
+          "distance_m": 91.553
+        }
+      ],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 10573422765,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 44.082
+        },
+        {
+          "type": "node",
+          "id": 9875344437,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 48.571
+        },
+        {
+          "type": "node",
+          "id": 9875344445,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 95.237
+        },
+        {
+          "type": "node",
+          "id": 6644591934,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 98.826
+        }
+      ],
+      "road_lanes": 3,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-3102528275",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 304202333,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "6",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Strada Anastasie Panu",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022AUG_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [
+        {
+          "type": "way",
+          "id": 211365138,
+          "name": null,
+          "amenity": "school",
+          "distance_m": 33.755
+        }
+      ],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 6,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-4854449747",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 98601367,
+          "tags": {
+            "foot": "yes",
+            "highway": "tertiary",
+            "is_in:city": "Iași",
+            "lanes": "2",
+            "maxspeed": "RO:urban",
+            "motor_vehicle": "yes",
+            "name": "Stradela Sfântul Andrei",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [
+        {
+          "type": "way",
+          "id": 198901731,
+          "name": null,
+          "amenity": "kindergarten",
+          "distance_m": 93.73
+        }
+      ],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 10573422765,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 35.927
+        },
+        {
+          "type": "node",
+          "id": 9875344437,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 38.946
+        },
+        {
+          "type": "node",
+          "id": 9875344445,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 94.648
+        },
+        {
+          "type": "node",
+          "id": 6644591934,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 98.675
+        }
+      ],
+      "road_lanes": 2,
+      "road_type": "tertiary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-6194970558",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 319018032,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lanes:backward": "2",
+            "lanes:forward": "1",
+            "lit": "yes",
+            "maxspeed": "40",
+            "name": "Strada Sfântul Lazăr",
+            "old_name": "Strada 7 Noiembrie",
+            "oneway": "no",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro",
+            "turn:lanes:backward": "right|through;through",
+            "turn:lanes:forward": "left"
+          },
+          "distance_m": 0.0
+        },
+        {
+          "id": 1136487133,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lanes:backward": "2",
+            "lanes:forward": "2",
+            "lit": "yes",
+            "maxspeed": "40",
+            "name": "Strada Sfântul Lazăr",
+            "old_name": "Strada 7 Noiembrie",
+            "oneway": "no",
+            "sidewalk": "both",
+            "sidewalk:both:surface": "paving_stones",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        },
+        {
+          "id": 1538972316,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "1",
+            "maxspeed": "40",
+            "name": "Strada Sfântul Lazăr",
+            "old_name": "Strada 7 Noiembrie",
+            "oneway": "yes",
+            "sidewalk:right": "yes",
+            "sidewalk:right:surface": "paving_stones",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-6194970559",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1136487133,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lanes:backward": "2",
+            "lanes:forward": "2",
+            "lit": "yes",
+            "maxspeed": "40",
+            "name": "Strada Sfântul Lazăr",
+            "old_name": "Strada 7 Noiembrie",
+            "oneway": "no",
+            "sidewalk": "both",
+            "sidewalk:both:surface": "paving_stones",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 4,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-8210182453",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 30910783,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2021NOV_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [
+        {
+          "type": "way",
+          "id": 211365138,
+          "name": null,
+          "amenity": "school",
+          "distance_m": 44.382
+        }
+      ],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 4,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10553239154",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1068015163,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "lanes": "2",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "oneway": "no",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 2,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10553239163",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 550946517,
+          "tags": {
+            "access": "permissive",
+            "foot": "yes",
+            "highway": "service",
+            "maxspeed": "RO:urban",
+            "name": "Strada Sfântul Constantin",
+            "oneway": "yes",
+            "surface": "asphalt"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 637052871,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 21.928
+        },
+        {
+          "type": "node",
+          "id": 3316510259,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 37.288
+        },
+        {
+          "type": "node",
+          "id": 3316527683,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 64.623
+        }
+      ],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10553239164",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 48920173,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "oneway": "yes",
+            "surface": "asphalt"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 3316527683,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 25.842
+        },
+        {
+          "type": "node",
+          "id": 3316510259,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 34.145
+        },
+        {
+          "type": "node",
+          "id": 637052871,
+          "name": "Sala Polivalenta",
+          "amenity": null,
+          "distance_m": 44.382
+        }
+      ],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10553239173",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 98601367,
+          "tags": {
+            "foot": "yes",
+            "highway": "tertiary",
+            "is_in:city": "Iași",
+            "lanes": "2",
+            "maxspeed": "RO:urban",
+            "motor_vehicle": "yes",
+            "name": "Stradela Sfântul Andrei",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 2,
+      "road_type": "tertiary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10553239176",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 158005036,
+          "tags": {
+            "highway": "tertiary",
+            "is_in:city": "Iași",
+            "lanes": "2",
+            "maxspeed": "RO:urban",
+            "name": "Strada Sfântul Andrei",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022AUG_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 2,
+      "road_type": "tertiary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10584481372",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1068015160,
+          "tags": {
+            "embedded_rails": "tram",
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palat",
+            "oneway": "no",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022JUN_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 4,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-10742420064",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 24775753,
+          "tags": {
+            "foot": "yes",
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "30",
+            "motor_vehicle": "private",
+            "service": "parking_aisle",
+            "surface": "concrete"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-11435192267",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1216609201,
+          "tags": {
+            "highway": "tertiary",
+            "lanes": "2",
+            "maxspeed": "30",
+            "name": "Strada Iancu Bacalu",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023DEC_"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [
+        {
+          "type": "way",
+          "id": 211365138,
+          "name": null,
+          "amenity": "school",
+          "distance_m": 23.225
+        }
+      ],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": 2,
+      "road_type": "tertiary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-11549366035",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1242777595,
+          "tags": {
+            "highway": "service",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "oneway": "yes",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023JUN_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        },
+        {
+          "id": 1302518780,
+          "tags": {
+            "highway": "service",
+            "name": "Strada Palas",
+            "oneway": "yes"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-11553251503",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 8468523,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palat",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        },
+        {
+          "id": 1216609201,
+          "tags": {
+            "highway": "tertiary",
+            "lanes": "2",
+            "maxspeed": "30",
+            "name": "Strada Iancu Bacalu",
+            "oneway": "yes",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023DEC_"
+          },
+          "distance_m": 0.0
+        },
+        {
+          "id": 1243104403,
+          "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palat",
+            "sidewalk": "both",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [
+        {
+          "type": "way",
+          "id": 211365138,
+          "name": null,
+          "amenity": "school",
+          "distance_m": 30.02
+        }
+      ],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": null,
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12063312823",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1242777584,
+          "tags": {
+            "highway": "service",
+            "oneway": "yes"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12063312839",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1302518783,
+          "tags": {
+            "highway": "service",
+            "name": "Strada Palas",
+            "oneway": "yes"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12167789621",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 165624922,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "sidewalk": "left",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12650822593",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1366080480,
+          "tags": {
+            "highway": "service",
+            "service": "parking_aisle",
+            "surface": "paving_stones"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12870861989",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1390424235,
+          "tags": {
+            "highway": "secondary",
+            "is_in:city": "Iași",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Bulevardul Dimitrie Cantemir",
+            "oneway": "yes",
+            "sidewalk:left": "yes",
+            "sidewalk:right": "separate",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023JUL_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [
+        {
+          "type": "way",
+          "id": 198901731,
+          "name": null,
+          "amenity": "kindergarten",
+          "distance_m": 76.466
+        }
+      ],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 10573422765,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 30.01
+        },
+        {
+          "type": "node",
+          "id": 9875344437,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 36.456
+        },
+        {
+          "type": "node",
+          "id": 9875344445,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 78.415
+        },
+        {
+          "type": "node",
+          "id": 6644591934,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 82.213
+        }
+      ],
+      "road_lanes": 3,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-12870861990",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1390424234,
+          "tags": {
+            "highway": "secondary",
+            "is_in:city": "Iași",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "RO:urban",
+            "name": "Bulevardul Dimitrie Cantemir",
+            "oneway": "yes",
+            "sidewalk:left": "separate",
+            "sidewalk:right": "yes",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2023JUL_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [
+        {
+          "type": "way",
+          "id": 198901731,
+          "name": null,
+          "amenity": "kindergarten",
+          "distance_m": 71.874
+        }
+      ],
+      "stops_100m": [
+        {
+          "type": "node",
+          "id": 10573422765,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 19.824
+        },
+        {
+          "type": "node",
+          "id": 9875344437,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 27.19
+        },
+        {
+          "type": "node",
+          "id": 9875344445,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 71.123
+        },
+        {
+          "type": "node",
+          "id": 6644591934,
+          "name": "Pod Cantemir",
+          "amenity": null,
+          "distance_m": 75.286
+        }
+      ],
+      "road_lanes": 3,
+      "road_type": "secondary",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-14013888045",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 1538972315,
+          "tags": {
+            "highway": "service",
+            "surface": "asphalt"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    },
+    {
+      "id": "osm-node-14173707076",
+      "road_status": "linked",
+      "roads": [
+        {
+          "id": 165624922,
+          "tags": {
+            "highway": "service",
+            "is_in:city": "Iași",
+            "maxspeed": "RO:urban",
+            "name": "Strada Palas",
+            "sidewalk": "left",
+            "smoothness": "good",
+            "surface": "asphalt",
+            "surface_survey": "2022MAY_supremealex@peundemerg.ro"
+          },
+          "distance_m": 0.0
+        }
+      ],
+      "rejected_roads": [],
+      "schools_150m": [],
+      "kindergartens_150m": [],
+      "stops_100m": [],
+      "road_lanes": null,
+      "road_type": "service",
+      "note": "Road tags describe mapped ways, not a verified full crossing width. Missing POIs remain unknown."
+    }
+  ],
+  "summary": {
+    "crossings": 27,
+    "road_status": {
+      "linked": 27
+    },
+    "with_lanes": 12,
+    "with_school": 4,
+    "with_stop": 6
+  }
+}

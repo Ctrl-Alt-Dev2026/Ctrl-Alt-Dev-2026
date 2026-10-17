@@ -1,0 +1,142 @@
+id,reference_lon,reference_lat,mapped_crossings,traffic_signals_known,no_traffic_signals_confirmed,unsignalized_4plus_lanes,school_within_150m,stop_within_100m,unknown_speed,data_status,mapped_road_names
+utm35n-1000-536000-5223000,27.487440724426488,47.16549977197286,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-536000-5224000,27.48536038672465,47.17299751599143,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-536000-5225000,27.47991398024107,47.17872826688371,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-537000-5223000,27.494784708523024,47.165422364441206,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-537000-5224000,27.49484210760445,47.17160281932214,4,0,2,0,0,4,0,mapped_crossings_present,
+utm35n-1000-537000-5225000,27.4883428121377,47.177488878478506,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-538000-5222000,27.511494282000573,47.15872647833517,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-538000-5223000,27.507966586473614,47.16412095865502,13,0,12,0,0,2,13,mapped_crossings_present,
+utm35n-1000-538000-5224000,27.508028287036943,47.17059240883555,34,0,34,0,0,33,32,mapped_crossings_present,
+utm35n-1000-539000-5222000,27.51890369810082,47.15843045094469,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5223000,27.5211578097055,47.16384072930105,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5224000,27.52392032776089,47.17286087796104,13,0,9,0,0,5,10,mapped_crossings_present,
+utm35n-1000-539000-5225000,27.520264249192156,47.1776178573409,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5226000,27.527970125159346,47.19408409386016,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5227000,27.527244681327918,47.19978111648684,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5228000,27.52595207048578,47.20857066117332,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5229000,27.526827594180684,47.21731826345329,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-539000-5230000,27.52462305945509,47.22469440849329,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5221000,27.539226062005337,47.14785506615535,1,0,1,0,0,1,1,mapped_crossings_present,Strada Constantin Langa
+utm35n-1000-540000-5222000,27.53876400894229,47.15499386747389,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5223000,27.53435564598699,47.164233607966274,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5224000,27.53442854355853,47.171501659984095,26,8,13,0,0,20,19,mapped_crossings_present,Aleea Păcurari; Strada Canta; Strada Luca Arbore; Strada Tabacului; Șoseaua Păcurari; Șoseaua Rediu; Șoseaua Rediu Varianta
+utm35n-1000-540000-5225000,27.538094650985716,47.18043518888007,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5226000,27.53506158959276,47.191162178048714,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5227000,27.53471208261945,47.19974409829786,12,0,8,0,2,8,12,mapped_crossings_present,Aleea Mihail Sadoveanu
+utm35n-1000-540000-5228000,27.534793619332405,47.20785776028978,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5229000,27.534893369201214,47.21777897536861,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-540000-5230000,27.536794664147603,47.224934291473254,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5220000,27.552407725291467,47.140648176363726,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5221000,27.544539676682636,47.14561402676402,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5222000,27.547451615602792,47.15469135899444,1,0,0,0,0,0,1,mapped_crossings_present,
+utm35n-1000-541000-5223000,27.547544050626172,47.16368946022294,19,3,13,1,5,11,19,mapped_crossings_present,Bulevardul Dacia; Strada Amurgului; Strada Buridava; Strada Columnei; Strada Profesor Ion Simionescu; Strada Strămoșilor; Strada Vitejilor
+utm35n-1000-541000-5224000,27.54763653033584,47.17268754711229,52,23,21,1,35,30,42,mapped_crossings_present,Aleea Cimitirul Evreiesc; Aleea Păcurari; Strada Buridava; Strada Canta; Strada Cazărmilor; Strada Columnei; Strada Lupiței; Strada Munteni; Strada Muntenimii; Strada Profesor Ion Simionescu; Strada Păcurari; Strada Sergent Grigore Ion; Strada Strămoșilor; Strada Tabacului; Strada Vitejilor; Stradela Canta; Șoseaua Moara de Foc; Șoseaua Păcurari
+utm35n-1000-541000-5225000,27.547729054758967,47.18168561966276,7,0,7,0,0,0,7,mapped_crossings_present,
+utm35n-1000-541000-5226000,27.547821623922736,47.19068367787463,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5227000,27.54791423785436,47.19968172174819,5,0,1,0,0,4,5,mapped_crossings_present,Aleea Mihail Sadoveanu; Strada Ursulea; Strada Viticultori; Șoseaua Ștefan cel Mare și Sfânt
+utm35n-1000-541000-5228000,27.547322937355258,47.20872782272909,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5229000,27.545118226202863,47.21766284075367,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-541000-5230000,27.54440336319707,47.22240596685946,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-542000-5217000,27.563054126563014,47.108796936665954,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-542000-5218000,27.565492858048255,47.11887411792034,1,0,0,0,0,0,0,mapped_crossings_present,Strada Sub Coșere
+utm35n-1000-542000-5219000,27.56527718049125,47.12817103560138,7,0,7,0,0,2,7,mapped_crossings_present,Aleea Tudor Neculai; Strada Tudor Neculai
+utm35n-1000-542000-5220000,27.562951374298134,47.136771265074614,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-542000-5221000,27.560547964218507,47.14562946552758,5,0,5,0,0,2,0,mapped_crossings_present,Șoseaua Voinești
+utm35n-1000-542000-5222000,27.560642580467718,47.15462756113783,5,0,2,0,0,0,5,mapped_crossings_present,Strada Cicoarei; Strada Profesor Narcis Măcinoi
+utm35n-1000-542000-5223000,27.560737242451875,47.16362564240196,35,6,17,2,16,18,35,mapped_crossings_present,Aleea Sucidava; Aleea Ștefan Procopiu; Bulevardul Alexandru cel Bun; Bulevardul Dacia; Podul Cicoarei; Strada Basarabi; Strada Bistrița; Strada Drobeta; Strada Mușatini; Strada Plăieșilor; Strada Sarmisegetuza; Șoseaua Națională
+utm35n-1000-542000-5224000,27.560831950198764,47.17262370932025,44,10,32,0,11,16,40,mapped_crossings_present,Pasajul Octav Băncilă Pictor; Strada Amurgului; Strada Manolescu; Strada Neculau; Strada Niciman; Strada Octav Băncilă Pictor; Strada Petru Poni; Strada Pojărniciei; Strada Ponoarelor; Strada Profesor Theodor Văscăuțeanu; Strada Păcurari; Strada Tabacului; Strada Toma Cozma; Strada Tăcuta; Strada Școalei; Strada Șipoțel; Străpungerea Silvestru; Șoseaua Arcu; Șoseaua Moara de Foc; Șoseaua Națională
+utm35n-1000-542000-5225000,27.560926703736214,47.18162176189295,9,1,8,3,4,5,8,mapped_crossings_present,Aleea Grigore Ghica Vodă; Bulevardul Carol I; Strada Doctor Nicolae Vicol; Strada Dumbrava Roșie; Strada General Toma Dumitresc; Strada Petre Andrei; Strada Profesor Mihai Costăchescu
+utm35n-1000-542000-5226000,27.561021503092064,47.19061980012035,10,1,4,2,2,4,10,mapped_crossings_present,Aleea Grigore Ghica Vodă; Aleea Mihail Sadoveanu; Strada Dumbrava Roșie; Strada Grigore Ghica Vodă; Șoseaua Sărărie; Șoseaua Ștefan cel Mare și Sfânt
+utm35n-1000-542000-5227000,27.56111142172374,47.19915054463843,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-542000-5228000,27.566710378794223,47.20728137094788,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-543000-5217000,27.569141970040523,47.109717754775076,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-543000-5218000,27.573460446740643,47.119876085562126,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-543000-5219000,27.5735431135969,47.12756797588393,22,14,4,0,6,9,22,mapped_crossings_present,Aleea Tudor Neculai; Aleea Valea Adâncă; Strada Hlincea; Șoseaua Nicolina
+utm35n-1000-543000-5220000,27.573639862167152,47.136566079768194,42,17,24,0,4,25,41,mapped_crossings_present,"Aleea Tudor Neculai; Bulevardul Poitiers; Fundacul Ferentz; Strada Clopotari; Strada Gloriei; Strada Hlincea; Strada Ioan Berindei, Arhitect; Strada Libertății; Strada Miroslava; Strada Profesor Ion Inculeț; Strada Răzoarelor; Strada Sfântul Vasile; Șoseaua Nicolina; Șoseaua Tudor Neculai"
+utm35n-1000-543000-5221000,27.573736657491285,47.14556416929894,26,9,9,0,15,17,20,mapped_crossings_present,Bulevardul Dimitrie Cantemir; Bulevardul Nicolae Iorga; Calea Galata; Strada Bradului; Strada Gheorghe Doja; Strada Minervei; Strada Orientului; Strada Pantelimon Halipa; Strada Sălciilor; Șoseaua Nicolina; Șoseaua Tudor Neculai; Șoseaua Voinești
+utm35n-1000-543000-5222000,27.573833499597708,47.154562244476466,30,12,8,0,10,9,27,mapped_crossings_present,Bulevardul Alexandru cel Bun; Bulevardul Nicolae Iorga; Bulevardul Regele Ferdinand I al României; Calea Galata; Strada Buznea; Strada Cerna; Strada Decebal; Strada Iancu Bacalu; Strada Milcov; Strada Pantelimon Halipa; Strada Sarmisegetuza; Strada Vasile Alexandrescu Urechia; Șoseaua Națională
+utm35n-1000-543000-5223000,27.57393038851484,47.163560305301004,72,20,32,2,24,34,72,mapped_crossings_present,Aleea Mușatini; Bulevardul Alexandru cel Bun; Pasajul Alexandru cel Bun; Pasajul Mitocul Maicilor; Piața Unirii; Strada Anastasie Fătu; Strada Arcu; Strada Argeș; Strada Bacinschi; Strada Costache Negruzzi; Strada Cuza Vodă; Strada Gavril Muzicescu; Strada Gheorghe Săulescu; Strada Gându; Strada Gării; Strada Ivan Petrovici Pavlov; Strada Jijia; Strada Petru Rareș; Strada Profesor Paul Bujor; Strada Sfântul Petru Movilă; Strada Silvestru; Strada Teodor Râșcanu; Strada Zugravi; Stradela Silvestru; Străpungerea Silvestru; Șoseaua Arcu; Șoseaua Națională
+utm35n-1000-543000-5224000,27.574027324271135,47.17255835177285,76,7,58,2,35,29,74,mapped_crossings_present,Aleea Veronica Micle; Bulevardul Carol I; Bulevardul Independenței; Fundacul Lascăr Catargiu; Piața Universității; Strada Anastasie Fătu; Strada Bacinschi; Strada Bogdan Petriceicu Hașdeu; Strada Buna Vestire; Strada Cișmeaua Păcurari; Strada Codrescu Teodor; Strada Dimitrie Ralet; Strada Garabet Ibrăileanu; Strada Gavril Muzicescu; Strada General Henri Mathias Berthelot; Strada Gheorghe Asachi; Strada Gheorghe Lascăr; Strada Gării; Strada Lascăr Catargiu; Strada Logofăt Tăutu; Strada Mihail Kogălniceanu; Strada Nicolae Gane; Strada Nicolae Istrati; Strada Pinului; Strada Pojărniciei; Strada Păcurari; Strada Râpa Galbenă; Strada Sărărie; Strada Theodor Pallady; Strada Toma Cozma; Strada Vasile Conta; Strada Vasile Pogor; Stradela Florilor; Șoseaua Arcu
+utm35n-1000-543000-5225000,27.574124306895065,47.18155638389223,13,3,8,0,10,4,11,mapped_crossings_present,Bulevardul Carol I; Strada Oastei; Strada Petre Andrei; Strada Profesor Mihai Costăchescu; Strada Sărărie
+utm35n-1000-543000-5226000,27.57422133641513,47.19055440165947,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-543000-5227000,27.574308515225255,47.1986351943892,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-543000-5228000,27.56897229129873,47.206164433686745,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5218000,27.581721916531006,47.11922537882114,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5219000,27.582070627763393,47.12752163056753,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5220000,27.586826800519088,47.13654624285755,17,6,9,0,4,11,16,mapped_crossings_present,Bulevardul Poitiers; Strada Cetățuia; Strada Dimineții; Strada Libertății; Strada Neptun; Stradela Cetățuia
+utm35n-1000-544000-5221000,27.58692530398178,47.145497354754184,73,31,24,1,37,31,64,mapped_crossings_present,Aleea Nicolina; Aleea Rozelor; Bulevardul Nicolae Iorga; Bulevardul Primăverii; Bulevardul Socola; Strada Bradului; Strada Broscăriei; Strada Duca Vodă; Strada Frumoasa; Strada Libertății; Strada Mașinii; Strada Mitropolit Varlaam; Strada Nicolina; Șoseaua Nicolina
+utm35n-1000-544000-5222000,27.587024371916986,47.1544954090239,76,29,32,3,18,21,67,mapped_crossings_present,Aleea Decebal; Bulevardul Dimitrie Cantemir; Bulevardul Profesor Dimitrie Mangeron; Bulevardul Regele Ferdinand I al României; Bulevardul Regele Mihai I al României; Bulevardul Țuțora; Podu Roș; Strada Anastasie Panu; Strada Buznea; Strada Decebal; Strada Gheorghe Ghibănescu; Strada Iancu Bacalu; Strada Nicolina; Strada Palas; Strada Palat; Strada Sfântul Andrei; Strada Sfântul Constantin; Strada Sfântul Lazăr; Strada Smârdan; Strada Tănăsescu; Stradela Sfântul Andrei; Șoseaua Națională
+utm35n-1000-544000-5223000,27.587123487738648,47.16349344893363,62,21,31,2,21,21,57,mapped_crossings_present,Bulevardul Independenței; Bulevardul Ștefan cel Mare și Sfânt; Strada 14 Decembrie 1989; Strada Achim Stoia; Strada Agatha Bârsescu; Strada Anastasie Panu; Strada Arhitect George Matei Cantacuzino; Strada Armeană; Strada Bărboi; Strada Costache Negri; Strada Cucu; Strada Cuza Vodă; Strada Elena Doamna; Strada George Enescu; Strada Grigore Ghica Vodă; Strada Grigore Ureche; Strada Ion Constantin Brătianu; Strada Maestrul Ion Baciu; Strada Mihai Eminescu; Strada Mănăstirea Dancu; Strada Pantelimon; Strada Sfântul Andrei; Strada Sfântul Lazăr; Strada Sfântul Petru Movilă; Strada Sfântul Sava; Strada Stihii; Strada Sărărie; Strada Teodor Burada; Strada Universității; Strada Vasile Alecsandri; Strada Vasile Stroescu
+utm35n-1000-544000-5224000,27.58722265147587,47.172491474483614,18,2,13,0,11,2,15,mapped_crossings_present,Bulevardul Constantin Alexandru Rosetti; Strada Mihail Kogălniceanu; Strada Nicolae Bălcescu; Strada Sărărie; Strada Theodor Pallady; Strada Vasile Conta
+utm35n-1000-544000-5225000,27.587321863157786,47.18148948567416,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5226000,27.587421122813545,47.19048748250551,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5227000,27.584269838116477,47.19981301792607,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-544000-5228000,27.58303029929145,47.204557351964354,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-545000-5218000,27.606162877388908,47.122779375618066,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-545000-5219000,27.60092434851981,47.12765963960957,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-545000-5220000,27.60001265781244,47.13643097465289,10,6,4,0,0,10,10,mapped_crossings_present,Bulevardul Poitiers; Șoseaua Manta Roșie
+utm35n-1000-545000-5221000,27.600113902614897,47.14542902190715,50,19,22,1,10,25,33,mapped_crossings_present,Bulevardul Primăverii; Bulevardul Socola; Bulevardul Tudor Vladimirescu; Bulevardul Țuțora; Calea Chișinăului; Strada Arapului; Strada Atelierului; Strada Bucium; Strada Bularga; Strada Cronicar Mustea; Strada Duca Vodă; Strada Iarmaroc; Strada Mitropolit Veniamin Costachi
+utm35n-1000-545000-5222000,27.600215196349808,47.154427054793985,43,22,15,2,12,30,30,mapped_crossings_present,Aleea Profesor Dimitrie Atanasiu; Aleea Profesor Gheorghe Alexa; Bulevardul Chimiei; Bulevardul Primăverii; Bulevardul Profesor Dimitrie Mangeron; Bulevardul Regele Mihai I al României; Bulevardul Tudor Vladimirescu; Splai Bahlui Mal Drept; Strada Barbu Lăutaru; Strada Elena Doamna; Strada Smârdan
+utm35n-1000-545000-5223000,27.600316539046897,47.16342507331367,58,24,33,0,15,35,43,mapped_crossings_present,Bulevardul Constantin Alexandru Rosetti; Bulevardul Tudor Vladimirescu; Fundacul Zlataust; Strada Anastasie Panu; Strada Beldiceanu; Strada Conductelor; Strada Cucu; Strada Călărași; Strada Delfini; Strada Elena Doamna; Strada Eternitate; Strada Grigore Ghica Vodă; Strada Ion Creangă; Strada Maior Irimia Popescu; Strada Misai; Strada Moara de Vânt; Strada Nicoriță; Strada Ornescu; Strada Otilia Cazimir; Strada Petre Ispirescu; Strada Profesor Ion Paul; Strada Pădurii; Strada Spancioc; Strada Spital Pașcanu; Strada Tătărași; Strada Vasile Lupu; Strada Vântu; Stradela Elena Doamna
+utm35n-1000-545000-5224000,27.600417930735926,47.17242307746647,8,0,8,0,0,2,8,mapped_crossings_present,Strada Moara de Vânt; Strada Vântu
+utm35n-1000-545000-5225000,27.60051937144667,47.181421067252614,4,0,3,0,0,1,4,mapped_crossings_present,Soseaua Ciroc; Strada Moara de Vânt; Șoseaua Ciric
+utm35n-1000-545000-5226000,27.60061104498264,47.18954893702356,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-545000-5227000,27.6069249815201,47.19496261050132,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-546000-5216000,27.614692033632373,47.10481709571643,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-546000-5217000,27.61701849076019,47.10925822908211,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-546000-5218000,27.6156571610557,47.11776284974466,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-546000-5219000,27.61310165387674,47.12789313871348,19,5,14,0,0,5,11,mapped_crossings_present,Fundacul Bucium; Fundacul Socola; Strada Petre Vancea; Șoseaua Bucium
+utm35n-1000-546000-5220000,27.61319898281818,47.136361145368305,8,6,2,0,0,1,3,mapped_crossings_present,McDrive; Strada Trei Fântâni; Strada Vișan; Șoseaua Bucium
+utm35n-1000-546000-5221000,27.613302452315573,47.14535917077197,15,13,1,0,3,12,9,mapped_crossings_present,Bulevardul Metalurgiei; Calea Chișinăului; Strada Bucium; Strada Islaz; Strada Mihai Sturdza
+utm35n-1000-546000-5222000,27.613405971820455,47.15435718180089,8,0,8,0,0,0,7,mapped_crossings_present,Strada Ciurchi; Strada Han Tătar; Strada Oancea
+utm35n-1000-546000-5223000,27.613509541363214,47.163355178455326,32,7,22,0,13,17,24,mapped_crossings_present,Strada Ciornei; Strada Ciric; Strada Doctor Emil Savini; Strada Dudescu; Strada Eternitate; Strada Han Tătar; Strada Ion Creangă; Strada Orfelinatului; Strada Stejar; Strada Vasile Lupu; Stradela Ciric; Șoseaua Ciric
+utm35n-1000-546000-5224000,27.61361316097426,47.17235316073555,12,0,12,0,0,9,0,mapped_crossings_present,"Zona 1: BUS & Taxi; Zona 2: Car Sharing & ""Kiss and Ride""; Zona 3: Parcare T3+T4"
+utm35n-1000-546000-5225000,27.6137062237132,47.18043070155368,1,0,0,0,0,0,1,mapped_crossings_present,Drumul Aeroportului
+utm35n-1000-546000-5226000,27.610936007335322,47.19036450058979,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-546000-5227000,27.609030180533022,47.195153689225165,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-547000-5216000,27.631560680928096,47.10090399848832,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-547000-5217000,27.626076111331468,47.10994633644661,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-547000-5218000,27.626174022646374,47.11829374898094,7,0,7,0,0,6,1,mapped_crossings_present,Strada Plopii Fără Soț; Șoseaua Bucium
+utm35n-1000-547000-5219000,27.626279614736326,47.127291780824294,5,4,1,0,0,5,3,mapped_crossings_present,Șoseaua Bucium; Șoseaua Bârnova
+utm35n-1000-547000-5220000,27.626385257846795,47.136289798284956,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-547000-5221000,27.62649095200876,47.14528780136314,5,2,1,0,2,5,1,mapped_crossings_present,Bulevardul Metalurgiei; Bulevardul Virgil Săhleanu
+utm35n-1000-547000-5222000,27.62659669725323,47.15428579005911,50,6,44,0,0,23,42,mapped_crossings_present,Bulevardul Chimiei; Bulevardul Metalurgiei; Strada Aterizaj; Strada Aurel Vlaicu; Strada Aviației; Strada Ciurchi; Strada Ignat; Strada Locotenent Popovici; Strada Vasile Lupu; Strada Șapte Oameni; Stradela Grădinari
+utm35n-1000-547000-5223000,27.62670249361125,47.1632837643731,29,0,29,0,0,22,29,mapped_crossings_present,Strada Aeroportului; Strada Căpitan Protopopescu; Strada Holboca; Strada Ion Creangă; Strada Locotenent Caranda; Strada Mistrețului; Strada Moților; Strada Nisipari; Strada Obreja; Strada Porumbului; Strada Vasile Lupu; Strada Vulturilor; Strada Zborului; Șoseaua Ciric
+utm35n-1000-547000-5224000,27.625540400941198,47.172225273624484,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-547000-5225000,27.621932708984296,47.18038633750605,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5214000,27.64511991070196,47.08555741645393,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5215000,27.64208361716306,47.091182358119326,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5216000,27.639148413709254,47.100900527498055,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5217000,27.639248038065837,47.109222906242515,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5218000,27.639355800578738,47.11822092969139,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5219000,27.639455935088172,47.126578118592704,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5220000,27.63616665544007,47.13635214489897,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5221000,27.63967940061944,47.145214913695455,4,0,2,0,0,4,2,mapped_crossings_present,Bulevardul Virgil Săhleanu
+utm35n-1000-548000-5222000,27.639787371572467,47.15421287958343,5,0,5,0,0,5,1,mapped_crossings_present,Strada Aurel Vlaicu
+utm35n-1000-548000-5223000,27.639903965786896,47.16392458475482,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-548000-5224000,27.645504011683855,47.16978078765547,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5214000,27.6475009072849,47.08612575813023,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5215000,27.64849787922732,47.09114858142248,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5216000,27.65188415694464,47.10024619074974,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5217000,27.65240291158363,47.107132887157356,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5218000,27.65251675958129,47.1164479489287,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5219000,27.64736940646568,47.12645733187811,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5220000,27.64667803389993,47.1398785465135,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5221000,27.65286912452674,47.14524892504548,2,0,2,0,0,2,0,mapped_crossings_present,Șoseaua Iași - Tomești
+utm35n-1000-549000-5222000,27.650587876477136,47.15463077687148,4,0,4,0,0,4,0,mapped_crossings_present,Șoseaua Iași-Ungheni
+utm35n-1000-549000-5223000,27.649274803300777,47.1641002423274,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5224000,27.650573828137514,47.17223440437787,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-549000-5225000,27.650542283041116,47.178012916252335,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5215000,27.659032789036043,47.094217746729036,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5216000,27.66136763051793,47.1025084185223,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5217000,27.66220099328239,47.10704334763443,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5218000,27.6596806018485,47.116480697474685,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5220000,27.669187282061078,47.138906177932014,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-550000-5221000,27.66605783737485,47.14520044504601,1,0,1,0,0,0,1,mapped_crossings_present,
+utm35n-1000-550000-5222000,27.663120617006435,47.15067392192778,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-551000-5220000,27.673935772228777,47.138270122962226,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-551000-5221000,27.679236742284708,47.144383693556,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-551000-5222000,27.67465694530362,47.149942796252816,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-552000-5220000,27.689070067320237,47.139971805544285,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
+utm35n-1000-552000-5221000,27.68734981574975,47.1454601417037,0,0,0,0,0,0,0,no_mapped_crossings_not_evidence_of_safety,
