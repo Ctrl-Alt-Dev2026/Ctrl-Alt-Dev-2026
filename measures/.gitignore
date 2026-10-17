@@ -2,4 +2,4 @@ __pycache__/
 /cache/
 /output/*
 !/output/three-scenarios/
-!/output/ai-real-pilot/
+!/output/chatgpt-package/

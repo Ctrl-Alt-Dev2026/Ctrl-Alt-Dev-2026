@@ -1,12 +1,15 @@
 # Măsuri și costuri orientative pentru cele trei scenarii
 
-Extensia AI este separată: measures/output/ai-real-pilot/ai_suggestions.json și
-pilot_review.json. Nu o combina cu recomandările deterministe sau cu cele trei
-locații: articolele nu au asociere OSM verificată. Proba a găsit un fals pozitiv
-și propuneri prea generale; nicio sugestie nu este aprobată. Eventuala afișare
-este numai într-un panou explicit de review, cu eticheta „Sugestie AI — necesită
-verificare”, citate și erorile/limitele din pilot_review.json. Nu este o sursă
-pentru marcatori, costuri, scoruri sau recomandări automate de lucrări.
+Sugestiile ChatGPT sunt separate de scenariile deterministe. Backend-ul poate
+servi measures/output/web-incremental/chatgpt_suggestions.json conform
+[BACKEND_HANDOFF.md](BACKEND_HANDOFF.md). Există rezultate validate pentru toate
+cele 94 de articole actuale, dar nu există asocieri OSM sau sugestii aprobate.
+Pentru varianta manuală vezi [CHATGPT_WEB.md](CHATGPT_WEB.md).
+
+Afișează rezultatele AI numai într-un panou de review pe articol, cu eticheta
+„Sugestie AI — necesită verificare”, citate, checks și stările de acoperire.
+Nu combina aceste articole cu cele trei locații demo fără asociere verificată.
+Nu folosi sugestiile pentru marcatori, costuri, scoruri sau lucrări aprobate.
 
 Catalogul include și analiza_viteza când cauza raportată este explicit viteza.
 Folosește selected_for_display, fără o listă fixă de ID-uri: analiza vitezei

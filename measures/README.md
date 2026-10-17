@@ -1,7 +1,8 @@
 # Măsuri candidate — Persoana 5, etapa inițială
 
-Extensie separată: [sugestii AI locale](LOCAL_AI.md), cu cache, propoziții-sursă
-și verificare explicită a pasajelor. Nu înlocuiește regulile și nu publică date.
+Sugestii AI prin [scraperul ChatGPT incremental](BACKEND_HANDOFF.md), fără API AI,
+cu cache per articol și citate exacte validate. Alternativa manuală este în
+[CHATGPT_WEB.md](CHATGPT_WEB.md). Regulile și catalogul determinist rămân separate.
 
 ## Extensie: viteza raportată
 
@@ -119,6 +120,26 @@ Referințe tehnice FHWA consultate la 17 octombrie 2026:
 - [Insule de refugiu](https://highways.dot.gov/safety/proven-safety-countermeasures/medians-and-pedestrian-refuge-islands-urban-and-suburban-areas): context de analiză pentru drumuri cu mai multe benzi.
 - [STEP](https://highways.dot.gov/safety/pedestrian-bicyclist/step): familii de intervenții pietonale, fără echivalarea automată a dispozitivelor americane cu semaforizarea românească.
 - [Traffic calming](https://highways.dot.gov/safety/speed-management/traffic-calming-eprimer/module-3-part-3): elemente de proiectare; nu sursă de costuri în lei sau regulă normativă pentru Iași.
+
+## Scraper web independent, fără API AI
+
+Pentru toate articolele și procesare numai a celor noi/modificate, rulează
+`python -m measures.web_pipeline --channel msedge --manual-wait 600`.
+Verificarea fără trimiteri este `python -m measures.web_pipeline --plan`.
+Integrarea concretă pentru backend este în [BACKEND_HANDOFF.md](BACKEND_HANDOFF.md).
+Exportul incremental este separat de pilot și include acoperirea tuturor
+articolelor, inclusiv pending/blocked/invalid. Cache-ul trebuie păstrat între rulări.
+Verificare live: toate cele 94 de articole procesate; rerularea a reutilizat
+94/94 din cache și nu a trimis articole noi. Rezultatul are 133 de sugestii
+neaprobate, justificate prin 225 de citate exacte; nu reprezintă accidente unice
+confirmate sau măsuri aprobate.
+
+Workerul opțional `python -m measures.web_scraper` este documentat în
+[WEB_SCRAPER.md](WEB_SCRAPER.md). Rulează separat de Codex, cu Playwright,
+cache și validare, fără modificări în backend. Testul headless s-a oprit la
+Cloudflare; testul ulterior în Edge vizibil a reușit complet, fără cont:
+trei articole, patru sugestii și opt citate exacte. Opțiunea `--manual-wait 600`
+permite intervenția utilizatorului înainte de send dacă reapare o verificare.
 
 ## Integrare ulterioară
 
