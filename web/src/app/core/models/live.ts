@@ -1,5 +1,6 @@
 import { Accident, CrossingCollection, Hotspot, Manifest, Measure } from './contract';
 import { StreetCollection } from './streets';
+import { H3Collection } from './h3';
 
 // GET /api/v1/live/dataset: the newest dataset collected by the server (isu/, every 30 minutes).
 export interface LiveDataset {
@@ -10,6 +11,7 @@ export interface LiveDataset {
   crossings: CrossingCollection;
   measures: Measure[];
   streets: StreetCollection;
+  accidents_h3?: H3Collection;
 }
 
 export interface LiveRun {

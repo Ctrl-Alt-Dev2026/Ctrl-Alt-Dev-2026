@@ -5,6 +5,8 @@ import { Camera } from '../models/camera';
 import { Accident, Crossing, Hotspot, Manifest, Measure } from '../models/contract';
 import { LiveDataset, LiveStatus } from '../models/live';
 import { NO_STREETS, StreetCollection, StreetMetric } from '../models/streets';
+import { PRECISE } from '../format/labels';
+import { H3Collection, NO_H3 } from '../models/h3';
 
 // waiting = the server is up but its first collection has not finished yet.
 export type LoadState = 'loading' | 'ready' | 'waiting' | 'error';
@@ -39,6 +41,8 @@ export class DataStore {
   readonly participant = signal<string | null>(null);
   readonly streets = signal<StreetCollection>(NO_STREETS);
   readonly streetMetric = signal<StreetMetric>('isu');
+  readonly streetRanking = signal<'events' | 'score'>('score');
+  readonly h3 = signal<H3Collection>(NO_H3);
   readonly selectedStreetId = signal<string | null>(null);
   readonly selectedStreet = computed(() => this.streets().features.find((f) => f.properties.id === this.selectedStreetId()) ?? null);
   // Events of the chosen source per street, under the participant filter. PMUD totals have no
@@ -59,7 +63,8 @@ export class DataStore {
     const count = this.streetCount();
     return new Map(this.streets().features.map((f) => [
       f.properties.id,
-      metric === 'pmud' ? f.properties.pmud_2021 : (count.get(f.properties.id) || null),
+      metric === 'pmud' ? f.properties.pmud_2021 : !count.get(f.properties.id) ? null :
+        this.streetRanking() === 'score' ? (f.properties.analiza?.[metric].scor ?? null) : count.get(f.properties.id)!,
     ]));
   });
   readonly rankedStreets = computed(() => {
@@ -109,8 +114,18 @@ export class DataStore {
   readonly measureById = computed(() => new Map(this.measures().map((m) => [m.id, m])));
   readonly crossingById = computed(() => new Map(this.crossings().map((c) => [c.id, c])));
   readonly mappable = computed(() =>
-    this.accidents().filter((a) => a.in_iasi !== false && a.lat !== null && a.lon !== null && this.matches(a)),
+    this.accidents().filter((a) => a.in_iasi === true && PRECISE.has(a.precizie_loc) &&
+      a.lat !== null && a.lon !== null && this.matches(a)),
   );
+  readonly approximateCount = computed(() => this.accidents().filter((a) =>
+    a.in_iasi === true && !PRECISE.has(a.precizie_loc) && this.matches(a)).length);
+  readonly visibleH3 = computed<H3Collection>(() => {
+    const ids = new Set(this.mappable().map((a) => a.event_id));
+    return { type: 'FeatureCollection', features: this.h3().features.flatMap((f) => {
+      const event_ids = f.properties.event_ids.filter((id) => ids.has(id));
+      return event_ids.length ? [{ ...f, properties: { ...f.properties, event_ids, nr_evenimente: event_ids.length } }] : [];
+    }) };
+  });
 
   constructor() {
     this.poll();
@@ -167,6 +182,7 @@ export class DataStore {
     this.crossings.set(data.crossings.features.map((feature) => feature.properties));
     this.measures.set(data.measures);
     this.streets.set(data.streets);
+    this.h3.set(data.accidents_h3 ?? NO_H3);
     this.state.set('ready');
   }
 

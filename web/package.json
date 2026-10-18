@@ -7,6 +7,7 @@
     "backend": "node scripts/backend.mjs",
     "backend:share": "node scripts/backend.mjs --share",
     "backend:local": "python scripts/backend.py",
+    "ai": "python scripts/ai.py",
     "build": "ng build",
     "build:local": "node scripts/build-local.mjs --base-href /ui/"
   },

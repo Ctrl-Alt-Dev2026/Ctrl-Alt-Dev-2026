@@ -13,14 +13,14 @@ import {
   viewChild,
 } from '@angular/core';
 import type { Color, PickingInfo } from '@deck.gl/core';
-import { HexagonLayer } from '@deck.gl/aggregation-layers';
-import { IconLayer, PathLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, IconLayer, PathLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
 import { MapboxOverlay } from '@deck.gl/mapbox';
 import { GeoJSONSource, IControl, Map as MlMap, NavigationControl, StyleSpecification } from 'maplibre-gl';
 import { dateRo, GRAVITATE, PRECISE } from '../../../core/format/labels';
 import { Camera } from '../../../core/models/camera';
 import { Accident, Hotspot } from '../../../core/models/contract';
 import { StreetFeature, StreetMetric, StreetProps } from '../../../core/models/streets';
+import { H3Collection, H3Properties, NO_H3 } from '../../../core/models/h3';
 
 // Free, keyless basemap with OSM building heights; DEM tiles only shade the hills
 // (true 3D terrain would bury deck.gl columns on Copou/Bucium).
@@ -154,6 +154,7 @@ function streetView(lines: [number, number][][], bearing: number) {
 })
 export class CityMap {
   readonly accidents = input.required<Accident[]>();
+  readonly h3 = input<H3Collection>(NO_H3);
   readonly hotspots = input.required<Hotspot[]>();
   readonly rankOf = input.required<Map<string, number>>();
   readonly selectedId = input<string | null>(null);
@@ -191,6 +192,7 @@ export class CityMap {
 
     effect(() => {
       this.accidents();
+      this.h3();
       this.hotspots();
       this.selectedId();
       this.rankOf();
@@ -392,12 +394,7 @@ export class CityMap {
 
     const accidents = this.accidents();
     const hotspots = this.hotspots();
-    const precise = accidents.filter((a) => PRECISE.has(a.precizie_loc));
-    const approx = accidents.filter((a) => !PRECISE.has(a.precizie_loc));
-    const targeted = new Set(hotspots.filter((h) => h.masuri.length > 0).flatMap((h) => h.event_ids));
-    const maxEvents = Math.max(3, ...hotspots.map((h) => h.nr_evenimente));
-    const level = this.level;
-    const weight = (a: Accident) => (targeted.has(a.event_id) ? level : 1);
+    const precise = accidents.filter((a) => PRECISE.has(a.precizie_loc) && a.in_iasi === true && a.lat !== null && a.lon !== null);
     const selected = this.selectedId();
     const rankOf = this.rankOf();
     const cameras = this.cameras();
@@ -411,7 +408,8 @@ export class CityMap {
     const selectedStreet = this.selectedStreetId();
     const paths: StreetPath[] = this.streets().flatMap((f) => {
       const value = streetValue.get(f.properties.id);
-      return value == null ? [] : f.geometry.coordinates.map((path) => ({ id: f.properties.id, path, value, props: f.properties }));
+      return value == null && f.properties.id !== selectedStreet ? [] :
+        f.geometry.coordinates.map((path) => ({ id: f.properties.id, path, value: value ?? 0, props: f.properties }));
     });
     const maxStreet = Math.max(1, ...paths.map((p) => p.value));
     const streetColor = (p: StreetPath): Color =>
@@ -439,38 +437,18 @@ export class CityMap {
           },
           updateTriggers: { getColor: [selectedStreet, maxStreet], getWidth: [selectedStreet, maxStreet] },
         }),
-        new HexagonLayer<Accident>({
+        new GeoJsonLayer<H3Properties>({
           id: 'density',
-          data: precise,
-          getPosition: pos,
-          radius: 140,
-          coverage: 0.85,
+          data: this.h3(),
           extruded: true,
-          gpuAggregation: false,
-          elevationRange: [0, 650],
-          elevationDomain: [0, maxEvents],
-          colorDomain: [0, maxEvents],
-          colorRange: HEAT,
-          getElevationWeight: weight,
-          getColorWeight: weight,
-          elevationAggregation: 'SUM',
-          colorAggregation: 'SUM',
-          visible: !focused,
-          opacity: 0.9,
-          material: { ambient: 0.55, diffuse: 0.6, shininess: 24 },
-          pickable: true,
-          updateTriggers: { getElevationWeight: level, getColorWeight: level },
-        }),
-        new ScatterplotLayer<Accident>({
-          id: 'approx',
-          data: approx,
-          getPosition: pos,
-          getRadius: 45,
-          radiusMinPixels: 6,
-          filled: false,
+          getElevation: (f) => f.properties.nr_evenimente * 100,
+          getFillColor: (f) => HEAT[Math.min(3, f.properties.nr_evenimente - 1)],
           stroked: true,
           getLineColor: MUTED,
-          lineWidthMinPixels: 1.5,
+          lineWidthMinPixels: 1,
+          visible: !selectedStreet && !selected && !this.closeUp,
+          opacity: 0.9,
+          material: { ambient: 0.55, diffuse: 0.6, shininess: 24 },
           pickable: true,
         }),
         new ScatterplotLayer<Accident>({
@@ -552,10 +530,14 @@ export class CityMap {
     if (info.layer?.id === 'streets') {
       const p = (o as unknown as StreetPath).props;
       const lines = [p.nume, `${p.isu_evenimente} intervenții ISU (2024–2026)`, `${p.presa_evenimente} relatări în presă (2026)`];
+      const source = this.streetMetric();
+      if (source !== 'pmud' && p.analiza?.[source]) {
+        lines.push(`Scor ${source === 'isu' ? 'ISU' : 'presă'}: ${p.analiza[source].scor} (context 0), pentru întreaga stradă`);
+      }
       lines.push(p.pmud_2021 !== null ? `IPJ, PMUD: ${p.pmud_2020} accidente în 2020, ${p.pmud_2021} în 2021` : 'Nu apare în tabelul PMUD');
       text = [...lines, 'Clic pentru detalii'].join('\n');
     } else if (info.layer?.id === 'density') {
-      const n = o.count ?? o.points?.length ?? 0;
+      const n = (o as unknown as { properties: H3Properties }).properties.nr_evenimente;
       text = `${n} ${n === 1 ? 'eveniment localizat precis' : 'evenimente localizate precis'} în această zonă`;
     } else if (info.layer?.id.startsWith('camera')) {
       text = `Cameră: ${(o as unknown as Camera).nume}\nClic pentru imagine`;

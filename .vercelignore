@@ -1,0 +1,14 @@
+# Same as .dockerignore: Vercel builds Dockerfile.vercel from the repo, without local caches or secrets.
+.venv
+**/__pycache__
+**/node_modules
+web/.angular
+web/dist
+.playwright-mcp
+runtime
+research
+docs
+context/cache
+ai/gemini.local.json
+**/.env
+.env.*

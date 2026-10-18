@@ -6,12 +6,12 @@ from fastapi import APIRouter, Depends, Query, Request, Response
 from fastapi.responses import JSONResponse
 from starlette.concurrency import run_in_threadpool
 
-from api.review_router import require_local
+from api.review_router import require_local_unless
 from safecross.live import LiveVision, MAX_FRAME_BYTES, SessionConfig
 from safecross.live_detector import VisionError, readiness
 
 
-router = APIRouter(prefix="/api/v1/vision", tags=["live cameras"], dependencies=[Depends(require_local)])
+router = APIRouter(prefix="/api/v1/vision", tags=["live cameras"], dependencies=[Depends(require_local_unless("vision"))])
 _creation_lock = threading.Lock()
 
 

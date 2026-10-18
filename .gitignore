@@ -7,3 +7,6 @@ runtime/
 
 # Playwright MCP screenshots
 .playwright-mcp/
+
+# Vercel CLI link (vercel link)
+.vercel/

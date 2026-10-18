@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
-import { dateRo, GRAVITATE, participantLabel, PRECISE } from '../../../core/format/labels';
+import { CAUZA, dateRo, GRAVITATE, lei, participantLabel, PRECISE } from '../../../core/format/labels';
 import { Accident } from '../../../core/models/contract';
 import { SOURCE_LABEL, StreetMetric } from '../../../core/models/streets';
 import { DataStore } from '../../../core/state/data.store';
+import { HourChart } from '../../../shared/hour-chart/hour-chart';
 
 // Streets ranked by one source at a time: ISU interventions, press reports, or IPJ totals from PMUD (2020–2021).
 @Component({
@@ -10,6 +11,7 @@ import { DataStore } from '../../../core/state/data.store';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './street-panel.html',
   styleUrl: './street-panel.scss',
+  imports: [HourChart],
 })
 export class StreetPanel {
   protected readonly store = inject(DataStore);
@@ -19,6 +21,15 @@ export class StreetPanel {
   protected readonly precise = PRECISE;
   protected readonly metrics: StreetMetric[] = ['isu', 'presa', 'pmud'];
   protected readonly sourceLabel = SOURCE_LABEL;
+  protected readonly analysisSources = ['isu', 'presa'] as const;
+  protected readonly lei = lei;
+  protected readonly entries = (record: Record<string, number>) => Object.entries(record);
+  protected readonly causeLabel = (cause: string) => cause === 'necunoscut' ? 'cauză necunoscută' :
+    (CAUZA as Record<string, string>)[cause] ?? cause;
+  protected readonly contextFields = [
+    { key: 'semafor', label: 'Semafor' }, { key: 'iluminat', label: 'Iluminat' },
+    { key: 'scoala_150m', label: 'Școală la 150 m' }, { key: 'statie_100m', label: 'Stație la 100 m' },
+  ];
 
   protected readonly max = computed(() =>
     Math.max(1, ...this.store.rankedStreets().map((f) => this.store.streetValue().get(f.properties.id) ?? 0)),
@@ -35,6 +46,14 @@ export class StreetPanel {
 
   protected count(id: string): number {
     return this.store.streetCount().get(id) ?? 0;
+  }
+
+  // "ISU, 12 mai 2026; presă, dată necunoscută": the events an AI suggestion cites.
+  protected basis(ids: string[]): string {
+    const byId = this.store.accidentById();
+    return ids.map((id) => byId.get(id)).filter((a): a is Accident => !!a)
+      .map((a) => `${a.sursa_tip === 'presa' ? 'presă' : 'ISU'}, ${a.data_eveniment ? dateRo(a.data_eveniment) : 'dată necunoscută'}`)
+      .join('; ');
   }
 
   protected linkLabel(a: Accident, i: number): string {

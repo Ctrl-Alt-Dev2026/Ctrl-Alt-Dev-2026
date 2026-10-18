@@ -19,8 +19,6 @@ from . import config, store
 # isuis.igsu.ro serves an incomplete certificate chain; the content is public and read-only.
 _SSL = ssl._create_unverified_context()
 _DOC = re.compile(r'"titlu":"((?:[^"\\]|\\.)*)","descriere":"(?:[^"\\]|\\.)*","denumire":"([0-9a-f-]{36}\.pdf)"')
-# Text extracted by an earlier file-cache version of this module; read once instead of downloading again.
-_LEGACY_TXT = config.ROOT / "cache" / "pdf"
 
 
 def _get(url: str) -> bytes:
@@ -71,13 +69,9 @@ def collect(db: sqlite3.Connection) -> tuple[list[dict], dict]:
     if missing:
         print(f"isu: fetching {len(missing)} new releases")
     for i, release in enumerate(missing, 1):
-        legacy = _LEGACY_TXT / release["fisier"].replace(".pdf", ".txt")
         try:
-            if legacy.exists():
-                text = legacy.read_text(encoding="utf-8")
-            else:
-                text = pdf_text(_get(release["url"]))
-                time.sleep(config.DELAY_S)
+            text = pdf_text(_get(release["url"]))
+            time.sleep(config.DELAY_S)
             store.save_document(db, release, text, None)
             info["noi"] += 1
         except Exception as error:  # a broken PDF must not stop the run; it is retried next time

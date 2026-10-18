@@ -30,7 +30,7 @@ def ensure_venv() -> None:
     if not PYTHON.exists():
         print(f"backend: creating {VENV} (needs internet, once)")
         run(sys.executable, "-m", "venv", VENV)
-    probe = subprocess.run([str(PYTHON), "-c", "import fastapi, pypdf, bs4, requests"], cwd=ROOT, capture_output=True)
+    probe = subprocess.run([str(PYTHON), "-c", "import fastapi, pypdf, bs4, requests, h3, pyproj, shapely"], cwd=ROOT, capture_output=True)
     if probe.returncode != 0:
         print(f"backend: installing {', '.join(REQUIREMENTS)}")
         run(PYTHON, "-m", "pip", "install", *[arg for r in REQUIREMENTS for arg in ("-r", r)])

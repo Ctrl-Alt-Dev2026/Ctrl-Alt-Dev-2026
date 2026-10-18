@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked, viewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { lei, participantLabel, PRECISE } from '../../../core/format/labels';
+import { lei, participantLabel } from '../../../core/format/labels';
 import { StreetMetric } from '../../../core/models/streets';
 import { DataStore } from '../../../core/state/data.store';
 import { LocationDossier } from '../../location/location-dossier/location-dossier';
@@ -43,9 +43,7 @@ export class MapPage {
 
   protected readonly participantLabel = participantLabel;
   protected readonly rank = computed(() => this.store.rankOf().get(this.store.selectedId() ?? '') ?? 0);
-  protected readonly approxCount = computed(
-    () => this.store.mappable().filter((a) => !PRECISE.has(a.precizie_loc)).length,
-  );
+  protected readonly approxCount = this.store.approximateCount;
   protected readonly hasMeasures = computed(() => this.store.visibleHotspots().some((row) => row.masuri.length > 0));
 
   // Panel width in px for the map's fly-to padding; 0 when the panel stacks under the map.

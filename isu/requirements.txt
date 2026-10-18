@@ -1,1 +1,2 @@
 pypdf>=5
+-r ../risk/requirements.txt

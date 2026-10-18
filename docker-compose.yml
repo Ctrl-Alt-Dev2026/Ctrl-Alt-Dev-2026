@@ -1,17 +1,22 @@
-# docker compose up --build  ->  http://localhost:8080
+# docker compose up --build  ->  http://localhost:4280  (SAFEIASI_WEB_PORT to change it)
+# Everything in images, nothing to install but Docker: the api (Python, collector, camera models) and the web
+# (Angular built inside deploy/web.Dockerfile, served by nginx, which proxies /api to the api).
 # The api collects ISU releases and press articles at start and every 30 minutes into the `data` volume;
-# everyone who opens the page sees the same dataset. A new volume starts from the committed seed (isu/seed/).
+# a new volume starts from the committed seed (isu/seed/). Both ports listen on this computer only.
 # For UI development, `npm run backend` (web/) starts only the api, on 127.0.0.1:8000 (web/scripts/backend.mjs).
 services:
   api:
     build:
       context: .
       dockerfile: deploy/api.Dockerfile
+      target: api
       args:
         VISION: "${SAFEIASI_VISION:-1}"
     environment:
       SAFEIASI_REFRESH_MIN: "30"
-      SAFEIASI_TRUST_DOCKER: "${SAFEIASI_TRUST_DOCKER:-0}"
+      # Requests reach the api from nginx or the Docker gateway (private addresses); the ports are bound to
+      # 127.0.0.1, so the local-only routes (cameras, refresh) may accept them.
+      SAFEIASI_TRUST_DOCKER: "${SAFEIASI_TRUST_DOCKER:-1}"
     ports:
       - "127.0.0.1:8000:8000"
     volumes:
@@ -20,7 +25,8 @@ services:
   web:
     build: { context: ., dockerfile: deploy/web.Dockerfile }
     ports:
-      - "8080:80"
+      # Not 8080: Oracle (TNSLSNR) and Tomcat often hold it on student laptops.
+      - "127.0.0.1:${SAFEIASI_WEB_PORT:-4280}:80"
     depends_on: [api]
     restart: unless-stopped
 volumes:

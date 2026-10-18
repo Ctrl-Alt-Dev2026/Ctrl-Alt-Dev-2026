@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 from ai.router import register_ai
 from ai.patterns.router import register_patterns
-from api.review_router import register_review
+from api.review_router import PUBLIC, register_review
 from api.publication_router import register_publication
 from api.safecross_router import register_safecross
 from api.vision_router import register_vision
@@ -114,7 +114,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
 
     @application.get("/", include_in_schema=False)
     async def index():
-        return RedirectResponse(url="/docs")
+        return RedirectResponse(url="/ui/" if "ui" in PUBLIC else "/docs")
 
     @application.get(
         "/health", response_model=HealthResponse, tags=["system"],

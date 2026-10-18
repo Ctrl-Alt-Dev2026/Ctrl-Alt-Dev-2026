@@ -1,0 +1,43 @@
+# Vercel (Container Runtime, beta) builds this file when the project is imported from GitHub in its dashboard.
+# Same image as the `cloud` target of deploy/api.Dockerfile (keep the two in sync), plus two Vercel settings at the
+# end. Steps and limits: deploy/README.md, "Vercel".
+
+FROM node:22-alpine AS ui
+WORKDIR /web
+COPY web/package.json web/package-lock.json web/.npmrc ./
+RUN npm ci
+COPY web/ ./
+# api/frontend.py serves the build at /ui/ and checks this base href.
+RUN npx ng build --base-href /ui/
+
+FROM python:3.12-slim
+WORKDIR /app
+ENV PYTHONUNBUFFERED=1 PYTHONUTF8=1 \
+    SAFEIASI_DB=/data/safeiasi.sqlite3 \
+    SAFEIASI_PRESS_DIR=/data/presa
+COPY requirements.txt requirements-safecross.txt requirements-vision.txt ./
+COPY isu/requirements.txt isu/requirements.txt
+COPY risk/requirements.txt risk/requirements.txt
+COPY scraping/requirements.txt scraping/requirements.txt
+# isu/requirements.txt pulls risk/requirements.txt (pyproj, shapely, h3 for the street analysis).
+RUN pip install --no-cache-dir -r requirements.txt -r isu/requirements.txt -r scraping/requirements.txt
+# YOLO: Ultralytics pulls opencv-python, which needs libGL; the CPU wheel index keeps PyTorch without CUDA.
+RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch torchvision && \
+    pip install --no-cache-dir -r requirements-safecross.txt -r requirements-vision.txt
+# YOLO11s + YOLO-World weights, into /app/runtime/models.
+COPY safecross/ safecross/
+RUN python -m safecross.live_setup
+COPY . .
+COPY --from=ui /web/dist/web/browser web/dist/web/browser
+RUN mkdir -p /data
+# No request is local behind Vercel: open the read-only UI and the camera analysis (api/review_router.py).
+ENV SAFEIASI_PUBLIC=ui,vision
+# Vercel sends traffic to port 80 unless the project sets PORT.
+ENV PORT=80
+# Instances stop after 5 idle minutes and several may run at once: a collector in each would be cut off mid-run and
+# give each instance its own data. With it off every instance serves the dataset baked into the image (isu/seed/),
+# and the UI says that automatic collection is off. New data = refresh isu/seed/, commit, push (Vercel redeploys).
+ENV SAFEIASI_LIVE=0
+EXPOSE 80
+CMD ["sh", "-c", "exec uvicorn api.main:app --host 0.0.0.0 --port \"$PORT\" --proxy-headers --forwarded-allow-ips '*'"]

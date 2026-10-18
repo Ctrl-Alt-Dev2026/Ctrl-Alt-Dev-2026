@@ -30,6 +30,67 @@ export interface StreetProps {
   prioritate: number | null;
   semnale: StreetSignal[];
   de_verificat: string[];
+  // Additive analysis from the existing event membership, separately for each source.
+  analiza?: Record<'isu' | 'presa', StreetAnalysis>;
+  context_osm?: StreetContext;
+  // Saved Claude suggestions (isu/ai.py, `npm run ai`); absent = the street was never sent to the AI.
+  recomandari_ai?: StreetAiAdvice;
+}
+
+// What to study, chosen only from the measures catalog and backed by this street's events; no cost, no effect.
+export interface StreetAiAdvice {
+  eticheta: string;
+  model: string;
+  creat_la: string;
+  // false: the street's events changed after the suggestion was made.
+  actual: boolean;
+  rezumat: string;
+  recomandari: { measure_id: string; nume: string; motiv: string; event_ids: string[]; de_verificat: string[] }[];
+  date_lipsa: string[];
+}
+
+export interface StreetAnalysis {
+  event_ids: string[];
+  nr_evenimente: number;
+  scor: number;
+  componente_scor: { evenimente: number; deces: number; grav: number; context: number };
+  pe_ore: number[];
+  ora_necunoscuta: number;
+  noapte: number;
+  zi: number;
+  necunoscut: number;
+  cauze: Record<string, number>;
+  perioada: [string | null, string | null];
+  data_necunoscuta: number;
+  neverificate: number;
+  masuri: StreetMeasure[];
+}
+
+export interface StreetMeasure {
+  measure_id: string;
+  titlu: string;
+  cauza: string;
+  event_ids: string[];
+  status: 'studiu_la_nivel_de_strada';
+  amplasament_verificat: false;
+  cerinte: string[];
+  cost_unitar: {
+    indicative_rounded_ron: number;
+    source_url: string;
+    year: number;
+    vat: string;
+    limitations: string;
+  } | null;
+  numar_interventii: null;
+  cost_total: null;
+}
+
+export interface StreetContext {
+  status: string;
+  treceri_cartografiate: number | null;
+  crossing_ids: string[];
+  descarcat_la: string[];
+  atribute: Record<string, { da: number; nu: number; necunoscut: number }>;
 }
 
 export interface StreetFeature {

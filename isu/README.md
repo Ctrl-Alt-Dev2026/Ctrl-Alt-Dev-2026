@@ -8,26 +8,30 @@ Three sources, kept separate and never summed. The UI shows one at a time (switc
 | **PMUD Iași 2022, Table 2.11** (IPJ Iași data, p. 73) | Crashes per artery for 2020 and 2021, 12 arteries. | Street totals in `streets.geojson` |
 | **Press: BZI, Ziarul de Iași** (`scraping/`, Person 1) | Articles about crashes, 2026. | Individual events, `sursa_tip: "presa"` |
 
-### Press (Gemini, from `ai/`)
+### Press and street suggestions (Claude, `isu/ai.py`)
 
-Press events come from the team's Gemini pipeline: the same run as `POST /api/v1/ai/extract`
-`{"mode": "gemini_csv", "cache_only": true}` (`ai.gemini_pipeline.run_gemini_csv`). Its scope is **current reports of
-pedestrians hit** (verdicts `valid` / `respins` / `neclar`); only `valid` articles become events, with the colleague's
-extraction (`data_eveniment`, `ora`, `loc_text`, `participanti`, `gravitate`, `cauza_raportata`, `noapte`, quotes in
-`dovezi`). Location: the verbatim `loc_text` is kept; the street in it (plus "municipiul Iași" when the article says so)
-goes to the geocoder. The saved responses in `ai/cache_presa/` cover `scraping/articole_extrase_accident_clean.csv`,
-so no key, no network and no API call: events say `extractie: "Gemini, răspuns salvat (reluare)"`, `review_status:
-"pending"`. `neclar` articles (12 now) are not shown; their count is in `manifest.statistici.presa_ai_neclare` and the
-UI says they wait for manual review.
+An AI step runs through **Claude Code** (`claude -p`, model `claude-haiku-5-5` = Haiku 5.5, effort `low`) on the operator's own claude.ai
+login: no API key, no cost per call, a few seconds per call, 4 in parallel. It runs only where Claude Code is installed
+and logged in (`npm run ai` from `web/`), never in Docker. Answers are saved in `isu/seed/ai/` and committed; the
+build (Docker included) replays them, and the map labels them `Claude (<model>), rezultat salvat (reluare)`.
 
-- **Windows line endings:** the cache key hashes the prompt, and `core.autocrlf` turns the LF inside the CSV's quoted
-  texts into CRLF, so every batch misses. `presa.py` restores LF in a copy (`runtime/gemini/esantion.csv`) before the
-  run. The `/extract` endpoint itself still misses on a Windows checkout; the fix belongs in `scraping/`
-  (`*.csv -text` in a `.gitattributes`, then re-checkout the file).
-- **Articles the live scraper finds later** are not in the cache. With `SAFEIASI_GEMINI_LIVE=1` and a key
-  (`GEMINI_API_KEY` or `ai/gemini.local.json`, never committed) each one is sent to Gemini on its own and its answer
-  cached in `runtime/gemini/nou/`; events then say `extractie: "Gemini"`. Without it, the old strict rule pass reads
-  them, keeps only pedestrians (Gemini's scope) and labels them `extractie: "reguli provizorii"`.
+- **Articles** (`isu/seed/ai/articole.json`, one line per article, keyed by a hash of prompt version + URL + text): `tip` is
+  `accident_actual` / `urmare_judiciara` (trials, sentences, arrests about an older crash: excluded) / `alt_subiect` /
+  `neclar`. Scope: every current road crash, any participants. For `accident_actual` the answer carries the contract
+  fields (`data_eveniment`, `ora`, `loc_text`, `participanti`, `gravitate`, `cauza_raportata`, `noapte`) plus street
+  and locality, each with a quote. `verify()` drops any value whose quote is not found verbatim in the article and
+  any malformed date/hour. Counts per verdict are in `manifest.statistici.presa_ai_*`.
+- **Articles without a saved answer** (scraped after the last `npm run ai`) go through the strict provisional rules
+  of `presa.py`, labelled `extractie: "reguli provizorii"`, until the next `npm run ai`.
+- **Streets** (`isu/seed/ai/strazi.json`, one line per street id): for each street with at least 2 events (or on the
+  "Străzi de verificat" list), Claude gets the street's events, its PMUD totals and the catalog of
+  `measures/output/three-scenarios/measures.json`, and returns at most 3 studies **chosen from that catalog only**,
+  each citing the street's event ids, plus what to check on site and what data is missing. No costs, effects or
+  new measures. Unknown measure ids and uncited suggestions are dropped. `properties.recomandari_ai.actual` is false
+  when the street's events changed after the suggestion.
+- `npm run ai -- --limita 5` tries a few calls; `--refa` asks again; `SAFEIASI_AI_MODEL=sonnet` for a larger model.
+- The team's Gemini pipeline (`ai/`, `POST /api/v1/ai/extract`) is left as is; the map no longer reads it, since its
+  scope is pedestrians only.
 - `build(…, presa_path=<accidents.json>)` still takes a finished contract file as is.
 
 Press events are never merged with ISU events. When a press event and an ISU event are on the same street and the ISU
@@ -59,11 +63,13 @@ The UI reads `GET /api/v1/live/status` and `GET /api/v1/live/dataset`; everyone 
 ```powershell
 npm run backend          (in web/)            # API in Docker on 127.0.0.1:8000, collector on, dependencies in the image
 npm run backend:share    (in web/)            # same, and rewrite isu/seed/ in the checkout after every collection
+npm run ai               (in web/)            # Claude step: articles + street suggestions, rebuild, rewrite isu/seed/
 python web/scripts/backend.py [--share]       # without Docker: .venv, installs requirements once
+npm run ai               (in web/)            # Claude step: articles + street suggestions, rebuild, rewrite isu/seed/
 .venv\Scripts\python -m isu                  # one run by hand, into the same database
 .venv\Scripts\python -m isu --seed           # one run, then write isu/seed/ (add --no-run to skip the run)
 .venv\Scripts\python -m isu --export out\   # ... and write the contract files for teammates who work on files
-docker compose up --build                     # api + nginx web on http://localhost:8080, data in the `data` volume
+docker compose up --build                     # api + Angular UI (nginx) on http://localhost:4280, data in the `data` volume
 ```
 
 ## Sharing the data through git (`isu/seed/`)
@@ -72,7 +78,12 @@ docker compose up --build                     # api + nginx web on http://localh
 
 - `documents.jsonl`: every ISU release text collected so far (so nobody downloads the ~400 PDFs again);
 - `presa_candidati.csv`: press articles the live scraper found after the committed 2026 sample;
-- `dataset.json`: the exact dataset the API serves (built_at inside).
+- `dataset.json`: the exact dataset the API serves (built_at inside), so a fresh start shows the map at once
+  instead of waiting about a minute for the first build;
+- `ai/articole.json`, `ai/strazi.json`: the saved Claude answers (`npm run ai`), replayed by every build.
+
+The IPJ numbers have no file here: they are `pmud2022_tabel_2_11.csv` (source data, read at every build) and end
+up in `dataset.json` as the street totals.
 
 When the server (or `python -m isu`) opens the database it adds the seed's missing release texts, and the seed's
 dataset if it is newer than the local one. So after `git clone` or `git pull` + restart, everyone sees the same data
@@ -86,7 +97,6 @@ Without a seed, the first run on an empty database fetches ~400 releases (~3-5 m
 plus the scraper.
 Tables: `documents` (release texts), `runs` (log), `datasets` (last 5, served as is), `extras` (article texts and
 geocoding report of each dataset). A failed listing keeps the stored releases; a failed PDF is retried next run.
-`isu/cache/` is only read once to seed an empty database from an earlier file-cache version; it can be deleted.
 New year: add its listing slug to `config.LISTINGS` (the ids are not discoverable).
 
 ## How a release becomes an event (rules in `parse.py`, no LLM)

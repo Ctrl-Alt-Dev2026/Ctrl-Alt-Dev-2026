@@ -11,7 +11,7 @@ from fastapi import HTTPException, Request
 from fastapi.responses import JSONResponse
 from starlette.staticfiles import StaticFiles
 
-from api.review_router import require_local
+from api.review_router import require_local_unless
 
 
 DEFAULT_FRONTEND_DIRECTORY = Path(__file__).resolve().parents[1] / "web" / "dist" / "web" / "browser"
@@ -24,7 +24,7 @@ class LocalFrontend(StaticFiles):
 
     async def __call__(self, scope, receive, send):
         try:
-            require_local(Request(scope, receive))
+            require_local_unless("ui")(Request(scope, receive))
         except HTTPException as error:
             return await JSONResponse({"detail": error.detail}, status_code=error.status_code)(scope, receive, send)
         try:

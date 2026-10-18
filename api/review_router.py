@@ -16,6 +16,10 @@ from api.snapshots import SYNTHETIC_WARNING
 # `npm run backend` runs this API in Docker with the port published on the host's 127.0.0.1 only; the host's
 # requests then arrive from the Docker gateway, a private address. SAFEIASI_TRUST_DOCKER=1 accepts those.
 TRUST_DOCKER = os.environ.get("SAFEIASI_TRUST_DOCKER") == "1"
+# Public deployment (the `cloud` target of deploy/api.Dockerfile, e.g. Cloud Run): behind a load balancer no request
+# is local, so the scopes listed here (`ui`: the read-only Angular build, `vision`: live-camera frame analysis) are
+# open to every visitor. Review, imports, publication, SafeCross and refresh stay local-only whatever this says.
+PUBLIC = {scope.strip() for scope in os.environ.get("SAFEIASI_PUBLIC", "").split(",") if scope.strip()}
 
 
 def require_local(request: Request):
@@ -29,6 +33,14 @@ def require_local(request: Request):
     expected_origin = f"{request.url.scheme}://{request.url.netloc}"
     if not local_peer or request.url.hostname not in ("localhost", "127.0.0.1", "::1") or (origin is not None and origin != expected_origin):
         raise HTTPException(status_code=403, detail="Review-ul este disponibil numai local, din aceeași origine.")
+
+
+def require_local_unless(scope: str):
+    """require_local, skipped when SAFEIASI_PUBLIC lists `scope`."""
+    def guard(request: Request):
+        if scope not in PUBLIC:
+            require_local(request)
+    return guard
 
 
 router = APIRouter(

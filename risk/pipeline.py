@@ -7,6 +7,7 @@ from pathlib import Path
 
 from pyproj import Transformer
 from risk.statistics import event_statistics, unique_events
+from risk.scoring import event_components
 
 
 PROJECT = Transformer.from_crs(4326, 32635, always_xy=True)
@@ -24,8 +25,7 @@ def score_location(feature, events):
     events = unique_events(events)
     stats = event_statistics(events)
     p = feature['properties']
-    components = dict(evenimente=len(events), deces=4 * sum(e['gravitate'] == 'deces' for e in events),
-                      grav=2 * sum(e['gravitate'] == 'grav' for e in events), context=0)
+    components = event_components(events)
     reasons = []
     if (p['tip'] == 'trecere' and p.get('semafor') is False
             and type(p.get('benzi')) is int and p['benzi'] >= 4):

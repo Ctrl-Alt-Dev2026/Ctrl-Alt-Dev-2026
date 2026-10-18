@@ -17,7 +17,8 @@ from pathlib import Path
 from . import config
 from .collect import collect
 from .parse import parse
-from .presa import AI_REPLAY, RULES, from_articles, from_contract, from_gemini
+from .ai import attach_streets, press_rows
+from .presa import RULES, from_articles, from_contract
 
 SCHEMA = "2.0"
 PRECISE = {"trecere", "intersectie", "segment"}
@@ -148,9 +149,9 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             a.setdefault("strada_osm", None)
         return events, [], {"extractie": "pipeline echipă", "fisier": str(presa_path)}
 
-    ai_rows, judged, ai_info = from_gemini(presa_csvs)
-    # The rules only read what Gemini has not judged, and keep its scope: pedestrians hit.
-    rule_rows = [e for e in from_articles(presa_csvs) if e["url"] not in judged and "pieton" in e["participanti"]]
+    ai_rows, judged, ai_info = press_rows(presa_csvs)
+    # The rules only read the articles Claude has not judged yet (scraped after the last `npm run ai`).
+    rule_rows = [e for e in from_articles(presa_csvs) if e["url"] not in judged]
     raw = sorted(ai_rows + rule_rows, key=lambda e: e["publicat_la"] or "")
     groups: list[list[dict]] = []
     for ev in raw:
@@ -177,7 +178,7 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
         published = [e["publicat_la"] for e in g if e["publicat_la"]]
         events.append({
             # Stable across runs: new articles must not renumber the events a viewer has open.
-            "event_id": "ev-presa-" + hashlib.sha1(g[0]["article_id"].encode()).hexdigest()[:10],
+            "event_id": "ev-presa-" + hashlib.sha1(g[0].get("event_key", g[0]["article_id"]).encode()).hexdigest()[:10],
             "article_ids": [e["article_id"] for e in g],
             "urls": [e["url"] for e in g],
             "data_eveniment": main["data_eveniment"],
@@ -190,7 +191,7 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             "participanti": sorted({p for e in g for p in e["participanti"]}),
             "cauza_raportata": next((e["cauza_raportata"] for e in g if e["cauza_raportata"]), None),
             "gravitate": max((e["gravitate"] for e in g), key=rank.get),
-            # Gemini reports night only from the article's words; the rules derive it from the hour.
+            # The AI reports night only from the article's words; the rules derive it from the hour.
             "noapte": main["noapte"] if main.get("noapte") is not None else is_night(main["data_eveniment"], main["ora"]),
             "dovezi": main["dovezi"],
             "verificat": False,
@@ -202,7 +203,7 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             "strada_osm": _osm_street(index, geo, main["strada"], in_iasi),
         })
     methods = sorted({e["extractie"] for e in events})
-    return events, articles, {"extractie": " + ".join(methods) if methods else AI_REPLAY,
+    return events, articles, {"extractie": " + ".join(methods) if methods else None,
                               "articole_citite": len(judged) + len(rule_rows), "ai": ai_info,
                               "reguli_evenimente": sum(e["extractie"] == RULES for e in events),
                               "fisiere": [str(p.relative_to(config.REPO)) if p.is_relative_to(config.REPO) else str(p)
@@ -466,8 +467,9 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
             "cu reguli fixe, neverificate manual. Nu sunt toate accidentele: poliția înregistrează cam 650 pe an în "
             "municipiu, ISU comunică doar intervențiile sale. Stratul pe străzi arată separat totalurile IPJ din "
             "PMUD Iași 2022 (2020–2021). Relatările din presă (BZI, Ziarul de Iași) sunt o sursă separată: "
-            "pietoni loviți, selectați și extrași de Gemini (răspunsuri salvate, reluare), neverificați manual; "
-            "articolele noi, fără răspuns Gemini, trec prin reguli provizorii și sunt marcate așa. "
+            "accidente rutiere actuale, selectate și extrase de Claude (răspunsuri salvate, reluare) cu citate "
+            "verificate în text, neverificate manual; procesele și alte urmări ale unor accidente vechi sunt excluse. "
+            "Articolele noi, fără răspuns Claude, trec prin reguli provizorii și sunt marcate așa. "
             "Sursele nu se adună și pot descrie același accident."
         ),
         "surse": [
@@ -486,7 +488,9 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
             "municipiu_fara_loc": sum(a["precizie_loc"] == "vag" for a in city if a["sursa_tip"] == "isu"),
             "presa_articole": press_info.get("articole_citite", 0),
             "presa_evenimente": len(press),
-            "presa_ai_neclare": (press_info.get("ai") or {}).get("neclare", 0),
+            "presa_ai_neclare": (press_info.get("ai") or {}).get("neclar", 0),
+            "presa_ai_judiciare": (press_info.get("ai") or {}).get("urmare_judiciara", 0),
+            "presa_ai_alt_subiect": (press_info.get("ai") or {}).get("alt_subiect", 0),
             "presa_reguli": press_info.get("reguli_evenimente", 0),
             "presa_municipiu": sum(1 for a in city if a["sursa_tip"] == "presa"),
             "surse_posibil_acelasi": sum(1 for a in press if a.get("posibil_acelasi_cu")),
@@ -503,7 +507,9 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
         "measures": [],
         "streets": {"type": "FeatureCollection", "features": features},
     }
-    return dataset, {"articles": articles, "raport_geocodare": report}, fetched
+    attach_streets(dataset)
+    from risk.streets import enrich_dataset
+    return enrich_dataset(dataset), {"articles": articles, "raport_geocodare": report}, fetched
 
 
 def export(dataset: dict, extras: dict, out: Path) -> None:
@@ -512,6 +518,7 @@ def export(dataset: dict, extras: dict, out: Path) -> None:
     files = {"manifest.json": dataset["manifest"], "accidents.json": dataset["accidents"],
              "articles.json": extras["articles"], "hotspots.json": dataset["hotspots"],
              "crossings.geojson": dataset["crossings"], "measures.json": dataset["measures"],
-             "streets.geojson": dataset["streets"], "raport_geocodare.json": extras["raport_geocodare"]}
+             "streets.geojson": dataset["streets"], "raport_geocodare.json": extras["raport_geocodare"],
+             "accidents_h3.geojson": dataset["accidents_h3"], "street_analysis.json": dataset["street_analysis"]}
     for name, value in files.items():
         (out / name).write_text(json.dumps(value, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

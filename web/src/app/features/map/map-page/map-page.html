@@ -1,6 +1,7 @@
 <app-city-map
   class="map"
   [accidents]="store.mappable()"
+  [h3]="store.visibleH3()"
   [hotspots]="store.visibleHotspots()"
   [rankOf]="store.rankOf()"
   [selectedId]="store.selectedId()"
@@ -55,19 +56,19 @@
 <div class="legend glass" aria-label="Legendă" [hidden]="applied() || (store.showCameras() && store.selectedCamera())">
   <div class="ramp">
     <span class="bar" aria-hidden="true"></span>
-    <span class="ends"><span>mai puține</span><span>mai multe evenimente</span></span>
+    <span class="ends"><span>mai mic</span><span>{{ store.streetMetric() !== 'pmud' && store.streetRanking() === 'score' ? 'scor mai mare' : 'mai multe evenimente' }}</span></span>
   </div>
   <ul>
     @if (hasStreets()) {
-      <li><i class="street" aria-hidden="true"></i>{{ streetLegend[store.streetMetric()] }}</li>
+      <li><i class="street" aria-hidden="true"></i>{{ streetLegend[store.streetMetric()] }} · geometria străzii, nu locul exact al accidentelor</li>
     }
     @if (store.hotspots().length > 0) {
       <li><i class="rank-chip" aria-hidden="true">1</i>locație clasată (după scor)</li>
     }
-    @if (store.mappable().length > approxCount()) {
+    @if (store.mappable().length > 0) {
       <li><i class="dot" aria-hidden="true"></i>eveniment localizat precis</li>
     }
-    <li><i class="ring" aria-hidden="true"></i>{{ hasStreets() ? 'eveniment pe stradă, loc exact necunoscut' : 'localizat aproximativ, în afara clasamentului' }}</li>
+    @if (store.visibleH3().features.length > 0) { <li>Coloane H3 (rezoluția 9): doar evenimente localizate precis</li> }
     @if (store.showCameras()) {
       <li><i class="cam" aria-hidden="true"></i>cameră publică (clic pentru imagine)</li>
     }

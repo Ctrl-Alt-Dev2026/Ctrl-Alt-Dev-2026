@@ -15,11 +15,13 @@ Interfața are o singură variantă, online: citește setul de date pe care serv
 |---|---|
 | `npm run backend` | FastAPI în Docker pe 127.0.0.1:8000, cu colectarea automată pornită și toate dependențele (inclusiv modelele pentru camere) deja în imagine. Cere doar Docker Desktop pornit; primul build durează câteva minute. `-- --no-vision` dă o imagine mică, fără analiza camerelor |
 | `npm run backend:share` | La fel, și rescrie `isu/seed/` în repo după fiecare colectare |
+| `npm run ai` | Pasul AI prin Claude Code, pe contul tău claude.ai (fără cheie API, nu în Docker): filtrează și extrage articolele de presă, propune pe fiecare stradă ce merită studiat (doar din catalogul de măsuri), reconstruiește datele și rescrie `isu/seed/`. Fă commit ca să ajungă la colegi |
 | `npm run backend:local` | Fără Docker: Python din `.venv` (îl creează și instalează requirements la prima rulare) |
 | `npm start` | Angular pe :4200, cu proxy `/api` către 127.0.0.1:8000 |
 | `npm run build:local` | Build cu baza `/ui/`, servit de FastAPI |
 | `npm run build` | Build cu baza implicită (folosit de imaginea nginx) |
-| `docker compose up --build` (din rădăcină) | api + web (nginx) pe http://localhost:8080, datele într-un volum |
+| Imagine pentru GCP (Artifact Registry + Cloud Run) | O singură imagine publică: API + interfața la `/ui/` + YOLO + datele din `isu/seed/`. Comenzi și limite: [deploy/README.md](../deploy/README.md) |
+| `docker compose up --build` (din rădăcină) | **Toată aplicația, fără Node/Python instalate**: api + interfața Angular (construită în imagine, servită de nginx) pe http://localhost:4280, datele într-un volum. Pentru colegii care doar folosesc aplicația. Alt port: `SAFEIASI_WEB_PORT=…` |
 
 După `git clone` sau `git pull`, serverul pornește din datele reale salvate în `isu/seed/` (fără descărcări), apoi colectează doar ce e nou. În Docker, baza stă în volumul `data` (`docker compose down -v` o șterge și o reface din seed). Ca să-ți partajezi datele colegilor: `npm run backend:share` (sau `python -m isu --seed`) și fă commit la `isu/seed/`.
 

@@ -14,8 +14,10 @@ If the stream can't be read, the viewer falls back to the provider's embed ifram
 ## Commands
 - `npm run backend` (= `node scripts/backend.mjs`) — the api service of `docker-compose.yml` on 127.0.0.1:8000, with the 30-minute collector on: ISU releases + press scraper + PMUD streets into the `data` volume. Every Python dependency and the camera models are baked into the image (`deploy/api.Dockerfile`, `--no-vision` for a small one); needs Docker Desktop running. A fresh volume starts from the committed real data in `isu/seed/`, then collects only what is new. `SAFEIASI_TRUST_DOCKER=1` lets the local-only routes accept the host's requests through the Docker gateway.
 - `npm run backend:share` — same, plus `deploy/compose.share.yml`: rewrites `isu/seed/` in the checkout after each collection; commit it so colleagues get the data on clone/pull (`isu/README.md`, "Sharing the data").
+- `npm run ai` (= `python scripts/ai.py`) — the Claude step (`isu/ai.py`) through Claude Code on the operator's claude.ai login (no API key, not in Docker): filters and extracts the press articles, suggests per-street studies from the measures catalog, rebuilds the dataset and rewrites `isu/seed/` (answers in `isu/seed/ai/`). Commit it. The UI shows these as `recomandari_ai` / `extractie`, always labelled as a saved result (replay).
 - `npm run backend:local` (= `python scripts/backend.py`) — without Docker: `.venv` created and requirements installed on first run, data in `runtime/safeiasi.sqlite3`.
-- `docker compose up --build` (repo root) — api + nginx web on http://localhost:8080, data in a volume.
+- `docker compose up --build` (repo root) — the whole app with nothing installed but Docker: api + the Angular UI built inside `deploy/web.Dockerfile` (nginx) on http://localhost:4280 (`SAFEIASI_WEB_PORT`; 8080 is often held by Oracle), data in a volume. For colleagues who only use the app.
+- Cloud image (`deploy/api.Dockerfile`, default target `cloud`): one public container for Artifact Registry / Cloud Run, the API serving the UI at `/ui/` on `$PORT`, YOLO and the seed baked in, `SAFEIASI_PUBLIC=ui,vision`. See `deploy/README.md`.
 - `npm start` — dev server on http://localhost:4200
 - `npm run build` — must pass with zero errors before committing
 - Windows: run `npx` through `cmd /c` in MCP configs.

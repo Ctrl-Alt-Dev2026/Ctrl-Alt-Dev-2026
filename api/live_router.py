@@ -1,7 +1,7 @@
 """Public read-only access to the collected dataset (isu/), refreshed by a background scheduler.
 
 GET  /api/v1/live/status   cheap: when the data was built, when the next collection runs, last run outcome
-GET  /api/v1/live/dataset  the newest dataset, as stored (manifest, accidents, hotspots, crossings, measures, streets)
+GET  /api/v1/live/dataset  the newest dataset, with cached street analysis and precise-only H3
 POST /api/v1/live/refresh  local only: start a collection now
 
 The scheduler runs only with SAFEIASI_LIVE=1 (the run scripts and docker-compose set it), so tests and other
@@ -17,6 +17,7 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from api.review_router import require_local
 from isu import store
 from isu.live import REFRESH_MIN, Scheduler
+from risk.streets import REVISION, enrich_payload
 
 router = APIRouter(prefix="/api/v1/live", tags=["live"])
 
@@ -61,9 +62,9 @@ def dataset():
             "code": "dataset_not_ready",
             "message": "Prima colectare nu s-a încheiat încă. Datele apar automat după ea.",
         })
-    # Stored as serialised JSON; sent as is so every viewer gets byte-identical data.
-    return Response(content=latest["payload"], media_type="application/json",
-                    headers={"Cache-Control": "no-cache", "ETag": f'"{latest["id"]}"'})
+    # Cached by payload: old SQLite snapshots receive the same contract as new collections.
+    return Response(content=enrich_payload(latest["payload"]), media_type="application/json",
+                    headers={"Cache-Control": "no-cache", "ETag": f'"{latest["id"]}-{REVISION}"'})
 
 
 @router.post("/refresh", status_code=202, dependencies=[Depends(require_local)], summary="Pornește o colectare acum (local)")
