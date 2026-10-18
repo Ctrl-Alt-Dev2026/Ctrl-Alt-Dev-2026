@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "backend": "python scripts/backend.py",
-    "backend:share": "python scripts/backend.py --share",
+    "backend": "node scripts/backend.mjs",
+    "backend:share": "node scripts/backend.mjs --share",
+    "backend:local": "python scripts/backend.py",
     "build": "ng build",
     "build:local": "node scripts/build-local.mjs --base-href /ui/"
   },

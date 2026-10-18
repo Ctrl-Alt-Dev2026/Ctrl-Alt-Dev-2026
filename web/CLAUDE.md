@@ -12,8 +12,9 @@ The rules are untuned and unvalidated: keep them labelled as signals for an oper
 If the stream can't be read, the viewer falls back to the provider's embed iframe, without analysis.
 
 ## Commands
-- `npm run backend` (= `python scripts/backend.py`) — FastAPI on :8000 with the 30-minute collector on (`SAFEIASI_LIVE=1`): ISU releases + press scraper + PMUD streets into `runtime/safeiasi.sqlite3`. Creates `.venv` and installs requirements on first run. A fresh clone starts from the committed real data in `isu/seed/` (imported into the database at startup), then collects only what is new.
-- `npm run backend:share` — same, and rewrites `isu/seed/` after each collection: commit it so colleagues get the data on clone/pull (`isu/README.md`, "Sharing the data").
+- `npm run backend` (= `node scripts/backend.mjs`) — the api service of `docker-compose.yml` on 127.0.0.1:8000, with the 30-minute collector on: ISU releases + press scraper + PMUD streets into the `data` volume. Every Python dependency and the camera models are baked into the image (`deploy/api.Dockerfile`, `--no-vision` for a small one); needs Docker Desktop running. A fresh volume starts from the committed real data in `isu/seed/`, then collects only what is new. `SAFEIASI_TRUST_DOCKER=1` lets the local-only routes accept the host's requests through the Docker gateway.
+- `npm run backend:share` — same, plus `deploy/compose.share.yml`: rewrites `isu/seed/` in the checkout after each collection; commit it so colleagues get the data on clone/pull (`isu/README.md`, "Sharing the data").
+- `npm run backend:local` (= `python scripts/backend.py`) — without Docker: `.venv` created and requirements installed on first run, data in `runtime/safeiasi.sqlite3`.
 - `docker compose up --build` (repo root) — api + nginx web on http://localhost:8080, data in a volume.
 - `npm start` — dev server on http://localhost:4200
 - `npm run build` — must pass with zero errors before committing

@@ -57,8 +57,9 @@ The server does it: with `SAFEIASI_LIVE=1` the API (`api/live_router.py`) starts
 The UI reads `GET /api/v1/live/status` and `GET /api/v1/live/dataset`; everyone sees the same stored dataset.
 
 ```powershell
-python web/scripts/backend.py                 # API on :8000 with the collector on (installs requirements once)
-python web/scripts/backend.py --share         # same, and rewrite isu/seed/ after every collection
+npm run backend          (in web/)            # API in Docker on 127.0.0.1:8000, collector on, dependencies in the image
+npm run backend:share    (in web/)            # same, and rewrite isu/seed/ in the checkout after every collection
+python web/scripts/backend.py [--share]       # without Docker: .venv, installs requirements once
 .venv\Scripts\python -m isu                  # one run by hand, into the same database
 .venv\Scripts\python -m isu --seed           # one run, then write isu/seed/ (add --no-run to skip the run)
 .venv\Scripts\python -m isu --export out\   # ... and write the contract files for teammates who work on files

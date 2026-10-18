@@ -1,0 +1,8 @@
+# Added by `npm run backend:share`: the api rewrites isu/seed/ in the checkout after each collection,
+# so the person who shares the data can commit it (isu/README.md, "Sharing the data through git").
+services:
+  api:
+    environment:
+      SAFEIASI_WRITE_SEED: "1"
+    volumes:
+      - ./isu/seed:/app/isu/seed

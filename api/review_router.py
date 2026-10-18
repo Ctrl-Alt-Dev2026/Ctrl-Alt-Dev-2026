@@ -1,6 +1,7 @@
 """Local import/review routes, independent of immutable map snapshots."""
 
 from ipaddress import ip_address
+import os
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Request
@@ -12,11 +13,16 @@ from api.review_models import CorrectionRequest, DataMode, GeocodingApplyRequest
 from api.review_store import ReviewError, ReviewStore
 from api.snapshots import SYNTHETIC_WARNING
 
+# `npm run backend` runs this API in Docker with the port published on the host's 127.0.0.1 only; the host's
+# requests then arrive from the Docker gateway, a private address. SAFEIASI_TRUST_DOCKER=1 accepts those.
+TRUST_DOCKER = os.environ.get("SAFEIASI_TRUST_DOCKER") == "1"
+
 
 def require_local(request: Request):
     """This MVP is a local operator tool, without remote accounts/authentication."""
     try:
-        local_peer = request.client is not None and ip_address(request.client.host).is_loopback
+        peer = ip_address(request.client.host) if request.client is not None else None
+        local_peer = peer is not None and (peer.is_loopback or (TRUST_DOCKER and peer.is_private))
     except ValueError:
         local_peer = False
     origin = request.headers.get("origin")

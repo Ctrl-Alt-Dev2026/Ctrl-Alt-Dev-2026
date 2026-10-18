@@ -4,7 +4,8 @@ The Angular camera viewer plays the provider's HLS stream and sends sampled JPEG
 
 ## Install and run
 
-From the repository root, with Python 3.12:
+`npm run backend` (from `web/`) runs the API in Docker with all of this already installed and set up (CPU PyTorch,
+no CUDA); nothing below is needed then. For `npm run backend:local`, from the repository root, with Python 3.12:
 
 ```powershell
 .venv\Scripts\python.exe -m pip install -r requirements-vision.txt

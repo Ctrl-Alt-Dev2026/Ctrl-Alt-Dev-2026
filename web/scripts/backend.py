@@ -1,4 +1,5 @@
-"""Starts the FastAPI backend for UI development with automatic collection on (SAFEIASI_LIVE=1).
+"""Starts the FastAPI backend without Docker (`npm run backend:local`), automatic collection on (SAFEIASI_LIVE=1).
+`npm run backend` runs the same API in Docker instead (scripts/backend.mjs), dependencies already installed.
 
     python web/scripts/backend.py
 

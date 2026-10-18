@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
-
-Sitemap: https://iasitvlife.ro/sitemap.xml
-Sitemap: https://iasitvlife.ro/sitemap.rss
