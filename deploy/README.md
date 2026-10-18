@@ -102,8 +102,9 @@ The Vercel variant: `docker build -f Dockerfile.vercel -t safeiasi:vercel .`, th
 ## Vercel (Container Runtime, beta), from the dashboard only
 
 Vercel runs container images as Functions and builds `Dockerfile.vercel` from the repo itself: the same image as the
-`cloud` target, with the collector off (below) and port 80. No CLI, no registry. `vercel.json` sets the region
-`fra1` (Frankfurt).
+`cloud` target, with the collector off (below) and port 80. No CLI, no registry. `vercel.json` declares it as the only
+service (`runtime: container`) and sends every path to it, `/api/...` included: without that, Vercel keeps `/api/*`
+for its own functions (the repo has an `api/` folder) and answers 404 `NOT_FOUND` itself. Region `fra1` (Frankfurt).
 
 1. Commit and push `Dockerfile.vercel`, `vercel.json`, `.vercelignore` and the current `isu/seed/` to GitHub.
 2. vercel.com → **Add New… → Project → Import Git Repository**, pick the repo. If it is not listed, its GitHub
