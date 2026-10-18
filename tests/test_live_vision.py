@@ -163,6 +163,13 @@ class AnalyticsTests(unittest.TestCase):
     def update(self, detections=(), timestamp=0, crosswalks=()):
         return self.analytics.update(copy.deepcopy(list(detections)), self.frame, timestamp, list(crosswalks))
 
+    def test_weak_first_observation_is_pending_until_seen_again(self):
+        weak = [{"label": "car", "score": .5, "box": [10., 10., 30., 20.]}]
+        self.assertEqual([], self.update(weak, 0)[0])
+        self.assertEqual((1, False), (len(self.analytics.pending), self.analytics.history))
+        self.assertEqual(1, len(self.update(weak, .25)[0]))
+        self.assertEqual(([], True), (self.analytics.pending, self.analytics.history))
+
     def test_dark_sky_does_not_flag_bright_crosswalk(self):
         self.frame[:20] = 0
         result = self.update(crosswalks=[REGION])

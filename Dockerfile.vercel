@@ -41,5 +41,7 @@ ENV PORT=80
 ENV SAFEIASI_LIVE=0
 # Several instances may serve one viewer: the camera session id carries its settings (safecross/live.py).
 ENV SAFEIASI_VISION_STATELESS=1
+# New instances start often: load YOLO at start instead of on the first camera frame (~4 s).
+ENV SAFEIASI_VISION_PRELOAD=1
 EXPOSE 80
 CMD ["sh", "-c", "exec uvicorn api.main:app --host 0.0.0.0 --port \"$PORT\" --proxy-headers --forwarded-allow-ips '*'"]

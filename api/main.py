@@ -14,7 +14,7 @@ from ai.patterns.router import register_patterns
 from api.review_router import PUBLIC, register_review
 from api.publication_router import register_publication
 from api.safecross_router import register_safecross
-from api.vision_router import register_vision
+from api.vision_router import register_vision, start_preload
 from api.frontend import register_frontend
 from api.live_router import register_live, start_live
 from safecross.setup import MODEL_PATH
@@ -61,6 +61,7 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             application.state.snapshot_error = error
         # Collected ISU/press data, refreshed every 30 minutes when SAFEIASI_LIVE=1 (api/live_router.py).
         scheduler = start_live(application)
+        start_preload(application)
         yield
         if scheduler is not None:
             scheduler.stop()

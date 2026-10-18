@@ -43,6 +43,8 @@ def readiness():
 class LiveDetector:
     """Access is serialized by LiveVision; no model state is shared concurrently."""
 
+    conf = .35  # see SAFEIASI_VISION_CONF below
+
     def __init__(self):
         status = readiness()
         if not status["available"]:
@@ -65,6 +67,11 @@ class LiveDetector:
             self.imgsz = int(os.environ.get("SAFEIASI_VISION_IMGSZ", "960"))
             if self.imgsz not in (640, 960, 1280):
                 raise ValueError("SAFEIASI_VISION_IMGSZ must be 640, 960 or 1280")
+            # 0.35 measured on the Piața Unirii camera: 0.25 adds ~25% vehicles, mostly real parked cars, but also
+            # wrong labels (a tram as a truck). Lower it only after checking a camera's frames.
+            self.conf = float(os.environ.get("SAFEIASI_VISION_CONF", self.conf))
+            if not .1 <= self.conf <= .9:
+                raise ValueError("SAFEIASI_VISION_CONF must be between 0.1 and 0.9")
         except Exception as error:
             raise VisionError(503, "vision_model_invalid", "Modelul local nu poate fi încărcat. Rulează python -m safecross.live_setup; verifică dispozitivul configurat.") from error
 
@@ -89,7 +96,7 @@ class LiveDetector:
         started = time.perf_counter()
         try:
             traffic = self.traffic.predict(
-                image, imgsz=self.imgsz, conf=.35, iou=.45, max_det=150,
+                image, imgsz=self.imgsz, conf=self.conf, iou=.45, max_det=150,
                 classes=list(TRAFFIC_CLASSES), device=self.device, verbose=False,
             )[0]
         except Exception as error:
@@ -117,7 +124,7 @@ class LiveDetector:
             except Exception as error:
                 raise VisionError(503, "vision_tram_failed", "Clasificatorul de tramvaie nu poate fi încărcat. Verifică modelul pregătit local.") from error
         return detections, {
-            "name": "YOLO11s + conditional tram classifier", "device": self.device, "input_size": self.imgsz,
+            "name": "YOLO11s + conditional tram classifier", "device": self.device, "input_size": self.imgsz, "conf": self.conf,
             "low_light_enhanced": enhanced, "traffic_ms": traffic_ms,
             "tram_ms": round((time.perf_counter() - tram_started) * 1000), "tram_candidates": len(candidates),
         }

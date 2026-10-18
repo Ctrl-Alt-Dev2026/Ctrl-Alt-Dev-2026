@@ -1,5 +1,7 @@
 """Local live-camera inference, separate from uploaded SafeCross clip analysis."""
 
+import logging
+import os
 import threading
 
 from fastapi import APIRouter, Depends, Query, Request, Response
@@ -15,11 +17,12 @@ router = APIRouter(prefix="/api/v1/vision", tags=["live cameras"], dependencies=
 _creation_lock = threading.Lock()
 
 
-def service(request):
+def service(request_or_app):
+    application = request_or_app.app if isinstance(request_or_app, Request) else request_or_app
     with _creation_lock:
-        if not hasattr(request.app.state, "live_vision"):
-            request.app.state.live_vision = LiveVision()
-        return request.app.state.live_vision
+        if not hasattr(application.state, "live_vision"):
+            application.state.live_vision = LiveVision()
+        return application.state.live_vision
 
 
 @router.get("/status", summary="Live detector installation status; does not load or download weights")
@@ -57,6 +60,22 @@ async def frame(session_id: str, request: Request, sequence: int = Query(ge=0), 
 
 async def error_handler(request, error):
     return JSONResponse(status_code=error.status, content={"detail": {"code": error.code, "message": error.message}}, headers={"Cache-Control": "no-store"})
+
+
+def start_preload(application):
+    """SAFEIASI_VISION_PRELOAD=1 (Dockerfile.vercel): warm YOLO in the background when the instance starts."""
+    if os.environ.get("SAFEIASI_VISION_PRELOAD") != "1" or not readiness()["available"]:
+        return None
+
+    def run():
+        try:
+            service(application).warm()
+        except Exception:
+            logging.getLogger(__name__).exception("Vision preload failed; the first frame loads the model instead")
+
+    thread = threading.Thread(target=run, name="vision-preload", daemon=True)
+    thread.start()
+    return thread
 
 
 def register_vision(application):

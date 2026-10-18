@@ -140,6 +140,16 @@ class LiveVision:
         with self.lock:
             self._end(key)
 
+    def warm(self):
+        """Load YOLO and run one blank frame, so a new instance's first camera frame does not pay for it.
+        Frames arriving meanwhile get vision_busy, which the viewer retries."""
+        import numpy as np
+
+        with self.inference_lock:
+            if self.detector is None:
+                self.detector = self.detector_factory()
+            self.detector.detect(np.zeros((360, 640, 3), dtype=np.uint8))
+
     def process(self, key, data, sequence, media_time):
         # Do not build a stale inference queue when a second viewer or client is faster.
         if not self.inference_lock.acquire(blocking=False):
@@ -186,6 +196,7 @@ class LiveVision:
                 "detections": detections, "light": light, "signals": signals, "model": model,
                 "inference_ms": round((time.perf_counter() - started) * 1000),
                 "tracking_reset": reset, "incident_status": "unverified_signals_only",
+                "pending": session.analytics.pending, "tracking_history": session.analytics.history,
             }
         finally:
             self.inference_lock.release()

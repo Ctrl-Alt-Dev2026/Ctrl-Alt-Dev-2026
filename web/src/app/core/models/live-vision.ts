@@ -19,5 +19,9 @@ export interface VisionFrame {
   sequence: number; media_time: number; width: number; height: number;
   detections: Detection[]; light: LightReport; signals: VisionSignal[];
   inference_ms: number; tracking_reset: boolean;
+  /** Weak first observations, not shown yet. */
+  pending: Detection[];
+  /** False when the server instance had no previous frame of this camera (frames spread over instances). */
+  tracking_history: boolean;
   model: { name: string; device: string; input_size: number; low_light_enhanced: boolean };
 }

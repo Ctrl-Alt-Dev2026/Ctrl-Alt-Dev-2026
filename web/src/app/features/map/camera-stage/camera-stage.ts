@@ -13,6 +13,17 @@ const MAX_ANNOTATION_AGE_S = 1.5;
 const MAX_SIGNALS = 20;
 interface ShownSignal extends VisionSignal { at: Date; thumb: string | null }
 
+// The server's anti-flicker rule (safecross/live_analytics.py): a weak detection is shown once it matches an object
+// of the same label in the previous frame. Applied here only when the server instance had no history of this camera.
+function sameObject(current: Detection, previous: Detection): boolean {
+  if (current.label !== previous.label) return false;
+  const [ax, ay, aw, ah] = current.box, [bx, by, bw, bh] = previous.box;
+  const common = Math.max(0, Math.min(ax + aw, bx + bw) - Math.max(ax, bx)) * Math.max(0, Math.min(ay + ah, by + bh) - Math.max(ay, by));
+  const iou = common / Math.max(1, aw * ah + bw * bh - common);
+  const distance = Math.hypot(ax + aw / 2 - bx - bw / 2, ay + ah / 2 - by - bh / 2) / Math.max(8, Math.hypot(bw, bh));
+  return iou >= .15 || distance < .65;
+}
+
 /** Continuous HLS playback, recent backend observations, and optional exact-frame inspection. */
 @Component({
   selector: 'app-camera-stage',
@@ -65,6 +76,8 @@ export class CameraStage {
   private lastMediaTime = -1;
   private hasFrame = false;
   private activeSignalBoxes: Box[] = [];
+  private previousRaw: Detection[] = [];
+  private previousRawTime = -Infinity;
 
   constructor() {
     afterNextRender(() => {
@@ -184,6 +197,7 @@ export class CameraStage {
     this.error.set('');
     this.hasFrame = false;
     this.activeSignalBoxes = [];
+    this.previousRaw = [];
     if (!this.stopped) this.draw();
   }
 
@@ -251,7 +265,12 @@ export class CameraStage {
         this.roundMs.set(result.inference_ms);
         this.latencyMs.set(Math.round(performance.now() - t));
         this.enhanced.set(result.model.low_light_enhanced);
-        this.detections.set(result.detections);
+        const pending = result.pending ?? [];
+        const confirmed = result.tracking_history === false && mediaTime - this.previousRawTime <= 2.5
+          ? pending.filter((d) => this.previousRaw.some((p) => sameObject(d, p))) : [];
+        this.previousRaw = [...result.detections, ...pending];
+        this.previousRawTime = mediaTime;
+        this.detections.set([...result.detections, ...confirmed]);
         this.light.set(result.light);
         this.activeSignalBoxes = result.signals.flatMap((s) => s.boxes);
         this.analysedFrame.width = this.scratch.width;

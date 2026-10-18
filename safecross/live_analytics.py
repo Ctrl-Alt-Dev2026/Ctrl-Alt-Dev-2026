@@ -44,6 +44,7 @@ class Analytics:
         self.previous_time = None
         self.size = None
         self.previous_image = None
+        self.pending, self.history = [], False
 
     def reset_tracks(self):
         self.tracks.clear()
@@ -56,6 +57,7 @@ class Analytics:
 
         height, width = frame.shape[:2]
         small = cv2.resize(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), (128, 72)).astype(np.float32)
+        self.history = self.previous_time is not None
         gap = timestamp - self.previous_time if self.previous_time is not None else 0
         reset = self.size != (width, height) or gap > 3
         if not reset and self.previous_image is not None:
@@ -69,7 +71,12 @@ class Analytics:
         current = self._associate(detections, timestamp)
         # Weak one-frame predictions stay internal until observed twice. High-confidence
         # objects appear immediately. This suppresses flicker, not persistent false objects.
-        visible = [d for d, track in zip(detections, current) if track.hits >= 2 or d["score"] >= .8]
+        shown = [track.hits >= 2 or d["score"] >= .8 for d, track in zip(detections, current)]
+        visible = [d for d, ok in zip(detections, shown) if ok]
+        # The weak first observations. A long-lived server confirms them on the next frame; when frames are spread
+        # over instances (Vercel) this one may have no history, and the viewer applies the same rule against its
+        # own previous frame (camera-stage.ts).
+        self.pending = [d for d, ok in zip(detections, shown) if not ok]
         light = self._light(frame, crosswalks, visible)
         signals = self._incidents(current, timestamp)
         for region in light["crosswalks"]:
