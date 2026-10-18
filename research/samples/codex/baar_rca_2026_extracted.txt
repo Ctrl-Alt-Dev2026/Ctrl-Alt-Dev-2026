@@ -1,0 +1,117 @@
+          Statistici și tendințe privind piața
+              asigurărilor RCA din România
+        Date agregate privind primele, daunele și
+despăgubirile RCA, în context național și european
+
+
+Documentul prezintă date statistice agregate referitoare la piața asigurărilor de răspundere
+civilă auto (RCA) din România, pe baza informațiilor raportate de asigurătorii autorizați și a
+surselor publice disponibile. Sunt incluse informații privind evoluția principalilor indicatori
+    ai pieței RCA, precum numărul de polițe, nivelul primelor, volumul și structura daunelor,
+    evoluția despăgubirilor pentru vătămări corporale și deces, precum și tendințele privind
+   fluctuația tarifelor de reparații. Datele sunt prezentate exclusiv în formă agregată, în scop
+                                                                                    informativ.
+
+
+
+
+                     Biroul Asiguratorilor de Autovehicule din Romania
+                                                                             secretariat@baar.ro
+Conținut
+ 1. Statistici generale privind asigurările auto (RCA)................................................................................... 2
+ 2. Tendințe privind fluctuația tarifelor RCA ................................................................................................... 2
+ 3. Date agregate privind volumul daunelor RCA .......................................................................................... 2
+ 4. Evoluția despăgubirilor pentru vătămare corporală și deces ............................................................ 2
+ 5. Date statistice privind tarifele practicate de unitățile reparatoare ................................................. 3
+ Notă de conformitate ............................................................................................................................................... 3
+ Sursa datelor ................................................................................................................................................................ 3
+
+
+
+
+                                                                           București - 2026                                                           Page 1 of 3
+1. Statistici generale privind asigurările auto (RCA)
+Prezenta secțiune conține date statistice agregate privind piața asigurărilor de răspundere
+civilă auto (RCA) din România, conform informațiilor din raportatele de piață publicate de ASF.
+
+ Indicator                                               An 2024                An 2025
+ Număr total contracte                                   9.156.074              9.622.307
+ Număr total polițe anualizate                           7.818.054              8.072.770
+ Prime brute subscrise (lei)*                            9.937.474.037          10.864.263.632
+ Prima medie (lei/poliță)*                               1.271                  1.346
+ Număr total dosare de daună                             426.190                481.837
+ Valoarea totală a despăgubirilor plătite (lei)          4.763.565.337          5.901.444.975
+
+Nota: Sunt incluse societățile autorizate și reglementate de ASF și sucursalele. *valori anualizate
+
+2. Tendințe privind fluctuația tarifelor RCA
+Tendințele privind fluctuațiile tarifelor RCA sunt prezentate exclusiv pe baza evoluției valorilor
+medii la nivel de piață, fără raportare la tarife individuale practicate de asigurători.
+
+  Indicator                                               Valoare
+  Prima medie RCA – 2025 (lei)                            1.346
+  Prima medie RCA – 2024 (lei)                            1.271
+  Variație anuală (%)                                     (+)5,9%
+
+3. Date agregate privind volumul daunelor RCA
+Datele de mai jos reflectă volumul și structura daunelor aferente polițelor RCA, la nivel agregat,
+fără individualizarea asigurătorilor sau a cazurilor de daună.
+
+Indicator                                                 An 2024              An 2025
+Volumul total al daunelor (lei) (Rezerve avizate +        8.527.872.607        9.716.991.676
+Plăti)
+Despăgubire medie plătită (lei/dosar)                     11.177               12.248
+Pondere daune rezultate din avarierea ori distrugerea     84                   82
+bunurilor (plăti) (%)
+Pondere daune vătămări/deces (plăti) (%)                  16                   18
+
+4. Evoluția despăgubirilor pentru vătămare corporală și deces, respectiv
+pentru pagube la bunuri
+Datele de mai jos reprezintă date statistice privind evoluția nivelului despăgubirilor plătite în
+cazurile de vătămare a integrității corporale, a sănătății sau deces alături de cel al despăgubii
+medii pe daune rezultate din avarierea ori distrugerea bunurilor.
+
+
+
+
+                                           București - 2026                          Page 2 of 3
+An       Despăgubire     medie     vătămări     si Despăgubire medie daune rezultate
+         decese (lei)                              din avarierea ori distrugerea bunurilor
+                                                   (lei)
+2023     72.916                                    8.782
+2024     68.677                                    9.621
+2025     72.831                                    10.362
+
+
+5. Date statistice privind tarifele practicate de unitățile reparatoare
+Datele prezentate reflectă valori medii și intervale statistice privind tarifele de manoperă
+practicate de unități reparatoare specializate, la nivel agregat, provenind din peste 400.000
+calculații AUDATEX realizate pentru dosare de dauna RCA.
+
+Indicator                                   2024                  2025            2026 (Q1)
+Cost mediu reparație (lei)                  11.183                11.811          12.397
+Cost mediu piesa (lei)                      7.342                 7.905           8.437
+Tarif mediu oră manoperă (lei)              161                   157             162
+
+Notă de conformitate
+Datele publicate au caracter informativ, sunt prezentate în formă agregată și nu reprezintă
+tarife de referință, oferte comerciale sau recomandări privind nivelul prețurilor practicate pe
+piață.
+
+
+Sursa datelor
+
+Indicatorii prezentați au ca sursa de date rapoartele oficiale ASF disponibile aici:
+https://asfromania.ro/uploads/articole/attachments/69d743f678009576041098.pdf                   si
+https://asfromania.ro/uploads/articole/attachments/694bdc3fa3d69524627192.xlsx precum
+si datele agregate din platforma Audatex.
+Audatex este o companie care furnizează o soluție IT de calcul a costurilor de reparație pentru
+daunele auto. Platforma Audatex utilizează normativele producătorilor pentru stabilirea
+timpului necesar reparațiilor (înlocuire, echipare/dezechipare s.a.), cât si prețuri pentru piese
+si materiale de vopsitorie comunicate de importatorii oficiali din România.
+
+
+
+
+                                          București - 2026                         Page 3 of 3
+

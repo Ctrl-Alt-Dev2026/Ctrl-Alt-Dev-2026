@@ -6,11 +6,6 @@ export const routes: Routes = [
   { path: '', loadComponent: mapPage, title: 'Harta priorităților' },
   { path: 'locatie/:id', loadComponent: mapPage, title: 'Fișa locației' },
   {
-    path: 'import',
-    loadComponent: () => import('./features/import/import-page/import-page').then((m) => m.ImportPage),
-    title: 'Import și verificare',
-  },
-  {
     path: 'fisa',
     loadComponent: () => import('./features/report/fisa-page/fisa-page').then((m) => m.FisaPage),
     title: 'Fișa de verificare',

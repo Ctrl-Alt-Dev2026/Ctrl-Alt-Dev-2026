@@ -11,6 +11,9 @@ export interface Manifest {
   nr_localizate_precis: number;
   nr_verificate: number;
   avertisment?: string;
+  // isu/ pipeline extension (proposed): where the data comes from and how much of it is in the city.
+  surse?: { id: string; nume: string; url: string; pagina?: number }[];
+  statistici?: { evenimente_municipiu: number; municipiu_pe_strada: number; municipiu_fara_loc: number; [key: string]: number };
 }
 
 export interface Article {
@@ -44,6 +47,13 @@ export interface Accident {
   noapte: boolean | null;
   dovezi: Partial<Record<string, string>>;
   verificat: boolean;
+  // isu/ pipeline extension (proposed): which source the event comes from, and events of the other
+  // source that may be the same crash (shown, never merged).
+  sursa?: string;
+  sursa_tip?: 'isu' | 'presa';
+  extractie?: string;
+  publicat_la?: string | null;
+  posibil_acelasi_cu?: string[];
 }
 
 export interface Crossing {
@@ -87,7 +97,7 @@ export interface Hotspot {
   date_lipsa: string[];
   masuri: HotspotMeasure[];
   verificat: boolean;
-  // Supplied by the frozen publication; never inferred as a field audit.
+  // Supplied by the backend; never inferred as a field audit.
   rank?: number | null;
   association_status?: 'operator_checked';
 }

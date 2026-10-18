@@ -1,16 +1,20 @@
 <div class="stage">
   <video #video muted playsinline autoplay crossorigin="anonymous" [attr.aria-label]="'Transmisie de la camera ' + camera().nume"></video>
-  <canvas #overlay class="overlay" aria-hidden="true"></canvas>
+  <canvas #overlay class="overlay" [class.drawing]="drawing()" (click)="addPoint($event)" aria-hidden="true"></canvas>
 
   <div class="hud top">
     <span class="chip live" [class.on]="playing()">
       <i aria-hidden="true"></i>{{ playing() ? 'în direct' : 'se conectează…' }}
     </span>
     @if (analysing() && model() === 'ready') {
-      <span class="chip">{{ vehicles() }} vehicule · {{ people() }} persoane</span>
+      <span class="chip">YOLO · {{ synchronized() ? 'cadru analizat' : 'video continuu' }}</span>
+      @if (synchronized() || annotationsFresh()) {
+        <span class="chip">{{ vehicles() }} vehicule · {{ people() }} persoane</span>
+      } @else { <span class="chip">Se actualizează casetele…</span> }
       @if (roundMs(); as ms) {
-        <span class="chip">{{ ms }} ms / cadru analizat</span>
+        <span class="chip">{{ ms }} ms inferență · {{ latencyMs() }} ms răspuns</span>
       }
+      @if (enhanced()) { <span class="chip">Contrast adaptat pentru detecție</span> }
     }
     @if (light(); as l) {
       <span class="chip" [attr.data-level]="l.level">Lumină {{ l.level }} · {{ darkPct() }}% întunecat</span>
@@ -30,9 +34,33 @@
     <p class="hud status">Se încarcă modelul de detecție…</p>
   } @else if (analysing() && model() === 'error') {
     <p class="hud status">
-      Modelul de detecție nu s-a încărcat (fără internet sau fără WebGL).
+      {{ error() }}
       <button type="button" class="ctl" (click)="retryModel()">Reîncearcă</button>
     </p>
+  }
+</div>
+
+<div class="crosswalk-tools">
+  <button type="button" class="ctl" [attr.aria-pressed]="synchronized()" (click)="toggleSynchronized()">
+    {{ synchronized() ? 'Revino la video continuu' : 'Inspectează cadrele analizate' }}
+  </button>
+  <button type="button" class="ctl" [attr.aria-pressed]="drawing() && drawingKind() === 'detection'" [disabled]="!playing()" (click)="toggleDrawing('detection')">
+    {{ drawing() && drawingKind() === 'detection' ? 'Anulează zona' : 'Zonă de detecție' }}
+  </button>
+  @if (detectionRegion()) {
+    <button type="button" class="ctl" (click)="clearDetectionRegion()">Analizează tot cadrul</button>
+  }
+  <button type="button" class="ctl" [attr.aria-pressed]="drawing() && drawingKind() === 'crosswalk'" [disabled]="!playing() || (!drawing() && crosswalks().length >= 8)" (click)="toggleDrawing()">
+    {{ drawing() && drawingKind() === 'crosswalk' ? 'Anulează marcarea' : 'Marchează o trecere' }}
+  </button>
+  @if (drawing()) {
+    <button type="button" class="ctl" [disabled]="points().length < 3" (click)="saveCrosswalk()">Salvează zona ({{ points().length }} puncte)</button>
+    <span class="muted">{{ drawingKind() === 'detection' ? 'Conturează strada de urmărit; exclude cerul, clădirile și statuile.' : 'Apasă pe conturul trecerii în ordine.' }} (3–12 puncte)</span>
+  }
+  @if (crosswalks().length) {
+    <button type="button" class="ctl" (click)="clearCrosswalks()">Șterge zonele ({{ crosswalks().length }})</button>
+  } @else if (!drawing()) {
+    <span class="muted">Marchează trecerea pentru verificarea luminii în zona ei.</span>
   }
 </div>
 
@@ -57,8 +85,10 @@
     </ol>
   }
   <p class="note muted">
-    Detecție live în browser cu COCO-SSD (MobileNet), un model general de obiecte, neantrenat pe accidente.
-    Semnalele vin din reguli simple, nevalidate, și sunt de verificat de un operator.
-    Lumina e luminozitatea imaginii (depinde de expunerea camerei), nu nivelul de iluminat de pe stradă.
+    Detecție pe backend-ul Python cu YOLO11 și YOLO-World: persoane, autoturisme, autobuze, tramvaie și alte vehicule.
+    Video continuu; casetele arată ultimele observații și dispar dacă actualizarea întârzie.
+    „Inspectează cadrele analizate” afișează imaginea exactă analizată. Zona de detecție concentrează modelul pe strada aleasă.
+    Posibilele incidente sunt semnale temporale nevalidate, pentru verificare, fără confirmarea unui accident.
+    Lumina se măsoară în imaginea originală, în zonele marcate, și depinde de expunerea camerei; nu reprezintă lux.
   </p>
 </section>

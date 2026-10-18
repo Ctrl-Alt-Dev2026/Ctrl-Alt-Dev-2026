@@ -16,7 +16,7 @@ function trusted(url: string | null): string | null {
   }
 }
 
-// One camera: its stream analysed live in the browser, or the provider's own player when the stream can't be read.
+// One camera: frames analysed by the local Python backend, or the provider's own player.
 @Component({
   selector: 'app-camera-viewer',
   imports: [CameraStage],

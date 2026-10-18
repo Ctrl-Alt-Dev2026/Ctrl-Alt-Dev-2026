@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Statistici &#8211; BAAR</title>
+<style>
+#wpadminbar #wp-admin-bar-wsm_free_top_button .ab-icon:before {
+	content: "\f239";
+	color: #FF9800;
+	top: 3px;
+}
+</style><meta name='robots' content='max-image-preview:large' />
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='dns-prefetch' href='//www.baar.ro' />
+<link rel="alternate" type="application/rss+xml" title="BAAR &raquo; Feed" href="https://www.baar.ro/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.baar.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.baar.ro%2Fstatistici%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.baar.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.baar.ro%2Fstatistici%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='wp-theme-css' href='https://www.baar.ro/wp-includes/css/dist/theme/design-tokens.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='https://www.baar.ro/wp-includes/css/dist/components/style.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://www.baar.ro/wp-includes/css/dist/preferences/style.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://www.baar.ro/wp-includes/css/dist/block-editor/style.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='https://www.baar.ro/wp-content/plugins/popup-maker/dist/packages/block-library-style.css?ver=32732a797d59d961da0d' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.baar.ro/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=6.7.2' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:where(.wp-block-gallery.is-layout-flex){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}:where(.wp-block-gallery.is-layout-grid){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}
+:where(.wp-block-latest-posts.is-layout-flex){gap: 1.25em;}:where(.wp-block-latest-posts.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.baar.ro/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.2' media='all' />
+<link rel='stylesheet' id='SFSImainCss-css' href='https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/css/sfsi-style.css?ver=3.0.2' media='all' />
+<link rel='stylesheet' id='widgets-on-pages-css' href='https://www.baar.ro/wp-content/plugins/widgets-on-pages/public/css/widgets-on-pages-public.css?ver=1.4.0' media='all' />
+<link rel='stylesheet' id='wsm-style-css' href='https://www.baar.ro/wp-content/plugins/wp-stats-manager/css/style.css?ver=1.2' media='all' />
+<link rel='stylesheet' id='supsystic-pricing-fonts-css' href='https://www.baar.ro/wp-content/plugins/data-tables-generator-by-supsystic/src/SupsysticTables/Pricing/assets/css/pricing.fonts.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='supsystic-pricing-icons-css' href='https://www.baar.ro/wp-content/plugins/data-tables-generator-by-supsystic/src/SupsysticTables/Pricing/assets/css/font-awesome.min.css?ver=4.7.0' media='all' />
+<link rel='stylesheet' id='supsystic-pricing-css' href='https://www.baar.ro/wp-content/plugins/data-tables-generator-by-supsystic/src/SupsysticTables/Pricing/assets/css/pricing.frontend.css?ver=1.6.4' media='all' />
+<link rel='stylesheet' id='ecwd-popup-style-css' href='https://www.baar.ro/wp-content/plugins/event-calendar-wd/css/ecwd_popup.css?ver=1.1.55_595b89886c0c0' media='all' />
+<link rel='stylesheet' id='ecwd_font-awesome-css' href='https://www.baar.ro/wp-content/plugins/event-calendar-wd/css/font-awesome/font-awesome.css?ver=1.1.55_595b89886c0c0' media='all' />
+<link rel='stylesheet' id='ecwd-public-css' href='https://www.baar.ro/wp-content/plugins/event-calendar-wd/css/style.css?ver=1.1.55_595b89886c0c0' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css' href='https://www.baar.ro/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css' href='https://www.baar.ro/wp-content/themes/oceanwp/assets/css/style.min.css?ver=4.2.7' media='all' />
+<style id="oceanwp-style-inline-css">
+div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+			div.wpforms-container-full .wpforms-form input[type=submit]:focus,
+			div.wpforms-container-full .wpforms-form input[type=submit]:active,
+			div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+			div.wpforms-container-full .wpforms-form button[type=submit]:focus,
+			div.wpforms-container-full .wpforms-form button[type=submit]:active,
+			div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+			div.wpforms-container-full .wpforms-form .wpforms-page-button:active,
+			div.wpforms-container-full .wpforms-form .wpforms-page-button:focus {
+				border: none;
+			}
+/*# sourceURL=oceanwp-style-inline-css */
+</style>
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.baar.ro/wp-content/plugins/tablepress/css/build/default.css?ver=3.4.1' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//www.baar.ro/wp-content/uploads/pum/pum-site-styles.css?generated=1762962232&#038;ver=1.25.0' media='all' />
+<link rel='stylesheet' id='cf7cf-style-css' href='https://www.baar.ro/wp-content/plugins/cf7-conditional-fields/style.css?ver=2.8.2' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.54.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.3.5' media='all' />
+<link rel='stylesheet' id='elementor-post-3232-css' href='https://www.baar.ro/wp-content/uploads/elementor/css/post-3232.css?ver=1792124173' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=4.3.5' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.3.5' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.3.5' media='all' />
+<link rel='stylesheet' id='elementor-post-240-css' href='https://www.baar.ro/wp-content/uploads/elementor/css/post-240.css?ver=1792130190' media='all' />
+<link rel='stylesheet' id='oe-widgets-style-css' href='https://www.baar.ro/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://www.baar.ro/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742459835' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://www.baar.ro/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742459845' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='myStyleSheets-css' href='https://www.baar.ro/wp-content/plugins/wp-latest-posts/css/wplp_front.css?ver=5.0.11' media='all' />
+<script id="jquery-core-js-extra">
+var SDT_DATA = {"ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php","siteUrl":"https://www.baar.ro/","pluginsUrl":"https://www.baar.ro/wp-content/plugins","isAdmin":""};
+//# sourceURL=jquery-core-js-extra
+</script>
+<script id="jquery-core-js" src="https://www.baar.ro/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.baar.ro/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="font-awesome-4-shim-js" src="https://www.baar.ro/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.3.5"></script>
+<script id="ai-js-js-extra">
+var MyAjax = {"ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php","security":"d7fb779cb5"};
+//# sourceURL=ai-js-js-extra
+</script>
+<script id="ai-js-js" src="https://www.baar.ro/wp-content/plugins/advanced-iframe/js/ai.min.js?ver=1"></script>
+<link rel="https://api.w.org/" href="https://www.baar.ro/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.baar.ro/wp-json/wp/v2/pages/240" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.baar.ro/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel="canonical" href="https://www.baar.ro/statistici/" />
+<link rel='shortlink' href='https://www.baar.ro/?p=240' />
+<style type="text/css" id="simple-css-output">.togglecontainer:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}</style><meta name="follow.it-verification-code-V05lM21HekJ5cmNWSFdPRzc1TjNVazNFUlJ0dkpIbWpnalhLTUZMSmhNTHRIbEhjbzBPK0pQT1MwcWl2cmZoREpvNVErTkJMcXZHZGNmY3IzSTNETSt2aG1hd1A5UE5VOThoZVBLd0F3MElMa29mVUlTVmc4Q2ZhYjFIMVoxSXd8Q1NTK0UrQmtBWDVuNUFzaVduRlZaT2EvTjdHejNYSnZYWHBtZHJEZjZrdz0=" content="HaSf15MqrQm4vlvKENQF"/>
+        <!-- Wordpress Stats Manager -->
+        <script type="text/javascript">
+            var _wsm = _wsm || [];
+            _wsm.push(['trackPageView']);
+            _wsm.push(['enableLinkTracking']);
+            _wsm.push(['enableHeartBeatTimer']);
+            (function() {
+                var u = "https://www.baar.ro/wp-content/plugins/wp-stats-manager/";
+                _wsm.push(['setUrlReferrer', ""]);
+                _wsm.push(['setTrackerUrl', "https://www.baar.ro/?wmcAction=wmcTrack"]);
+                _wsm.push(['setSiteId', "1"]);
+                _wsm.push(['setPageId', "240"]);
+                _wsm.push(['setWpUserId', "0"]);
+                var d = document,
+                    g = d.createElement('script'),
+                    s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript';
+                g.async = true;
+                g.defer = true;
+                g.src = u + 'js/wsm_new.js';
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <!-- End Wordpress Stats Manager Code -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Your website html</title>
+        <!-- Include the css file   -->
+        <link defer href="https://prod-druid-apc.azureedge.net/v2/druid_webchat_v2.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Include the script file   -->
+        <script defer type="text/javascript" src="https://prod-druid-apc.azureedge.net/v2/druid_webchat_v2_load.js?botId=8b3b5d42-16d9-4d73-7a04-08db61b5f662&baseUrl=https%3A%2F%2Fdruidapi.druidplatform.com"></script>
+
+        <!-- Init the webchat component on document load -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+                DruidWebchat_v2.init({
+                    <!-- Common settings  -->
+                    botId: "b9a65580-5468-4699-de39-08db35d17c58",
+                    baseUrl: "https://prod-druid-api.azurewebsites.net",
+                    queryParams: "", // pass queryParams to AuthorizeAsync method
+                });
+            });
+        </script>
+    </body>
+</html><meta name="generator" content="Elementor 4.3.5; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://www.baar.ro/wp-content/uploads/2017/07/cropped-BAAR-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.baar.ro/wp-content/uploads/2017/07/cropped-BAAR-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.baar.ro/wp-content/uploads/2017/07/cropped-BAAR-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.baar.ro/wp-content/uploads/2017/07/cropped-BAAR-270x270.png" />
+<!-- OceanWP CSS -->
+<style type="text/css">
+/* Colors */a:hover,a.light:hover,.theme-heading .text::before,.theme-heading .text::after,#top-bar-content >a:hover,#top-bar-social li.oceanwp-email a:hover,#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header.medium-header #medium-searchform button:hover,.oceanwp-mobile-menu-icon a:hover,.blog-entry.post .blog-entry-header .entry-title a:hover,.blog-entry.post .blog-entry-readmore a:hover,.blog-entry.thumbnail-entry .blog-entry-category a,ul.meta li a:hover,.dropcap,.single nav.post-navigation .nav-links .title,body .related-post-title a:hover,body #wp-calendar caption,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .custom-links-widget .oceanwp-custom-links li a:hover,body .custom-links-widget .oceanwp-custom-links li a:hover:before,body .posts-thumbnails-widget li a:hover,body .social-widget li.oceanwp-email a:hover,.comment-author .comment-meta .comment-reply-link,#respond #cancel-comment-reply-link:hover,#footer-widgets .footer-box a:hover,#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover,.sidr a:hover,.sidr-class-dropdown-toggle:hover,.sidr-class-menu-item-has-children.active >a,.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,input[type=checkbox]:checked:before{color:#000000}.single nav.post-navigation .nav-links .title .owp-icon use,.blog-entry.post .blog-entry-readmore a:hover .owp-icon use,body .contact-info-widget.default .owp-icon use,body .contact-info-widget.big-icons .owp-icon use{stroke:#000000}input[type="button"],input[type="reset"],input[type="submit"],button[type="submit"],.button,#site-navigation-wrap .dropdown-menu >li.btn >a >span,.thumbnail:hover i,.thumbnail:hover .link-post-svg-icon,.post-quote-content,.omw-modal .omw-close-modal,body .contact-info-widget.big-icons li:hover i,body .contact-info-widget.big-icons li:hover .owp-icon,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button,.woocommerce-cart .wp-element-button,.woocommerce-checkout .wp-element-button,.wp-block-button__link{background-color:#000000}.widget-title{border-color:#000000}blockquote{border-color:#000000}.wp-block-quote{border-color:#000000}#searchform-dropdown{border-color:#000000}.dropdown-menu .sub-menu{border-color:#000000}.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#000000}.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#000000}.social-widget li.oceanwp-email a:hover{border-color:#000000}#respond #cancel-comment-reply-link:hover{border-color:#000000}body .contact-info-widget.big-icons li:hover i{border-color:#000000}body .contact-info-widget.big-icons li:hover .owp-icon{border-color:#000000}#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#000000}a{color:#223dd8}a .owp-icon use{stroke:#223dd8}a:hover{color:#910567}a:hover .owp-icon use{stroke:#910567}body .theme-button,body input[type="submit"],body button[type="submit"],body button,body .button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button,.woocommerce-cart .wp-element-button,.woocommerce-checkout .wp-element-button,.wp-block-button__link{border-color:#ffffff}body .theme-button:hover,body input[type="submit"]:hover,body button[type="submit"]:hover,body button:hover,body .button:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:active,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:active,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:active,.woocommerce-cart .wp-element-button:hover,.woocommerce-checkout .wp-element-button:hover,.wp-block-button__link:hover{border-color:#ffffff}.page-header .page-subheading{color:#000000}.site-breadcrumbs,.background-image-page-header .site-breadcrumbs{color:#000000}.site-breadcrumbs ul li .breadcrumb-sep,.site-breadcrumbs ol li .breadcrumb-sep{color:#19289e}.site-breadcrumbs a,.background-image-page-header .site-breadcrumbs a{color:#090def}.site-breadcrumbs a .owp-icon use,.background-image-page-header .site-breadcrumbs a .owp-icon use{stroke:#090def}.site-breadcrumbs a:hover,.background-image-page-header .site-breadcrumbs a:hover{color:#a30874}.site-breadcrumbs a:hover .owp-icon use,.background-image-page-header .site-breadcrumbs a:hover .owp-icon use{stroke:#a30874}body{color:#000000}/* OceanWP Style Settings CSS */@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:78%}}@media only screen and (min-width:960px){.widget-area,.content-left-sidebar .widget-area{width:22%}}.theme-button,input[type="submit"],button[type="submit"],button,.button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-style:solid}.theme-button,input[type="submit"],button[type="submit"],button,.button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-width:1px}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea,.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{border-style:solid}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-style:solid}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea{border-radius:3px}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-radius:3px}.page-numbers a,.page-numbers span:not(.elementor-screen-only),.page-links span{color:#1e73be}.page-numbers a .owp-icon use{stroke:#1e73be}/* Header */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:100px}#site-navigation-wrap .dropdown-menu >li >a,#site-navigation-wrap .dropdown-menu >li >button.site-search-toggle,#site-navigation-wrap .dropdown-menu >li >span.opl-logout-link,.oceanwp-mobile-menu-icon a,.oceanwp-mobile-menu-icon>button,.mobile-menu-close,.after-header-content-inner >a{line-height:100px}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-header{border-color:#1e73be}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:500px}#site-navigation-wrap .dropdown-menu >li >a,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle,.oceanwp-mobile-menu-icon a,.oceanwp-mobile-menu-icon>button,#searchform-header-replace-close{color:#1e73be}#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle .owp-icon use,.oceanwp-mobile-menu-icon a .owp-icon use,.oceanwp-mobile-menu-icon>button .owp-icon use,#searchform-header-replace-close .owp-icon use{stroke:#1e73be}#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle:hover,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle:hover,.oceanwp-mobile-menu-icon a:hover,.oceanwp-mobile-menu-icon>button:hover,#searchform-header-replace-close:hover{color:#ffffff}#site-navigation-wrap .dropdown-menu >li >a:hover .owp-icon use,#site-header #site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle:hover .owp-icon use,#site-navigation-wrap .dropdown-menu >li >button.site-search-toggle:hover .owp-icon use,.oceanwp-mobile-menu-icon>button:hover .owp-icon use,.oceanwp-mobile-menu-icon a:hover .owp-icon use,#searchform-header-replace-close:hover .owp-icon use{stroke:#ffffff}#site-navigation-wrap .dropdown-menu >li >a,#site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle{background-color:#ffffff}#site-navigation-wrap .dropdown-menu >li >a:hover,#site-navigation-wrap .dropdown-menu >li >button.dropdown-toggle:hover,#site-header #site-navigation-wrap .dropdown-menu >li >button.site-search-toggle:hover,#site-navigation-wrap .dropdown-menu >li.sfHover >a{background-color:#2f7cbf}.dropdown-menu .sub-menu{min-width:150px}/* Topbar */#top-bar{padding:8px}#top-bar-social li a{font-size:10px}#top-bar-social li a{padding:0 8px 0 6px}#top-bar-social li a{color:#ffffff}#top-bar-social li a .owp-icon use{stroke:#ffffff}#top-bar-social li a:hover{color:#eeee22!important}#top-bar-social li a:hover .owp-icon use{stroke:#eeee22!important}#top-bar-wrap,.oceanwp-top-bar-sticky{background-color:#2f7cbf}#top-bar-wrap,#top-bar-content strong{color:#ffffff}/* Blog CSS */.ocean-single-post-header ul.meta-item li a:hover{color:#333333}/* Sidebar */.widget-area .sidebar-box,.separate-layout .sidebar-box{margin-bottom:px}/* Footer Widgets */#footer-widgets{background-color:#598fbf}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#ffffff}#footer-widgets li,#footer-widgets #wp-calendar caption,#footer-widgets #wp-calendar th,#footer-widgets #wp-calendar tbody,#footer-widgets .contact-info-widget i,#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"],#footer-widgets .posts-thumbnails-widget li,#footer-widgets .social-widget li a{border-color:#1e73be}#footer-widgets .contact-info-widget .owp-icon{border-color:#1e73be}/* Footer Copyright */#footer-bottom{background-color:#2f7cbf}/* Typography */body{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.8}h1,h2,h3,h4,h5,h6,.theme-heading,.widget-title,.oceanwp-widget-recent-posts-title,.comment-reply-title,.entry-title,.sidebar-box .widget-title{font-family:Arial,Helvetica,sans-serif;line-height:1.4;font-weight:400}h1{font-size:23px;line-height:1.4}h2{font-size:20px;line-height:1.4}h3{font-size:18px;line-height:1.4}h4{font-size:17px;line-height:1.4}h5{font-size:14px;line-height:1.4}h6{font-size:15px;line-height:1.4}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-family:Arial,Helvetica,sans-serif;font-size:20px;line-height:0.2;letter-spacing:.6px;font-weight:400;text-transform:capitalize}.page-header .page-subheading,.page-header.background-image-page-header .page-subheading{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:0.2;font-weight:300;text-transform:capitalize}.site-breadcrumbs,.site-breadcrumbs a{font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.4;font-weight:300;text-transform:none}#top-bar-content,#top-bar-social-alt{font-size:12px;line-height:1.8}#site-logo a.site-logo-text{font-size:24px;line-height:1.8}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Arial,Helvetica,sans-serif;font-size:16px;letter-spacing:.6px;font-weight:300;text-transform:uppercase}.dropdown-menu ul li a.menu-link,#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1;letter-spacing:.6px;font-weight:400;text-transform:none}.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,button.sidr-class-toggle-sidr-close,#mobile-dropdown ul li a,#mobile-dropdown ul li >button.menu-link.dropdown-toggle,body #mobile-fullscreen ul li a,body #mobile-fullscreen ul li >button.menu-link.dropdown-toggle{font-size:15px;line-height:1.8}.blog-entry.post .blog-entry-header .entry-title a{font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.4}.ocean-single-post-header .single-post-title{font-size:34px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header ul.meta-item li,.ocean-single-post-header ul.meta-item li a{font-size:13px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header .post-author-name,.ocean-single-post-header .post-author-name a{font-size:14px;line-height:1.4;letter-spacing:.6px}.ocean-single-post-header .post-author-description{font-size:12px;line-height:1.4;letter-spacing:.6px}.single-post .entry-title{font-family:Arial,Helvetica,sans-serif;line-height:1.4;letter-spacing:.6px}.single-post ul.meta li,.single-post ul.meta li a{font-size:14px;line-height:1.4;letter-spacing:.6px}.sidebar-box .widget-title,.sidebar-box.widget_block .wp-block-heading{font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1;letter-spacing:1px}#footer-widgets .footer-box .widget-title{font-size:13px;line-height:1;letter-spacing:1px}#footer-bottom #copyright{font-size:12px;line-height:1}#footer-bottom #footer-bottom-menu{font-size:12px;line-height:1}.ocean-preloader--active .preloader-after-content{font-size:20px;line-height:1.8;letter-spacing:.6px}
+</style></head>
+
+<body class="wp-singular page-template-default page page-id-240 wp-custom-logo wp-embed-responsive wp-theme-oceanwp sfsi_actvite_theme_default ecwd-theme-oceanwp oceanwp-theme dropdown-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar page-header-disabled has-breadcrumbs pagination-left elementor-default elementor-kit-3232 elementor-page elementor-page-240" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+	
+	
+	<div id="outer-wrap" class="site clr">
+
+		<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+		
+		<div id="wrap" class="clr">
+
+			
+
+<div id="top-bar-wrap" class="clr">
+
+	<div id="top-bar" class="clr container">
+
+		
+		<div id="top-bar-inner" class="clr">
+
+			
+	<div id="top-bar-content" class="clr has-content top-bar-left">
+
+		
+		
+			
+				<span class="topbar-content">
+
+					Bine ati venit pe site-ul Biroului Asiguratorilor de Autovehicule din Romania
+				</span>
+
+				
+	</div><!-- #top-bar-content -->
+
+
+<div id="top-bar-social" class="clr top-bar-right">
+
+	<ul class="clr" aria-label="Social links">
+
+		<li class="oceanwp-facebook"><a href="https://www.facebook.com/Biroul-Asiguratorilor-de-Autovehicule-din-Romania-1937504449857555/" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-facebook" aria-hidden="true" role="img"></i></a></li>
+	</ul>
+
+</div><!-- #top-bar-social -->
+
+		</div><!-- #top-bar-inner -->
+
+		
+	</div><!-- #top-bar -->
+
+</div><!-- #top-bar-wrap -->
+
+
+			
+<header id="site-header" class="minimal-header left-menu clr" data-height="100" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
+
+	
+					
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand" >
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="https://www.baar.ro/" class="custom-logo-link" rel="home"><img width="243" height="66" src="https://www.baar.ro/wp-content/uploads/2017/07/BAAR.png" class="custom-logo" alt="BAAR" decoding="async" /></a>
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+			<div id="site-navigation-wrap" class="clr">
+			
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr"  itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Main website navigation" >
+
+				<ul id="menu-meniu_principal" class="main-menu dropdown-menu sf-menu"><li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-81"><a href="https://www.baar.ro/despre-noi/" class="menu-link"><span class="text-wrap">Despre noi<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="https://www.baar.ro/companii-membre/" class="menu-link"><span class="text-wrap">Companii membre</span></a></li>	<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="https://www.baar.ro/conducerea-baar/" class="menu-link"><span class="text-wrap">Conducerea BAAR</span></a></li>	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.baar.ro/atributii/" class="menu-link"><span class="text-wrap">Atributii</span></a></li>	<li id="menu-item-1998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1998"><a href="https://www.baar.ro/viziune-misiune-valori-baar/" class="menu-link"><span class="text-wrap">Viziune Misiune Valori BAAR</span></a></li></ul>
+</li><li id="menu-item-1297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1297 nav-no-click"><a href="https://www.baar.ro/dscv/" class="menu-link"><span class="text-wrap">Carte verde<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1340"><a href="https://www.baar.ro/dscv/birou-national-carte-verde/" class="menu-link"><span class="text-wrap">Birou National Carte Verde</span></a></li>	<li id="menu-item-1300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="https://www.baar.ro/dscv/consiliul-birourilor/" class="menu-link"><span class="text-wrap">Consiliul Birourilor</span></a></li></ul>
+</li><li id="menu-item-1296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1296"><a href="https://www.baar.ro/fpvs/" class="menu-link"><span class="text-wrap">Neasigurati &#038; Protectie Vizitatori<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1307"><a href="https://www.baar.ro/fpvs/centru-de-informare/" class="menu-link"><span class="text-wrap">Centru de informare</span></a></li>	<li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1306"><a href="https://www.baar.ro/fpvs/organism-de-plata-a-despagubirilor/" class="menu-link"><span class="text-wrap">Organism de plata a despagubirilor</span></a></li>	<li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1305"><a href="https://www.baar.ro/fpvs/organism-de-compensare/" class="menu-link"><span class="text-wrap">Organism de compensare</span></a></li></ul>
+</li><li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown menu-item-79 nav-no-click"><a href="https://www.baar.ro/utile/" class="menu-link"><span class="text-wrap">Utile<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="https://www.baar.ro/utile/istoria-asigurarilor/" class="menu-link"><span class="text-wrap">Istoria asigurarilor</span></a></li>	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="https://www.baar.ro/ghiduri/" class="menu-link"><span class="text-wrap">Ghiduri</span></a></li>	<li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="https://www.baar.ro/publicatii/" class="menu-link"><span class="text-wrap">Publicatii</span></a></li>	<li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="https://www.baar.ro/reglementari-2/" class="menu-link"><span class="text-wrap">Reglementari</span></a></li>	<li id="menu-item-1302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1302"><a href="https://www.baar.ro/legaturi-utile/" class="menu-link"><span class="text-wrap">Legaturi utile</span></a></li>	<li id="menu-item-4761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4761"><a href="https://www.baar.ro/asigurare-de-frontiera/" class="menu-link"><span class="text-wrap">Asigurare de frontiera</span></a></li>	<li id="menu-item-3706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3706"><a href="https://www.baar.ro/asigurati-cu-risc-ridicat/" class="menu-link"><span class="text-wrap">Asigurati cu risc ridicat</span></a></li>	<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://www.baar.ro/stiri/" class="menu-link"><span class="text-wrap">Stiri</span></a></li>	<li id="menu-item-2796" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-240 current_page_item menu-item-2796"><a href="https://www.baar.ro/statistici/" class="menu-link"><span class="text-wrap">Statistici</span></a></li></ul>
+</li></ul>
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+
+			
+		
+	
+				
+	
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="https://www.baar.ro/#mobile-menu-toggle" class="mobile-menu"  aria-controls="mobile-dropdown" aria-expanded="false" aria-label="Mobile Menu">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+								<span class="oceanwp-text">Menu</span>
+				<span class="oceanwp-close-text">Close</span>
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+	
+
+			</div><!-- #site-header-inner -->
+
+			
+<div id="mobile-dropdown" class="clr" >
+
+	<nav class="clr" aria-label="Mobile navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
+		<ul id="menu-meniu_principal-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81"><a href="https://www.baar.ro/despre-noi/">Despre noi</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="https://www.baar.ro/companii-membre/">Companii membre</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="https://www.baar.ro/conducerea-baar/">Conducerea BAAR</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.baar.ro/atributii/">Atributii</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1998"><a href="https://www.baar.ro/viziune-misiune-valori-baar/">Viziune Misiune Valori BAAR</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1297"><a href="https://www.baar.ro/dscv/">Carte verde</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1340"><a href="https://www.baar.ro/dscv/birou-national-carte-verde/">Birou National Carte Verde</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="https://www.baar.ro/dscv/consiliul-birourilor/">Consiliul Birourilor</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1296"><a href="https://www.baar.ro/fpvs/">Neasigurati &#038; Protectie Vizitatori</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1307"><a href="https://www.baar.ro/fpvs/centru-de-informare/">Centru de informare</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1306"><a href="https://www.baar.ro/fpvs/organism-de-plata-a-despagubirilor/">Organism de plata a despagubirilor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1305"><a href="https://www.baar.ro/fpvs/organism-de-compensare/">Organism de compensare</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-79"><a href="https://www.baar.ro/utile/">Utile</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="https://www.baar.ro/utile/istoria-asigurarilor/">Istoria asigurarilor</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="https://www.baar.ro/ghiduri/">Ghiduri</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="https://www.baar.ro/publicatii/">Publicatii</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="https://www.baar.ro/reglementari-2/">Reglementari</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1302"><a href="https://www.baar.ro/legaturi-utile/">Legaturi utile</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4761"><a href="https://www.baar.ro/asigurare-de-frontiera/">Asigurare de frontiera</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3706"><a href="https://www.baar.ro/asigurati-cu-risc-ridicat/">Asigurati cu risc ridicat</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://www.baar.ro/stiri/">Stiri</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-240 current_page_item menu-item-2796"><a href="https://www.baar.ro/statistici/" aria-current="page">Statistici</a></li>
+</ul>
+</li>
+</ul>
+<div id="mobile-menu-search" class="clr">
+	<form aria-label="Search this website" method="get" action="https://www.baar.ro/" class="mobile-searchform" role="search">
+		
+		<span class="screen-reader-text">
+			Search this website		</span>
+
+		<input type="search" id="ocean-mobile-search-1" class="field" name="s" autocomplete="off" value="" placeholder="Search" aria-label="Insert search query" />
+		
+		<button aria-label="Submit search" type="submit" class="searchform-submit">
+			<i class=" icon-magnifier" aria-hidden="true" role="img"></i>		</button>
+
+				
+	</form>
+</div>
+
+	</nav>
+
+</div>
+
+			
+			
+		
+</header><!-- #site-header -->
+
+
+			
+			<main id="main" class="site-main clr"  role="main">
+
+				
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article class="single-page-article clr">
+
+	
+<div class="entry clr" itemprop="text">
+
+	
+			<div data-elementor-type="wp-page" data-elementor-id="240" class="elementor elementor-240">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-4d2e177 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4d2e177" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8f9fc0e" data-id="8f9fc0e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-926156a elementor-widget elementor-widget-text-editor" data-id="926156a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Statistici despagubiri daune morale</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-028e5a3" data-id="028e5a3" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3f2d975 elementor-widget elementor-widget-button" data-id="3f2d975" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2025/10/Sinteza-jurisprudenta-despagubiri-morale.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-418ccc7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="418ccc7" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cfed628" data-id="cfed628" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-db1d3ca elementor-widget elementor-widget-spacer" data-id="db1d3ca" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5621c88" data-id="5621c88" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f50bfb8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f50bfb8" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b30777f" data-id="b30777f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-f2283f6 elementor-widget elementor-widget-text-editor" data-id="f2283f6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Evolutie cost mediu piese inlocuite 2020-2024								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-57021e2" data-id="57021e2" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2d95271 elementor-widget elementor-widget-button" data-id="2d95271" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2025/02/evolutie-cost-piese-inlocuite-2020-2024.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ff86f10 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ff86f10" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4c6201e" data-id="4c6201e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b753080 elementor-widget elementor-widget-spacer" data-id="b753080" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-dce9fe4" data-id="dce9fe4" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-491852f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="491852f" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5cb70f2" data-id="5cb70f2" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-dd34759 elementor-widget elementor-widget-text-editor" data-id="dd34759" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Evolutie tarif ora manopera 2022-2025</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d72228a" data-id="d72228a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e5e86dd elementor-widget elementor-widget-button" data-id="e5e86dd" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2026/05/evolutie-tarif-ora-manopera-2022-2025.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7f153b2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7f153b2" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3ec4554" data-id="3ec4554" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-935d11a elementor-widget elementor-widget-spacer" data-id="935d11a" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d8df02e" data-id="d8df02e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-8602047 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8602047" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c249527" data-id="c249527" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0031948 elementor-widget elementor-widget-text-editor" data-id="0031948" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Rapoarte piata asigurari 2024. Sursa: ASF</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a993e4d" data-id="a993e4d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-faf992a elementor-widget elementor-widget-button" data-id="faf992a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.asfromania.ro/ro/a/3054/2024---rapoarte-piata-asigurarilor" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-80d27d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="80d27d3" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-459e3ef" data-id="459e3ef" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b842d8f elementor-widget elementor-widget-spacer" data-id="b842d8f" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-52c6d55" data-id="52c6d55" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-22437bf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="22437bf" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-421e702" data-id="421e702" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-80ee37c elementor-widget elementor-widget-text-editor" data-id="80ee37c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Indicatori statistici privind asigurarea RCA în România</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c473780" data-id="c473780" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-29343cd elementor-widget elementor-widget-button" data-id="29343cd" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2026/05/Statistici_RCA_2026.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-95da83e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="95da83e" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5611146" data-id="5611146" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7b02208 elementor-widget elementor-widget-spacer" data-id="7b02208" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bb21a0c" data-id="bb21a0c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-946c73f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="946c73f" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-13d45fc" data-id="13d45fc" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cbaf19b elementor-widget elementor-widget-text-editor" data-id="cbaf19b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Evolutie cost mediu piese inlocuite 2020-2023</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b78315f" data-id="b78315f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-80f1b0d elementor-widget elementor-widget-button" data-id="80f1b0d" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2024/06/evolutie-cost-piese-inlocuite-2020-2023-2024-05-28.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e05800a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e05800a" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-38fc4d3" data-id="38fc4d3" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-223e63f elementor-widget elementor-widget-spacer" data-id="223e63f" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5726ba9" data-id="5726ba9" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-100c1b6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="100c1b6" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1e16f08" data-id="1e16f08" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4663229 elementor-widget elementor-widget-text-editor" data-id="4663229" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Raport preturi piese si materiale vopsitorie H1 2021</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f333e95" data-id="f333e95" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5b20a1d elementor-widget elementor-widget-button" data-id="5b20a1d" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2021/08/2021-08-12-Statistici-BAAR-piese-H1-2021.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-cc019a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cc019a5" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d941699" data-id="d941699" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-af94ed7 elementor-widget elementor-widget-spacer" data-id="af94ed7" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4e307e7" data-id="4e307e7" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5fc1122 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5fc1122" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-982688f" data-id="982688f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-16f2aba elementor-widget elementor-widget-text-editor" data-id="16f2aba" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Analiza preturi piese 2022 vs 2021</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0b52bd0" data-id="0b52bd0" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-41b91ab elementor-widget elementor-widget-button" data-id="41b91ab" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2023/03/2023-03-15-Statistici-BAAR-piese-2022-vs-2021.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a9172c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a9172c3" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-40076a9" data-id="40076a9" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-959576f elementor-widget elementor-widget-spacer" data-id="959576f" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3d4593d" data-id="3d4593d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-31c8717 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31c8717" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2fa720c" data-id="2fa720c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4c238ea elementor-widget elementor-widget-text-editor" data-id="4c238ea" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Evolutia costurilor pieselor si a pretului orei de manopera in devizele de reparatii 2019-2022 (S1)</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4cb2dc5" data-id="4cb2dc5" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5c7cb2b elementor-widget elementor-widget-button" data-id="5c7cb2b" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2022/07/EVOLUTIA-COSTURILOR-PIESELOR-SI-A-PRETULUI-OREI-DE-MANOPERA-2019-2022-IN-DEVIZELE-DE-REPARATII-2019-2022S1-2022-07-25.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-link"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2c42be6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2c42be6" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-29d8257" data-id="29d8257" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7d29c2f elementor-widget elementor-widget-spacer" data-id="7d29c2f" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-53dde5b" data-id="53dde5b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-8a05f06 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8a05f06" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1b31f09" data-id="1b31f09" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e01d5ee elementor-widget elementor-widget-text-editor" data-id="e01d5ee" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Raport preturi piese si materiale vopsitorie 2021								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1e8915c" data-id="1e8915c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-485a9f6 elementor-widget elementor-widget-button" data-id="485a9f6" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2022/02/2022-02-10-Statistici-BAAR-piese-EoY-2021.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f40b190 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f40b190" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-88e8afb" data-id="88e8afb" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-03c0b8f elementor-widget elementor-widget-spacer" data-id="03c0b8f" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-94a4e03" data-id="94a4e03" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-79eb9df elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="79eb9df" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0457dc1" data-id="0457dc1" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ddf7bf4 elementor-widget elementor-widget-text-editor" data-id="ddf7bf4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiza asupra costurilor de reparatie a autovehiculelor in perioada 2017-2020								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ab15c2e" data-id="ab15c2e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-77894c0 elementor-widget elementor-widget-button" data-id="77894c0" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2020/05/analiza-costuri-reparatii-date-audatex-2017-2020.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-link"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-47d9ab0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="47d9ab0" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-32bf1c8" data-id="32bf1c8" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5b89425 elementor-widget elementor-widget-spacer" data-id="5b89425" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ec18610" data-id="ec18610" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9f6d6c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9f6d6c7" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5367c39" data-id="5367c39" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-965614b elementor-widget elementor-widget-text-editor" data-id="965614b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiza principalilor indicatori financiari caracteristici industriei asigurarilor RCA si ai service-urilor auto								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8d43b29" data-id="8d43b29" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-696a64e elementor-widget elementor-widget-button" data-id="696a64e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2020/01/raport-evolutie-indicatori-auto-20200123.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-link"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-68b9d4e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="68b9d4e" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-06ea061" data-id="06ea061" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1c9c28e elementor-widget elementor-widget-spacer" data-id="1c9c28e" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5615249" data-id="5615249" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-8652fae elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8652fae" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c4d0a39" data-id="c4d0a39" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-dc39373 elementor-widget elementor-widget-text-editor" data-id="dc39373" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiza caracteristicilor tehnice (putere si capacitate cilindrica) ale autoturismelor cu polite rca in 2019 (9 luni)								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-fbfbabc" data-id="fbfbabc" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-98924f7 elementor-widget elementor-widget-button" data-id="98924f7" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2020/01/raport-distributie-autovehicule-9mo-2019.pdf">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-link"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-fddb340 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fddb340" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1af7bc4" data-id="1af7bc4" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-53b64b6 elementor-widget elementor-widget-spacer" data-id="53b64b6" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-960b15b" data-id="960b15b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5dcaa3b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5dcaa3b" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0e9412d" data-id="0e9412d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6dec307 elementor-widget elementor-widget-text-editor" data-id="6dec307" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Valoarea Daunei Medii Platite Ponderate (VDMP) pe ultimii 14 ani exprimata in Eur								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-13246ae" data-id="13246ae" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2796c6b elementor-widget elementor-widget-button" data-id="2796c6b" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/valoarea-daunei-medii-platita-ponderata/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b326d16 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b326d16" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-70e5c9a" data-id="70e5c9a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-99652cb elementor-widget elementor-widget-spacer" data-id="99652cb" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-910aecf" data-id="910aecf" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-820c152 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="820c152" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-9aa8d59" data-id="9aa8d59" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-18e8560 elementor-widget elementor-widget-text-editor" data-id="18e8560" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiza privind costul de inchiriere al autovehiculelor in Romania comparativ cu Polonia, Cehia, Ungaria, Slovacia (09.09.2019)								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cb41f29" data-id="cb41f29" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a6c804e elementor-widget elementor-widget-button" data-id="a6c804e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2019/09/RapInchirieriAuto092019.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-39f5a74 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="39f5a74" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2fdf04f" data-id="2fdf04f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7b6e48d elementor-widget elementor-widget-spacer" data-id="7b6e48d" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-cd24191 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cd24191" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-307fcc5" data-id="307fcc5" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6444cb3 elementor-widget elementor-widget-text-editor" data-id="6444cb3" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiza privind vechimea autovehiculelor cu dosare de dauna pe RCA 2016-2019 (01.08.2019)								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-70f5364" data-id="70f5364" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fddd25d elementor-widget elementor-widget-button" data-id="fddd25d" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2019/08/Raport-vechime-autovehicule-2019.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-dc83baa elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="dc83baa" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6bfc039" data-id="6bfc039" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b6c5cc0 elementor-widget elementor-widget-spacer" data-id="b6c5cc0" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e8ced80 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e8ced80" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-318d6a3" data-id="318d6a3" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c0cfd83 elementor-widget elementor-widget-text-editor" data-id="c0cfd83" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Analiză privind costul mediu de reparație al autovehiculelor avariate în evenimente acoperite de polițe RCA 2016-2018 (12.07.2019)								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b4c12e8" data-id="b4c12e8" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c3f1af6 elementor-widget elementor-widget-button" data-id="c3f1af6" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2019/07/Analiza-costuri-reparatie-RCA-2016-2018.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-31fc962 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31fc962" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f72c1fa" data-id="f72c1fa" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7c11fd7 elementor-widget elementor-widget-spacer" data-id="7c11fd7" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c224363 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c224363" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e56451a" data-id="e56451a" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3075d62 elementor-widget elementor-widget-text-editor" data-id="3075d62" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Statistici privind prețul mediu anual al principalelor piese de schimb folosite cel mai frecvent în repararea autoturismelor (06.03.2019)</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-542d370" data-id="542d370" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2095c88 elementor-widget elementor-widget-button" data-id="2095c88" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2019/03/2019-03-06-Statistici-BAAR.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2f0e5ea elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2f0e5ea" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-744b103" data-id="744b103" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8087bbb elementor-widget elementor-widget-spacer" data-id="8087bbb" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-876deeb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="876deeb" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cef8177" data-id="cef8177" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-d50a87b elementor-widget elementor-widget-text-editor" data-id="d50a87b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Analiza asupra preturilor pieselor auto 2019-2020</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-42b0801" data-id="42b0801" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-767fe32 elementor-widget elementor-widget-button" data-id="767fe32" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2021/05/2020-05-14-Statistici-BAAR-piese-2019-2020.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f6147cc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f6147cc" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5349f61" data-id="5349f61" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-bf13c03 elementor-widget elementor-widget-spacer" data-id="bf13c03" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-52f60c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="52f60c8" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ccf4767" data-id="ccf4767" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-acdb406 elementor-widget elementor-widget-text-editor" data-id="acdb406" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Statistici privind asigurarile in Europa. Sursa: InsuranceEurope</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-03dcf8c" data-id="03dcf8c" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3a22732 elementor-widget elementor-widget-button" data-id="3a22732" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.insuranceeurope.eu/statistics" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c7dd9fc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c7dd9fc" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ec5421b" data-id="ec5421b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-443738d elementor-widget elementor-widget-spacer" data-id="443738d" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-dc12276 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="dc12276" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cc37fac" data-id="cc37fac" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0448da2 elementor-widget elementor-widget-text-editor" data-id="0448da2" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Analiza privind piata RCA din Romania comparativ cu alte state europene</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ac128cc" data-id="ac128cc" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0913ad4 elementor-widget elementor-widget-button" data-id="0913ad4" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://unsar.ro/comunicate-de-presa/analiza-privind-piata-rca-din-romania-comparativ-cu-alte-state-europene.html?sf_action=get_data&#038;sf_data=results&#038;_sf_s=frecventa&#038;sf_paged=10" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d948f15 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d948f15" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-206d825" data-id="206d825" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3c7f218 elementor-widget elementor-widget-spacer" data-id="3c7f218" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a79fe23 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a79fe23" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d60c317" data-id="d60c317" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5746244 elementor-widget elementor-widget-text-editor" data-id="5746244" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Rapoarte piata. Sursa: ASF</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b1b5986" data-id="b1b5986" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e88e601 elementor-widget elementor-widget-button" data-id="e88e601" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.asfromania.ro/ro/c/47/rapoarte" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-03585c1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="03585c1" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3fb2a33" data-id="3fb2a33" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-10a7f45 elementor-widget elementor-widget-spacer" data-id="10a7f45" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-054defa elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="054defa" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6f2474e" data-id="6f2474e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5892626 elementor-widget elementor-widget-text-editor" data-id="5892626" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Statistici despagubiri daune morale</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ebd0cfb" data-id="ebd0cfb" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c0ca72e elementor-widget elementor-widget-button" data-id="c0ca72e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://www.baar.ro/wp-content/uploads/2025/01/Ghid_pentru_solutionarea_daunelor_morale_ed_2012-site.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="far fa-file-pdf"></i>			</span>
+									<span class="elementor-button-text">Vizualizeaza AICI</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+	
+</div>
+
+</article>
+
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+
+<aside id="right-sidebar" class="sidebar-container widget-area sidebar-primary" itemscope="itemscope" itemtype="https://schema.org/WPSideBar" role="complementary" aria-label="Primary Sidebar">
+
+	
+	<div id="right-sidebar-inner" class="clr">
+
+		<div id="prisna-google-website-translator-2" class="sidebar-box widget_prisna-google-website-translator clr"><h4 class="widget-title prisna-gwt-align-left">TRANSLATE PAGE</h4>
+<style type="text/css">
+<!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+.translated-rtl font,
+.translated-ltr font {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+}
+
+-->
+</style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "en"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script></div><div id="search-3" class="sidebar-box widget_search clr"><h4 class="widget-title">Cauta in site</h4>
+<form aria-label="Search this website" role="search" method="get" class="searchform" action="https://www.baar.ro/">
+
+	
+	<input type="search" id="ocean-search-form-2" class="field" autocomplete="off" placeholder="Search" name="s" aria-label="Insert search query" aria-describedby="ocean-search-form-2-desc">
+
+	    
+	<span id="ocean-search-form-2-desc" class="screen-reader-text">
+        Press Escape to close the search panel.    </span>
+
+</form>
+</div><div id="simpleimage-3" class="sidebar-box widget_simpleimage clr">
+<h4 class="widget-title">Informatii privind emiterea certificatelor de daunalitate</h4>
+	<p class="simple-image">
+		<a href="https://www.baar.ro/info-certificat-de-daunalitate/"><img width="300" height="169" src="https://www.baar.ro/wp-content/uploads/2020/12/FotoCertificat-300x169.png" class="attachment-medium size-medium" alt="" decoding="async" srcset="https://www.baar.ro/wp-content/uploads/2020/12/FotoCertificat-300x169.png 300w, https://www.baar.ro/wp-content/uploads/2020/12/FotoCertificat-1024x577.png 1024w, https://www.baar.ro/wp-content/uploads/2020/12/FotoCertificat-768x432.png 768w, https://www.baar.ro/wp-content/uploads/2020/12/FotoCertificat.png 1451w" sizes="(max-width: 300px) 100vw, 300px" /></a>	</p>
+
+
+</div><div id="media_video-2" class="sidebar-box widget_media_video clr"><h4 class="widget-title">Amiabila</h4><div style="width:100%;" class="wp-video"><video class="wp-video-shortcode" id="video-240-1" preload="metadata" controls="controls"><source type="video/youtube" src="https://youtu.be/feysJ-mbsjE?si=KJ9d3COpkUO-6B5H&#038;_=1" /><a href="https://youtu.be/feysJ-mbsjE?si=KJ9d3COpkUO-6B5H">https://youtu.be/feysJ-mbsjE?si=KJ9d3COpkUO-6B5H</a></video></div></div><div id="ocean_custom_menu-2" class="sidebar-box widget-oceanwp-custom-menu custom-menu-widget clr"><style type="text/css">.ocean_custom_menu-2 > ul > li > a, .custom-menu-widget .ocean_custom_menu-2 .dropdown-menu .sub-menu li a.menu-link{color:#7F0000;font-size:15px;text-transform:uppercase;}.custom-menu-widget .ocean_custom_menu-2.oceanwp-custom-menu > ul.click-menu .open-this{color:#7F0000;font-size:15px;}.ocean_custom_menu-2 > ul > li > a:hover, .custom-menu-widget .ocean_custom_menu-2 .dropdown-menu .sub-menu li a.menu-link:hover{color:#00007F;}.custom-menu-widget .ocean_custom_menu-2.oceanwp-custom-menu > ul.click-menu .open-this:hover{color:#00007F;}</style><h4 class="widget-title">DE INTERES</h4><div class="oceanwp-custom-menu clr ocean_custom_menu-2 left dropdown-hover"><ul id="menu-meniu-lateral" class="dropdown-menu sf-menu"><li  id="menu-item-1339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1339"><a href="https://www.baar.ro/asigurare-de-frontiera/" class="menu-link">Asigurare de frontiera</a></li>
+<li  id="menu-item-1348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1348"><a href="https://www.baar.ro/birouri-nationale-carte-verde/" class="menu-link">Birouri nationale Carte Verde</a></li>
+<li  id="menu-item-1404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1404"><a href="https://www.baar.ro/fpvs/claims-representatives/" class="menu-link">Claims Representatives for Romanian MTPL insurers</a></li>
+<li  id="menu-item-2113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2113"><a href="https://www.baar.ro/corespondenti-in-romania/" class="menu-link">Corespondenti Carte Verde in Romania</a></li>
+</ul></div></div><div id="text-2" class="sidebar-box widget_text clr"><h4 class="widget-title">Factorul N</h4>			<div class="textwidget"><p><strong><span style="font-size: x-large;">Factorul N = 1,36</span><br />
+</strong></p>
+</div>
+		</div><div id="media_image-2" class="sidebar-box widget_media_image clr"><a href="https://www.baar.ro/treaz-la-volan/"><img width="250" height="200" src="https://www.baar.ro/wp-content/uploads/2018/07/TrezLaVolan-300x240.png" class="image wp-image-2182  attachment-250x200 size-250x200" alt="" style="max-width: 100%; height: auto;" decoding="async" srcset="https://www.baar.ro/wp-content/uploads/2018/07/TrezLaVolan-300x240.png 300w, https://www.baar.ro/wp-content/uploads/2018/07/TrezLaVolan.png 306w" sizes="(max-width: 250px) 100vw, 250px" /></a></div>
+		<div id="recent-posts-2" class="sidebar-box widget_recent_entries clr">
+		<h4 class="widget-title">Ultimele stiri</h4>
+		<ul>
+											<li>
+					<a href="https://www.baar.ro/ghid-informativ-unsar-baar/">GHID INFORMATIV UNSAR – BAAR</a>
+									</li>
+											<li>
+					<a href="https://www.baar.ro/lansare-amiabila/">LANSARE AMIABILA</a>
+									</li>
+					</ul>
+
+		</div><div id="simpleimage-2" class="sidebar-box widget_simpleimage clr">
+
+	<p class="simple-image">
+		<a href="https://www.baar.ro/gdpr"><img width="300" height="138" src="https://www.baar.ro/wp-content/uploads/2017/08/DataProtection-1-300x138.jpg" class="attachment-medium size-medium" alt="" decoding="async" srcset="https://www.baar.ro/wp-content/uploads/2017/08/DataProtection-1-300x138.jpg 300w, https://www.baar.ro/wp-content/uploads/2017/08/DataProtection-1-768x353.jpg 768w, https://www.baar.ro/wp-content/uploads/2017/08/DataProtection-1-1024x471.jpg 1024w, https://www.baar.ro/wp-content/uploads/2017/08/DataProtection-1.jpg 1688w" sizes="(max-width: 300px) 100vw, 300px" /></a>	</p>
+
+
+</div>
+	</div><!-- #sidebar-inner -->
+
+	
+</aside><!-- #right-sidebar -->
+
+
+	</div><!-- #content-wrap -->
+
+	
+
+	</main><!-- #main -->
+
+	
+	
+	
+		
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter" role="contentinfo">
+
+	
+	<div id="footer-inner" class="clr">
+
+		
+
+<div id="footer-widgets" class="oceanwp-row clr tablet-2-col mobile-1-col">
+
+	
+	<div class="footer-widgets-inner container">
+
+					<div class="footer-box span_1_of_4 col col-1">
+				<div id="ocean_contact_info-2" class="footer-widget widget-oceanwp-contact-info clr"><h4 class="widget-title">Adresa:</h4><ul class="contact-info-widget default"><li class="address"><i class="icon-location-pin" aria-hidden="true"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title"></span><span class="oceanwp-contact-text">Str. Vasile Lascar nr. 40-40 bis, etaj 5 si 6, sector 2, Bucuresti, cod postal 020502, Romania </span></div></li><li class="phone"><i class="icon-phone" aria-hidden="true"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Telefon:</span><span class="oceanwp-contact-text">+4 0311 300 800</span></div></li></ul></div>			</div><!-- .footer-one-box -->
+
+							<div class="footer-box span_1_of_4 col col-2">
+					<div id="ocean_contact_info-3" class="footer-widget widget-oceanwp-contact-info clr"><h4 class="widget-title">Program Call Center</h4><ul class="contact-info-widget default"><li class="text">Luni-Joi:     09:00 - 16:00
+</li></ul></div><div id="ocean_contact_info-19" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="text">Vineri: 9:00 - 13:00</li></ul></div><div id="ocean_contact_info-8" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="text">Sambata-Duminica: INCHIS</li></ul></div>				</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-3 ">
+					<div id="ocean_contact_info-12" class="footer-widget widget-oceanwp-contact-info clr"><h4 class="widget-title">Contact</h4><ul class="contact-info-widget default"></ul></div><div id="ocean_contact_info-5" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="email"><i class="icon-envelope" aria-hidden="true"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Email general:</span><span class="oceanwp-contact-text"><a href="mailto:&#115;e&#099;&#114;&#101;&#116;ari&#097;t&#064;baa&#114;.&#114;o">secretariat@baar.ro</a><span class="screen-reader-text">Opens in your application</span></span></div></li></ul></div><div id="ocean_contact_info-6" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="email"><i class="icon-envelope" aria-hidden="true"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Email pentru acte de procedura:</span><span class="oceanwp-contact-text"><a href="mailto:c&#105;&#116;&#097;tie&#064;&#098;aar.ro">citatie@baar.ro</a><span class="screen-reader-text">Opens in your application</span></span></div></li></ul></div>				</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-4">
+					<div id="ocean_contact_info-16" class="footer-widget widget-oceanwp-contact-info clr"><h4 class="widget-title">Contact</h4><ul class="contact-info-widget default"></ul></div><div id="ocean_contact_info-13" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="email"><i class="icon-envelope" aria-hidden="true"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Email</span><span class="oceanwp-contact-text"><a href="mailto:fpv&#115;&#064;&#098;aar.&#114;o">&#102;p&#118;s&#64;ba&#97;r&#46;&#114;&#111;</a><span class="screen-reader-text">Opens in your application</span></span></div></li></ul></div><div id="ocean_contact_info-18" class="footer-widget widget-oceanwp-contact-info clr"><ul class="contact-info-widget default"><li class="email"><i class=" icon-envelope" aria-hidden="true" role="img"></i><div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Email pentru relatii cu presa/comunicare:</span><span class="oceanwp-contact-text"><a href="mailto:c&#111;m&#117;n&#105;c&#097;&#114;&#101;&#064;&#098;&#097;ar.&#114;o">c&#111;&#109;un&#105;c&#97;r&#101;&#64;&#98;&#97;ar.&#114;o</a><span class="screen-reader-text">Opens in your application</span></span></div></li></ul></div>				</div><!-- .footer-box -->
+				
+			
+	</div><!-- .container -->
+
+	
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr no-footer-nav">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+		
+			<div id="copyright" class="clr">
+				Copyright 2026 - Biroul Asiguratorilor de Autovehicule din Romania			</div><!-- #copyright -->
+
+			
+	</div><!-- #footer-bottom-inner -->
+
+	
+</div><!-- #footer-bottom -->
+
+
+	</div><!-- #footer-inner -->
+
+	
+</footer><!-- #footer -->
+
+	
+	
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a aria-label="Scroll to the top of the page" href="#" id="scroll-top" class="scroll-top-right"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
+
+
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/oceanwp/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+window.addEventListener('sfsi_functions_loaded', function() {
+    if (typeof sfsi_responsive_toggle == 'function') {
+        sfsi_responsive_toggle(0);
+        // console.log('sfsi_responsive_toggle');
+
+    }
+})
+</script>
+    <script>
+        window.addEventListener('sfsi_functions_loaded', function () {
+            if (typeof sfsi_plugin_version == 'function') {
+                sfsi_plugin_version(2.77);
+            }
+        });
+
+        function sfsi_processfurther(ref) {
+            var feed_id = 'V05lM21HekJ5cmNWSFdPRzc1TjNVazNFUlJ0dkpIbWpnalhLTUZMSmhNTHRIbEhjbzBPK0pQT1MwcWl2cmZoREpvNVErTkJMcXZHZGNmY3IzSTNETSt2aG1hd1A5UE5VOThoZVBLd0F3MElMa29mVUlTVmc4Q2ZhYjFIMVoxSXd8Q1NTK0UrQmtBWDVuNUFzaVduRlZaT2EvTjdHejNYSnZYWHBtZHJEZjZrdz0=';
+            var feedtype = 8;
+            var email = jQuery(ref).find('input[name="email"]').val();
+            var filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if ((email != "Enter your email") && (filter.test(email))) {
+                if (feedtype == "8") {
+                    var url = "https://api.follow.it/subscription-form/" + feed_id + "/" + feedtype;
+                    window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+                    return true;
+                }
+            } else {
+                alert("Please enter email address");
+                jQuery(ref).find('input[name="email"]').focus();
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css" aria-selected="true">
+        .sfsi_subscribe_Popinner {
+             width: 100% !important;
+
+            height: auto !important;
+
+         padding: 18px 0px !important;
+
+            background-color: #ffffff !important;
+        }
+
+        .sfsi_subscribe_Popinner form {
+            margin: 0 20px !important;
+        }
+
+        .sfsi_subscribe_Popinner h5 {
+            font-family: Helvetica,Arial,sans-serif !important;
+
+             font-weight: bold !important;   color:#000000 !important; font-size: 16px !important;   text-align:center !important; margin: 0 0 10px !important;
+            padding: 0 !important;
+        }
+
+        .sfsi_subscription_form_field {
+            margin: 5px 0 !important;
+            width: 100% !important;
+            display: inline-flex;
+            display: -webkit-inline-flex;
+        }
+
+        .sfsi_subscription_form_field input {
+            width: 100% !important;
+            padding: 10px 0px !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email] {
+         font-family: Helvetica,Arial,sans-serif !important;   font-style:normal !important;  color: #000000 !important;   font-size:14px !important; text-align: center !important;        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+
+         font-family: Helvetica,Arial,sans-serif !important;   font-style:normal !important;  color:#000000 !important; font-size: 14px !important;   text-align:center !important;        }
+
+        .sfsi_subscribe_Popinner input[type=email]:-moz-placeholder {
+            /* Firefox 18- */
+         font-family: Helvetica,Arial,sans-serif !important;   font-style:normal !important;   color:#000000 !important; font-size: 14px !important;   text-align:center !important;
+        }
+
+        .sfsi_subscribe_Popinner input[type=email]::-moz-placeholder {
+            /* Firefox 19+ */
+         font-family: Helvetica,Arial,sans-serif !important;   font-style: normal !important;
+              color:#000000 !important; font-size: 14px !important;   text-align:center !important;        }
+
+        .sfsi_subscribe_Popinner input[type=email]:-ms-input-placeholder {
+
+            font-family: Helvetica,Arial,sans-serif !important;  font-style:normal !important;  color: #000000 !important;  font-size:14px !important;
+         text-align: center !important;        }
+
+        .sfsi_subscribe_Popinner input[type=submit] {
+
+         font-family: Helvetica,Arial,sans-serif !important;   font-weight: bold !important;   color:#000000 !important; font-size: 16px !important;   text-align:center !important; background-color: #dedede !important;        }
+
+                .sfsi_shortcode_container {
+            float: left;
+        }
+
+        .sfsi_shortcode_container .norm_row .sfsi_wDiv {
+            position: relative !important;
+        }
+
+        .sfsi_shortcode_container .sfsi_holders {
+            display: none;
+        }
+
+            </style>
+
+    <div 
+	id="pum-663" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-657 pum-theme-default-theme popmake-overlay click_open" 
+	data-popmake="{&quot;id&quot;:663,&quot;slug&quot;:&quot;date&quot;,&quot;theme_id&quot;:657,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;a[href=\&quot;exact_url\&quot;]&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;responsive_min_width&quot;:false,&quot;responsive_max_width&quot;:false,&quot;position_bottom&quot;:false,&quot;position_right&quot;:false,&quot;position_left&quot;:false,&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-663" class="pum-container popmake theme-657 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Text</p>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			CLOSE			</button>
+		
+	</div>
+
+</div>
+<div id="wpconsent-root" data-nosnippet="true" style="--wpconsent-z-index: 900000; --wpconsent-background: #04194e; --wpconsent-text: #ffffff; --wpconsent-outline-color: rgba(255, 255, 255, 0.2); --wpconsent-accept-bg: #ffcd2a; --wpconsent-cancel-bg: #ffffff; --wpconsent-preferences-bg: #ffffff; --wpconsent-accept-color: #000000; --wpconsent-cancel-color: #000000; --wpconsent-preferences-color: #000000; --wpconsent-font-size: 16px;"><div id="wpconsent-container" style="display: none;"></div><template id="wpconsent-template"><div class="wpconsent-banner-holder wpconsent-banner-long wpconsent-banner-long-bottom" id="wpconsent-banner-holder" tabindex="-1" role="dialog" aria-labelledby="wpconsent-banner-title"><div class="wpconsent-banner" part="wpconsent-banner"><div class="wpconsent-banner-body" part="wpconsent-banner-body"><h2 id="wpconsent-banner-title" class="screen-reader-text">Cookie Consent</h2><div class="wpconsent-banner-message" tabindex="0"><p>We use cookies to improve your experience on our site. By using our site, you consent to cookies.</p>
+</div></div><div class="wpconsent-banner-footer wpconsent-button-size-small wpconsent-button-corner-slightly-rounded wpconsent-button-type-filled" part="wpconsent-banner-footer"><button type="button" id="wpconsent-preferences-all" class="wpconsent-preferences-cookies wpconsent-banner-button wpconsent-preferences-all" part="wpconsent-button-preferences">Preferences</button><button type="button" id="wpconsent-cancel-all" class="wpconsent-cancel-cookies wpconsent-banner-button wpconsent-cancel-all" part="wpconsent-button-cancel">Reject</button><button type="button" id="wpconsent-accept-all" class="wpconsent-accept-cookies wpconsent-banner-button wpconsent-accept-all" part="wpconsent-button-accept">Accept All</button></div><div class="wpconsent-powered-by"><a style="color: #ffffff" href="https://wpconsent.com/powered-by/?utm_source=liteplugin&amp;utm_medium=poweredby&amp;utm_campaign" target="_blank" rel="nofollow noopener noreferrer"><span class="wpconsent-powered-by-text">Powered by</span> <svg class="wpconsent-icon wpconsent-icon-logo-mono" width="80" height="12" viewbox="0 0 57 9" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#ffffff"><path d="M4.84 1.006a.34.34 0 0 0-.333-.34H2.564a.336.336 0 0 0-.292.172L.735 3.566a.336.336 0 0 0 .293.501h1.94a.342.342 0 0 0 .292-.173l1.531-2.713H4.79a.333.333 0 0 0 .05-.175ZM11.628 4.545a.33.33 0 0 0-.048-.171L9.76 1.144 8.403 3.547l.474.84a.33.33 0 0 1 .003.314L7.09 7.88a.341.341 0 0 0 .272.539h1.937a.336.336 0 0 0 .292-.17l2.005-3.558-.003-.002a.34.34 0 0 0 .034-.145h.002Z" /><path d="M9.76 1.144 9.493.667 8.17 2.994l-.038.066-.294.518a.34.34 0 0 1 .569-.03L9.76 1.144ZM6.995.667h-.012a.336.336 0 0 0-.303.19l-2.636 4.66a.345.345 0 0 1-.299.175.348.348 0 0 1-.303-.183l-.447-.792a.337.337 0 0 0-.294-.171l-1.936.006a.336.336 0 0 0-.293.5l1.802 3.199c.06.105.171.17.293.17h2.314c.129 0 .239-.071.297-.178L6.832 5.34l1.002-1.762.294-.518.038-.066L9.49.667H6.995ZM13.896 1.921c0-.148.053-.274.157-.378a.518.518 0 0 1 .38-.155c.136 0 .247.038.334.114.087.077.144.161.17.253l1.065 3.843 1.041-3.825a.48.48 0 0 1 .188-.28.516.516 0 0 1 .627.002c.096.072.16.167.188.285l1.041 3.825 1.076-3.856a.523.523 0 0 1 .501-.36.51.51 0 0 1 .37.151.508.508 0 0 1 .154.374.505.505 0 0 1-.027.163L19.596 7.32a.518.518 0 0 1-.488.375.47.47 0 0 1-.31-.11.546.546 0 0 1-.182-.285l-1.057-3.747-1.053 3.749a.525.525 0 0 1-.19.283.51.51 0 0 1-.325.11.514.514 0 0 1-.315-.102.5.5 0 0 1-.19-.264l-1.564-5.242a.514.514 0 0 1-.027-.165h.002ZM21.94 7.167V1.992c0-.146.05-.27.154-.374a.514.514 0 0 1 .377-.154h1.745c.566 0 1.026.159 1.383.478.357.318.536.785.536 1.399s-.177 1.077-.533 1.398c-.355.321-.817.484-1.385.484H23v1.943a.512.512 0 0 1-.152.375c-.1.1-.226.151-.375.151a.514.514 0 0 1-.378-.154.506.506 0 0 1-.155-.374v.003Zm1.059-2.896h1.134c.287 0 .509-.08.668-.243.16-.162.239-.392.239-.686 0-.294-.081-.526-.242-.685-.16-.16-.382-.239-.666-.239h-1.135v1.855L23 4.27ZM26.842 4.549c0-1.064.249-1.866.749-2.404.5-.539 1.202-.81 2.107-.81.432 0 .828.088 1.191.26.362.173.651.41.869.712.042.06.063.123.063.192a.287.287 0 0 1-.29.295.303.303 0 0 1-.241-.12 1.81 1.81 0 0 0-.671-.553 2.018 2.018 0 0 0-.92-.215c-.714 0-1.264.22-1.645.662-.38.441-.571 1.103-.571 1.984 0 .88.187 1.593.56 2.01.375.418.927.626 1.656.626.318 0 .62-.063.905-.19.285-.128.513-.314.686-.562a.276.276 0 0 1 .241-.12c.084 0 .153.029.207.086a.287.287 0 0 1 .083.21c0 .063-.018.12-.054.174-.2.293-.49.527-.869.704-.38.177-.78.265-1.2.265-.919 0-1.623-.26-2.116-.781-.494-.521-.74-1.328-.74-2.422v-.003ZM33.042 7.19c-.337-.37-.507-.92-.507-1.654 0-.734.168-1.281.504-1.646.336-.365.809-.548 1.417-.548.607 0 1.083.183 1.42.548.334.365.502.914.502 1.646 0 .732-.168 1.285-.503 1.654-.334.369-.809.553-1.42.553-.61 0-1.075-.184-1.413-.553Zm.087-1.654c0 1.118.443 1.676 1.327 1.676.884 0 1.326-.558 1.326-1.676 0-1.118-.442-1.667-1.326-1.667-.884 0-1.327.555-1.327 1.667ZM37.29 7.404V3.686c0-.084.029-.153.086-.207a.293.293 0 0 1 .21-.083c.084 0 .153.027.207.083a.286.286 0 0 1 .083.207v.294c.093-.185.247-.338.465-.458.217-.12.47-.181.755-.181.271 0 .508.031.712.096.204.064.366.147.488.247.121.101.218.226.293.371.075.146.124.291.15.434.025.142.037.3.037.47v2.444a.276.276 0 0 1-.082.207.286.286 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207V5.078c0-.193-.015-.36-.047-.498a1.104 1.104 0 0 0-.165-.38.718.718 0 0 0-.337-.256 1.503 1.503 0 0 0-.545-.085c-.813 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.286.286 0 0 1-.206.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207l-.002.001ZM41.584 6.899c0-.075.025-.137.076-.188a.254.254 0 0 1 .188-.076c.075 0 .14.03.2.09.3.3.69.451 1.162.451.287 0 .52-.052.7-.159.18-.106.27-.27.27-.493a.463.463 0 0 0-.104-.3.747.747 0 0 0-.273-.21 3.832 3.832 0 0 0-.387-.155c-.144-.05-.291-.1-.44-.153a3.603 3.603 0 0 1-.44-.186 2.328 2.328 0 0 1-.387-.242.974.974 0 0 1-.273-.344 1.08 1.08 0 0 1-.102-.48c0-.363.13-.638.392-.824.26-.186.597-.279 1.008-.279.635 0 1.099.195 1.39.586.045.06.067.118.067.174a.25.25 0 0 1-.078.187.263.263 0 0 1-.19.077.26.26 0 0 1-.193-.081 1.426 1.426 0 0 0-.43-.288 1.46 1.46 0 0 0-.566-.096c-.236 0-.43.043-.584.129-.153.087-.23.228-.23.424 0 .116.035.218.103.31a.749.749 0 0 0 .27.221c.113.057.242.113.387.164l.44.155c.147.052.294.114.44.186.145.072.274.15.388.232a.915.915 0 0 1 .275.33c.069.137.103.291.103.464 0 .269-.07.495-.21.681-.14.186-.324.321-.554.405-.23.083-.493.125-.79.125-.346 0-.66-.068-.938-.201-.28-.134-.49-.288-.626-.46a.303.303 0 0 1-.063-.175l-.002-.001ZM45.48 5.536c0-.7.166-1.24.496-1.622.33-.381.794-.572 1.39-.572.235 0 .446.029.635.087.19.059.346.138.47.239.123.1.23.211.317.33.088.119.154.25.2.389.044.14.076.268.095.387a2.447 2.447 0 0 1 .023.558 1.02 1.02 0 0 1-.038.177.26.26 0 0 1-.11.152.396.396 0 0 1-.21.05h-2.673c0 .455.123.817.369 1.087s.584.405 1.013.405c.238 0 .44-.034.607-.105.167-.07.33-.166.493-.288a.307.307 0 0 1 .165-.058.25.25 0 0 1 .187.078.263.263 0 0 1 .077.19.294.294 0 0 1-.1.21 1.61 1.61 0 0 1-.25.2 2.02 2.02 0 0 1-.48.207c-.22.072-.452.106-.7.106-.628 0-1.114-.181-1.458-.543-.343-.361-.516-.917-.516-1.664h-.002Zm.595-.339h2.462c0-.179-.018-.34-.054-.488a1.413 1.413 0 0 0-.177-.417.83.83 0 0 0-.362-.31 1.352 1.352 0 0 0-.579-.112c-.39 0-.696.118-.918.353-.222.236-.347.56-.374.974h.002ZM50.017 7.404V3.686c0-.084.028-.153.085-.207a.293.293 0 0 1 .21-.083c.085 0 .154.027.208.083a.287.287 0 0 1 .082.207v.294c.093-.185.248-.338.465-.458.218-.12.47-.181.755-.181.272 0 .509.031.713.096.204.064.366.147.488.247.121.101.217.226.292.371.075.146.125.291.15.434.026.142.038.3.038.47v2.444a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207V5.078c0-.193-.015-.36-.047-.498a1.106 1.106 0 0 0-.165-.38.718.718 0 0 0-.338-.256 1.504 1.504 0 0 0-.544-.085c-.814 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207l-.002.001ZM54.277 3.938a.263.263 0 0 1-.078-.195.27.27 0 0 1 .078-.196.26.26 0 0 1 .194-.081h.357v-.96a.27.27 0 0 1 .09-.203.284.284 0 0 1 .205-.087c.078 0 .149.028.206.085a.279.279 0 0 1 .085.206v.96h.6c.077 0 .142.027.193.081a.276.276 0 0 1 .078.197.264.264 0 0 1-.078.195.262.262 0 0 1-.194.078h-.599v2.525c0 .194.048.344.146.45.096.106.225.158.387.158.081 0 .149.026.204.078a.256.256 0 0 1 .083.195.251.251 0 0 1-.083.194.284.284 0 0 1-.204.078c-.354 0-.629-.105-.824-.317-.195-.211-.292-.49-.292-.836V4.018h-.357a.258.258 0 0 1-.194-.078l-.003-.002Z" /></g><defs><path fill="#ffffff" d="M0 0h55.857v7.753H0z" /></defs></svg><span class="screen-reader-text"> (opens in a new window)</span></a></div></div></div><div id="wpconsent-preferences-modal" class="wpconsent-preferences-modal" style="display:none;" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="wpconsent-preferences-title" part="wpconsent-preferences-modal"><div class="wpconsent-preferences-content" part="wpconsent-preferences-content"><div class="wpconsent-preferences-header" part="wpconsent-preferences-header"><h2 id="wpconsent-preferences-title" tabindex="0" part="wpconsent-preferences-title">Cookie Preferences</h2><div class="wpconsent-preferences-header-right"><button class="wpconsent-preferences-header-close" id="wpconsent-preferences-close" aria-label="Close" aria-label="Close" part="wpconsent-preferences-close">&times;</button></div></div><div class="wpconsent-preferences-body"><div class="wpconsent_preferences_panel_description" part="wpconsent-preferences-description"><p>Manage your cookie preferences below:</p>
+</div><div class="wpconsent-preference-cookies wpconsent-preferences-accordion" part="wpconsent-preferences-accordion"><div class="wpconsent-preferences-accordion-item wpconsent-cookie-category wpconsent-cookie-category-essential" part="wpconsent-accordion-item wpconsent-category-essential"><div class="wpconsent-preferences-accordion-header" part="wpconsent-accordion-header"><div class="wpconsent-cookie-category-text"><button class="wpconsent-preferences-accordion-toggle" aria-expanded="false" part="wpconsent-accordion-toggle"><span class="wpconsent-preferences-accordion-arrow" aria-hidden="true"></span><span class="screen-reader-text">Toggle Essential</span></button><label for="cookie-category-essential">Essential</label></div><div class="wpconsent-cookie-category-checkbox"><label class="wpconsent-preferences-checkbox-toggle wpconsent-preferences-checkbox-toggle-disabled" part="wpconsent-checkbox-toggle wpconsent-checkbox-toggle-disabled"><input type="checkbox" id="cookie-category-essential" checked disabled><span class="wpconsent-preferences-checkbox-toggle-slider"></span></label></div></div><div class="wpconsent-preferences-accordion-content" part="wpconsent-accordion-content"><p class="wpconsent-category-description" tabindex="0">Essential cookies enable basic functions and are necessary for the proper function of the website.</p><div class="wpconsent-preferences-cookies-list" part="wpconsent-cookies-list"><div class="wpconsent-preferences-list-header" part="wpconsent-cookies-list-header"><div class="cookie-name">Name</div><div class="cookie-desc">Description</div><div class="cookie-duration">Duration</div></div><div class="wpconsent-preferences-list-item" data-cookie-id="6689" part="wpconsent-cookies-list-item"><div class="cookie-name">Cookie Preferences</div><div class="cookie-desc">This cookie is used to store the user's cookie consent preferences.</div><div class="cookie-duration">30 days</div></div></div></div></div></div></div><div class="wpconsent-preferences-actions" part="wpconsent-preferences-actions"><div class="wpconsent-preferences-buttons wpconsent-button-size-small wpconsent-button-corner-slightly-rounded wpconsent-button-type-filled" part="wpconsent-preferences-buttons"><div class="wpconsent-preferences-buttons-left" part="wpconsent-preferences-buttons-left"><button class="wpconsent-accept-all wpconsent-banner-button" part="wpconsent-preferences-accept-button">Accept All</button><button class="wpconsent-close-preferences wpconsent-banner-button" part="wpconsent-preferences-cancel-button">Close</button></div><button class="wpconsent-save-preferences wpconsent-banner-button" part="wpconsent-preferences-save-button">Save and Close</button></div></div><div class="wpconsent-preferences-powered-by"><div class="wpconsent-powered-by"><a style="color: #ffffff" href="https://wpconsent.com/powered-by/?utm_source=liteplugin&#038;utm_medium=poweredby&#038;utm_campaign" target="_blank" rel="nofollow noopener noreferrer"><span class="wpconsent-powered-by-text">Powered by</span> <svg class="wpconsent-icon wpconsent-icon-logo-mono" width="80" height="12" viewBox="0 0 57 9" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#ffffff"><path d="M4.84 1.006a.34.34 0 0 0-.333-.34H2.564a.336.336 0 0 0-.292.172L.735 3.566a.336.336 0 0 0 .293.501h1.94a.342.342 0 0 0 .292-.173l1.531-2.713H4.79a.333.333 0 0 0 .05-.175ZM11.628 4.545a.33.33 0 0 0-.048-.171L9.76 1.144 8.403 3.547l.474.84a.33.33 0 0 1 .003.314L7.09 7.88a.341.341 0 0 0 .272.539h1.937a.336.336 0 0 0 .292-.17l2.005-3.558-.003-.002a.34.34 0 0 0 .034-.145h.002Z"/><path d="M9.76 1.144 9.493.667 8.17 2.994l-.038.066-.294.518a.34.34 0 0 1 .569-.03L9.76 1.144ZM6.995.667h-.012a.336.336 0 0 0-.303.19l-2.636 4.66a.345.345 0 0 1-.299.175.348.348 0 0 1-.303-.183l-.447-.792a.337.337 0 0 0-.294-.171l-1.936.006a.336.336 0 0 0-.293.5l1.802 3.199c.06.105.171.17.293.17h2.314c.129 0 .239-.071.297-.178L6.832 5.34l1.002-1.762.294-.518.038-.066L9.49.667H6.995ZM13.896 1.921c0-.148.053-.274.157-.378a.518.518 0 0 1 .38-.155c.136 0 .247.038.334.114.087.077.144.161.17.253l1.065 3.843 1.041-3.825a.48.48 0 0 1 .188-.28.516.516 0 0 1 .627.002c.096.072.16.167.188.285l1.041 3.825 1.076-3.856a.523.523 0 0 1 .501-.36.51.51 0 0 1 .37.151.508.508 0 0 1 .154.374.505.505 0 0 1-.027.163L19.596 7.32a.518.518 0 0 1-.488.375.47.47 0 0 1-.31-.11.546.546 0 0 1-.182-.285l-1.057-3.747-1.053 3.749a.525.525 0 0 1-.19.283.51.51 0 0 1-.325.11.514.514 0 0 1-.315-.102.5.5 0 0 1-.19-.264l-1.564-5.242a.514.514 0 0 1-.027-.165h.002ZM21.94 7.167V1.992c0-.146.05-.27.154-.374a.514.514 0 0 1 .377-.154h1.745c.566 0 1.026.159 1.383.478.357.318.536.785.536 1.399s-.177 1.077-.533 1.398c-.355.321-.817.484-1.385.484H23v1.943a.512.512 0 0 1-.152.375c-.1.1-.226.151-.375.151a.514.514 0 0 1-.378-.154.506.506 0 0 1-.155-.374v.003Zm1.059-2.896h1.134c.287 0 .509-.08.668-.243.16-.162.239-.392.239-.686 0-.294-.081-.526-.242-.685-.16-.16-.382-.239-.666-.239h-1.135v1.855L23 4.27ZM26.842 4.549c0-1.064.249-1.866.749-2.404.5-.539 1.202-.81 2.107-.81.432 0 .828.088 1.191.26.362.173.651.41.869.712.042.06.063.123.063.192a.287.287 0 0 1-.29.295.303.303 0 0 1-.241-.12 1.81 1.81 0 0 0-.671-.553 2.018 2.018 0 0 0-.92-.215c-.714 0-1.264.22-1.645.662-.38.441-.571 1.103-.571 1.984 0 .88.187 1.593.56 2.01.375.418.927.626 1.656.626.318 0 .62-.063.905-.19.285-.128.513-.314.686-.562a.276.276 0 0 1 .241-.12c.084 0 .153.029.207.086a.287.287 0 0 1 .083.21c0 .063-.018.12-.054.174-.2.293-.49.527-.869.704-.38.177-.78.265-1.2.265-.919 0-1.623-.26-2.116-.781-.494-.521-.74-1.328-.74-2.422v-.003ZM33.042 7.19c-.337-.37-.507-.92-.507-1.654 0-.734.168-1.281.504-1.646.336-.365.809-.548 1.417-.548.607 0 1.083.183 1.42.548.334.365.502.914.502 1.646 0 .732-.168 1.285-.503 1.654-.334.369-.809.553-1.42.553-.61 0-1.075-.184-1.413-.553Zm.087-1.654c0 1.118.443 1.676 1.327 1.676.884 0 1.326-.558 1.326-1.676 0-1.118-.442-1.667-1.326-1.667-.884 0-1.327.555-1.327 1.667ZM37.29 7.404V3.686c0-.084.029-.153.086-.207a.293.293 0 0 1 .21-.083c.084 0 .153.027.207.083a.286.286 0 0 1 .083.207v.294c.093-.185.247-.338.465-.458.217-.12.47-.181.755-.181.271 0 .508.031.712.096.204.064.366.147.488.247.121.101.218.226.293.371.075.146.124.291.15.434.025.142.037.3.037.47v2.444a.276.276 0 0 1-.082.207.286.286 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207V5.078c0-.193-.015-.36-.047-.498a1.104 1.104 0 0 0-.165-.38.718.718 0 0 0-.337-.256 1.503 1.503 0 0 0-.545-.085c-.813 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.286.286 0 0 1-.206.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.086-.207l-.002.001ZM41.584 6.899c0-.075.025-.137.076-.188a.254.254 0 0 1 .188-.076c.075 0 .14.03.2.09.3.3.69.451 1.162.451.287 0 .52-.052.7-.159.18-.106.27-.27.27-.493a.463.463 0 0 0-.104-.3.747.747 0 0 0-.273-.21 3.832 3.832 0 0 0-.387-.155c-.144-.05-.291-.1-.44-.153a3.603 3.603 0 0 1-.44-.186 2.328 2.328 0 0 1-.387-.242.974.974 0 0 1-.273-.344 1.08 1.08 0 0 1-.102-.48c0-.363.13-.638.392-.824.26-.186.597-.279 1.008-.279.635 0 1.099.195 1.39.586.045.06.067.118.067.174a.25.25 0 0 1-.078.187.263.263 0 0 1-.19.077.26.26 0 0 1-.193-.081 1.426 1.426 0 0 0-.43-.288 1.46 1.46 0 0 0-.566-.096c-.236 0-.43.043-.584.129-.153.087-.23.228-.23.424 0 .116.035.218.103.31a.749.749 0 0 0 .27.221c.113.057.242.113.387.164l.44.155c.147.052.294.114.44.186.145.072.274.15.388.232a.915.915 0 0 1 .275.33c.069.137.103.291.103.464 0 .269-.07.495-.21.681-.14.186-.324.321-.554.405-.23.083-.493.125-.79.125-.346 0-.66-.068-.938-.201-.28-.134-.49-.288-.626-.46a.303.303 0 0 1-.063-.175l-.002-.001ZM45.48 5.536c0-.7.166-1.24.496-1.622.33-.381.794-.572 1.39-.572.235 0 .446.029.635.087.19.059.346.138.47.239.123.1.23.211.317.33.088.119.154.25.2.389.044.14.076.268.095.387a2.447 2.447 0 0 1 .023.558 1.02 1.02 0 0 1-.038.177.26.26 0 0 1-.11.152.396.396 0 0 1-.21.05h-2.673c0 .455.123.817.369 1.087s.584.405 1.013.405c.238 0 .44-.034.607-.105.167-.07.33-.166.493-.288a.307.307 0 0 1 .165-.058.25.25 0 0 1 .187.078.263.263 0 0 1 .077.19.294.294 0 0 1-.1.21 1.61 1.61 0 0 1-.25.2 2.02 2.02 0 0 1-.48.207c-.22.072-.452.106-.7.106-.628 0-1.114-.181-1.458-.543-.343-.361-.516-.917-.516-1.664h-.002Zm.595-.339h2.462c0-.179-.018-.34-.054-.488a1.413 1.413 0 0 0-.177-.417.83.83 0 0 0-.362-.31 1.352 1.352 0 0 0-.579-.112c-.39 0-.696.118-.918.353-.222.236-.347.56-.374.974h.002ZM50.017 7.404V3.686c0-.084.028-.153.085-.207a.293.293 0 0 1 .21-.083c.085 0 .154.027.208.083a.287.287 0 0 1 .082.207v.294c.093-.185.248-.338.465-.458.218-.12.47-.181.755-.181.272 0 .509.031.713.096.204.064.366.147.488.247.121.101.217.226.292.371.075.146.125.291.15.434.026.142.038.3.038.47v2.444a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207V5.078c0-.193-.015-.36-.047-.498a1.106 1.106 0 0 0-.165-.38.718.718 0 0 0-.338-.256 1.504 1.504 0 0 0-.544-.085c-.814 0-1.22.427-1.22 1.282v2.262a.276.276 0 0 1-.083.207.287.287 0 0 1-.207.082.29.29 0 0 1-.21-.082.277.277 0 0 1-.085-.207l-.002.001ZM54.277 3.938a.263.263 0 0 1-.078-.195.27.27 0 0 1 .078-.196.26.26 0 0 1 .194-.081h.357v-.96a.27.27 0 0 1 .09-.203.284.284 0 0 1 .205-.087c.078 0 .149.028.206.085a.279.279 0 0 1 .085.206v.96h.6c.077 0 .142.027.193.081a.276.276 0 0 1 .078.197.264.264 0 0 1-.078.195.262.262 0 0 1-.194.078h-.599v2.525c0 .194.048.344.146.45.096.106.225.158.387.158.081 0 .149.026.204.078a.256.256 0 0 1 .083.195.251.251 0 0 1-.083.194.284.284 0 0 1-.204.078c-.354 0-.629-.105-.824-.317-.195-.211-.292-.49-.292-.836V4.018h-.357a.258.258 0 0 1-.194-.078l-.003-.002Z"/></g><defs><clipPath id="a"><path fill="#ffffff" transform="translate(.429 .667)" d="M0 0h55.857v7.753H0z"/></clipPath></defs></svg><span class="screen-reader-text"> (opens in a new window)</span></a></div></div></div></div><button id="wpconsent-consent-floating" class="wpconsent-consent-floating-button" part="wpconsent-settings-button" style="background-color: #04194e; color: #ffffff;" aria-label="Cookie Preferences"><svg class="wpconsent-icon wpconsent-icon-preferences" width="24" height="24" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" fill="#ffffff" /></svg></button></template></div>			<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+			<link rel='stylesheet' id='mediaelement-css' href='https://www.baar.ro/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.baar.ro/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=7.1.3' media='all' />
+<script id="dtgs_nonce_frontend-js" src="https://www.baar.ro/wp-content/plugins/data-tables-generator-by-supsystic/app/assets/js/dtgsnonce.js?ver=0.01"></script>
+<script id="dtgs_nonce_frontend-js-after">
+var DTGS_NONCE_FRONTEND = "f58c81823d"
+//# sourceURL=dtgs_nonce_frontend-js-after
+</script>
+<script id="ecwd-popup-js" src="https://www.baar.ro/wp-content/plugins/event-calendar-wd/js/ecwd_popup.js?ver=1.1.55_595b89886c0c0"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="https://www.baar.ro/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-mouse-js" src="https://www.baar.ro/wp-includes/js/jquery/ui/mouse.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-draggable-js" src="https://www.baar.ro/wp-includes/js/jquery/ui/draggable.min.js?ver=1.14.2"></script>
+<script id="imagesloaded-js" src="https://www.baar.ro/wp-includes/js/imagesloaded.min.js?ver=5.0.0"></script>
+<script id="masonry-js" src="https://www.baar.ro/wp-includes/js/masonry.min.js?ver=4.2.2"></script>
+<script id="ecwd-public-js-extra">
+var ecwd = {"ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php","ajaxnonce":"4e17b56736","loadingText":"Loading...","event_popup_title_text":"Event Details","plugin_url":"https://www.baar.ro/wp-content/plugins/event-calendar-wd","gmap_key":"","gmap_style":""};
+//# sourceURL=ecwd-public-js-extra
+</script>
+<script id="ecwd-public-js" src="https://www.baar.ro/wp-content/plugins/event-calendar-wd/js/scripts.js?ver=1.1.55_595b89886c0c0"></script>
+<script id="wp-hooks-js" src="https://www.baar.ro/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.baar.ro/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://www.baar.ro/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.2.2"></script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.baar.ro\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://www.baar.ro/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.2.2"></script>
+<script id="SFSIjqueryModernizr-js" src="https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/js/shuffle/modernizr.custom.min.js?ver=7.1.3"></script>
+<script id="SFSIjqueryShuffle-js" src="https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/js/shuffle/jquery.shuffle.min.js?ver=7.1.3"></script>
+<script id="SFSIjqueryrandom-shuffle-js" src="https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/js/shuffle/random-shuffle-min.js?ver=7.1.3"></script>
+<script id="SFSICustomJs-js-extra">
+var sfsi_icon_ajax_object = {"nonce":"97bb4dd4c7","ajax_url":"https://www.baar.ro/wp-admin/admin-ajax.php","plugin_url":"https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/"};
+//# sourceURL=SFSICustomJs-js-extra
+</script>
+<script id="SFSICustomJs-js" src="https://www.baar.ro/wp-content/plugins/ultimate-social-media-icons/js/custom.js?ver=3.0.2"></script>
+<script id="wpconsent-frontend-js-js-extra">
+var wpconsent = {"consent_duration":"30","css_url":"https://www.baar.ro/wp-content/plugins/wpconsent-cookies-banner-privacy-suite/build/frontend.css","css_version":"e253d8130dc693debd57","default_allow":"","consent_type":"optin","manual_toggle_services":"","slugs":["essential","statistics","marketing"],"enable_consent_banner":"1","enable_script_blocking":"0","enable_content_blocking":"0","enable_consent_floating":"","enable_shared_consent":"","cookie_domain":"","accept_button_enabled":"1","cancel_button_enabled":"1","preferences_button_enabled":"1","respect_gpc":"","gpc_toast_message":"GPC Signal Honored","gpc_toast_duration":"10000"};
+//# sourceURL=wpconsent-frontend-js-js-extra
+</script>
+<script id="wpconsent-frontend-js-js" src="https://www.baar.ro/wp-content/plugins/wpconsent-cookies-banner-privacy-suite/build/frontend.js?ver=e253d8130dc693debd57"></script>
+<script id="oceanwp-main-js-extra">
+var oceanwpLocalize = {"nonce":"791ff68438","isRTL":"","menuSearchStyle":"disabled","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","mobileDropdownTarget":"link","semanticMobileHeader":"","semanticDesktopHeader":"","customScrollOffset":"0","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","loadMoreLoadingText":"Loading...","ajax_url":"https://www.baar.ro/wp-admin/admin-ajax.php","oe_mc_wpnonce":"f2ccd2e413"};
+//# sourceURL=oceanwp-main-js-extra
+</script>
+<script id="oceanwp-main-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/theme.min.js?ver=4.2.7"></script>
+<script id="oceanwp-drop-down-mobile-menu-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/drop-down-mobile-menu.min.js?ver=4.2.7"></script>
+<script id="ow-magnific-popup-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/vendors/magnific-popup.min.js?ver=4.2.7"></script>
+<script id="oceanwp-lightbox-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/ow-lightbox.min.js?ver=4.2.7"></script>
+<script id="ow-flickity-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=4.2.7"></script>
+<script id="oceanwp-slider-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/ow-slider.min.js?ver=4.2.7"></script>
+<script id="oceanwp-scroll-effect-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/scroll-effect.min.js?ver=4.2.7"></script>
+<script id="oceanwp-scroll-top-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/scroll-top.min.js?ver=4.2.7"></script>
+<script id="oceanwp-select-js" src="https://www.baar.ro/wp-content/themes/oceanwp/assets/js/select.min.js?ver=4.2.7"></script>
+<script id="popup-maker-site-js-extra">
+var pum_vars = {"version":"1.25.0","pm_dir_url":"https://www.baar.ro/wp-content/plugins/popup-maker/","ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php","restapi":"https://www.baar.ro/wp-json/pum/v1","rest_nonce":null,"default_theme":"657","debug_mode":"","disable_tracking":"","disable_url_params":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","paramNames":{"popup_id":"pid","cta":"cta","notrack":"notrack"},"analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://www.baar.ro/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-663":{"triggers":[{"type":"click_open","settings":{"extra_selectors":"a[href=\"exact_url\"]","do_default":null,"cookie":{"name":null}}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"explain":null,"type_section":null,"theme_id":657,"size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":0,"position_left":0,"position_right":0,"position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","close_on_form_submission":false,"close_on_form_submission_delay":0,"close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"default-theme","responsive_min_width_unit":"px","responsive_max_width_unit":"px","overlay_zindex":"1999999998","id":663,"slug":"date"}};
+//# sourceURL=popup-maker-site-js-extra
+</script>
+<script id="popup-maker-site-js" src="//www.baar.ro/wp-content/uploads/pum/pum-site-scripts.js?defer&#038;generated=1762962253&#038;ver=1.25.0"></script>
+<script id="wpcf7cf-scripts-js-extra">
+var wpcf7cf_global_settings = {"ajaxurl":"https://www.baar.ro/wp-admin/admin-ajax.php"};
+//# sourceURL=wpcf7cf-scripts-js-extra
+</script>
+<script id="wpcf7cf-scripts-js" src="https://www.baar.ro/wp-content/plugins/cf7-conditional-fields/js/scripts.js?ver=2.8.2"></script>
+<script id="elementor-webpack-runtime-js" src="https://www.baar.ro/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.3.5"></script>
+<script id="elementor-frontend-modules-js" src="https://www.baar.ro/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.3.5"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnX":"Share on X","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.5","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"import-export-customization":true},"urls":{"assets":"https:\/\/www.baar.ro\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.baar.ro\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.baar.ro\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"54d88b81dd","atomicFormsSendForm":"3f22da1863"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":240,"title":"Statistici%20%E2%80%93%20BAAR","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="https://www.baar.ro/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+//# sourceURL=mediaelement-core-js-before
+</script>
+<script id="mediaelement-core-js" src="https://www.baar.ro/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://www.baar.ro/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=7.1.3"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"/wp-includes/js/mediaelement/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+//# sourceURL=mediaelement-js-extra
+</script>
+<script id="wp-mediaelement-js" src="https://www.baar.ro/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=7.1.3"></script>
+<script id="mediaelement-vimeo-js" src="https://www.baar.ro/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.17"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.baar.ro/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.baar.ro/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
+
+
+<!-- Page supported by LiteSpeed Cache 7.9.1 on 2026-10-18 00:43:44 -->

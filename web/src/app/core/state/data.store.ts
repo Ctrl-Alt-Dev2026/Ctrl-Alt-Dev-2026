@@ -1,41 +1,88 @@
-import { computed, effect, inject, Injectable, signal, untracked } from '@angular/core';
-import { environment } from '../../../environments/environment';
-import { BackendSession } from '../api/backend-session';
+import { HttpErrorResponse } from '@angular/common/http';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { DataApi } from '../api/data-api';
 import { Camera } from '../models/camera';
 import { Accident, Crossing, Hotspot, Manifest, Measure } from '../models/contract';
-import { DataMode, PublishedLocation, PublicationSnapshot } from '../models/publication';
+import { LiveDataset, LiveStatus } from '../models/live';
+import { NO_STREETS, StreetCollection, StreetMetric } from '../models/streets';
 
-export type LoadState = 'loading' | 'ready' | 'empty' | 'error';
+// waiting = the server is up but its first collection has not finished yet.
+export type LoadState = 'loading' | 'ready' | 'waiting' | 'error';
 
-// All public views are projections of one immutable backend publication.
+// How often the page asks the server whether a newer dataset exists (it collects every 30 minutes).
+const POLL_READY_MS = 2 * 60_000;
+const POLL_WAITING_MS = 20_000;
+
+// Every view projects the server's newest collected dataset; all viewers see the same one.
 @Injectable({ providedIn: 'root' })
 export class DataStore {
   private readonly api = inject(DataApi);
-  readonly session = inject(BackendSession);
-  readonly isHttp = environment.api.mode === 'http';
-  private requestVersion = 0;
+  private fetching = false;
+  private lastPoll = 0;
 
   readonly state = signal<LoadState>('loading');
+  // Set when the server stops answering; data already on screen stays.
   readonly error = signal<string | null>(null);
+  readonly status = signal<LiveStatus | null>(null);
+  readonly builtAt = signal<string | null>(null);
   readonly manifest = signal<Manifest | null>(null);
-  readonly publication = signal<PublicationSnapshot | null>(null);
-  readonly locations = signal<PublishedLocation[]>([]);
-  readonly locationById = computed(() => new Map(this.locations().map((row) => [row.location_id, row])));
   readonly accidents = signal<Accident[]>([]);
   readonly hotspots = signal<Hotspot[]>([]);
   readonly crossings = signal<Crossing[]>([]);
-  readonly crossingPoints = signal<Map<string, [number, number]>>(new Map());
   readonly measures = signal<Measure[]>([]);
   readonly selectedId = signal<string | null>(null);
-  readonly selectedLocation = computed(() => this.locationById().get(this.selectedId() ?? '') ?? null);
   readonly cameras = signal<Camera[]>([]);
   readonly camerasError = signal<string | null>(null);
   readonly showCameras = signal(false);
   readonly selectedCameraId = signal<string | null>(null);
   readonly selectedCamera = computed(() => this.cameras().find((c) => c.id === this.selectedCameraId()) ?? null);
   readonly participant = signal<string | null>(null);
-  readonly lastAdded = signal<Accident | null>(null);
+  readonly streets = signal<StreetCollection>(NO_STREETS);
+  readonly streetMetric = signal<StreetMetric>('isu');
+  readonly selectedStreetId = signal<string | null>(null);
+  readonly selectedStreet = computed(() => this.streets().features.find((f) => f.properties.id === this.selectedStreetId()) ?? null);
+  // Events of the chosen source per street, under the participant filter. PMUD totals have no
+  // breakdown, so they never filter.
+  readonly streetCount = computed(() => {
+    const metric = this.streetMetric();
+    return new Map(this.streets().features.map((f) => {
+      const ids = metric === 'presa' ? f.properties.presa_event_ids : f.properties.isu_event_ids;
+      return [f.properties.id, ids.filter((id) => {
+        const a = this.accidentById().get(id);
+        return !!a && this.matches(a);
+      }).length];
+    }));
+  });
+  // Value drawn on the map and used for ordering; null = the street has no figure in this source.
+  readonly streetValue = computed(() => {
+    const metric = this.streetMetric();
+    const count = this.streetCount();
+    return new Map(this.streets().features.map((f) => [
+      f.properties.id,
+      metric === 'pmud' ? f.properties.pmud_2021 : (count.get(f.properties.id) || null),
+    ]));
+  });
+  readonly rankedStreets = computed(() => {
+    const value = this.streetValue();
+    return this.streets().features
+      .filter((f) => value.get(f.properties.id) != null)
+      .sort((a, b) => value.get(b.properties.id)! - value.get(a.properties.id)! || a.properties.nume.localeCompare(b.properties.nume, 'ro'));
+  });
+  // The fixed "look here first" list from isu/ (independent of the source switch and filters).
+  readonly attentionStreets = computed(() => this.streets().features
+    .filter((f) => f.properties.prioritate !== null)
+    .sort((a, b) => a.properties.prioritate! - b.properties.prioritate!));
+  // A street's detail lists both event sources, each labelled; only the participant filter applies.
+  readonly streetEvents = computed(() => {
+    const street = this.selectedStreet();
+    if (!street) return [];
+    const byId = this.accidentById();
+    const p = this.participant();
+    return [...street.properties.isu_event_ids, ...street.properties.presa_event_ids]
+      .map((id) => byId.get(id))
+      .filter((a): a is Accident => !!a && (p === null || a.participanti.includes(p)))
+      .sort((a, b) => (b.data_eveniment ?? b.publicat_la ?? '').localeCompare(a.data_eveniment ?? a.publicat_la ?? ''));
+  });
 
   // The backend rank is frozen across display filters and route changes.
   readonly ranked = computed(() => [...this.hotspots()].sort((a, b) =>
@@ -43,8 +90,11 @@ export class DataStore {
   ));
   readonly rankOf = computed(() => new Map(this.ranked().map((h, i) => [h.id, h.rank ?? i + 1])));
   readonly participants = computed(() => [...new Set(this.accidents().flatMap((a) => a.participanti))].sort());
+  // Source switch: every collected event carries sursa_tip (isu or presa); one without it is never filtered out.
+  // "pmud" has no events, so none show.
   private readonly matches = (a: Accident) => {
     const p = this.participant();
+    if (a.sursa_tip && a.sursa_tip !== this.streetMetric()) return false;
     return p === null || a.participanti.includes(p);
   };
   readonly visibleHotspots = computed(() =>
@@ -53,13 +103,8 @@ export class DataStore {
       return !!a && this.matches(a);
     })),
   );
-  readonly unrankedLocations = computed(() => this.locations().filter((row) => row.score === null));
-  readonly visibleUnrankedLocations = computed(() => this.unrankedLocations().filter((row) => row.event_ids.some((id) => {
-    const event = this.accidentById().get(id);
-    return !!event && this.matches(event);
-  })));
   readonly selected = computed(() => this.hotspots().find((h) => h.id === this.selectedId()) ?? null);
-  readonly isSynthetic = computed(() => this.isHttp ? this.session.dataMode() === 'synthetic' : this.manifest()?.data_mode === 'synthetic');
+  readonly isSynthetic = computed(() => this.manifest()?.data_mode === 'synthetic');
   readonly accidentById = computed(() => new Map(this.accidents().map((a) => [a.event_id, a])));
   readonly measureById = computed(() => new Map(this.measures().map((m) => [m.id, m])));
   readonly crossingById = computed(() => new Map(this.crossings().map((c) => [c.id, c])));
@@ -68,9 +113,14 @@ export class DataStore {
   );
 
   constructor() {
-    effect(() => {
-      this.session.dataMode();
-      untracked(() => this.load());
+    this.poll();
+    // One timer: it asks often while the first collection runs, rarely once data is shown.
+    setInterval(() => {
+      const wait = this.state() === 'ready' ? POLL_READY_MS : POLL_WAITING_MS;
+      if (!document.hidden && Date.now() - this.lastPoll >= wait) this.poll();
+    }, POLL_WAITING_MS);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && Date.now() - this.lastPoll >= POLL_WAITING_MS) this.poll();
     });
     this.api.cameras().subscribe({
       next: (c) => this.cameras.set(c),
@@ -78,80 +128,54 @@ export class DataStore {
     });
   }
 
-  private clearPublication(): void {
-    this.manifest.set(null);
-    this.publication.set(null);
-    this.locations.set([]);
-    this.accidents.set([]);
-    this.hotspots.set([]);
-    this.crossings.set([]);
-    this.crossingPoints.set(new Map());
-    this.measures.set([]);
-    this.participant.set(null);
-    this.selectedId.set(null);
-    this.lastAdded.set(null);
-  }
-
-  setDataMode(mode: DataMode): void {
-    if (mode === this.session.dataMode()) return;
-    ++this.requestVersion;
-    this.clearPublication();
-    this.error.set(null);
-    this.state.set('loading');
-    this.session.setDataMode(mode);
-  }
-
-  // load() reads latest, unless the URL explicitly pins a historical version.
-  // refresh() also clears that explicit pin.
-  refresh(): void {
-    this.session.clearSnapshotPin();
-    this.load();
-  }
-
-  load(): void {
-    const version = ++this.requestVersion;
-    const mode = this.session.dataMode();
-    this.clearPublication();
-    this.session.snapshotId.set(null);
-    this.error.set(null);
-    this.state.set('loading');
-    this.api.loadDataset().subscribe({
-      next: (data) => {
-        if (version !== this.requestVersion || mode !== this.session.dataMode()) return;
-        this.manifest.set(data.manifest);
-        this.publication.set(data.publication);
-        this.locations.set(data.publication?.locations ?? []);
-        if (data.publication) this.session.snapshotId.set(data.publication.snapshot_id);
-        this.accidents.set(data.accidents);
-        this.hotspots.set(data.hotspots);
-        this.crossings.set(data.crossings.features.map((feature) => feature.properties));
-        this.crossingPoints.set(new Map(data.crossings.features.map((feature) => [feature.properties.id, feature.geometry.coordinates])));
-        this.measures.set(data.measures);
-        this.state.set('ready');
+  // Reads the cheap status; downloads the dataset only when the server has built a newer one.
+  poll(): void {
+    this.lastPoll = Date.now();
+    this.api.status().subscribe({
+      next: (status) => {
+        this.status.set(status);
+        this.error.set(null);
+        if (status.construit_la && status.construit_la !== this.builtAt()) this.fetchDataset();
+        else if (!status.construit_la) this.state.set('waiting');
       },
-      error: (error: { status?: number; error?: { detail?: { code?: string; message?: string } }; message?: string }) => {
-        if (version !== this.requestVersion || mode !== this.session.dataMode()) return;
-        const detail = error.error?.detail;
-        if (this.isHttp && error.status === 404 && detail?.code === 'publication_not_found') {
-          this.state.set('empty');
-          return;
-        }
-        this.error.set(detail?.message ?? error.message ?? 'Serviciul nu a răspuns.');
-        this.state.set('error');
+      error: (error: HttpErrorResponse) => this.fail(error),
+    });
+  }
+
+  private fetchDataset(): void {
+    if (this.fetching) return;
+    this.fetching = true;
+    this.api.dataset().subscribe({
+      next: (data) => {
+        this.fetching = false;
+        this.apply(data);
+      },
+      error: (error: HttpErrorResponse) => {
+        this.fetching = false;
+        if (error.status === 503 && error.error?.detail?.code === 'dataset_not_ready') this.state.set('waiting');
+        else this.fail(error);
       },
     });
+  }
+
+  // Filters and selections survive a refresh; a selection that no longer exists simply shows nothing.
+  private apply(data: LiveDataset): void {
+    this.builtAt.set(data.built_at);
+    this.manifest.set(data.manifest);
+    this.accidents.set(data.accidents);
+    this.hotspots.set(data.hotspots);
+    this.crossings.set(data.crossings.features.map((feature) => feature.properties));
+    this.measures.set(data.measures);
+    this.streets.set(data.streets);
+    this.state.set('ready');
+  }
+
+  private fail(error: HttpErrorResponse): void {
+    this.error.set(error.status === 0 ? 'Serverul nu răspunde.' : `Serverul a răspuns cu eroarea ${error.status}.`);
+    if (this.state() !== 'ready') this.state.set('error');
   }
 
   select(id: string | null): void {
     this.selectedId.set(id);
-  }
-
-  // Static prototype only: approval never changes an immutable published snapshot.
-  upsertAccident(event: Accident): void {
-    if (this.isHttp) return;
-    this.accidents.update((list) => {
-      const index = list.findIndex((a) => a.event_id === event.event_id);
-      return index === -1 ? [...list, event] : list.map((a, i) => i === index ? { ...a, ...event } : a);
-    });
   }
 }

@@ -1,0 +1,1402 @@
+<!doctype html><html lang="ro"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dosar CNSC 451/2025: URBAN SCOPE SRL | Achizia</title><meta name="description" content="Dosar CNSC 451/2025. URBAN SCOPE SRL în contradictoriu cu SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI). Respinge pe fond. Decizia 877 din 02.04.2025. Documente originale și istoric"
+><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://achizia.ro/dosare-cnsc/2025/451"><meta property="og:title" content="Dosar CNSC 451/2025: URBAN SCOPE SRL">
+<meta property="og:description" content="Dosar CNSC 451/2025. URBAN SCOPE SRL în contradictoriu cu SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI). Respinge pe fond. Decizia 877 din 02.04.2025. Documente originale și istoric">
+<meta property="og:url" content="https://achizia.ro/dosare-cnsc/2025/451"><meta property="og:type" content="website">
+<link rel="stylesheet" href="/biblioteca-assets/library.css?v=20261002-research">
+<script src="/biblioteca-assets/library.js?v=20261002-research" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Bibliotecă", "item": "https://achizia.ro/biblioteca"}, {"@type": "ListItem", "position": 2, "name": "Dosare CNSC", "item": "https://achizia.ro/dosare-cnsc"}, {"@type": "ListItem", "position": 3, "name": "451/2025", "item": "https://achizia.ro/dosare-cnsc/2025/451"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://achizia.ro/#organization", "name": "Achizia", "url": "https://achizia.ro"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://achizia.ro/#website", "name": "Achizia", "url": "https://achizia.ro", "inLanguage": "ro"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Dosar CNSC 451/2025: URBAN SCOPE SRL", "url": "https://achizia.ro/dosare-cnsc/2025/451", "inLanguage": "ro", "description": "Dosar CNSC 451/2025. URBAN SCOPE SRL în contradictoriu cu SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI). Respinge pe fond. Decizia 877 din 02.04.2025. Documente originale și istoric", "isPartOf": {"@id": "https://achizia.ro/#website"}, "identifier": "Dosar CNSC 451/2025", "genre": "Dosar CNSC"}</script></head><body>
+<a class="skip" href="#continut">Sari la conținut</a><header class="top"><div class="brand"><a class="" href="/">Achizia</a><span>Bibliotecă</span></div>
+<button class="menu-toggle" type="button" hidden aria-controls="public-navigation" aria-expanded="false" aria-label="Deschide meniul">Meniu</button><nav id="public-navigation" aria-label="Navigare principală"><a class="" href="/biblioteca">Bibliotecă</a><a class="active" href="/dosare-cnsc">Dosare</a><a class="" href="/decizii">Decizii</a><a class="" href="/incheieri">Încheieri</a><a class="" href="/buletin-cnsc">Buletin oficial</a><a class="" href="/cauta">Caută inteligent</a><a class="mobile-app-link" href="/app">Instrumentele Achizia</a></nav><a class="button small" href="/app">Instrumentele Achizia</a></header>
+<div class="utility"><nav aria-label="Fir de navigare"><a class="" href="/biblioteca">Bibliotecă</a> <span aria-hidden="true">/</span> <a class="" href="/dosare-cnsc">Dosare CNSC</a> <span aria-hidden="true">/</span> <a class="" href="/dosare-cnsc/2025/451">451/2025</a></nav>
+<details class="appearance"><summary>Aspect</summary><div class="preferences"><label>Temă <select data-theme-control aria-label="Temă"><option value="system">Sistem</option><option value="light">Luminoasă</option><option value="dark">Întunecată</option></select></label>
+<label>Accent <select data-accent-control aria-label="Culoare accent"><option value="emerald">Verde</option><option value="blue">Albastru</option><option value="violet">Violet</option></select></label></div></details></div>
+<main id="continut" tabindex="-1"><div class="heading"><p class="eyebrow">Dosar public</p><h1>Dosar CNSC 451/2025</h1><p class="lede"></p></div><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2025/451">Dosar 451/2025</a></h2><span class="badge">Dosar finalizat</span></div>
+<div class="record-meta"><span>Complet C5</span><span>Prima înregistrare: 2025-02-13</span><span>Decizie fond: 877 · 02.04.2025</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div>
+<p class="outcome">Respinge pe fond</p></article><div class="metrics"><div class="metric"><strong>19</strong><span>Evenimente</span></div><div class="metric"><strong>1</strong><span>Decizii</span></div><div class="metric"><strong>0</strong><span>Încheieri</span></div><div class="metric"><strong>2025</strong><span>An dosar</span></div></div><nav class="toc" aria-label="Secțiuni dosar"><a class="" href="#documente">Documente</a><a class="" href="#istoric">Istoric</a><a class="" href="#conexe">Dosare conexe</a></nav><section class="section"><h2>Pe scurt</h2><div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div><p>Status: Dosar finalizat. Complet: C5.</p><p>Soluție consemnată: Respinge pe fond.</p><p>Decizia de fond menționată în registru: 877, data 02.04.2025.</p><p>Istoricul cuprinde 19 evenimente, între 2025-02-13 și 2025-05-20. Sunt asociate 1 decizii și 0 încheieri.</p><p class="hint">Rezumat al câmpurilor din registru. Ultima observare: 2026-10-01T20:37:29.393Z.</p></section><div class="citation-tools"><p>Dosar CNSC 451/2025</p><button type="button" data-copy-text="Dosar CNSC 451/2025. https://achizia.ro/dosare-cnsc/2025/451" hidden>Copiază citarea</button><a class="" href="/dosare-cnsc/2025/451">Link permanent</a><button type="button" data-print hidden>Tipărește</button><span role="status" data-copy-status></span></div><section class="source-brief" id="act-3561-pe-scurt"><p class="eyebrow">Identificare și pasaje din sursă</p><h2>Decizia CNSC nr. 877/C5/451 din 02.04.2025</h2><dl class="facts"><dt>Data din document</dt><dd>2025-04-02</dd><dt>Complet</dt><dd>C5</dd></dl><div class="brief-passage"><h3>Obiectul procedurii</h3><blockquote>având ca obiect „Servicii de elaborare
+studiu de trafic și sistematizare rutieră la nivelul Sectorului 5 al
+Municipiului București”, s-au solicitat Consiliului următoarele: 
+- anularea raportului procedurii nr. 127199/04.02.2025 și a
+comunicării rezultatului procedurii din adresa nr. 128224/06.02.2025;
+- anularea tuturor actelor care au stat la baza emiterii actelor
+menționate anterior, precum și a tuturor actelor subsecvente acestora;
+- obligarea autorității contractante la reluarea procedurii de
+atribuire cu luarea în considerare a considerentelor hotărârii ce urmează
+să se pronunțe.
+Prin adresa înregistrată la CNSC cu nr. 9869/17.02.2025, FIP
+CONSULTING SRL, cu sediul social în București, strada Cluceru Udricani
+nr. 20, lot. 10, et. 3, sectorul 3, înregistrată la Registrul Comerțului sub
+nr. J40/9989/2020, având CUI RO18423208, reprezentată legal prin
+administrator Andronic Radu-Victor, formulează cerere de intervenție
+voluntară în contestația promovată de URBAN SCOPE SRL și solicit…</blockquote><a class="" href="#document-31989-p1">Verifică pasajul în context →</a></div><div class="brief-passage"><h3>Soluția, din document</h3><blockquote>
+CONSILIUL DECIDE:
+Respinge excepția lipsei de interes în formularea contestaţiei,
+invocată de intervenienta FIP CONSULTING SRL.
+Respinge ca nefondată contestația depusă de URBAN SCOPE SRL în
+contradictoriu cu SECTOR 5 (PRIMARIA SECTORULUI 5).
+Încuviințează în principiu și admite cererea de intervenție depusă de
+FIP CONSULTING SRL.
+Prezenta decizie este obligatorie pentru părți, în conformitate cu
+dispozițiile art. 28 alin. (1) din Legea nr. 101/2016. 
+Împotriva ei se poate formula plângere, în termen de 10 zile de la
+comunicare pentru părțile cauzei, respectiv de la data luării la cunoștință
+de către alte persoane vătămate, în temeiul art. 29 din Legea nr.
+101/2016.
+2</blockquote><a class="" href="#document-31989-p2">Verifică pasajul în context →</a></div><div class="brief-passage"><h3>Considerente, din document</h3><blockquote>rezultat al procedurii care îi era defavorabil, nu își poate îmbunătăți
+situația profitând de calea de atac exercitată de alt operator economic.
+În consecință, solicitam respingerea contestației pe cale de
+excepție, că fiind inadmisibilă, fiind formulată de o persoană lipsită de
+interes.
+(îi) Pe fondul cauzei arată faptul că, atâta vreme cât contestatoarea
+nu își susține în concret criticile aduse ofertei sale și nu le dovedește,
+arată că nu poate formula apărări doar în baza unor speculații
+nefundamentate.
+Contestatoarea chiar recunoaște că nu cunoaște oferta
+intervenientei, însă alege să învestească CNSC cu o reevaluare a
+acesteia. Or rolul CNSC nu este acela de a evalua ofertele, ci de a judeca
+cererile întemeiate cu care a fost învestit. Atâta vreme cât
+contestația ......... SRL este una recunoscut nedovedita, justificându-se
+că nu a avut acces la oferta câștigătoare, în mod evident singura soluție
+care se poate emite este aceea de respingere a contestației că
+neîntemeiată.
+Sublini…</blockquote><a class="" href="#document-75785-p13">Verifică pasajul în context →</a></div><p class="hint">Extrase din documentele asociate, fără completări sau interpretare juridică. Anonimizarea sursei este păstrată.</p></section><section id="documente"><h2>Documentele dosarului</h2><article class="record"><div class="record-top"><h2><a class="" href="/acte-cnsc/3561">Decizie 877/2025</a></h2><span class="badge">Decizie CNSC</span></div>
+<div class="record-meta"><span>An dosar: 2025</span><span>Înregistrare: 9146</span><span>Data înregistrării: 2025-02-13</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party">URBAN SCOPE SRL<span class="hint">CUI 35752863</span></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div>
+<div class="actions"><a class="doc-link" href="/documente-cnsc/31989.pdf">PDF CNSC</a> <a class="doc-link" href="/documente-cnsc/75785.pdf">PDF CNSC</a> <a class="" href="/decizii/BO2025_877">BO2025_877</a> <a class="" href="/dosare-cnsc/2025/451">Dosar 451/2025</a> <a class="" href="/incheieri?q=9146">Încheieri asociate</a></div><p class="hint filename">2025_877_2025_Decizie_877.pdf, BO2025_877_2025_BO2025_877.pdf</p></article><section class="document" id="document-31989"><div class="section-top"><h2>Document publicat în registru</h2><a class="doc-link" href="/documente-cnsc/31989.pdf">PDF CNSC</a></div><p class="hint">Text extras automat; verificați forma originală în PDF.</p><div class="reader-tools" hidden><label>Caută în document<input type="search" data-document-find placeholder="Cuvânt sau expresie"></label><button type="button" data-document-search>Găsește</button><span role="status" data-document-status></span></div><p class="hint">Numerotarea pasajelor aparține Achizia. Pentru citarea oficială, verificați pagina din PDF.</p><details open><summary>Citește textul integral · 3.555 caractere</summary><div class="source-text"><div class="source-paragraph" id="document-31989-p1"><a class="paragraph-link" href="#document-31989-p1">§ 1</a><p data-source-text>În conformitate cu prevederile art. 14 alin. (2) și ale art. 27
+alin. (1) din Legea nr. 101/2016 privind remediile și căile de atac
+în materie de atribuire a contractelor de achiziție publică, a
+contractelor sectoriale și a contractelor de concesiune de lucrări
+și concesiune de servicii, precum și pentru organizarea și
+funcționarea Consiliului Național de Soluționare a Contestațiilor,
+cu modificările și completările ulterioare, Consiliul adoptă
+următoarea
+DECIZIE
+Nr. 877/C5/451
+Data: 02.04.2025
+Prin contestația înregistrată la Consiliul Național de Soluționare a
+Contestațiilor cu nr. 9146/13.02.2025, formulată de URBAN SCOPE SRL,
+cu sediul social în București, str. Calea Floreasca, nr. 169X, Floreasca
+Cube, et. 4, sectorul 1, înregistrată la Registrul Comerțului sub nr.
+J40/3273/2016, având CUI RO 35752863, reprezentată legal prin
+administrator Dragomir Radu-Marian, împotriva rezultatului procedurii de
+atribuire, comunicat prin adresa nr. 128224/06.02.2025, respectiv
+împotriva raportului procedurii nr. 127199/04.02.2025, emise de SECTOR
+5 (PRIMARIA SECTORULUI 5), cu sediul în București, str. Fabrica de
+Chibrituri, nr. 9-11, sectorul 5, în calitate de autoritate contractantă, în
+cadrul procedurii simplificate, organizată în vederea atribuirii contractului
+de achiziție publică de servicii având ca obiect „Servicii de elaborare
+studiu de trafic și sistematizare rutieră la nivelul Sectorului 5 al
+Municipiului București”, s-au solicitat Consiliului următoarele: 
+- anularea raportului procedurii nr. 127199/04.02.2025 și a
+comunicării rezultatului procedurii din adresa nr. 128224/06.02.2025;
+- anularea tuturor actelor care au stat la baza emiterii actelor
+menționate anterior, precum și a tuturor actelor subsecvente acestora;
+- obligarea autorității contractante la reluarea procedurii de
+atribuire cu luarea în considerare a considerentelor hotărârii ce urmează
+să se pronunțe.
+Prin adresa înregistrată la CNSC cu nr. 9869/17.02.2025, FIP
+CONSULTING SRL, cu sediul social în București, strada Cluceru Udricani
+nr. 20, lot. 10, et. 3, sectorul 3, înregistrată la Registrul Comerțului sub
+nr. J40/9989/2020, având CUI RO18423208, reprezentată legal prin
+administrator Andronic Radu-Victor, formulează cerere de intervenție
+voluntară în contestația promovată de URBAN SCOPE SRL și solicită:
+Pagina 1 din 2</p><button type="button" data-copy-link="document-31989-p1" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-31989-p2"><a class="paragraph-link" href="#document-31989-p2">§ 2</a><p data-source-text>- pe cale de excepție, respingerea contestației ca inadmisibilă ca
+urmare a admiterii excepției lipsei de interes a contestatoarei;
+- pe fondul cauzei, respingerea contestației ca neîntemeiată și
+menținerea rezultatului procedurii prin care oferta intervenientei a fost
+desemnată ca fiind câștigătoare.
+Contestația și cererea de intervenție vor fi soluționate împreună,
+având în vedere dispozițiile art. 67 alin. (1) și art. 123 alin. (1) din Codul
+de procedură civilă. 
+Pentru aceste motive,
+în baza legii și a mijloacelor de probă aflate la dosar,
+CONSILIUL DECIDE:
+Respinge excepția lipsei de interes în formularea contestaţiei,
+invocată de intervenienta FIP CONSULTING SRL.
+Respinge ca nefondată contestația depusă de URBAN SCOPE SRL în
+contradictoriu cu SECTOR 5 (PRIMARIA SECTORULUI 5).
+Încuviințează în principiu și admite cererea de intervenție depusă de
+FIP CONSULTING SRL.
+Prezenta decizie este obligatorie pentru părți, în conformitate cu
+dispozițiile art. 28 alin. (1) din Legea nr. 101/2016. 
+Împotriva ei se poate formula plângere, în termen de 10 zile de la
+comunicare pentru părțile cauzei, respectiv de la data luării la cunoștință
+de către alte persoane vătămate, în temeiul art. 29 din Legea nr.
+101/2016.
+2</p><button type="button" data-copy-link="document-31989-p2" class="copy-passage" hidden>Copiază linkul</button></div></div></details></section><section class="document" id="document-75785"><div class="section-top"><h2>Motivare publicată în buletin</h2><a class="doc-link" href="/documente-cnsc/75785.pdf">PDF CNSC</a></div><p class="hint">Text extras automat; verificați forma originală în PDF.</p><div class="reader-tools" hidden><label>Caută în document<input type="search" data-document-find placeholder="Cuvânt sau expresie"></label><button type="button" data-document-search>Găsește</button><span role="status" data-document-status></span></div><p class="hint">Numerotarea pasajelor aparține Achizia. Pentru citarea oficială, verificați pagina din PDF.</p><details open><summary>Citește textul integral · 80.214 caractere</summary><div class="source-text"><div class="source-paragraph" id="document-75785-p1"><a class="paragraph-link" href="#document-75785-p1">§ 1</a><p data-source-text>În conformitate cu prevederile art. 14 alin. (2) și ale art. 27
+alin. (1) din Legea nr. 101/2016 privind remediile și căile de atac
+în materie de atribuire a contractelor de achiziție publică, a
+contractelor sectoriale și a contractelor de concesiune de lucrări
+și concesiune de servicii, precum și pentru organizarea și
+funcționarea Consiliului Național de Soluționare a Contestațiilor,
+cu modificările și completările ulterioare, Consiliul adoptă
+următoarea
+DECIZIE
+Nr. 877/C5/451
+Data: 02.04.2025
+Prin contestația înregistrată la Consiliul Național de Soluționare a
+Contestațiilor cu nr. 9146/13.02.2025, formulată de ......... SRL, cu
+sediul social în ........., str. Calea .., sectorul ., înregistrată la Registrul
+Comerțului sub nr. ........., având CUI RO ........., reprezentată legal prin
+administrator ., împotriva rezultatului procedurii de atribuire, comunicat
+prin adresa nr. 128224/06.02.2025, respectiv împotriva raportului
+procedurii nr. 127199/04.02.2025, emise de ......... (PRIMARIA
+SECTORULUI .), cu sediul în ........., str. ........., sectorul ., în calitate de
+autoritate contractantă, în cadrul procedurii simplificate, organizată în
+vederea atribuirii contractului de achiziție publică de servicii având ca
+obiect „Servicii de elaborare studiu de trafic și sistematizare rutieră la
+nivelul Sectorului 5 al Municipiului .........”, s-au solicitat Consiliului
+următoarele: 
+- anularea raportului procedurii nr. 127199/04.02.2025 și a
+comunicării rezultatului procedurii din adresa nr. 128224/06.02.2025;
+- anularea tuturor actelor care au stat la baza emiterii actelor
+menționate anterior, precum și a tuturor actelor subsecvente acestora;
+- obligarea autorității contractante la reluarea procedurii de
+atribuire cu luarea în considerare a considerentelor hotărârii ce urmează
+să se pronunțe.
+Prin adresa înregistrată la CNSC cu nr. 9869/17.02.2025, .
+CONS.NG SRL, cu sediul social în ........., strada . nr. 20, .., sectorul 3,
+înregistrată la Registrul Comerțului sub nr. J40/., având CUI
+RO18423208, reprezentată legal prin administrator ., formulează cerere
+de intervenție voluntară în contestația promovată de ......... SRL și
+solicită:
+- pe cale de excepție, respingerea contestației ca inadmisibilă ca
+urmare a admiterii excepției lipsei de interes a contestatoarei;
+Pagina 1 din 29</p><button type="button" data-copy-link="document-75785-p1" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p2"><a class="paragraph-link" href="#document-75785-p2">§ 2</a><p data-source-text>- pe fondul cauzei, respingerea contestației ca neîntemeiată și
+menținerea rezultatului procedurii prin care oferta intervenientei a fost
+desemnată ca fiind câștigătoare.
+Contestația și cererea de intervenție vor fi soluționate împreună,
+având în vedere dispozițiile art. 67 alin. (1) și art. 123 alin. (1) din Codul
+de procedură civilă. 
+CONSILIUL NAȚIONAL DE SOLUȚIONARE A CONTESTAȚIILOR,
+asupra cauzei de față, constată următoarele:
+Consiliul a fost legal sesizat și este competent, potrivit dispozițiilor
+art. 12 alin. (1) din Legea nr. 101/2016, să soluționeze contestația
+înregistrată la Consiliu cu nr. 9146/13.02.2025, prin care ......... SRL
+solicită cele menționate în partea introductivă a deciziei.
+Menționează că deși a solicitat studierea dosarului achiziției publice,
+autoritatea contractantă a înțeles să îi pună la dispoziție trunchiat acest
+dosar, susținând că celelalte documente beneficiază de caracter
+confidențial. Critică faptul că o atare situație, o pune într-o reală
+imposibilitate de a efectua o analiză completă a neconformităților
+identificate, încălcând practic dreptul de la apărare.
+Având în vedere neconformitățile identificate față de propunerea
+tehnică a ofertantului câștigător, cât și prețul aparent neobișnuit de
+scăzut rezultat din propunerea financiară a acestuia, înțelege să
+formuleze prezenta contestație, având în vedere următoarele critici.
+1. Referitor la propunerea tehnică a ofertantului câștigător susține
+că:
+Ofertantul câștigător nu a prezentat documente doveditoare
+concludente în sprijinul celor declarate în DUAE cu privire la experiența
+similară, respectiv nu a prezentat documente din care să rezulte fără
+echivoc valoarea concretă a serviciilor prestate în cadrul contractelor
+indicate, astfel încât să facă dovada experienței similare astfel după cum
+aceasta este impusă prin cerință prevăzută în art. III.1.3.a) din fișa de
+date. 
+Conform art. III.1.3.a): Experiența similară: Operatorii economici
+vor face dovada că au prestat servicii similare cu obiectul prezentului
+contract în ultimii 3 ani raportat la data de depunere, la nivelul unui sau
+mai multe contracte, cu o valoare egală cu valoarea prezentei proceduri .
+Toată valoarea experienței similare a contractelor trebuie să fie formată
+din servicii de elaborare studiu de trafic și sistematizare.
+Astfel, se solicită dovada deținerii experienței similare în valoare
+egală cu valoarea prezentei proceduri, respectiv 980.000 lei. Serviciile a
+căror valoare urma să fie însumată erau exclusiv servicii de elaborare
+studiu de trafic și sistematizare. 
+2</p><button type="button" data-copy-link="document-75785-p2" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p3"><a class="paragraph-link" href="#document-75785-p3">§ 3</a><p data-source-text>Urmare a studierii dosarului achiziție, în data de 11.02.2025, deși
+nu i-au fost puse la dispoziție toate documentele specificându-se că
+acestea beneficiază de caracter confidențial, a identificat contractele
+depuse în dovedirea experienței similare de către ofertantul câștigător,
+astfel:
+- Contractul de servicii nr. 89492/27.07.2022, beneficiar Municipiul
+Iași, având ca obiect studiu de circulație pentru actualizarea Planului
+Urbanistic General al Municipiului Iași și detalierea acestuia prin Planuri
+Urbanistice Zonale, declarând o valoare a experienței similare de 350.000
+lei fără TVA;
+- Contractul de servicii nr. 110157/03.03.2023, beneficiar Municipiul
+Oradea, având ca obiect actualizarea studiului de oportunitate,
+actualizarea studiului de trafic și realizarea unui studiu de trafic, cu o
+valoare totală de 80.000 lei fără TVA și o valoare a experienței similare
+de 70.000 lei fără TVA;
+- Contractul de servicii nr. 17287/30.05.2023, beneficiar Municipiul
+Dej, având ca obiect servicii de elaborare, realizarea politicii de
+reglementare a parcărilor publice și studiul de trafic pentru alte proiecte,
+cu o valoare totală de 110.000 lei și o valoare a experienței similare de
+70.000 lei fără TVA;
+- Contractul de servicii nr. 4358/17.05.2023, beneficiar oraș
+Beclean, având că obiect studiu de trafic și studiu de oportunitate, cu o
+valoare totală de 150.000 lei fără TVA și o valoare a experienței similare
+de 50.000 lei fără TVA;
+- Contractul de servicii nr. 34590/18.10.2022, beneficiar
+Târgoviște, având ca obiect susținerea intermodalității și transportului
+alternativ în  Târgoviște, cu o valoare a experienței similare de 60.000 lei
+fără TVA;
+- Contractul de servicii nr. 4743/07.03.2023, beneficiar Ploiești,
+având ca obiect prioritizare și trafic controlat în zona centrală, inclusiv
+amenajare piste pentru biciclete pe traseele prioritare din planul de
+mobilitate, puncte bike-sharing, amenajare zone verzi, zone de odihnă,
+zone spectacole, iluminat, WI-FI, inclusiv dotări și echipamente, cu o
+valoare totală de 1.480.500 lei fără TVA și o valoare a experienței
+similare de 60.000 lei fără TVA;
+- Contractul de servicii nr. 12/28.01.2021, beneficiar municipiului
+Sibiu, având ca obiect servicii de consultanță pentru actualizarea planului
+de mobilitate al municipiului Sibiu, având o valoare totală de 320.000 lei
+fără TVA și o valoare a experienței similare de 170.000 lei fără TVA;
+- Contractul de servicii nr. 31/06.05.2021, beneficiar asociația de
+Dezvoltare Intercomunitară „Zona Metropolitană Craiova&quot;, având ca
+obiect servicii de consultanță pentru actualizarea Planului de Mobilitate
+Urbană durabilă al zonei metropolitane Craiova, cu o valoare totală de
+250.000 lei fără TVA și o valoare a experienței similare de 180.000 lei
+fără TVA;
+Astfel se observă că obiectul contractelor enumerate mai sus a fost
+multiplu, respectiv nu a constat exclusiv în elaborarea unui studiu de
+Pagina 3 din 29</p><button type="button" data-copy-link="document-75785-p3" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p4"><a class="paragraph-link" href="#document-75785-p4">§ 4</a><p data-source-text>trafic și sistematizare. Ofertantul câștigător nu a depus un document
+justificativ din care să rezulte în concret care este valoarea exactă a
+serviciilor ce pot constitui experiența similară.
+Autoritatea contractantă la rândul ei nu a solicitat, din ceea ce
+cunoaște, depunerea unor înscrisuri doveditoare din care să rezulte cu
+exactitatea valoarea experienței similare, respectiv valoarea elaborării
+studiilor de trafic și sistematizare.
+Astfel, valoarea experienței similare a rămas la nivelul declarației
+unilaterale a ofertantului câștigător, neexistând un document din care să
+rezulte defalcarea activităților prestate și implicit a valorii acestora.
+În atare condiții, apreciază că s-a realizat o analiză superficială a
+documentelor depuse, toate contractele menționate mai sus, au fost în
+mod greșit valorificate de autoritatea contractantă ca experiență similară,
+când de fapt acestea trebuiau eliminate. Odată eliminate, valoarea
+experienței similare a ofertantului câștigător nu îndeplinește cerința
+valorii experienței similare fiind sub pragul valorii estimate a prezentei
+proceduri.
+2. Referitor la propunerea financiară a ofertantului câștigător arată
+că:
+Prețul ofertat de ofertantul câștigător este de 784.500 lei fără TVA,
+iar valoarea estimată a procedurii este de 980.000 lei fără TVA. Apreciază
+că prețul ofertat este neobișnuit de scăzut, în contextul în care deține o
+pondere la limita dispozițiilor art. 136 din HG nr. 395/2016, respectiv
+80,05%.
+Potrivit dispozițiilor art. 136 din HG nr. 395/2016: (4) În sensul
+prevederilor art. 210 alin. (1) din Lege, o ofertă prezintă un preț aparent
+neobișnuit de scăzut în raport cu ceea ce urmează a fi furnizat, executat
+sau prestat atunci când prețul ofertat, fără TVA, reprezintă mai puțin de
+80% din valoarea estimată a contractului respectiv.
+Este adevărat că prețul ofertat nu reprezintă mai puțin de 80% din
+valoarea estimată a prezentei proceduri, însă cu toate acestea prețul
+ofertei câștigătoare este la limita dispozițiilor alineatului 4.
+Din informațiile rezultate urmare a studierii documentelor puse la
+dispoziție de autoritatea contractanta, nu rezulta că aceasta din urma ar
+fi solicitat clarificări, respectiv justificări de fundamentare a prețului,
+ofertantului câștigător. Cu toate acestea, apreciază că raportat la
+estimarea făcută privind valoarea procedurii, autoritatea trebuia să
+solicite ofertantului câștigător să-și justifice prețul ofertat prin raportare
+la dispozițiile legale în materie.
+Tot potrivit art. 136 din HG nr. 395/2016, comisia de evaluare avea
+obligația de a solicita clarificări inclusiv atunci când constată că „elemente
+de preț ale unei oferte sunt aparent neobișnuit de scăzute&quot;, respectiv sub
+80%, chiar dacă prețul ofertei este de peste 80%.
+4</p><button type="button" data-copy-link="document-75785-p4" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p5"><a class="paragraph-link" href="#document-75785-p5">§ 5</a><p data-source-text>Se poate observa cu ușurință că societatea sa a ofertat un preț mai
+mare, chiar apropiat de valoarea estimată a procedurii și inclusiv din
+acest considerent, era absolut necesară justificarea prețului ofertat.
+Aceasta justificare trebuie să fie aptă să facă dovada concludentă privind
+elementele prevăzute la art. 210 alin. (2) din Legea nr. 98/2016, precum
+și, după caz, documente privind prețurile ce pot fi obținute de la furnizori,
+situația stocurilor de materii prime și materiale, modul de organizare și
+metodele utilizate în cadrul procesului de lucru, nivelul de salarizare al
+personalului ofertantului, performanțele și costurile implicate de anumite
+utilaje sau echipamente de lucru, inclusiv acoperirea cheltuielilor
+efectuate de ofertant.
+Subliniază că în același sens este și jurisprudența CJUE (C-599/10)
+se reține că autoritatea are obligația de a solicita clarificări cu privire la
+elementele de preț care prezintă un caracter neobișnuit de scăzut tuturor
+ofertanților aflați în această situație.
+În probațiune, au fost depuse înscrisuri. 
+Prin adresa înregistrată la CNSC cu nr. 9869/17.02.2025, ...
+CONSULTING SRL a formulat cerere de intervenție voluntară și a solicitat
+cele indicate în partea introductivă.
+Arată că, la data de 03.06.2024, autoritatea contractantă a publicat
+în SEAP anunțul de participare nr. SCN1147780 având ca obiect
+atribuirea unui contract de servicii având ca obiect „Servicii de elaborare
+studiu de trafic și sistematizare rutiera la nivelul Sectorului 5 al
+Municipiului .........&quot;.
+Că urmare a publicării Declarației de participare, a luat la cunoștință
+că în procedura au ofertat doi operatori economici, care, potrivit
+raportului procedurii, au fost declarați admisibili atât în faza de evaluare
+a conformității, cât și în faza de evaluare a ofertelor tehnice, ambii
+primind punctaj egal de 60 de puncte.
+Cu toate acestea, la data de 20.09.2024, autoritatea contractantă a
+publicat raportul procedurii, document înregistrat sub numărul 214165,
+prin care a adus la cunoștință tuturor celor interesați că „Comisia de
+evaluare nu a procedat la evaluarea propunerilor financiare, având în
+vedere REFERATUL DE ANULARE a procedurii nr. P632/05.08.2024,
+întocmit în baza motivațiilor exprimate în adresa nr. DI396/02.08.2024,
+întocmită de Direcția Generala de Investiții și Dezvoltare - Serviciul
+Planificare Investiții și Lucrări Edilitare: 
+i. Prin HCL ......... nr. 69/30.05.2024 privind modificarea
+Organigramei, a Statului de funcții și a Regulamentului de Organizare și
+Funcționare ale Administrației Dezvoltare Urbană ......... a fost creat
+Departamentul Smart City, având că principal scop gestionarea
+proiectelor de dezvoltare urbană la nivelul Sectorului ..
+ii. Prin Documentația de atribuire existentă nu se asigură integrarea
+rezultatului studiului de trafic în strategia comună de dezvoltare a
+Sectorului 5 al Municipiului ......... și a Administrației de Dezvoltare
+Urbana .........&quot;.
+Pagina 5 din 29</p><button type="button" data-copy-link="document-75785-p5" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p6"><a class="paragraph-link" href="#document-75785-p6">§ 6</a><p data-source-text>Ca urmare a celor de mai sus, autoritatea contractantă întocmește
+pro causa un referat de anulare justificat de faptul că se evita „situația în
+care prerogativele Direcției Generale de Investiții și Dezvoltare s-ar
+suprapune cu cele ale Administrației Dezvoltare Urbana .........&quot;, și, în
+temeiul prevederilor art. 212 alin. (1) lit. c) din Legea 98/2016 coroborat
+cu alin. (2), anulează procedura de achiziție.
+Întrucât decizia de anulare a procedurii a fost bazată pe o
+circumstanță creată artificial, care nu se încadrează în motivele de
+anulare prevăzute de legiuitor, societatea sa s-a adresat CNSC cu
+solicitarea de anulare a deciziei de anulare a procedurii, cerere ce a făcut
+obiectul Dosarului nr. 3347/2024, soluționat de Completul 11 prin
+admiterea contestației.
+Împotriva Deciziei CNSC nr. 3193/C11/3347 a formulat plângere
+autoritatea contractantă, soluționată de Curtea de Apel ......... în cadrul
+Dosarului nr. 7369/2/2024 prin emiterea Hotărârii nr. 844/2024 de
+respingere a plângerii că nefondată. 
+Face precizarea că decizia de anulare a procedurii nu a fost
+contestată de ......... SRL, iar acest ofertant nu a avut nicio calitate în
+fața instanțelor de judecată.
+Ca urmare a epuizării cailor de atac, Primăria Sectorului 5 a
+procedat la continuarea procedurii, aceasta finalizându-se cu raportul
+procedurii nr. 127199/04.02.2025, prin care, urmare a evaluării
+financiare, societatea sa a fost declarată ca fiind câștigătoare, cu un preț
+mai mic față de celălalt ofertant.
+În urma publicării raportului procedurii, ......... SRL a înaintat
+contestația ce face obiectul prezentului dosar, contestație apreciată ca
+lipsită de interes raportat la istoricul procedurii, dar și neîntemeiată,
+având în vedere următoarele:
+Pe cale de excepție, solicită CNSC să respingă contestația că
+inadmisibilă raportat la prevederile art. 3 alin. (3) din Legea 101/2016,
+întrucât aceasta a fost formulată de o persoană care nu mai are niciun
+interes în legătură cu prezenta procedură de atribuire.
+Excluderea să din procedura de achiziție că urmare a anularii
+acesteia a fost notificată ofertantului ......... SRL încă de la data de
+19.09.2024 iar acest ofertant nu s-a considerat a fi vătămat de decizia
+autorității contractante și, prin urmare, nu a contestat decizia de anulare.
+În consecință, față de acest ofertant, excluderea sa din procedură a
+căpătat caracter definitiv întrucât, raportat la momentul prezentei, nu-și
+mai poate dovedi interesul față de procedură.
+Atâta vreme cât decizia de anulare a procedurii de achiziție nu a
+fost atacată în termen de ofertantul ......... SRL, este tardiv ca la
+momentul prezentei acesta să-și dovedească interesul în legătură cu
+prezenta procedură.
+6</p><button type="button" data-copy-link="document-75785-p6" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p7"><a class="paragraph-link" href="#document-75785-p7">§ 7</a><p data-source-text>În susținerea celor de mai sus, înțelege să facă trimitere la
+prevederile art. 3 alin. (2) din Legea nr. 101/2016, coroborate cu
+prevederile art. 2 alin. (1) lit. c) din Legea nr. 554/2004 a contenciosului
+administrativ, de unde rezultă că actele administrative emise de
+autoritățile contractante sunt acte cu caracter individual.
+Prin urmare, în situația în care un act al autorității contractante este
+de natură a vătăma persoanele participante la procedura de achiziție,
+&quot;orice persoană care se consideră vătămată într-un drept al său ori într-
+un interes legitim printr-un act al unei autorități contractante sau prin
+nesoluționarea în termenul legal a unei cereri poate solicita anularea
+actului&quot;.
+ Or, atâta vreme cât ofertantul ......... SRL nu a contestat decizia de
+anulare a procedurii de achiziție, rezultă că aceasta nu s-a considerat a fi
+vătămată de actul administrativ, și, prin urmare, față de acest ofertant,
+documentul a căpătat caracter definitiv.
+Mai precis, actele administrative emise de autoritățile contractante
+nu au caracter normativ, astfel încât de anularea lor să beneficieze toate
+persoanele cărora li se aplica, chiar daca nu le-au contestat, ci au
+caracter individual, fiind intuitu personae, astfel încât de anularea
+acestora beneficiază doar persoanele care le-au contestat.
+În cadrul unei proceduri, ofertanții trebuie să depună toate
+diligențele pentru a-și conserva calitatea de participant la procedură,
+inclusiv prin contestarea unor acte vătămătoare.
+Lipsa diligenței în contestarea deciziei de anulare a procedurii duce
+la prezumția că aceasta nu producea efecte vătămătoare pentru
+ofertantul ........., motiv pentru care decizia CNSC și a Curții de Apel nu îi
+sunt opozabile.
+Prin urmare, ofertantul ......... SRL nu dovedește la momentul
+prezentei un interes real în prezenta procedură, atâta vreme cât oferta sa
+a fost exclusă definitiv ca urmare a necontestării deciziei de anulare a
+procedurii.
+Potrivit art. 32 din Codul de procedură civilă, orice cerere poate fi
+formulată numai dacă autorul acesteia justifică un interes, iar, potrivit
+art. 33 din Codul de procedură civilă, interesul trebuie să fie legitim, să
+fie născut și actual, să fie personal și direct. Astfel cum s-a arătat în
+literatura de specialitate, interesul trebuie să se reflecte într-un avantaj
+material sau juridic în patrimoniul reclamantului. Or, la momentul
+formulării prezentei contestații, ......... nu dovedește un interes legitim și
+actual, atâta vreme cât acesta a acceptat decizia de anulare a procedurii
+emisă de autoritatea contractantă și nu a depus minime diligențe la acel
+moment pentru a o contesta. Interesul său în prezenta procedură s-a
+stins odată cu împlinirea termenului de contestare.
+Întrucât a dovedit că soarta procedurii nu o interesează,
+necontestând măsura anularii procedurii, contestatoarea dovedindu-se
+interesată abia în momentul în care a primit un rezultat referitor la
+desemnarea drept câștigătoare a unui alt operator economic, se poate
+trage concluzia că aceasta nu are un interes legitim și personal în cauză.
+Pagina 7 din 29</p><button type="button" data-copy-link="document-75785-p7" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p8"><a class="paragraph-link" href="#document-75785-p8">§ 8</a><p data-source-text>Citează prevederile art. 435 alin. (1) din Codul de procedură civilă.
+Apreciază că, din moment ce operatorul economic nu a contestat un
+rezultat al procedurii care îi era defavorabil, nu își poate îmbunătăți
+situația profitând de calea de atac exercitată de alt operator economic.
+Cu atât mai mult cu cât contestatoarea avea cunoștință de existența
+deciziei de anulare a procedurii, fiind mulțumită la acel moment, de altfel
+singurul la care își putea exercita calea de atac, cu soluția autorității
+contractante de anulare a procedurii.
+În plus față de cele de mai sus, prevederile art. 2 alin. (1) din Legea
+101/2016, invocat chiar de contestatoare, arătă că persoanele îndrituite
+la efectuarea demersului de contestare sunt cele care sunt vătămate
+&quot;într-un drept al sau ori într-un interes legitim&quot;, or, dreptul și
+interesul ......... SRL în prezenta procedură au devenit inexistente odată
+cu acceptarea deciziei de anulare a procedurii de către autoritatea
+contractantă și refuzul efectuării diligențelor necesare pentru repunerea
+în drepturi și restabilirea interesului. 
+Pentru aceste motive, consideră că nu sunt îndeplinite condițiile
+cumulative prevăzute la art. 3 alin. (1) lit. f) din Legea nr. 101/2016,
+respectiv contestatoarea nu dovedește la momentul prezentei un interes
+actual, personal și legitim în legătură cu procedura de atribuire.
+Referitor la fondul cauzei, cu privire la singurele aspecte de
+neconformitate invocate de contestatoare, respectiv:
+- lipsa unor documente concludente pentru dovedirea experienței
+similare
+- lipsa justificării prețului neobișnuit de scăzut.
+Solicită CNSC să constate de acestea nu îndeplinesc condițiile
+minime pentru formularea unei contestații, respectiv sunt nedovedite și
+nu sunt întemeiate în drept.
+Mai precis, în ceea ce privește lipsa dovezilor, arată că afirmațiile
+contestatoarei sunt pure speculații fără niciun suport probator, chiar
+contestatoarea recunoscând că nu i-au fost puse la dispoziție
+documentele de achiziție publică.
+Prin urmare, afirmațiile sale sunt pur speculative, făcute doar cu
+rolul de a investi CNSC cu reevaluarea ofertei sale. Or, în fapt, pentru
+regularitatea desfășurării procesului trebuie respectate minime reguli
+procedurale, respectiv principiul potrivit căruia cel care pretinde ceva
+trebuie să facă dovada pretenției sale, adică cel care face o susținere în
+fața instanței trebuie să o dovedească.
+Atâta vreme cât afirmațiile sale nu sunt dovedite, sancțiunea ce
+trebuie aplicată este aceea a respingerii lor că neîntemeiate.
+În fapt, experiența similară dovedită de societatea sa depășește cu
+mult experiență minimă solicitată de autoritatea contractantă pentru
+dovedirea capacității tehnice, aspect care poate fi constat cu ușurință din
+8</p><button type="button" data-copy-link="document-75785-p8" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p9"><a class="paragraph-link" href="#document-75785-p9">§ 9</a><p data-source-text>toate documentele depuse, documente contabile și documente emise de
+terți.
+În ceea ce privește lipsa temeiului de drept în susținerea alegațiilor
+sale, arătă că pentru argumentarea capătului de cerere privind lipsa
+justificării prețului neobișnuit de scăzut contestatoarea face trimitere la
+texte de lege care nu sunt aplicabile în cauză și, deși recunoaște că
+acestea nu sunt aplicabile și nu corespund tezei sale probatoare, înțelege
+să le invoce în continuare, făcând proprii aprecieri asupra modului de
+aplicare a legislației în domeniu. 
+În fapt, prevederile referitoare la obligația solicitării de clarificări
+asupra prețului neobișnuit de scăzut sunt clar definite de legiuitor,
+nelăsând loc interpretărilor, astfel încât orice susținere contrară este
+evident neîntemeiată.
+Prin adresa înregistrată la Consiliu sub nr. 10623/19.02.2025,
+contestatoarea a formulat note scrise față de cererea de intervenție
+formulată de ... CONSULTING SRL, prin care solicită respingerea excepției
+lipsei de interes invocată prin cererea de intervenție și respingerea cererii
+de intervenție.
+Prin cererea de intervenție formulată, intervenienta invocă excepția
+lipsei de interes a formulării contestației, solicitând admiterea acesteia și
+respingerea contestației că inadmisibilă, motivat de faptul că societatea
+sa nu a procedat la formularea unei contestații împotriva primului raport
+al procedurii nr. 214165/20.09.2024, prin care, la acel moment, a fost
+anulată procedura de achiziție.
+Intervenienta face o confuzie între noțiunea admisibilității formulării
+unei contestații și lipsa de interes în promovarea acesteia. Astfel, cele
+doua noțiuni au la baza condiții de exercitare diferite, fiind analizate din
+perspective diferite.
+Prin raportul procedurii nr. 214165/20.09.2024, autoritatea
+contractantă în temeiul prevederilor art. 212 alin. (1) lit. c) din Legea nr.
+98/2016 a dispus anularea procedurii de achiziție. Împotriva acestui act,
+intervenienta a înțeles să formuleze contestație ce a fost soluționată de
+CNSC prin decizia nr. 3193/C11/3347, în sensul admiterii contestației,
+anularii actelor autorității contractante privind dispoziția de anulare a
+procedurii de atribuire, obligarea autorității contractante la continuarea
+procedurii de achiziție publică. În continuare, arată că împotriva deciziei
+CNSC nr. 3193/C11/3347, autoritatea contractantă a înțeles să exercite
+calea de atac a plângerii, fiind înregistrat pe rolul Curții de Apel .........
+dosarul nr. 7369/2/2024. Prin decizia civila nr. 844/2024, instanță de
+judecată a dispus respingerea plângerii, astfel încât decizia CNSC și-a
+consolidat forță obligatorie, rămânând definitivă.
+În atare context, punerea în executare a deciziei CNSC nr.
+3193/C11/3347 reprezintă reluarea procedurii de atribuire din punctul în
+care rămăsese.
+Că efect al admiterii contestației formulate de intervenienta,
+respectiv ca efect al anularii raportului procedurii prim nr.
+Pagina 9 din 29</p><button type="button" data-copy-link="document-75785-p9" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p10"><a class="paragraph-link" href="#document-75785-p10">§ 10</a><p data-source-text>214165/20.09.2024, se consideră că acesta nu a fost niciodată încheiat,
+în conformitate cu disp. art. 1254 Cod Civil.
+Prin urmare, interpretarea intervenientei în sensul că societatea sa
+ar fi exclusă din procedură este eronată, în condițiile în care dispoziția de
+anulare a fost desființată și prin urmare inexistentă. Cazurile de
+excludere din procedura de atribuire sunt limitativ prevăzute de disp. art.
+164, art. 165 și art. 167 din Legea nr. 98.2016, printre acestea
+neregăsindu-se situația invocată de intervenientă.
+În opinia intervenientei, decizia CNSC nr. 3193/C11/3347 este
+opozabilă numai acesteia și autorității contractante, însă o atare
+interpretare este profund eronată în contextul în care aceasta are
+opozabilitate față de toate părțile implicate în procedura de atribuire. Pe
+raționamentul intervenientei dispoziția de anulare produce efecte pentru
+una dintre părți și nu produce efecte față de alte părți, raționament
+profund eronat față de efectele instituției nulității actului juridic. Tot pe
+raționamentul intervenientei, ar fi însemnat că autoritatea contractantă
+să  analizeze oferta depusa de societatea sa, aspect nereal, aspect ce
+rezultă din raportul procedurii contestat.
+Autoritatea contractantă a procedat la punerea în executare
+voluntară a deciziei CNSC nr. 3193/C11/3347 și în consecință a dispus
+continuarea procedurii, aceasta finalizându-se prin emiterea raportului
+procedurii nr. 127199/04.02.2025, act juridic pe care societatea sa a
+înțeles să-l conteste.
+În privință interesului său, acesta este evident, în condițiile în care
+actul juridic atacat, respectiv raportul procedurii nr. 127199/04.02.2025
+este un act opozabil societății sale, un act care analizează oferta sa, un
+act care produce efecte în persoana sa. În atare condiții, este evident
+interesul său, ce se deduce inclusiv din solicitările formulate pe calea
+contestației, existând în mod categoric un folos practic în persoana sa.
+Potrivit art. 2 alin. (1) din Legea nr. 101/2016: „Orice persoană care
+se consideră vătămată într-un drept al său ori într-un interes legitim
+printr-un act al unei autorități contractante sau prin nesoluționarea în
+termenul legal al unei cereri poate solicita anularea actului, obligarea
+autorității contractante la emiterea unui act sau la adoptarea de măsuri
+de remediere, recunoașterea dreptului pretins sau a interesului legitim,
+pe cale administrativ-jurisdicțională sau judiciară, potrivit prevederilor
+prezentei legi&quot;.
+Ținând cont de faptul că societatea sa a fost clasată pe locul 2 prin
+raportul procedurii nr. 127199/04.02.2025, aceasta soluție a creat o
+vătămare în patrimoniul său, interesul în formularea contestației existând
+pe deplin.
+Dispozițiile invocate de intervenientă, respectiv art. 3 alin. (2) din
+Legea nr. 101/2016 conform cărora: În sensul alin. (1) lit. f) pct. (i) se
+consideră că o persoană are sau a avut un interes în legătură cu o
+10</p><button type="button" data-copy-link="document-75785-p10" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p11"><a class="paragraph-link" href="#document-75785-p11">§ 11</a><p data-source-text>procedură de atribuire dacă nu a fost încă exclusă definitiv de la
+respectiva procedură. O excludere este definitivă în cazul în care a fost
+notificată candidatului/ofertantului interesat și fie a fost considerată
+legală de către Consiliu/instanță, fie nu mai poate face obiectul unei căi
+de atac, infirmă teoria intervenientei, stabilind că numai persoanele
+excluse definitiv din cadrul unei proceduri nu au interes în contestarea
+unui act emis de autoritatea contractantă, or astfel după cum a precizat
+cazurile de excludere sunt limitativ prevăzute de lege, acestea
+neregăsindu-se în prezenta cauză.
+Tot aceste dispoziții legale, prevăd că în situația unei excluderi
+definitive, aceasta trebuie notificată persoanei respective, ori o atare
+notificare nu există.
+Prin urmare, apreciază că justifică un interes categoric în
+formularea contestației, aspect față de care solicită respingerea excepției
+lipsei de interes că neîntemeiată.
+În privință solicitării de respingere că inadmisibila a contestației,
+solicită să fie înlăturată, după cum precizat efectul unei eventuale
+admiteri a excepției lipsei de interes nu este respingerea demersului ca
+inadmisibil.
+Pe fondul contestației, solicită să se constate că intervenienta nu a
+formulat apărări concrete, astfel încât menține în integralitate cele
+expuse în cuprinsul contestației. Față de afirmația intervenientei în sensul
+că cele expuse în cuprinsul contestației sunt pure speculații, a arătat că
+societății sale nu i-a fost permis accesul la întreg dosarul procedurii,
+astfel încât s-a raportat la ceea ce a putut studia.
+Urmează ca CNSC să verifice cele învederate de societatea sa,
+precum și incidența textelor de lege invocate.
+Prin adresa înregistrată la Consiliu cu nr. 12153/25.02.2025,
+intervenienta a formulat concluzii scrise, față de notele scrise depuse de
+contestatoare.
+ (i) În ceea ce privește excepția lipsei de interes arată următoarele:
+Arată că potrivit jurisprudenței CNSC, pentru ca o persoană să se
+considere vătămată într-un drept ori într-un interes legitim printr-un act
+al autorității contractante sau prin nesoluționarea în termenul legal a unei
+cereri, este necesară îndeplinirea următoarelor condiții în mod cumulativ:
+- are sau a avut un interes legitim în legătură cu o procedură de
+atribuire;
+- a suferit, suferă sau riscă să sufere un prejudiciu ca o consecință a
+unui act al autorității contractante, de natură să producă efecte juridice,
+ori ca urmare a nesoluționării în termenul legal a unei cereri privind
+respectiva procedură de atribuire.
+Consiliul apreciază astfel că sintagma „are sau a avut un interes
+legitim (...)&quot; trebuie aplicată în contextul principiilor generale din materia
+dreptului procesual civil.
+Deși, nici Legea nr. 101/2016 și nici Codul de procedură civilă, nu
+definesc această cerință a acțiunii, în doctrină s-a arătat că, prin interes,
+se înțelege folosul practic imediat pe care îl are o parte pentru a justifica
+Pagina 11 din 29</p><button type="button" data-copy-link="document-75785-p11" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p12"><a class="paragraph-link" href="#document-75785-p12">§ 12</a><p data-source-text>punerea în mișcare a acțiunii sale. Exercițiul dreptului de a formula o
+acțiune în justiție, precum și o contestație ca cea de față, cere o
+justificare, prin impunerea condiției interesului urmărindu-se evitarea
+unor litigii lipsite de orice utilitate, pur vexatorii.
+Existența interesului este o condiție necesară promovării unei cereri
+în justiție, astfel cum impune art. 32 alin. (1) din Codul de Procedură
+Civilă.
+Arată că, interesul, indiferent că este moral și/sau material, trebuie
+să îndeplinească cerințele prevăzute expres la art. 33 din noul Cod de
+procedură civilă, respectiv:
+- să fie legitim, corespunzător cerințelor legii materiale și
+procesuale;
+- să fie personal și direct, adică folosul practic urmărit prin
+declanșarea procedurii judiciare să aparțină celui care recurge la acțiune;
+- să fie născut și actual, să existe în momentul în care este
+formulată cererea. Un interes eventual, ca și un interes care a trecut nu
+poate fi luat în considerare.
+Prezenta contestație nu este justificată de existența unui interes
+care îndeplinește condițiile expuse anterior, interesul contestatorului
+nefiind unul legitim, născut și actul, dar nici unul personal și direct, de
+vreme ce obligațiile asumate de contestatoare în legătură cu prezenta
+procedură au încetat odată cu anularea raportului procedurii pe care a
+înțeles să nu o conteste.
+Mai precis, potrivit art. 146 alin. (1) din HG 395/2016, „în situația în
+care autoritatea contractantă anulează procedura de atribuire, în
+condițiile art. 212 sau 213 din Lege, aceasta are obligația de a comunica
+în scris tuturor participanților la procedura de atribuire, în cel mult 3 zile
+de la data anulării, motivul care a determinat decizia de anulare, precum
+și încetarea obligațiilor asumate de ofertanți prin depunerea ofertelor sau
+a solicitărilor de participare.&quot;
+În procedura actuală se verifică dacă măsurile adoptate de
+autoritatea contractantă sunt de natură să-l prejudicieze pe contestator.
+Or, dacă raporturile asumate între părți odată cu depunerea ofertei au
+încetat și au căpătat caracter definitiv prin necontestare, măsură ce nu a
+fost criticată de ......... SRL, orice contestație a sa față de alte măsuri ale
+autorității contractante, nu satisface un interes al său, în sensul că nu îi
+aduce niciun folos practic.
+Prin contestația formulată de ... CONSULTING SRL împotrivă anularii
+procedurii, arată că nu a apărat un interes general deoarece, așa cum s-a
+arătat deja, interesul trebuie să fie personal și direct, adică să aparțină
+contestatorului, să-i procure acestuia un beneficiu. Așa cum a arătat
+deja, în acest sens sunt și opiniile Curților de apel din întreaga țară. Prin
+urmare, ceea ce se consfințește prin practica cvasiunanimă a instanțelor
+este faptul că din moment ce operatorul economic nu a contestat un
+12</p><button type="button" data-copy-link="document-75785-p12" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p13"><a class="paragraph-link" href="#document-75785-p13">§ 13</a><p data-source-text>rezultat al procedurii care îi era defavorabil, nu își poate îmbunătăți
+situația profitând de calea de atac exercitată de alt operator economic.
+În consecință, solicitam respingerea contestației pe cale de
+excepție, că fiind inadmisibilă, fiind formulată de o persoană lipsită de
+interes.
+(îi) Pe fondul cauzei arată faptul că, atâta vreme cât contestatoarea
+nu își susține în concret criticile aduse ofertei sale și nu le dovedește,
+arată că nu poate formula apărări doar în baza unor speculații
+nefundamentate.
+Contestatoarea chiar recunoaște că nu cunoaște oferta
+intervenientei, însă alege să învestească CNSC cu o reevaluare a
+acesteia. Or rolul CNSC nu este acela de a evalua ofertele, ci de a judeca
+cererile întemeiate cu care a fost învestit. Atâta vreme cât
+contestația ......... SRL este una recunoscut nedovedita, justificându-se
+că nu a avut acces la oferta câștigătoare, în mod evident singura soluție
+care se poate emite este aceea de respingere a contestației că
+neîntemeiată.
+Subliniază că atâta vreme cât contestatoarea susține
+neconformitatea ofertei intervenientei, trebuie să o și dovedească, nu să
+învestească CNSC să se subroge în obligații și să dovedească în locul sau
+susținerile enunțate în cadrul contestației.
+În ceea ce privește alegația referitoare la lipsa justificării prețului
+neobișnuit de scăzut, constată că ......... SRL nu aduce argumente
+suplimentare în cadrul notelor scrise pentru susținerea acestui capăt de
+cerere. Astfel fiind, înțelege să arate încă o dată că pentru argumentarea
+capătului de cerere privind lipsa justificării prețului neobișnuit de scăzut
+contestatoarea face trimitere la texte de lege care nu sunt aplicabile în
+cauză și, deși recunoaște că acestea nu sunt aplicabile și nu corespund
+tezei sale probatoare, înțelege să le invoce în continuare, făcând proprii
+aprecieri asupra modului de aplicare a legislației în domeniu.
+Prin adresa nr. 138415/17.03.2025, înregistrată la CNSC cu nr.
+16860/17.03.2025, autoritatea contractantă a comunicat dosarul
+achiziției publice. Autoritatea contractantă nu a formulat un punct de
+vedere în cauză.
+......... SRL a constituit cauțiunea în sumă de 19.600,00 lei, conform
+art. 61 alin. (1) din Legea nr. 101/2016, fiind depusă la dosar recipisa de
+consemnare nr. 211054309/1 din 17.02.2025, eliberată de CEC BANK SA
+- Sucursala Victoria.
+Din analiza susținerilor părților și a documentelor existente
+la dosarul cauzei, Consiliul reține cele ce urmează:
+......... (PRIMARIA ..) a inițiat o procedura simplificată în vederea
+atribuirii contractului de achiziție publică având ca obiect „Servicii de
+elaborare studiu de trafic și sistematizare rutieră la nivelul Sectorului 5 al
+Municipiului .........”, prin publicarea în SEAP a anunțului de participare
+simplificat nr. SCN 1147780 din 03.06.2024, valoarea estimată a
+Pagina 13 din 29</p><button type="button" data-copy-link="document-75785-p13" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p14"><a class="paragraph-link" href="#document-75785-p14">§ 14</a><p data-source-text>contractului de servicii fiind de 980.000,00 lei, fără TVA, iar criteriul de
+atribuire aplicat fiind „cel mai bun raport calitate-preț”.
+Împotriva deciziei de anulare a procedurii, adoptata de către
+achizitoare prin raportul procedurii nr. 214165 din 19.09.2024, ...
+CONSULTING SRL a înaintat contestația înregistrată la Consiliul Național
+de Soluționare a Contestațiilor cu nr. 61781/30.09.2024 și soluționată
+prin decizia acestuia nr. 3193/C11/3347 din data de 11.11.2024 în sensul
+admiterii ei, al anularii actelor autorității contractante privind decizia de
+anulare a procedurii de atribuire și al obligării acesteia la continuarea
+procedurii de achiziție publică.
+Împotriva deciziei Consiliului, autoritatea contractanta a formulat
+plângerea respinsa ca nefondata de către Curtea de Apel ........., prin
+hotărârea nr. 844 din 12.12.2024.
+Continuând procedura de atribuire, autoritatea contractanta a
+comunicat ......... SRL decizia privind rezultatul ei prin adresa nr. 128224
+din 06.02.2025, potrivit căreia oferta sa admisibila s-a situat pe locul al
+doilea în clasamentul ofertelor, cu 92,42 de puncte, câştigătoare fiind
+desemnata oferta ... CONSULTING SRL, cu 100 de puncte.
+Împotriva acestei decizii a autorității contractante, ......... SRL a
+depus contestația în analiza, solicitând urmatoarele: 
+- anularea raportului procedurii nr. 127199/04.02.2025 și a
+comunicării rezultatului procedurii din adresa nr. 128224/06.02.2025;
+- anularea tuturor actelor care au stat la baza emiterii actelor
+menționate anterior, precum și a tuturor actelor subsecvente acestora;
+- obligarea autorității contractante la reluarea procedurii de
+atribuire cu luarea în considerare a considerentelor hotărârii ce urmează
+să se pronunțe.
+Ca o chestiune prealabilă, Consiliul reține că ... CONSULTING SRL a
+formulat o cerere de intervenție pe care o încuviințează în principiu, în
+conformitate cu art. 64 Cod procedură civilă, dat fiind faptul că autoarea
+ei, în calitate de ofertanta declarată câștigătoare, dovedește un interes
+legitim propriu în pricina prin promovarea ei.
+În verificarea posibilității soluționării prezentei contestații, în
+contextul în care autoritatea contractanta nu a formulat un punct de
+vedere referitor la aceasta, iar, potrivit art. 18 alin. (3) din Legea nr.
+101/2016, „Lipsa punctului de vedere nu împiedică soluţionarea
+contestaţiei, în măsura în care s-a făcut dovada comunicării acesteia
+către autoritatea contractantă.”, Consiliul notează ca aceasta contestație
+a fost transmisa de ......... SRL, la data de 12.02.2025, prin e-mail, atât
+Consiliului, cat și autorităţii contractante la doua adrese de e-mail. Prin
+urmare, condiția prevăzută art. 18 alin. (3) din Legea nr. 101/2016 fiind
+îndeplinită, Consiliul nu este împiedicat în soluţionarea contestaţiei de
+lipsa punctului de vedere al autorităţii contractante referitor la aceasta.
+14</p><button type="button" data-copy-link="document-75785-p14" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p15"><a class="paragraph-link" href="#document-75785-p15">§ 15</a><p data-source-text>Având a se pronunța cu întâietate asupra excepțiilor invocate în
+cauza, potrivit art. 26 alin. (1) din Legea nr. 101/2016, Consiliul constata
+ca intervenienta ... CONSULTING SRL invoca lipsa de interes în
+formularea prezentei contestații, în condițiile în care autoarea ei nu a
+reacționat fata de decizia anterioara a achizitoarei de a anula procedura
+de atribuire.
+În acest sens, Consiliul observă că, potrivit art. 2 alin. (1) din Legea
+nr. 101/2016, „Orice persoană care se consideră vătămată într-un drept
+al său ori într-un interes legitim printr-un act al unei autorităţi
+contractante sau prin nesoluţionarea în termenul legal a unei cereri
+poate solicita anularea actului, obligarea autorităţii contractante la
+emiterea unui act sau la adoptarea de măsuri de remediere,
+recunoaşterea dreptului pretins sau a interesului legitim, pe cale
+administrativ-jurisdicţională sau judiciară, potrivit prevederilor prezentei
+legi.”, următorii termeni având definiția regăsită  la art. 3 alin. (1) din
+lege, astfel:
+„a) act al autorităţii contractante - orice act, orice operaţiune care
+produce sau poate produce efecte juridice, neîndeplinirea în termenul
+legal a unei obligaţii prevăzute de legislaţia în materie, omisiunea ori
+refuzul de a emite un act sau de a efectua o anumită operaţiune, în
+legătură cu sau în cadrul unei proceduri de atribuire prevăzute de art. 68
+din Legea nr. 98/2016 privind achiziţiile publice, cu modificările și
+completările ulterioare, de art. 82 din Legea nr. 99/2016 privind
+achiziţiile sectoriale, cu modificările și completările ulterioare, sau de art.
+50 din Legea nr. 100/2016 privind concesiunile de lucrări şi concesiunile
+de servicii, cu modificările şi completările ulterioare;  
+ f) persoană care se consideră vătămată - orice operator economic
+care îndeplineşte cumulativ următoarele condiţii:
+(i) are sau a avut un interes în legătură cu o procedură de atribuire;
+şi
+(ii) a suferit, suferă sau riscă să sufere un prejudiciu ca o
+consecinţă a unui act al autorităţii contractante, de natură să producă
+efecte juridice, ori ca urmare a nesoluţionării în termenul legal a unei
+cereri privind o procedură de atribuire.”  
+Drept urmare, constatând faptul că ofertanta contestatoare înțelege
+să critice și urmărește ca, prin contestația înaintată Consiliului, să
+anuleze decizia autorității contractante de a considera admisibila oferta
+declarata câștigătoare, este evident că interesul acesteia este acela de a
+înlătura din competiție autoarea acestei oferte și, astfel, să câștige
+contractul de achiziție publică. Drept urmare, sub nicio condiție, nu se
+poate afirma că demersul contestatoarei, de invalidare a deciziei
+autorității contractante cu privire la oferta situata înaintea sa în
+clasament, este lipsit de interes.
+Pe de alta parte, a adăuga noi condiții celor impuse de lege, în
+vederea stabilirii calității procesuale active, este un demers ce nu poate fi
+primit. Astfel, pretenția intervenientei ca demersul prezent al ......... SRL
+sa fie invalidat de către Consiliu pentru neimplicarea acestei societăți în
+Pagina 15 din 29</p><button type="button" data-copy-link="document-75785-p15" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p16"><a class="paragraph-link" href="#document-75785-p16">§ 16</a><p data-source-text>anularea deciziei anterioare a achizitoarei încalcă dispozițiile coroborate
+ale art. 2 alin. (1) și art. 3 alin. (1) lit. a) și f) din Legea nr. 101/2016, în
+condițiile în care societatea este ofertant în prezenta procedura, iar, la
+momentul prezent, se considera vătămată prin decizia achizitoarei de
+stabilire a ofertei câştigătoare. Contestarea unui act al achizitoarei în fata
+Consiliului nu presupune implicarea aceleiași persoane în oricare și în
+toate etapele de contestare ce pot surveni într-o procedura de achiziție
+publica, atâta vreme cat persoana respectiva are o evaluare diferențiată
+a vătămării ce i se produce sau ce i se poate produce, și a oportunității
+de a reacționa în consecință.
+Prin urmare, argumentele intervenientei nu susțin excepția
+invocata, astfel încât Consiliul o respinge și va analiza cauza pe fondul
+său.
+......... SRL debutează demersul său de contestare prin  indicarea
+faptului ca autoritatea contractanta nu i-a acordat acces la toate
+documentele indicate la art. 217 alin. (6) din Legea nr. 98/2016.
+Cu privire la acest aspect, Consiliul notează că, ulterior primirii
+comunicării rezultatului procedurii nr. 128224 din 06.02.2025, societatea,
+prin adresa nr. 694 din 06.02.2025, înregistrată la achizitoare în aceeași
+zi, a cerut acesteia din urma, în baza dispozițiilor art. 217 alin. (6) din
+Legea nr. 98/2016, accesul la dosarul achiziţiei publice. Prin adresa nr.
+128238 din 06.02.2025, autoritatea contractanta a răspuns solicitării,
+invitând societatea în data de 11.02.2025 în vederea vizualizării
+dosarului achiziţiei, mai puțin a documentelor declarate confidențiale.
+Cu ocazia acordării accesului, s-a întocmit procesul-verbal nr.
+129469 din 11.02.2025 în care se precizează ca au fost prezentate spre
+studiu procesele-verbale întocmite de comisia de evaluare și rapoartele
+procedurii. De asemenea, se arata în document ca, data fiind declarația
+de confidențialitate prezentata de ... CONSULTING SRL, nu a fost permis
+accesul la propunerile tehnica și financiara ale acestei societăți, la
+solicitările de clarificare și răspunsurile referitoare la propunerile tehnica
+și financiara, și nici la documentele de calificare ale experților propuși. De
+asemenea, se arata ca ......... SRL nu a avut acces nici la informațiile din
+tabelul în care se detaliază evaluarea ofertelor, din carul proceselor-
+verbale nr. P518 din 09.07.2024 și nr. 208410 din 04.09.2024,  întrucât
+conțin elemente din oferta ... CONSULTING SRL, declarata confidențială.
+Referitor la situația faptică expusă, Consiliul reține relevanța
+dispoziției art. 217 alin. (6) din Legea nr. 98/2016, potrivit căreia „(6)
+Prin excepție de la prevederile alin. (5), după comunicarea rezultatului
+procedurii de atribuire, autoritatea contractantă este obligată să permită, la
+cerere, într-un termen care nu poate depăși o zi lucrătoare de la data primirii
+cererii, accesul neîngrădit al oricărui ofertant/candidat la raportul procedurii de
+atribuire și la informațiile care nu fac parte din propunerile tehnice, propunerile
+financiare și/sau fundamentările/justificările de preț/cost. Autoritatea
+16</p><button type="button" data-copy-link="document-75785-p16" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p17"><a class="paragraph-link" href="#document-75785-p17">§ 17</a><p data-source-text>contractantă este obligată să permită, la cerere, într-un termen care nu poate
+depăși o zi lucrătoare de la data primirii cererii, accesul neîngrădit al oricărui
+ofertant/candidat și la informațiile din cadrul propunerilor tehnice și/sau la
+fundamentările/justificările de preț/cost care nu au fost declarate și probate de
+către ofertanți ca fiind confidențiale.”
+Așadar, Consiliul stabilește că, în aplicarea dispoziției art. 217 alin.
+(6) din Legea nr. 98/2016, prin raportare și la prevederile art. 57 alin.
+(1) din Legea nr. 98/2016 („Fără a aduce atingere celorlalte prevederi ale
+prezentei legi sau dispozițiilor legale privind liberul acces la informațiile de
+interes public ori ale altor acte normative care reglementează activitatea
+autorității contractante, autoritatea contractantă are obligația de a nu dezvălui
+informațiile din propunerea tehnică, elementele din propunerea financiară
+și/sau fundamentări/justificări de preț/cost transmise de operatorii economici
+indicate și dovedite de aceștia ca fiind confidențiale întrucât sunt: date cu
+caracter personal, secrete tehnice sau comerciale sau sunt protejate de un
+drept de proprietate intelectuală. Caracterul confidențial se aplică doar asupra
+datelor/informațiilor indicate și dovedite ca fiind date cu caracter personal,
+secrete tehnice sau comerciale sau sunt protejate de un drept de proprietate
+intelectuală”), se consideră că achizitoarea avea dreptul de a restricționa
+accesul la documentele declarate confidențiale aferente propunerii
+tehnice și financiare ale câștigătoarei, mai puțin la documente care nu
+sunt prevăzute de aceste dispoziții legale.
+ În acest context, Consiliul stabilește nelegalitatea conduitei
+autorităţii contractante de a nu asigura ......... SRL accesul la solicitările
+de clarificare și răspunsurile referitoare la propunerile tehnica și
+financiara ale câștigătoarei, precum și la documentele de calificare ale ...
+CONSULTING SRL.
+Referitor la chestiunea confidențialității propunerilor tehnice și
+financiare, Consiliul reține relevanța Hotărârii Curții Europene de Justiție
+în cauza Varec, C-450/06, prin care s-au stabilit următoarele:
+„34 Obiectivul principal al normelor comunitare în materie de contracte
+de achiziții publice constă în deschiderea spre o concurență nedenaturată în
+toate statele membre (a se vedea în acest sens Hotărârea din 11 ianuarie
+2005, Stadt Halle și RPL Lochau, C- 26/03, Rec., p. I- 1, punctul 44).
+35 Pentru a realiza acest obiectiv, se impune ca autoritățile contractante
+să nu divulge informații referitoare la proceduri de atribuire a contractelor de
+achiziții publice al căror conținut ar putea fi utilizat pentru a denatura
+concurența, fie în cadrul unei proceduri de atribuire în curs, fie în cadrul unor
+proceduri de atribuire ulterioare.
+36 În plus, atât prin natura acestora, cât și potrivit sistemului
+reglementării comunitare în materie, procedurile de atribuire a contractelor de
+achiziții publice sunt fondate pe o relație de încredere între autoritățile
+contractante și operatorii economici care participă la aceste proceduri. Aceștia
+din urmă trebuie să poată comunica autorităților contractante respective orice
+informații utile în cadrul procedurii de atribuire, fără a se teme că acestea vor
+Pagina 17 din 29</p><button type="button" data-copy-link="document-75785-p17" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p18"><a class="paragraph-link" href="#document-75785-p18">§ 18</a><p data-source-text>comunica terților informații a căror divulgare ar putea fi prejudiciabilă pentru
+operatorii respectivi.
+37 Pentru aceste motive, articolul 15 alineatul (2) din Directiva 93/36
+prevede că autoritățile contractante au obligația de a respecta caracterul
+confidențial al tuturor informațiilor puse la dispoziție de acești furnizori.
+38 În cadrul specific al comunicării către un candidat sau un ofertant respins a
+motivelor respingerii candidaturii sau a ofertei acestuia, precum și în cel al
+publicării anunțului de atribuire a unui contract, articolul 7 alineatul (1) și
+articolul 9 alineatul (3) din respectiva directivă recunosc autorităților
+contractante posibilitatea de a nu comunica anumite informații, în cazul în care
+divulgarea acestora ar aduce atingere intereselor comerciale legitime ale
+întreprinderilor publice sau private sau ar aduce atingere concurenței loiale
+dintre furnizori.”
+De asemenea, în Hotărârea Tribunalului Uniunii Europene din 21
+septembrie 2016, Secolux/Comisia, T-363/14, s-au reținut următoarele:
+„46 În cazul în care instituția vizată decide să refuze accesul la un
+document a cărui comunicare îi este cerută, acesteia îi revine, în principiu,
+obligația de a furniza explicații cu privire la modul în care accesul la acel
+document ar putea să aducă atingere concret și efectiv interesului protejat de o
+excepție prevăzută la articolul 4 din Regulamentul nr. 1049/2001 pe care
+această instituție o invocă. În plus, riscul unei astfel de atingeri trebuie să fie
+previzibil în mod rezonabil, iar nu pur ipotetic. Cu toate acestea, este permis
+instituției în cauză să se întemeieze în această privință pe prezumții generale
+care se aplică anumitor categorii de documente, considerații de ordin general
+similare fiind susceptibile să se aplice unor cereri de divulgare cu privire la
+documente de aceeași natură (Hotărârea din 29 ianuarie 2013, Cosepuri/EFSA,
+T- 339/10 și T- 532/10, EU:T:2013:38, punctul 90).
+47 Rezultă din jurisprudență că ofertele depuse de ofertanți în cadrul unei
+proceduri de cerere de ofertă pot intra în domeniul de aplicare al excepției
+referitoare la protecția intereselor comerciale, în special datorită elementelor
+economice și tehnice cuprinse în oferte (a se vedea în acest sens Hotărârea din
+29 ianuarie 2013, Cosepuri/EFSA, T- 339/10 și T- 532/10, EU:T:2013:38,
+punctul 95).
+48 Pe de altă parte, protecția ofertelor ofertanților față de alți ofertanți
+este prevăzută de dispozițiile relevante din Regulamentul financiar și în special
+la articolul 113 alineatul (2) din acesta, care nu prevede divulgarea ofertelor
+depuse, nici chiar după formularea unei cereri scrise de către ofertanții ale
+căror oferte nu au fost reținute. Această restricție este inerentă obiectivului
+urmărit prin normele Uniunii în materie de contracte de achiziții publice, care se
+întemeiază pe o concurență nedenaturată. Pentru a realiza acest obiectiv, se
+18</p><button type="button" data-copy-link="document-75785-p18" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p19"><a class="paragraph-link" href="#document-75785-p19">§ 19</a><p data-source-text>impune ca autoritățile contractante să nu divulge informații referitoare la
+proceduri de atribuire a contractelor de achiziții publice al căror conținut ar
+putea fi utilizat pentru a denatura concurența, fie în cadrul unei proceduri de
+atribuire în curs, fie în cadrul unor proceduri de atribuire ulterioare (Hotărârea
+din 29 ianuarie 2013, Cosepuri/EFSA, T- 339/10 și T- 532/10, EU:T:2013:38,
+punctul 100).
+49 Având în vedere cele ce precedă, jurisprudența a stabilit existența
+unei prezumții generale potrivit căreia accesul la ofertele ofertanților aduce, în
+principiu, atingere protecției intereselor comerciale (a se vedea în acest sens
+Hotărârea din 29 ianuarie 2013, Cosepuri/EFSA, T- 339/10 și T- 532/10,
+EU:T:2013:38, punctul 101).
+50 Trebuie subliniat însă că prezumția generală menționată la punctul 49
+de mai sus nu exclude posibilitatea de a demonstra că un anumit document a
+cărui divulgare este solicitată nu face obiectul acestei prezumții sau că există
+un interes public superior care justifică divulgarea (Hotărârea din 28 iunie
+2012, Comisia/Éditions Odile Jacob, C- 404/10 P, EU:C:2012:393, punctul
+126).
+51 Prezenta cauză trebuie examinată în lumina acestor principii.
+52 În primul rând, trebuie arătat că, în speță, reclamantei i- a fost
+refuzat accesul la oferta depusă de ofertantul reținut, din care fac parte
+borderoul de prețuri și borderoul de prețuri recapitulativ. În plus, anexa I.A la
+contract, la care Comisia a refuzat de asemenea accesul în întregime, cuprinde
+și borderoul de prețuri al ofertei ofertantului reținut. În ceea ce privește anexa
+II la contract, la care a fost refuzat de asemenea accesul, aceasta conține
+oferta ofertantului reținut. Prin urmare, este vorba despre exact același tip de
+documente ca cele avute în vedere de Hotărârea din 29 ianuarie 2013,
+Cosepuri/EFSA (T- 339/10
+ și T- 532/10, EU:T:2013:38). Contrar celor
+susținute de reclamantă, nu se poate deduce din această hotărâre că privește
+numai o cerere de acces la ansamblul ofertelor ofertanților, iar nu o cerere de
+acces doar la oferta ofertantului reținut.
+53 Astfel, este evident că documentele avute în vedere de prezenta
+cerere de acces, prin natura lor, pot conține elemente tehnice și economice
+confidențiale ale ofertantului reținut, printre care și informații cu privire la
+Pagina 19 din 29</p><button type="button" data-copy-link="document-75785-p19" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p20"><a class="paragraph-link" href="#document-75785-p20">§ 20</a><p data-source-text>competențele și la metodele de lucru ale acestuia, la know- how- ul său, la
+organizarea sa internă, la costurile sale și la prețurile propuse.
+54 În aceste împrejurări, comisia a statuat în mod întemeiat, în deciziile
+atacate, că oferta ofertantului reținut, inclusiv borderoul de prețuri, anexa I.A
+la contract, care conține borderoul de prețuri, și anexa II la contract, care
+conține oferta ofertantului reținut, erau acoperite de o prezumție generală
+potrivit căreia divulgarea lor ar aduce atingere, în principiu, protecției
+intereselor comerciale.
+55 Pe de altă parte, trebuie subliniat că, tocmai în scopul de a menține
+confidențialitatea acestor informații comerciale sensibile, articolul 113 alineatul
+(2) din Regulamentul financiar nu prevede comunicarea ofertei ofertantului
+reținut către ofertanții respinși și stabilește chiar că este posibilă omiterea
+comunicării anumitor elemente dacă aceasta ar aduce atingere intereselor
+comerciale legitime sau ar putea denatura concurența loială.
+56 În al doilea rând, trebuie să se constate că, în nicio etapă a procedurii,
+reclamanta nu a prezentat nici cel mai slab argument care să permită să se
+demonstreze că documentele solicitate nu erau acoperite de prezumția
+menționată mai sus.
+57 În ceea ce privește borderoul de prețuri în ansamblul său, reclamanta
+susține că divulgarea acestui document nu ar putea aduce atingere intereselor
+comerciale ale ofertantului reținut, întrucât anunțul de atribuire indica nivelul
+prețurilor din oferta acestuia. Acest argument nu poate fi reținut, întrucât
+borderoul de prețuri este un document mult mai detaliat care indică, la fiecare
+rubrică, prețul serviciilor propuse, în timp ce anunțul de atribuire se limitează
+să indice în mod global valoarea contractului atribuit.
+58 Situația este aceeași în cazul borderoului de prețuri recapitulativ care
+figurează în anexa la ofertă. Trebuie să se constate că acest document conține
+de asemenea informații referitoare la prețul serviciilor propuse, care sunt mai
+detaliate decât informația divulgată prin anunțul de atribuire. Prin urmare,
+borderoul recapitulativ intră de asemenea în domeniul de aplicare al prezumției
+menționate mai sus.
+59 În consecință, Comisia era îndreptățită să considere că documentele în
+discuție, și anume oferta ofertantului reținut, inclusiv borderoul de prețuri și
+borderoul de prețuri recapitulativ, și anexele I.A și II la contract erau acoperite
+de excepția referitoare la protecția intereselor comerciale, fără a proceda la
+examinarea lor concretă și individuală, după cum pretinde reclamanta.
+60 În ceea ce privește argumentele reclamantei referitoare la existența
+unui presupus interes public superior care justifică divulgarea, acestea vor fi
+examinate mai jos, în cadrul celui de al patrulea aspect.
+20</p><button type="button" data-copy-link="document-75785-p20" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p21"><a class="paragraph-link" href="#document-75785-p21">§ 21</a><p data-source-text>61 În sfârșit, în ceea ce privește argumentul reclamantei potrivit căruia
+informațiile care i- au fost furnizate de Comisie cu privire la prețul ofertei
+reținute nu îndeplinesc cerințele articolului 113 din Regulamentul financiar,
+chiar dacă s- ar presupune că sunt admisibile, este necesar să se constate că,
+contrar celor sugerate de reclamantă, articolul 113 alineatul (2) din
+Regulamentul financiar nu impune obligația de a comunica ofertantului respins,
+cu titlu de caracteristici și de avantaje ale ofertei reținute, informații detaliate
+privind prețurile.”
+Consiliul apreciază că, în cadrul unei căi de atac formulate împotriva
+unei decizii luate de o autoritate contractantă referitoare la o procedură
+de atribuire a unui contract de achiziții publice, principiul
+contradictorialității nu implică faptul că părțile au un drept de acces
+nelimitat și absolut la toate informațiile referitoare la respectiva
+procedură de atribuire care au fost depuse la organismul responsabil cu
+calea de atac respectivă. Dimpotrivă, acest drept de acces trebuie pus în
+balanță cu dreptul altor operatori economici la protecția informațiilor
+confidențiale, dreptul său la apărare nefiind mai presus de dreptul
+celorlalți ofertanți de a-și proteja propriile oferte, în limitele stabilite de
+legiuitor.
+În ceea ce privește celelalte documente ale dosarului achiziţiei
+publice, printre care se regăsesc și documente de lucru ale comisiei de
+evaluare în integralitate, solicitări și răspunsuri de clarificare a ofertelor,
+Consiliul notează că acestea sunt indicate de legiuitor în textul art. 217
+alin. (6) din Legea nr. 98/2016 prin trimiterea la „informațiile care nu fac
+parte</p><button type="button" data-copy-link="document-75785-p21" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p22"><a class="paragraph-link" href="#document-75785-p22">§ 22</a><p data-source-text>din</p><button type="button" data-copy-link="document-75785-p22" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p23"><a class="paragraph-link" href="#document-75785-p23">§ 23</a><p data-source-text>propunerile</p><button type="button" data-copy-link="document-75785-p23" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p24"><a class="paragraph-link" href="#document-75785-p24">§ 24</a><p data-source-text>tehnice,</p><button type="button" data-copy-link="document-75785-p24" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p25"><a class="paragraph-link" href="#document-75785-p25">§ 25</a><p data-source-text>propunerile</p><button type="button" data-copy-link="document-75785-p25" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p26"><a class="paragraph-link" href="#document-75785-p26">§ 26</a><p data-source-text>financiare</p><button type="button" data-copy-link="document-75785-p26" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p27"><a class="paragraph-link" href="#document-75785-p27">§ 27</a><p data-source-text>și/sau
+fundamentările/justificările de preț/cost.”
+Extinderea caracterului confidențial asupra unor sectiuni ale
+documentelor de lucru ale comisiei de evaluare și asupra actelor emise în
+activitatea de evaluare a ofertelor depășește cadrul legal și nu poate fi
+luată în considerare la aplicarea prevederii art. 217 alin. (6) din Legea nr.
+98/2016. 
+Consiliul stabilește că sub nicio formă nu poate fi primită conduita
+autorităţii contractante de a considera confidențiale actele de lucru ale
+comisiei de evaluare, o astfel de interpretare a textului de lege
+înfrângând și obligația respectării principiului transparenței, impusă prin
+dispoziția art. 2 alin. (2) din Legea nr. 98/2016, interpretarea pe care
+achizitoarea o aduce textului art. 217 alin. (6) din Legea nr. 98/2016
+nebizuindu-se pe acesta.
+Consiliul notează pretenția câștigătoarei interveniente ca ......... SRL
+sa își fi motivat suplimentar în fapt contestația, însă este necesar a se
+Pagina 21 din 29</p><button type="button" data-copy-link="document-75785-p27" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p28"><a class="paragraph-link" href="#document-75785-p28">§ 28</a><p data-source-text>preciza că aceasta nemulțumire este determinată de modul nelegal în
+care achizitoarea a înțeles să interpreteze și să aplice normele legii.
+Astfel, Consiliul reține dispozițiile art. 217 din Legea nr. 98/2016,
+astfel:
+„(4) Ulterior finalizării procedurii de atribuire, dosarul achiziţiei publice
+are caracter de document public.
+(5) Accesul persoanelor la dosarul achiziţiei publice potrivit alin. (4) se
+realizează cu respectarea termenelor și procedurilor prevăzute de
+reglementările legale privind liberul acces la informaţiile de interes public și nu
+poate fi restricţionat decât în măsura în care aceste informaţii din cadrul
+propunerilor tehnice, propunerilor financiare şi/sau fundamentările/justificările
+de preţ/cost au fost declarate și probate conform art. 57 alin. (4) ca fiind
+confidenţiale, potrivit legii.
+(6) Prin excepţie de la prevederile alin. (5), după comunicarea
+rezultatului procedurii de atribuire, autoritatea contractantă este obligată să
+permită, la cerere, într-un termen care nu poate depăşi o zi lucrătoare de la
+data primirii cererii, accesul neîngrădit al oricărui ofertant/candidat la raportul
+procedurii de atribuire şi la informaţiile care nu fac parte din propunerile
+tehnice, propunerile financiare şi/sau fundamentările/justificările de preţ/cost.
+Autoritatea contractantă este obligată să permită, la cerere, într-un termen
+care nu poate depăşi o zi lucrătoare de la data primirii cererii, accesul
+neîngrădit al oricărui ofertant/candidat și la informaţiile din cadrul propunerilor
+tehnice şi/sau la fundamentările/justificările de preţ/cost care nu au fost
+declarate și probate de către ofertanţi ca fiind confidenţiale.”  
+Așadar, regula o reprezintă caracterul public al dosarului achiziţiei
+publice după finalizarea procedurii de atribuire, accesul la acesta fiind
+asigurat prin incidența dispozițiilor legale generale, ce reglementează
+liberul acces la informaţiile de interes public. 
+Însă, legiuitorul a stabilit și excepția la regula accesului la dosarul
+achiziţiei publice, ca document public după finalizarea procedurii de
+atribuire. Aceasta excepție este reglementată prin prevederea art. 217
+alin. (6) din Legea nr. 98/2016, condițiile și termenele de acces fiind
+exprese, astfel:
+- accesul este permis, la cerere, doar participanților la procedură în
+calitate de ofertant/candidat;
+- accesul este permis după comunicarea rezultatului procedurii de
+atribuire;
+- autoritatea contractantă este obligată să permită accesul într-un
+termen care nu poate depăşi o zi lucrătoare de la data primirii cererii.
+Existența unei asemenea excepții de acces la dosarul achiziţiei
+publice este justificată în contextul unor alte reguli privind activitatea de
+control a legalității actelor autorităţii contractante, emise în cadrul unei
+proceduri de atribuire a unui contract de achiziție publică. Astfel, potrivit
+art. 10 din Legea nr. 101/2016, „Contestaţia se formulează în scris şi trebuie
+să conţină următoarele elemente:  […] d) precizarea actului atacat al autorităţii
+contractante; e) obiectul contestaţiei; f) motivarea în fapt şi în drept a
+22</p><button type="button" data-copy-link="document-75785-p28" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p29"><a class="paragraph-link" href="#document-75785-p29">§ 29</a><p data-source-text>contestaţiei; g) mijloacele de probă pe care se sprijină contestaţia, în măsura
+în care este posibil; […]”. 
+Edificator este și faptul că, potrivit art. 11 alin. (1) din Legea nr.
+101/2016, „În situaţia în care Consiliul apreciază că în contestaţie nu sunt
+cuprinse toate informaţiile prevăzute la art. 10, acesta cere contestatorului ca,
+în termen de 3 zile de la înştiinţare, să completeze contestaţia. În cazul în care
+contestatorul nu se conformează obligaţiei impuse de Consiliu, contestaţia este
+anulată.” 
+Mai mult, în conformitate cu prevederea art. 21 alin. (3) din Legea
+nr. 101/2016, „Este inadmisibilă prezentarea unor noi motive de contestare
+şi/sau formularea unor noi capete de cerere pe calea concluziilor scrise sau
+orale ori a precizărilor la contestaţie ulterior termenului legal de formulare a
+acesteia.”
+Rezultă din dispozițiile citate ale Legii nr. 101/2016, că procedura
+de contestare în fața Consiliului este una riguros reglementată, persoana
+vătămată fiind ținută ca, în cuprinsul contestaţiei depuse, sau cel târziu în
+termen de 3 zile de la înștiințarea din partea Consiliului, să expună în fața
+acestuia toate aspectele de fapt și de drept, precum și toate probele pe
+care se sprijină acuzațiile aduse referitor la legalitatea actelor atacate ale
+autorităţii contractante. Sancțiunile aplicabile unei conduite contrare sunt
+extreme, respectiv anularea contestaţiei, în contextul regulii de la art. 11
+alin. (1) din Legea nr. 101/2016, și respingerea ca inadmisibile a
+motivelor noi de contestare şi/sau a noilor capete de cerere, formulate pe
+calea concluziilor scrise sau orale ori a precizărilor la contestație ulterior
+termenului legal de formulare a acesteia.
+În contextul acestei rigori la care contestatorul este supus în fața
+Consiliului, este evident că a fost asigurat și instrumentul legal la
+îndemâna persoanei care se considera vătămată, astfel încât aceasta să
+fie în măsură să respecte regulile regăsite la art. 10, art. 11 și art. 21 din
+Legea nr. 101/2016.
+Acest instrument nu este altul decât accesul la dosarul achiziţiei
+publice, solicitat în baza dispozițiilor art. 217 alin. (6) din Legea nr.
+98/2016, momentul în care acest tip de acces poate fi cerut („după
+comunicarea rezultatului procedurii de atribuire”) și termenul în care el
+trebuie asigurat („într-un termen care nu poate depăşi o zi lucrătoare de la
+data primirii cererii”), fiind evident stabilite în scopul asigurării posibilității
+persoanei care se considera vătămată de a înainta Consiliului, în
+termenele de contestare de la art. 8 din Legea nr. 101/2016 (7 zile,
+respectiv 10 zile), un act de investitură a organismului administrativ-
+jurisdicțional care să cuprindă toate elemente prevăzute la art. 10 din
+Legea nr. 101/2016 și care să facă posibilă evitarea aplicării sancțiunilor
+stabilite la art. 11 alin. (1) și art. 21 alin. (3) din Legea nr. 101/2016.
+Este de menționat aici și faptul ca, deși achizitoarea a înregistrat la
+sediul sau în data de 06.02.2025 (joi) cererea ......... SRL și i-a răspuns
+în aceeași data, accesul la dosarul achiziţiei nu a fost asigurat „într-un
+termen care nu poate depăşi o zi lucrătoare de la data primirii cererii”, ci
+pe data de 11.02.2025 (marți), respectiv în a treia zi lucrătoare de la
+data primirii în 06.02.2025 a cererii. 
+Pagina 23 din 29</p><button type="button" data-copy-link="document-75785-p29" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p30"><a class="paragraph-link" href="#document-75785-p30">§ 30</a><p data-source-text>Trecând la analiza criticilor privind oferta declarata câştigătoare,
+Consiliul notează ca prima dintre acestea se refera la îndeplinirea cerinței
+de experiență similara, sens în care retine ca, prin fisa de date a
+achiziţiei, punctul III.1.3.a) „Capacitatea tehnica si/sau profesionala”,
+autoritatea contractanta a impus îndeplinirea cerinței de calificare vizând
+experiența similara, astfel:
+„Operatorii economici vor face dovada ca au prestat servicii similare
+cu obiectul prezentului ctr, în ultimii 3 ani raportat la data de depunere,
+la nivelul a unul sau mai multe contracte, cu o valoare egala cu valoarea
+prezentei proceduri. Toata valoarea experienţei similare a contractelor
+trebuie sa fie formata din servicii de elaborare studiu de trafic și
+sistematizare (s.n.).”
+Potrivit documentelor din dosarul achiziţiei, depus în copie de către
+achizitoare, și potrivit consemnărilor comisiei de evaluare din cuprinsul
+procesului-verbal nr. 124409 din 23.01.2025, în vederea demonstrării
+îndeplinirii cerinței de calificare vizând experiența similara, ...
+CONSULTING SRL a prezentat 12 contracte, analizate astfel de către
+comisie:
+«Contractele asumate ca experienţa similara:   
+1.
+Contract
+de servicii nr. 170/30.05.2022, Beneficiar Judeţul
+Bihor, Obiect Elaborare studiu de trafic privind dotarea drumurilor
+judeţene cu echipamente și utilaje cu scopul creşterii siguranţei
+traficului, valoare contract și valoare experienţa similara 50.000 lei fara
+TVA, Proces-verbal de recepţie 15440/25.07.2022, factura Seria ... nr.
+982 din 20.12.2022;
+2.
+Contract
+de servicii nr. 89492/27.07.2022, Beneficiar Mun.
+Iasi, Obiect Studiu de Circulaţie pentru Actualizare Plan Urbanistic
+General Municipiul Iaşi şi detalierea acestuia prin Planuri Urbanistice
+Zonale, valoare contract și valoare experienţa similara 350.000 lei fara
+TVA, Proces-verbal de recepţie, 89577/11.07.2023, factura Seria ...
+1057 din 04/082023;
+3.
+Contract
+de servicii nr. 110157/03.03.2023, Beneficiar Mun.
+Oradea, Obiect Actualizare studiu de oportunitate, actualizare studiu de
+trafic și realizarea unui studiu de trafic, valoare contract 80.000 lei fara
+TVA, valoare experienţa similara 70.000 lei fara TVA, Proces-verbal de
+recepţie 171414/21.04.2022 și PV 172057/21.04.2022, factura Seria ...
+1022 din 19/042023.
+4.
+Contract de servicii nr. 17287/30.05.2023, Beneficiar Mun.
+Dej, Obiect Servicii de elaborare: realizarea politicii de reglementare a
+parcarilor publice și studiul de trafic pentru proiectele:
+Imbunatatirea accesului la coridoarele de mobilitate urbana a
+cartierelor Ocna Dejului și Viile Dejului din municipiul Dej;
+Mobilitatea coridorului integrat de mobilitate urbană reprezentat de
+str. Infrăţirii, str. Varga Cătălină, str. Valea Codorului, str. Valea
+24</p><button type="button" data-copy-link="document-75785-p30" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p31"><a class="paragraph-link" href="#document-75785-p31">§ 31</a><p data-source-text>Jichişului, str. Nicolae Titulescu și str. Şomcutului şi modernizare
+infrastructură străzi din zona urban funcţională - Pintic, valoare contract,
+110.000 lei fara TVA, valoare experienţa similara 70.000 lei fara TVA,
+Proces-verbal de recepţie 304/03.08.2023, factura Seria ... 1054 din
+03/08/2023;
+5.
+Contract
+de servicii nr. 4358/17.05.2023 Beneficiar ORAS
+BECLEAN, Obiect Studiul de trafic și Studiul de Oportunitate pentru
+proiectul „Dezvoltarea mobilitatii urbane III - Beclean Oraşul Inteligent”
+valoare contract, valoare experienţa similara 150.000 lei fara TVA,
+valoare experienţa similara 50.000 fara TVA, PV 5358/16.06.20233,
+factura ... nr. 1043 din 16.06.2023.
+6.
+Contract
+de servicii nr. 335209/23.08.2023, Beneficiar Mun.
+Oradea, Obiect Servicii de realizare a 6 studii de trafic pentru proiectele
+de mobilitate urbana în Municipiul Oradea, valoare contract, experienţa
+similara 270.000, PV 151481/03.04.2024, PV 174844/18.04.2024, PV
+374036/28.09.2023, PV 493863/18.12.2023, factura ... nr. 1176 din
+22.04.2024, nr. 1079 din 26.09.2023, nr. 1132 din 15.12.2023, nr.
+1165,din 04.04.2024, nr. 1175 din 22.04.2024.
+7.
+Contract
+de servicii nr. 192673/09.05.2024, Beneficiar Mun.
+Oradea, Obiect Realizare studiu de trafic pentru proiectul &quot;Achiziţie
+tramvaie în Municipiul Oradea&quot;, Valoare contract, experienţa similara
+45.000, PV 221112/31.05.2024, factura ... nr. 1182 din 03.06.2023.
+8.
+Contract
+de servicii nr. 34590/18.10.2022, Beneficiar Mun.
+Targoviste &quot;Susţinerea intermodalitatii și transportului alternativ în
+Municipiul Targoviste&quot;, valoare experienţa similara 60.000 lei fara TVA,
+Proces-verbal de negociere a clauzelor contractuale nr. 34589/
+18.10.2022, Act adiţional nr. 1, nr. înregistrare 1849 din 31.05.2023,
+Act adiţional nr. 2, nr. înregistrare 22178 din 05.07.2023, PV din
+26.09.2023 și PV din 10.11.2023, factura ... nr. 1084 din 03.10.2023.
+9.
+Contract
+de servicii 4743/07.03.2023, Beneficiar Mun.
+Ploiesti „Obiect PIETONIZARE și TRAFIC CONTROLAT în ZONA
+CENTRALA, INCLUSIV AMENAJARE PISTE PENTRU BICICLETE PE
+TRASEELE PRIORITARE DIN PLANUL DE MOBILITATE, PUNCTE BIKE-
+SHARING, AMENAJARE ZONE VERZI, ZONE DE ODIHNA, ZONA
+SPECTACOLE, ZONA COMERŢ PENTRU EVENIMENTE, ILUMINAT
+ORNAMENTAL, WI-FI, INCLUSIV DOTĂRI și ECHIPAMENTE&quot;, valoare
+contract 1.480.500 lei fara TVA, valoare experienţa similara 60.000 lei
+fara TVA, Aviz 80/28.11.2023, Factura ... nr. 1102 din 06/11/2023.
+10.
+Contract
+de servicii 63245/23.06.2022, Beneficiar Mun.
+Deva, Obiect Servicii de elaborare/actualizare documente de planificare
+strategica a municipiului Deva: Strategia Integrata pentru dezvoltarea
+urbana a Municipiului Deva și Planul de Mobilitate Urbana Durabila a
+Municipiului Deva, Valoare contract 800.000 lei fara TVA, valoare
+experienţa similara asumata 150.000 lei fara TVA, Acord de asociere, PV
+FN/27.10.202312/28.01.2021, PV din 13.10.2023, Opis Propunere
+financiara, Formular de oferta, Grafic fizic și valoric, Declaraţie de
+Pagina 25 din 29</p><button type="button" data-copy-link="document-75785-p31" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p32"><a class="paragraph-link" href="#document-75785-p32">§ 32</a><p data-source-text>consimtamant, Formular Declaraţie cuprinzând Informaţiile considerate
+confidenţiale, Factura ... nr. 1086 din 17/10/2023.
+11.
+Contract de servicii,nr 12 din 28.01.2021, Beneficiar Mun.
+Sibiu, Obiect „Servicii de consultanta pentru actualizarea Planului de
+Mobilitate al Municipiului Sibiu pentru perioada 2021-2030, în cadrul
+proiectului „Strategie Inteligenta bazata pe Integrare și Urbanizare
+SMART - SIBIU SMART&quot;, SMIS 135967, Valoare contract 320.000 lei fara
+TVA, Valoare experienţa similara 170.000 lei fara TVA, PV
+70899/20.09.2022, Factura ... nr. 1102 din 06/11/2023. 
+12.
+Contract de servicii nr. 31/06.05.2021, Asociaţia de
+Dezvoltare Intercomunitara &quot;Zona Metropolitana Craiova&quot;, Obiect Servicii
+de consultanţă pentru Actualizarea Planului de Mobilitate Urbană
+Durabilă al Zonei Metropolitane Craiova, Valoare contract 250.000 lei
+fara TVA, valoare experienţa similara 180.000 lei fara TVA, Act adiţional
+nr. 1/10.05.2022 PV 162/25.05.2023, Cuprins, Formular de oferta,
+Anexa la Formular de oferta (Centralizator de preturi), Factura ... nr.
+1112 din 27/11/2023, nr. 1064 din 06.09.2023.»
+Văzând obiectul acestor contracte, dar și celelalte documente
+asociate lor, prezentate de ... CONSULTING SRL, Consiliul constata ca,
+luând în calcul valorile însumate ale serviciilor de elaborare studiu de
+trafic și sistematizare, așa cum acestea rezulta din contractele și facturile
+prezentate la punctele 1-9 din lista întocmită de autoritatea contractantă,
+societatea a făcut dovada prestării acestor servicii cu o valoare mai mare
+decât 980.000,00 lei, îndeplinind astfel cerința de calificare impusa de
+achizitoare. Consiliul constata ca sumele consemnate de catre
+achizitoare, avute în vedere în verificarea îndeplinirii cerinței, sunt cele
+înscrise în documentele probante ca reprezentând contravaloarea
+serviciilor de elaborare studiu de trafic și sistematizare, prestate de
+societate în executarea contractelor de la punctele 1-9 din lista citata,
+context în care critica din contestație devine nefondata.
+În ceea ce privește cea de-a doua critica, referitoare la prețul
+propus de câştigătoare, despre care contestatoarea arata ca ar fi trebuit
+sa facă obiectul verificărilor autorităţii contractante, deoarece ar avea un
+caracter neobișnuit de scăzut, Consiliul retine urmatoarele prevederi
+legale:
+- art. 210 din Legea nr. 98/2016:
+„(1) În cazul unei propuneri financiare aparent neobişnuit de
+scăzută în raport cu lucrările, produsele sau serviciile care constituie
+obiectul contractului de achiziţie publică/acordului-cadru care urmează a
+fi atribuit/încheiat, autoritatea contractantă are obligaţia de a solicita
+ofertantului care a depus o astfel de ofertă clarificări cu privire la preţul
+sau costurile propuse în respectiva ofertă.
+(2) Clarificările prevăzute la alin. (1) se pot referi în special la:
+26</p><button type="button" data-copy-link="document-75785-p32" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p33"><a class="paragraph-link" href="#document-75785-p33">§ 33</a><p data-source-text>a) fundamentarea economică a modului de formare a preţului, prin
+raportare la procesul de producţie, serviciile furnizate sau metodele de
+construcţie utilizate;
+b) soluţiile tehnice adoptate şi/sau orice condiţii deosebit de
+favorabile de care beneficiază ofertantul pentru furnizarea produselor
+sau a serviciilor ori executarea lucrărilor;
+c) originalitatea lucrărilor, produselor sau serviciilor propuse de
+ofertant;
+d) respectarea obligaţiilor prevăzute la art. 51 alin. (1);
+e) respectarea obligaţiilor prevăzute la art. 218;
+f) posibilitatea ca ofertantul să beneficieze de un ajutor de stat.
+(3) Autoritatea contractantă evaluează informaţiile și documentele
+furnizate de ofertantul a cărui ofertă are un preţ aparent neobişnuit de
+scăzut şi respinge respectiva ofertă numai atunci când dovezile furnizate
+nu justifică în mod corespunzător nivelul scăzut al preţului sau al
+costurilor propuse, ţinând seama de elementele menţionate la alin. (2).” 
+- art. 136 din HG nr. 395/2016:
+„(1) În situaţia în care comisia de evaluare constată că elemente de
+preţ ale unei oferte sunt aparent neobişnuit de scăzute, prin raportare la
+preţurile pieţei, utilizându-se ca referinţa în acest sens informaţii cum ar
+fi buletine statistice, sau cotaţii ale burselor de mărfuri, comisia de
+evaluare va solicita ofertantului care a depus oferta în cauză explicaţii cu
+privire la posibilitate îndeplinirii contractului în condiţiile de calitate
+impuse prin documentaţia de atribuire.
+(2) Explicaţiile aduse de ofertant conform prevederilor alin. (1) vor
+fi însoţite de dovezi concludente privind elementele prevăzute la art. 210
+alin. (2) din Lege, precum şi, după caz, documente privind preţurile ce
+pot fi obţinute de la furnizori, situaţia stocurilor de materii prime și
+materiale, modul de organizare și metodele utilizate în cadrul procesului
+de lucru, nivelul de salarizare al personalului ofertantului, performanţele
+şi costurile implicate de anumite utilaje sau echipamente de lucru.
+(3) În cazul în care ofertantul nu prezintă comisiei de evaluare
+informaţiile şi/sau documentele solicitate sau acestea nu justifică în mod
+corespunzător nivelul scăzut al preţului sau al costurilor propuse, oferta
+va fi considerată neconformă.
+(4) În sensul prevederilor art. 210 alin. (1) din Lege, o ofertă
+prezintă un preţ aparent neobişnuit de scăzut în raport cu ceea ce
+urmează a fi furnizat, executat sau prestat atunci când preţul ofertat,
+fără TVA, reprezintă mai puţin de 80% din valoarea estimată a
+contractului respectiv.”
+Rezulta, așadar, din normele citate, faptul ca acestea stabilesc
+conduita necesara și obligatorie a autorităţii contractante, dar și a
+ofertantului, în situația în care prețul propus este unul aparent neobișnuit
+de scăzut în raport de prestația ofertata, legea definind un astfel de preț
+ca fiind acela ce reprezintă mai puțin de 80% din valoarea estimată a
+contractului de achiziție publica.
+Pagina 27 din 29</p><button type="button" data-copy-link="document-75785-p33" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p34"><a class="paragraph-link" href="#document-75785-p34">§ 34</a><p data-source-text>Așa cum arata și contestatoarea, prețul ofertei câştigătoare nu se
+situează sub aceasta limita legala, depășind-o sensibil în condițiile în care
+reprezintă 80,05% din valoarea estimata de achizitoare.
+În aceasta situație, Consiliul nu poate retine în sarcina autorităţii
+contractante obligația reglementata prin textele de lege citate anterior,
+iar argumentele contestatoarei nu conduc către concluzia ca
+administrarea responsabila a prezentei proceduri ar fi trebuit sa
+determine achizitoarea sa efectueze verificări voluntare ale prețului
+câștigător și ale elementelor lui. Faptul ca cea de-a doua oferte primita
+de achizitoare, respectiv cea a contestatoarei, are un preț mai mare
+decât al celei câştigătoare și apropiat de estimarea autorităţii
+contractante, nu atrage în mod automat caracterul nejustificat al prețului
+câștigător, așa cum nici legiuitorul nu a considerat principial ca o valoare
+a ofertei intre 80% și 100% din valoarea estimata ar avea, teoretic, un
+caracter neobișnuit de scăzut.
+Văzând ca cele pretinse de contestatoare sunt aspecte pur
+teoretice, nesusținute de argumente rezultate din piața de profil, fata de
+care sa se poate face o raportate, eventual o verificare a prețului
+câștigător, Consiliul stabilește caracterul nefondat al celor reclamate în
+acest subiect.
+Luând în considerare aspectele de fapt și de drept evocate, în baza
+art. 26 alin. (6) din Legea nr. 101/2016 privind remediile și căile de atac
+în materie de atribuire a contractelor de achiziţie publică, a contractelor
+sectoriale și a contractelor de concesiune de lucrări și concesiune de
+servicii, precum și pentru organizarea şi funcţionarea Consiliului Naţional
+de Soluţionare a Contestaţiilor, Consiliul urmează să respingă ca
+nefondată contestația depusă de ......... SRL.
+Față de cele reținute mai sus cu ocazia soluționării contestației,
+Consiliul va admite cererea de intervenție depusă de ... CONSULTING
+SRL.
+Pentru aceste motive,
+în baza legii și a mijloacelor de probă aflate la dosar,
+CONSILIUL DECIDE:
+Respinge excepția lipsei de interes în formularea contestaţiei,
+invocată de intervenienta ... CONSULTING SRL.
+Respinge ca nefondată contestația depusă de ......... SRL în
+contradictoriu cu ......... (PRIMARIA SECTORULUI ..).
+Încuviințează în principiu și admite cererea de intervenție depusă de
+... CONSULTING SRL.
+Prezenta decizie este obligatorie pentru părți, în conformitate cu
+dispozițiile art. 28 alin. (1) din Legea nr. 101/2016. 
+28</p><button type="button" data-copy-link="document-75785-p34" class="copy-passage" hidden>Copiază linkul</button></div><div class="source-paragraph" id="document-75785-p35"><a class="paragraph-link" href="#document-75785-p35">§ 35</a><p data-source-text>Împotriva ei se poate formula plângere, în termen de 10 zile de la
+comunicare pentru părțile cauzei, respectiv de la data luării la cunoștință
+de către alte persoane vătămate, în temeiul art. 29 din Legea nr.
+101/2016.
+       PREȘEDINTE,
+        MEMBRU,
+   MEMBRU,
+                       ..     
+...
+  ..    
+Redactată în 5 exemplare, conține 26 pagini.
+Redactată practicaua deciziei ..
+Pagina 29 din 29</p><button type="button" data-copy-link="document-75785-p35" class="copy-passage" hidden>Copiază linkul</button></div></div></details></section></section><section class="section" id="istoric"><div class="section-top"><h2>Istoricul dosarului</h2><a class="" href="/dosare-cnsc/2025/451?ordine=asc#istoric">Ordine cronologică</a></div><div class="table-wrap"><table><caption>Evenimente, de la cel mai recent la cel mai vechi</caption><thead><tr><th scope="col">Data</th><th scope="col">Înregistrare</th><th scope="col">Sens</th><th scope="col">Document</th><th scope="col">Expeditor</th><th scope="col">Descriere ieșire</th><th scope="col">Destinatar</th></tr></thead><tbody><tr><td>2025-05-20</td><td>32952<div class="actions"><a class="" href="/decizii?q=32952">Decizii</a><a class="" href="/incheieri?q=32952">Încheieri</a></div></td><td>Intrare</td><td>Alte adrese</td><td>FIP CONSULTING SRL</td><td>—</td><td>—</td></tr><tr><td>2025-05-08</td><td>30018<div class="actions"><a class="" href="/decizii?q=30018">Decizii</a><a class="" href="/incheieri?q=30018">Încheieri</a></div></td><td>Iesire</td><td>Adresa Tribunal/ Curte de Apel</td><td>—</td><td>Adresa Tribunal/ Curte de Apel</td><td>CA BUC</td></tr><tr><td>2025-05-05</td><td>28683<div class="actions"><a class="" href="/decizii?q=28683">Decizii</a><a class="" href="/incheieri?q=28683">Încheieri</a></div></td><td>Intrare</td><td>Alte adrese</td><td>PRIMARIA SECTOR 5</td><td>—</td><td>—</td></tr><tr><td>2025-04-28</td><td>26997<div class="actions"><a class="" href="/decizii?q=26997">Decizii</a><a class="" href="/incheieri?q=26997">Încheieri</a></div></td><td>Intrare</td><td>Adresă solicitare dosar CNSC de către Curtea de Apel</td><td>CA BUCURESTI</td><td>—</td><td>—</td></tr><tr><td>2025-04-25</td><td>26915<div class="actions"><a class="" href="/decizii?q=26915">Decizii</a><a class="" href="/incheieri?q=26915">Încheieri</a></div></td><td>Intrare</td><td>Plângere</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr><tr><td>2025-04-23</td><td>26022<div class="actions"><a class="" href="/decizii?q=26022">Decizii</a><a class="" href="/incheieri?q=26022">Încheieri</a></div></td><td>Intrare</td><td>Plângere</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr><tr><td>2025-04-07</td><td>22155<div class="actions"><a class="" href="/decizii?q=22155">Decizii</a><a class="" href="/incheieri?q=22155">Încheieri</a></div></td><td>Iesire</td><td>Adresa transmitere decizie</td><td>—</td><td>Adresa transmitere decizie</td><td>PRIMARIA SECTOR 5</td></tr><tr><td>2025-04-07</td><td>22159<div class="actions"><a class="" href="/decizii?q=22159">Decizii</a><a class="" href="/incheieri?q=22159">Încheieri</a></div></td><td>Iesire</td><td>Adresa transmitere decizie</td><td>—</td><td>Adresa transmitere decizie</td><td>URBAN SCOPE SRL</td></tr><tr><td>2025-04-07</td><td>22162<div class="actions"><a class="" href="/decizii?q=22162">Decizii</a><a class="" href="/incheieri?q=22162">Încheieri</a></div></td><td>Iesire</td><td>Adresa transmitere decizie</td><td>—</td><td>Adresa transmitere decizie</td><td>FIP CONSULTING SRL</td></tr><tr><td>2025-03-17</td><td>16860<div class="actions"><a class="" href="/decizii?q=16860">Decizii</a><a class="" href="/incheieri?q=16860">Încheieri</a></div></td><td>Intrare</td><td>Dosarul achiziției</td><td>PRIMARIA SECTOR 5</td><td>—</td><td>—</td></tr><tr><td>2025-03-07</td><td>14883<div class="actions"><a class="" href="/decizii?q=14883">Decizii</a><a class="" href="/incheieri?q=14883">Încheieri</a></div></td><td>Intrare</td><td>Dovada</td><td>PRIMARIA SECTOR 5</td><td>—</td><td>—</td></tr><tr><td>2025-03-06</td><td>14733<div class="actions"><a class="" href="/decizii?q=14733">Decizii</a><a class="" href="/incheieri?q=14733">Încheieri</a></div></td><td>Iesire</td><td>Adresa solicitare/ completare (complet)</td><td>—</td><td>Adresa solicitare/ completare (complet)</td><td>PRIMARIA SECTOR 5</td></tr><tr><td>2025-02-25</td><td>12153<div class="actions"><a class="" href="/decizii?q=12153">Decizii</a><a class="" href="/incheieri?q=12153">Încheieri</a></div></td><td>Intrare</td><td>Concluzii scrise</td><td>FIP CONSULTING SRL</td><td>—</td><td>—</td></tr><tr><td>2025-02-19</td><td>10623<div class="actions"><a class="" href="/decizii?q=10623">Decizii</a><a class="" href="/incheieri?q=10623">Încheieri</a></div></td><td>Intrare</td><td>Concluzii scrise</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr><tr><td>2025-02-18</td><td>10247<div class="actions"><a class="" href="/decizii?q=10247">Decizii</a><a class="" href="/incheieri?q=10247">Încheieri</a></div></td><td>Intrare</td><td>Dovada</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr><tr><td>2025-02-17</td><td>9783<div class="actions"><a class="" href="/decizii?q=9783">Decizii</a><a class="" href="/incheieri?q=9783">Încheieri</a></div></td><td>Iesire</td><td>Adresa solicitare/ completare (complet)</td><td>—</td><td>Adresa solicitare/ completare (complet)</td><td>URBAN SCOPE SRL</td></tr><tr><td>2025-02-17</td><td>9869<div class="actions"><a class="" href="/decizii?q=9869">Decizii</a><a class="" href="/incheieri?q=9869">Încheieri</a></div></td><td>Intrare</td><td>Cerere de intervenție</td><td>FIP CONSULTING SRL</td><td>—</td><td>—</td></tr><tr><td>2025-02-17</td><td>10078<div class="actions"><a class="" href="/decizii?q=10078">Decizii</a><a class="" href="/incheieri?q=10078">Încheieri</a></div></td><td>Intrare</td><td>Cauțiune</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr><tr><td>2025-02-13</td><td>9146<div class="actions"><a class="" href="/decizii?q=9146">Decizii</a><a class="" href="/incheieri?q=9146">Încheieri</a></div></td><td>Intrare</td><td>Contestatie</td><td>URBAN SCOPE SRL</td><td>—</td><td>—</td></tr></tbody></table></div></section><section id="conexe" class="section"><h2>Alte dosare ale părților</h2><h3><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></h3><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2026/2822">Dosar 2822/2026</a></h2><span class="badge">În așteptare dosar achiziție</span></div>
+<div class="record-meta"><span>Complet C3</span><span>Prima înregistrare: Nedisponibil</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8659-compania-nationala-aeroporturi-bucuresti-sa">COMPANIA NATIONALA AEROPORTURI BUCURESTI SA</a></span></div></div>
+</article><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2025/3919">Dosar 3919/2025</a></h2><span class="badge">Dosar finalizat</span></div>
+<div class="record-meta"><span>Complet C4</span><span>Prima înregistrare: 2025-10-07</span><span>Decizie fond: 429 · 13.02.2026</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8574-municipiul-botosani">MUNICIPIUL BOTOȘANI</a></span></div></div>
+<p class="outcome">Admite contestatia si dispune remedierea</p></article><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2025/1058">Dosar 1058/2025</a></h2><span class="badge">Dosar finalizat</span></div>
+<div class="record-meta"><span>Complet C4</span><span>Prima înregistrare: 2025-03-31</span><span>Decizie fond: 1301 · 13.05.2025</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16547-urban-scope-srl">URBAN SCOPE SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/9410-administratia-strazilor-bucuresti">ADMINISTRATIA STRAZILOR BUCURESTI</a></span></div></div>
+<p class="outcome">Respinge pe fond</p></article><a class="" href="/firma/16547-urban-scope-srl">Vezi toate dosarele (19)</a><h3><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></h3><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2026/2912">Dosar 2912/2026</a></h2><span class="badge">În așteptare dosar achiziție</span></div>
+<div class="record-meta"><span>Complet C1</span><span>Prima înregistrare: Nedisponibil</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16817-quartz-matrix-srl">QUARTZ MATRIX SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div>
+</article><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2026/905">Dosar 905/2026</a></h2><span class="badge">Dosar finalizat</span></div>
+<div class="record-meta"><span>Complet C1</span><span>Prima înregistrare: 2026-03-12</span><span>Decizie fond: 1395 · 04.05.2026</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/16523-eco-sud-sa">ECO SUD SA</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div>
+<p class="outcome">Admite contestatia si dispune remedierea</p></article><article class="record"><div class="record-top"><h2><a class="" href="/dosare-cnsc/2025/4815">Dosar 4815/2025</a></h2><span class="badge">Dosar finalizat</span></div>
+<div class="record-meta"><span>Complet C4</span><span>Prima înregistrare: 2025-12-05</span><span>Decizie fond: 341 · 05.02.2026</span></div>
+<div class="parties"><div><span class="label">Contestator</span><span class="party"><a class="" href="/firma/17980-madcom-dls-impex-srl">MADCOM DLS IMPEX SRL</a></span></div><div><span class="label">Autoritate contractantă</span><span class="party"><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">SECTOR 5 (PRIMARIA SECTORULUI 5 BUCURESTI)</a></span></div></div>
+<p class="outcome">Admite contestatia si dispune remedierea</p></article><a class="" href="/autoritate/8967-sector-5-primaria-sectorului-5-bucuresti">Vezi toate dosarele (38)</a></section><section class="section" id="similare"><h2>Documente pentru aceeași cercetare</h2><p class="hint">Legăturile se bazează pe coduri CPV sau critici comune din buletin. Verificați faptele și motivarea fiecărui document.</p><div class="related-record"><h3><a class="" href="/acte-cnsc/4817">Decizie CNSC 3193/2024</a></h3><p>CPV 71335000-5 · Critică RA</p><p>Admite contestatia si dispune remedierea</p></div><div class="related-record"><h3><a class="" href="/acte-cnsc/28517">Decizie CNSC 1785/2016</a></h3><p>CPV 71335000-5 · Critică RA</p><p>Renuntari</p></div><div class="related-record"><h3><a class="" href="/acte-cnsc/9210">Decizie CNSC 1631/2023</a></h3><p>CPV 71335000-5</p><p>Respinge pe fond</p></div><div class="related-record"><h3><a class="" href="/acte-cnsc/9542">Decizie CNSC 1283/2023</a></h3><p>CPV 71335000-5</p><p>Respinge pe fond</p></div><div class="related-record"><h3><a class="" href="/acte-cnsc/12009">Decizie CNSC 1592/2022</a></h3><p>CPV 71335000-5</p><p>Exceptii</p></div></section><aside class="paid-cta"><div><p class="eyebrow">Pasul următor</p><h2>Aplică cercetarea la dosarul tău</h2><p>Analiză detaliată, comparații și redactare în instrumentele Achizia. Pentru instrumentele avansate ai nevoie de cont și abonament.</p></div><a class="button" href="/app?utm_source=biblioteca&amp;screen=datalake&amp;q=451%2F2025">Deschide instrumentele</a></aside></main><footer><strong>Achizia</strong><span>Cercetare publică. Instrumente pentru pasul următor.</span>
+<nav><a class="" href="/biblioteca">Bibliotecă</a><a class="active" href="/dosare-cnsc">Dosare</a><a class="" href="/decizii">Decizii</a><a class="" href="/incheieri">Încheieri</a><a class="" href="/buletin-cnsc">Buletin oficial</a><a class="" href="/cauta">Caută inteligent</a><a class="" href="/firme">Firme</a><a class="" href="/autoritati">Autorități</a><a class="" href="/ecosistem">Ecosistem Achizia</a><a class="" href="/contestatie-cnsc">Contestație CNSC</a><a class="" href="/contestatie-seap">Contestație SEAP</a><a class="" href="/#preturi">Instrumente și abonamente</a><a class="" href="/contact">Contact</a></nav></footer></body></html>

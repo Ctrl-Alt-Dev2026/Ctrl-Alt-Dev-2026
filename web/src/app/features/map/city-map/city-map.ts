@@ -14,12 +14,13 @@ import {
 } from '@angular/core';
 import type { Color, PickingInfo } from '@deck.gl/core';
 import { HexagonLayer } from '@deck.gl/aggregation-layers';
-import { IconLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
+import { IconLayer, PathLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
 import { MapboxOverlay } from '@deck.gl/mapbox';
 import { GeoJSONSource, IControl, Map as MlMap, NavigationControl, StyleSpecification } from 'maplibre-gl';
 import { dateRo, GRAVITATE, PRECISE } from '../../../core/format/labels';
 import { Camera } from '../../../core/models/camera';
 import { Accident, Hotspot } from '../../../core/models/contract';
+import { StreetFeature, StreetMetric, StreetProps } from '../../../core/models/streets';
 
 // Free, keyless basemap with OSM building heights; DEM tiles only shade the hills
 // (true 3D terrain would bury deck.gl columns on Copou/Bucium).
@@ -68,6 +69,70 @@ const APPLIED_LEVEL = 0.15;
 const PULSE_MS = 2400;
 const CLOSE_UP_ZOOM = 15;
 
+// One drawable polyline of a street (a street is a MultiLineString).
+interface StreetPath {
+  id: string;
+  path: [number, number][];
+  value: number;
+  props: StreetProps;
+}
+
+const EARTH_M = 40075016.686;
+
+/**
+ * Camera framing for a street: its main stretch (the longest piece plus pieces within 1.5 km of it, so a
+ * far-off fragment with the same name doesn't zoom the view out), its centre, its length along its own
+ * direction and its spread across it, and the bearing that lays it left to right (the one closer to `bearing`).
+ */
+function streetView(lines: [number, number][][], bearing: number) {
+  const all = lines.flat();
+  if (all.length < 2) return null;
+  const lat0 = all.reduce((s, p) => s + p[1], 0) / all.length;
+  const lon0 = all.reduce((s, p) => s + p[0], 0) / all.length;
+  const kx = 111320 * Math.cos((lat0 * Math.PI) / 180);
+  const ky = 110540;
+  const local = lines.map((line) => line.map(([lon, lat]) => [(lon - lon0) * kx, (lat - lat0) * ky] as const));
+  const length = (line: readonly (readonly [number, number])[]) =>
+    line.reduce((s, p, i) => (i ? s + Math.hypot(p[0] - line[i - 1][0], p[1] - line[i - 1][1]) : 0), 0);
+  const main = local.reduce((a, b) => (length(b) > length(a) ? b : a));
+  const xs = main.map((p) => p[0]);
+  const ys = main.map((p) => p[1]);
+  const [x1, x2, y1, y2] = [Math.min(...xs) - 1500, Math.max(...xs) + 1500, Math.min(...ys) - 1500, Math.max(...ys) + 1500];
+  const pts = local.filter((line) => line.some(([x, y]) => x >= x1 && x <= x2 && y >= y1 && y <= y2)).flat();
+
+  // Principal direction of the points (angle from east, counter-clockwise).
+  const mx = pts.reduce((s, p) => s + p[0], 0) / pts.length;
+  const my = pts.reduce((s, p) => s + p[1], 0) / pts.length;
+  let sxx = 0, syy = 0, sxy = 0;
+  for (const [x, y] of pts) {
+    sxx += (x - mx) ** 2;
+    syy += (y - my) ** 2;
+    sxy += (x - mx) * (y - my);
+  }
+  const theta = 0.5 * Math.atan2(2 * sxy, sxx - syy);
+  const [ux, uy] = [Math.cos(theta), Math.sin(theta)];
+  const range = (values: number[]) => {
+    const sorted = [...values].sort((a, b) => a - b);
+    const at = (q: number) => sorted[Math.min(sorted.length - 1, Math.floor(q * sorted.length))];
+    return [at(0.02), at(0.98)] as const;
+  };
+  const [u1, u2] = range(pts.map(([x, y]) => x * ux + y * uy));
+  const [v1, v2] = range(pts.map(([x, y]) => -x * uy + y * ux));
+  const [uc, vc] = [(u1 + u2) / 2, (v1 + v2) / 2];
+  const [cx, cy] = [uc * ux - vc * uy, uc * uy + vc * ux];
+
+  // Street azimuth (clockwise from north) minus 90° puts it horizontal on screen; pick the nearer of b, b + 180.
+  const b = 90 - (theta * 180) / Math.PI - 90;
+  const wrap = (a: number) => ((((a + 180) % 360) + 360) % 360) - 180;
+  const near = [wrap(b), wrap(b + 180)].sort((p, q) => Math.abs(wrap(p - bearing)) - Math.abs(wrap(q - bearing)))[0];
+  return {
+    center: [lon0 + cx / kx, lat0 + cy / ky] as [number, number],
+    length: Math.max(u2 - u1, 200),
+    width: Math.max(v2 - v1, 100),
+    bearing: near,
+  };
+}
+
 /**
  * deck.gl draws the data (hexagon columns, event dots, rank labels) on its own canvas above the map,
  * synced to the camera (interleaved mode clears the MapLibre 5 canvas). deck layers are only rebuilt
@@ -99,6 +164,12 @@ export class CityMap {
   readonly flyToPoint = input<[number, number] | null>(null);
   readonly cameras = input<Camera[]>([]);
   readonly selectedCameraId = input<string | null>(null);
+  readonly streets = input<StreetFeature[]>([]);
+  // Figure per street in the current source; null = not in that source (drawn nowhere).
+  readonly streetValue = input<Map<string, number | null>>(new Map());
+  readonly streetMetric = input<StreetMetric>('isu');
+  readonly selectedStreetId = input<string | null>(null);
+  readonly selectStreet = output<string>();
 
   readonly selectCamera = output<string>();
 
@@ -125,7 +196,14 @@ export class CityMap {
       this.rankOf();
       this.cameras();
       this.selectedCameraId();
+      this.streets();
+      this.streetValue();
+      this.selectedStreetId();
       untracked(() => this.render());
+    });
+    effect(() => {
+      const id = this.selectedStreetId();
+      untracked(() => this.focusStreet(id));
     });
     effect(() => {
       const id = this.selectedId();
@@ -209,6 +287,7 @@ export class CityMap {
       this.render();
       const p = this.flyToPoint();
       if (p) map.jumpTo({ center: p, zoom: 16.6, pitch: 62 });
+      else if (this.selectedStreetId()) this.focusStreet(this.selectedStreetId());
       else this.focus(this.selectedId());
       this.loop();
     });
@@ -325,13 +404,41 @@ export class CityMap {
     const selectedCamera = this.selectedCameraId();
     const pos = (a: Accident): [number, number] => [a.lon!, a.lat!];
     // Street level (or one location selected): columns would fill the screen, so each event shows
-    // as a dot coloured by severity instead.
-    const focused = selected !== null || this.closeUp;
+    // as a dot coloured by severity instead. With the street layer the streets carry the density, and a
+    // handful of precisely placed events would only make lone columns: dots there too.
+    const focused = selected !== null || this.closeUp || this.streets().length > 0;
+    const streetValue = this.streetValue();
+    const selectedStreet = this.selectedStreetId();
+    const paths: StreetPath[] = this.streets().flatMap((f) => {
+      const value = streetValue.get(f.properties.id);
+      return value == null ? [] : f.geometry.coordinates.map((path) => ({ id: f.properties.id, path, value, props: f.properties }));
+    });
+    const maxStreet = Math.max(1, ...paths.map((p) => p.value));
+    const streetColor = (p: StreetPath): Color =>
+      p.id === selectedStreet ? ACCENT_RGB : HEAT[Math.min(3, Math.floor((p.value / maxStreet) * 3.999))];
     const eventColor = (a: Accident): Color =>
       a.gravitate === 'deces' ? HEAT[3] : a.gravitate === 'grav' ? HEAT[2] : a.gravitate === 'usor' ? HEAT[1] : MUTED;
 
     this.overlay.setProps({
       layers: [
+        // Streets under everything else: the source figure sets colour and width, never a sum of sources.
+        new PathLayer<StreetPath>({
+          id: 'streets',
+          data: paths,
+          getPath: (p) => p.path,
+          getColor: streetColor,
+          getWidth: (p) => (p.id === selectedStreet ? 26 : 8 + 22 * (p.value / maxStreet)),
+          widthUnits: 'meters',
+          widthMinPixels: 2,
+          capRounded: true,
+          jointRounded: true,
+          opacity: 0.85,
+          pickable: true,
+          onClick: (info) => {
+            if (info.object) this.selectStreet.emit(info.object.id);
+          },
+          updateTriggers: { getColor: [selectedStreet, maxStreet], getWidth: [selectedStreet, maxStreet] },
+        }),
         new HexagonLayer<Accident>({
           id: 'density',
           data: precise,
@@ -442,7 +549,12 @@ export class CityMap {
     const o = info.object as (Accident & { count?: number; points?: unknown[] }) | undefined;
     if (!o) return null;
     let text: string;
-    if (info.layer?.id === 'density') {
+    if (info.layer?.id === 'streets') {
+      const p = (o as unknown as StreetPath).props;
+      const lines = [p.nume, `${p.isu_evenimente} intervenții ISU (2024–2026)`, `${p.presa_evenimente} relatări în presă (2026)`];
+      lines.push(p.pmud_2021 !== null ? `IPJ, PMUD: ${p.pmud_2020} accidente în 2020, ${p.pmud_2021} în 2021` : 'Nu apare în tabelul PMUD');
+      text = [...lines, 'Clic pentru detalii'].join('\n');
+    } else if (info.layer?.id === 'density') {
       const n = o.count ?? o.points?.length ?? 0;
       text = `${n} ${n === 1 ? 'eveniment localizat precis' : 'evenimente localizate precis'} în această zonă`;
     } else if (info.layer?.id.startsWith('camera')) {
@@ -474,15 +586,52 @@ export class CityMap {
     const duration = this.reducedMotion ? 0 : h ? 3200 : 2400;
     if (h) {
       this.map.flyTo({ center: [h.lon, h.lat], zoom: 16.3, pitch: 64, bearing: this.map.getBearing() + 40, padding, duration, essential: true });
-    } else {
+    } else if (!this.selectedStreetId()) {
+      // Leaving a location for a street must not fly home over the street's own camera move.
       this.map.flyTo({ ...HOME, padding, duration, essential: true });
     }
+  }
+
+  // Frames the street's main stretch across the screen: the camera turns so the street runs left to right,
+  // which keeps the whole stretch at a similar scale under the pitch.
+  private focusStreet(id: string | null): void {
+    if (!this.map || !this.ready || !id) return;
+    const f = this.streets().find((s) => s.properties.id === id);
+    if (!f) return;
+    const view = streetView(f.geometry.coordinates, this.map.getBearing());
+    if (!view) return;
+    const canvas = this.map.getCanvas();
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    // Wide screens float the title, legend and dock over the map; stacked ones put them outside it.
+    const padding = this.rightInset() > 0
+      ? { top: 7 * rem, bottom: 9 * rem, left: 3 * rem, right: this.rightInset() + 2 * rem }
+      : { top: 2 * rem, bottom: 2 * rem, left: 1.5 * rem, right: 1.5 * rem };
+    const width = Math.max(10 * rem, canvas.clientWidth - padding.left - padding.right);
+    const height = Math.max(8 * rem, canvas.clientHeight - padding.top - padding.bottom);
+    // Metres per pixel needed for the length across, and for the width up the (pitched, so foreshortened) screen.
+    const mpp = Math.max((view.length * 1.2) / width, (view.width * 2.2) / height, 1.2);
+    const zoom = Math.log2((EARTH_M * Math.cos((view.center[1] * Math.PI) / 180)) / (512 * mpp));
+    this.map.flyTo({
+      center: view.center,
+      zoom: Math.min(16.4, Math.max(12.6, zoom)),
+      bearing: view.bearing,
+      pitch: 50,
+      padding,
+      duration: this.reducedMotion ? 0 : 2200,
+      essential: true,
+    });
   }
 
   // Pulse through MapLibre paint properties; deck is rebuilt only while columns are moving.
   private loop(): void {
     const map = this.map!;
     const tick = (now: number) => {
+      // Keep the map still behind an open camera. Continuous pulse repainting
+      // competes with video decoding, frame capture and CPU inference.
+      if (this.selectedCameraId() || document.hidden) {
+        this.frame = requestAnimationFrame(tick);
+        return;
+      }
       const phase = (now % PULSE_MS) / PULSE_MS;
       if (map.getLayer('hotspot-pulse')) {
         map.setPaintProperty('hotspot-pulse', 'circle-stroke-opacity', 0.8 * (1 - phase));

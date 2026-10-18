@@ -1,0 +1,7 @@
+{
+  "url": "https://www.reddit.com/r/iasi/comments/1f6gn9i/o_noua_zi_in_ia%C8%99i/",
+  "status": 200,
+  "content_type": "text/html",
+  "sample_observation": "HTTP200 public HTML response; no usable accident record established.",
+  "retention_note": "Page payload removed after source inspection."
+}

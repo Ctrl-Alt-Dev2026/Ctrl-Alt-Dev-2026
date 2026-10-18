@@ -1,0 +1,203 @@
+{
+  "checked_local_date": "2026-10-18",
+  "pmud": {
+    "source": "https://vision4iasi.ro/wp-content/uploads/2023/11/PMUD-Iasi-FINAL.pdf",
+    "printed_page": 73,
+    "table": "2.11",
+    "scope": "Municipiul Iasi; selected high-accident streets; aggregate rows, not events",
+    "rows": [
+      {
+        "street_as_printed": "Bd. Alexandru cel Bun",
+        "crashes_2020": 16,
+        "crashes_2021": 6
+      },
+      {
+        "street_as_printed": "Str. Bucium",
+        "crashes_2020": 18,
+        "crashes_2021": 23
+      },
+      {
+        "street_as_printed": "Bd. Carol I",
+        "crashes_2020": 19,
+        "crashes_2021": 16
+      },
+      {
+        "street_as_printed": "Calea Chisinaului",
+        "crashes_2020": 12,
+        "crashes_2021": 8
+      },
+      {
+        "street_as_printed": "Bd. Independentei",
+        "crashes_2020": 10,
+        "crashes_2021": 9
+      },
+      {
+        "street_as_printed": "Bd. Nicolae Iorga",
+        "crashes_2020": 12,
+        "crashes_2021": 15
+      },
+      {
+        "street_as_printed": "str. Nicolina",
+        "crashes_2020": 40,
+        "crashes_2021": 43
+      },
+      {
+        "street_as_printed": "Str. Pacurari",
+        "crashes_2020": 17,
+        "crashes_2021": 16
+      },
+      {
+        "street_as_printed": "Str. Sf. Lazăr",
+        "crashes_2020": 7,
+        "crashes_2021": 11
+      },
+      {
+        "street_as_printed": "Bd. Socola",
+        "crashes_2020": 13,
+        "crashes_2021": 7
+      },
+      {
+        "street_as_printed": "Str. Tudor Vladimirescu",
+        "crashes_2020": 4,
+        "crashes_2021": 16
+      },
+      {
+        "street_as_printed": "Str. Vasile Lupu",
+        "crashes_2020": 16,
+        "crashes_2021": 12
+      }
+    ]
+  },
+  "isu_samples": [
+    {
+      "source": "https://isuis.igsu.ro/resources/ae87d9e9-2f76-4f04-88aa-2f2d5fe1c640.pdf",
+      "bulletin_number": 561,
+      "publication_date": "2026-05-15",
+      "intervention_date": "2026-05-13",
+      "intervention_local_time": "10:25",
+      "collision_exact_time": null,
+      "street": "soseaua Bucium",
+      "locality": "Iasi",
+      "vehicles": [
+        "car",
+        "car"
+      ],
+      "persons_reported_injured": 2,
+      "persons_transported_to_hospital": 1,
+      "official_police_severity": null,
+      "coordinates": null,
+      "cause": null
+    },
+    {
+      "source": "https://isuis.igsu.ro/resources/c8d6ff3d-c936-4b84-a859-c01b2d7df181.pdf",
+      "bulletin_number": 574,
+      "publication_date": "2026-05-18",
+      "intervention_date": "2026-05-16",
+      "intervention_local_time": "11:12",
+      "collision_exact_time": null,
+      "street": "soseaua Nicolina",
+      "locality": "Iasi",
+      "vehicles": [
+        "bus",
+        "car"
+      ],
+      "persons_reported_with_minor_trauma": 3,
+      "persons_transported_to_hospital": 3,
+      "official_police_severity": null,
+      "coordinates": null,
+      "cause": null
+    }
+  ],
+  "ins_county": {
+    "source": "http://statistici.insse.ro:8077/tempo-ins/",
+    "geography": "Iasi county",
+    "rows": [
+      {
+        "year": 2024,
+        "injury_crashes": 1389,
+        "deaths_30day": 56,
+        "injured": 1695
+      },
+      {
+        "year": 2025,
+        "injury_crashes": 1462,
+        "deaths_30day": 58,
+        "injured": 1799
+      }
+    ]
+  },
+  "cmt_subset": {
+    "source": "https://politialocala-iasi.ro/wp-content/uploads/2026/03/RAPORT-DE-EVALUARE-2025.pdf",
+    "printed_page": 26,
+    "scope": "camera-observed events monitored in CMT",
+    "rows": [
+      {
+        "year": 2024,
+        "with_victims": 140,
+        "without_victims": 500
+      },
+      {
+        "year": 2025,
+        "with_victims": 127,
+        "without_victims": 432
+      }
+    ]
+  },
+  "procurement": [
+    {
+      "_id": 19999,
+      "Autoritate contractanta": "Orasul Ardud",
+      "CUI": 3897173,
+      "Numar notificare": "DAN2097644",
+      "Data publicare": "2024-01-22T14:40:37",
+      "Denumire": "Servicii de realizare Audit de Siguranta Rutiera, stadiul 1, pentru obiectivul de investitii Varianta de Ocolire Ardud, lungime 5,780 km",
+      "Cod CPV": "79212000-3",
+      "Denumire CPV": "Servicii de auditare (Rev.2)",
+      "Tip contract": "Servicii",
+      "Modalitate desfasurare": "Offline",
+      "Valoare atribuita (RON)": "17,340",
+      "Fonduri comunitare?": "Nu",
+      "Denumire program": "",
+      "Data atribuire": "2024-01-22T14:40:21",
+      "Ofertant": "Autoritatea Rutiera Romana A.R.R",
+      "CUI ofertant": "12059648",
+      "rank": 0.0706241
+    },
+    {
+      "_id": 2768,
+      "Autoritate contractanta": "Municipiul Bistrita",
+      "CUI autoritate contractanta": 4347569,
+      "Numar achizitie directa": "DA37200778",
+      "Data publicare": "2024-12-16T15:21:34",
+      "Denumire achizitie": "Elaborare Studiu trafic pt Pr.  ”Extindere sistem de management al traficului Mun Bistrita” Etapa 3",
+      "Cod CPV": "79311100-8",
+      "Denumire CPV": "Servicii de elaborare de studii (Rev.2)",
+      "Tip contract": "Servicii",
+      "Finantare prin fonduri comunitare?": "Nu",
+      "Denumire program": "",
+      "Data finalizare": "2024-12-18T08:25:08",
+      "Valoare achizitie (RON)": 203054.4,
+      "Ofertant castigator": "Smart Technology Research & Consulting",
+      "CUI ofertant castigator": "RO31897462",
+      "rank": 0.208034
+    },
+    {
+      "_id": 45495,
+      "Autoritate contractanta": "MUNICIPIUL VASLUI",
+      "CUI autoritate contractanta": 3337532,
+      "Numar achizitie directa": "DA37245691",
+      "Data publicare": "2024-12-20T14:27:06",
+      "Denumire achizitie": "Servicii de elaborare Studiu de trafic pentru ~Culoar de mobilitate urbana durabila str Decebal",
+      "Cod CPV": "71311220-9",
+      "Denumire CPV": "Servicii de inginerie rutiera (Rev.2)",
+      "Tip contract": "Servicii",
+      "Finantare prin fonduri comunitare?": "Nu",
+      "Denumire program": "",
+      "Data finalizare": "2024-12-23T10:26:17",
+      "Valoare achizitie (RON)": 2500,
+      "Ofertant castigator": "GS BUSINESS SOLUTIONS",
+      "CUI ofertant castigator": "36795439",
+      "rank": 0.344984
+    }
+  ]
+}

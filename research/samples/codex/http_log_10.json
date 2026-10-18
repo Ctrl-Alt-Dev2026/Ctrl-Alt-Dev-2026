@@ -1,0 +1,61 @@
+[
+  {
+    "id": "cnair_apps",
+    "url": "https://www.andnet.ro/proiecte/index.php",
+    "checked_utc": "2026-10-17T21:43:40.408716+00:00",
+    "status": 200,
+    "final_url": "https://www.andnet.ro/proiecte/index.php",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 42157,
+    "map_context": "               <img class=\"card-img-top\" src=\"noduriautostrazi.png\" alt=\"Card image cap\" style=\"object-fit: cover\">\n\n                <!-- Card content -->\n                <div class=\"card-body\">\n\n                  <h5 class=\"my-3\">Harta Noduri Autostrazi</h5>\n                  <p class=\"card-text text-uppercase mb-3\">Harta Noduri Autostrazi Online</p>\n\n                </div>\n\n              </a>\n              <!-- Card -->\n\n              <!-- Card -->\n              <a class=\"card hoverable mb-4 waves-effect\" target=\"_blank\">\n\n                <!-- Card image -->\n                <img class=\"card-img-top\" src=\"punctenegre.png\" alt=\"Card image cap\" style=\"object-fit: cover\">\n\n                <!-- Card content -->\n                <div class=\"card-body\">\n\n                  <h5 class=\"my-3\">Harta Puncte Negre</h5>\n                  <p class=\"card-text text-uppercase mb-3\">Harta Puncte Negre Online</p>\n\n                </div>\n\n              </a>\n              <!-- Card -->\n\n\n              <!-- Card -->\n              <a class=\"card hoverable mb-4 waves-effect\">\n\n                <!-- Card image -->\n                <img class=\"card-img-top\" src=\"hartawim.png\" alt=\"Card image cap\" style=\"object-fit: cover\">\n\n                <!-- Card content -->\n                <div class=\"card-body\">\n\n                  <h5 class=\"my-3\">Harta WIM-uri</h5>\n                  <p class=\"card-text text-uppercase mb-3\">Harta WIM-uri Online</p>\n\n                </div>\n\n              </a>\n              <!-- Card -->\n\n\n\n            </div>\n            <!-- Grid column -->\n\n            <!-- Grid column -->\n            <div class=\"col-md-6 col-lg-4\">\n\n              <!-- Card -->\n              <a class=\"card hoverable mb-4 waves-effect\" href=\"https://andnet.ro/dispecerat/dispecerat.php?acces=4025\" target=\"_blank"
+  },
+  {
+    "id": "cestrin_map_2022",
+    "url": "https://www.cestrin.ro/assets/pdf/recensamant%202022.pdf",
+    "checked_utc": "2026-10-17T21:43:42.009791+00:00",
+    "status": 200,
+    "final_url": "https://www.cestrin.ro/assets/pdf/recensamant%202022.pdf",
+    "content_type": "application/pdf",
+    "bytes": 128140
+  },
+  {
+    "id": "baar_statistics",
+    "url": "https://www.baar.ro/statistici/",
+    "checked_utc": "2026-10-17T21:43:43.611227+00:00",
+    "status": 200,
+    "final_url": "https://www.baar.ro/statistici/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 186571,
+    "links": [
+      "https://www.baar.ro/wp-content/uploads/2025/10/Sinteza-jurisprudenta-despagubiri-morale.pdf",
+      "https://www.baar.ro/wp-content/uploads/2025/02/evolutie-cost-piese-inlocuite-2020-2024.pdf",
+      "https://www.baar.ro/wp-content/uploads/2026/05/evolutie-tarif-ora-manopera-2022-2025.pdf",
+      "https://www.asfromania.ro/ro/a/3054/2024---rapoarte-piata-asigurarilor",
+      "https://www.baar.ro/wp-content/uploads/2026/05/Statistici_RCA_2026.pdf",
+      "https://www.baar.ro/wp-content/uploads/2024/06/evolutie-cost-piese-inlocuite-2020-2023-2024-05-28.pdf",
+      "https://www.baar.ro/wp-content/uploads/2021/08/2021-08-12-Statistici-BAAR-piese-H1-2021.pdf",
+      "https://www.baar.ro/wp-content/uploads/2023/03/2023-03-15-Statistici-BAAR-piese-2022-vs-2021.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/07/EVOLUTIA-COSTURILOR-PIESELOR-SI-A-PRETULUI-OREI-DE-MANOPERA-2019-2022-IN-DEVIZELE-DE-REPARATII-2019-2022S1-2022-07-25.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/02/2022-02-10-Statistici-BAAR-piese-EoY-2021.pdf",
+      "https://www.baar.ro/wp-content/uploads/2020/05/analiza-costuri-reparatii-date-audatex-2017-2020.pdf",
+      "https://www.baar.ro/wp-content/uploads/2020/01/raport-evolutie-indicatori-auto-20200123.pdf",
+      "https://www.baar.ro/wp-content/uploads/2020/01/raport-distributie-autovehicule-9mo-2019.pdf",
+      "https://www.baar.ro/wp-content/uploads/2019/09/RapInchirieriAuto092019.pdf",
+      "https://www.baar.ro/wp-content/uploads/2019/08/Raport-vechime-autovehicule-2019.pdf",
+      "https://www.baar.ro/wp-content/uploads/2019/07/Analiza-costuri-reparatie-RCA-2016-2018.pdf",
+      "https://www.baar.ro/wp-content/uploads/2019/03/2019-03-06-Statistici-BAAR.pdf",
+      "https://www.baar.ro/wp-content/uploads/2021/05/2020-05-14-Statistici-BAAR-piese-2019-2020.pdf",
+      "https://www.insuranceeurope.eu/statistics",
+      "https://www.baar.ro/wp-content/uploads/2025/01/Ghid_pentru_solutionarea_daunelor_morale_ed_2012-site.pdf"
+    ]
+  },
+  {
+    "id": "ngo_streets",
+    "url": "https://strazipentruoameni.net/echipa",
+    "checked_utc": "2026-10-17T21:43:45.807061+00:00",
+    "status": 200,
+    "final_url": "https://strazipentruoameni.net/echipa",
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 3240657
+  }
+]

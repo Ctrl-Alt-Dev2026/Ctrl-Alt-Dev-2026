@@ -1,0 +1,131 @@
+Data record description Accident Atlas|
+map application of the statistical offices of the Federation and the Länder
+Column name     Content
+ID              Serial number
+ULAND           Land
+                01 = Schleswig-Holstein
+                02 = Hamburg
+                03 = Niedersachsen
+                04 = Bremen
+                05 = Nordrhein-Westfalen (data as from 2019)
+                06 = Hessen
+                07 = Rheinland-Pfalz (data as from 2017)
+                08 = Baden-Württemberg
+                09 = Bayern
+                10 = Saarland (data as from 2017)
+                11 = Berlin (data as from 2018)
+                12 = Brandenburg (data as from 2017)
+                13 = Mecklenburg-Vorpommern (data as from
+                     2020)
+                14 = Sachsen
+                15 = Sachsen-Anhalt
+                16 = Thüringen (data as from 2019)
+UREGBEZ         Administrative region                                 form the official Municipality Code.
+UKREIS          Administrative district                               For coding see:
+UGEMEINDE       Municipality                                          https://www.destatis.de/DE/ZahlenFakten/
+                                                                      LaenderRegionen/Regionales/Gemeindeve
+                                                                      rzeichnis/Administrativ/Archiv/GVAuszugQ
+                                                                      /AuszugGV3QAktuell.html
+UJAHR           Year of accident
+UMONAT          Month of accident
+USTUNDE         Hour of accident
+UWOCHENTAG      Day of the week
+                1 = sunday
+                2 = monday
+                3 = tuesday
+                4 = wednesday
+                5 = thursday
+                6 = friday
+                7 = saturday
+UKATEGORIE      Road traffic accidents involving personal
+                injury
+                1 = Accident with persons killed
+                2 = Accident with seriously injured
+                3 = Accident with slightly injured
+UART            Kind of accident                                      Definitions and methodological
+                1 = Collision with another vehicle which starts,      explanations are given at
+                  stops or is stationary
+                2 = Collision with another vehicle moving ahead
+                  or waiting
+                3 = Collision with another vehicle moving laterally   https://www.destatis.de/EN/Themes/Societ
+                  in the same direction                               y-Environment/Traffic-
+                4 = Collision with another oncoming vehicle           Accidents/Methods/basic-concept-traffic-
+                5 = Collision with another vehicle which turns        accident.pdf?__blob=publicationFile
+                  into or crosses a road
+                6 = Collision between vehicle and pedestrian
+                7 = Collision with an obstacle in the carriageway
+                8 = Leaving the carriageway to the right
+                9 = Leaving the carriageway to the left
+                0 = Accident of another kind
+UTYP1          Type of accident                                      Definitions and methodological
+               1 = Driving accident                                  explanations are given at
+               2 = Accident caused by turning off the road
+               3 = Accident caused by turning into a road or by
+                   crossing it
+               4 = Accident caused by crossing the road              https://www.destatis.de/EN/Themes/Societ
+               5 = Accident involving stationary                     y-Environment/Traffic-
+               6 = Accident between vehicles moving along in         Accidents/Methods/basic-concept-traffic-
+                   carriageway                                       accident.pdf?__blob=publicationFile
+               7 = Other accident
+ULICHTVERH     Light conditions:
+               0 = daylight
+               1 = twilight
+               2 = darkness
+IstRad         Accident with bicycle
+               0 = Accident without any bicycle involved
+               1 = accident in which at least one bicycle was
+                    involved
+IstPKW         Accident with passenger car
+               0 = Accident without any passenger car involved
+               1 = accident in which at least one passenger car
+                    was involved
+IstFuss        Accident with pedestrian:
+               0 = Accident without any pedestrian involved
+               1 = accident in which at least one pedestrian was
+                    involved
+IstKrad        Accident with motorcycle:
+               0 = Accident without any passenger car involved
+               1 = accident in which at least one passenger car
+                   was involved
+IstGkfz        Accident with goods road vehicle:
+               accident in which at least one delivery van or
+               motor lorry with a total weight of more than 3.5
+               tonnes, a motor lorry with a container for
+               dangerous goods on the loading area or with a
+               special body, a semi-trailer truck or other tractor
+               was involved (for 2016 and 2017, this category is
+               included under “accident with other”)
+               0 = Accident without any goods road vehicle
+                   involved
+               1 = accident in which at least one goods road
+                   vehicle was involved
+IstSonstige    Accident with other:
+               accident in which at least one means of transport
+               not mentioned above was involved, e.g. a truck, a
+               bus or a tram
+               0 = Accident without any means of transport not
+                   mentioned above involved
+               1 = accident in which at least one means of
+                   transport not mentioned above was involved
+USTRZUSTAND/   road surface conditions:
+istStrasse     0 = dry
+               1 = wet/damp/slippery
+               2 = slippery (winter)
+LINREFX        X-Coordinate (EPSG:25832)                             Coordinates of the place of accident in the
+LINREFY        Y-Coordinate (EPSG:25832)                             road section
+                                                                     (UTM coordinates of the reference system
+                                                                     ETRS89, zone 32N)
+ XGCSWGS84          X-Coordinate                                        The geo-coordinates XGCSWGS84 and
+ YGCSWGS84          Y-Coordinate                                        YGCSWGS84 of the place of accident in the
+                                                                        road section
+                                                                        (geographic coordinate in decimal degree
+                                                                        format of the reference system WGS84).
+ PLST               Plausibility check level:
+                    1: Successful location check according to regular
+                       proceedings
+                    2: Successful location check according to
+                       advanced proceedings for accidents involving
+                       bicycles
+List of Municipalities: https://www.destatis.de/EN/Themes/Countries-Regions/Regional-Statistics/_node.html
+Methods: https://www.destatis.de/EN/Themes/Society-Environment/Traffic-Accidents/_node.html
+

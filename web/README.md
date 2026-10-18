@@ -9,17 +9,18 @@ npm ci
 npm run build:local
 ```
 
-Pornește FastAPI din rădăcina repository-ului conform [ghidului local](../docs/LOCAL_DEVELOPMENT.md). Interfața este servită la [8000/ui/](http://127.0.0.1:8000/ui/), pe aceeași origine cu API-ul. Modul implicit este observat; fără publicație, harta explică starea goală și permite importul. Repetiția sintetică trebuie pregătită separat, conform ghidului.
-
-Pentru dezvoltare, `npm start` pornește Angular pe portul 4200, cu proxy `/api` către 127.0.0.1:8000. Proxy-ul păstrează Host/Origin; nu adăuga CORS larg pentru a ocoli verificările locale.
+Interfața are o singură variantă, online: citește setul de date pe care serverul îl colectează la fiecare 30 de minute (comunicate ISU Iași, presă, PMUD) și îl păstrează în SQLite (`runtime/safeiasi.sqlite3`). Toți cei care deschid pagina văd aceleași date. Nu mai există build mock, fixture-uri în `public/data` sau comutator observat/sintetic.
 
 | Comandă | Rezultat |
 |---|---|
-| `npm run build:local` | Build HTTP cu baza `/ui/`, servit de FastAPI |
-| `npm run build:mock` | Prototip static sintetic, fără scrieri |
-| `npm run build:pages` | Același prototip static, cu baza GitHub Pages |
-| `npm run build` | Build HTTP cu baza implicită, pentru altă găzduire |
+| `npm run backend` | FastAPI pe :8000 cu colectarea automată pornită (`SAFEIASI_LIVE=1`); creează `.venv` la prima rulare |
+| `npm start` | Angular pe :4200, cu proxy `/api` către 127.0.0.1:8000 |
+| `npm run build:local` | Build cu baza `/ui/`, servit de FastAPI |
+| `npm run build` | Build cu baza implicită (folosit de imaginea nginx) |
+| `docker compose up --build` (din rădăcină) | api + web (nginx) pe http://localhost:8080, datele într-un volum |
 
-Build-urile statice nu sunt fallback pentru API și nu validează fixture-urile vechi. După un build static, reconstruiește `build:local` pentru `/ui/`. Helper-ul limitează paralelismul local; dependențele nu sunt schimbate.
+După `git clone` sau `git pull`, serverul pornește din datele reale salvate în `isu/seed/` (fără descărcări), apoi colectează doar ce e nou. Ca să-ți partajezi datele colegilor: `npm run backend:share` (sau `python -m isu --seed`) și fă commit la `isu/seed/`.
+
+Camerele live folosesc backend-ul Python pentru detecție YOLO11/YOLO-World, tracking și semnale de verificat. Instalare separată din rădăcină: `.venv\Scripts\python.exe -m pip install -r requirements-vision.txt`, apoi `.venv\Scripts\python.exe -m safecross.live_setup`. În cameră, marchează conturul trecerii pentru verificarea luminii în zona ei. [Configurare și limite](../docs/LIVE_VISION.md).
 
 Contracte și reguli: [PLAN.md](PLAN.md), [CLAUDE.md](CLAUDE.md), [handoff API](../docs/FRONTEND_HANDOFF.md). Rezultate și limite: [verificarea integrării](../docs/FRONTEND_INTEGRATION.md). Repository-ul nu configurează un runner Angular de teste; integrarea a fost verificată prin build și browser, plus testele Python ale backend-ului.

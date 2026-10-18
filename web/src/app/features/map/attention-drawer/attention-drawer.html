@@ -1,0 +1,45 @@
+<dialog #dialog class="glass" aria-labelledby="attention-title" (close)="closed.emit()" (click)="backdrop($event)">
+  <header>
+    <h2 id="attention-title">Străzi de verificat întâi</h2>
+    <button type="button" class="btn close" (click)="close()" aria-label="Închide">✕</button>
+  </header>
+  <p class="rule muted">
+    Ordinea: câte semnale independente are strada (top ISU, top IPJ, gravitate, mai multe relatări în presă, pietoni),
+    apoi numărul de intervenții ISU. E o ordine pentru verificarea în teren, nu un scor de risc. Regula e fixată în
+    <code>isu/README.md</code>.
+  </p>
+
+  @if (store.attentionStreets().length === 0) {
+    <p class="empty">Nicio stradă nu are cel puțin două semnale în datele actuale.</p>
+  } @else {
+    <ol>
+      @for (f of store.attentionStreets(); track f.properties.id) {
+        <li>
+          <div class="head">
+            <span class="rank">{{ f.properties.prioritate }}</span>
+            <h3>{{ f.properties.nume }}</h3>
+            <button type="button" class="btn" (click)="pick(f.properties.id)">Arată pe hartă</button>
+          </div>
+          <dl class="figures">
+            <div><dt>ISU</dt><dd>{{ f.properties.isu_evenimente }}</dd></div>
+            <div><dt>Presă</dt><dd>{{ f.properties.presa_evenimente }}</dd></div>
+            <div><dt>IPJ 2021</dt><dd>{{ f.properties.pmud_2021 ?? '—' }}</dd></div>
+          </dl>
+          <h4>De ce</h4>
+          <ul>
+            @for (s of f.properties.semnale; track s.text) {
+              <li>{{ s.text }}</li>
+            }
+          </ul>
+          <h4>De verificat în teren</h4>
+          <ul>
+            @for (c of f.properties.de_verificat; track c) {
+              <li>{{ c }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ol>
+  }
+  <p class="foot muted">Sursele nu se adună și pot descrie același accident. Decizia aparține Comisiei de circulație.</p>
+</dialog>

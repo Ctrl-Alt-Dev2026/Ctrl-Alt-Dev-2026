@@ -1,0 +1,75 @@
+[
+  {
+    "id": "pmud_2023_final",
+    "url": "https://vision4iasi.ro/wp-content/uploads/2023/11/PMUD-Iasi-FINAL.pdf",
+    "checked_utc": "2026-10-17T21:44:40.300486+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 21217528,
+    "final_url": "https://vision4iasi.ro/wp-content/uploads/2023/11/PMUD-Iasi-FINAL.pdf",
+    "sample_note": "Large PDF held in memory; extracted text saved"
+  },
+  {
+    "id": "vision_robots",
+    "url": "https://vision4iasi.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:44:46.158256+00:00",
+    "status": 500,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 2749,
+    "final_url": "https://vision4iasi.ro/robots.txt"
+  },
+  {
+    "id": "pmud_consultation_notice",
+    "url": "https://www.primaria-iasi.ro/dm_iasi/portal.nsf/atasament/DC04654B0AE0AB25C2258A130023400D/%24FILE/Anunt%20dezbatere%20PMUD.pdf",
+    "checked_utc": "2026-10-17T21:44:40.301506+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 535047,
+    "final_url": "https://www.primaria-iasi.ro/dm_iasi/portal.nsf/atasament/DC04654B0AE0AB25C2258A130023400D/%24FILE/Anunt%20dezbatere%20PMUD.pdf"
+  },
+  {
+    "id": "council_2024_traffic_minutes",
+    "url": "https://www.primaria-iasi.ro/dm_iasi/hotarari.nsf/E507E978D40587ECC2258AEE00476274/%24FILE/anunt%20PV%20sed%20cl%20din%2028.02.2024%20%20.pdf?Open=",
+    "checked_utc": "2026-10-17T21:44:42.215760+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 1637933,
+    "final_url": "https://www.primaria-iasi.ro/dm_iasi/hotarari.nsf/E507E978D40587ECC2258AEE00476274/%24FILE/anunt%20PV%20sed%20cl%20din%2028.02.2024%20%20.pdf?Open="
+  },
+  {
+    "id": "services_public_2025",
+    "url": "https://www.spiasi.ro/documente/buget/raport2025.pdf",
+    "checked_utc": "2026-10-17T21:44:40.301506+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 1218215,
+    "final_url": "https://www.spiasi.ro/documente/buget/raport2025.pdf"
+  },
+  {
+    "id": "baar_rca_2026",
+    "url": "https://www.baar.ro/wp-content/uploads/2026/05/Statistici_RCA_2026.pdf",
+    "checked_utc": "2026-10-17T21:44:40.302507+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 282641,
+    "final_url": "https://www.baar.ro/wp-content/uploads/2026/05/Statistici_RCA_2026.pdf"
+  },
+  {
+    "id": "germany_metadata",
+    "url": "https://www.opengeodata.nrw.de/produkte/transport_verkehr/unfallatlas/DSB_Unfallatlas_EN.pdf",
+    "checked_utc": "2026-10-17T21:44:42.136684+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 138839,
+    "final_url": "https://www.opengeodata.nrw.de/produkte/transport_verkehr/unfallatlas/DSB_Unfallatlas_EN.pdf"
+  },
+  {
+    "id": "waze_about_verified",
+    "url": "https://support.google.com/waze/partners/answer/10618477?hl=en",
+    "checked_utc": "2026-10-17T21:44:42.493714+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 1532695,
+    "final_url": "https://support.google.com/waze/partners/answer/10618477?hl=en"
+  }
+]

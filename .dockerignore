@@ -1,0 +1,14 @@
+# Build context for deploy/*.Dockerfile: code and small data only.
+.git
+.venv
+**/__pycache__
+**/node_modules
+web/.angular
+web/dist
+web/.playwright-mcp
+.playwright-mcp
+runtime
+isu/cache
+research
+docs
+context/cache
