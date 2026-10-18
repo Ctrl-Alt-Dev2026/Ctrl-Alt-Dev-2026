@@ -1,6 +1,8 @@
 """Bounded live frame sessions. No stored images, remote stream fetching, or accident writes."""
 
+import base64
 from dataclasses import dataclass, field
+import os
 import struct
 import threading
 import time
@@ -15,6 +17,10 @@ from safecross.live_detector import LiveDetector, VisionError
 MAX_FRAME_BYTES = 2 * 1024 * 1024
 MAX_SESSIONS = 16
 SESSION_TTL = 120
+# Serverless hosts (Vercel) spread one viewer's requests over several instances, each with its own memory. With
+# SAFEIASI_VISION_STATELESS=1 the session id also carries its configuration, so an instance that never saw the
+# session recreates it (tracking starts again there). Deleted or expired sessions stay rejected where they were known.
+STATELESS = os.environ.get("SAFEIASI_VISION_STATELESS") == "1"
 
 
 class Crosswalk(BaseModel):
@@ -86,8 +92,10 @@ class Session:
 
 
 class LiveVision:
-    def __init__(self, detector_factory=LiveDetector):
+    def __init__(self, detector_factory=LiveDetector, stateless=None):
         self.sessions = {}
+        self.stateless = STATELESS if stateless is None else stateless
+        self.ended = set()
         self.lock = threading.Lock()
         self.inference_lock = threading.Lock()
         self.detector_factory, self.detector = detector_factory, None
@@ -95,16 +103,42 @@ class LiveVision:
     def create(self, config):
         with self.lock:
             now = time.monotonic()
-            self.sessions = {key: value for key, value in self.sessions.items() if now - value.touched < SESSION_TTL}
-            if len(self.sessions) >= MAX_SESSIONS:
-                raise VisionError(429, "vision_session_limit", "Prea multe camere active. Închide o cameră și reîncearcă.")
+            self._prune(now)
             key = uuid4().hex
+            if self.stateless:
+                key += "." + base64.urlsafe_b64encode(config.model_dump_json().encode()).decode().rstrip("=")
             self.sessions[key] = Session(config)
             return {"session_id": key, "expires_in_s": SESSION_TTL, "max_frame_bytes": MAX_FRAME_BYTES}
 
+    def _prune(self, now):
+        expired = {key for key, value in self.sessions.items() if now - value.touched >= SESSION_TTL}
+        self._end(*expired)
+        if len(self.sessions) >= MAX_SESSIONS:
+            raise VisionError(429, "vision_session_limit", "Prea multe camere active. Închide o cameră și reîncearcă.")
+
+    def _end(self, *keys):
+        if len(self.ended) > 1024:
+            self.ended.clear()
+        for key in keys:
+            self.sessions.pop(key, None)
+            self.ended.add(key)
+
+    def _restore(self, key):
+        """Stateless mode: a session created on another instance, rebuilt from the configuration in its id."""
+        if not self.stateless or key in self.ended:
+            return None
+        try:
+            _, encoded = key.split(".", 1)
+            config = SessionConfig.model_validate_json(base64.urlsafe_b64decode(encoded + "=" * (-len(encoded) % 4)))
+        except ValueError:  # no configuration, bad base64 or an invalid configuration
+            return None
+        self._prune(time.monotonic())
+        self.sessions[key] = session = Session(config)
+        return session
+
     def delete(self, key):
         with self.lock:
-            self.sessions.pop(key, None)
+            self._end(key)
 
     def process(self, key, data, sequence, media_time):
         # Do not build a stale inference queue when a second viewer or client is faster.
@@ -112,9 +146,9 @@ class LiveVision:
             raise VisionError(429, "vision_busy", "Detectorul procesează alt cadru. Reîncearcă pe cadrul curent.")
         try:
             with self.lock:
-                session = self.sessions.get(key)
+                session = self.sessions.get(key) or self._restore(key)
                 if session is None or time.monotonic() - session.touched > SESSION_TTL:
-                    self.sessions.pop(key, None)
+                    self._end(key)
                     raise VisionError(404, "vision_session_expired", "Sesiunea camerei a expirat. Reconectează analiza.")
                 if sequence <= session.sequence or media_time <= session.media_time:
                     raise VisionError(409, "stale_frame", "Cadrul este vechi sau a fost deja analizat.")

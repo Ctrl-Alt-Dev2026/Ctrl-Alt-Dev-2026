@@ -73,6 +73,15 @@ class LiveApiTests(unittest.TestCase):
         self.app.state.live_vision.sessions[key].touched -= 121
         self.assertEqual(404, self.frame(key).status_code)
 
+    def test_stateless_session_is_rebuilt_on_another_instance(self):
+        self.app.state.live_vision = LiveVision(FakeDetector, stateless=True)
+        key = self.open()
+        self.app.state.live_vision = LiveVision(FakeDetector, stateless=True)  # another instance, empty memory
+        self.assertEqual(200, self.frame(key).status_code)
+        self.assertEqual(204, self.client.delete(f"/api/v1/vision/sessions/{key}").status_code)
+        self.assertEqual(404, self.frame(key, 1, 2).status_code)
+        self.assertEqual(404, self.frame(key.split(".")[0] + ".bm90LWpzb24").status_code)
+
     def test_bounded_bytes_type_and_jpeg_validation(self):
         key = self.open()
         for data, content_type, status in ((b"invalid", "image/jpeg", 422), (self.jpeg, "image/png", 415), (b"x" * (MAX_FRAME_BYTES + 1), "image/jpeg", 413)):

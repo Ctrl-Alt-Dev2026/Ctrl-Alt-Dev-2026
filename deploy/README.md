@@ -126,6 +126,8 @@ Differences from Cloud Run:
   4.5 MB request body (camera frames are at most 2 MiB). On 1 vCPU the camera analysis is slower.
 - **Cold starts**: after 5 idle minutes the next visitor waits for a new instance of a 3.5 GB image; the first camera
   frame then loads YOLO again (~15 s).
-- **Camera sessions** live in one instance's memory. If Vercel routes a frame to another instance the session is
-  unknown there; with demo traffic there is usually one instance.
+- **Camera sessions**: Vercel spreads one viewer's frames over several instances, each with its own memory.
+  `SAFEIASI_VISION_STATELESS=1` puts the camera settings in the session id, so any instance rebuilds the session;
+  tracking (and the signals that need several frames) restarts when a frame lands on another instance, and each
+  new instance loads YOLO once (~15 s).
 - `Dockerfile.vercel` repeats `deploy/api.Dockerfile` (Vercel builds one file, with no target): change both together.

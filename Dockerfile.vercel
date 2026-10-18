@@ -39,5 +39,7 @@ ENV PORT=80
 # give each instance its own data. With it off every instance serves the dataset baked into the image (isu/seed/),
 # and the UI says that automatic collection is off. New data = refresh isu/seed/, commit, push (Vercel redeploys).
 ENV SAFEIASI_LIVE=0
+# Several instances may serve one viewer: the camera session id carries its settings (safecross/live.py).
+ENV SAFEIASI_VISION_STATELESS=1
 EXPOSE 80
 CMD ["sh", "-c", "exec uvicorn api.main:app --host 0.0.0.0 --port \"$PORT\" --proxy-headers --forwarded-allow-ips '*'"]
