@@ -72,7 +72,29 @@ class ExtractionService:
         # model/cache writes; multiple Uvicorn workers need a shared lock/store.
         self._lock = threading.RLock()
 
-    def extract(self, article: dict, pipeline: str = "hybrid") -> dict:
+    def test_gemini(self):
+        from .gemini_client import test_connection
+        with self._lock:
+            return test_connection()
+
+    def extract_gemini_csv(self, limit=None, cache_only=True):
+        from .gemini_pipeline import run_gemini_csv
+        with self._lock:
+            return run_gemini_csv(limit=limit, cache_only=cache_only)
+
+    def extract_clean_csv(self, source=None, output=None, pipeline="hybrid", limit=None):
+        """One internal flow: clean CSV -> model relevance -> selected CSV -> extraction."""
+        from .press_pipeline import run_press_pipeline
+        if pipeline not in PIPELINES:
+            raise ValueError("unsupported extraction pipeline")
+        if limit is not None and limit <= 0:
+            raise ValueError("limit must be positive")
+        with self._lock:
+            return run_press_pipeline(self, source, output, pipeline, limit)
+
+    def extract(self, article: dict | None = None, pipeline: str = "hybrid") -> dict:
+        if article is None:
+            return self.extract_clean_csv(pipeline=pipeline)
         article = validate_article(article)
         if pipeline not in PIPELINES:
             raise ValueError("unsupported extraction pipeline")

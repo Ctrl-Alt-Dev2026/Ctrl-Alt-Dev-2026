@@ -33,6 +33,25 @@ class ReplayRequest(BaseModel):
     article_id: StrictStr = Field(min_length=1)
 
 
+class PressCsvRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    mode: Literal["press_csv"]
+    pipeline: Literal["rules", "direct", "evidence", "agreement", "hybrid"] = "hybrid"
+    limit: int | None = Field(default=None, gt=0, le=2000)
+
+
+class GeminiCsvRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    mode: Literal["gemini_csv"]
+    limit: int | None = Field(default=None, gt=0, le=2000)
+    cache_only: bool = True
+
+
+class GeminiTestRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    mode: Literal["gemini_test"]
+
+
 @lru_cache(maxsize=1)
 def get_service():
     # No provider connection, fixture read or cache directory creation at startup.
@@ -52,15 +71,29 @@ def register_ai(application):
 
 
 @router.post("/api/v1/ai/extract", summary="Extract pending candidates; never approve events")
-def extract(request: ExtractRequest | ReplayRequest, service: ExtractionService = Depends(get_service)):
+def extract(request: ExtractRequest | ReplayRequest | PressCsvRequest | GeminiCsvRequest | GeminiTestRequest, service: ExtractionService = Depends(get_service)):
     try:
+        if isinstance(request, GeminiTestRequest):
+            return service.test_gemini()
+        if isinstance(request, GeminiCsvRequest):
+            result = service.extract_gemini_csv(limit=request.limit, cache_only=request.cache_only)
+            status_code = 409 if result.get("status") == "cache_miss" else (503 if result["errors"] else 200)
+            return JSONResponse(status_code=status_code, content=result,
+                                headers={"X-AI-Provider": "gemini"})
         if isinstance(request, ReplayRequest):
             return service.replay(request.article_id)
-        result = service.extract(request.article.model_dump(), request.pipeline)
+        if isinstance(request, PressCsvRequest):
+            result = service.extract_clean_csv(pipeline=request.pipeline, limit=request.limit)
+        else:
+            result = service.extract(request.article.model_dump(), request.pipeline)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
     except KeyError as exc:
         raise HTTPException(status_code=404, detail="saved synthetic replay not found") from exc
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail="CSV-ul clean nu există în scraping/ pe server.") from exc
     return JSONResponse(status_code=503 if result["errors"] else 200, content=result)
 
 

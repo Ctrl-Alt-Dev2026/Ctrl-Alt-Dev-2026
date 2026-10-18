@@ -1,94 +1,90 @@
-# Știri despre accidente cu pietoni în Iași
+# Colectarea și exportul textelor din presă
 
-Fișierele Python au nume descriptive: scraper_stiri.py (fost news.py), procesare_articole_ai.py (fost team_ai.py), test_scraper_stiri.py și test_procesare_articole_ai.py. Folosește comenzile actualizate de mai jos.
+Acest director se ocupă numai de colectare, curățare și export. Nu importă modulul ai/, nu apelează modele și nu decide dacă un pieton traversa regulamentar. Integrarea cu extracția AI și verificarea eligibilității se fac separat, după export.
 
-Scraper_stiri descarcă listările și articolele, extrage textul din HTML și aplică filtrele de candidați. Procesare_articole_ai convertește CSV-ul în contractul modulului colegului și, opțional, îl apelează. Cu --doar-pregatire nu se face inferență AI și nu se elimină articole după relevanță. Testele verifică aceste componente, fără scraping live sau Ollama.
+## Ce fișiere rulezi
 
-Cleanup-ul se face în două locuri: extract() din scraper_stiri.py elimină elemente HTML de interfață înainte de extragere; curata_text_articol() din procesare_articole_ai.py elimină numai eticheta finală „Lasă un răspuns Anulează răspunsul” din textele CSV existente. Acesta din urmă nu șterge documente. Filtrarea relevanței este separată, în prefilter()/classify() și în rezultatele modulului AI.
+| Fișier | Rol |
+|---|---|
+| scraper_stiri.py | Citește listările Local BZI/Ziarul de Iași, selectează preliminar URL-uri, descarcă articole și extrage textul din HTML. |
+| curata_si_exporta_articole.py | Citește un CSV existent, elimină eticheta de comentarii de la final și exportă CSV curățat + JSON pentru predare. Nu accesează internetul. |
+| test_scraper_stiri.py, test_curata_si_exporta_articole.py | Teste offline, fără accesarea publicațiilor sau a vreunui model. |
 
-Fișierul pregătit pentru coleg este [predare_ai/articole_v2.json](predare_ai/articole_v2.json), cu [instrucțiuni de rulare](predare_ai/CITESTE-MA.md). Pentru actualizări periodice, vezi [AUTOMATIZARE.md](AUTOMATIZARE.md).
+Exportul se face exclusiv cu biblioteca standard Python; singurele dependențe externe din requirements.txt sunt pentru colectarea și parsarea paginilor.
 
-Pentru trimiterea textelor colectate către modulul AI existent al colegului, vezi [PROCESARE_ARTICOLE_AI.md](PROCESARE_ARTICOLE_AI.md). Scraperul extrage textul din HTML; modulul AI extrage informațiile despre accident din acel text. Păstrează atât textul, cât și URL-ul. Verificatorul separat scraping.verify a fost eliminat.
+## 1. Instalare și colectare
 
-Colector pentru BZI și Ziarul de Iași, fără API comercial, date oficiale sau model AI. Rulează din rădăcina repository-ului, cu Python 3.10+. Datele sunt relatări observate în presă, nu accidente validate. Nu modifică datele aplicației, fixture-urile sau harta.
-
-## Pornire în PowerShell
+Din rădăcina proiectului, cu Python 3.10+:
 
 ```powershell
 python -m pip install -r scraping/requirements.txt
-python -m scraping.scraper_stiri --de-la 2026-01-01 --pana-la 2026-10-17 --max-taskuri 200
+python -m scraping.scraper_stiri --de-la 2026-01-01 --pana-la 2026-10-17 --pauza 15 --max-taskuri 200
 ```
 
-Repetă aceeași comandă pentru a continua. Intervalul este inclusiv; `--pana-la` înseamnă **sfârșitul intervalului**, spre deosebire de scriptul inițial. Implicit: de la 1 ianuarie 2026 până la ziua rulării. Bugetul limitează taskurile, nu cererile HTTP: citirea robots.txt necesită o cerere suplimentară per domeniu și proces.
+--max-taskuri limitează taskurile succesive dintr-o rulare, nu concurența. Un task este o listare, un sitemap sau un articol; robots.txt poate necesita cereri suplimentare. Repetarea comenzii continuă din scraping/data/colectare.sqlite3. Un singur proces per director și domeniu. Ctrl+C păstrează progresul confirmat. --pana-la este inclusiv; dacă lipsește, se folosește ziua rulării.
 
-Modul implicit este acum rapid: se citesc paginile Local în ordine, se caută cuvinte-cheie în titlu, rezumatul cardului și URL, apoi se descarcă numai articolele selectate. Include `accident`, `pieton`, `trecere`, `călcat`, `lovit`, `mortal`, `mort`, `decedat`, `acroșat`, `spulberat`, `rănit` și alte variante. Lipsa tuturor acestor indicii poate omite o știre relevantă; pentru o cercetare suplimentară poți folosi `--exhaustiv`.
+Se filtrează preliminar după titlu, rezumat și URL; apoi se descarcă paginile articolelor selectate. Termenii includ accident, pieton, trecere, călcat, lovit, mortal, mort, rănit și variante. --exhaustiv permite și articolele fără acești termeni. Body-ul este extras din HTML-ul articolului; nu este doar o descriere din listare. Completitudinea nu este garantată pentru orice structură de pagină.
 
-Dacă ai pornit versiunea veche, oprește cu Ctrl+C și rulează aceeași comandă. Coada existentă se refiltrează automat, iar paginile deja descărcate sunt recitite din cache. Nu este nevoie să ștergi baza sau să folosești `--actualizeaza`. Articolele eliminate de prefiltru primesc starea `filtered`, păstrând URL-ul și indiciile din listare.
+## 2. Curățare și export pentru coleg
 
-Pentru o primă verificare scurtă:
+Pentru cel mai recent CSV generat de scraper:
 
 ```powershell
-python -m scraping.scraper_stiri --max-taskuri 8 --pauza 5
+python -m scraping.curata_si_exporta_articole --intrare scraping/data/candidati.csv --director scraping/data/predare
 ```
 
-Coada este în `scraping/data/colectare.sqlite3`. Rulările folosesc același inventar indiferent de interval; exportul se recalculează din articolele deja procesate. Pentru o colectare independentă folosește alt `--director`. Rulează un singur proces per director și per domeniu, pentru a păstra limitarea cererilor.
+Comanda produce articole_curatate.csv, articole_v2.json și raport_pregatire.json. Este exclusiv locală și folosește numai biblioteca standard Python.
 
-## Ce primești
-
-- `inventar_urluri.csv`: toate linkurile descoperite, inclusiv cele filtrate, încă nedescărcate sau cu erori; conține și titlul/rezumatul/data din listare când sunt disponibile.
-- `articole.jsonl`: corpul integral extras din fiecare articol procesat, metadate, proveniență și indicii cu dovezi. Păstrează și articolele din afara intervalului pentru audit.
-- `candidati.csv`: articole cu indicii de pieton/traversare și impact, publicate în interval sau cu data publicării necunoscută. Include accidente cu răniți, decese și consecințe încă necunoscute. Nu este o listă de accidente confirmate.
-- `raport.json`: numere pe sursă/tip/stare, taskuri rămase, erori și momentele de reîncercare (Unix UTC).
-- `cache/`: răspunsurile descărcate. Nu este trimis în Git.
-
-Consola afișează câte carduri și câte articole selectate are fiecare listare, apoi `CANDIDAT` sau `NERELEVANT DUPĂ TEXT` pentru articolele procesate. Exportul se actualizează după fiecare articol și periodic în timpul descoperirii; nu trebuie să aștepți sfârșitul rulării.
-
-Valorile necunoscute sunt `null` în JSON și celule goale în CSV. Un `true` din clasificare este **un indiciu textual pentru review**, nu confirmare oficială. `mentiune_trecere` nu dovedește că pietonul se afla pe marcaj. `municipiul_iasi` caută o mențiune explicită a municipiului/orașului; simplul „Iași”, numele unui cartier sau categoria Local nu stabilesc geografia. Nu se deduce automat vinovăția, viteza ori vizibilitatea.
-
-`data_accidentului` este o **dată posibilă extrasă dintr-o propoziție despre accident**, numai când există o singură dată explicită distinctă. Necesită verificare: poate aparține unui alt episod. Nu este copiată din data publicării. Ora nu este inventată. `accident_in_interval=false` semnalează inclusiv articole judiciare recente despre accidente vechi; acestea rămân vizibile în candidați pentru audit. Verifică ambele câmpuri de interval înainte de includerea într-un set final.
-
-## Descoperire și reluare
-
-Pornirea include arhivele Local ale ambelor publicații. Se urmărește doar pagina următoare, evitând salturile spre ultima pagină a arhivei. Sitemap-urile sunt opționale (`--sitemap`), deoarece pot aduce foarte multe articole din alte secțiuni și perioade. URL-urile sunt normalizate și deduplicate; fiecare origine se păstrează separat.
-
-Se oprește extinderea unei ramuri de paginare când toate cardurile principale au date explicite anterioare începutului intervalului. Dacă există date necunoscute, continuă. Această optimizare presupune o arhivă ordonată de la nou la vechi; o arhivă reordonată poate omite rezultate. Limita superioară filtrează în continuare exportul; colectarea poate traversa paginile mai noi decât aceasta. Adâncimea maximă implicită este 1000; nu reprezintă o garanție de acoperire a arhivei. Raportul nu pretinde un procent de completitudine.
-
-Poți separa fazele sau selecta o sursă:
+Pentru setul fix de demo deja inclus în repository:
 
 ```powershell
-python -m scraping.scraper_stiri --faza descoperire --max-taskuri 100
-python -m scraping.scraper_stiri --faza articole --max-taskuri 200
-python -m scraping.scraper_stiri --surse zdi --max-taskuri 50
+python -m scraping.curata_si_exporta_articole --intrare scraping/articole_extrase_accident_raw.csv --director scraping/predare_ai --csv-curatat scraping/articole_extrase_accident_clean.csv
+```
+
+Originalul raw rămâne păstrat. Pentru setul actual: 94 rânduri, 94 URL-uri unice, 37 de texte cu eticheta finală eliminată și 94 de articole în JSON. Curățarea nu elimină documente după relevanță. CSV-ul păstrează toate rândurile și coloanele; JSON-ul deduplică numai URL-urile identice. Raportul arată separat aceste numere.
+
+Trimite colegului [predare_ai/articole_v2.json](predare_ai/articole_v2.json) sau CSV-ul clean. [Formatul exportului](EXPORT_TEXTE.md) conține detaliile. Integrarea ulterioară îi poate verifica pe pietonul care traversa regulamentar, impactul, rănirea/decesul, localitatea și data reală a accidentului; acestea nu sunt criterii validate de export.
+
+## Ce se salvează în scraping/data/
+
+- colectare.sqlite3: inventar, progres și textele deja parsate.
+- cache/: răspunsurile HTML, pentru reparsare locală.
+- inventar_urluri.csv: toate URL-urile descoperite, cu stări și indicii din listare.
+- articole.jsonl: toate articolele procesate, inclusiv cele care nu trec filtrul de candidați.
+- candidati.csv: articole cu indicii de pieton/traversare și accident/impact, publicate în interval sau cu data publicării necunoscută.
+- raport.json: stări, taskuri rămase și erori.
+
+Cele 946 de articole din backup sunt toate articolele procesate la acel moment. Cele 94 din CSV-ul fix de demo au trecut filtrul de cuvinte-cheie și de publicare. Nu sunt 94 de accidente confirmate; curățarea textului nu a produs această selecție. Câmpurile de clasificare sunt indicii prin reguli, nu verdict AI, confirmare a traversării regulamentare sau aprobare pentru hartă. Data publicării nu este data accidentului.
+
+## Export fără cereri noi și reluare din backup
+
+```powershell
 python -m scraping.scraper_stiri --export-only --de-la 2026-01-01 --pana-la 2026-10-17
 ```
 
-Implicit se alternează o listare și două articole selectate, când coada permite. `--exhaustiv` reactivează și articolele `filtered`, păstrând progresul deja făcut. Pentru reevaluarea textelor disponibile după alte reguli, nu este nevoie de cereri noi.
+Aceasta reconstruiește exporturile din baza existentă, fără accesarea publicațiilor. Un alt interval schimbă exportul, nu șterge textele din SQLite.
 
-Linkurile găsite prin căutare web pot completa inventarul. Pune URL-uri absolute, unul pe linie, într-un fișier UTF-8; liniile cu `#` sunt comentarii. Acceptă doar cele două domenii selectate, fără a accesa alte gazde.
+Pentru restaurare, oprește scraperul și pune colectare.sqlite3 din ZIP în <proiect>/scraping/data/colectare.sqlite3. Salvează separat o eventuală bază locală înainte de înlocuire. Cu codul actualizat, colectarea continuă fără cache HTML: articolele done au deja textul în SQLite. Nu folosi --actualizeaza pentru simpla continuare; ar rearma și articolele descărcate. Baza și cache-ul rămân ignorate de Git; distribuie backupul separat. [Instrucțiuni de automatizare](AUTOMATIZARE.md).
 
-```powershell
-python -m scraping.scraper_stiri --urluri scraping/urluri.txt --max-taskuri 100
-```
+## Opțiuni și limite
 
-La erori temporare, taskul rămâne în coadă, cu reîncercare progresivă; după cinci eșecuri intră în `error`. HTTP 429 respectă `Retry-After` și suspendă domeniul. HTTP 403 suspendă domeniul o oră. robots.txt inaccesibil nu este interpretat ca permisiune. URL-urile interzise devin `blocked`. Redirecturile sunt raportate pentru verificare, fără urmărire automată. Pentru un redirect legitim, adaugă manual destinația acceptată în fișierul cu URL-uri.
+- --surse bzi sau --surse zdi: o singură publicație.
+- --faza descoperire sau --faza articole: separă descoperirea de procesarea articolelor.
+- --urluri fisier.txt: URL-uri absolute suplimentare, unul pe linie, numai din domeniile selectate.
+- --sitemap: urmărește și sitemap-urile declarate de site, inclusiv alte secțiuni/perioade.
+- --director cale: alt director de colectare.
+- --reincearca: rearmează erorile/blocările, cu reverificarea robots.txt și păstrarea pauzei domeniului.
+- --actualizeaza: golește cache-ul taskurilor terminate și le rearmează pentru o nouă descărcare.
+- --noutati: verifică paginile recente, păstrând articolele deja descărcate.
 
-```powershell
-python -m scraping.scraper_stiri --reincearca --max-taskuri 100
-python -m scraping.scraper_stiri --actualizeaza --max-taskuri 200
-```
+Paginarea urmărește pagina imediat următoare și se oprește la o pagină cu toate cardurile datate înaintea începutului intervalului. Presupune arhive cronologice; pagini reordonate, articole neindexate sau termeni lipsă pot produce omisiuni. Nu se garantează acoperirea completă.
 
-`--reincearca` rearmează erorile și blocările, dar verifică din nou robots.txt și păstrează pauza domeniului. `--actualizeaza` golește cache-ul taskurilor terminate și le rearmează, pentru știri actualizate sau o nouă parcurgere a listărilor. Este o operație asupra întregului director de colectare. Dacă nu mai există taskuri eligibile acum, rularea se încheie și exportă raportul; repetă comanda după expirarea pauzelor. Ctrl+C păstrează progresul deja confirmat; descoperirile taskului întrerupt sunt refăcute la reluare.
+Pauza implicită este 5 secunde; crawl-delay o poate crește. HTTP 429 respectă Retry-After, 403 amână domeniul o oră, iar erorile temporare au reîncercare progresivă. După cinci eșecuri taskul intră în error. robots.txt inaccesibil nu este considerat permisiune. Redirecturile sunt raportate pentru verificare. Verifică raport.json înainte de reluări repetate.
 
-Pentru identificare poți seta `--user-agent "SafeIasiResearch/1.0 (+contact real)"`. Pauza implicită este 5 secunde, ajustabilă, minimum o secundă; crawl-delay din robots.txt poate crește pauza.
-
-## Review necesar înainte de hartă
-
-Verifică în text: municipiul, data reală a accidentului, pietonul rănit, poziția pe trecere și relatarea explicită a neacordării priorității. Păstrează cazurile neclare separat. Două articole despre aceeași zi și aceeași stradă nu sunt automat același accident. `incident_id` rămâne gol până la asocierea umană; nu număra rândurile CSV ca accidente și nu calcula risc direct din volumul știrilor.
-
-## Verificări
+## Teste
 
 ```powershell
-python -m unittest scraping.test_scraper_stiri -v
+python -m unittest scraping.test_scraper_stiri scraping.test_curata_si_exporta_articole -v
 ```
 
-Testele sunt offline: metadate JSON-LD, paragrafe scurte, containerul editorial ZDI, paginare, sitemap XML, deduplicare/proveniență, reluarea cozii, 429, robots.txt indisponibil, roșu la semafor, data accidentului diferită de publicare și exportul erorilor. Verificarea live limitată din 17 octombrie 2026 a descărcat patru listări BZI/ZDI și trei articole (două BZI, unul ZDI), cu corp și dată extrase. Nu validează întreaga arhivă sau precizia clasificării; modificările site-urilor pot necesita ajustarea selectorilor.
+Testele acoperă parsarea, paginarea, cache-ul, reluarea din SQLite fără HTML, erorile, curățarea și exportul. Nu validează semantic toate știrile și nu necesită modulul ai/.

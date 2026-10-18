@@ -8,6 +8,15 @@ The same backend now also serves the [recurring-pattern investigator](patterns/R
 
 ## Backend integration
 
+Pentru echipă, `{"mode":"gemini_csv","cache_only":true}` folosește pachetul
+[cache_presa](cache_presa/README.md), fără cheie sau apeluri Gemini. Modul doar cache
+este implicit; lipsa unui lot returnează 409. Apelurile API cer explicit
+`cache_only:false`. `work/` și cheia locală rămân ignorate de Git.
+
+Pentru Gemini: `mode: "gemini_csv"` citește CSV-ul clean, cere filtrare și extracție împreună prin API și folosește validarea existentă. Configurarea cheii și testarea în Postman sunt în [GEMINI.md](GEMINI.md). Nu necesită Ollama. `mode: "gemini_test"` verifică doar conexiunea printr-o cerere scurtă.
+
+`gemini_csv` returnează JSON cu `articole_valide`, clasificarea și extracțiile (`extragere.candidates`), direct utilizabil în aplicație. Exporturile și cache-ul se păstrează local fără consum AI suplimentar. Fluxul local Qwen (`press_csv`) este disponibil separat; nu este apelat de modul Gemini. Modul demonstrativ `demo_csv` și experimentul Selenium au fost eliminate. Vezi [PRESS_PIPELINE.md](PRESS_PIPELINE.md).
+
 The proposed backend seam in `docs/BACKEND_WORK_PLAN.md` is available:
 
 ```python
@@ -84,7 +93,7 @@ Configuration can also be passed directly with `ExtractionConfig`. Model weights
 .\.venv\Scripts\python.exe -m ai --pipelines hybrid
 ```
 
-Defaults read the current `false_data/articles.json` and write only to ignored `ai/work/`. A single `hybrid` or `agreement` selection computes its dependencies; it does not read stale results from another input. `--articles`, `--out`, `--cache`, `--model`, `--base-url`, and `--limit` are supported. The CLI rejects output/cache paths inside the shared `false_data/` and returns nonzero on model failures.
+Fără o intrare explicită, modulul citește automat CSV-ul clean din scraping, îl filtrează cu Qwen și rulează apoi extracția numai pe CSV-ul validat, într-un singur flux hybrid. Diagnosticul explicit --pipelines rules păstrează rularea offline pe false_data/articles.json. Pentru benchmark-uri, --articles cu JSON explicit păstrează comportamentul anterior. --out, --cache, --model, --base-url și --limit sunt disponibile, dar nu sunt necesari pași separați pentru filtrare/extracție. Exporturile sunt sub ai/work/, iar căile din false_data/ sunt protejate.
 
 The five alternatives are `rules` (no model), `direct` (one model pass returns values/evidence), `evidence` (one model pass chooses bounded sentence IDs, then deterministic normalization), `agreement` (two correlated model passes, abstain on disagreement), and `hybrid` (rules plus an AI second reading, with review flags).
 

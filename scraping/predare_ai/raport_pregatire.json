@@ -6,6 +6,6 @@
   "texte_curatate": 37,
   "regula_cleanup": "Elimină exclusiv eticheta finală: Lasă un răspuns Anulează răspunsul",
   "filtrare_relevanta": false,
-  "limita": null,
-  "articole_exportate": 94
+  "articole_exportate": 94,
+  "csv_curatat": "scraping\\articole_extrase_accident_clean.csv"
 }

@@ -25,11 +25,11 @@ Pentru programare locală:
 
 Nu rula simultan alt scraper în același director. Respectă pauzele și blocările sursei; programarea nu le ocolește. Pentru a exclude temporar BZI, adaugă --surse zdi.
 
-După colectare, fișierul pentru AI se regenerează fără inferență:
+După colectare, textele se curăță și se exportă local:
 
-    python -m scraping.procesare_articole_ai --doar-pregatire --intrare scraping/data/candidati.csv --director scraping/data/predare_periodica
+    python -m scraping.curata_si_exporta_articole --intrare scraping/data/candidati.csv --director scraping/data/predare_periodica
 
-Fișierul demo din scraping/predare_ai/ rămâne un set fix de 94 de articole. Nu este rescris de comanda de mai sus. Poți programa conversia după terminarea colectării; dacă vrei întregul flux, lansează ulterior și modulul AI, cu director/cache propriu. O simplă programare a scraperului nu publică automat evenimente pe hartă.
+Fișierul demo din scraping/predare_ai/ rămâne un set fix de 94 de articole. Nu este rescris de comanda de mai sus. Poți programa conversia după terminarea colectării. Integrarea AI și selecția articolelor eligibile sunt etape separate, realizate de utilizator după export. Scrapingul nu lansează aceste etape și nu publică automat evenimente pe hartă.
 
 ## Ce poți spune la demo
 

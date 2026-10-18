@@ -37,6 +37,25 @@ class RouterTests(unittest.TestCase):
         self.assertEqual("2.0", response.json()["schema_version"])
         self.assertEqual("pending", response.json()["candidates"][0]["review_status"])
 
+    def test_postman_press_mode_runs_complete_internal_flow(self):
+        service = Mock()
+        service.extract_clean_csv.return_value = {"status": "completed", "valid": 1, "extracted": 1, "errors": []}
+        app.dependency_overrides[get_service] = lambda: service
+        response = self.client.post("/api/v1/ai/extract",
+                                    json={"mode": "press_csv", "pipeline": "hybrid", "limit": 3})
+        self.assertEqual(response.status_code, 200)
+        service.extract_clean_csv.assert_called_once_with(pipeline="hybrid", limit=3)
+        service.extract.assert_not_called()
+        self.assertEqual(response.json()["extracted"], 1)
+
+    def test_press_mode_rejects_invalid_limit_and_reports_missing_csv(self):
+        service = Mock()
+        app.dependency_overrides[get_service] = lambda: service
+        self.assertEqual(self.client.post("/extract", json={"mode": "press_csv", "limit": 0}).status_code, 422)
+        service.extract_clean_csv.assert_not_called()
+        service.extract_clean_csv.side_effect = FileNotFoundError("missing.csv")
+        self.assertEqual(self.client.post("/extract", json={"mode": "press_csv"}).status_code, 404)
+
     def test_invalid_contract_and_untrusted_coordinates_are_422(self):
         for article in ({"text": "incomplete"}, {**ARTICLE, "lat": 47.0}):
             self.assertEqual(422, self.client.post("/extract", json={"article": article}).status_code)
