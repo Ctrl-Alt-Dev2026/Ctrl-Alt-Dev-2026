@@ -68,6 +68,15 @@ class Rezultat:
     candidati: list[dict] = field(default_factory=list)
 
     def ca_dict(self) -> dict:
+        link_osm = None
+        if self.referinte_osm:
+            link_osm = f"https://www.openstreetmap.org/{self.referinte_osm[0]}"
+        elif self.lat is not None and self.lon is not None:
+            link_osm = f"https://www.openstreetmap.org/?mlat={self.lat}&mlon={self.lon}#map=17/{self.lat}/{self.lon}"
+        elif self.punct_orientativ:
+            p_lat, p_lon = round(self.punct_orientativ[0], 6), round(self.punct_orientativ[1], 6)
+            link_osm = f"https://www.openstreetmap.org/?mlat={p_lat}&mlon={p_lon}#map=16/{p_lat}/{p_lon}"
+
         return {
             "loc_text": self.loc_text,
             "lat": self.lat,
@@ -77,9 +86,10 @@ class Rezultat:
             "metoda": self.metoda,
             "incredere": self.incredere,
             "punct_orientativ": (
-                {"lat": self.punct_orientativ[0], "lon": self.punct_orientativ[1]}
+                {"lat": round(self.punct_orientativ[0], 6), "lon": round(self.punct_orientativ[1], 6)}
                 if self.punct_orientativ else None
             ),
+            "link_osm": link_osm,
             "unitate_admin": self.unitate_admin,
             "referinte_osm": self.referinte_osm,
             "avertismente": self.avertismente,
@@ -306,6 +316,9 @@ class Rezolvator:
             f"„{nume}” corespunde mai multor străzi OSM: "
             + "; ".join(f"{c.nume} ({c.unitate or '?'})" for c in comps[:4])
         )
+        if rez.punct_orientativ is None:
+            rez.punct_orientativ = comps[0].punct
+        self._noteaza_strada(rez, comps[0])
         return None
 
     def _e_zona(self, nume: str) -> bool:

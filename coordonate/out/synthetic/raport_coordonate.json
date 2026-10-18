@@ -1,5 +1,5 @@
 {
- "generat_la": "2026-10-17T18:10:10+0300",
+ "generat_la": "2026-10-18T10:26:20+0300",
  "data_mode": "synthetic",
  "intrare": "false_data/accidents.json",
  "iesire": "coordonate/out/synthetic/accidents.json",
@@ -11,29 +11,30 @@
  },
  "statistici": {
   "nr_evenimente": 17,
-  "nr_localizate_precis": 0,
-  "nr_cu_coordonate": 2,
-  "nr_fara_coordonate": 15,
+  "nr_localizate_precis": 2,
+  "nr_cu_coordonate": 4,
+  "nr_fara_coordonate": 13,
   "nr_in_iasi": 16,
   "nr_in_afara_iasi": 1,
   "nr_in_iasi_necunoscut": 0,
   "pe_precizie": {
-   "vag": 15,
+   "vag": 13,
+   "intersectie": 2,
    "strada": 2
   },
   "pe_metoda": {
-   "zona_osm": 15,
+   "zona_osm": 13,
+   "nod_cunoscut_verificat": 2,
    "strada_osm": 2
   },
   "pe_incredere": {
-   "scazuta": 15,
-   "medie": 2
+   "scazuta": 13,
+   "medie": 2,
+   "ridicata": 2
   },
   "nr_procesate_acum": 17,
-  "nr_de_verificat_manual": 17,
-  "noduri_neverificate_potrivite": {
-   "podu-ros": 2
-  }
+  "nr_de_verificat_manual": 15,
+  "noduri_neverificate_potrivite": {}
  },
  "retea": {
   "sursa": "index OSM local (osmnx)",
@@ -62,9 +63,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1505621,
-    "lon": 27.5865091
+    "lat": 47.150562,
+    "lon": 27.586509
    },
+   "link_osm": "https://www.openstreetmap.org/node/5964858917",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/5964858917"
@@ -111,28 +113,24 @@
   {
    "event_id": "ev-002",
    "loc_text": "trecerea de la Podu Roș",
-   "lat": null,
-   "lon": null,
-   "precizie_loc": "vag",
+   "lat": 47.15143,
+   "lon": 27.587805,
+   "precizie_loc": "intersectie",
    "in_iasi": true,
-   "metoda": "zona_osm",
-   "incredere": "scazuta",
+   "metoda": "nod_cunoscut_verificat",
+   "incredere": "ridicata",
    "punct_orientativ": {
-    "lat": 47.1505621,
-    "lon": 27.5865091
+    "lat": 47.15143,
+    "lon": 27.587805
    },
+   "link_osm": "https://www.openstreetmap.org/node/244529560",
    "unitate_admin": "Iași",
    "referinte_osm": [
-    "node/5964858917"
+    "node/244529560"
    ],
    "avertismente": [],
-   "de_verificat": [
-    "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
-    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
-   ],
-   "noduri_neverificate": [
-    "podu-ros"
-   ],
+   "de_verificat": [],
+   "noduri_neverificate": [],
    "intentie": {
     "este_trecere": true,
     "este_intersectie": false,
@@ -155,13 +153,13 @@
    },
    "candidati_osm": [
     {
-     "osm": "node/5964858917",
-     "nume": "Podu Roș",
-     "fel": "loc",
-     "clasa": null,
-     "tip": "neighbourhood",
-     "lat": 47.1505621,
-     "lon": 27.5865091
+     "nod_cunoscut": "podu-ros",
+     "osm": "node/244529560",
+     "strazi": [
+      "Bulevardul Țuțora",
+      "Piața Podu Roș",
+      "Podu Roș"
+     ]
     }
    ]
   },
@@ -175,9 +173,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1505621,
-    "lon": 27.5865091
+    "lat": 47.150562,
+    "lon": 27.586509
    },
+   "link_osm": "https://www.openstreetmap.org/node/5964858917",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/5964858917"
@@ -222,28 +221,24 @@
   {
    "event_id": "ev-004",
    "loc_text": "intersecția de la Podu Roș",
-   "lat": null,
-   "lon": null,
-   "precizie_loc": "vag",
+   "lat": 47.15143,
+   "lon": 27.587805,
+   "precizie_loc": "intersectie",
    "in_iasi": true,
-   "metoda": "zona_osm",
-   "incredere": "scazuta",
+   "metoda": "nod_cunoscut_verificat",
+   "incredere": "ridicata",
    "punct_orientativ": {
-    "lat": 47.1505621,
-    "lon": 27.5865091
+    "lat": 47.15143,
+    "lon": 27.587805
    },
+   "link_osm": "https://www.openstreetmap.org/node/244529560",
    "unitate_admin": "Iași",
    "referinte_osm": [
-    "node/5964858917"
+    "node/244529560"
    ],
    "avertismente": [],
-   "de_verificat": [
-    "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
-    "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
-   ],
-   "noduri_neverificate": [
-    "podu-ros"
-   ],
+   "de_verificat": [],
+   "noduri_neverificate": [],
    "intentie": {
     "este_trecere": false,
     "este_intersectie": true,
@@ -266,13 +261,13 @@
    },
    "candidati_osm": [
     {
-     "osm": "node/5964858917",
-     "nume": "Podu Roș",
-     "fel": "loc",
-     "clasa": null,
-     "tip": "neighbourhood",
-     "lat": 47.1505621,
-     "lon": 27.5865091
+     "nod_cunoscut": "podu-ros",
+     "osm": "node/244529560",
+     "strazi": [
+      "Bulevardul Țuțora",
+      "Piața Podu Roș",
+      "Podu Roș"
+     ]
     }
    ]
   },
@@ -286,9 +281,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1740452,
-    "lon": 27.5578839
+    "lat": 47.174045,
+    "lon": 27.557884
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944301",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944301"
@@ -342,9 +338,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1740452,
-    "lon": 27.5578839
+    "lat": 47.174045,
+    "lon": 27.557884
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944301",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944301"
@@ -396,9 +393,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1740452,
-    "lon": 27.5578839
+    "lat": 47.174045,
+    "lon": 27.557884
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944301",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944301"
@@ -450,9 +448,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1610399,
-    "lon": 27.6113534
+    "lat": 47.16104,
+    "lon": 27.611353
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944302",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944302"
@@ -506,9 +505,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1610399,
-    "lon": 27.6113534
+    "lat": 47.16104,
+    "lon": 27.611353
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944302",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944302"
@@ -560,9 +560,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1468516,
-    "lon": 27.5838661
+    "lat": 47.146852,
+    "lon": 27.583866
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944300",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944300"
@@ -614,9 +615,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1468516,
-    "lon": 27.5838661
+    "lat": 47.146852,
+    "lon": 27.583866
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944300",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944300"
@@ -668,9 +670,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1801944,
-    "lon": 27.5656845
+    "lat": 47.180194,
+    "lon": 27.565684
    },
+   "link_osm": "https://www.openstreetmap.org/way/670147612",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "way/670147612"
@@ -722,9 +725,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1801944,
-    "lon": 27.5656845
+    "lat": 47.180194,
+    "lon": 27.565684
    },
+   "link_osm": "https://www.openstreetmap.org/way/670147612",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "way/670147612"
@@ -777,8 +781,9 @@
    "incredere": "medie",
    "punct_orientativ": {
     "lat": 47.163082,
-    "lon": 27.5647123
+    "lon": 27.564712
    },
+   "link_osm": "https://www.openstreetmap.org/way/23024291",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "way/23024291",
@@ -844,9 +849,10 @@
    "metoda": "strada_osm",
    "incredere": "medie",
    "punct_orientativ": {
-    "lat": 47.1443846,
-    "lon": 27.5957999
+    "lat": 47.144385,
+    "lon": 27.5958
    },
+   "link_osm": "https://www.openstreetmap.org/way/22776494",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "way/22776494"
@@ -900,9 +906,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1667423,
+    "lat": 47.166742,
     "lon": 27.571759
    },
+   "link_osm": "https://www.openstreetmap.org/node/2468944297",
    "unitate_admin": "Iași",
    "referinte_osm": [
     "node/2468944297"
@@ -954,9 +961,10 @@
    "metoda": "zona_osm",
    "incredere": "scazuta",
    "punct_orientativ": {
-    "lat": 47.1773857,
-    "lon": 27.5021393
+    "lat": 47.177386,
+    "lon": 27.502139
    },
+   "link_osm": "https://www.openstreetmap.org/node/260953135",
    "unitate_admin": "Valea Lupului",
    "referinte_osm": [
     "node/260953135"

@@ -9,6 +9,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.150562,
+   "lon": 27.586509
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -23,7 +27,12 @@
   "urls": [
    "https://example.com/syn-001"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.150562&mlon=27.586509#map=16/47.150562/27.586509",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.150562,27.586509",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.150562&lng=27.586509&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -39,24 +48,30 @@
   "ora": "19:10",
   "gravitate": "usor",
   "loc_text": "trecerea de la Podu Roș",
-  "precizie_loc": "vag",
+  "precizie_loc": "intersectie",
   "in_iasi": true,
-  "lat": null,
-  "lon": null,
-  "metoda": "zona_osm",
-  "incredere": "scazuta",
+  "lat": 47.15143,
+  "lon": 27.587805,
+  "punct_orientativ": {
+   "lat": 47.15143,
+   "lon": 27.587805
+  },
+  "metoda": "nod_cunoscut_verificat",
+  "incredere": "ridicata",
   "referinte_osm": [
-   "node/5964858917"
+   "node/244529560"
   ],
   "avertismente": [],
-  "de_verificat": [
-   "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
-   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
-  ],
+  "de_verificat": [],
   "urls": [
    "https://example.com/syn-005"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.15143&mlon=27.587805#map=19/47.15143/27.587805",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.15143,27.587805",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.15143&lng=27.587805&z=18",
+   "orientativ": false
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -76,6 +91,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.150562,
+   "lon": 27.586509
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -89,7 +108,12 @@
    "https://example.com/syn-002",
    "https://example.com/syn-003"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.150562&mlon=27.586509#map=16/47.150562/27.586509",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.150562,27.586509",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.150562&lng=27.586509&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -105,24 +129,30 @@
   "ora": null,
   "gravitate": "usor",
   "loc_text": "intersecția de la Podu Roș",
-  "precizie_loc": "vag",
+  "precizie_loc": "intersectie",
   "in_iasi": true,
-  "lat": null,
-  "lon": null,
-  "metoda": "zona_osm",
-  "incredere": "scazuta",
+  "lat": 47.15143,
+  "lon": 27.587805,
+  "punct_orientativ": {
+   "lat": 47.15143,
+   "lon": 27.587805
+  },
+  "metoda": "nod_cunoscut_verificat",
+  "incredere": "ridicata",
   "referinte_osm": [
-   "node/5964858917"
+   "node/244529560"
   ],
   "avertismente": [],
-  "de_verificat": [
-   "„Podu Roș” e în lista de noduri cunoscute, dar nevalidat încă (python -m coordonate noduri)",
-   "localizare doar la nivel de zonă („Podu Roș”): fără coordonate"
-  ],
+  "de_verificat": [],
   "urls": [
    "https://example.com/syn-006"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.15143&mlon=27.587805#map=19/47.15143/27.587805",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.15143,27.587805",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.15143&lng=27.587805&z=18",
+   "orientativ": false
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -142,6 +172,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.174045,
+   "lon": 27.557884
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -156,7 +190,12 @@
   "urls": [
    "https://example.com/syn-007"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.174045&mlon=27.557884#map=16/47.174045/27.557884",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.174045,27.557884",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.174045&lng=27.557884&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -176,6 +215,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.174045,
+   "lon": 27.557884
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -188,7 +231,12 @@
   "urls": [
    "https://example.com/syn-008"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.174045&mlon=27.557884#map=16/47.174045/27.557884",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.174045,27.557884",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.174045&lng=27.557884&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -208,6 +256,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.174045,
+   "lon": 27.557884
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -220,7 +272,12 @@
   "urls": [
    "https://example.com/syn-009"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.174045&mlon=27.557884#map=16/47.174045/27.557884",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.174045,27.557884",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.174045&lng=27.557884&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -240,6 +297,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.16104,
+   "lon": 27.611353
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -252,7 +313,12 @@
   "urls": [
    "https://example.com/syn-010"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.16104&mlon=27.611353#map=16/47.16104/27.611353",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.16104,27.611353",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.16104&lng=27.611353&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -272,6 +338,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.16104,
+   "lon": 27.611353
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -284,7 +354,12 @@
   "urls": [
    "https://example.com/syn-011"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.16104&mlon=27.611353#map=16/47.16104/27.611353",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.16104,27.611353",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.16104&lng=27.611353&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -304,6 +379,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.146852,
+   "lon": 27.583866
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -316,7 +395,12 @@
   "urls": [
    "https://example.com/syn-012"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.146852&mlon=27.583866#map=16/47.146852/27.583866",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.146852,27.583866",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.146852&lng=27.583866&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -336,6 +420,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.146852,
+   "lon": 27.583866
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -348,7 +436,12 @@
   "urls": [
    "https://example.com/syn-013"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.146852&mlon=27.583866#map=16/47.146852/27.583866",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.146852,27.583866",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.146852&lng=27.583866&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -368,6 +461,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.180194,
+   "lon": 27.565684
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -380,7 +477,12 @@
   "urls": [
    "https://example.com/syn-014"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.180194&mlon=27.565684#map=16/47.180194/27.565684",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.180194,27.565684",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.180194&lng=27.565684&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -400,6 +502,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.180194,
+   "lon": 27.565684
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -412,7 +518,12 @@
   "urls": [
    "https://example.com/syn-015"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.180194&mlon=27.565684#map=16/47.180194/27.565684",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.180194,27.565684",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.180194&lng=27.565684&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -432,6 +543,10 @@
   "in_iasi": true,
   "lat": 47.163082,
   "lon": 27.564712,
+  "punct_orientativ": {
+   "lat": 47.163082,
+   "lon": 27.564712
+  },
   "metoda": "strada_osm",
   "incredere": "medie",
   "referinte_osm": [
@@ -451,7 +566,8 @@
   "linkuri_harta": {
    "osm": "https://www.openstreetmap.org/?mlat=47.163082&mlon=27.564712#map=19/47.163082/27.564712",
    "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.163082,27.564712",
-   "mapillary": "https://www.mapillary.com/app/?lat=47.163082&lng=27.564712&z=18"
+   "mapillary": "https://www.mapillary.com/app/?lat=47.163082&lng=27.564712&z=18",
+   "orientativ": false
   },
   "corectura": {
    "lat_corect": null,
@@ -472,6 +588,10 @@
   "in_iasi": true,
   "lat": 47.144385,
   "lon": 27.5958,
+  "punct_orientativ": {
+   "lat": 47.144385,
+   "lon": 27.5958
+  },
   "metoda": "strada_osm",
   "incredere": "medie",
   "referinte_osm": [
@@ -487,7 +607,8 @@
   "linkuri_harta": {
    "osm": "https://www.openstreetmap.org/?mlat=47.144385&mlon=27.5958#map=19/47.144385/27.5958",
    "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.144385,27.5958",
-   "mapillary": "https://www.mapillary.com/app/?lat=47.144385&lng=27.5958&z=18"
+   "mapillary": "https://www.mapillary.com/app/?lat=47.144385&lng=27.5958&z=18",
+   "orientativ": false
   },
   "corectura": {
    "lat_corect": null,
@@ -508,6 +629,10 @@
   "in_iasi": true,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.166742,
+   "lon": 27.571759
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -520,7 +645,12 @@
   "urls": [
    "https://example.com/syn-004"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.166742&mlon=27.571759#map=16/47.166742/27.571759",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.166742,27.571759",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.166742&lng=27.571759&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,
@@ -540,6 +670,10 @@
   "in_iasi": false,
   "lat": null,
   "lon": null,
+  "punct_orientativ": {
+   "lat": 47.177386,
+   "lon": 27.502139
+  },
   "metoda": "zona_osm",
   "incredere": "scazuta",
   "referinte_osm": [
@@ -554,7 +688,12 @@
   "urls": [
    "https://example.com/syn-018"
   ],
-  "linkuri_harta": {},
+  "linkuri_harta": {
+   "osm": "https://www.openstreetmap.org/?mlat=47.177386&mlon=27.502139#map=16/47.177386/27.502139",
+   "street_view": "https://www.google.com/maps?q&layer=c&cbll=47.177386,27.502139",
+   "mapillary": "https://www.mapillary.com/app/?lat=47.177386&lng=27.502139&z=18",
+   "orientativ": true
+  },
   "corectura": {
    "lat_corect": null,
    "lon_corect": null,

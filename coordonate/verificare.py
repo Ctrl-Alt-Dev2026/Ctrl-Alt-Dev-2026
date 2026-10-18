@@ -55,6 +55,24 @@ def construieste(
             continue
         lat, lon = eveniment.get("lat"), eveniment.get("lon")
         detalii = pe_id.get(id_ev, {})
+        punct_orientativ = detalii.get("punct_orientativ")
+        linkuri = {}
+        if lat is not None and lon is not None:
+            linkuri = {
+                "osm": link_osm(lat, lon),
+                "street_view": link_street_view(lat, lon),
+                "mapillary": link_mapillary(lat, lon),
+                "orientativ": False,
+            }
+        elif punct_orientativ:
+            p_lat, p_lon = punct_orientativ["lat"], punct_orientativ["lon"]
+            linkuri = {
+                "osm": link_osm(p_lat, p_lon, zoom=16),
+                "street_view": link_street_view(p_lat, p_lon),
+                "mapillary": link_mapillary(p_lat, p_lon),
+                "orientativ": True,
+            }
+
         rezultat.append(
             {
                 "event_id": id_ev,
@@ -66,21 +84,14 @@ def construieste(
                 "in_iasi": eveniment.get("in_iasi"),
                 "lat": lat,
                 "lon": lon,
+                "punct_orientativ": punct_orientativ,
                 "metoda": detalii.get("metoda"),
                 "incredere": detalii.get("incredere"),
                 "referinte_osm": detalii.get("referinte_osm") or [],
                 "avertismente": detalii.get("avertismente") or [],
                 "de_verificat": detalii.get("de_verificat") or [],
                 "urls": eveniment.get("urls") or [],
-                "linkuri_harta": (
-                    {
-                        "osm": link_osm(lat, lon),
-                        "street_view": link_street_view(lat, lon),
-                        "mapillary": link_mapillary(lat, lon),
-                    }
-                    if lat is not None and lon is not None
-                    else {}
-                ),
+                "linkuri_harta": linkuri,
                 "corectura": {
                     "lat_corect": None,
                     "lon_corect": None,
@@ -124,6 +135,16 @@ def ca_markdown(fise: list[dict], titlu: str = "Fișă de verificare a localiză
                 f"[Street View]({linkuri['street_view']}) · "
                 f"[Mapillary]({linkuri['mapillary']})"
             )
+        elif pt := fisa.get("punct_orientativ"):
+            linii.append("- coordonate: **lipsă** (localizare vagă)")
+            linii.append(f"- punct orientativ zonă/stradă: `{pt['lat']}, {pt['lon']}`")
+            linkuri = fisa.get("linkuri_harta") or {}
+            if "osm" in linkuri:
+                linii.append(
+                    f"- hartă orientativă: [OSM zonă]({linkuri['osm']}) · "
+                    f"[Street View]({linkuri['street_view']}) · "
+                    f"[Mapillary]({linkuri['mapillary']})"
+                )
         else:
             linii.append("- coordonate: **lipsă** (localizare vagă)")
         if fisa.get("referinte_osm"):
