@@ -16,28 +16,36 @@
   (selectStreet)="openStreet($event)"
   (selectCamera)="store.selectedCameraId.set($event)"
   (select)="open($event)"
+  (selectBackground)="clearStreetSelection()"
   (basemapFailed)="basemapFailed.set(true)"
 />
 
 @if (basemapFailed()) {
-  <p class="notice glass" role="status">Harta de bază nu s-a încărcat (fără internet?). Datele sunt afișate pe fundal simplu.</p>
+  <p class="notice glass" role="status">Harta de bază este indisponibilă. Datele rămân vizibile.</p>
 }
 
 @if (store.showCameras() && store.selectedCamera(); as c) {
   <app-camera-viewer class="camera glass" [camera]="c" (close)="store.selectedCameraId.set(null)" />
+} @else {
+  <app-map-filters class="map-filters glass" />
 }
 
-<aside #panel class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
+<dialog #panel id="map-drawer" class="panel glass side-drawer" aria-labelledby="map-drawer-title" (close)="closeDrawer()" (click)="drawerBackdrop($event)">
+  <header class="drawer-head">
+    <span id="map-drawer-title">Explorează harta</span>
+    <button type="button" class="drawer-close" aria-label="Închide panoul" (click)="closeDrawer()" autofocus>✕</button>
+  </header>
+  <div class="panel-content">
   @if (store.state() === 'loading') {
-    <div class="dataset-status" role="status"><h2>Se încarcă datele…</h2><p class="muted">Ultimul set colectat de server.</p></div>
+    <div class="dataset-status" role="status"><h2>Se încarcă datele…</h2></div>
   } @else if (store.state() === 'error') {
     <div class="dataset-status" role="alert"><h2>Serverul nu răspunde</h2><p>{{ store.error() }}</p><button type="button" class="btn" (click)="store.poll()">Încearcă din nou</button></div>
   } @else if (store.state() === 'waiting') {
-    <div class="dataset-status" role="status"><h2>Prima colectare rulează</h2><p class="muted">Serverul descarcă comunicatele ISU și articolele de presă. Harta se completează singură când termină.</p></div>
+    <div class="dataset-status" role="status"><h2>Colectare în curs</h2><p class="muted">Datele apar automat la final.</p></div>
   } @else if (store.selected(); as h) {
     <app-location-dossier [hotspot]="h" [rank]="rank() || null" (close)="close()" />
   } @else if (id()) {
-    <div class="dataset-status"><h2>Locație negăsită</h2><p>Identificatorul nu apare în datele actuale.</p><button type="button" class="btn" (click)="close()">Înapoi la listă</button></div>
+    <div class="dataset-status"><h2>Locația nu mai apare în date</h2><button type="button" class="btn" (click)="close()">Înapoi la listă</button></div>
   } @else {
     @if (hasStreets() && store.hotspots().length > 0) {
       <div class="tabs" role="tablist" aria-label="Vedere">
@@ -51,16 +59,19 @@
       <app-hotspot-list [hotspots]="store.visibleHotspots()" [excludedCount]="approxCount()" (select)="open($event)" />
     }
   }
-</aside>
+  </div>
+</dialog>
 
-<div class="legend glass" aria-label="Legendă" [hidden]="applied() || (store.showCameras() && store.selectedCamera())">
+<details class="legend glass" [hidden]="applied() || (store.showCameras() && store.selectedCamera())">
+  <summary>Legendă</summary>
   <div class="ramp">
     <span class="bar" aria-hidden="true"></span>
     <span class="ends"><span>mai mic</span><span>{{ store.streetMetric() !== 'pmud' && store.streetRanking() === 'score' ? 'scor mai mare' : 'mai multe evenimente' }}</span></span>
   </div>
   <ul>
     @if (hasStreets()) {
-      <li><i class="street" aria-hidden="true"></i>{{ streetLegend[store.streetMetric()] }} · geometria străzii, nu locul exact al accidentelor</li>
+      <li><i class="street" aria-hidden="true"></i>{{ streetLegend[store.streetMetric()] }}</li>
+      <li>Traseul indică strada; locul exact poate fi necunoscut.</li>
     }
     @if (store.hotspots().length > 0) {
       <li><i class="rank-chip" aria-hidden="true">1</i>locație clasată (după scor)</li>
@@ -68,12 +79,12 @@
     @if (store.mappable().length > 0) {
       <li><i class="dot" aria-hidden="true"></i>eveniment localizat precis</li>
     }
-    @if (store.visibleH3().features.length > 0) { <li>Coloane H3 (rezoluția 9): doar evenimente localizate precis</li> }
+    @if (store.visibleH3().features.length > 0) { <li>H3: numai locații precise</li> }
     @if (store.showCameras()) {
       <li><i class="cam" aria-hidden="true"></i>cameră publică (clic pentru imagine)</li>
     }
   </ul>
-</div>
+</details>
 
 <div class="dock">
   @if (applied()) {
@@ -90,27 +101,19 @@
   }
 
   <div class="bar glass">
-    <div class="chips" role="group" aria-label="Filtrează după participanți">
-      <button type="button" class="chip" [attr.aria-pressed]="store.participant() === null" (click)="setParticipant(null)">Toate</button>
-      @for (p of store.participants(); track p) {
-        <button type="button" class="chip" [attr.aria-pressed]="store.participant() === p" (click)="setParticipant(p)">
-          {{ participantLabel(p) }}
-        </button>
-      }
-    </div>
     <div class="actions">
-      <button type="button" class="btn list-toggle" [attr.aria-pressed]="panelOpen()" (click)="panelOpen.set(!panelOpen())">Listă</button>
+      <button type="button" class="btn list-toggle" aria-haspopup="dialog" aria-controls="map-drawer" [attr.aria-expanded]="panelOpen()" (click)="panelOpen.set(true)">Străzi</button>
       @if (store.attentionStreets().length > 0) {
         <button type="button" class="btn attention" (click)="attentionOpen.set(true)">
-          Străzi de verificat <b>{{ store.attentionStreets().length }}</b>
+          De verificat <b>{{ store.attentionStreets().length }}</b>
         </button>
       }
       @if (store.cameras().length > 0) {
         <button type="button" class="btn" [attr.aria-pressed]="store.showCameras()" (click)="toggleCameras()">
-          Camere live ({{ store.cameras().length }})
+          Camere live · {{ store.cameras().length }}
         </button>
       }
-      <button type="button" class="btn primary" [disabled]="!hasMeasures()" [attr.aria-pressed]="applied()" (click)="toggleApplied()" [title]="hasMeasures() ? 'Explorează măsurile candidate' : 'Catalogul cu surse și aplicabilitatea măsurilor nu sunt încă verificate'">
+      <button type="button" class="btn primary" [disabled]="!hasMeasures()" [attr.aria-pressed]="applied()" (click)="toggleApplied()" [title]="hasMeasures() ? 'Explorează măsurile' : 'Nu există încă măsuri validate pentru aceste locații'">
         {{ applied() ? 'Arată situația documentată' : 'Aplică măsurile' }}
       </button>
     </div>

@@ -1,18 +1,19 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked, viewChild } from '@angular/core';
+import { afterRenderEffect, ChangeDetectionStrategy, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked, viewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { lei, participantLabel } from '../../../core/format/labels';
+import { lei } from '../../../core/format/labels';
 import { StreetMetric } from '../../../core/models/streets';
 import { DataStore } from '../../../core/state/data.store';
 import { LocationDossier } from '../../location/location-dossier/location-dossier';
 import { AttentionDrawer } from '../attention-drawer/attention-drawer';
 import { CameraViewer } from '../camera-viewer/camera-viewer';
 import { CityMap } from '../city-map/city-map';
+import { MapFilters } from '../map-filters/map-filters';
 import { HotspotList } from '../hotspot-list/hotspot-list';
 import { StreetPanel } from '../street-panel/street-panel';
 
 @Component({
   selector: 'app-map-page',
-  imports: [CityMap, HotspotList, LocationDossier, CameraViewer, StreetPanel, AttentionDrawer],
+  imports: [CityMap, HotspotList, LocationDossier, CameraViewer, StreetPanel, AttentionDrawer, MapFilters],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './map-page.html',
   styleUrl: './map-page.scss',
@@ -21,8 +22,7 @@ import { StreetPanel } from '../street-panel/street-panel';
 export class MapPage {
   protected readonly store = inject(DataStore);
   private readonly router = inject(Router);
-  private readonly panel = viewChild<ElementRef<HTMLElement>>('panel');
-  private readonly host = inject(ElementRef<HTMLElement>).nativeElement;
+  private readonly panel = viewChild<ElementRef<HTMLDialogElement>>('panel');
 
   // Bound from the route /locatie/:id.
   readonly id = input<string>();
@@ -35,18 +35,17 @@ export class MapPage {
     pmud: 'arteră: accidente IPJ 2021 (PMUD)',
   };
   protected readonly basemapFailed = signal(false);
-  protected readonly panelOpen = signal(true);
+  protected readonly panelOpen = signal(false);
   // Streets (ISU + PMUD layer) or scored locations; tabs only when the dataset has both.
   protected readonly view = signal<'streets' | 'locations'>('streets');
   protected readonly hasStreets = computed(() => this.store.streets().features.length > 0);
   protected readonly showStreets = computed(() => this.hasStreets() && (this.view() === 'streets' || this.store.hotspots().length === 0));
 
-  protected readonly participantLabel = participantLabel;
   protected readonly rank = computed(() => this.store.rankOf().get(this.store.selectedId() ?? '') ?? 0);
   protected readonly approxCount = this.store.approximateCount;
   protected readonly hasMeasures = computed(() => this.store.visibleHotspots().some((row) => row.masuri.length > 0));
 
-  // Panel width in px for the map's fly-to padding; 0 when the panel stacks under the map.
+  // Only reserve fly-to space while the drawer is open on a wide screen.
   protected readonly rightInset = signal(0);
 
   // "Aplică măsurile" counter: only documented numbers; unknown costs are counted, not guessed.
@@ -78,6 +77,13 @@ export class MapPage {
     effect(() => {
       this.store.state();
       this.store.select(this.id() ?? null);
+      if (this.id()) untracked(() => this.panelOpen.set(true));
+    });
+    afterRenderEffect(() => {
+      const dialog = this.panel()?.nativeElement;
+      if (!dialog) return;
+      if (this.panelOpen() && !dialog.open) dialog.showModal();
+      else if (!this.panelOpen() && dialog.open) dialog.close();
     });
     // A new street or location opens at the top of the panel, not at the list's scroll position.
     effect(() => {
@@ -86,23 +92,16 @@ export class MapPage {
       untracked(() => {
         // The panel's content component (street list/detail, dossier) is the element that scrolls.
         const panel = this.panel()?.nativeElement;
-        for (const el of [panel, ...Array.from(panel?.children ?? [])]) el?.scrollTo({ top: 0 });
-      });
-    });
-    // Stacked layout: the list sits under the map, so bring the map back into view to show the camera move.
-    effect(() => {
-      const street = this.store.selectedStreetId();
-      untracked(() => {
-        if (street && !matchMedia('(min-width: 56rem)').matches) this.host.scrollTo({ top: 0, behavior: 'smooth' });
+        panel?.querySelectorAll<HTMLElement>('.panel-content, app-street-panel, app-location-dossier, app-hotspot-list')
+          .forEach((el) => el.scrollTo({ top: 0 }));
       });
     });
 
     const wide = matchMedia('(min-width: 56rem)');
     const measure = () => {
-      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-      this.rightInset.set(wide.matches ? Math.min(Math.max(20 * rem, innerWidth * 0.28), 27 * rem) + 2 * rem : 0);
+      this.rightInset.set(wide.matches && this.panelOpen() ? this.panel()?.nativeElement.getBoundingClientRect().width ?? 0 : 0);
     };
-    measure();
+    afterRenderEffect(measure);
     addEventListener('resize', measure);
     inject(DestroyRef).onDestroy(() => removeEventListener('resize', measure));
   }
@@ -115,6 +114,7 @@ export class MapPage {
   }
 
   protected open(id: string): void {
+    this.panelOpen.set(true);
     this.store.selectedStreetId.set(null);
     this.router.navigate(['/locatie', id]);
   }
@@ -123,8 +123,10 @@ export class MapPage {
     this.router.navigate(['/']);
   }
 
-  protected setParticipant(p: string | null): void {
-    this.store.participant.set(p);
+  protected clearStreetSelection(): void {
+    if (!this.panelOpen() && !document.querySelector('dialog[open]')) {
+      this.store.selectedStreetId.set(null);
+    }
   }
 
   protected toggleApplied(): void {
@@ -136,8 +138,21 @@ export class MapPage {
     if (!this.store.showCameras()) this.store.selectedCameraId.set(null);
   }
 
+  protected closeDrawer(): void { this.panelOpen.set(false); }
+
+  protected drawerBackdrop(event: MouseEvent): void {
+    const dialog = this.panel()?.nativeElement;
+    if (event.target !== dialog || !dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+      this.closeDrawer();
+    }
+  }
+
   protected onEscape(): void {
     if (this.attentionOpen()) return; // the dialog closes itself on Escape
+    if (!this.panelOpen() && document.querySelector('dialog[open]')) return;
+    if (this.panelOpen()) { this.closeDrawer(); return; }
     if (this.store.selectedCameraId()) this.store.selectedCameraId.set(null);
     else if (this.store.selectedStreetId()) this.store.selectedStreetId.set(null);
   }

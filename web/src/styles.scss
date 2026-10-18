@@ -181,6 +181,36 @@ button {
   }
 }
 
+// Shared native dialogs: full-height drawers, keyboard focus and backdrop handled by the browser.
+.side-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(28rem, calc(100vw - var(--space-3)));
+  height: 100dvh;
+  max-height: 100dvh;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  border-left: var(--hair) solid var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  background: var(--night-950);
+  overflow: auto;
+  &:not([open]) { display: none; }
+  &[open] { animation: drawer-in 0.2s ease-out; }
+  &::backdrop { background: rgb(4 10 18 / 0.25); }
+}
+@keyframes drawer-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+.side-drawer .drawer-close {
+  border: var(--hair) solid var(--line);
+  border-radius: var(--radius-s);
+  background: none;
+  color: var(--ink);
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

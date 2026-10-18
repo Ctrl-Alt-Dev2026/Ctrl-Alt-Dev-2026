@@ -26,7 +26,7 @@
       }
     </section>
   </div>
-  <p class="note muted">Sursele nu se adună: ISU numără intervențiile pompierilor, presa ce a relatat, IPJ accidentele înregistrate de poliție. Același accident poate apărea în mai multe.</p>
+  <p class="note muted">Surse separate. Același accident poate apărea în ISU și în presă.</p>
   @if (s.properties.pmud_nota) {
     <p class="note muted">Potrivire PMUD: {{ s.properties.pmud_nota }}</p>
   }
@@ -34,35 +34,42 @@
   @if (s.properties.recomandari_ai; as advice) {
     <section class="analysis">
       <h3>Sugestii AI · de verificat</h3>
-      <p class="muted">{{ advice.eticheta }}, {{ dateRo(advice.creat_la.slice(0, 10)) }}. Ce merită studiat, ales din catalogul de măsuri; fără costuri sau efecte estimate. Decizia aparține specialiștilor.</p>
+      <p class="muted"><span [title]="advice.model">Claude</span> · rezultat salvat (reluare) · {{ dateRo(advice.creat_la.slice(0, 10)) }}</p>
+      <p class="muted">Studii propuse. Fără deviz sau efect estimat.</p>
       @if (!advice.actual) {
-        <p class="muted">Evenimentele străzii s-au schimbat după această sugestie: se bazează pe datele de atunci.</p>
+        <p class="muted">Sugestii bazate pe date mai vechi.</p>
       }
-      <p>{{ advice.rezumat }}</p>
+      <ul>@for (point of sentencePoints(advice.rezumat); track $index) { <li>{{ point }}</li> }</ul>
       @for (r of advice.recomandari; track r.measure_id) {
         <article class="measure">
           <b>{{ r.nume }}</b>
-          <p>{{ r.motiv }}</p>
-          @if (r.event_ids.length) { <p class="muted">Se sprijină pe: {{ basis(r.event_ids) }}</p> }
+          <ul>@for (point of sentencePoints(r.motiv); track $index) { <li>{{ point }}</li> }</ul>
+          @if (r.event_ids.length) { <details><summary>Evenimente citate · {{ r.event_ids.length }}</summary><p class="muted">{{ basis(r.event_ids) }}</p></details> }
+          <h4>De verificat</h4>
           <ul>@for (check of r.de_verificat; track check) { <li>{{ check }}</li> }</ul>
         </article>
       }
       @if (advice.date_lipsa.length) {
-        <p class="muted">Lipsește pentru o decizie: {{ advice.date_lipsa.join('; ') }}.</p>
+        <details><summary>Date lipsă</summary><ul>@for (gap of advice.date_lipsa; track gap) { <li>{{ gap }}</li> }</ul></details>
       }
     </section>
   }
 
   <section class="analysis">
     <h3>Scor și statistici pe stradă</h3>
-    <p class="muted">Scor = evenimente + 4 × decese + 2 × răniți grav + context. Contextul este 0: infrastructura străzii nu identifică locul accidentului. Scor de prioritizare, nu probabilitate.</p>
-    <p class="muted">Analiza de mai jos include toate evenimentele sursei pe stradă; filtrul de participanți se aplică listei de evenimente.</p>
+    <details class="method"><summary>Despre scor și filtre</summary><ul class="muted">
+      <li>N + 4 × evenimente cu deces + 2 × evenimente grave.</li>
+      <li>Context 0: locul exact al accidentelor nu este confirmat.</li>
+      <li>Scor de prioritizare, nu probabilitate.</li>
+      <li>Statisticile includ toate evenimentele sursei. Filtrul schimbă lista, nu scorul.</li>
+    </ul></details>
     @for (source of analysisSources; track source) {
       @if (s.properties.analiza?.[source]; as a) {
         @if (a.nr_evenimente > 0) {
         <h4>{{ sourceLabel[source] }} · scor {{ a.scor }}</h4>
-        <p>{{ a.componente_scor.evenimente }} evenimente + {{ a.componente_scor.deces }} bonus decese + {{ a.componente_scor.grav }} bonus răniți grav + 0 context</p>
-        <p class="muted">{{ dateRo(a.perioada[0]) }} – {{ dateRo(a.perioada[1]) }} · {{ a.data_necunoscuta }} fără dată · {{ a.neverificate }} neverificate manual</p>
+        <p>Puncte: {{ a.componente_scor.evenimente }} evenimente · {{ a.componente_scor.deces }} decese · {{ a.componente_scor.grav }} grav</p>
+        <p class="muted">{{ dateRo(a.perioada[0]) }} – {{ dateRo(a.perioada[1]) }}</p>
+        <p class="muted">{{ a.neverificate }} neverificate manual@if (a.data_necunoscuta) { · {{ a.data_necunoscuta }} fără dată}</p>
         <app-hour-chart [hours]="a.pe_ore" [unknownCount]="a.ora_necunoscuta" />
         <p>Zi: {{ a.zi }} · Noapte: {{ a.noapte }} · Necunoscut: {{ a.necunoscut }}</p>
         <ul>
@@ -72,20 +79,21 @@
         </ul>
         <h4>Măsuri de studiat · {{ sourceLabel[source] }}</h4>
         @if (a.masuri.length === 0) {
-          <p class="muted">Cauzele raportate nu susțin o măsură specifică. Verificați sursele și faceți un audit pe stradă; nu deducem cauza din OSM sau din ora accidentului.</p>
+          <p class="muted">Date insuficiente pentru o măsură specifică. Este necesară verificarea în teren.</p>
         }
         @for (m of a.masuri; track m.measure_id) {
           <article class="measure">
             <b>{{ m.titlu }}</b>
-            <p>{{ causeLabel(m.cauza) }} relatată în {{ m.event_ids.length }} evenimente. Amplasament neverificat; studiu la nivel de stradă.</p>
+            <p>{{ causeLabel(m.cauza) }} · {{ m.event_ids.length }} evenimente</p>
+            <p class="muted">Amplasament de verificat.</p>
             <ul>@for (check of m.cerinte; track check) { <li>{{ check }}</li> }</ul>
             @if (m.cost_unitar; as cost) {
-              <p>Reper pe intervenție, dacă se justifică o trecere: ~{{ lei(cost.indicative_rounded_ron) }}/trecere ({{ cost.year }}), {{ cost.vat === 'excluded' ? 'fără TVA' : 'TVA neprecizat' }}. <a [href]="cost.source_url" target="_blank" rel="noopener">Sursă</a></p>
-              <p class="muted">Medie istorică de proiect, fără actualizare la prețurile curente. {{ cost.limitations }}</p>
+              <p>~{{ lei(cost.indicative_rounded_ron) }}/trecere · {{ cost.year }} · {{ cost.vat === 'excluded' ? 'fără TVA' : 'TVA neprecizat' }}. <a [href]="cost.source_url" target="_blank" rel="noopener">Sursă</a></p>
+              <details><summary>Limitele estimării</summary><p class="muted">Medie istorică, fără actualizare de preț.</p><ul class="muted">@for (point of sentencePoints(cost.limitations); track $index) { <li>{{ point }}</li> }</ul></details>
             } @else {
-              <p class="muted">Cost pe intervenție necunoscut: nu avem un reper comparabil documentat.</p>
+              <p class="muted">Cost pe intervenție necunoscut.</p>
             }
-            <p class="muted">Numărul intervențiilor și costul total rămân necunoscute până la verificarea amplasamentelor și proiectare.</p>
+            <p class="muted">Cantitate și total: necunoscute până la proiectare.</p>
           </article>
         }
         }
@@ -96,15 +104,15 @@
   @if (s.properties.context_osm; as context) {
     <section class="analysis">
       <h3>Context OSM al străzii</h3>
-      <p class="muted">Infrastructură cartografiată acum, fără atribuire la accidente sau la data lor. Absența unei etichete nu confirmă absența infrastructurii.</p>
+      <ul class="muted"><li>Context al străzii, fără asociere la accidente.</li><li>O etichetă lipsă în OSM înseamnă „necunoscut”.</li></ul>
       @if (context.treceri_cartografiate !== null) {
-        <p>{{ context.treceri_cartografiate }} treceri cartografiate asociate drumurilor cu numele OSM al străzii.</p>
+        <p>{{ context.treceri_cartografiate }} treceri cartografiate pe această stradă</p>
         @for (field of contextFields; track field.key) {
           @if (context.atribute[field.key]; as attr) {
             <p>{{ field.label }}: {{ attr.da }} da · {{ attr.nu }} nu explicit · {{ attr.necunoscut }} necunoscut</p>
           }
         }
-        <p class="muted">© OpenStreetMap contributors · extras: {{ context.descarcat_la.join(', ') }}. Nicio asociere accident–trecere.</p>
+        <p class="muted">© OpenStreetMap contributors · {{ context.descarcat_la.join(', ') }}</p>
       } @else { <p class="muted">Extras OSM indisponibil.</p> }
     </section>
   }
@@ -149,27 +157,29 @@
 } @else {
   <header>
     <h2>Străzi</h2>
-    <div class="metric" role="group" aria-label="Sursa afișată pe hartă și în listă">
-      @for (m of metrics; track m) {
-        <button type="button" [attr.aria-pressed]="store.streetMetric() === m" (click)="setMetric(m)">{{ sourceLabel[m] }}</button>
-      }
-    </div>
+    <p class="muted">{{ sourceLabel[store.streetMetric()] }}</p>
     @if (store.streetMetric() !== 'pmud') {
       <div class="metric" role="group" aria-label="Ordonarea străzilor">
         <button type="button" [attr.aria-pressed]="store.streetRanking() === 'score'" (click)="store.streetRanking.set('score')">Scor</button>
         <button type="button" [attr.aria-pressed]="store.streetRanking() === 'events'" (click)="store.streetRanking.set('events')">Evenimente</button>
       </div>
-      @if (store.streetRanking() === 'score') { <p class="muted">Scorul backend pentru toate evenimentele sursei: N + 4 × decese + 2 × răniți grav; context 0. Filtrul restrânge străzile afișate, nu recalculează scorul.</p> }
+      @if (store.streetRanking() === 'score') {
+        <details class="method"><summary>Cum se calculează scorul</summary><ul class="muted">
+          <li>N + 4 × evenimente cu deces + 2 × evenimente grave.</li>
+          <li>Context 0; scor de prioritizare, nu probabilitate.</li>
+          <li>Scorul include toate evenimentele sursei și nu se schimbă la filtrare.</li>
+        </ul></details>
+      }
     }
     @switch (store.streetMetric()) {
-      @case ('isu') { <p class="muted">Intervenții ale pompierilor la accidente rutiere, oct. 2024 – oct. 2026, din comunicatele ISU Iași.</p> }
-      @case ('presa') { <p class="muted">Accidente rutiere actuale relatate de BZI și Ziarul de Iași în 2026. Selectate și extrase de Claude (rezultat salvat, reluare), cu citate verificate în articol; neverificate manual.</p> }
-      @case ('pmud') { <p class="muted">Accidente pe artere, date IPJ Iași publicate în PMUD Iași 2022 (tabelul 2.11), ordonate după 2021.</p> }
+      @case ('isu') { <p class="muted">Intervenții ISU Iași · oct. 2024 – oct. 2026</p> }
+      @case ('presa') { <ul class="source-note muted"><li>BZI și Ziarul de Iași · 2026</li><li>Claude · rezultat salvat (reluare)</li><li>Citate verificate în text; fără verificare manuală.</li></ul> }
+      @case ('pmud') { <p class="muted">IPJ · PMUD 2022, tabelul 2.11 · ordine după 2021</p> }
     }
   </header>
 
   @if (store.rankedStreets().length === 0) {
-    <p class="empty">Nicio stradă cu date în această sursă și cu filtrul selectat.</p>
+    <p class="empty">Nicio stradă pentru selecția curentă.</p>
   } @else {
     <ol class="streets">
       @for (f of store.rankedStreets(); track f.properties.id) {
@@ -196,18 +206,15 @@
   <footer class="muted">
     @if (store.manifest()?.statistici; as st) {
       @if (store.streetMetric() === 'presa') {
-        <p>
-          {{ st['presa_evenimente'] }} accidente din {{ st['presa_articole'] }} articole citite, {{ st['presa_municipiu'] }} în municipiu.
-          @if (st['presa_ai_judiciare']) { {{ st['presa_ai_judiciare'] }} articole despre procese sau alte urmări ale unor accidente vechi au fost excluse. }
-          @if (st['presa_ai_neclare']) { Alte {{ st['presa_ai_neclare'] }} articole sunt neclare pentru AI și rămân de verificat manual. }
-          @if (st['presa_reguli']) { {{ st['presa_reguli'] }} vin din articole noi, fără răspuns AI, extrase cu reguli provizorii. }
-          Cele fără stradă nu apar în listă.
-        </p>
+        <ul>
+          <li>{{ st['presa_evenimente'] }} accidente · {{ st['presa_articole'] }} articole · {{ st['presa_municipiu'] }} în municipiu</li>
+          @if (st['presa_ai_judiciare']) { <li>{{ st['presa_ai_judiciare'] }} articole judiciare excluse</li> }
+          @if (st['presa_ai_neclare']) { <li>{{ st['presa_ai_neclare'] }} articole de verificat</li> }
+          @if (st['presa_reguli']) { <li>{{ st['presa_reguli'] }} evenimente extrase prin reguli provizorii</li> }
+          <li>Evenimentele fără stradă nu apar în listă.</li>
+        </ul>
       } @else if (store.streetMetric() === 'isu') {
-        <p>
-          {{ st.evenimente_municipiu }} intervenții ISU în municipiu: {{ st.evenimente_municipiu - st.municipiu_fara_loc }} cu stradă cunoscută,
-          {{ st.municipiu_fara_loc }} fără stradă în comunicat (nu apar pe hartă).
-        </p>
+        <ul><li>{{ st.evenimente_municipiu }} intervenții în municipiu</li><li>{{ st.evenimente_municipiu - st.municipiu_fara_loc }} cu stradă · {{ st.municipiu_fara_loc }} fără stradă</li></ul>
       }
     }
     <p>
@@ -216,6 +223,6 @@
         <a [href]="src.url" target="_blank" rel="noopener">{{ src.nume }}</a>@if (!last) { · }
       }
     </p>
-    <p>Un număr pe stradă nu e un risc pe kilometru: străzile lungi și aglomerate adună mai multe evenimente.</p>
+    <p>Valorile nu sunt ajustate la lungimea străzii sau la trafic.</p>
   </footer>
 }

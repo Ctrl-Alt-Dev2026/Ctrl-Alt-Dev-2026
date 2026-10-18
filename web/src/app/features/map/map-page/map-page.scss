@@ -4,6 +4,7 @@
   flex: 1;
   min-height: 0;
   display: block;
+  overflow: hidden;
 }
 
 .map {
@@ -17,8 +18,15 @@
 .legend,
 .dock,
 .notice,
+.map-filters,
 .camera {
   z-index: 2;
+}
+.map-filters {
+  position: absolute;
+  top: calc(var(--chrome-top) + var(--space-2));
+  left: var(--gutter);
+  max-width: calc(100% - 2 * var(--gutter));
 }
 
 // Live camera, top-left under the title card.
@@ -26,36 +34,26 @@
   position: absolute;
   top: var(--chrome-top);
   left: var(--gutter);
-  width: min(30rem, calc(100% - var(--panel-w) - 3 * var(--gutter)));
+  width: min(30rem, calc(100% - 2 * var(--gutter)));
   // Clears the two-row action dock.
-  max-height: calc(100% - var(--chrome-top) - var(--gutter) - 9rem);
+  max-height: calc(100% - var(--chrome-top) - var(--gutter) - 4.5rem);
   overflow: auto;
 }
 
 .panel {
-  position: absolute;
-  top: var(--chrome-top);
-  right: var(--gutter);
-  bottom: calc(var(--gutter) + 8.5rem); // clears MapLibre's zoom/compass column and attribution below it
-  width: var(--panel-w);
-  display: flex;
-  flex-direction: column;
+  padding: 0;
   overflow: hidden;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  > * {
-    flex: 1;
-    min-height: 0;
-  }
-  &.collapsed {
-    transform: translateX(calc(100% + var(--gutter)));
-    opacity: 0;
-    pointer-events: none;
-  }
+  &[open] { display: flex; flex-direction: column; }
 }
+.drawer-head { display: flex; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); border-bottom: var(--hair) solid var(--line); }
+.drawer-head span { font-size: var(--step--1); color: var(--muted); }
+.legend summary { cursor: pointer; }
+.panel-content { display: flex; flex-direction: column; flex: 1; min-height: 0; > * { flex: 1; min-height: 0; } }
+.panel-content > .tabs { flex: none; }
 
 .notice {
   position: absolute;
-  top: var(--chrome-top);
+  top: calc(var(--chrome-top) + 7rem);
   left: var(--gutter);
   margin: 0;
   max-width: 28rem;
@@ -67,11 +65,12 @@
 .legend {
   position: absolute;
   left: var(--gutter);
-  bottom: calc(var(--gutter) + 7.25rem); // above the two-row dock
+  bottom: calc(var(--gutter) + 4.5rem);
   padding: var(--space-3) var(--space-4);
   font-size: var(--step--1);
   color: var(--muted);
   max-width: 19rem;
+  .ramp { margin-top: var(--space-2); }
   ul {
     list-style: none;
     margin: var(--space-3) 0 0;
@@ -126,13 +125,6 @@
     border: 0.1rem solid var(--ink);
     background: var(--night-950);
   }
-  .ring {
-    width: 0.85rem;
-    height: 0.85rem;
-    margin-inline: 0.2rem;
-    border-radius: 50%;
-    border: 0.1rem solid var(--muted);
-  }
   .street {
     width: 1.25rem;
     height: 0.3rem;
@@ -182,28 +174,6 @@
   padding: var(--space-2) var(--space-3);
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-}
-.chip {
-  border: var(--hair) solid var(--line);
-  background: transparent;
-  border-radius: 999px;
-  padding: 0.3em 0.85em;
-  font-size: var(--step--1);
-  cursor: pointer;
-  &:hover {
-    background: var(--night-800);
-  }
-  &[aria-pressed='true'] {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--night-950);
-  }
-}
-
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -232,63 +202,11 @@
   }
 }
 
-// Wide screens: centre the dock in the space left of the panel.
-@media (min-width: 56rem) {
-  .dock {
-    right: calc(var(--panel-w) + 2 * var(--gutter));
-  }
-}
-
-// Narrow screens: map on top, list and dossier as a sheet below it.
+// The same drawer works on phones; the map keeps all available height.
 @media (max-width: 55.99rem) {
-  :host {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .dock {
-    order: 1;
-  }
-  .panel,
-  .panel.collapsed {
-    order: 2;
-  }
-  // flex: none, or the column squeezes the map to a strip and the page never scrolls.
-  .map {
-    position: relative;
-    display: block;
-    flex: none;
-    height: 55svh;
-  }
-  .panel,
-  .panel.collapsed {
-    position: relative;
-    inset: auto;
-    width: auto;
-    margin: var(--gutter);
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    max-height: none;
-    flex: none;
-  }
-  .list-toggle,
-  .legend {
-    display: none;
-  }
-  .dock {
-    position: relative;
-    inset: auto;
-    margin: var(--gutter) var(--gutter) 0;
-  }
-  .notice,
-  .camera {
-    position: relative;
-    flex: none;
-    width: auto;
-    max-height: none;
-    inset: auto;
-    margin: var(--gutter) var(--gutter) 0;
-    max-width: none;
-  }
+  .bar { padding: var(--space-2); }
+  .actions { gap: var(--space-1); justify-content: center; }
+  .actions .btn { font-size: var(--step--1); padding-inline: var(--space-2); }
+  .legend { padding: var(--space-2) var(--space-3); bottom: calc(var(--gutter) + 6rem); }
+  .camera { top: var(--space-2); max-height: calc(100% - 8rem); }
 }

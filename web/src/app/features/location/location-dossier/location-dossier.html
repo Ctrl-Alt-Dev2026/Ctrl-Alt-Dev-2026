@@ -15,7 +15,7 @@
   @if (store.isSynthetic()) {
     <p class="synthetic"><strong>DATE SINTETICE.</strong> Scenariu fictiv, fără dovezi despre accidente reale.</p>
   }
-  <p class="muted small">Extras automat, neverificat manual; fără audit în teren.</p>
+  <p class="muted small">Extracție automată · verificare în teren necesară</p>
 </div>
 
 <section aria-labelledby="score-h">
@@ -33,7 +33,7 @@
     </ul>
   }
   <p>{{ hotspot().explicatie }}</p>
-  <p class="muted small">Scor determinist de prioritizare în eșantion, nu probabilitate validată de accident. Filtrele nu recalculează scorul sau poziția.</p>
+  <ul class="muted small"><li>Scor de prioritizare, nu probabilitate.</li><li>Filtrele nu schimbă scorul sau poziția.</li></ul>
 </section>
 
 <section aria-labelledby="hours-h">
@@ -78,9 +78,10 @@
       <dt>Școală sub 150 m</dt><dd [class.unknown]="c.scoala_150m === null">{{ c.scoala_150m | nullLabel }}</dd>
       <dt>Stație sub 100 m</dt><dd [class.unknown]="c.statie_100m === null">{{ c.statie_100m | nullLabel }}</dd>
     </dl>
-    <p class="muted small">Sursa: {{ c.sursa }}, descărcat la {{ timestamp(c.descarcat_la) }}. Un tag lipsă din OSM nu demonstrează absența infrastructurii.</p>
+    <p class="muted small">{{ c.sursa }} · {{ timestamp(c.descarcat_la) }}</p>
+    <p class="muted small">Etichetă lipsă în OSM = informație necunoscută.</p>
   } @else {
-    <p class="muted">Nu avem date de infrastructură pentru această locație.</p>
+    <p class="muted">Infrastructură necunoscută.</p>
   }
   @if (hotspot().date_lipsa.length > 0) {
     <h4>Date lipsă</h4>
@@ -90,20 +91,20 @@
 
 <section aria-labelledby="measures-h">
   <h3 id="measures-h">Măsuri candidate</h3>
-  <p class="muted small">Propuneri de analizat de Comisia de circulație, nu decizii.</p>
+  <p class="muted small">De verificat și avizat de Comisia de circulație.</p>
   @for (m of measures(); track m.measure_id) {
     <article class="measure">
       <h4>{{ m.def?.nume ?? m.measure_id }}</h4>
       <p>De ce: {{ m.motiv }}</p>
       <p>Cost estimat: {{ m.cost | nullLabel: 'cost nedocumentat' }} @if (m.cost && m.def?.sursa_cost) { <span class="muted small">({{ m.def?.sursa_cost }})</span> }</p>
       @if (m.reduction) {
-        <p class="muted small">Reducere tipică raportată în literatură: {{ m.reduction }} ({{ m.def?.sursa_reducere | nullLabel: 'fără sursă' }}). Informativ, nu o predicție pentru acest loc.</p>
+        <p class="muted small">Reper din studii: {{ m.reduction }} · {{ m.def?.sursa_reducere | nullLabel: 'fără sursă' }}. Nu este o predicție locală.</p>
       }
       <p class="check-h">De verificat în teren:</p>
       <ul class="checks">@for (check of m.de_verificat; track check) { <li>{{ check }}</li> }</ul>
     </article>
   } @empty {
-    <p class="muted">Catalogul de măsuri cu surse și verificarea aplicabilității nu sunt încă integrate. Nu există costuri sau efecte estimate pentru această locație.</p>
+    <p class="muted">Nicio măsură validată pentru acest loc. Costurile și efectele sunt necunoscute.</p>
   }
 </section>
 

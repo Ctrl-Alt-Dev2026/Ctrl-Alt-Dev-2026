@@ -1,0 +1,19 @@
+@if (store.streets().features.length > 0) {
+  <div class="sources" role="group" aria-label="Sursa afișată pe hartă și în listă">
+    @for (metric of metrics; track metric) {
+      <button type="button" [attr.aria-pressed]="store.streetMetric() === metric" (click)="store.streetMetric.set(metric)">{{ sourceLabel[metric] }}</button>
+    }
+  </div>
+}
+<label>
+  <span>Participanți</span>
+  <select aria-label="Filtrează după participanți" [disabled]="store.streetMetric() === 'pmud'" [value]="store.streetMetric() === 'pmud' ? '' : store.participant() ?? ''" (change)="setParticipant($event)">
+    <option value="">Toți</option>
+    @for (participant of store.participants(); track participant) {
+      <option [value]="participant">{{ participantLabel(participant) }}</option>
+    }
+  </select>
+</label>
+@if (store.streetMetric() === 'pmud') {
+  <small>IPJ: fără date despre participanți.</small>
+}

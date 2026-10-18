@@ -3,14 +3,14 @@
     <h2 id="attention-title">Străzi de verificat întâi</h2>
     <button type="button" class="btn close" (click)="close()" aria-label="Închide">✕</button>
   </header>
-  <p class="rule muted">
-    Ordinea: câte semnale independente are strada (top ISU, top IPJ, gravitate, mai multe relatări în presă, pietoni),
-    apoi numărul de intervenții ISU. E o ordine pentru verificarea în teren, nu un scor de risc. Regula e fixată în
-    <code>isu/README.md</code>.
-  </p>
+  <ul class="rule muted">
+    <li>Cel puțin două semnale: ISU, IPJ, gravitate, presă sau pietoni.</li>
+    <li>Ordine după semnale, apoi intervenții ISU.</li>
+    <li>Prioritate pentru teren, nu clasament de risc.</li>
+  </ul>
 
   @if (store.attentionStreets().length === 0) {
-    <p class="empty">Nicio stradă nu are cel puțin două semnale în datele actuale.</p>
+    <p class="empty">Nicio stradă cu minimum două semnale.</p>
   } @else {
     <ol>
       @for (f of store.attentionStreets(); track f.properties.id) {
@@ -41,5 +41,5 @@
       }
     </ol>
   }
-  <p class="foot muted">Sursele nu se adună și pot descrie același accident. Decizia aparține Comisiei de circulație.</p>
+  <p class="foot muted">Sursele nu se adună. Măsurile cer verificare și avizul Comisiei de circulație.</p>
 </dialog>

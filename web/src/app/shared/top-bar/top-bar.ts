@@ -1,4 +1,4 @@
-import { afterNextRender, ChangeDetectionStrategy, Component, computed, DestroyRef, ElementRef, inject, signal } from '@angular/core';
+import { afterNextRender, afterRenderEffect, ChangeDetectionStrategy, Component, computed, DestroyRef, ElementRef, inject, signal, viewChild } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter, map } from 'rxjs';
@@ -25,6 +25,7 @@ export class TopBar {
   protected readonly store = inject(DataStore);
   protected readonly appName = APP_NAME;
   protected readonly aboutOpen = signal(false);
+  private readonly aboutDialog = viewChild.required<ElementRef<HTMLDialogElement>>('aboutDialog');
 
   // "Hartă" stays active on /locatie/:id too, which routerLinkActive can't express for '/'.
   private readonly url = toSignal(
@@ -46,11 +47,20 @@ export class TopBar {
 
   // The collected dataset lists its sources in the manifest.
   protected readonly isIsu = computed(() => !!this.store.manifest()?.surse?.some((s) => s.id === 'isu'));
+  protected readonly pressInCity = computed(() => {
+    const stats = this.store.manifest()?.statistici;
+    return stats?.['presa_municipiu'] ?? stats?.['presa_evenimente'] ?? null;
+  });
   protected readonly updated = computed(() => clock(this.store.builtAt()));
   protected readonly next = computed(() => clock(this.store.status()?.urmatoarea_rulare ?? null));
   protected readonly lastRunFailed = computed(() => this.store.status()?.ultima_rulare?.status === 'error');
 
   constructor() {
+    afterRenderEffect(() => {
+      const dialog = this.aboutDialog().nativeElement;
+      if (this.aboutOpen() && !dialog.open) dialog.showModal();
+      else if (!this.aboutOpen() && dialog.open) dialog.close();
+    });
     const host = inject(ElementRef<HTMLElement>).nativeElement;
     const destroy = inject(DestroyRef);
     afterNextRender(() => {
@@ -64,5 +74,14 @@ export class TopBar {
       update();
       destroy.onDestroy(() => observer.disconnect());
     });
+  }
+
+  protected backdrop(event: MouseEvent): void {
+    const dialog = this.aboutDialog().nativeElement;
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+      this.aboutOpen.set(false);
+    }
   }
 }

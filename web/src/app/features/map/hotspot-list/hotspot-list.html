@@ -1,12 +1,12 @@
 <header>
   <h2>Locații de verificat</h2>
   <p class="muted">
-    {{ hotspots().length }} {{ hotspots().length === 1 ? 'locație' : 'locații' }}, ordonate după scorul de prioritizare.
+    {{ hotspots().length }} {{ hotspots().length === 1 ? 'locație' : 'locații' }} · ordine după scor
   </p>
 </header>
 
 @if (hotspots().length === 0) {
-  <p class="empty">Nicio locație nu îndeplinește condițiile de clasare cu filtrul selectat.</p>
+  <p class="empty">Nicio locație pentru selecția curentă.</p>
 } @else {
   <ol>
     @for (h of hotspots(); track h.id) {
@@ -25,7 +25,7 @@
 }
 
 <footer class="muted">
-  <p>Scorul e o regulă de prioritizare pe acest eșantion de presă, nu o probabilitate de accident.</p>
+  <p>Scor de prioritizare, nu probabilitate de accident.</p>
   @if (excludedCount() > 0) {
     <p>
       {{ excludedCount() }} {{ excludedCount() === 1 ? 'eveniment localizat aproximativ nu intră' : 'evenimente localizate aproximativ nu intră' }}

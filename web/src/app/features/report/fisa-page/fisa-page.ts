@@ -3,6 +3,7 @@ import { dateRo, GRAVITATE, lei, participantLabel } from '../../../core/format/l
 import { NullLabelPipe } from '../../../core/format/null-label.pipe';
 import { Accident } from '../../../core/models/contract';
 import { DataStore } from '../../../core/state/data.store';
+import { sentencePoints } from '../../../core/format/text';
 
 const CLOCK = new Intl.DateTimeFormat('ro-RO', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Bucharest' });
 
@@ -19,6 +20,7 @@ export class FisaPage {
   protected readonly dateRo = dateRo;
   protected readonly gravitate = GRAVITATE;
   protected readonly participantLabel = participantLabel;
+  protected readonly sentencePoints = sentencePoints;
   // null = every street on the list; a set once the user unticks one.
   private readonly chosen = signal<Set<string> | null>(null);
 

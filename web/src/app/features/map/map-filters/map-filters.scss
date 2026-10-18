@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2);
+  font-size: var(--step--1);
+}
+.sources { display: flex; gap: var(--space-1); }
+button, select {
+  border: var(--hair) solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--night-950);
+  color: var(--ink);
+  padding: 0.45em 0.65em;
+  cursor: pointer;
+}
+button:hover { background: var(--night-800); }
+button[aria-pressed='true'] { border-color: var(--accent); color: var(--accent); }
+label { display: flex; align-items: center; gap: var(--space-2); }
+label span, small { color: var(--muted); }
+select { max-width: 12rem; }
+select:disabled { opacity: 0.5; cursor: default; }
+@media (max-width: 55.99rem) {
+  :host { justify-content: space-between; }
+  label { flex: 1; justify-content: space-between; }
+  small { flex-basis: 100%; }
+}

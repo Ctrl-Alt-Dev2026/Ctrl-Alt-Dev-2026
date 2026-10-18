@@ -2,13 +2,14 @@
   <header>
     <h1>Fișă de verificare pentru primărie</h1>
     @if (store.manifest(); as m) {
-      <p>Străzile cu cele mai multe semnale independente în comunicatele ISU Iași, presa locală și totalurile IPJ din PMUD Iași 2022@if (period(); as p) {, {{ p }}}.</p>
+      <p>Străzi de verificat · ISU, presă și IPJ/PMUD</p>
+      @if (period(); as p) { <p>{{ p }}</p> }
       @if (m.data_mode === 'synthetic') {
         <p class="synthetic"><strong>DATE SINTETICE.</strong> Fișa nu descrie accidente reale.</p>
       }
-      <p class="version">Date colectate automat de server@if (builtAt(); as at) { la {{ at }}}; ISU extrase cu reguli fixe, presa cu Claude, rezultat salvat (reluare); {{ m.nr_verificate }} verificate manual.</p>
+      <ul class="version"><li>Actualizat@if (builtAt(); as at) { {{ at }}}</li><li>ISU: reguli · presă: Claude, rezultat salvat (reluare), sau reguli</li><li>{{ m.nr_verificate }} evenimente verificate manual</li></ul>
     }
-    <p class="limits">Fișă de sprijin pentru verificare, fără certificarea unui audit rutier. Sursele nu se adună și pot descrie același accident; lipsa unui accident din date nu dovedește o zonă sigură. Ordinea e o regulă de verificare, nu un scor de risc. Decizia aparține Comisiei de circulație.</p>
+    <ul class="limits"><li>Fișă de lucru, fără audit rutier certificat.</li><li>Surse separate; același accident poate apărea în mai multe.</li><li>Ordine de verificare, nu clasament de risc. Lipsa evenimentelor nu dovedește siguranța străzii.</li><li>Decizia aparține Comisiei de circulație.</li></ul>
     @if (store.state() === 'ready') {
       <button type="button" class="btn primary no-print" (click)="print()">Tipărește sau salvează PDF</button>
     }
@@ -17,7 +18,7 @@
   @if (store.state() === 'loading') {
     <p role="status">Se încarcă datele…</p>
   } @else if (store.state() === 'waiting') {
-    <p role="status">Prima colectare a serverului nu s-a încheiat. Fișa se completează automat după ea.</p>
+    <p role="status">Colectare în curs. Fișa apare automat la final.</p>
   } @else if (store.state() === 'error') {
     <p role="alert">{{ store.error() }}</p>
   } @else {
@@ -49,9 +50,14 @@
         <ul>@for (c of s.f.properties.de_verificat; track c) { <li>{{ c }}</li> }</ul>
         @if (s.f.properties.recomandari_ai; as advice) {
           <h3>Sugestii AI, de verificat</h3>
-          <p class="gaps">{{ advice.eticheta }}. Alese din catalogul de măsuri, fără costuri sau efecte estimate.@if (!advice.actual) { Bazate pe datele dinaintea ultimei actualizări.}</p>
-          <p>{{ advice.rezumat }}</p>
-          <ul>@for (r of advice.recomandari; track r.measure_id) { <li><strong>{{ r.nume }}</strong>: {{ r.motiv }} De verificat: {{ r.de_verificat.join('; ') }}.</li> }</ul>
+          <p class="gaps">{{ advice.eticheta }} · fără deviz sau efect estimat@if (!advice.actual) { · date mai vechi}</p>
+          <ul>@for (point of sentencePoints(advice.rezumat); track $index) { <li>{{ point }}</li> }</ul>
+          @for (r of advice.recomandari; track r.measure_id) {
+            <h4>{{ r.nume }}</h4>
+            <ul>@for (point of sentencePoints(r.motiv); track $index) { <li>{{ point }}</li> }</ul>
+            <p>De verificat:</p>
+            <ul>@for (check of r.de_verificat; track check) { <li>{{ check }}</li> }</ul>
+          }
         }
         <h3>Evenimente și surse ({{ s.events.length }})</h3>
         <ul>
@@ -70,11 +76,11 @@
         }
       </section>
     } @empty {
-      <p>{{ streets().length ? 'Nicio stradă selectată.' : 'Nicio stradă nu are cel puțin două semnale în datele actuale.' }}</p>
+      <p>{{ streets().length ? 'Nicio stradă selectată.' : 'Nicio stradă cu minimum două semnale.' }}</p>
     }
 
     @if (locations().length > 0) {
-      <h2 class="part">Locații cu scor (Planificare §5)</h2>
+      <h2 class="part">Locații cu scor</h2>
       @for (r of locations(); track r.h.id) {
         <section class="loc">
           <h2><span class="rank">{{ r.rank }}.</span> {{ r.h.nume }} <span class="score">scor {{ r.h.scor }}</span></h2>

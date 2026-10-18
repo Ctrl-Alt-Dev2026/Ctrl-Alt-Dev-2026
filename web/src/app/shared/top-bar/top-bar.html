@@ -5,33 +5,29 @@
       <span class="synthetic" title="{{ store.manifest()?.avertisment }}">Date sintetice</span>
     }
   </div>
-  <p>
-    {{ isIsu() ? 'Accidente rutiere din comunicatele ISU Iași și din presă' : 'Accidente rutiere raportate în presă' }}@if (period(); as p) {, {{ p }}}
-  </p>
+  <p>Iași · accidente raportate</p>
   @if (store.manifest(); as m) {
     @if (m.statistici; as st) {
       <p class="muted coverage">
-        <b>{{ st['evenimente_judet'] }}</b> intervenții ISU (județ),
-        <b>{{ st.evenimente_municipiu }}</b> în municipiu; <b>{{ st['presa_evenimente'] }}</b> din presă; extrase automat, <b>{{ m.nr_verificate }}</b> verificate manual
+        <b>{{ st.evenimente_municipiu }}</b> ISU în municipiu · <b>{{ pressInCity() }}</b> presă · <b>{{ m.nr_verificate }}</b> verificate manual
       </p>
     } @else {
       <p class="muted coverage">
-        <b>{{ m.nr_evenimente }}</b> evenimente unice din <b>{{ m.nr_articole }}</b> articole,
-        <b>{{ m.nr_localizate_precis }}</b> localizate precis, <b>{{ m.nr_verificate }}</b> verificate manual
+        <b>{{ m.nr_evenimente }}</b> evenimente · <b>{{ m.nr_localizate_precis }}</b> precise · <b>{{ m.nr_verificate }}</b> verificate manual
       </p>
     }
   }
   @if (store.error(); as error) {
-    <p class="load-error" role="alert">{{ error }}@if (updated(); as u) { Afișăm datele colectate la {{ u }}.}</p>
+    <p class="load-error" role="alert">{{ error }}@if (updated(); as u) { Date păstrate: {{ u }}.}</p>
   } @else if (store.status(); as s) {
     <p class="live muted" [class.busy]="s.ruleaza" role="status">
       <i aria-hidden="true"></i>
       <span>
         @if (s.ruleaza) { Colectare în curs… } @else if (updated(); as u) { Actualizat {{ u }} }
         @if (s.colectare_automata) {
-          · automat la {{ s.interval_minute }} min@if (!s.ruleaza && next(); as n) {, următoarea {{ n }}}
-        } @else { · colectarea automată e oprită pe server }
-        @if (lastRunFailed()) { · ultima colectare a eșuat, rămân datele anterioare }
+          · la {{ s.interval_minute }} min
+        } @else { · colectare automată oprită }
+        @if (lastRunFailed()) { · ultima colectare a eșuat }
       </span>
     </p>
   }
@@ -39,26 +35,41 @@
 
 <nav class="nav glass" aria-label="Ecrane">
   <a routerLink="/" [class.active]="onMap()" [attr.aria-current]="onMap() ? 'page' : null">Hartă</a>
-  <a routerLink="/fisa" routerLinkActive="active">Fișa pentru primărie</a>
-  <button type="button" class="about-btn" [attr.aria-expanded]="aboutOpen()" (click)="aboutOpen.set(!aboutOpen())">
+  <a routerLink="/fisa" routerLinkActive="active">Fișa primăriei</a>
+  <button type="button" class="about-btn" aria-haspopup="dialog" aria-controls="about-drawer" [attr.aria-expanded]="aboutOpen()" (click)="aboutOpen.set(true)">
     Despre date
   </button>
 </nav>
 
-@if (aboutOpen()) {
-  <section class="about glass" aria-label="Despre date">
+  <dialog #aboutDialog id="about-drawer" class="about glass side-drawer" aria-labelledby="about-title" (close)="aboutOpen.set(false)" (click)="backdrop($event)">
+    <header><h2 id="about-title">Despre date</h2><button type="button" class="drawer-close" aria-label="Închide informațiile" (click)="aboutOpen.set(false)" autofocus>✕</button></header>
+    @if (period(); as p) { <p class="muted">{{ p }}</p> }
     @if (store.isSynthetic()) {
       <p class="warn">{{ store.manifest()?.avertisment ?? 'DATE SINTETICE: scenariu de demonstrație, fără accidente observate.' }}</p>
     }
     @if (isIsu()) {
-      <p>{{ store.manifest()?.avertisment }}</p>
-      <p>Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
+      <ul>
+        <li><b>ISU:</b> intervențiile pompierilor, nu toate accidentele.</li>
+        <li><b>Presă:</b> BZI și Ziarul de Iași. Extracție Claude, rezultat salvat (reluare).</li>
+        <li><b>IPJ:</b> totaluri pe artere din PMUD 2022, pentru 2020–2021.</li>
+      </ul>
+      @if (store.manifest()?.statistici; as st) { <p class="muted">ISU: {{ st['evenimente_judet'] }} intervenții în județ, {{ st.evenimente_municipiu }} în municipiu.</p> }
     } @else {
-      <p>Presa scrie selectiv, mai ales despre accidentele grave. Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
+      <p>Presa acoperă selectiv accidentele, mai ales pe cele grave.</p>
     }
-    <p>Scorul e o regulă de prioritizare pe acest eșantion, nu o probabilitate de accident.</p>
-    <p>Măsurile sunt candidate, de verificat în teren. Decizia aparține Comisiei de circulație.</p>
-    <p>Datele sunt colectate de server la fiecare 30 de minute și sunt aceleași pentru toți cei care deschid pagina.</p>
-    <button type="button" class="btn" (click)="aboutOpen.set(false)">Închide</button>
-  </section>
-}
+    <h3>De reținut</h3>
+    <ul>
+      <li>Sursele pot descrie același accident; nu se adună.</li>
+      <li>Scorul indică prioritatea, nu probabilitatea unui accident.</li>
+      <li>Lipsa evenimentelor nu dovedește că strada este sigură.</li>
+      <li>Măsurile cer verificare în teren și decizia Comisiei de circulație.</li>
+    </ul>
+    @if (store.status(); as s) {
+      <h3>Actualizare</h3>
+      <p>{{ s.colectare_automata ? 'Colectare automată la ' + s.interval_minute + ' minute.' : 'Colectarea automată este oprită pe acest server.' }}</p>
+      @if (next(); as n) { <p class="muted">Următoarea rulare: {{ n }}</p> }
+    }
+    @if (store.manifest()?.avertisment; as note) {
+      <details><summary>Notele complete ale surselor</summary><p>{{ note }}</p></details>
+    }
+  </dialog>

@@ -175,6 +175,7 @@ export class CityMap {
   readonly selectCamera = output<string>();
 
   readonly select = output<string>();
+  readonly selectBackground = output<void>();
   readonly basemapFailed = output<void>();
 
   private readonly host = viewChild.required<ElementRef<HTMLDivElement>>('host');
@@ -205,10 +206,13 @@ export class CityMap {
     });
     effect(() => {
       const id = this.selectedStreetId();
+      this.rightInset();
       untracked(() => this.focusStreet(id));
     });
     effect(() => {
       const id = this.selectedId();
+      this.selectedStreetId();
+      if (id) this.rightInset();
       untracked(() => this.focus(id));
     });
     effect(() => {
@@ -275,7 +279,16 @@ export class CityMap {
       this.customizeBasemap(map);
       this.addHotspotLayers(map);
       if (!this.overlay) {
-        this.overlay = new MapboxOverlay({ interleaved: false, layers: [], getTooltip: (info) => this.tooltip(info) });
+        this.overlay = new MapboxOverlay({
+          interleaved: false,
+          layers: [],
+          getTooltip: (info) => this.tooltip(info),
+          onClick: (info) => {
+            if (!info.object || info.layer?.id === 'events' || info.layer?.id.startsWith('density')) {
+              this.selectBackground.emit();
+            }
+          },
+        });
         map.addControl(this.overlay as unknown as IControl);
       }
       this.ready = true;
@@ -568,7 +581,7 @@ export class CityMap {
     const duration = this.reducedMotion ? 0 : h ? 3200 : 2400;
     if (h) {
       this.map.flyTo({ center: [h.lon, h.lat], zoom: 16.3, pitch: 64, bearing: this.map.getBearing() + 40, padding, duration, essential: true });
-    } else if (!this.selectedStreetId()) {
+    } else if (!this.selectedStreetId() && !this.selectedCameraId()) {
       // Leaving a location for a street must not fly home over the street's own camera move.
       this.map.flyTo({ ...HOME, padding, duration, essential: true });
     }

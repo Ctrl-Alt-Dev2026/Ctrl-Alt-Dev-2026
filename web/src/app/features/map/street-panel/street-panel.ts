@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { CAUZA, dateRo, GRAVITATE, lei, participantLabel, PRECISE } from '../../../core/format/labels';
 import { Accident } from '../../../core/models/contract';
-import { SOURCE_LABEL, StreetMetric } from '../../../core/models/streets';
+import { SOURCE_LABEL } from '../../../core/models/streets';
 import { DataStore } from '../../../core/state/data.store';
 import { HourChart } from '../../../shared/hour-chart/hour-chart';
+import { sentencePoints } from '../../../core/format/text';
 
 // Streets ranked by one source at a time: ISU interventions, press reports, or IPJ totals from PMUD (2020–2021).
 @Component({
@@ -19,10 +20,10 @@ export class StreetPanel {
   protected readonly gravitate = GRAVITATE;
   protected readonly participantLabel = participantLabel;
   protected readonly precise = PRECISE;
-  protected readonly metrics: StreetMetric[] = ['isu', 'presa', 'pmud'];
   protected readonly sourceLabel = SOURCE_LABEL;
   protected readonly analysisSources = ['isu', 'presa'] as const;
   protected readonly lei = lei;
+  protected readonly sentencePoints = sentencePoints;
   protected readonly entries = (record: Record<string, number>) => Object.entries(record);
   protected readonly causeLabel = (cause: string) => cause === 'necunoscut' ? 'cauză necunoscută' :
     (CAUZA as Record<string, string>)[cause] ?? cause;
@@ -35,10 +36,6 @@ export class StreetPanel {
     Math.max(1, ...this.store.rankedStreets().map((f) => this.store.streetValue().get(f.properties.id) ?? 0)),
   );
   protected readonly sources = computed(() => this.store.manifest()?.surse ?? []);
-
-  protected setMetric(metric: StreetMetric): void {
-    this.store.streetMetric.set(metric);
-  }
 
   protected value(id: string): number {
     return this.store.streetValue().get(id) ?? 0;
