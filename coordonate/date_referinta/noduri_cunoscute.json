@@ -23,10 +23,10 @@
     "Podu Roș"
    ],
    "sursa_propunere": "loc OSM „Podu Roș” (node/5964858917, neighbourhood); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "piata-unirii",
@@ -41,10 +41,10 @@
     "Strada Cuza Vodă"
    ],
    "sursa_propunere": "strada OSM „Piața Unirii” (way/252595530); nodul ei cu cele mai multe străzi",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "piata-mihai-eminescu",
@@ -58,10 +58,10 @@
     "Strada Vasile Conta"
    ],
    "sursa_propunere": "poi OSM „Piața Mihai Eminescu” (node/10565928150, stop_position); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "podu-de-fier",
@@ -78,10 +78,10 @@
     "Strada Eternitate"
    ],
    "sursa_propunere": "poi OSM „Podu de Fier” (node/12857033786, stop_position); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "agronomie",
@@ -98,26 +98,26 @@
     "Strada Grigore Ghica Vodă"
    ],
    "sursa_propunere": "loc OSM „Rond Agronomie” (way/240129473, square); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "piata-independentei",
    "nume": "Piața Independenței",
    "alias": [],
-   "osm": "node/262013893",
-   "link": "https://www.openstreetmap.org/node/262013893",
+   "osm": "node/12075160436",
+   "link": "https://www.openstreetmap.org/node/12075160436",
    "strazi_osm": [
     "Strada Mihai Eminescu",
     "Strada Veronica Micle"
    ],
    "sursa_propunere": "loc OSM „Piața Independenței” (relation/7918377, square); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   },
   {
    "id": "piata-nicolina",
@@ -130,10 +130,10 @@
     "Strada Broscăriei"
    ],
    "sursa_propunere": "poi OSM „Piața Nicolina” (node/10573422754, stop_position); intersecția cu cele mai multe străzi în 150 m",
-   "verificat": false,
-   "verificat_de": null,
-   "verificat_la": null,
-   "nota": null
+   "verificat": true,
+   "verificat_de": "andrei.jitaru@student.uaic.ro",
+   "verificat_la": "2026-10-17T22:50:30+03:00",
+   "nota": "Marcat verificat la cererea utilizatorului, pentru testarea cu datele mock; agentul nu a confirmat nodul pe openstreetmap.org."
   }
  ]
 }
