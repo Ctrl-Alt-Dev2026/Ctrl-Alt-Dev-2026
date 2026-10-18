@@ -31,6 +31,7 @@ export const PARTICIPANT: Record<string, string> = {
   motocicleta: 'Motociclete',
   trotineta: 'Trotinete',
   camion: 'Vehicule grele',
+  autoutilitara: 'Autoutilitare',
 };
 
 export function participantLabel(p: string): string {

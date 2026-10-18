@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Știați că fiecare județ are un grup Info Trafic? - Info Trafic Romania</title>
+	<meta name="description" content="Bine ai venit în comunitatea Info Trafic din România, unde găsești grupuri dedicate fiecărui județ." />
+	<link rel="canonical" href="https://infotraficromania.ro/stiati-ca-fiecare-judet-are-un-grup-info-trafic/" />
+	<meta property="og:locale" content="ro_RO" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Știați că fiecare județ are un grup Info Trafic? - Info Trafic Romania" />
+	<meta property="og:description" content="Bine ai venit în comunitatea Info Trafic din România, unde găsești grupuri dedicate fiecărui județ." />
+	<meta property="og:url" content="https://infotraficromania.ro/stiati-ca-fiecare-judet-are-un-grup-info-trafic/" />
+	<meta property="og:site_name" content="Info Trafic Romania" />
+	<meta property="article:publisher" content="https://www.facebook.com/InfoTraficRomania/" />
+	<meta property="article:author" content="www.facebook.com/InfoTraficRomania" />
+	<meta property="article:published_time" content="2023-12-08T11:00:37+00:00" />
+	<meta property="article:modified_time" content="2023-12-15T09:06:54+00:00" />
+	<meta property="og:image" content="https://infotraficromania.ro/wp-content/uploads/2022/03/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg" />
+	<meta property="og:image:width" content="851" />
+	<meta property="og:image:height" content="314" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="admin" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@https://twitter.com/trafic_romania" />
+	<meta name="twitter:site" content="@trafic_romania" />
+	<meta name="twitter:label1" content="Scris de" />
+	<meta name="twitter:data1" content="admin" />
+	<meta name="twitter:label2" content="Timp estimat pentru citire" />
+	<meta name="twitter:data2" content="2 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"NewsArticle","@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#article","isPartOf":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/"},"author":{"name":"admin","@id":"https:\/\/infotraficromania.ro\/#\/schema\/person\/e07f8c923c052da1743561c27a04238a"},"headline":"Știați că fiecare județ are un grup Info Trafic?","datePublished":"2023-12-08T11:00:37+00:00","dateModified":"2023-12-15T09:06:54+00:00","mainEntityOfPage":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/"},"wordCount":319,"commentCount":0,"publisher":{"@id":"https:\/\/infotraficromania.ro\/#organization"},"image":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#primaryimage"},"thumbnailUrl":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2022\/03\/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg","keywords":["care sunt","cum","gasesc","Grupuri","info trafic","judet","romania"],"articleSection":["Informativ"],"inLanguage":"ro-RO","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#respond"]}]},{"@type":"WebPage","@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/","url":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/","name":"Știați că fiecare județ are un grup Info Trafic? - Info Trafic Romania","isPartOf":{"@id":"https:\/\/infotraficromania.ro\/#website"},"primaryImageOfPage":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#primaryimage"},"image":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#primaryimage"},"thumbnailUrl":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2022\/03\/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg","datePublished":"2023-12-08T11:00:37+00:00","dateModified":"2023-12-15T09:06:54+00:00","description":"Bine ai venit în comunitatea Info Trafic din România, unde găsești grupuri dedicate fiecărui județ.","breadcrumb":{"@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#breadcrumb"},"inLanguage":"ro-RO","potentialAction":[{"@type":"ReadAction","target":["https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/"]}]},{"@type":"ImageObject","inLanguage":"ro-RO","@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#primaryimage","url":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2022\/03\/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg","contentUrl":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2022\/03\/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg","width":851,"height":314,"caption":"Ce sunt grupurile Info Trafic?"},{"@type":"BreadcrumbList","@id":"https:\/\/infotraficromania.ro\/stiati-ca-fiecare-judet-are-un-grup-info-trafic\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Prima pagină","item":"https:\/\/infotraficromania.ro\/"},{"@type":"ListItem","position":2,"name":"Știați că fiecare județ are un grup Info Trafic?"}]},{"@type":"WebSite","@id":"https:\/\/infotraficromania.ro\/#website","url":"https:\/\/infotraficromania.ro\/","name":"Info Trafic Romania","description":"Informatii in timp real despre starea traficului rutier din Romania. Accidente, blocaje, restrictii si alte pericole. Filmari din Trafic, Legislatie rutiera, foto, video.","publisher":{"@id":"https:\/\/infotraficromania.ro\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/infotraficromania.ro\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ro-RO"},{"@type":"Organization","@id":"https:\/\/infotraficromania.ro\/#organization","name":"Info Trafic Romania","url":"https:\/\/infotraficromania.ro\/","logo":{"@type":"ImageObject","inLanguage":"ro-RO","@id":"https:\/\/infotraficromania.ro\/#\/schema\/logo\/image\/","url":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2021\/10\/dsd.png","contentUrl":"https:\/\/infotraficromania.ro\/wp-content\/uploads\/2021\/10\/dsd.png","width":418,"height":300,"caption":"Info Trafic Romania"},"image":{"@id":"https:\/\/infotraficromania.ro\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/InfoTraficRomania\/","https:\/\/x.com\/trafic_romania","https:\/\/instagram.com\/infotraficromania?utm_medium=copy_link","https:\/\/youtube.com\/c\/InfoTraficRomania"]},{"@type":"Person","@id":"https:\/\/infotraficromania.ro\/#\/schema\/person\/e07f8c923c052da1743561c27a04238a","name":"admin","image":{"@type":"ImageObject","inLanguage":"ro-RO","@id":"https:\/\/secure.gravatar.com\/avatar\/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=96&d=mm&r=g","caption":"admin"},"description":"Administrator comunitate Info Trafic România cu peste 1.000.000 membri.","sameAs":["http:\/\/localhost\/prezentare","www.facebook.com\/InfoTraficRomania","https:\/\/www.instagram.com\/infotraficromania\/","https:\/\/x.com\/https:\/\/twitter.com\/trafic_romania","https:\/\/www.youtube.com\/c\/InfoTraficRomania"],"url":"https:\/\/infotraficromania.ro\/author\/admin\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel="alternate" type="application/rss+xml" title="Info Trafic Romania &raquo; Flux" href="https://infotraficromania.ro/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Info Trafic Romania &raquo; Flux comentarii" href="https://infotraficromania.ro/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Flux comentarii Info Trafic Romania &raquo; Știați că fiecare județ are un grup Info Trafic?" href="https://infotraficromania.ro/stiati-ca-fiecare-judet-are-un-grup-info-trafic/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://infotraficromania.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://infotraficromania.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='quiz-maker-admin-css' href='https://infotraficromania.ro/wp-content/plugins/quiz-maker/admin/css/admin.css?ver=6.7.1.84' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://infotraficromania.ro/wp-includes/css/dist/block-library/style.min.css?ver=7.1.3' media='all' />
+<style id="wp-block-library-theme-inline-css">
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote :where(cite),.wp-block-pullquote :where(footer),.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+/*# sourceURL=/wp-includes/css/dist/block-library/theme.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='cookie-law-info-css' href='https://infotraficromania.ro/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-public.css?ver=3.5.6' media='all' />
+<link rel='stylesheet' id='cookie-law-info-gdpr-css' href='https://infotraficromania.ro/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-gdpr.css?ver=3.5.6' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://infotraficromania.ro/wp-includes/css/dashicons.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='everest-forms-general-css' href='https://infotraficromania.ro/wp-content/plugins/everest-forms/assets/css/everest-forms.css?ver=1790314485' media='all' />
+<link rel='stylesheet' id='jquery-intl-tel-input-css' href='https://infotraficromania.ro/wp-content/plugins/everest-forms/assets/css/intlTelInput.css?ver=3.6.2' media='all' />
+<link rel='stylesheet' id='quiz-maker-css' href='https://infotraficromania.ro/wp-content/plugins/quiz-maker/public/css/quiz-maker-public.css?ver=6.7.1.84' media='all' />
+<link rel='stylesheet' id='newsup-fonts-css' href='https://fonts.googleapis.com/css?family=Montserrat:700,800|Montserrat:700|Inter:300,400,500,600,700,800,900&#038;subset=latin,latin-ext&#038;display=swap' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/bootstrap.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='newsup-style-css' href='https://infotraficromania.ro/wp-content/themes/news-talk/style.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/font-awesome/css/all.min.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/font-awesome/css/v4-shims.min.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='owl-carousel-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/owl.carousel.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='smartmenus-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/jquery.smartmenus.bootstrap.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='newsup-custom-css-css' href='https://infotraficromania.ro/wp-content/themes/newsup/inc/ansar/customize/assets/css/customizer.css?ver=0.9' media='1.0' />
+<link rel='stylesheet' id='newsup-common-css-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/common.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='newsup-performance-css' href='https://infotraficromania.ro/wp-content/themes/newsup/css/newsup-performance.css?ver=0.9' media='all' />
+<link rel='stylesheet' id='newsup-style-parent-css' href='https://infotraficromania.ro/wp-content/themes/newsup/style.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='newstalk-style-css' href='https://infotraficromania.ro/wp-content/themes/news-talk/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='newstalk-default-css-css' href='https://infotraficromania.ro/wp-content/themes/news-talk/css/colors/default.css?ver=7.1.3' media='all' />
+<script id="jquery-core-js" src="https://infotraficromania.ro/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://infotraficromania.ro/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="cookie-law-info-js-extra">
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#dedfe0","button_3_button_hover":"#b2b2b3","button_3_link_colour":"#333333","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#333333","button_4_as_button":"1","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https://infotraficromania.ro/wp-admin/admin-ajax.php"};
+//# sourceURL=cookie-law-info-js-extra
+</script>
+<script id="cookie-law-info-js" src="https://infotraficromania.ro/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js?ver=3.5.6"></script>
+<script data-wp-strategy="defer" defer id="newsup-navigation-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/navigation.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="bootstrap-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/bootstrap.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="owl-carousel-min-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/owl.carousel.min.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="smartmenus-js-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/jquery.smartmenus.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="bootstrap-smartmenus-js-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/jquery.smartmenus.bootstrap.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="newsup-marquee-js-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/jquery.marquee.js?ver=0.9"></script>
+<script data-wp-strategy="defer" defer id="newsup-main-js-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/main.js?ver=0.9"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=G-4FN0GEYKNS" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["infotraficromania.ro"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-4FN0GEYKNS");
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://infotraficromania.ro/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://infotraficromania.ro/wp-json/wp/v2/posts/34402" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://infotraficromania.ro/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<meta name="generator" content="Everest Forms 3.6.2" />
+<link rel='shortlink' href='https://infotraficromania.ro/?p=34402' />
+<meta name="generator" content="Site Kit by Google 1.189.0" /><link rel="pingback" href="https://infotraficromania.ro/xmlrpc.php"> 
+<style type="text/css" id="custom-background-css">
+    .wrapper { background-color: #eee; }
+</style>
+
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+<meta name="generator" content="Elementor 4.3.2; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+      <meta name="onesignal" content="wordpress-plugin"/>
+            <script>
+
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+
+      OneSignalDeferred.push(function(OneSignal) {
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['serviceWorkerParam'] = { scope: "\/wp-content\/plugins\/onesignal-free-web-push-notifications\/sdk_files\/push\/onesignal\/" };
+oneSignal_options['serviceWorkerPath'] = 'OneSignalSDKWorker.js';
+
+        OneSignal.Notifications.setDefaultUrl("https://infotraficromania.ro");
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = 'ef5d2d7c-0697-48bd-bc2d-1642f684e370';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://infotraficromania.ro/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.4f716432-69c5-4efb-9ef6-8b17a5658ee8";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = "Vrei sa fii informat in timp real despre traficul rutier? Activeaza notificarile";
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+              OneSignal.init(window._oneSignalInitOptions);
+              OneSignal.Slidedown.promptPush()      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.Notifications.requestPermission(); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			    <style type="text/css">
+  
+        body .site-title a,
+        body .site-description {
+            color: #blank;
+        }
+
+        .site-branding-text .site-title a {
+                font-size: px;
+            }
+
+            @media only screen and (max-width: 640px) {
+                .site-branding-text .site-title a {
+                    font-size: 40px;
+
+                }
+            }
+
+            @media only screen and (max-width: 375px) {
+                .site-branding-text .site-title a {
+                    font-size: 32px;
+
+                }
+            }
+    </style>
+    
+<!-- Google AdSense snippet added by Site Kit -->
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6137813716595615&#038;host=ca-host-pub-2644536267352236"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+<link rel="icon" href="https://infotraficromania.ro/wp-content/uploads/2021/10/cropped-logo-PNG-Ziar-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://infotraficromania.ro/wp-content/uploads/2021/10/cropped-logo-PNG-Ziar-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://infotraficromania.ro/wp-content/uploads/2021/10/cropped-logo-PNG-Ziar-180x180.png" />
+<meta name="msapplication-TileImage" content="https://infotraficromania.ro/wp-content/uploads/2021/10/cropped-logo-PNG-Ziar-270x270.png" />
+</head>
+<body data-rsssl=1 class="wp-singular post-template-default single single-post postid-34402 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-newsup wp-child-theme-news-talk everest-forms-no-js ta-hide-date-author-in-list elementor-default elementor-kit-16" >
+<div id="page" class="site">
+<a class="skip-link screen-reader-text" href="#content">
+Skip to content</a>
+    <div class="wrapper" id="custom-background-css">
+        <header class="mg-headwidget">
+            <!--==================== TOP BAR ====================-->
+
+            <div class="mg-head-detail hidden-xs">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-xs-12">
+                <ul class="info-left">
+                                <li>D. oct. 18th, 2026                 <span  id="time" class="time"></span>
+                        </li>
+                        </ul>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <ul class="mg-social info-right">
+                            <li>
+            <a  target="_blank"  href="https://www.facebook.com/InfoTraficRomania">
+                <span class="icon-soci facebook">
+                    <i class="fab fa-facebook"></i>
+                </span> 
+            </a>
+        </li>
+                <li>
+            <a target="_blank" href="https://mobile.twitter.com/trafic_romania">
+                <span class="icon-soci x-twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </span>
+            </a>
+        </li>
+                <li>
+            <a target="_blank"  href="https://instagram.com/InfoTraficRomania">
+                <span class="icon-soci instagram">
+                    <i class="fab fa-instagram"></i>
+                </span>
+            </a>
+        </li>
+                <li>
+            <a target="_blank"  href="https://youtube.com/c/InfoTraficRomania">
+                <span class="icon-soci youtube">
+                    <i class="fab fa-youtube"></i>
+                </span>
+            </a>
+        </li>
+                <li>
+            <a target="_blank"  href="https://t.me/InfoTraficRomania">
+                <span class="icon-soci telegram">
+                    <i class="fab fa-telegram"></i>
+                </span>
+            </a>
+        </li>
+                        </ul>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="clearfix"></div>
+                        <div class="mg-nav-widget-area-back" style='background-image: url("https://infotraficromania.ro/wp-content/uploads/2022/03/cropped-Ce-sunt-grupurile-Info-Trafic.jpg" );'>
+                        <div class="overlay">
+              <div class="inner"  style="background-color:rgba(32,47,91,0.4);" > 
+                <div class="container-fluid">
+                    <div class="mg-nav-widget-area">
+                        <div class="row align-items-center">
+                                                      <div class="col-md-3 col-sm-4 text-center-xs">
+                                                              <div class="navbar-header">
+                                <a href="https://infotraficromania.ro/" class="navbar-brand" rel="home"><img fetchpriority="high" width="418" height="300" src="https://infotraficromania.ro/wp-content/uploads/2021/10/dsd.png" class="custom-logo" alt="info trafic romania" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2021/10/dsd.png 418w, https://infotraficromania.ro/wp-content/uploads/2021/10/dsd-300x215.png 300w" sizes="(max-width: 418px) 100vw, 418px" /></a>                                </div>
+                            </div>
+                                                   <div class="col-md-9">                 <div class="header-ads">
+                    <a class="pull-right" https://inchirierimoto.ro/ href="https://inchirierimoto.ro/"
+                        target="_blank"  >
+                        <img width="1536" height="518" src="https://infotraficromania.ro/wp-content/uploads/2026/07/cropped-inchirieri-moto.jpeg" class="attachment-full size-full" alt="" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/07/cropped-inchirieri-moto.jpeg 1536w, https://infotraficromania.ro/wp-content/uploads/2026/07/cropped-inchirieri-moto-300x101.jpeg 300w, https://infotraficromania.ro/wp-content/uploads/2026/07/cropped-inchirieri-moto-1024x345.jpeg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/07/cropped-inchirieri-moto-768x259.jpeg 768w" sizes="(max-width: 1536px) 100vw, 1536px" />                    </a>
+                </div>
+            </div>
+            <!-- Trending line END -->
+            
+                        </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+          </div>
+    <div class="mg-menu-full">
+      <nav class="navbar navbar-expand-lg navbar-wp">
+        <div class="container-fluid flex-row"> 
+          <!-- Right nav -->
+                <div class="m-header align-items-center">
+                            <a class="mobilehomebtn" href="https://infotraficromania.ro"><span class="fa-solid fa-house-chimney"></span></a>
+              <!-- navbar-toggle -->
+              <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbar-wp" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="burger">
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                </span>
+              </button>
+              <!-- /navbar-toggle -->
+                          <div class="dropdown show mg-search-box pr-2">
+                <a class="dropdown-toggle msearch ml-auto" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search"></i>
+                </a> 
+                <div class="dropdown-menu searchinner" aria-labelledby="dropdownMenuLink">
+                    <form role="search" method="get" id="searchform" action="https://infotraficromania.ro/">
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" value="" name="s" />
+    <span class="input-group-btn btn-default">
+    <button type="submit" class="btn"> <i class="fas fa-search"></i> </button>
+    </span> </div>
+</form>                </div>
+            </div>
+                  <a href="" target="_blank" class="btn-bell btn-theme mx-2"><i class="fa fa-bell"></i></a>
+                      
+          </div>
+          <!-- /Right nav --> 
+          
+                  <div class="collapse navbar-collapse" id="navbar-wp">
+                    <div class="d-md-block">
+                  <ul id="menu-meniu-principal-ro" class="nav navbar-nav mr-auto"><li class="active home"><a class="homebtn" href="https://infotraficromania.ro"><span class='fa-solid fa-house-chimney'></span></a></li><li id="menu-item-10978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10978"><a class="nav-link" title="Ultima oră" href="https://infotraficromania.ro/category/stiri-de-ultima-ora/">Ultima oră</a></li>
+<li id="menu-item-4694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4694"><a class="nav-link" title="Filmari din trafic" href="https://infotraficromania.ro/category/filmari-din-trafic/">Filmari din trafic</a></li>
+<li id="menu-item-10686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10686"><a class="nav-link" title="Legislatie rutiera" href="https://infotraficromania.ro/category/legislatie-rutiera/">Legislatie rutiera</a></li>
+<li id="menu-item-2931" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2931"><a class="nav-link" title="Webcam Trafic" href="https://infotraficromania.ro/category/webcam-trafic/">Webcam Trafic</a></li>
+<li id="menu-item-15684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15684"><a class="nav-link" title="Chestionare Auto" href="https://infotraficromania.ro/chestionare-auto/">Chestionare Auto</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a class="nav-link" title="Contact" href="https://infotraficromania.ro/contact/">Contact</a></li>
+</ul>                </div>    
+                  </div>
+
+                <!-- Right nav -->
+                   
+          <div class="desk-header d-lg-flex pl-3 ml-auto my-2 my-lg-0 position-relative align-items-center">
+                        <div class="dropdown show mg-search-box pr-2">
+                <a class="dropdown-toggle msearch ml-auto" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search"></i>
+                </a> 
+                <div class="dropdown-menu searchinner" aria-labelledby="dropdownMenuLink">
+                    <form role="search" method="get" id="searchform" action="https://infotraficromania.ro/">
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" value="" name="s" />
+    <span class="input-group-btn btn-default">
+    <button type="submit" class="btn"> <i class="fas fa-search"></i> </button>
+    </span> </div>
+</form>                </div>
+            </div>
+                  <a href="" target="_blank" class="btn-bell btn-theme mx-2"><i class="fa fa-bell"></i></a>
+                  </div>
+                    <!-- /Right nav -->  
+          </div>
+      </nav> <!-- /Navigation -->
+    </div>
+</header>
+<div class="clearfix"></div>
+ <!-- =========================
+     Page Content Section      
+============================== -->
+<main id="content" class="single-class content">
+  <!--container-->
+    <div class="container-fluid">
+      <!--row-->
+        <div class="row">
+                  <div class="col-lg-9 col-md-8">
+                                <div class="mg-blog-post-box"> 
+                    <div class="mg-header">
+                        <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/informativ/" alt="View all posts in Informativ"> 
+                                 Informativ
+                             </a></div>                        <h1 class="title single"> <a title="Permalink to: Știați că fiecare județ are un grup Info Trafic?">
+                            Știați că fiecare județ are un grup Info Trafic?</a>
+                        </h1>
+                                                <div class="media mg-info-author-block"> 
+                                                        <a class="mg-author-pic" href="https://infotraficromania.ro/author/admin/"> <img alt='' src='https://secure.gravatar.com/avatar/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=150&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=300&#038;d=mm&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' decoding='async'/> </a>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading"><span>By</span><a href="https://infotraficromania.ro/author/admin/">admin</a></h4>
+                                                            <span class="mg-blog-date"><i class="fas fa-clock"></i> 
+                                    dec. 8, 2023                                </span>
+                                                        </div>
+                        </div>
+                                            </div>
+                    <img fetchpriority="high" width="851" height="314" src="https://infotraficromania.ro/wp-content/uploads/2022/03/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg" class="img-fluid single-featured-image wp-post-image" alt="Ce sunt grupurile Info Trafic?" loading="eager" fetchpriority="high" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2022/03/Ce-sunt-grupurile-Info-Trafic-e1674679132200.jpg 851w, https://infotraficromania.ro/wp-content/uploads/2022/03/Ce-sunt-grupurile-Info-Trafic-e1674679132200-300x111.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2022/03/Ce-sunt-grupurile-Info-Trafic-e1674679132200-768x283.jpg 768w" sizes="(max-width: 851px) 100vw, 851px" />                    <article class="page-content-single small single">
+                        
+<h2 class="wp-block-heading has-medium-font-size">Bine ai venit în comunitatea Info Trafic din România! Aici, avem grupuri locale dedicate fiecărui județ, unde membrii noștri împărtășesc informații esențiale despre trafic pentru a face călătoriile tale mai sigure și mai eficiente.</h2>
+
+
+
+<p class="wp-block-paragraph">Bucură-te de o experiență de călătorie mai informată și mai sigură alăturându-te grupului Info Trafic din județul tău! Fiecare grup este dedicat furnizării de informații relevante pentru zona respectivă. Alege județul tău și fă parte din comunitatea noastră:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficAlba">Info Trafic Alba</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficArad">Info Trafic Arad</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficArges">Info Trafic Argeș</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBacau">Info Trafic Bacău</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBihor">Info Trafic Bihor</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBistritaNasaud">Info Trafic Bistrița-Năsăud</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBotosani">Info Trafic Botoșani</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBraila">Info Trafic Brăila</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBrasov">Info Trafic Brașov</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBucuresti">Info Trafic București</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficBuzau">Info Trafic Buzău</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficCalarasi">Info Trafic Călărași</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficCarasSeverin">Info Trafic Caraș-Severin</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficCluj">Info Trafic Cluj</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficConstanta">Info Trafic Constanța</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficCovasna">Info Trafic Covasna</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficDambovita">Info Trafic Dâmbovița</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficDolj">Info Trafic Dolj</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficGalati">Info Trafic Galați</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficGiurgiu">Info Trafic Giurgiu</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficGorj">Info Trafic Gorj</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficHarghita">Info Trafic Harghita</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficHunedoara">Info Trafic Hunedoara</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficIalomita">Info Trafic Ialomița</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficIasi">Info Trafic Iași</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficMaramures">Info Trafic Maramureș</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficMehedinti">Info Trafic Mehedinți</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficMures">Info Trafic Mureș</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficNeamt">Info Trafic Neamț</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficOlt">Info Trafic Olt</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficPrahova">Info Trafic Prahova</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficSalaj">Info Trafic Sălaj</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficSatuMare">Info Trafic Satu Mare</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficSibiu">Info Trafic Sibiu</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficSuceava">Info Trafic Suceava</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficTeleorman">Info Trafic Teleorman</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficTM">Info Trafic Timiș</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficTulcea">Info Trafic Tulcea</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficValcea">Info Trafic Vâlcea</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficVaslui">Info Trafic Vaslui</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/groups/InfoTraficVrancea">Info Trafic Vrancea</a></strong></li>
+
+
+
+<li><strong><a href="https://www.facebook.com/InfoTraficRomania">Info Trafic România</a></strong> (pentru informații naționale)</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Pentru a te alătura grupului, doar apasă pe link-ul corespunzător județului tău și fii la curent cu ultimele noutăți despre traficul local. Împărtășește informații, află despre incidente sau restricții și contribuie la o experiență de condus mai bună pentru toți!</p>
+
+
+
+<p class="wp-block-paragraph">Împreună facem traficul mai sigur și mai fluid în fiecare județ!</p>
+        <script>
+        function pinIt() {
+        var e = document.createElement('script');
+        e.setAttribute('type','text/javascript');
+        e.setAttribute('charset','UTF-8');
+        e.setAttribute('src','https://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+        document.body.appendChild(e);
+        }
+        </script>
+        <div class="post-share">
+            <div class="post-share-icons cf">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F" class="link facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="http://twitter.com/share?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F&#038;text=%C8%98tia%C8%9Bi%20c%C4%83%20fiecare%20jude%C8%9B%20are%20un%20grup%20Info%20Trafic%3F" class="link x-twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="mailto:?subject=Știați%20că%20fiecare%20județ%20are%20un%20grup%20Info%20Trafic?&#038;body=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F" class="link email" target="_blank" >
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F&#038;title=%C8%98tia%C8%9Bi%20c%C4%83%20fiecare%20jude%C8%9B%20are%20un%20grup%20Info%20Trafic%3F" class="link linkedin" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://telegram.me/share/url?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F&#038;text&#038;title=%C8%98tia%C8%9Bi%20c%C4%83%20fiecare%20jude%C8%9B%20are%20un%20grup%20Info%20Trafic%3F" class="link telegram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="javascript:pinIt();" class="link pinterest" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                <a class="print-r" href="javascript:window.print()">
+                    <i class="fas fa-print"></i>
+                </a>  
+            </div>
+        </div>
+                            <div class="clearfix mb-3"></div>
+                        
+	<nav class="navigation post-navigation" aria-label="Articole">
+		<h2 class="screen-reader-text">Navigare în articole</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://infotraficromania.ro/8-decembrie-2023-starea-traficului-rutier-in-romania/" rel="prev">8 Decembrie 2023: Starea traficului rutier în România <div class="fa fa-angle-double-right"></div><span></span></a></div><div class="nav-next"><a href="https://infotraficromania.ro/9-decembrie-2023-starea-traficului-rutier-la-nivel-national/" rel="next"><div class="fa fa-angle-double-left"></div><span></span> 9 Decembrie 2023: Starea traficului rutier la nivel național</a></div></div>
+	</nav>                                          </article>
+                </div>
+                        <div class="media mg-info-author-block">
+            <a class="mg-author-pic" href="https://infotraficromania.ro/author/admin/"><img alt='' src='https://secure.gravatar.com/avatar/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=150&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/9a9ab7132234602977a71aa736150bb221d2fcb9e1ed863814c2e9dd9178836c?s=300&#038;d=mm&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' decoding='async'/></a>
+                <div class="media-body">
+                  <h4 class="media-heading">By <a href ="https://infotraficromania.ro/author/admin/">admin</a></h4>
+                    <p class="bs-author-desc">Administrator comunitate Info Trafic România cu peste 1.000.000 membri.</p>             
+                </div>
+            </div>
+                <div class="mg-featured-slider p-3 mb-4">
+            <!--Start mg-realated-slider -->
+            <!-- mg-sec-title -->
+            <div class="mg-sec-title">
+                <h4>Related Post</h4>
+            </div>
+            <!-- // mg-sec-title -->
+            <div class="row">
+                <!-- featured_post -->
+                                    <!-- blog -->
+                    <div class="col-md-4">
+                        <div class="mg-blog-post-3 minh back-img mb-md-0 mb-2" 
+                                                style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2023/05/77F7C24C-9BEA-4CB4-BF17-715E6A00A374.jpeg');" >
+                            <div class="mg-blog-inner">
+                                <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/informativ/" alt="View all posts in Informativ"> 
+                                 Informativ
+                             </a></div>                                <h4 class="title"> <a href="https://infotraficromania.ro/16-octombrie-2026-starea-traficului-rutier/" title="Permalink to: 16 Octombrie 2026 &#8211; Starea traficului rutier">
+                                  16 Octombrie 2026 &#8211; Starea traficului rutier</a>
+                                 </h4>
+                                <div class="mg-blog-meta"> 
+                                                                        <span class="mg-blog-date">
+                                        <i class="fas fa-clock"></i>
+                                        oct. 16, 2026                                    </span>
+                                            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+     
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog -->
+                                        <!-- blog -->
+                    <div class="col-md-4">
+                        <div class="mg-blog-post-3 minh back-img mb-md-0 mb-2" 
+                                                style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2023/05/3C04EF85-71BE-49D1-8935-64ACC34DB99D.jpeg');" >
+                            <div class="mg-blog-inner">
+                                <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/informativ/" alt="View all posts in Informativ"> 
+                                 Informativ
+                             </a></div>                                <h4 class="title"> <a href="https://infotraficromania.ro/15-iulie-2026-starea-traficului-rutier/" title="Permalink to: 15 Iulie 2026 &#8211; Starea traficului rutier">
+                                  15 Iulie 2026 &#8211; Starea traficului rutier</a>
+                                 </h4>
+                                <div class="mg-blog-meta"> 
+                                                                        <span class="mg-blog-date">
+                                        <i class="fas fa-clock"></i>
+                                        iul. 15, 2026                                    </span>
+                                            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+     
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog -->
+                                        <!-- blog -->
+                    <div class="col-md-4">
+                        <div class="mg-blog-post-3 minh back-img mb-md-0 mb-2" 
+                                                style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2023/05/3C04EF85-71BE-49D1-8935-64ACC34DB99D.jpeg');" >
+                            <div class="mg-blog-inner">
+                                <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/informativ/" alt="View all posts in Informativ"> 
+                                 Informativ
+                             </a></div>                                <h4 class="title"> <a href="https://infotraficromania.ro/5-iulie-2026-starea-traficului-rutier/" title="Permalink to: 5 Iulie 2026 &#8211; Starea traficului rutier">
+                                  5 Iulie 2026 &#8211; Starea traficului rutier</a>
+                                 </h4>
+                                <div class="mg-blog-meta"> 
+                                                                        <span class="mg-blog-date">
+                                        <i class="fas fa-clock"></i>
+                                        iul. 5, 2026                                    </span>
+                                            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+     
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog -->
+                                </div> 
+        </div>
+        <!--End mg-realated-slider -->
+        <div id="comments" class="comments-area mg-card-box padding-20 mb-md-0 mb-4">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Lasă un răspuns <small><a rel="nofollow" id="cancel-comment-reply-link" href="/stiati-ca-fiecare-judet-are-un-grup-info-trafic/#respond" style="display:none;">Anulează răspunsul</a></small></h3><form action="https://infotraficromania.ro/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Adresa ta de email nu va fi publicată.</span> <span class="required-field-message">Câmpurile obligatorii sunt marcate cu <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comentariu <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Nume</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" /></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" /></p>
+<p class="comment-form-url"><label for="url">Site web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Salvează-mi numele, emailul și site-ul web în acest navigator pentru data viitoare când o să comentez.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publică comentariul" /> <input type='hidden' name='comment_post_ID' value='34402' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	</div><!-- #comments -->        </div>
+        <aside class="col-lg-3 col-md-4 sidebar-sticky">
+                
+<aside id="secondary" class="widget-area" role="complementary">
+	<div id="sidebar-right" class="mg-sidebar">
+		<div id="search-2" class="mg-widget widget_search"><form role="search" method="get" id="searchform" action="https://infotraficromania.ro/">
+  <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search" value="" name="s" />
+    <span class="input-group-btn btn-default">
+    <button type="submit" class="btn"> <i class="fas fa-search"></i> </button>
+    </span> </div>
+</form></div><div id="block-11" class="mg-widget widget_block">
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Siguranța rutieră este responsabilitatea noastră comună! Alătură-te comunității Info Trafic România</p>
+</blockquote>
+</div><div id="categories-2" class="mg-widget widget_categories"><div class="mg-wid-title"><h6 class="wtitle">Alege judetul</h6></div><form action="https://infotraficromania.ro" method="get"><label class="screen-reader-text" for="cat">Alege judetul</label><select  name='cat' id='cat' class='postform'>
+	<option value='-1'>Selectează o categorie</option>
+	<option class="level-0" value="9">Alba</option>
+	<option class="level-0" value="10">Arad</option>
+	<option class="level-0" value="11">Arges</option>
+	<option class="level-0" value="2513">Autostrada A1</option>
+	<option class="level-0" value="139">Autostrada A2</option>
+	<option class="level-0" value="12">Bacau</option>
+	<option class="level-0" value="6">Bihor</option>
+	<option class="level-0" value="25">Bistrita Nasaud</option>
+	<option class="level-0" value="26">Botosani</option>
+	<option class="level-0" value="27">Braila</option>
+	<option class="level-0" value="4">Brasov</option>
+	<option class="level-0" value="7">Bucuresti Ilfov</option>
+	<option class="level-0" value="28">Buzau</option>
+	<option class="level-0" value="29">Calarasi</option>
+	<option class="level-0" value="13">Caras Severin</option>
+	<option class="level-0" value="30">Cluj</option>
+	<option class="level-0" value="8">Constanta</option>
+	<option class="level-0" value="31">Covasna</option>
+	<option class="level-0" value="32">Dambovita</option>
+	<option class="level-0" value="33">Dolj</option>
+	<option class="level-0" value="1416">Filmări din Trafic</option>
+	<option class="level-0" value="34">Galati</option>
+	<option class="level-0" value="35">Giurgiu</option>
+	<option class="level-0" value="36">Gorj</option>
+	<option class="level-0" value="37">Harghita</option>
+	<option class="level-0" value="38">Hunedoara</option>
+	<option class="level-0" value="39">Ialomita</option>
+	<option class="level-0" value="40">Iasi</option>
+	<option class="level-0" value="3576">Informativ</option>
+	<option class="level-0" value="2611">Legislatie rutiera</option>
+	<option class="level-0" value="41">Maramures</option>
+	<option class="level-0" value="42">Mehedinti</option>
+	<option class="level-0" value="43">Mures</option>
+	<option class="level-0" value="44">Neamt</option>
+	<option class="level-0" value="45">Olt</option>
+	<option class="level-0" value="46">Prahova</option>
+	<option class="level-0" value="47">Salaj</option>
+	<option class="level-0" value="48">Satu Mare</option>
+	<option class="level-0" value="5">Sibiu</option>
+	<option class="level-0" value="49">Suceava</option>
+	<option class="level-0" value="50">Teleorman</option>
+	<option class="level-0" value="51">Timis</option>
+	<option class="level-0" value="2781">Transfagarasan</option>
+	<option class="level-0" value="52">Tulcea</option>
+	<option class="level-0" value="2676">Ultima oră</option>
+	<option class="level-0" value="53">Valcea</option>
+	<option class="level-0" value="54">Vaslui</option>
+	<option class="level-0" value="2510">Verificare rovinietă</option>
+	<option class="level-0" value="55">Vrancea</option>
+	<option class="level-0" value="963">Webcam Trafic</option>
+</select>
+</form><script>
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value && parseInt( dropdown.value ) > 0 && dropdown instanceof HTMLSelectElement ) {
+				dropdown.parentElement.submit();
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "cat" );
+
+//# sourceURL=WP_Widget_Categories%3A%3Awidget
+</script>
+</div><div id="categories-4" class="mg-widget widget_categories"><div class="mg-wid-title"><h6 class="wtitle">Alege judetul</h6></div><form action="https://infotraficromania.ro" method="get"><label class="screen-reader-text" for="categories-dropdown-4">Alege judetul</label><select  name='cat' id='categories-dropdown-4' class='postform'>
+	<option value='-1'>Selectează o categorie</option>
+	<option class="level-0" value="9">Alba</option>
+	<option class="level-0" value="10">Arad</option>
+	<option class="level-0" value="11">Arges</option>
+	<option class="level-0" value="2513">Autostrada A1</option>
+	<option class="level-0" value="139">Autostrada A2</option>
+	<option class="level-0" value="12">Bacau</option>
+	<option class="level-0" value="6">Bihor</option>
+	<option class="level-0" value="25">Bistrita Nasaud</option>
+	<option class="level-0" value="26">Botosani</option>
+	<option class="level-0" value="27">Braila</option>
+	<option class="level-0" value="4">Brasov</option>
+	<option class="level-0" value="7">Bucuresti Ilfov</option>
+	<option class="level-0" value="28">Buzau</option>
+	<option class="level-0" value="29">Calarasi</option>
+	<option class="level-0" value="13">Caras Severin</option>
+	<option class="level-0" value="30">Cluj</option>
+	<option class="level-0" value="8">Constanta</option>
+	<option class="level-0" value="31">Covasna</option>
+	<option class="level-0" value="32">Dambovita</option>
+	<option class="level-0" value="33">Dolj</option>
+	<option class="level-0" value="1416">Filmări din Trafic</option>
+	<option class="level-0" value="34">Galati</option>
+	<option class="level-0" value="35">Giurgiu</option>
+	<option class="level-0" value="36">Gorj</option>
+	<option class="level-0" value="37">Harghita</option>
+	<option class="level-0" value="38">Hunedoara</option>
+	<option class="level-0" value="39">Ialomita</option>
+	<option class="level-0" value="40">Iasi</option>
+	<option class="level-0" value="3576">Informativ</option>
+	<option class="level-0" value="2611">Legislatie rutiera</option>
+	<option class="level-0" value="41">Maramures</option>
+	<option class="level-0" value="42">Mehedinti</option>
+	<option class="level-0" value="43">Mures</option>
+	<option class="level-0" value="44">Neamt</option>
+	<option class="level-0" value="45">Olt</option>
+	<option class="level-0" value="46">Prahova</option>
+	<option class="level-0" value="47">Salaj</option>
+	<option class="level-0" value="48">Satu Mare</option>
+	<option class="level-0" value="5">Sibiu</option>
+	<option class="level-0" value="49">Suceava</option>
+	<option class="level-0" value="50">Teleorman</option>
+	<option class="level-0" value="51">Timis</option>
+	<option class="level-0" value="2781">Transfagarasan</option>
+	<option class="level-0" value="52">Tulcea</option>
+	<option class="level-0" value="2676">Ultima oră</option>
+	<option class="level-0" value="53">Valcea</option>
+	<option class="level-0" value="54">Vaslui</option>
+	<option class="level-0" value="2510">Verificare rovinietă</option>
+	<option class="level-0" value="55">Vrancea</option>
+	<option class="level-0" value="963">Webcam Trafic</option>
+</select>
+</form><script>
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value && parseInt( dropdown.value ) > 0 && dropdown instanceof HTMLSelectElement ) {
+				dropdown.parentElement.submit();
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "categories-dropdown-4" );
+
+//# sourceURL=WP_Widget_Categories%3A%3Awidget
+</script>
+</div><div id="categories-5" class="mg-widget widget_categories"><div class="mg-wid-title"><h6 class="wtitle">Alege judetul</h6></div><form action="https://infotraficromania.ro" method="get"><label class="screen-reader-text" for="categories-dropdown-5">Alege judetul</label><select  name='cat' id='categories-dropdown-5' class='postform'>
+	<option value='-1'>Selectează o categorie</option>
+	<option class="level-0" value="9">Alba</option>
+	<option class="level-0" value="10">Arad</option>
+	<option class="level-0" value="11">Arges</option>
+	<option class="level-0" value="2513">Autostrada A1</option>
+	<option class="level-0" value="139">Autostrada A2</option>
+	<option class="level-0" value="12">Bacau</option>
+	<option class="level-0" value="6">Bihor</option>
+	<option class="level-0" value="25">Bistrita Nasaud</option>
+	<option class="level-0" value="26">Botosani</option>
+	<option class="level-0" value="27">Braila</option>
+	<option class="level-0" value="4">Brasov</option>
+	<option class="level-0" value="7">Bucuresti Ilfov</option>
+	<option class="level-0" value="28">Buzau</option>
+	<option class="level-0" value="29">Calarasi</option>
+	<option class="level-0" value="13">Caras Severin</option>
+	<option class="level-0" value="30">Cluj</option>
+	<option class="level-0" value="8">Constanta</option>
+	<option class="level-0" value="31">Covasna</option>
+	<option class="level-0" value="32">Dambovita</option>
+	<option class="level-0" value="33">Dolj</option>
+	<option class="level-0" value="1416">Filmări din Trafic</option>
+	<option class="level-0" value="34">Galati</option>
+	<option class="level-0" value="35">Giurgiu</option>
+	<option class="level-0" value="36">Gorj</option>
+	<option class="level-0" value="37">Harghita</option>
+	<option class="level-0" value="38">Hunedoara</option>
+	<option class="level-0" value="39">Ialomita</option>
+	<option class="level-0" value="40">Iasi</option>
+	<option class="level-0" value="3576">Informativ</option>
+	<option class="level-0" value="2611">Legislatie rutiera</option>
+	<option class="level-0" value="41">Maramures</option>
+	<option class="level-0" value="42">Mehedinti</option>
+	<option class="level-0" value="43">Mures</option>
+	<option class="level-0" value="44">Neamt</option>
+	<option class="level-0" value="45">Olt</option>
+	<option class="level-0" value="46">Prahova</option>
+	<option class="level-0" value="47">Salaj</option>
+	<option class="level-0" value="48">Satu Mare</option>
+	<option class="level-0" value="5">Sibiu</option>
+	<option class="level-0" value="49">Suceava</option>
+	<option class="level-0" value="50">Teleorman</option>
+	<option class="level-0" value="51">Timis</option>
+	<option class="level-0" value="2781">Transfagarasan</option>
+	<option class="level-0" value="52">Tulcea</option>
+	<option class="level-0" value="2676">Ultima oră</option>
+	<option class="level-0" value="53">Valcea</option>
+	<option class="level-0" value="54">Vaslui</option>
+	<option class="level-0" value="2510">Verificare rovinietă</option>
+	<option class="level-0" value="55">Vrancea</option>
+	<option class="level-0" value="963">Webcam Trafic</option>
+</select>
+</form><script>
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value && parseInt( dropdown.value ) > 0 && dropdown instanceof HTMLSelectElement ) {
+				dropdown.parentElement.submit();
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "categories-dropdown-5" );
+
+//# sourceURL=WP_Widget_Categories%3A%3Awidget
+</script>
+</div><div id="media_image-37" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">TIGER SECURITY</h6></div><a href="https://tiger.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/09/Tiger-Security.jpg" class="image wp-image-46120  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="TIGER SECURITY" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/09/Tiger-Security.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tiger-Security-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tiger-Security-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tiger-Security-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-27" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Tractari Moto 24/7</h6></div><figure style="width: 1600px" class="wp-caption alignnone"><a href="https://tractarimoto.ro/" target="_blank"><img width="1600" height="1600" src="https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto.jpeg" class="image wp-image-43958  attachment-full size-full" alt="Tractari moto in Bucuresti si Ilfov" style="max-width: 100%; height: auto;" title="Tractari Moto 24/7" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto.jpeg 1600w, https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto-300x300.jpeg 300w, https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto-1024x1024.jpeg 1024w, https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto-150x150.jpeg 150w, https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto-768x768.jpeg 768w, https://infotraficromania.ro/wp-content/uploads/2024/11/cover-tractari-moto-1536x1536.jpeg 1536w" sizes="(max-width: 1600px) 100vw, 1600px" /></a><figcaption class="wp-caption-text">Tractari Moto si ATV Non Stop </figcaption></figure></div><div id="media_image-45" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Inchirieri Moto</h6></div><a href="https://inchirierimoto.ro/" target="_blank"><img width="1536" height="1024" src="https://infotraficromania.ro/wp-content/uploads/2026/07/inchirieri-moto.jpeg" class="image wp-image-46056  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Tractari Moto 24/7" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/07/inchirieri-moto.jpeg 1536w, https://infotraficromania.ro/wp-content/uploads/2026/07/inchirieri-moto-300x200.jpeg 300w, https://infotraficromania.ro/wp-content/uploads/2026/07/inchirieri-moto-1024x683.jpeg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/07/inchirieri-moto-768x512.jpeg 768w" sizes="(max-width: 1536px) 100vw, 1536px" /></a></div><div id="media_image-41" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Locuri de joaca pentru petreceri copii</h6></div><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/09/Locuri-de-joaca-petreceri-copii-Bucuresti-si-imprejurimi-1.jpg" class="image wp-image-46114  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Admitere 2026 Universitatea Athenaeum Bucuresti" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/09/Locuri-de-joaca-petreceri-copii-Bucuresti-si-imprejurimi-1.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/09/Locuri-de-joaca-petreceri-copii-Bucuresti-si-imprejurimi-1-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/09/Locuri-de-joaca-petreceri-copii-Bucuresti-si-imprejurimi-1-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/09/Locuri-de-joaca-petreceri-copii-Bucuresti-si-imprejurimi-1-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></div><div id="media_image-49" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Videograf si Cameraman</h6></div><a href="https://neagumarian.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/08/Videograf-Neagu-Marian.jpg" class="image wp-image-46091  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Admitere 2026 Universitatea Athenaeum Bucuresti" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/08/Videograf-Neagu-Marian.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/08/Videograf-Neagu-Marian-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/08/Videograf-Neagu-Marian-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/08/Videograf-Neagu-Marian-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-53" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Firma de curatenie profesionala</h6></div><a href="https://evocleaning.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/09/Firma-de-curatenie-birouri-Evo-Cleaning-Bucuresti.jpg" class="image wp-image-46110  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Admitere 2026 Universitatea Athenaeum Bucuresti" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/09/Firma-de-curatenie-birouri-Evo-Cleaning-Bucuresti.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/09/Firma-de-curatenie-birouri-Evo-Cleaning-Bucuresti-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/09/Firma-de-curatenie-birouri-Evo-Cleaning-Bucuresti-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/09/Firma-de-curatenie-birouri-Evo-Cleaning-Bucuresti-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-43" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Catering profesional Bucurestii</h6></div><a href="https://instafoofcatering.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/10/Catering-profesional-Bucuresti-Instafood-Catering.jpg" class="image wp-image-46130  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Scoala de soferi categoria B Bucuresti" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/10/Catering-profesional-Bucuresti-Instafood-Catering.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/10/Catering-profesional-Bucuresti-Instafood-Catering-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/10/Catering-profesional-Bucuresti-Instafood-Catering-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/10/Catering-profesional-Bucuresti-Instafood-Catering-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-47" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Universitatea Athenaeum Bucuresti</h6></div><a href="https://univath.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/09/Universitatea-Athenaeum-2.jpg" class="image wp-image-46118  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Admitere 2026 Universitatea Athenaeum Bucuresti" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/09/Universitatea-Athenaeum-2.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/09/Universitatea-Athenaeum-2-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/09/Universitatea-Athenaeum-2-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/09/Universitatea-Athenaeum-2-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-51" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Tapet lichid</h6></div><a href="https://tapetaltfel.ro" target="_blank"><img width="1350" height="1080" src="https://infotraficromania.ro/wp-content/uploads/2026/09/Tapet-lichid-din-bumbac-7.jpg" class="image wp-image-46116  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" title="Tapet lichid" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2026/09/Tapet-lichid-din-bumbac-7.jpg 1350w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tapet-lichid-din-bumbac-7-300x240.jpg 300w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tapet-lichid-din-bumbac-7-1024x819.jpg 1024w, https://infotraficromania.ro/wp-content/uploads/2026/09/Tapet-lichid-din-bumbac-7-768x614.jpg 768w" sizes="(max-width: 1350px) 100vw, 1350px" /></a></div><div id="media_image-29" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Asociatia Daruieste Speranta Distrofie Musculara</h6></div><figure style="width: 400px" class="wp-caption alignnone"><a href="https://hope-musculardystrophy.org/redirectionare-impozit-formular-230/" target="_blank"><img width="400" height="255" src="https://infotraficromania.ro/wp-content/uploads/2024/04/Asociatia-Daruieste-Speranta.jpg" class="image wp-image-39019  attachment-full size-full" alt="Asociatie non profit pentru copiii cu distrofie musculara" style="max-width: 100%; height: auto;" title="Asociatia Daruieste Speranta Distrofie Musculara" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2024/04/Asociatia-Daruieste-Speranta.jpg 400w, https://infotraficromania.ro/wp-content/uploads/2024/04/Asociatia-Daruieste-Speranta-300x191.jpg 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption class="wp-caption-text">Asociatie non profit pentru copiii cu distrofie musculara</figcaption></figure></div><div id="media_image-16" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Consultanta SSM</h6></div><figure style="width: 400px" class="wp-caption alignnone"><a href="https://ssm-protectia-muncii.ro"><img width="400" height="255" src="https://infotraficromania.ro/wp-content/uploads/2023/04/SSM-Protectia-muncii.png" class="image wp-image-24509  attachment-full size-full" alt="SSM Protectia Muncii" style="max-width: 100%; height: auto;" title="Consultanta SSM" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2023/04/SSM-Protectia-muncii.png 400w, https://infotraficromania.ro/wp-content/uploads/2023/04/SSM-Protectia-muncii-300x191.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption class="wp-caption-text">SSM Protectia Muncii</figcaption></figure></div><div id="media_image-10" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">Baza Sportiva Dangelo</h6></div><figure style="width: 400px" class="wp-caption alignnone"><a href="https://dangelosport.ro" target="_blank"><img width="400" height="255" src="https://infotraficromania.ro/wp-content/uploads/2023/04/Baza-sportiva-Dangelo.png" class="image wp-image-24518  attachment-full size-full" alt="Dangelo Sport" style="max-width: 100%; height: auto;" title="Baza Sportiva Dangelo" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2023/04/Baza-sportiva-Dangelo.png 400w, https://infotraficromania.ro/wp-content/uploads/2023/04/Baza-sportiva-Dangelo-300x191.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption class="wp-caption-text">Baza sportiva sector 4 Bucuresti</figcaption></figure></div><div id="media_image-6" class="mg-widget widget_media_image"><div class="mg-wid-title"><h6 class="wtitle">TotalJuridic.ro</h6></div><a href="https://www.totaljuridic.ro/avocat-contraventii-rutiere/" target="_blank"><img width="400" height="260" src="https://infotraficromania.ro/wp-content/uploads/2024/07/banner-lateral.png" class="image wp-image-41409  attachment-full size-full" alt="www.totaljuridic.ro" style="max-width: 100%; height: auto;" title="TotalJuridic.ro" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2024/07/banner-lateral.png 400w, https://infotraficromania.ro/wp-content/uploads/2024/07/banner-lateral-300x195.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a></div>
+		<div id="recent-posts-2" class="mg-widget widget_recent_entries">
+		<div class="mg-wid-title"><h6 class="wtitle">Articole recente</h6></div>
+		<ul>
+											<li>
+					<a href="https://infotraficromania.ro/16-octombrie-2026-starea-traficului-rutier/">16 Octombrie 2026 &#8211; Starea traficului rutier</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-dn22-in-zona-localitatii-sibioara-2/">Trafic blocat pe DN22 în zona localității Sibioara</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-ingreunat-pe-dn56-in-zona-comunei-motatei/">Trafic îngreunat pe DN56 în zona comunei Moțăței</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/camion-rasturnat-pe-e85-in-zona-localitatii-sabaoani/">Camion răsturnat pe E85 în zona localității Săbăoani</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/accident-mortal-pe-dn67-in-municipiul-targu-jiu/">Accident mortal pe DN67 în municipiul Targu Jiu</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-dn-67d-in-zona-localitatii-baile-herculane/">Trafic blocat pe DN 67D în zona localității Băile Herculane</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-ingreunat-pe-dn6-in-zona-localitatii-ghimpati/">Trafic îngreunat pe DN6 în zona localității Ghimpați</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-dn1-in-zona-localitatii-predeal/">Trafic blocat pe DN1 în zona localității Predeal</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-dn67-in-zona-localitatii-balesti/">Trafic blocat pe DN67 în zona localității Bălești</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-autostrada-a2-la-kilometrul-172/">Trafic blocat pe Autostrada A2 la kilometrul 172</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-autostrada-a1-la-kilometrul-95/">Trafic blocat pe Autostrada A1 la kilometrul 95</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/camion-rasturnat-pe-dn1-in-zona-localitatii-paulesti/">Camion răsturnat pe DN1 în zona localității Păulești</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/incendiu-auto-pe-autostrada-a2-la-kilometrul-88/">Incendiu auto pe Autostrada A2 la kilometrul 88</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/accident-mortal-pe-soseaua-garii-catelu-din-bucuresti/">Accident mortal pe șoseaua Gării Cățelu din București</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/accident-rutier-pe-centura-bucuresti-in-zona-localitatii-jilava/">Accident rutier pe Centura București în zona localității Jilava</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/accident-mortal-pe-dn6-in-zona-localitatii-armenis/">Accident mortal pe DN6 în zona localității Armeniș</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-blocat-pe-dn7-in-zona-localitatii-calimanesti/">Trafic blocat pe DN7 în zona localității Călimănești</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/trafic-ingreunat-pe-dn1-in-zona-localitatii-otopeni-2/">Trafic îngreunat pe DN1 în zona localității Otopeni</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/foto-accident-grav-pe-valea-oltului/">Foto! Accident grav pe Valea Oltului</a>
+									</li>
+											<li>
+					<a href="https://infotraficromania.ro/accident-mortal-pe-autostrada-a2-la-kilometrul-67/">Accident mortal pe Autostrada A2 la kilometrul 67</a>
+									</li>
+					</ul>
+
+		</div><div id="block-9" class="mg-widget widget_block widget_media_image"></div>	</div>
+</aside><!-- #secondary -->
+        </aside>
+        </div>
+      <!--row-->
+    </div>
+  <!--container-->
+</main>
+  <div class="container-fluid mr-bot40 mg-posts-sec-inner">
+        <div class="missed-inner">
+        <div class="row">
+                        <div class="col-md-12">
+                <div class="mg-sec-title">
+                    <!-- mg-sec-title -->
+                    <h4>Cele mai vizualizate</h4>
+                </div>
+            </div>
+                            <!--col-md-3-->
+                <div class="col-md-3 col-sm-6 pulse animated">
+               <div class="mg-blog-post-3 minh back-img" 
+                                                        style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2023/05/77F7C24C-9BEA-4CB4-BF17-715E6A00A374.jpeg');" >
+                            <a class="link-div" href="https://infotraficromania.ro/16-octombrie-2026-starea-traficului-rutier/"></a>
+                    <div class="mg-blog-inner">
+                      <div class="mg-blog-category">
+                      <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/informativ/" alt="View all posts in Informativ"> 
+                                 Informativ
+                             </a></div>                      </div>
+                      <h4 class="title"> <a href="https://infotraficromania.ro/16-octombrie-2026-starea-traficului-rutier/" title="Permalink to: 16 Octombrie 2026 &#8211; Starea traficului rutier"> 16 Octombrie 2026 &#8211; Starea traficului rutier</a> </h4>
+                              <div class="mg-blog-meta"> 
+                    <span class="mg-blog-date"><i class="fas fa-clock"></i>
+            <a href="https://infotraficromania.ro/2026/10/">
+                16 octombrie 2026            </a>
+        </span>
+            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+            </div> 
+                        </div>
+                </div>
+            </div>
+            <!--/col-md-3-->
+                         <!--col-md-3-->
+                <div class="col-md-3 col-sm-6 pulse animated">
+               <div class="mg-blog-post-3 minh back-img" 
+                                                        style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2023/07/accident-lucrari-trafic-ingreunat-blocat.jpg');" >
+                            <a class="link-div" href="https://infotraficromania.ro/trafic-blocat-pe-dn22-in-zona-localitatii-sibioara-2/"></a>
+                    <div class="mg-blog-inner">
+                      <div class="mg-blog-category">
+                      <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/info-trafic-constanta/" alt="View all posts in Constanta"> 
+                                 Constanta
+                             </a></div>                      </div>
+                      <h4 class="title"> <a href="https://infotraficromania.ro/trafic-blocat-pe-dn22-in-zona-localitatii-sibioara-2/" title="Permalink to: Trafic blocat pe DN22 în zona localității Sibioara"> Trafic blocat pe DN22 în zona localității Sibioara</a> </h4>
+                              <div class="mg-blog-meta"> 
+                    <span class="mg-blog-date"><i class="fas fa-clock"></i>
+            <a href="https://infotraficromania.ro/2026/10/">
+                11 octombrie 2026            </a>
+        </span>
+            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+            </div> 
+                        </div>
+                </div>
+            </div>
+            <!--/col-md-3-->
+                         <!--col-md-3-->
+                <div class="col-md-3 col-sm-6 pulse animated">
+               <div class="mg-blog-post-3 minh back-img" 
+                                                        style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2026/10/92ce1992-2dc9-429b-9310-1d4ca870262f.jpeg');" >
+                            <a class="link-div" href="https://infotraficromania.ro/trafic-ingreunat-pe-dn56-in-zona-comunei-motatei/"></a>
+                    <div class="mg-blog-inner">
+                      <div class="mg-blog-category">
+                      <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/info-trafic-dolj/" alt="View all posts in Dolj"> 
+                                 Dolj
+                             </a></div>                      </div>
+                      <h4 class="title"> <a href="https://infotraficromania.ro/trafic-ingreunat-pe-dn56-in-zona-comunei-motatei/" title="Permalink to: Trafic îngreunat pe DN56 în zona comunei Moțăței"> Trafic îngreunat pe DN56 în zona comunei Moțăței</a> </h4>
+                              <div class="mg-blog-meta"> 
+                    <span class="mg-blog-date"><i class="fas fa-clock"></i>
+            <a href="https://infotraficromania.ro/2026/10/">
+                7 octombrie 2026            </a>
+        </span>
+            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+            </div> 
+                        </div>
+                </div>
+            </div>
+            <!--/col-md-3-->
+                         <!--col-md-3-->
+                <div class="col-md-3 col-sm-6 pulse animated">
+               <div class="mg-blog-post-3 minh back-img" 
+                                                        style="background-image: url('https://infotraficromania.ro/wp-content/uploads/2026/10/c33b8af8-8a31-40c7-b0d5-1dcd5827a230.jpeg');" >
+                            <a class="link-div" href="https://infotraficromania.ro/camion-rasturnat-pe-e85-in-zona-localitatii-sabaoani/"></a>
+                    <div class="mg-blog-inner">
+                      <div class="mg-blog-category">
+                      <div class="mg-blog-category"><a class="newsup-categories category-color-1" href="https://infotraficromania.ro/category/info-trafic-neamt/" alt="View all posts in Neamt"> 
+                                 Neamt
+                             </a></div>                      </div>
+                      <h4 class="title"> <a href="https://infotraficromania.ro/camion-rasturnat-pe-e85-in-zona-localitatii-sabaoani/" title="Permalink to: Camion răsturnat pe E85 în zona localității Săbăoani"> Camion răsturnat pe E85 în zona localității Săbăoani</a> </h4>
+                              <div class="mg-blog-meta"> 
+                    <span class="mg-blog-date"><i class="fas fa-clock"></i>
+            <a href="https://infotraficromania.ro/2026/10/">
+                6 octombrie 2026            </a>
+        </span>
+            <a class="auth" href="https://infotraficromania.ro/author/admin/">
+            <i class="fas fa-user-circle"></i>admin        </a>
+            </div> 
+                        </div>
+                </div>
+            </div>
+            <!--/col-md-3-->
+                     
+
+                </div>
+            </div>
+        </div>
+<!--==================== FOOTER AREA ====================-->
+        <footer> 
+            <div class="overlay" style="background-color: ;">
+                <!--Start mg-footer-widget-area-->
+                                 <!--End mg-footer-widget-area-->
+                <!--Start mg-footer-widget-area-->
+                <div class="mg-footer-bottom-area">
+                    <div class="container-fluid">
+                        <div class="divide-line"></div>
+                        <div class="row align-items-center">
+                            <!--col-md-4-->
+                            <div class="col-md-6">
+                               <a href="https://infotraficromania.ro/" class="navbar-brand" rel="home"><img width="418" height="300" src="https://infotraficromania.ro/wp-content/uploads/2021/10/dsd.png" class="custom-logo" alt="info trafic romania" decoding="async" srcset="https://infotraficromania.ro/wp-content/uploads/2021/10/dsd.png 418w, https://infotraficromania.ro/wp-content/uploads/2021/10/dsd-300x215.png 300w" sizes="(max-width: 418px) 100vw, 418px" /></a>                            </div>
+
+                             
+                            <div class="col-md-6 text-right text-xs">
+                                
+                            <ul class="mg-social">
+                                                                        <a  target="_blank" href="http://www.facebook.com/infotraficromania"><li><span class="icon-soci facebook"><i class="fab fa-facebook"></i></span> </li>
+                                    </a>
+                                                                        <a target="_blank" href="https://twitter.com/trafic_romania">
+                                                                        <li><span class="icon-soci twitter"><i class="fa-brands fa-x-twitter"></i></span></li></a>
+                                                                        <a target="_blank"  href="">
+                                                                         <a target="_blank"  href="http://www.instagram.com/infotraficromania/"><li><span class="icon-soci instagram"><i class="fab fa-instagram"></i></span>
+                                    </li></a>
+                                                                                                            <a target="_blank"  href="http://www.youtube.com/c/InfoTraficRomania">
+                                    <li><span class="icon-soci youtube"><i class="fab fa-youtube"></i></span></li></a>
+                                    
+                                                                 </ul>
+
+
+                            </div>
+                            <!--/col-md-4-->  
+                             
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--End mg-footer-widget-area-->
+
+                <div class="mg-footer-copyright">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 text-xs">
+                                <p>
+                                <a href="https://wordpress.org/">
+								Proudly powered by WordPress								</a>
+								<span class="sep"> | </span>
+								Theme: News Talk by <a href="https://themeansar.com/" rel="designer">Themeansar</a>.								</p>
+                            </div>
+
+
+
+                            <div class="col-md-6 text-right text-xs">
+                                <ul id="menu-meniu-subsol-ro" class="info-right"><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a class="nav-link" title="GDPR" href="https://infotraficromania.ro/gdpr/">GDPR</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a class="nav-link" title="Termeni și condiții" href="https://infotraficromania.ro/termeni-si-conditii/">Termeni și condiții</a></li>
+<li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a class="nav-link" title="ANPC" href="https://anpc.ro/">ANPC</a></li>
+</ul>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/overlay-->
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/wrapper-->
+    <!--Scroll To Top-->
+    <a href="#" class="ta_upscr bounceInup animated"><i class="fa fa-angle-up"></i></a>
+    <!--/Scroll To Top-->
+<!-- /Scroll To Top -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/news-talk/*","/wp-content/themes/newsup/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span><div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</div><div class="cli-bar-btn_container"><a role="button" tabindex="0" class="medium cli-plugin-button cli-plugin-main-button cli_settings_button" style="margin:0px 5px 0px 0px">Cookie Settings</a><a id="wt-cli-accept-all-btn" tabindex="0" role="button" data-cli_action="accept_all" class="wt-cli-element medium cli-plugin-button wt-cli-accept-all-btn cookie_action_close_header cli_action_button">Accept All</a></div></div></span></div><div id="cookie-law-info-again" style="display:none" data-nosnippet="true"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+		  <button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Închide</span>
+		  </button>
+		  <div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Arată mai mult" tabindex="0" role="button" data-readmore-text="Arată mai mult" data-readless-text="Arată mai puțin"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+																						<div class="wt-cli-necessary-checkbox">
+									<input type="checkbox" class="cli-user-preference-checkbox" id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked" />
+									<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+								</div>
+								<span class="cli-necessary-caption">Întotdeauna activate</span>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. These cookies ensure basic functionalities and security features of the website, anonymously.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Durată</th><th class="cookielawinfo-column-4">Descriere</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-analytics</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Analytics".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-functional</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category "Functional".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-necessary</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category "Necessary".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-others</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Other.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-performance</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Performance".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">viewed_cookie_policy</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.</td></tr></tbody></table>								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="functional" data-toggle="cli-toggle-tab">
+								Functional							</a>
+																						<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-functional" class="cli-user-preference-checkbox" data-id="checkbox-functional" />
+									<label for="wt-cli-checkbox-functional" class="cli-slider" data-cli-enable="Activate" data-cli-disable="Dezactivate"><span class="wt-cli-sr-only">Functional</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="functional">
+								<div class="wt-cli-cookie-description">
+									Functional cookies help to perform certain functionalities like sharing the content of the website on social media platforms, collect feedbacks, and other third-party features.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="performance" data-toggle="cli-toggle-tab">
+								Performance							</a>
+																						<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-performance" class="cli-user-preference-checkbox" data-id="checkbox-performance" />
+									<label for="wt-cli-checkbox-performance" class="cli-slider" data-cli-enable="Activate" data-cli-disable="Dezactivate"><span class="wt-cli-sr-only">Performance</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="performance">
+								<div class="wt-cli-cookie-description">
+									Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="analytics" data-toggle="cli-toggle-tab">
+								Analytics							</a>
+																						<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-analytics" class="cli-user-preference-checkbox" data-id="checkbox-analytics" />
+									<label for="wt-cli-checkbox-analytics" class="cli-slider" data-cli-enable="Activate" data-cli-disable="Dezactivate"><span class="wt-cli-sr-only">Analytics</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="analytics">
+								<div class="wt-cli-cookie-description">
+									Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="advertisement" data-toggle="cli-toggle-tab">
+								Advertisement							</a>
+																						<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-advertisement" class="cli-user-preference-checkbox" data-id="checkbox-advertisement" />
+									<label for="wt-cli-checkbox-advertisement" class="cli-slider" data-cli-enable="Activate" data-cli-disable="Dezactivate"><span class="wt-cli-sr-only">Advertisement</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="advertisement">
+								<div class="wt-cli-cookie-description">
+									Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="others" data-toggle="cli-toggle-tab">
+								Others							</a>
+																						<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-others" class="cli-user-preference-checkbox" data-id="checkbox-others" />
+									<label for="wt-cli-checkbox-others" class="cli-slider" data-cli-enable="Activate" data-cli-disable="Dezactivate"><span class="wt-cli-sr-only">Others</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="others">
+								<div class="wt-cli-cookie-description">
+									Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+		  </div>
+		  <div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">SALVEAZĂ ȘI ACCEPTĂ</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script>
+jQuery('a,input').bind('focus', function() {
+    if(!jQuery(this).closest(".menu-item").length && ( jQuery(window).width() <= 992) ) {
+    jQuery('.navbar-collapse').removeClass('show');
+}})
+</script>
+	<style>
+		.wp-block-search .wp-block-search__label::before, .mg-widget .wp-block-group h2:before, .mg-sidebar .mg-widget .wtitle::before, .mg-sec-title h4::before, footer .mg-widget h6::before {
+			background: inherit;
+		}
+	</style>
+				<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+				<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace( /everest-forms-no-js/, 'everest-forms-js' );
+		document.body.className = c;
+	</script>
+	<link rel='stylesheet' id='cookie-law-info-table-css' href='https://infotraficromania.ro/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-table.css?ver=3.5.6' media='all' />
+<script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://infotraficromania.ro/wp-includes/js/comment-reply.min.js?ver=7.1.3"></script>
+<script data-wp-strategy="defer" defer id="remote_sdk-js" src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js?ver=1.0.0"></script>
+<script data-wp-strategy="defer" defer id="newsup-custom-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/custom.js?ver=0.9"></script>
+<script id="newsup-custom-time-js" src="https://infotraficromania.ro/wp-content/themes/newsup/js/custom-time.js?ver=0.9"></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://infotraficromania.ro/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://infotraficromania.ro/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<head> 
+    <title>I.P.J. IAȘI - Poliția Română</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    
+    <link media="all" href="https://is.politiaromana.ro/front/view/css/style.css?v=3" rel="stylesheet" type="text/css"></link>
+
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/css/flexslider.css" type="text/css"/>
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/js/validation/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/css/font-awesome.css" type="text/css"/>
+    
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/css/fontawesome/css/all.css" type="text/css"/>
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/css/style_accesibility.css" type="text/css"/>
+    
+    <link rel="stylesheet" href="https://is.politiaromana.ro/front/view/css/style_subsite.css" type="text/css"/>
+    
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/js_accesibility.js"></script>
+    
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/responsive.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/respond.min.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/jquery.touchwipe.1.1.1.js"></script>
+    <script type="text/javascript" defer src="https://is.politiaromana.ro/front/view/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" defer src="https://is.politiaromana.ro/front/view/js/imagelightbox.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/validation/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/validation/jquery.validationEngine-ro.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/jquery.tinycarousel.js"></script>
+    <script type="text/javascript" src="https://is.politiaromana.ro/front/view/js/html5shiv.js"></script>   
+    <script src='https://www.google.com/recaptcha/api.js?hl=ro' async defer ></script> 
+ 
+    
+    <link rel="canonical" href="https://is.politiaromana.ro/"/>
+            
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style type="text/css">img, div, a, span { behavior: url('js/iepngfix.htc') } </style>    
+        
+    <link rel="icon" type="image/x-icon" href="https://is.politiaromana.ro/favicon.ico" />
+    <style type="text/css">img, div, a, span { behavior: url('https://is.politiaromana.ro/front/view/js/iepngfix.htc') } </style>     
+    <meta property="og:image" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:site_name" content=""/>
+	
+    
+    
+</head>
+<body class="no-js">
+<div id="mainwrapper" class="inner">
+        
+        <span id="spam_logo" style="position: fixed; top:0; right:0; cursor:pointer; margin-top: 11%; padding: 0; transition: 0.3s;z-index: 9;" onclick="openNav()">
+            <div style="background-color: #212e4c;">
+            <i style="color: white; padding: 5px" class="fas fa-universal-access fa-4x"></i>
+            </div>
+        </span>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#"><button class="button_accesibility" type="button" onclick="increaseFontSize()"><i class="fas fa-search-plus"></i> Măreste font</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="descreaseFontSize()"><i class="fas fa-search-minus"></i> Micșorează font</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="boldfont()"><i class="fas fa-bold"></i> Text îngroșat</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="lowvision()"><i class="fas fa-low-vision"></i> Fără culori</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="darklight()"><i class="fas fa-adjust"></i> Contrast ridicat</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="negativecontrast()"><i class="fas fa-eye"></i> Contrast negativ</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="underlinetext()"><i class="fas fa-link"></i> Evidențiere link-uri</button></a>
+            <a href="#"><button class="button_accesibility" type="button" onclick="reset()"><i class="fas fa-redo"></i> Resetare</button></a>
+        </div>
+        
+            <div id="header">
+    <div id="headerback" class="headerBackground">      
+        <div class="headerInner">      
+            <div id="headtopbar" class="headerTop">
+                <h3>Ministerul Afacerilor Interne</h3>
+                <div class="headerTopRight">
+		    <div class="lang" style="font-weight:bold">
+                        
+                    </div>
+                    <div class="home-button">
+                        <a href="https://is.politiaromana.ro/ro/" title="I.P.J. IAȘI"></a>
+                    </div>
+                    
+                    
+                  
+                </div>
+            </div>
+                    
+            
+            <div class="subsiteTitle">
+                <h2><a href="https://www.politiaromana.ro/" title="Poliția Română">Poliția Română</a></h2>
+            </div>
+            
+            <div class="headerCenter">
+                <div class="logo">
+                    <a href="https://is.politiaromana.ro/ro/"><img src="https://is.politiaromana.ro/front/view/img/stema_site.png" alt="I.P.J. IAȘI"/></a>
+                    <a class="logoName" href="https://is.politiaromana.ro/ro/" title="I.P.J. IAȘI">I.P.J. IAȘI</a>
+                </div>
+                  
+                <div class="headerRight">
+                    <div class="hInfo">
+                        <img src="https://is.politiaromana.ro/front/view/img/tel_urgenta.png"/><span>112</span><p>Pentru situaţii de urgenţă, apelaţi</p>
+                    </div>
+                    <div class="hSearch">
+                        <form method="get" class="searchForm" id="searchFormWide" action="https://is.politiaromana.ro/ro/caută">
+                            <input type="text" name="s" id="topSearchInput" class="validate[required,minSize[3]" placeholder="Cauta in site" />
+                            <input type="submit" id="submitButton" value="" title="Caută"/>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>   
+
+            <div class="headerMenu">
+                <ul id="navback" class="nav">
+                    <li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="https://is.politiaromana.ro/ro/i-p-j-iasi"  title="I.P.J. Iaşi "  class="0 ">
+                                I.P.J. Iaşi
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/cadru-legal" >Cadru Legal</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/echipa-manageriala" >Echipa managerială</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/organigrama" >Organigrama</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/servicii-judetene" >Servicii judeţene</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/politii-municipale-si-orasenesti" >Poliţii municipale şi orăşeneşti</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/i-p-j-iasi/sectii-de-politie-rurala" >Secţii de poliţie rurală</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Informaţii generale "  class=" ">
+                                Informaţii generale
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-generale/prerogativele-i-p-j-iasi" >Prerogativele I.P.J. Iași</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-generale/istoric" >Istoric</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Ştiri şi media "  class=" ">
+                                Ştiri şi media
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/stiri-si-media/stiri" >Ştiri</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/stiri-si-media/comunicate" >Comunicate</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/stiri-si-media/agenda-conducerii-i-p-j-iasi" >Agenda conducerii I.P.J Iași</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/stiri-si-media/purtatori-de-cuvant" >Purtători de cuvânt</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/stiri-si-media/acreditari" >Acreditari</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Informații publice "  class=" active">
+                                Informații publice
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001" >Responsabil legea 544/2001</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/protectia-datelor-cu-caracter-personal" >Protecţia datelor cu caracter personal</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/statistici-evaluari" >Statistici, evaluări</a></li><li><a class="ddLink" href="https://www.politiaromana.ro/files/decl/index_siteuri.html" target="_blank">Declaratii de avere</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/transparenta-institutionala" >Transparenţă instituţională</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/integritate-institutionala" >Integritate instituțională</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/detectiv-particular" >Detectiv particular</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/avertizor-in-interes-public" >Avertizor în interes public</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/informatii-publice/dialog-social" >Dialog social</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="https://is.politiaromana.ro/ro/utile"  title="Utile "  class="0 ">
+                                Utile
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/program-de-audiente" >Program de audienţe</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/documente-eliberari-acte" >Documente eliberări acte</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/trimitere-documente-scanate" >Trimitere documente scanate</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/bunuri-gasite" >Bunuri găsite</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/centrul-de-retinere-si-arestare-preventiva" >Centrul de Reținere și Arestare Preventivă</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/ghiduri-educatie-rutiera" >Ghiduri educatie rutiera</a></li><li><a class="ddLink" href="https://www.politiaromana.ro/ro/utile/intrebari-frecvente" target="_blank">Întrebări frecvente</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/utile/informatii-utile-pentru-participantii-la-festivaluri-concerte-si-alte-evenimente" >Informatii utile pentru participantii la festivaluri, concerte si alte evenimente</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Prevenirea criminalitatii "  class="0 ">
+                                Prevenirea criminalitatii
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/prevenirea-criminalitatii/recomandari-preventive" >Recomandări preventive</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/prevenirea-criminalitatii/noutati" >Noutăţi</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/prevenirea-criminalitatii/parteneri" >Parteneri</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/prevenirea-criminalitatii/campanii-si-proiecte" >Campanii şi proiecte</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Proiecte "  class="0 ">
+                                Proiecte
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/proiecte/proiectul-safeborder" >Proiectul SAFEBORDER</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/program-operational-comun-romania-republica-moldova-2014-2020/proiectul-thor-cooperare-regionala-pentru-prevenirea-si-lupta-impotriva-criminalitatii-transfrontaliere-in-regiunea-de-frontiera-dintre-romania-moldova" >Proiectul THOR „Cooperare regională pentru prevenirea şi lupta împotriva criminalităţii transfrontaliere în regiunea de frontieră dintre România – Moldova”</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/program-operational-comun-romania-republica-moldova-2014-2020/proiectul-conception-intarirea-cooperarii-transfrontaliere-prin-dezvoltarea-unui-concept-comun-de-investigare-complexa-a-locului-faptei" >Proiectul CONCEPTION: ,,Întărirea cooperării transfrontaliere prin dezvoltarea unui concept comun de investigare complexă a locului faptei”</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/program-operational-comun-romania-republica-moldova-2014-2020/proiectul-imbunatatirea-capacitatii-politiei-romane-si-moldovene-in-domeniul-prevenirii-criminalitatii-inclusiv-a-infractionalitatii-transfrontaliere" >Proiectul ,,Îmbunătăţirea capacităţii poliţiei române şi moldovene în domeniul prevenirii criminalităţii, inclusiv a infracţionalităţii transfrontaliere”</a></li></ul>
+                                </div>
+				</li><li  class="ddIcon">
+                                <div class="innerWrap">
+				<a href="javascript:void(0)"  title="Carieră "  class=" ">
+                                Carieră
+				</a>
+				<ul class="dropDown"><li><a class="ddLink" href="https://is.politiaromana.ro/ro/cariera/posturi-scoase-la-concurs" >Posturi scoase la concurs</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/cariera/admitere-scoli-postliceale-ale-m-a-i-2026" >Admitere scoli postliceale ale M.A.I. 2026</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/cariera/admitere-institutii-de-invatamant-ale-mapn-si-ani-pentru-locurile-mai" >Admitere institutii de invatamant ale MAPN si ANI pentru locurile MAI</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/cariera/admitere-master-academia-de-politie" >Admitere MASTER Academia de Politie</a></li><li><a class="ddLink" href="https://is.politiaromana.ro/ro/cariera/admitere-academia-de-politie" >Admitere Academia de Politie</a></li></ul>
+                                </div>
+				</li><li  >
+                                <div class="innerWrap">
+				<a href="https://is.politiaromana.ro/ro/contact"  title="Contact "  class=" ">
+                                Contact
+				</a>
+				
+                                </div>
+				</li>
+                </ul>
+                <div class="headerMenuSearch">
+                    <div class="hSearch">
+                        <form method="get" class="searchForm" id="searchFormSmall" action="https://is.politiaromana.ro/ro/caută">
+                            <input type="text" name="s" id="topSearchInput" class="validate[required,minSize[3]" placeholder="Cauta in site" />
+                            <input type="submit" id="submitButton" value="" title="Caută"/>
+                        </form>
+                    </div>
+                </div>
+            </div>                   
+         </div>
+     </div>
+ </div>
+    
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.flexslider').flexslider({
+            controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+            directionNav: false, //Boolean: Create navigation for previous/next navigation? (true/false)
+            prevText: "", //String: Set the text for the "previous" directionNav item
+            nextText: "",
+            animation: "fade",
+            slideshow: true
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#searchFormWide').validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate: false, scroll:false});
+        $('#searchFormSmall').validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate: false, scroll:false});
+    });
+    
+    if ($("#result").offset())
+    {
+        $('html, body').animate({
+           scrollTop: $("#result").offset().top -20
+       }, 20);
+    }
+   
+    var newsletter_form = $('.searchForm');
+
+    $('#searchFormWide').submit(function(e) {
+           
+        if ($("#searchFormWide").validationEngine('validate')) {
+                    return true;
+                }
+            });
+
+    $('#searchFormSmall').submit(function(e) {
+           
+        if ($("#searchFormSmall").validationEngine('validate')) {
+            return true;
+        }
+    });
+
+</script>
+				
+
+
+       
+        <div id="content">
+            <div class="contentTop">
+                <div id="contentTopInnerback" class="contentTopInner">
+                    <div class="breadcrumb">
+                         <h1 class="pageTitle ">Pagină indisponibilă</h1>
+                        <ul>
+    <li class="first"><a href=https://is.politiaromana.ro/>Acasă</a></li><li><span></span></li>
+</ul>
+
+                    </div>
+                   
+                    
+                   
+                    
+                </div>
+            </div>
+            <div class="contentInner">
+                <div class="contentMain">
+                    <div class="contentLeftSection">
+                            <div class="notFound">
+        <h3>Această pagină nu există sau nu este disponibilă în acest moment</h3>
+        <div class="clear"></div>
+        <p>Pagina căutată nu există sau url-ul introdus este incorect. Puteți accesa una din paginile recomandate mai jos sau puteți căuta pagina dorită după cuvintele cheie.</p>
+        <div class="clear"></div>
+        <div class="meniu_404">
+            <div class="errorMenu">
+								<div class="errorTitle_404">
+									<a href="javascript: void(0)"><h4>I.P.J. Iaşi</h4></a>
+								</div>
+								<div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/cadru-legal">Cadru Legal</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/echipa-manageriala">Echipa managerială</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/organigrama">Organigrama</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/servicii-judetene">Servicii judeţene</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/politii-municipale-si-orasenesti">Poliţii municipale şi orăşeneşti</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/i-p-j-iasi/sectii-de-politie-rurala">Secţii de poliţie rurală</a>
+                                                                    <div class="clear"></div>
+                                                                </div>
+							</div><div class="errorMenu">
+								<div class="errorTitle_404">
+									<a href="javascript: void(0)"><h4>Informaţii generale</h4></a>
+								</div>
+								<div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/informatii-generale/prerogativele-i-p-j-iasi">Prerogativele I.P.J. Iași</a>
+                                                                    <div class="clear"></div>
+                                                                </div><div class="menus_404">
+                                                                    <a class="menu_404" href="https://is.politiaromana.ro/ro/informatii-generale/istoric">Istoric</a>
+                                                                    <div class="clear"></div>
+                                                                </div>
+							</div>
+        </div>
+         <div class="clear"></div>
+	<div class="cauta_404">
+		<h4>Caută</h4>
+                <div class="clear"></div>
+
+                <div class="hSearch">
+                    <form method="get" class="searchForm" id="cautaForm" action="https://is.politiaromana.ro/ro/caută">
+                        <input type="text" name="s" id="topSearchInput" class="validate[required,minSize[3]" placeholder="Căutare rapidă" />
+                        <input type="submit" id="submitButton" value="" title="Caută"/>
+                    </form>
+                </div>        
+	</div>
+	<div class="clear"></div>
+    </div>
+
+    
+
+<script>
+    $(document).ready(function() {
+        $('#cautaForm').validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate: false, scroll:false});
+    });
+    
+    if ($("#result").offset())
+    {
+        $('html, body').animate({
+           scrollTop: $("#result").offset().top -20
+       }, 20);
+    }
+   
+    var newsletter_form = $('#cautaForm');
+
+    $('#cautaForm').submit(function(e) {
+           
+            if ($("#cautaForm").validationEngine('validate')) {
+                    return true;
+                }
+            });
+
+</script>
+    
+                    </div>
+                    <div class="contentRightSection">
+                        <div class="rightSection">
+    
+    <div class="contentMenu" id="slider1">
+        <a href="javascript:void(0)" class="carousel-control prev"></a>
+        <div class="viewport">
+            <ul class="overview">
+                <li class="iconPersoaneUrmarite"><a href="http://www.politiaromana.ro/ro/persoane-urmarite" title="Persoane urmărite" target="_blank" >Persoane urmărite</a></li><li class="iconMostwanted"><a href="http://www.politiaromana.ro/ro/most-wanted" title="Most Wanted" target="_blank" >Most Wanted</a></li><li class="iconCopiidisparuti"><a href="http://www.politiaromana.ro/ro/copii-disparuti" title="Copii disparuti" target="_blank" >Copii disparuti</a></li><li class="iconAutovehiculeFurate"><a href="http://www.politiaromana.ro/ro/auto-furate" title="Autovehicule furate" target="_blank" >Autovehicule furate</a></li><li class="iconPersoane"><a href="http://www.politiaromana.ro/ro/obiecte-furate" title="Obiecte furate" target="_blank" >Obiecte furate</a></li><li class="iconPetitii"><a href="https://is.politiaromana.ro/ro/petitii-online" title="Petitii Online"  >Petitii Online</a></li><li class="iconRevistaPolitiaRomana noborder"><a href="http://www.politiaromana.ro/ro/revista-politia-romana" title="Revista Poliţia Română" target="_blank" >Revista Poliţia Română</a></li>
+            </ul>
+        </div> 
+        <a href="javascript:void(0)" class="carousel-control next"></a>
+    </div>
+            
+    
+               
+</div>
+<div class="clearfix"></div>
+
+                    </div>
+                </div>
+                <div class="widgetsCentru">
+                    
+								<div class="widget links"><div class="imgWidget"><a href="https://www.sts.ro/ro/serviciu-localizare-apel-112"  target="_blank" title="112 Apel de urgenta"><img src="https://is.politiaromana.ro/files/widgeturi/20-09-04-12-36-51logo_apel_112.jpg" alt="112 Apel de urgenta"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.politiaromana.ro/ro/semnalari-cazuri-de-coruptie"  target="_blank" title="Anticoruptie TelVerde"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-39-16widget_anticoruptie.jpg" alt="Anticoruptie TelVerde"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.politiaromana.ro/ro/constatare-amiabila-de-accident"  target="_blank" title="Constatare amiabila de accident"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-41-11widget_constatare.jpg" alt="Constatare amiabila de accident"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.schengen.mai.gov.ro/"  target="_blank" title="Schengen Romania"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-43-3114-10-03-06-41-05widget_schengen_ro.jpg" alt="Schengen Romania"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.sri.ro/telverde.html"  target="_blank" title="Alerta Terorism TelVerde"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-44-3614-09-30-03-27-14riscterorist.png" alt="Alerta Terorism TelVerde"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.anitp.mai.gov.ro/"  target="_blank" title="Antitrafic persoane TelVerde"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-45-36trafic.png" alt="Antitrafic persoane TelVerde"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.politiaromana.ro/ro/structura-politiei-romane/unitati-centrale/directia-de-ordine-publica/serviciul-sisteme-de-securitate-private"  target="_blank" title="Registrul National"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-46-4014-11-20-12-50-47registrul_national.jpg" alt="Registrul National"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.politiaromana.ro/ro/proiecte/proiect-romania-elvetia"  target="_blank" title="Proiect Romania-Elvetia"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-48-2614-11-20-12-52-24romania-elvetia.jpg" alt="Proiect Romania-Elvetia"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF"  target="_blank" title="SIS II"><img src="https://is.politiaromana.ro/files/widgeturi/15-03-30-10-49-3114-11-20-01-06-53sis_ii.jpg" alt="SIS II"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="https://sgg.gov.ro/new/guvernare-transparenta-deschisa-si-participativa-standardizare-armonizare-dialog-imbunatatit-cod-sipoca-35/"  target="_blank" title="Proiect SIPOCA"><img src="https://is.politiaromana.ro/files/widgeturi/banner_sipoca.jpg" alt="Proiect SIPOCA"/></a></div></div>               
+                        
+							
+							
+								<div class="widget links"><div class="imgWidget"><a href="https://www.mai.gov.ro/sistemul-de-informatii-schengen/"  target="_blank" title="sistemul de informatii SCHENGEN"><img src="https://is.politiaromana.ro/files/widgeturi/23-02-27-02-39-29banner_web_sis.jpg" alt="sistemul de informatii SCHENGEN"/></a></div></div>               
+                        
+							
+							<div class="clear"></div>
+                </div>  
+                <div class="clearfix"></div>
+            </div>
+     
+        </div>           
+			
+        <label id="lb_site" style="display:none">ro</label>
+<div id="footer">
+    <div class="footerInner">
+        <div class="footerLeft">
+            <h2><a href="">I.P.J. IAȘI</a></h2>
+            <div class="footerLeftButtons">
+                <div class="leftButtonsInner">
+                    <span class="rss"></span><a href="https://is.politiaromana.ro/ro/rss" target="_blank" title="RSS">RSS</a>
+                    <span class="sitemap idSiteMap"></span><a class="idSiteMap" href="https://is.politiaromana.ro/ro/harta-site" title="Hartă site">Hartă site</a>
+                    <span class="contact"></span><a href="https://is.politiaromana.ro/ro/contact" title="Contact">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">
+		<p>Copyright 2024 ©Direcția Comunicații și Tehnologia Informației din cadrul Inspectoratului General al Poliției Române</p>
+                
+            </div>
+			
+            
+        </div>
+            
+        <div class="footerRight">
+            <h3>Legături utile</h3>
+            <ul>
+                <li>
+				<a href="http://www.mai.gov.ro" target="_blank" title="Ministerul Afacerilor Interne " class="first" >
+					Ministerul Afacerilor Interne
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.politiaromana.ro" target="_blank" title="Poliţia Română "  >
+					Poliţia Română
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.prefecturaiasi.ro" target="_blank" title="Prefectura Iaşi "  >
+					Prefectura Iaşi
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.primaria-iasi.ro" target="_blank" title="Primăria Iaşi "  >
+					Primăria Iaşi
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.jandarmeriaiasi.ro" target="_blank" title="Inspectoratul de Jandarmi Iaşi "  >
+					Inspectoratul de Jandarmi Iaşi
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.politialocala-iasi.ro" target="_blank" title="Poliţia Locală Iaşi "  >
+					Poliţia Locală Iaşi
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.dlep-iasi.ro" target="_blank" title="Direcţia Locală de Evidenţă a Persoanelor "  >
+					Direcţia Locală de Evidenţă a Persoanelor
+					
+				</a>
+				
+				</li><li>
+				<a href="http://www.pasapoarteiasi.ro" target="_blank" title="Paşapoarte Iaşi "  class="lastm">
+					Paşapoarte Iaşi
+					
+				</a>
+				
+				</li>
+            </ul> 
+        </div>
+        <img class="footerLogo" src="https://is.politiaromana.ro/front/view/img/stema_igpr.png" alt="sigla"/>
+        <div class="clearfix"></div>
+    </div>
+</div>            
+<script>
+$( document ).ready(function() {
+	var label = $('#lb_site').text();
+	if(label=="en")
+        {
+        	$(".idSiteMap").css("display","none");
+		$("#btnListaUnitTerit").css("display","none");
+	}
+	else
+	{
+		$(".idSiteMap").css("display","block");
+		$("#btnListaUnitTerit").css("display","block");
+	}
+});	
+</script>
+
+    
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#inputData').datepicker({dateFormat:"dd-mm-yy"});
+	 $('#inputData1').datepicker({dateFormat:"dd-mm-yy"});
+    });
+    $(document).ready(function(){
+        $('body').addClass('has-js');
+    });
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+
+</html>

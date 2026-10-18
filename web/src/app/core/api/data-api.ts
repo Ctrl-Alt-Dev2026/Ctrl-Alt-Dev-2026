@@ -1,19 +1,24 @@
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { Camera } from '../models/camera';
-import { Accident, CrossingCollection, Hotspot, Manifest, Measure } from '../models/contract';
-import { ExtractionResult, ExtractRequest, ReviewRequest } from '../models/extraction';
-import { LoadedDataset, LocationDossierPayload } from '../models/publication';
+import { LiveDataset, LiveStatus } from '../models/live';
+import { ENDPOINTS } from './endpoints';
 
-// The only way components reach data. Implementations: MockDataApi, HttpDataApi.
-export abstract class DataApi {
-  abstract loadDataset(): Observable<LoadedDataset>;
-  abstract dossier(locationId: string): Observable<LocationDossierPayload>;
-  abstract manifest(): Observable<Manifest>;
-  abstract accidents(): Observable<Accident[]>;
-  abstract hotspots(): Observable<Hotspot[]>;
-  abstract crossings(): Observable<CrossingCollection>;
-  abstract measures(): Observable<Measure[]>;
-  abstract cameras(): Observable<Camera[]>;
-  abstract extract(req: ExtractRequest): Observable<ExtractionResult>;
-  abstract review(eventId: string, req: ReviewRequest): Observable<Accident>;
+// The only way components reach data: the backend's collected dataset, shared by every viewer.
+@Injectable({ providedIn: 'root' })
+export class DataApi {
+  private readonly http = inject(HttpClient);
+  private readonly base = environment.api.baseUrl;
+
+  status() {
+    return this.http.get<LiveStatus>(this.base + ENDPOINTS.liveStatus);
+  }
+  dataset() {
+    return this.http.get<LiveDataset>(this.base + ENDPOINTS.liveDataset);
+  }
+  // Public webcam list: static configuration shipped with the UI, not accident data.
+  cameras() {
+    return this.http.get<Camera[]>(ENDPOINTS.cameras);
+  }
 }

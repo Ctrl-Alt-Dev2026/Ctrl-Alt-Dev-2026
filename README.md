@@ -12,6 +12,7 @@ Clientul vizat este Primăria Iași; nu există un contract sau un parteneriat c
 - [Import, corectare și review: contract și exemplu complet](docs/REVIEW_WORKFLOW.md)
 - [Publicare explicită, hartă GeoJSON și dosare exportabile; repetiție sintetică completă](docs/PUBLICATION_WORKFLOW.md)
 - [SafeCross: analiză video, instalare separată și demo cu sursă publică](docs/SAFECROSS.md)
+- [Camere live: detecție Python cu YOLO, tracking, incidente posibile și lumina trecerilor](docs/LIVE_VISION.md)
 - [Context OSM pentru Iași](context/CITY.md) și [pipeline-ul offline de scor](risk/IMPLEMENTATION.md) — integrate prin publicare explicită și asociere verificată, cu instalarea `requirements-publication.txt`.
 - [Geocodare asistată înainte de aprobare: API și contract pentru frontend](docs/GEOCODING_WORKFLOW.md) — integrează [modulul de coordonate](coordonate/README.md), cu dovezi OSM, preview și aplicare confirmată.
 - [Contractele și comportamentul integrării Angular–API](docs/FRONTEND_HANDOFF.md)

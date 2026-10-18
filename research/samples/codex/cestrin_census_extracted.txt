@@ -1,0 +1,126 @@
+            RECENSĂMÂNTUL GENERAL DE CIRCULAŢIE RUTIERĂ DIN ANUL 2022 ȘI
+                   GESTIONAREA DATELOR DE TRAFIC LA NIVEL CESTRIN
+
+
+
+      Hartă Recensământ 2022
+
+      CESTRIN a creat această hartă pentru a servi interesul public, ilustrând gestionarea datelor de trafic la
+nivel național în România pentru anul 2022. Pe hartă sunt marcate diferite sectoare de drumuri, cu intensități
+medii zilnice anuale ale traficului. Valorile sunt colorate diferit pentru a indica volumul de vehicule: de la
+sub 5000 până la peste 25000 de vehicule pe zi.
+
+      Valorile indicate pe hartă reprezintă nivelul de intensitate medie zilnică anuală pentru întregul sector
+de drum și sunt determinate ca medie ponderată în funcție de lungimea subsectoarelor componente ale
+acestuia.
+
+      Gestionarea datelor de trafic la nivel CESTRIN
+
+       Colectarea datelor de trafic rutier intră în atribuțiile CESTRIN, aceasta fiind singura entitate
+subordonată C.N.A.I.R. S.A. care are în atribuții prelucrarea și furnizarea datelor de trafic. Printre
+principalele metode de obținere a datelor referitoare la traficul rutier se numără:
+
+        Recensământul general de circulație rutieră;
+        Anchetele de circulație Origine – Destinație;
+        Înregistrările automate de circulație.
+
+
+
+       Recensământul general de circulație rutieră se desfășoară o dată la cinci ani, este organizat și
+coordonat de CESTRIN și efectuat de către Direcțiile Regionale de Drumuri și Poduri și Consiliile Județene.
+Acesta acoperă întreaga rețea de autostrăzi, drumuri naționale, județene și comunale de pe teritoriul
+României. Recensământul constă în înregistrări manuale de circulație, pe formulare unice de înregistrare, pe
+categorii de vehicule, în zece zile din același an, acoperind toate zilele săptămânii. Ultimul recensământ
+general de circulație rutieră a fost realizat în anul 2022 și s-a desfășurat în 3162 de posturi, din care 116 pe
+autostrăzi, 889 pe drumuri naționale și variante ocolitoare, 2104 pe drumuri județene și 53 pe drumuri
+comunale.
+
+
+
+
+                                                                                                     1|P a g i n a
+        Recensământul general de circulație rutieră aduce beneficii semnificative în cadrul Modelului
+Național de Transport gestionat de CESTRIN. Prin colectarea datelor precise și actualizate despre fluxurile
+de trafic, recensământul permite calibrarea și validarea modelului de transport. Acest proces de calibrare
+asigură că modelul reflectă în mod corect realitățile actuale ale traficului, ceea ce îmbunătățește fiabilitatea
+predicțiilor de trafic și ajută la planificarea infrastructurii.
+
+        Validarea, pe de altă parte, implică verificarea și confirmarea că modelul de transport produce
+rezultate care corespund cu datele observate în realitate. Astfel, recensământul servește ca un punct de
+referință esențial pentru evaluarea preciziei modelului. Beneficiile sunt multiple: îmbunătățirea planurilor de
+dezvoltare a infrastructurii rutiere, creșterea siguranței circulației, optimizarea fluxurilor de trafic și reducerea
+congestiei. În final, aceste date ajută la proiectarea de politici de transport mai eficiente și la adoptarea de
+măsuri care să răspundă nevoilor dinamicilor interurbane în domeniul mobilității.
+
+
+
+
+                                                                                                         2|P a g i n a
+       Anchetele de circulație Origine – Destinație vin în completarea Recensământului General de
+Circulație și se efectuează pe rețeaua de autostrăzi și drumuri naționale din România. La fel ca recensământul,
+acestea sunt organizate și coordonate de CESTRIN și efectuate de către Direcțiile Regionale de Drumuri și
+Poduri. Anchetele de circulație Origine – Destinație colectează informații despre originea și destinația
+călătoriei, tipul călătoriei sau natura încărcăturii (inclusiv gradul de încărcare), gradul de ocupare al
+vehiculelor, precum și date socio-economice (ocupația, vârsta, venitul).
+
+
+
+
+       Anchetele de circulație Origine – Destinație sunt instrumente valoroase pentru realizarea Modelului
+Național de Transport de la CESTRIN. Ele oferă date esențiale pentru determinarea cererii de transport,
+permițând o analiză detaliată a comportamentului de călătorie al populației și a mișcărilor de mărfuri. Prin
+identificarea punctelor de plecare și de sosire, precum și a motivelor deplasării, anchetele contribuie la
+crearea unui model de transport care reflectă cu acuratețe necesitățile de mobilitate.
+
+       Utilitatea acestor anchete în cadrul modelului de transport este deosebit de mare, deoarece ele ajută
+la anticiparea și la gestionarea fluxurilor de trafic. În plus, informațiile colectate prin aceste anchete sunt
+
+                                                                                                    3|P a g i n a
+necesare pentru a asigura că infrastructura de transport este dezvoltată și îmbunătățită în concordanță cu
+tendințele și nevoile reale ale călătorilor și transportatorilor de mărfuri, contribuind astfel la o mobilitate mai
+fluidă și mai sustenabilă la nivel național.
+
+        Înregistrările automate de circulație
+
+        În prezent, CESTRIN asigură asistență tehnică, monitorizează, descarcă și prelucrează datele de trafic
+de la un număr de 535 de posturi de înregistrare automată a circulației, și anume:
+
+         170 de posturi de înregistrare automată a circulației ce furnizează date orare, pe categorii de
+            vehicule (contori clasificatori);
+         38 de posturi WIM (Weigh in Motion) – dotate cu echipamente care permit clasificarea și
+            cântărirea din mers a vehiculelor și furnizează date individuale ale autovehiculelor (clasificarea
+            autovehiculelor, viteza instantanee, masa pe osii și masa totală, distanța dintre osii);
+         327 de posturi de înregistrare automată a circulației ce furnizează date orare, total vehicule
+            (contori totalizatori).
+
+
+
+
+                                                                                                        4|P a g i n a
+        Datele de trafic rezultate din prelucrarea recensământului general de circulație, anchetelor de
+circulație Origine – Destinație și înregistrătoarelor automate de trafic sunt absolut necesare pentru:
+
+         Elaborarea Studiilor de Trafic;
+         Fundamentarea și proiectarea investițiilor rutiere și a lucrărilor de întreținere și modernizare a
+            drumurilor;
+         Fundamentarea măsurilor de organizare a circulației rutiere și urmărirea dinamicii de evoluție a
+            traficului pe rețeaua rutieră;
+         Elaborarea de studii pentru evaluarea calității aerului prin estimarea emisiilor din traficul rutier și
+            a impactului asupra mediului.
+        Astfel, CESTRIN asigură suport tehnic prin furnizarea datelor de trafic rezultate din prelucrarea
+recensământului general de circulație, anchetelor de circulație Origine – Destinație și înregistrătoarelor
+automate de trafic pentru mai multe entități, cum ar fi prestatori ai C.N.A.I.R. S.A., Ministere, Primării,
+Consilii Județene și Consilii Locale, Antreprenori, Prestatori de Servicii etc.
+
+        În decursul anului 2023, CESTRIN a furnizat date de trafic pentru un număr de 100 de entități și
+aproximativ 200 de solicitări de date de trafic necesare elaborării studiilor de trafic care au la bază Modelul
+Național de Transport.
+
+        De asemenea, datele de trafic sunt folosite și în cadrul C.N.A.I.R. - S.A. prin CESTRIN în vederea
+dezvoltării diverselor analize utilizate în studiile de cercetare/planificare a investițiilor.
+
+
+
+
+                                                                                                      5|P a g i n a
+

@@ -4,7 +4,12 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
 import { filter, map } from 'rxjs';
 import { dateRo } from '../../core/format/labels';
 import { DataStore } from '../../core/state/data.store';
-import { DataMode } from '../../core/models/publication';
+
+const CLOCK = new Intl.DateTimeFormat('ro-RO', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Bucharest' });
+
+function clock(iso: string | null): string | null {
+  return iso ? CLOCK.format(new Date(iso)) : null;
+}
 
 // Provisional product name (see docs/PROJECT_CONTEXT.md); change it here only.
 export const APP_NAME = 'SafeIași';
@@ -39,9 +44,11 @@ export class TopBar {
     return p ? `${dateRo(p[0])} – ${dateRo(p[1])}` : null;
   });
 
-  protected setMode(mode: DataMode): void {
-    this.store.setDataMode(mode);
-  }
+  // The collected dataset lists its sources in the manifest.
+  protected readonly isIsu = computed(() => !!this.store.manifest()?.surse?.some((s) => s.id === 'isu'));
+  protected readonly updated = computed(() => clock(this.store.builtAt()));
+  protected readonly next = computed(() => clock(this.store.status()?.urmatoarea_rulare ?? null));
+  protected readonly lastRunFailed = computed(() => this.store.status()?.ultima_rulare?.status === 'error');
 
   constructor() {
     const host = inject(ElementRef<HTMLElement>).nativeElement;

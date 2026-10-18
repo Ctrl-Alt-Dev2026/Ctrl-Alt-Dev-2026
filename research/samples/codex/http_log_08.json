@@ -1,0 +1,224 @@
+[
+  {
+    "id": "ipj_2023_bilant",
+    "url": "https://is.politiaromana.ro/files/pages_files/Comunicat_presa_bilant_2023.pdf",
+    "checked_utc": "2026-10-17T21:41:14.776328+00:00",
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/files/pages_files/Comunicat_presa_bilant_2023.pdf",
+    "content_type": "application/pdf",
+    "bytes": 696931,
+    "tls_verified": false,
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ipj_2022_bilant",
+    "url": "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2022.pdf",
+    "checked_utc": "2026-10-17T21:41:16.563627+00:00",
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2022.pdf",
+    "content_type": "application/pdf",
+    "bytes": 712502,
+    "tls_verified": false,
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ins_road_context",
+    "url": "http://statistici.insse.ro:8077/tempo-ins/context/5505",
+    "checked_utc": "2026-10-17T21:41:14.776328+00:00",
+    "status": 200,
+    "final_url": "http://statistici.insse.ro:8077/tempo-ins/context/5505",
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 3318,
+    "tls_verified": null,
+    "requests_verify_parameter": true,
+    "transport_note": "Plain HTTP, TLS not used"
+  },
+  {
+    "id": "uk_stats19_catalog",
+    "url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+    "checked_utc": "2026-10-17T21:41:14.777318+00:00",
+    "status": 200,
+    "final_url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 87609,
+    "tls_verified": true,
+    "links": [
+      "#about-this-data",
+      "https://assets.publishing.service.gov.uk/media/6ab2a71d997a4b2950cced58/dft-road-casualty-statistics-road-safety-open-dataset-data-guide-2025.xlsx",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2025.csv",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2025.csv",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2025.csv",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2024.csv",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2024.csv",
+      "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2024.csv",
+      "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "france_baac_catalog",
+    "url": "https://www.data.gouv.fr/api/1/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/",
+    "checked_utc": "2026-10-17T21:41:14.777318+00:00",
+    "status": 200,
+    "final_url": "https://www.data.gouv.fr/api/1/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/",
+    "content_type": "application/json",
+    "bytes": 230186,
+    "tls_verified": true,
+    "license": "fr-lo",
+    "title": "Bases de données annuelles des accidents corporels de la circulation routière - Années de 2005 à 2024",
+    "resources_2024": [
+      {
+        "id": "d0574a19-9005-4fff-92db-050b5fb2c72c",
+        "title": "vehicules-immatricule-baac-2024.csv",
+        "url": "https://static.data.gouv.fr/resources/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/20251107-100210/2024.csv",
+        "format": "csv"
+      },
+      {
+        "id": "83f0fb0e-e0ef-47fe-93dd-9aaee851674a",
+        "title": "Caract_2024.csv",
+        "url": "https://static.data.gouv.fr/resources/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/20251021-115900/caract-2024.csv",
+        "format": "csv"
+      },
+      {
+        "id": "228b3cda-fdfb-4677-bd54-ab2107028d2d",
+        "title": "Lieux_2024.csv",
+        "url": "https://static.data.gouv.fr/resources/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/20251021-115812/lieux-2024.csv",
+        "format": "csv"
+      },
+      {
+        "id": "fd30513c-6b11-4a56-b6dc-5ac87728794b",
+        "title": "Vehicules_2024.csv",
+        "url": "https://static.data.gouv.fr/resources/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/20251107-100240/vehicules-2024.csv",
+        "format": "csv"
+      },
+      {
+        "id": "f57b1f58-386d-4048-8f78-2ebe435df868",
+        "title": "Usagers_2024.csv",
+        "url": "https://static.data.gouv.fr/resources/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024/20251021-115506/usagers-2024.csv",
+        "format": "csv"
+      }
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "germany_unfallatlas",
+    "url": "https://opendata.hessen.de/dataset/unfallatlas",
+    "checked_utc": "2026-10-17T21:41:16.056127+00:00",
+    "status": 200,
+    "final_url": "https://opendata.hessen.de/dataset/unfallatlas",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 105161,
+    "tls_verified": true,
+    "links": [
+      "/dataset/unfallatlas/resource/bfa94a95-a190-47e2-af59-5f9966e2e8e2?view_id=9d12cac3-c0c9-4482-908b-431174dfe18a#views-header",
+      "/dataset/unfallatlas/resource/bfa94a95-a190-47e2-af59-5f9966e2e8e2?view_id=981aa004-c6c4-4d7e-a53e-7c64f6a5322c#views-header",
+      "/dataset/unfallatlas/resource/bfa94a95-a190-47e2-af59-5f9966e2e8e2?view_id=c822d981-7b34-4b55-9ed5-0a3aa2d5d414#views-header",
+      "/dataset/unfallatlas/resource/2cd4eb07-e4d8-441b-9253-50caf0610180?inner_span=True",
+      "/dataset/unfallatlas/resource/2cd4eb07-e4d8-441b-9253-50caf0610180?view_id=d8078d4b-d7b2-442f-bef7-e0b6598bf4a8#views-header",
+      "/dataset/unfallatlas/resource/87985382-1b0e-4b3e-8036-bb69d16a82e5?inner_span=True",
+      "/dataset/unfallatlas/resource/52f7b9e3-3320-4879-a213-3b224d140bb9?inner_span=True",
+      "/dataset/unfallatlas/resource/01f8bf00-467b-417f-938e-7f19faefb41e",
+      "/dataset/unfallatlas/resource/bfa94a95-a190-47e2-af59-5f9966e2e8e2",
+      "/dataset/unfallatlas/resource/2cd4eb07-e4d8-441b-9253-50caf0610180",
+      "/dataset/unfallatlas/resource/87985382-1b0e-4b3e-8036-bb69d16a82e5",
+      "/dataset/unfallatlas/resource/52f7b9e3-3320-4879-a213-3b224d140bb9",
+      "/topic/about/unfall",
+      "/topic/about/verkehr",
+      "/region/about/hessen",
+      "/dataset/unfallatlas/resource/01f8bf00-467b-417f-938e-7f19faefb41e",
+      "/dataset/unfallatlas/resource/bfa94a95-a190-47e2-af59-5f9966e2e8e2",
+      "/dataset/unfallatlas/resource/2cd4eb07-e4d8-441b-9253-50caf0610180",
+      "/dataset/unfallatlas/resource/87985382-1b0e-4b3e-8036-bb69d16a82e5",
+      "/dataset/unfallatlas/resource/52f7b9e3-3320-4879-a213-3b224d140bb9",
+      "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/CSV",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/GML",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/HTML",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/WFS_SRVC",
+      "https://op.europa.eu/de/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/REST",
+      "/organization/about/hessisches-statistisches-landesamt",
+      "/organization/about/hessisches-statistisches-landesamt",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-kontakt",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-herausgeber",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-autor",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-bearbeiter",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-verwalter",
+      "https://www.dcat-ap.de/def/dcatde/3.0/spec/#datensatz-urheber"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "facebook_public_group",
+    "url": "https://www.facebook.com/groups/InfoTraficIasi",
+    "checked_utc": "2026-10-17T21:41:16.549630+00:00",
+    "status": 200,
+    "final_url": "https://www.facebook.com/groups/InfoTraficIasi",
+    "content_type": "text/html; charset=\"utf-8\"",
+    "bytes": 581263,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "facebook_automated_terms",
+    "url": "https://www.facebook.com/legal/automated_data_collection_terms",
+    "checked_utc": "2026-10-17T21:41:18.841368+00:00",
+    "status": 200,
+    "final_url": "https://www.facebook.com/legal/automated_data_collection_terms",
+    "content_type": "text/html; charset=\"utf-8\"",
+    "bytes": 315186,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "code4_home",
+    "url": "https://code4.ro/",
+    "checked_utc": "2026-10-17T21:41:16.600174+00:00",
+    "status": 200,
+    "final_url": "https://code4.ro/ro",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 83322,
+    "tls_verified": true,
+    "links": [
+      "https://code4.ro/ro/update-romania",
+      "https://code4.ro/ro/update-romania",
+      "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "ngo_blackspot_map",
+    "url": "https://mariuscomper.uk/puncte-negre/",
+    "checked_utc": "2026-10-17T21:41:18.114782+00:00",
+    "status": 410,
+    "final_url": "https://mariuscomper.uk/puncte-negre/",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 29,
+    "tls_verified": true,
+    "links": [],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "google_pricing_list",
+    "url": "https://developers.google.com/maps/billing-and-pricing/pricing",
+    "checked_utc": "2026-10-17T21:41:18.291954+00:00",
+    "status": 200,
+    "final_url": "https://developers.google.com/maps/billing-and-pricing/pricing",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 247269,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "sumi_guidelines",
+    "url": "https://transport.ec.europa.eu/system/files/2020-09/sumi_wp1_harmonisation_guidelines.pdf",
+    "checked_utc": "2026-10-17T21:41:18.436497+00:00",
+    "status": 200,
+    "final_url": "https://transport.ec.europa.eu/system/files/2020-09/sumi_wp1_harmonisation_guidelines.pdf",
+    "content_type": "application/pdf",
+    "bytes": 495936,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  }
+]

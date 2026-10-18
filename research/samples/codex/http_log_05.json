@@ -1,0 +1,658 @@
+[
+  {
+    "id": "market_datastore_ardud",
+    "url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=e3e42ee5-391d-4b74-b795-ece49b6f7156&q=Ardud&limit=100",
+    "checked_utc": "2026-10-17T21:36:46.043308+00:00",
+    "status": 200,
+    "final_url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=e3e42ee5-391d-4b74-b795-ece49b6f7156&q=Ardud&limit=100",
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 7920,
+    "success": true,
+    "fields": [
+      {
+        "type": "int",
+        "id": "_id"
+      },
+      {
+        "type": "text",
+        "id": "Autoritate contractanta"
+      },
+      {
+        "type": "numeric",
+        "id": "CUI"
+      },
+      {
+        "type": "text",
+        "id": "Numar notificare"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data publicare"
+      },
+      {
+        "type": "text",
+        "id": "Denumire"
+      },
+      {
+        "type": "text",
+        "id": "Cod CPV"
+      },
+      {
+        "type": "text",
+        "id": "Denumire CPV"
+      },
+      {
+        "type": "text",
+        "id": "Tip contract"
+      },
+      {
+        "type": "text",
+        "id": "Modalitate desfasurare"
+      },
+      {
+        "type": "text",
+        "id": "Valoare atribuita (RON)"
+      },
+      {
+        "type": "text",
+        "id": "Fonduri comunitare?"
+      },
+      {
+        "type": "text",
+        "id": "Denumire program"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data atribuire"
+      },
+      {
+        "type": "text",
+        "id": "Ofertant"
+      },
+      {
+        "type": "text",
+        "id": "CUI ofertant"
+      }
+    ],
+    "total": 13,
+    "records": [
+      {
+        "_id": 4954,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082572",
+        "Data publicare": "2024-01-05T11:49:57",
+        "Denumire": "Furnizare  motorina",
+        "Cod CPV": "09134200-9",
+        "Denumire CPV": "Motorina (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "10,610",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T11:49:48",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 5019,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082637",
+        "Data publicare": "2024-01-05T12:05:30",
+        "Denumire": "Furnizare benzina",
+        "Cod CPV": "09132100-4",
+        "Denumire CPV": "Benzina fara plumb (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "235",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T12:05:19",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 4938,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082556",
+        "Data publicare": "2024-01-05T11:47:50",
+        "Denumire": "Furnizare benzina",
+        "Cod CPV": "09132100-4",
+        "Denumire CPV": "Benzina fara plumb (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "916",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T11:47:37",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 4963,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082581",
+        "Data publicare": "2024-01-05T11:51:57",
+        "Denumire": "Furnizare GPL",
+        "Cod CPV": "09133000-0",
+        "Denumire CPV": "Gaz petrolier lichefiat (GPL) (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "90",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T11:51:19",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 4972,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082590",
+        "Data publicare": "2024-01-05T11:55:12",
+        "Denumire": "Furnizare GPL",
+        "Cod CPV": "09133000-0",
+        "Denumire CPV": "Gaz petrolier lichefiat (GPL) (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "222",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T11:55:02",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 4980,
+        "Autoritate contractanta": "Orasul Ardud",
+        "CUI": 3897173,
+        "Numar notificare": "DAN2082598",
+        "Data publicare": "2024-01-05T11:56:27",
+        "Denumire": "Furnizare benzina",
+        "Cod CPV": "09132100-4",
+        "Denumire CPV": "Benzina fara plumb (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Modalitate desfasurare": "Offline",
+        "Valoare atribuita (RON)": "710",
+        "Fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data atribuire": "2024-01-05T11:56:21",
+        "Ofertant": "S.C. OCTANO DOWNSTREAM S.R.L.",
+        "CUI ofertant": "38075752",
+        "rank": 0.0573088
+      }
+    ],
+    "error_detail": null
+  },
+  {
+    "id": "market_datastore_traffic",
+    "url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=dd109516-aaa9-421b-bd4a-7b6ae4f3da43&q=studiu%20de%20trafic&limit=20",
+    "checked_utc": "2026-10-17T21:36:47.927663+00:00",
+    "status": 200,
+    "final_url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=dd109516-aaa9-421b-bd4a-7b6ae4f3da43&q=studiu%20de%20trafic&limit=20",
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 2587,
+    "success": true,
+    "fields": [
+      {
+        "type": "int",
+        "id": "_id"
+      },
+      {
+        "type": "text",
+        "id": "Autoritate contractanta"
+      },
+      {
+        "type": "numeric",
+        "id": "CUI autoritate contractanta"
+      },
+      {
+        "type": "text",
+        "id": "Numar achizitie directa"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data publicare"
+      },
+      {
+        "type": "text",
+        "id": "Denumire achizitie"
+      },
+      {
+        "type": "text",
+        "id": "Cod CPV"
+      },
+      {
+        "type": "text",
+        "id": "Denumire CPV"
+      },
+      {
+        "type": "text",
+        "id": "Tip contract"
+      },
+      {
+        "type": "text",
+        "id": "Finantare prin fonduri comunitare?"
+      },
+      {
+        "type": "text",
+        "id": "Denumire program"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data finalizare"
+      },
+      {
+        "type": "numeric",
+        "id": "Valoare achizitie (RON)"
+      },
+      {
+        "type": "text",
+        "id": "Ofertant castigator"
+      },
+      {
+        "type": "text",
+        "id": "CUI ofertant castigator"
+      }
+    ],
+    "total": 2,
+    "records": [
+      {
+        "_id": 2768,
+        "Autoritate contractanta": "Municipiul Bistrita",
+        "CUI autoritate contractanta": 4347569,
+        "Numar achizitie directa": "DA37200778",
+        "Data publicare": "2024-12-16T15:21:34",
+        "Denumire achizitie": "Elaborare Studiu trafic pt Pr.  ”Extindere sistem de management al traficului Mun Bistrita” Etapa 3",
+        "Cod CPV": "79311100-8",
+        "Denumire CPV": "Servicii de elaborare de studii (Rev.2)",
+        "Tip contract": "Servicii",
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data finalizare": "2024-12-18T08:25:08",
+        "Valoare achizitie (RON)": 203054.4,
+        "Ofertant castigator": "Smart Technology Research & Consulting",
+        "CUI ofertant castigator": "RO31897462",
+        "rank": 0.208034
+      },
+      {
+        "_id": 45495,
+        "Autoritate contractanta": "MUNICIPIUL VASLUI",
+        "CUI autoritate contractanta": 3337532,
+        "Numar achizitie directa": "DA37245691",
+        "Data publicare": "2024-12-20T14:27:06",
+        "Denumire achizitie": "Servicii de elaborare Studiu de trafic pentru ~Culoar de mobilitate urbana durabila str Decebal",
+        "Cod CPV": "71311220-9",
+        "Denumire CPV": "Servicii de inginerie rutiera (Rev.2)",
+        "Tip contract": "Servicii",
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Denumire program": "",
+        "Data finalizare": "2024-12-23T10:26:17",
+        "Valoare achizitie (RON)": 2500,
+        "Ofertant castigator": "GS BUSINESS SOLUTIONS",
+        "CUI ofertant castigator": "36795439",
+        "rank": 0.344984
+      }
+    ],
+    "error_detail": null
+  },
+  {
+    "id": "market_datastore_iasi",
+    "url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=96df8d63-0032-4a9d-bd55-4fc51fa512ad&q=Iasi&limit=100",
+    "checked_utc": "2026-10-17T21:36:49.767240+00:00",
+    "status": 200,
+    "final_url": "https://data.gov.ro/api/3/action/datastore_search?resource_id=96df8d63-0032-4a9d-bd55-4fc51fa512ad&q=Iasi&limit=100",
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 66711,
+    "success": true,
+    "fields": [
+      {
+        "type": "int",
+        "id": "_id"
+      },
+      {
+        "type": "text",
+        "id": "Autoritate contractanta"
+      },
+      {
+        "type": "numeric",
+        "id": "CUI autoritate contractanta"
+      },
+      {
+        "type": "text",
+        "id": "Numar notificare"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data publicare"
+      },
+      {
+        "type": "text",
+        "id": "Obiectul achizitiei"
+      },
+      {
+        "type": "text",
+        "id": "Cod CPV"
+      },
+      {
+        "type": "text",
+        "id": "Denumire CPV"
+      },
+      {
+        "type": "text",
+        "id": "Tip contract"
+      },
+      {
+        "type": "numeric",
+        "id": "Valoare achizitie (RON)"
+      },
+      {
+        "type": "text",
+        "id": "Finantare prin fonduri comunitare?"
+      },
+      {
+        "type": "text",
+        "id": "Tipul de proiect/ program"
+      },
+      {
+        "type": "timestamp",
+        "id": "Data finalizare"
+      },
+      {
+        "type": "text",
+        "id": "Ofertant castigator"
+      },
+      {
+        "type": "text",
+        "id": "CUI ofertant castigator"
+      }
+    ],
+    "total": 145,
+    "records": [
+      {
+        "_id": 5081,
+        "Autoritate contractanta": "SCOALA DE FORMARE INITIALA SI CONTINUA A PERSONALULUI POLITIEI DE FRONTIERA IASI",
+        "CUI autoritate contractanta": 32593550,
+        "Numar notificare": "DAN2347725",
+        "Data publicare": "2024-12-26T09:01:46",
+        "Obiectul achizitiei": "furnizare energie electrica 18.12.2024",
+        "Cod CPV": "09310000-5",
+        "Denumire CPV": "Electricitate (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Valoare achizitie (RON)": 125.3,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-26T09:01:36",
+        "Ofertant castigator": "S.C. E.ON ENERGIE ROMANIA S.A.",
+        "CUI ofertant castigator": "22043010",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 104,
+        "Autoritate contractanta": "BIBLIOTECA CENTRALA UNIVERSITARA M EMINESCU IASI",
+        "CUI autoritate contractanta": 4540836,
+        "Numar notificare": "DAN2342696",
+        "Data publicare": "2024-12-19T12:16:20",
+        "Obiectul achizitiei": "Corespondenta interna si externa cu tp",
+        "Cod CPV": "64111000-7",
+        "Denumire CPV": "Servicii postale de distribuire a ziarelor si a periodicelor (Rev.2)",
+        "Tip contract": "Servicii",
+        "Valoare achizitie (RON)": 18.6,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-19T12:07:35",
+        "Ofertant castigator": "C.N. COMPANIA NATIONALA POSTA ROMANA S.A. S.A.",
+        "CUI ofertant castigator": "427410",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 150,
+        "Autoritate contractanta": "SNTFC \"CFR CALATORI\" S.A.",
+        "CUI autoritate contractanta": 11054545,
+        "Numar notificare": "DAN2342787",
+        "Data publicare": "2024-12-19T12:31:40",
+        "Obiectul achizitiei": "Serviciu de monitorizare GPS - Serv AAA Iasi",
+        "Cod CPV": "79980000-7",
+        "Denumire CPV": "Servicii de abonare (Rev.2)",
+        "Tip contract": "Servicii",
+        "Valoare achizitie (RON)": 4692,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-19T12:31:34",
+        "Ofertant castigator": "S.C. AROBS Transilvania Software S.A.",
+        "CUI ofertant castigator": "11291045",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 168,
+        "Autoritate contractanta": "SNTFC \"CFR CALATORI\" S.A.",
+        "CUI autoritate contractanta": 11054545,
+        "Numar notificare": "DAN2342805",
+        "Data publicare": "2024-12-19T12:35:30",
+        "Obiectul achizitiei": "Stampile colop - Serv AAA Iasi",
+        "Cod CPV": "30192153-8",
+        "Denumire CPV": "Stampile cu text (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Valoare achizitie (RON)": 380,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-19T12:35:25",
+        "Ofertant castigator": "Ambro SRL",
+        "CUI ofertant castigator": "1970189",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 173,
+        "Autoritate contractanta": "SNTFC \"CFR CALATORI\" S.A.",
+        "CUI autoritate contractanta": 11054545,
+        "Numar notificare": "DAN2342810",
+        "Data publicare": "2024-12-19T12:36:42",
+        "Obiectul achizitiei": "Var lavabil, amorsa - Serv AAA Iasi",
+        "Cod CPV": "44111000-1",
+        "Denumire CPV": "Materiale pentru lucrari de constructii (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Valoare achizitie (RON)": 69.75,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-19T12:36:37",
+        "Ofertant castigator": "S.C. SC TECO CRIS S.R.L.",
+        "CUI ofertant castigator": "29941493",
+        "rank": 0.0573088
+      },
+      {
+        "_id": 180,
+        "Autoritate contractanta": "SNTFC \"CFR CALATORI\" S.A.",
+        "CUI autoritate contractanta": 11054545,
+        "Numar notificare": "DAN2342817",
+        "Data publicare": "2024-12-19T12:38:09",
+        "Obiectul achizitiei": "Autocolant publicitar - Serv AAA Iasi",
+        "Cod CPV": "22462000-6",
+        "Denumire CPV": "Materiale publicitare (Rev.2)",
+        "Tip contract": "Furnizare",
+        "Valoare achizitie (RON)": 447.05,
+        "Finantare prin fonduri comunitare?": "Nu",
+        "Tipul de proiect/ program": "",
+        "Data finalizare": "2024-12-19T12:37:52",
+        "Ofertant castigator": "ADI CENTER S.R.L.",
+        "CUI ofertant castigator": "14865894",
+        "rank": 0.0573088
+      }
+    ],
+    "error_detail": null
+  },
+  {
+    "id": "isus_news",
+    "url": "https://isuis.igsu.ro/comunicate-de-presa/stiri-de-presa-2026-175",
+    "checked_utc": "2026-10-17T21:36:46.044313+00:00",
+    "status": 200,
+    "final_url": "https://isuis.igsu.ro/comunicate-de-presa/stiri-de-presa-2026-175",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 925215,
+    "matching_link_count": 159,
+    "sample_links": [
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/2d9ac1b9-60a5-49a1-b638-cbf3f84d417c.pdf",
+        "title": "ISU IASI - SP nr. 17 din 08.01.2026 - Măsuri specifice la un accident rutier"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/bb67fc9d-e24e-43a0-acb3-c19796251c9f.pdf",
+        "title": "ISU IASI - SP nr. 18 din 08.01.2026 - Măsuri specifice la un accident rutier"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/3253bfc2-7024-4e38-9419-2b1d72d533fe.pdf",
+        "title": "ISU IASI - SP nr. 37 din 16.01.2026 - Misiune a pompierilor la un accident rutier"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/c0ee5fa1-225f-4d37-98dd-bedcc2181cfa.pdf",
+        "title": "ISU IASI - SP nr. 62 din 20.01.2026 - Intervenția pompierilor la un accident rutier"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/82b8be0f-0508-4804-ac3f-c4e2987ee683.pdf",
+        "title": "ISU IASI - SP nr. 177 din 12.02.2026 - Bilanțul ISU Iași pentru anul 2025"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/ae87d9e9-2f76-4f04-88aa-2f2d5fe1c640.pdf",
+        "title": "ISU IASI - SP nr. 561 din 15.05.2026 - Accident rutier între două autoturisme pe șoseaua Bucium din municipiul Iași"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/c8d6ff3d-c936-4b84-a859-c01b2d7df181.pdf",
+        "title": "ISU IASI - SP nr. 574 din 18.05.2026 - Accident rutier între un autobuz și un autoturism pe șoseaua Nicolina din municipiul Iași"
+      }
+    ]
+  },
+  {
+    "id": "isu_statements",
+    "url": "https://isuis.igsu.ro/comunicate-de-presa/declaratii-de-presa-2026-173",
+    "checked_utc": "2026-10-17T21:36:48.198308+00:00",
+    "status": 200,
+    "final_url": "https://isuis.igsu.ro/comunicate-de-presa/declaratii-de-presa-2026-173",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 208273,
+    "matching_link_count": 23,
+    "sample_links": [
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/f0e00a2b-1e7f-4cbb-95e5-0ade0c1b5908.pdf",
+        "title": "ISU IASI - DP nr. 12 din 02.02.2026 - Accident feroviar produs în municipiul Iași"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/148e12de-796f-4d8a-90b4-fb7a689bf157.pdf",
+        "title": "ISU IASI - DP nr. 20 din 10.02.2026 - Accident rutier grav produs la Ciortești"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/78a50cd3-d202-4503-b75e-dcba836e75cf.pdf",
+        "title": "ISU IASI - DP nr. 25 din 18.02.2026 - Accident feroviar la trecerea la nivel cu calea ferată din localitatea Războieni (UAT Ion Neculce)"
+      },
+      {
+        "url": "https://isuis.igsu.ro/comunicate-de-presa/resources/1e205a1a-bb39-4a56-a353-868ba56d3c1a.pdf",
+        "title": "ISU IASI - DP nr. 29 din 02.03.2026 - Accident rutier produs în localitatea Popricani"
+      }
+    ]
+  },
+  {
+    "id": "isu_robots",
+    "url": "https://isuis.igsu.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:36:49.976286+00:00",
+    "status": 200,
+    "final_url": "https://isuis.igsu.ro/robots.txt",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 121,
+    "rules": "User-agent: *\n\nDisallow: /*?*\nDisallow: /resources\nDisallow: /eroare\nDisallow: /declaratii-de-avere-si-interese\n\nAllow: /"
+  },
+  {
+    "id": "local_police_pdf",
+    "url": "https://politialocala-iasi.ro/wp-content/uploads/2026/03/RAPORT-DE-EVALUARE-2025.pdf",
+    "checked_utc": "2026-10-17T21:36:46.044313+00:00",
+    "status": 200,
+    "final_url": "https://politialocala-iasi.ro/wp-content/uploads/2026/03/RAPORT-DE-EVALUARE-2025.pdf",
+    "content_type": "application/pdf",
+    "bytes": 1091315
+  },
+  {
+    "id": "arr_network_safety",
+    "url": "https://www.arr.ro/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm",
+    "checked_utc": "2026-10-17T21:36:46.045315+00:00",
+    "status": 200,
+    "final_url": "https://www.arr.ro/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 32371,
+    "links": [
+      "https://www.arr.ro/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm",
+      "arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm",
+      "/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm--desktop",
+      "http://www.srac.ro/ro/inspectii-tped",
+      "http://www.adrinspect.ro/",
+      "https://atmpinspect.ro"
+    ]
+  },
+  {
+    "id": "arr_q1_2025",
+    "url": "https://www.arr.ro/files/transparenta/2025/trim1.pdf",
+    "checked_utc": "2026-10-17T21:36:47.829280+00:00",
+    "status": 200,
+    "final_url": "https://www.arr.ro/files/transparenta/2025/trim1.pdf",
+    "content_type": "application/pdf",
+    "bytes": 625077
+  },
+  {
+    "id": "academic_bip",
+    "url": "https://www.bipcons.ce.tuiasi.ro/Archive/720.pdf",
+    "checked_utc": "2026-10-17T21:36:48.147780+00:00",
+    "status": 200,
+    "final_url": "https://www.bipcons.ce.tuiasi.ro/Archive/720.pdf",
+    "content_type": "application/pdf",
+    "bytes": 194270
+  },
+  {
+    "id": "academic_thesis",
+    "url": "https://www.tuiasi.ro/wp-content/uploads/2025/11/Rezumat-Teza-Marius-iunie-2025.pdf",
+    "checked_utc": "2026-10-17T21:36:49.637179+00:00",
+    "status": 200,
+    "final_url": "https://www.tuiasi.ro/wp-content/uploads/2025/11/Rezumat-Teza-Marius-iunie-2025.pdf",
+    "content_type": "application/pdf",
+    "bytes": 3312959
+  },
+  {
+    "id": "prefecture_2024_report",
+    "url": "https://is.prefectura.mai.gov.ro/wp-content/uploads/sites/49/2025/04/RAPORT-JUD.-IASI-PG-2024-pentru-site.pdf",
+    "checked_utc": "2026-10-17T21:36:50.055470+00:00",
+    "status": 200,
+    "final_url": "https://is.prefectura.mai.gov.ro/wp-content/uploads/sites/49/2025/04/RAPORT-JUD.-IASI-PG-2024-pentru-site.pdf",
+    "content_type": "application/pdf",
+    "bytes": 2467684
+  },
+  {
+    "id": "city_robots",
+    "url": "https://www.primaria-iasi.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:36:51.484219+00:00",
+    "status": 200,
+    "final_url": "https://www.primaria-iasi.ro/robots.txt",
+    "content_type": "text/plain",
+    "bytes": 62,
+    "rules": "User-agent: *\r\nDisallow: /\r\n\r\nUser-agent: Googlebot\r\nDisallow:"
+  },
+  {
+    "id": "igpr_robots_http",
+    "url": "http://politiaromana.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:36:51.584224+00:00",
+    "error": "HTTPSConnectionPool(host='politiaromana.ro', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))"
+  },
+  {
+    "id": "court_robots_http",
+    "url": "http://portalquery.just.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:36:51.656809+00:00",
+    "status": 200,
+    "final_url": "http://portalquery.just.ro/robots.txt",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 2676,
+    "rules": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a Content-Signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a Content-Signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a Content-Signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via Content-Signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n# use:      how AI systems may consume the content (immediate, reference, or full).\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n\n# BEGIN Cloudflare Managed content\n\n\nUser-agent: *\nContent-Signal: search=yes,ai-train=no,use=reference\nAllow: /\n\n# Training crawlers\nUser-agent: Amazonbot\nDisallow: /\n\nUser-agent: Applebot-Extended\nDisallow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: Diffbot\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: omgili\nDisallow: /\n\nUser-agent: anthropic-ai\nDisallow: /\n\nUser-agent: Claude-Web\nDisallow: /\n\nUser-agent: cohere-ai\nDisallow: /\n\nUser-agent: MistralAI-Training\nDisallow: /\n\nUser-agent: meta-externalagent\nDisallow: /\n\nUser-agent: Google"
+  }
+]

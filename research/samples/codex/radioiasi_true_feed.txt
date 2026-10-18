@@ -1,0 +1,17 @@
+{
+  "id": "radioiasi_true_feed",
+  "url": "https://www.radioiasi.ro/feed/",
+  "checked_utc": "2026-10-17T21:46:25.508100+00:00",
+  "status": 200,
+  "final_url": "https://www.radioiasi.ro/feed/",
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "bytes": 24999,
+  "sample": {
+    "title": "(UPDATE) Incendiul de la CET Iași a fost lichidat. Orașul rămâne fără apă caldă și căldură până la remedierea avariei",
+    "link": "https://www.radioiasi.ro/stiri/regional/update-incendiul-de-la-cet-iasi-a-fost-lichidat-orasul-ramane-fara-apa-calda-si-caldura-pana-la-remedierea-avariei/",
+    "pubDate": "Sat, 17 Oct 2026 16:14:02 +0000"
+  },
+  "content_characters": 0,
+  "item_count": 12,
+  "retention_note": "Article bodies removed after feasibility inspection; source metadata retained."
+}

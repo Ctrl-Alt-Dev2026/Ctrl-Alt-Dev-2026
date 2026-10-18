@@ -58,11 +58,7 @@
             ],
             "allowedCommonJsDependencies": [
               "earcut",
-              "maplibre-gl",
-              "@tensorflow-models/coco-ssd",
-              "long",
-              "node-fetch",
-              "seedrandom"
+              "maplibre-gl"
             ]
           },
           "configurations": {
@@ -85,14 +81,6 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            },
-            "mock": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.mock.ts"
-                }
-              ]
             }
           },
           "defaultConfiguration": "production"

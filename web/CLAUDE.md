@@ -5,13 +5,16 @@ Plan, screens, endpoint table and build order: `web/PLAN.md`. Read it before sta
 ("−55%", "efect estimat", its tag-based score, CSV upload, business section).
 
 Scope (decided with the user): all road accidents reported in the press, with participants as a filter (pedestrians are one of them).
-Live cameras: public webcams (host allow-list in `camera-viewer.ts`). Their HLS stream is analysed in the browser
-(`features/map/camera-stage/`): COCO-SSD boxes on 3×2 tiles, image brightness grid, rule-based "semnale de verificat".
+Live cameras: public webcams (host allow-list in `camera-viewer.ts`). HLS frames are sampled by the viewer
+and analysed on the Python backend (`/api/v1/vision`): YOLO11s traffic detection, YOLO-World tram proposals,
+tracking and brightness in operator-marked crossing polygons. See `docs/LIVE_VISION.md` for setup and contracts.
 The rules are untuned and unvalidated: keep them labelled as signals for an operator, never as detected accidents.
 If the stream can't be read, the viewer falls back to the provider's embed iframe, without analysis.
 
 ## Commands
-- `npm run sync-data` — copy `../false_data` (or `../data` when it exists) into `public/data`. Run after teammates push data.
+- `npm run backend` (= `python scripts/backend.py`) — FastAPI on :8000 with the 30-minute collector on (`SAFEIASI_LIVE=1`): ISU releases + press scraper + PMUD streets into `runtime/safeiasi.sqlite3`. Creates `.venv` and installs requirements on first run. A fresh clone starts from the committed real data in `isu/seed/` (imported into the database at startup), then collects only what is new.
+- `npm run backend:share` — same, and rewrites `isu/seed/` after each collection: commit it so colleagues get the data on clone/pull (`isu/README.md`, "Sharing the data").
+- `docker compose up --build` (repo root) — api + nginx web on http://localhost:8080, data in a volume.
 - `npm start` — dev server on http://localhost:4200
 - `npm run build` — must pass with zero errors before committing
 - Windows: run `npx` through `cmd /c` in MCP configs.
@@ -35,14 +38,12 @@ If the stream can't be read, the viewer falls back to the provider's embed ifram
 - In dev the map is on `window.safeMap` for console debugging. Headless screenshots sometimes catch a blank WebGL frame: take a second one before debugging.
 - No internet → after 10 s it switches to a plain background style and shows a notice; data layers still render.
 
-## API layer (local API v0.7 connected)
-- Components never use `HttpClient`. Published views use `DataApi` (`core/api/data-api.ts`); import/review actions use the separate `ReviewApi` facade.
-- Every path is in `core/api/endpoints.ts`. The default environment is HTTP at `/api/v1`. `npm run build:local` creates the build served by FastAPI at `/ui/` on the same origin. `npm start` uses `proxy.conf.json` for `/api`, preserving the browser Origin for local access checks.
-- `DataApi.loadDataset()` reads one immutable publication (`/publications/latest`, or an explicit URL `snapshot_id`). Map, list, counts and dossiers project the same snapshot; the UI does not call obsolete placeholder accident/hotspot endpoints. `BackendSession.snapshotId` pins exports to the displayed version, while `requestedSnapshotId` represents an explicit URL pin.
-- Select `observed` or `synthetic` explicitly. Default is `observed`. Changing modes clears displayed publication state; stale asynchronous responses are ignored. No publication (the specific 404 `publication_not_found`) is an empty state; a 503 is an error. Import/review navigation remains available in both cases. Neither condition falls back to `false_data`.
-- `npm run build:mock` and `npm run build:pages` are explicit static prototype builds using `MockDataApi`. Their import/review screen is read-only and cannot persist approvals. They are labelled synthetic and are separate from the local operator workflow.
-- A new endpoint = backend contract + model + facade method + centralized path + row in `web/PLAN.md` §3. The `/ui-endpoint` skill describes the earlier mock-first workflow; do not invent backend responses or fixture writes for the current HTTP workflow.
-- Approval changes review data only. Explicit, version-checked publication is required before a canonical event appears in the published map. Unranked location dossiers retain null scores/ranks and stay accessible outside the ranked list.
+## API layer (online only, decided 2026-10-18)
+- One variant: the UI reads the dataset the server collects every 30 minutes (`GET /api/v1/live/status`, `GET /api/v1/live/dataset`; `api/live_router.py`, `isu/live.py`). No mock build, no `public/data` fixtures (only the static `cameras.json`), no observed/synthetic switch, no publication snapshots. Every viewer sees the same stored dataset.
+- Components never use `HttpClient`. Data goes through `DataApi` (`core/api/data-api.ts`); every path is in `core/api/endpoints.ts`. `npm start` proxies `/api` (`proxy.conf.json`), `npm run build:local` builds for the API's `/ui/` route.
+- `DataStore` polls the status (2 min; 20 s while waiting) and downloads the dataset only when `construit_la` changes. A refresh keeps filters and selections. A server error keeps the data on screen and says so in the top bar.
+- A new endpoint = backend route + model + `DataApi` method + path in `endpoints.ts` + row in `web/PLAN.md` §3. Never invent backend responses or fixtures.
+- The manual "Import cu AI" screen was removed (2026-10-18): data arrives through the automatic pipeline only.
 
 ## Data in the UI (non-negotiable, see Planificare.md §4, §11)
 - Models in `core/models/` mirror the contract field names exactly (Romanian: `gravitate`, `precizie_loc`, …). Don't rename.

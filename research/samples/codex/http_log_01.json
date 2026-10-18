@@ -1,0 +1,84 @@
+[
+  {
+    "id": "court_wsdl",
+    "url": "https://portalquery.just.ro/query.asmx?WSDL",
+    "checked_utc": "2026-10-17T21:29:42.887486+00:00",
+    "status": 525,
+    "final_url": "https://portalquery.just.ro/query.asmx?WSDL",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "7758",
+    "file": "research\\samples\\codex\\court_wsdl.txt",
+    "bytes": 7758,
+    "preview": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n\n<title>just.ro | 525: SSL handshake failed</title>\n<meta charset=\"UTF-8\" />\n<"
+  },
+  {
+    "id": "pmud_2022",
+    "url": "https://zmi.ro/wp-content/uploads/2024/03/PMUD-Iasi-Reactualizare-2022.pdf",
+    "checked_utc": "2026-10-17T21:29:44.378608+00:00",
+    "status": 404,
+    "final_url": "https://zmi.ro/wp-content/uploads/2024/03/PMUD-Iasi-Reactualizare-2022.pdf",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "file": "research\\samples\\codex\\pmud_2022.txt",
+    "bytes": 139609,
+    "preview": "<!doctype html>\n<html lang=\"ro-RO\" prefix=\"og: https://ogp.me/ns#\">\n<head>\n\t\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\">\n\t<link rel=\"profile\" href=\"https://gmpg.org/xfn/11\">\n\n\t<link rel='preconnect' href='https://cdn.zmi.ro' crossorigin>\n\n<!-- Optimizare pentru motoarele de căutare de Rank Math - https://rankma"
+  },
+  {
+    "id": "pmud_presentation",
+    "url": "https://vision4iasi.ro/wp-content/uploads/2023/05/PREZENTARE-PMUD-mai-2023.pdf",
+    "checked_utc": "2026-10-17T21:29:46.362267+00:00",
+    "status": 200,
+    "final_url": "https://vision4iasi.ro/wp-content/uploads/2023/05/PREZENTARE-PMUD-mai-2023.pdf",
+    "content_type": "application/pdf",
+    "content_length": "3937158",
+    "file": "research\\samples\\codex\\pmud_presentation.pdf",
+    "bytes": 3937158
+  },
+  {
+    "id": "blackspots_2020",
+    "url": "https://static.srr.ro/files/PDF/2020/2020-01/2020-01-30/lista_puncte_negre_consultare_piata_-_europene.pdf",
+    "checked_utc": "2026-10-17T21:29:48.169809+00:00",
+    "status": 200,
+    "final_url": "https://static.srr.ro/files/PDF/2020/2020-01/2020-01-30/lista_puncte_negre_consultare_piata_-_europene.pdf",
+    "content_type": "application/pdf",
+    "content_length": "50930",
+    "file": "research\\samples\\codex\\blackspots_2020.pdf",
+    "bytes": 50930
+  },
+  {
+    "id": "ipj_reports",
+    "url": "https://is.politiaromana.ro/ro/informatii-publice/rapoarte-si-studii",
+    "checked_utc": "2026-10-17T21:29:49.701170+00:00",
+    "error": "HTTPSConnectionPool(host='is.politiaromana.ro', port=443): Max retries exceeded with url: /ro/informatii-publice/rapoarte-si-studii (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))"
+  },
+  {
+    "id": "igpr_bulletins",
+    "url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+    "checked_utc": "2026-10-17T21:29:51.180612+00:00",
+    "error": "HTTPSConnectionPool(host='politiaromana.ro', port=443): Max retries exceeded with url: /ro/prevenire/buletinul-sigurantei-rutiere (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))"
+  },
+  {
+    "id": "ipj_contact",
+    "url": "https://is.politiaromana.ro/ro/contact",
+    "checked_utc": "2026-10-17T21:29:52.671069+00:00",
+    "error": "HTTPSConnectionPool(host='is.politiaromana.ro', port=443): Max retries exceeded with url: /ro/contact (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))"
+  },
+  {
+    "id": "zmi_robots",
+    "url": "https://zmi.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:29:54.139052+00:00",
+    "status": 200,
+    "final_url": "https://zmi.ro/robots.txt",
+    "content_type": "text/plain",
+    "content_length": "296",
+    "file": "research\\samples\\codex\\zmi_robots.txt",
+    "bytes": 620,
+    "preview": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\n# Filtre dinamice și combinații infinite\nDisallow: /*?*filter_\n\n# Crawlere SEO și servicii comerciale\nUser-agent: SemrushBot\nDisallow: /\n\nUser-agent: SemrushBot-SA\nDisallow: /\n\nUser-agent: AhrefsBot\nDisallow: /\n\nUser-agent: MJ12bot\nDisallow: /\n\nUser-agent: DotBot\nDisallow: /\n\nUser-agent: BLEXBot\nDisallow: /\n\nUser-agent: DataFor"
+  },
+  {
+    "id": "ipj_robots",
+    "url": "https://is.politiaromana.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:29:55.664006+00:00",
+    "error": "HTTPSConnectionPool(host='is.politiaromana.ro', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))"
+  }
+]

@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /*?*
+Disallow: /resources
+Disallow: /eroare
+Disallow: /declaratii-de-avere-si-interese
+
+Allow: /

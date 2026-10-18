@@ -1,0 +1,26 @@
+[
+  {
+    "id": 5580131,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        27.5861957,
+        47.1497693
+      ]
+    },
+    "status": "closed",
+    "date_created": "2026-10-14 11:24:27 UTC"
+  },
+  {
+    "id": 5583578,
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        27.5693656,
+        47.1517535
+      ]
+    },
+    "status": "open",
+    "date_created": "2026-10-16 14:40:25 UTC"
+  }
+]

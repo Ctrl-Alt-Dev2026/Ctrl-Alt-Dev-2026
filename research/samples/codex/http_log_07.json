@@ -1,0 +1,462 @@
+[
+  {
+    "id": "ipj_statistics",
+    "url": "https://is.politiaromana.ro/ro/informatii-publice/statistici-evaluari",
+    "checked_utc": "2026-10-17T21:40:26.890188+00:00",
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/ro/informatii-publice/statistici-evaluari",
+    "content_type": "text/html",
+    "bytes": 39770,
+    "tls_verified": false,
+    "links": [
+      "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+      "https://is.politiaromana.ro/ro/contact",
+      "https://is.politiaromana.ro/files/pages_files/Coeficienti_Criminalitate_2025.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Coeficienti_Criminalitate_2024.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Comunicat_presa_bilant_2023.pdf",
+      "https://is.politiaromana.ro/files/pages_files/24-01-25-02-54-54Anexa_GeneralÄ_2023_final.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2022.pdf",
+      "https://is.politiaromana.ro/files/pages_files/coeficienti.PDF",
+      "https://is.politiaromana.ro/files/pages_files/22-02-18-12-13-5822-02-04-01-47-14Coeficienti_criminalitate_2021.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2021_.pdf",
+      "https://is.politiaromana.ro/files/pages_files/21-01-29-12-16-05Coeficienti_criminalitate_2020.PDF",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_IS_anul_2019.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Coeficienti_criminalitate_2019.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2018.pdf",
+      "https://is.politiaromana.ro/files/pages_files/CoeficienÈi_Criminalitate_2018.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2017.pdf",
+      "https://is.politiaromana.ro/files/pages_files/19-01-30-09-40-06Coeficienti_criminalitate_2017.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2016.pdf",
+      "https://is.politiaromana.ro/files/pages_files/17-05-30-10-02-13Coef_criminalitate_2016.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2015.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Coef_criminalitate_2015.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Bilant_IPJ_Iasi_2014.pdf",
+      "https://is.politiaromana.ro/files/pages_files/17-05-30-10-01-39Coef_criminalitate_2014.pdf",
+      "http://www.politiaromana.ro/ro/constatare-amiabila-de-accident",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF",
+      "https://is.politiaromana.ro/ro/contact"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "care_about",
+    "url": "https://road-safety.transport.ec.europa.eu/european-road-safety-observatory/statistics-and-analysis-archive/about-care_en",
+    "checked_utc": "2026-10-17T21:40:26.891188+00:00",
+    "status": 200,
+    "final_url": "https://road-safety.transport.ec.europa.eu/european-road-safety-observatory/statistics-and-analysis-archive/about-care_en",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 66091,
+    "tls_verified": true,
+    "links": [
+      "/document/download/d5161893-a6d2-47f5-8ea1-42bc76f662e3_en?filename=cadas_glossary_v_3_7.pdf",
+      "/contacting-dg-move_en",
+      "https://www.facebook.com/EuropeanCommission",
+      "https://european-union.europa.eu/contact-eu/social-media-channels_en",
+      "https://commission.europa.eu/about/contact_en"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "care_metadata",
+    "url": "https://road-safety.transport.ec.europa.eu/document/download/8a65674a-33af-44e9-bac6-8889a0f138a7_en",
+    "checked_utc": "2026-10-17T21:40:28.692204+00:00",
+    "status": 200,
+    "final_url": "https://road-safety.transport.ec.europa.eu/document/download/8a65674a-33af-44e9-bac6-8889a0f138a7_en",
+    "content_type": "application/pdf",
+    "bytes": 204150,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "care_dashboard",
+    "url": "https://road-safety.transport.ec.europa.eu/care-public-dashboard_en",
+    "checked_utc": "2026-10-17T21:40:30.503574+00:00",
+    "status": 200,
+    "final_url": "https://road-safety.transport.ec.europa.eu/care-public-dashboard_en",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 58697,
+    "tls_verified": true,
+    "links": [
+      "/contacting-dg-move_en",
+      "https://www.facebook.com/EuropeanCommission",
+      "https://european-union.europa.eu/contact-eu/social-media-channels_en",
+      "https://commission.europa.eu/about/contact_en"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "eurostat_reuse_verified",
+    "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+    "checked_utc": "2026-10-17T21:40:26.891188+00:00",
+    "status": 200,
+    "final_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 177751,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "waze_eligibility",
+    "url": "https://support.google.com/waze/partners/answer/10453062?hl=en",
+    "checked_utc": "2026-10-17T21:40:26.891188+00:00",
+    "status": 200,
+    "final_url": "https://support.google.com/waze/partners/answer/10453062?hl=en",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 1537125,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "waze_program_pdf",
+    "url": "https://web-assets.waze.com/cms/Waze%20for%20Cities-Two-Pager_DIGITAL_Final.pdf",
+    "checked_utc": "2026-10-17T21:40:28.428937+00:00",
+    "status": 200,
+    "final_url": "https://web-assets.waze.com/cms/Waze%20for%20Cities-Two-Pager_DIGITAL_Final.pdf",
+    "content_type": "application/pdf",
+    "bytes": 113700,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "baaar_home",
+    "url": "https://www.baar.ro/",
+    "checked_utc": "2026-10-17T21:40:28.645828+00:00",
+    "status": 200,
+    "final_url": "https://www.baar.ro/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 162250,
+    "tls_verified": true,
+    "links": [
+      "https://www.baar.ro/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.2",
+      "https://www.facebook.com/Biroul-Asiguratorilor-de-Autovehicule-din-Romania-1937504449857555/",
+      "https://www.baar.ro/utile/istoria-asigurarilor/",
+      "https://www.baar.ro/asigurare-de-frontiera/",
+      "https://www.baar.ro/asigurati-cu-risc-ridicat/",
+      "https://www.baar.ro/utile/istoria-asigurarilor/",
+      "https://www.baar.ro/asigurare-de-frontiera/",
+      "https://www.baar.ro/asigurati-cu-risc-ridicat/",
+      "http://www.baar.ro/accident-in-strainatate/",
+      "http://www.baar.ro/accident-in-ro/",
+      "http://www.baar.ro/asigurati-cu-risc-ridicat/",
+      "https://www.baar.ro/wp-content/uploads/2026/06/GENERIC-ULTIM-IUL2024-Brexit-UK-Israel-AZ-Carte-Verde-model_v3.pdf",
+      "https://www.baar.ro/culoarea-politei-de-asigurare-carte-verde-incepand-cu-data-de-01-07-2020/",
+      "https://www.baar.ro/wp-content/uploads/2023/05/Incetare-acorduri-Belarus-si-Federatia-Rusa.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/03/Info-utile-ref.-asig.-RCA-pt-detinatorii-de-veh-inm-in-Ucraina.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/03/Info-on-the-MTPL-insurance-for-owners-of-vehicles-registered-in-Ukraine.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/03/CoB-Useful-information-on-MTPL-insurance-for-drivers-of-vehicles-registered-in-Ukraine-in-English-1.pdf",
+      "https://www.baar.ro/wp-content/uploads/2022/03/CoB-Useful-information-on-MTPL-insurance-for-drivers-of-vehicles-registered-in-Ukraine-in-Ukrainian-1.pdf",
+      "https://www.baar.ro/wp-content/uploads/2019/02/Contract-DEPABD-BAAR.pdf",
+      "https://www.baar.ro/asigurare-de-frontiera/"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "asf_tariffs_2026",
+    "url": "https://www.asfromania.ro/ro/a/3489/tarife-de-referinta-rca-2026",
+    "checked_utc": "2026-10-17T21:40:29.273684+00:00",
+    "status": 200,
+    "final_url": "https://www.asfromania.ro/ro/a/3489/tarife-de-referinta-rca-2026",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 1377990,
+    "tls_verified": true,
+    "links": [
+      "https://www.facebook.com/asf.romania",
+      "/ro/a/2018/contact",
+      "https://www.asfromania.ro/uploads/articole/attachments/6548a3c86aaea962275541.pdf",
+      "https://asfromania.ro/uploads/articole/attachments/66e83733afb02613764897.pdf",
+      "https://www.asfromania.ro/uploads/articole/attachments/6548ac5d99f19112210736.pdf",
+      "/ro/a/2018/contact",
+      "https://www.asfromania.ro/uploads/articole/attachments/6548a3c86aaea962275541.pdf",
+      "https://asfromania.ro/uploads/articole/attachments/66e83733afb02613764897.pdf",
+      "https://www.asfromania.ro/uploads/articole/attachments/6548ac5d99f19112210736.pdf",
+      "http://www.facebook.com/sharer.php?u=https://www.asfromania.ro/ro/a/3489/tarife-de-referinta-rca-2026",
+      "/ro/a/1544/registre-entit%C4%83%C8%9Bi-autorizate",
+      "/ro/a/2701/raporteaza-incalcari-in-interes-public",
+      "/ro/a/2337/raporteaza-incalcari-conduita-distributie-asigurari",
+      "/ro/a/25/raporteaza-abuz-de-piata",
+      "/ro/a/24/raporteaza-incalcari-integritate",
+      "https://www.facebook.com/asf.romania"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "asf_report_2024",
+    "url": "https://www.asfromania.ro/uploads/articole/attachments/6867654ddd3f8398003370.pdf",
+    "checked_utc": "2026-10-17T21:40:31.415185+00:00",
+    "status": 200,
+    "final_url": "https://www.asfromania.ro/uploads/articole/attachments/6867654ddd3f8398003370.pdf",
+    "content_type": "application/pdf",
+    "bytes": 4844181,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "reddit_iasi_rss",
+    "url": "https://www.reddit.com/r/iasi/search.rss?q=accident&restrict_sr=on&sort=new&t=all",
+    "checked_utc": "2026-10-17T21:40:30.467576+00:00",
+    "status": 200,
+    "final_url": "https://www.reddit.com/r/iasi/search.rss?q=accident&restrict_sr=on&sort=new&t=all",
+    "content_type": "application/atom+xml; charset=UTF-8",
+    "bytes": 40573,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "reddit_iasi_public_post",
+    "url": "https://www.reddit.com/r/iasi/comments/1f6gn9i/o_noua_zi_in_ia%C8%99i/",
+    "checked_utc": "2026-10-17T21:40:32.629617+00:00",
+    "status": 200,
+    "final_url": "https://www.reddit.com/r/iasi/comments/1f6gn9i/o_noua_zi_in_ia%C8%99i/",
+    "content_type": "text/html",
+    "bytes": 8444,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "telegram_public_preview",
+    "url": "https://t.me/s/Iasi_Trafic",
+    "checked_utc": "2026-10-17T21:40:30.973286+00:00",
+    "status": 200,
+    "final_url": "https://t.me/Iasi_Trafic",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 11658,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "crowd_index",
+    "url": "https://infotraficromania.ro/stiati-ca-fiecare-judet-are-un-grup-info-trafic/",
+    "checked_utc": "2026-10-17T21:40:32.167484+00:00",
+    "status": 200,
+    "final_url": "https://infotraficromania.ro/stiati-ca-fiecare-judet-are-un-grup-info-trafic/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 127397,
+    "tls_verified": true,
+    "links": [
+      "https://www.facebook.com/groups/InfoTraficHarghita",
+      "https://www.facebook.com/groups/InfoTraficHunedoara",
+      "https://www.facebook.com/groups/InfoTraficIalomita",
+      "https://www.facebook.com/groups/InfoTraficIasi",
+      "https://www.facebook.com/groups/InfoTraficMaramures",
+      "https://www.facebook.com/groups/InfoTraficMehedinti",
+      "https://www.facebook.com/groups/InfoTraficMures",
+      "https://www.facebook.com/groups/InfoTraficNeamt",
+      "https://www.facebook.com/groups/InfoTraficOlt",
+      "https://www.facebook.com/groups/InfoTraficPrahova",
+      "https://www.facebook.com/groups/InfoTraficSalaj",
+      "https://www.facebook.com/groups/InfoTraficSatuMare",
+      "https://www.facebook.com/groups/InfoTraficSibiu",
+      "https://www.facebook.com/groups/InfoTraficSuceava",
+      "https://www.facebook.com/groups/InfoTraficTeleorman",
+      "https://www.facebook.com/groups/InfoTraficTM",
+      "https://www.facebook.com/groups/InfoTraficTulcea",
+      "https://www.facebook.com/groups/InfoTraficValcea",
+      "https://www.facebook.com/groups/InfoTraficVaslui",
+      "https://www.facebook.com/groups/InfoTraficVrancea",
+      "https://www.facebook.com/InfoTraficRomania",
+      "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F",
+      "https://telegram.me/share/url?url=https%3A%2F%2Finfotraficromania.ro%2Fstiati-ca-fiecare-judet-are-un-grup-info-trafic%2F&text&title=%C8%98tia%C8%9Bi%20c%C4%83%20fiecare%20jude%C8%9B%20are%20un%20grup%20Info%20Trafic%3F",
+      "https://infotraficromania.ro/accident-mortal-pe-dn67-in-municipiul-targu-jiu/",
+      "https://infotraficromania.ro/accident-mortal-pe-soseaua-garii-catelu-din-bucuresti/",
+      "https://infotraficromania.ro/accident-rutier-pe-centura-bucuresti-in-zona-localitatii-jilava/",
+      "https://infotraficromania.ro/accident-mortal-pe-dn6-in-zona-localitatii-armenis/",
+      "https://infotraficromania.ro/foto-accident-grav-pe-valea-oltului/",
+      "https://infotraficromania.ro/accident-mortal-pe-autostrada-a2-la-kilometrul-67/",
+      "http://www.facebook.com/infotraficromania"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "geo_spatial",
+    "url": "https://geo-spatial.org/",
+    "checked_utc": "2026-10-17T21:40:32.667040+00:00",
+    "status": 200,
+    "final_url": "https://geo-spatial.org/",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1892015,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "code4romania",
+    "url": "https://code4.ro/ro/solutii",
+    "checked_utc": "2026-10-17T21:40:34.001463+00:00",
+    "status": 404,
+    "final_url": "https://code4.ro/ro/solutii",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 2617,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "mapillary_docs",
+    "url": "https://www.mapillary.com/developer/api-documentation/",
+    "checked_utc": "2026-10-17T21:40:34.318038+00:00",
+    "status": 200,
+    "final_url": "https://www.mapillary.com/developer/api-documentation/",
+    "content_type": "text/html; charset=\"utf-8\"",
+    "bytes": 157685,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "osm_notes",
+    "url": "https://api.openstreetmap.org/api/0.6/notes.json?bbox=27.55,47.14,27.62,47.18&limit=2",
+    "checked_utc": "2026-10-17T21:40:34.527012+00:00",
+    "status": 200,
+    "final_url": "https://api.openstreetmap.org/api/0.6/notes.json?bbox=27.55,47.14,27.62,47.18&limit=2",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 2093,
+    "tls_verified": true,
+    "samples": [
+      {
+        "id": 5580131,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.5861957,
+            47.1497693
+          ]
+        },
+        "status": "closed",
+        "date_created": "2026-10-14 11:24:27 UTC"
+      },
+      {
+        "id": 5583578,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.5693656,
+            47.1517535
+          ]
+        },
+        "status": "open",
+        "date_created": "2026-10-16 14:40:25 UTC"
+      }
+    ],
+    "privacy": "Usernames and comment text not saved",
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "strava_terms",
+    "url": "https://metro.strava.com/terms",
+    "checked_utc": "2026-10-17T21:40:34.783810+00:00",
+    "status": 200,
+    "final_url": "https://metro.strava.com/terms",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 141882,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "strategy2022",
+    "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G11AX7EBKILRUG3KRBWKHWZHQZ1",
+    "checked_utc": "2026-10-17T21:40:35.713269+00:00",
+    "status": 200,
+    "final_url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G11AX7EBKILRUG3KRBWKHWZHQZ1",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 1555076,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "network_safety_2025_law",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/302846",
+    "checked_utc": "2026-10-17T21:40:37.944000+00:00",
+    "status": 200,
+    "final_url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/302846",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 276569,
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "tempo_casualties_post",
+    "url": "http://statistici.insse.ro:8077/tempo-ins/matrix/TRN105B",
+    "method": "POST",
+    "request": {
+      "language": "ro",
+      "arr": [
+        [
+          {
+            "label": "Morti",
+            "nomItemId": 9000,
+            "offset": 2,
+            "parentId": null
+          },
+          {
+            "label": "Raniti",
+            "nomItemId": 9001,
+            "offset": 3,
+            "parentId": null
+          }
+        ],
+        [
+          {
+            "label": "Iasi",
+            "nomItemId": 3085,
+            "offset": 21,
+            "parentId": null
+          }
+        ],
+        [
+          {
+            "label": "Anul 2024",
+            "nomItemId": 4893,
+            "offset": 26,
+            "parentId": null
+          },
+          {
+            "label": "Anul 2025",
+            "nomItemId": 4912,
+            "offset": 27,
+            "parentId": null
+          }
+        ],
+        [
+          {
+            "label": "Numar persoane",
+            "nomItemId": 9685,
+            "offset": 1,
+            "parentId": null
+          }
+        ]
+      ],
+      "matrixName": "Persoane accidentate in accidente de circulatie rutiera cauzatoare de vatamari corporale, pe macroregiuni, regiuni de dezvoltare si judete",
+      "matrixDetails": {
+        "nomJud": 0,
+        "nomLoc": 0,
+        "matMaxDim": 4,
+        "matUMSpec": 0,
+        "matSiruta": 0,
+        "matCaen1": 0,
+        "matCaen2": 0,
+        "matRegJ": 2,
+        "matCharge": 0,
+        "matViews": 0,
+        "matDownloads": 0,
+        "matActive": 1,
+        "matTime": 3
+      }
+    },
+    "checked_utc": "2026-10-17T21:40:39.848354+00:00",
+    "status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 1402,
+    "result_preview": "<table class='tempoResults' width='100%'>\n<tr>\n<td class='yellowTitle' align='left' colspan='4'>Rezultatele cautarii - Persoane accidentate in accidente de circulatie rutiera cauzatoare de vatamari corporale, pe macroregiuni, regiuni de dezvoltare si judete</td>\n</tr>\n<tr>\n<th rowspan='4'>Gradul de gravitate al accidentatilor</th>\n<th rowspan='4'>Macroregiuni, regiuni de dezvoltare si judete</th>\n<th align='center' colspan='2'>Ani</th>\n</tr>\n<tr>\n<th align='center'>Anul 2024</th>\n<th align='center'>Anul 2025</th>\n</tr>\n<tr>\n<th align='center' colspan='2'>UM: Numar persoane</th>\n</tr>\n<tr>\n<th align='center'>Numar persoane</th>\n<th align='center'>Numar persoane</th>\n</tr>\n<tr>\n<th>Morti</th><th>Iasi</th><td align='right'>56</td align='right'><td align='right'>58</td align='right'></tr>\n<tr>\n<th>Raniti</th><th>Iasi</th><td align='right'>1695</td align='right'><td align='right'>1799</td align='right'></tr>\n<tr>\n<td align='left'  colspan='4'><strong>Legenda:</strong> ':' - date lipsa; 'c' - date confidentiale; 9999,00 - normal - date definitive; <strong><u>9999,00 - ingrosat subliniat</u></strong> - date semidefinitive; <strong>9999,00 - ingrosat</strong> - date revizuite; <u>9999,00 - subliniat</u> - date provizorii&nbsp;<br /><br />\n</td>\n</tr>\n</table>",
+    "csv_export": {
+      "url": "http://statistici.insse.ro:8077/tempo-ins/pivot",
+      "status": 200,
+      "content_type": "application/vnd.ms-excel;charset=UTF-8",
+      "sample": "Gradul de gravitate al accidentatilor, Macroregiuni  regiuni de dezvoltare si judete, Ani, UM: Numar persoane, Valoare\nMorti, Iasi, Anul 2024, Numar persoane, 56\nMorti, Iasi, Anul 2025, Numar persoane, 58\nRaniti, Iasi, Anul 2024, Numar persoane, 1695\nRaniti, Iasi, Anul 2025, Numar persoane, 1799\n",
+      "request": {
+        "language": "ro",
+        "encQuery": "9000,9001:3085:4893,4912:9685",
+        "matCode": "TRN105B",
+        "matMaxDim": 4,
+        "matUMSpec": 0,
+        "matRegJ": 2
+      }
+    }
+  }
+]

@@ -38,23 +38,22 @@
 .coverage {
   margin-top: 0.1rem !important;
 }
-.mode-switch {
+.live {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-  margin-top: var(--space-2);
-  button {
-    background: transparent;
-    color: var(--muted);
-    border: var(--hair) solid var(--muted);
-    border-radius: var(--radius-s);
-    padding: .25em .55em;
-    cursor: pointer;
-    font-size: var(--step--1);
-    &[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--step--1) !important;
+  // Pulses while the server collects; steady once the data is current.
+  i {
+    flex: none;
+    inline-size: 0.5em;
+    block-size: 0.5em;
+    border-radius: 50%;
+    background: var(--ok);
   }
+  &.busy i { animation: pulse 1.2s ease-in-out infinite; }
 }
-.version { font-size: var(--step--1) !important; overflow-wrap: anywhere; }
+@keyframes pulse { 50% { opacity: 0.25; } }
 .load-error { color: var(--alert); max-width: 48ch; }
 .synthetic {
   padding: 0.1em 0.6em;

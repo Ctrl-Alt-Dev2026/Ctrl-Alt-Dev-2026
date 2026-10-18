@@ -14,6 +14,6 @@ export interface Camera {
   furnizor: string;
   pagina_url: string;
   embed_url: string;
-  // Raw HLS stream (CORS-open) the browser analyses frame by frame; null = embed only, no analysis.
+  // Raw HLS stream (CORS-open); sampled frames go to the Python detector. null = embed only.
   stream_url: string | null;
 }

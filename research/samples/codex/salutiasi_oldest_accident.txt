@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://www.salutiasi.ro/wp-json/wp/v2/posts?search=accident&per_page=1&_fields=id,date,link,title,content&order=asc&orderby=date",
+  "status": 200,
+  "oldest_matching_post": {
+    "id": 212,
+    "date": "2023-07-10T19:47:12",
+    "link": "https://salutiasi.ro/unitatea-si-mobilizarea-in-strada-importanta-de-a-sanctiona-derapajele-celor-care-ne-conduc/",
+    "title": {
+      "rendered": "Unitatea și mobilizarea în stradă: Importanța de a sancționa derapajele celor care ne conduc"
+    }
+  },
+  "retention_note": "Article body removed; this is the oldest returned keyword match, not the publisher founding date."
+}

@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://www.mediafax.ro/wp-json/wp/v2/posts?search=accident&per_page=1&_fields=id,date,link,title,content&order=asc&orderby=date",
+  "status": 200,
+  "oldest_matching_post": {
+    "id": 308502,
+    "date": "2007-05-10T10:03:13",
+    "link": "https://www.mediafax.ro/sport/membru-al-formatiei-simplu-oprit-de-politie-pentru-depasirea-vitezei-la-sibiu-308502",
+    "title": {
+      "rendered": "Membru al formaţiei Simplu oprit de Poliţie pentru depăşirea vitezei, la Sibiu"
+    }
+  },
+  "retention_note": "Article body removed; this is the oldest returned keyword match, not the publisher founding date."
+}

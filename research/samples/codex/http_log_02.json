@@ -1,0 +1,202 @@
+[
+  {
+    "id": "zmi_pmud_page",
+    "url": "https://zmi.ro/document/pmud-iasi-reactualizare-2022/",
+    "checked_utc": "2026-10-17T21:31:09.185428+00:00",
+    "tls_verified": true,
+    "status": 200,
+    "final_url": "https://zmi.ro/document/pmud-iasi-reactualizare-2022/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 156808,
+    "file": "research\\samples\\codex\\zmi_pmud_page.txt",
+    "links": [
+      "https://zmi.ro/wp-content/uploads/2026/06/PMUD-Iasi-Reactualizare-2022.pdf"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "court_http",
+    "url": "http://portalquery.just.ro/query.asmx?WSDL",
+    "checked_utc": "2026-10-17T21:31:11.323055+00:00",
+    "tls_verified": null,
+    "status": 200,
+    "final_url": "http://portalquery.just.ro/query.asmx?WSDL",
+    "content_type": "text/xml; charset=utf-8",
+    "bytes": 90660,
+    "file": "research\\samples\\codex\\court_http.txt",
+    "requests_verify_parameter": true,
+    "transport_note": "Plain HTTP, TLS not used"
+  },
+  {
+    "id": "court_access",
+    "url": "https://portal.just.ro/SitePages/acces.aspx",
+    "checked_utc": "2026-10-17T21:31:12.577786+00:00",
+    "tls_verified": true,
+    "status": 403,
+    "final_url": "https://portal.just.ro/SitePages/acces.aspx",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5581,
+    "file": "research\\samples\\codex\\court_access.txt",
+    "emails": [],
+    "interesting_links": [],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "ipj_reports_diagnostic",
+    "url": "https://is.politiaromana.ro/ro/informatii-publice/rapoarte-si-studii",
+    "checked_utc": "2026-10-17T21:31:14.119286+00:00",
+    "tls_verified": false,
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/ro/informatii-publice/rapoarte-si-studii",
+    "content_type": "text/html",
+    "bytes": 34712,
+    "file": "research\\samples\\codex\\ipj_reports_diagnostic.txt",
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "igpr_bulletins_diagnostic",
+    "url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+    "checked_utc": "2026-10-17T21:31:15.632925+00:00",
+    "tls_verified": false,
+    "status": 200,
+    "final_url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+    "content_type": "text/html",
+    "bytes": 51937,
+    "file": "research\\samples\\codex\\igpr_bulletins_diagnostic.txt",
+    "emails": [],
+    "interesting_links": [
+      "https://politiaromana.ro/front/view/js/validation/validationEngine.jquery.css",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+      "http://www.politiaromana.ro/files/pages_files/Acord_Sindicate_2013_si_Protocol.pdf",
+      "https://politiaromana.ro/ro/legislatie/responsabil-legea-544",
+      "https://politiaromana.ro/ro/informatii-generale/proiecte/educatie-rutiera-etapa-i",
+      "https://politiaromana.ro/ro/informatii-generale/proiecte/helipol-actiune-integrata-pentru-cresterea-sigurantei-traficului-rutier-etapa-i",
+      "https://politiaromana.ro/ro/informatii-generale/proiecte/dezvoltarea-unui-sistem-mixt-mobil-de-monitorizare-a-traficului-rutier-privind-incalcarea-regulilor-de-circulatie",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+      "https://politiaromana.ro/ro/print?modul=pagina&link=buletinul-sigurantei-rutiere1736332252",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2025",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2024",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2023",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2022",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2021",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2020",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2019",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2018",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2017",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2016",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2015",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2014",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2013",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2012",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2011",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF",
+      "https://www.mai.gov.ro/wp-content/uploads/2026/10/20240-din-29.09.2026.pdf"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ipj_contact_diagnostic",
+    "url": "https://is.politiaromana.ro/ro/contact",
+    "checked_utc": "2026-10-17T21:31:17.187994+00:00",
+    "tls_verified": false,
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/ro/contact",
+    "content_type": "text/html",
+    "bytes": 58833,
+    "file": "research\\samples\\codex\\ipj_contact_diagnostic.txt",
+    "emails": [
+      "ipjiasi@is.politiaromana.ro"
+    ],
+    "interesting_links": [
+      "https://is.politiaromana.ro/front/view/js/validation/validationEngine.jquery.css",
+      "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+      "https://is.politiaromana.ro/ro/utile/ghiduri-educatie-rutiera",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ipj_robots_diagnostic",
+    "url": "https://is.politiaromana.ro/robots.txt",
+    "checked_utc": "2026-10-17T21:31:18.753988+00:00",
+    "tls_verified": false,
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/robots.txt",
+    "content_type": "text/plain",
+    "bytes": 43,
+    "file": "research\\samples\\codex\\ipj_robots_diagnostic.txt",
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "tempo_trn105b",
+    "url": "https://statistici.insse.ro:8077/tempo-ins/matrix/TRN105B",
+    "checked_utc": "2026-10-17T21:31:20.136544+00:00",
+    "tls_verified": true,
+    "error": "HTTPSConnectionPool(host='statistici.insse.ro', port=8077): Max retries exceeded with url: /tempo-ins/matrix/TRN105B (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)')))",
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "tempo_trn105b_ui",
+    "url": "http://statistici.insse.ro:8077/tempo-online/#/pages/tables/insse-table",
+    "checked_utc": "2026-10-17T21:31:21.657459+00:00",
+    "tls_verified": null,
+    "status": 200,
+    "final_url": "http://statistici.insse.ro:8077/tempo-online/#/pages/tables/insse-table",
+    "content_type": "text/html",
+    "bytes": 2382,
+    "file": "research\\samples\\codex\\tempo_trn105b_ui.txt",
+    "requests_verify_parameter": true,
+    "transport_note": "Plain HTTP, TLS not used"
+  },
+  {
+    "id": "pmud_2017",
+    "url": "https://www.primaria-iasi.ro/imagini-iasi/manager-de-fisiere-iasi/PMUD%20septembrie/00.PMUD%20Iasi%20-%20Revizuire%20finala_sept_2017.pdf",
+    "checked_utc": "2026-10-17T21:31:22.901232+00:00",
+    "tls_verified": true,
+    "status": 200,
+    "final_url": "https://www.primaria-iasi.ro/imagini-iasi/manager-de-fisiere-iasi/PMUD%20septembrie/00.PMUD%20Iasi%20-%20Revizuire%20finala_sept_2017.pdf",
+    "content_type": "application/pdf",
+    "bytes": 25358004,
+    "sample_note": "PDF held in memory; text only saved to respect 5 MB sample limit",
+    "file": "research\\samples\\codex\\pmud_2017_extracted.txt",
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "local_police_contact",
+    "url": "https://www.politialocala-iasi.ro/contact/",
+    "checked_utc": "2026-10-17T21:31:27.370482+00:00",
+    "tls_verified": true,
+    "status": 404,
+    "final_url": "https://politialocala-iasi.ro/contact/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 171079,
+    "file": "research\\samples\\codex\\local_police_contact.txt",
+    "emails": [
+      "politialocalais@yahoo.com"
+    ],
+    "interesting_links": [
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/",
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/",
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "city_contact",
+    "url": "https://www.primaria-iasi.ro/portal-iasi/pmi/informatii-de-interes-public/contact",
+    "checked_utc": "2026-10-17T21:31:32.798031+00:00",
+    "tls_verified": true,
+    "status": 404,
+    "final_url": "https://www.primaria-iasi.ro/portal-iasi/pmi/informatii-de-interes-public/contact",
+    "content_type": "text/html",
+    "bytes": 159,
+    "file": "research\\samples\\codex\\city_contact.txt",
+    "emails": [],
+    "interesting_links": [],
+    "requests_verify_parameter": true
+  }
+]

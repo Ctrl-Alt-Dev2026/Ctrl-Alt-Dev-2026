@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap:https://7iasi.ro/sitemap.xml
+Sitemap:https://7iasi.ro/sitemap_1.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /cautare
+Disallow: /isli
+Disallow: /tags
+Sitemap: https://www.news.ro/sitemaps/sitemap.news-aa.xml.gz
+Sitemap: https://www.news.ro/sitemaps/siteindex.xml
