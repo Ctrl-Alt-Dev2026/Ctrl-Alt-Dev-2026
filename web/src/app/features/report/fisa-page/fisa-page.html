@@ -6,7 +6,7 @@
       @if (m.data_mode === 'synthetic') {
         <p class="synthetic"><strong>DATE SINTETICE.</strong> Fișa nu descrie accidente reale.</p>
       }
-      <p class="version">Date colectate automat de server@if (builtAt(); as at) { la {{ at }}}; extrase cu reguli fixe, {{ m.nr_verificate }} verificate manual.</p>
+      <p class="version">Date colectate automat de server@if (builtAt(); as at) { la {{ at }}}; ISU extrase cu reguli fixe, presa (pietoni loviți) cu Gemini, rezultat salvat (reluare); {{ m.nr_verificate }} verificate manual.</p>
     }
     <p class="limits">Fișă de sprijin pentru verificare, fără certificarea unui audit rutier. Sursele nu se adună și pot descrie același accident; lipsa unui accident din date nu dovedește o zonă sigură. Ordinea e o regulă de verificare, nu un scor de risc. Decizia aparține Comisiei de circulație.</p>
     @if (store.state() === 'ready') {
@@ -52,7 +52,7 @@
           @for (e of s.events; track e.event_id) {
             <li class="event">
               <strong>{{ source(e) }}, {{ e.data_eveniment ? dateRo(e.data_eveniment) : 'dată necunoscută' }}, {{ e.ora | nullLabel: 'oră necunoscută' }}</strong>:
-              „{{ e.loc_text }}”. {{ gravitate[e.gravitate] }}; {{ participants(e) }}.
+              „{{ e.loc_text }}”. {{ gravitate[e.gravitate] }}; {{ participants(e) }}.@if (e.extractie) { Extracție: {{ e.extractie }}.}
               @for (url of e.urls; track url; let i = $index) {
                 @if (safeUrl(url); as link) { <a [href]="link" target="_blank" rel="noopener noreferrer">sursa {{ i + 1 }}</a> }
               }

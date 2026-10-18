@@ -12,7 +12,8 @@ The rules are untuned and unvalidated: keep them labelled as signals for an oper
 If the stream can't be read, the viewer falls back to the provider's embed iframe, without analysis.
 
 ## Commands
-- `npm run backend` (= `python scripts/backend.py`) — FastAPI on :8000 with the 30-minute collector on (`SAFEIASI_LIVE=1`): ISU releases + press scraper + PMUD streets into `runtime/safeiasi.sqlite3`. Creates `.venv` and installs requirements on first run. The first collection on an empty database takes a few minutes; the page says so and fills in by itself.
+- `npm run backend` (= `python scripts/backend.py`) — FastAPI on :8000 with the 30-minute collector on (`SAFEIASI_LIVE=1`): ISU releases + press scraper + PMUD streets into `runtime/safeiasi.sqlite3`. Creates `.venv` and installs requirements on first run. A fresh clone starts from the committed real data in `isu/seed/` (imported into the database at startup), then collects only what is new.
+- `npm run backend:share` — same, and rewrites `isu/seed/` after each collection: commit it so colleagues get the data on clone/pull (`isu/README.md`, "Sharing the data").
 - `docker compose up --build` (repo root) — api + nginx web on http://localhost:8080, data in a volume.
 - `npm start` — dev server on http://localhost:4200
 - `npm run build` — must pass with zero errors before committing

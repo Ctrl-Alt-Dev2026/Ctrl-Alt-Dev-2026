@@ -17,7 +17,7 @@ from pathlib import Path
 from . import config
 from .collect import collect
 from .parse import parse
-from .presa import from_articles, from_contract
+from .presa import AI_REPLAY, RULES, from_articles, from_contract, from_gemini
 
 SCHEMA = "2.0"
 PRECISE = {"trecere", "intersectie", "segment"}
@@ -148,7 +148,10 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             a.setdefault("strada_osm", None)
         return events, [], {"extractie": "pipeline echipă", "fisier": str(presa_path)}
 
-    raw = sorted(from_articles(presa_csvs), key=lambda e: e["publicat_la"] or "")
+    ai_rows, judged, ai_info = from_gemini(presa_csvs)
+    # The rules only read what Gemini has not judged, and keep its scope: pedestrians hit.
+    rule_rows = [e for e in from_articles(presa_csvs) if e["url"] not in judged and "pieton" in e["participanti"]]
+    raw = sorted(ai_rows + rule_rows, key=lambda e: e["publicat_la"] or "")
     groups: list[list[dict]] = []
     for ev in raw:
         for g in groups:
@@ -167,7 +170,7 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             articles.append({k: ev[k] for k in ("article_id", "sursa", "url", "titlu", "text", "publicat_la")}
                             | {"colectat_la": today.date().isoformat()})
         main = max(g, key=lambda e: (e["loc_text"] is not None, len(e["dovezi"])))
-        geo = resolver.rezolva(main["loc_text"])
+        geo = resolver.rezolva(main.get("geo_text") or main["loc_text"])
         in_iasi = geo.in_iasi
         if in_iasi is None and main["municipiu"] and main["loc_text"]:
             in_iasi = True
@@ -187,16 +190,21 @@ def press_events(resolver, index, today: datetime, presa_path: Path | None,
             "participanti": sorted({p for e in g for p in e["participanti"]}),
             "cauza_raportata": next((e["cauza_raportata"] for e in g if e["cauza_raportata"]), None),
             "gravitate": max((e["gravitate"] for e in g), key=rank.get),
-            "noapte": is_night(main["data_eveniment"], main["ora"]),
+            # Gemini reports night only from the article's words; the rules derive it from the hour.
+            "noapte": main["noapte"] if main.get("noapte") is not None else is_night(main["data_eveniment"], main["ora"]),
             "dovezi": main["dovezi"],
             "verificat": False,
+            "review_status": "pending",
             "sursa": " + ".join(sorted({e["sursa"] for e in g})),
             "sursa_tip": "presa",
-            "extractie": "reguli provizorii",
+            "extractie": main.get("extractie", RULES),
             "publicat_la": min(published) if published else None,
             "strada_osm": _osm_street(index, geo, main["strada"], in_iasi),
         })
-    return events, articles, {"extractie": "reguli provizorii", "articole_citite": len(raw),
+    methods = sorted({e["extractie"] for e in events})
+    return events, articles, {"extractie": " + ".join(methods) if methods else AI_REPLAY,
+                              "articole_citite": len(judged) + len(rule_rows), "ai": ai_info,
+                              "reguli_evenimente": sum(e["extractie"] == RULES for e in events),
                               "fisiere": [str(p.relative_to(config.REPO)) if p.is_relative_to(config.REPO) else str(p)
                                           for p in presa_csvs if p.exists()]}
 
@@ -457,8 +465,10 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
             "Date reale din comunicatele ISU Iași (intervenții ale pompierilor la accidente rutiere), extrase automat "
             "cu reguli fixe, neverificate manual. Nu sunt toate accidentele: poliția înregistrează cam 650 pe an în "
             "municipiu, ISU comunică doar intervențiile sale. Stratul pe străzi arată separat totalurile IPJ din "
-            "PMUD Iași 2022 (2020–2021). Relatările din presă (BZI, Ziarul de Iași) sunt o sursă separată, "
-            "extrasă provizoriu cu reguli; sursele nu se adună și pot descrie același accident."
+            "PMUD Iași 2022 (2020–2021). Relatările din presă (BZI, Ziarul de Iași) sunt o sursă separată: "
+            "pietoni loviți, selectați și extrași de Gemini (răspunsuri salvate, reluare), neverificați manual; "
+            "articolele noi, fără răspuns Gemini, trec prin reguli provizorii și sunt marcate așa. "
+            "Sursele nu se adună și pot descrie același accident."
         ),
         "surse": [
             {"id": "isu", "nume": config.SOURCE, "url": f"{config.BASE}/comunicate-de-presa",
@@ -466,7 +476,7 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
             {"id": "pmud", "nume": "PMUD Iași 2022, Tabel 2.11 (date IPJ Iași)",
              "url": "https://zmi.ro/wp-content/uploads/2026/06/PMUD-Iasi-Reactualizare-2022.pdf", "pagina": 73},
             {"id": "presa", "nume": "Presa locală (BZI, Ziarul de Iași)", "url": "https://www.bzi.ro/",
-             "extractie": press_info["extractie"]},
+             "extractie": press_info["extractie"], "ai": press_info.get("ai")},
         ],
         "statistici": {
             "comunicate_descarcate": len(releases), "comunicate_respinse_nerutier": skipped,
@@ -476,6 +486,8 @@ def build(db, presa_csvs: list[Path], presa_path: Path | None = None) -> tuple[d
             "municipiu_fara_loc": sum(a["precizie_loc"] == "vag" for a in city if a["sursa_tip"] == "isu"),
             "presa_articole": press_info.get("articole_citite", 0),
             "presa_evenimente": len(press),
+            "presa_ai_neclare": (press_info.get("ai") or {}).get("neclare", 0),
+            "presa_reguli": press_info.get("reguli_evenimente", 0),
             "presa_municipiu": sum(1 for a in city if a["sursa_tip"] == "presa"),
             "surse_posibil_acelasi": sum(1 for a in press if a.get("posibil_acelasi_cu")),
             "fara_data": sum(a["data_eveniment"] is None for a in accidents),

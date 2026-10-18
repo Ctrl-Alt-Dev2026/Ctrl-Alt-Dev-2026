@@ -2,12 +2,17 @@
 
 One file (SAFEIASI_DB, default runtime/safeiasi.sqlite3). The collector only ever adds documents; each run
 writes one dataset row, and the API serves the newest one, so every viewer sees the same data.
+
+The database is not in git; the seed is (isu/seed/, written by `python -m isu --seed`). Opening a database imports
+the seed's release texts it lacks and the seed's dataset if it is newer than the local one, so a fresh clone or a
+`git pull` shows the same data as whoever wrote the seed, and the local collector only fetches what came after.
 """
 from __future__ import annotations
 
 import json
 import os
 import sqlite3
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -15,6 +20,12 @@ from . import config
 
 DB_PATH = Path(os.environ.get("SAFEIASI_DB", config.REPO / "runtime" / "safeiasi.sqlite3"))
 KEEP_DATASETS = 5
+SEED = config.ROOT / "seed"
+SEED_DOCUMENTS = SEED / "documents.jsonl"     # ISU release texts (one JSON object per line, sorted by id)
+SEED_DATASET = SEED / "dataset.json"          # the dataset as served by /api/v1/live/dataset
+SEED_PRESS = SEED / "presa_candidati.csv"     # press articles found by the live scraper (scraper export format)
+_seeded: set[Path] = set()
+_seed_lock = threading.Lock()
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS documents (
@@ -58,7 +69,52 @@ def connect(path: Path | None = None) -> sqlite3.Connection:
     db.row_factory = sqlite3.Row
     db.execute("PRAGMA journal_mode=WAL")
     db.executescript(SCHEMA)
+    with _seed_lock:
+        if path not in _seeded:
+            import_seed(db)
+            _seeded.add(path)
     return db
+
+
+def import_seed(db: sqlite3.Connection) -> dict:
+    """Adds the committed seed to this database: missing release texts, and the dataset if it is newer."""
+    added = {"documente": 0, "set_de_date": False}
+    if SEED_DOCUMENTS.exists():
+        with open(SEED_DOCUMENTS, encoding="utf-8") as f:
+            rows = [json.loads(line) for line in f if line.strip()]
+        before = db.total_changes
+        db.executemany(
+            "INSERT OR IGNORE INTO documents (id, source, url, title, listing, text, fetched_at, error) "
+            "VALUES (:id, :source, :url, :title, :listing, :text, :fetched_at, NULL)", rows)
+        # A release whose download failed locally (text null) takes the seed's text.
+        db.executemany("UPDATE documents SET text=:text, error=NULL WHERE id=:id AND text IS NULL", rows)
+        added["documente"] = db.total_changes - before
+    if SEED_DATASET.exists():
+        payload = SEED_DATASET.read_text(encoding="utf-8").strip()
+        built_at = json.loads(payload)["built_at"]
+        latest = latest_dataset(db)
+        if latest is None or latest["built_at"] < built_at:
+            cursor = db.execute("INSERT INTO runs (started_at, finished_at, status, detail) VALUES (?,?,'ok',?)",
+                                (now(), now(), json.dumps({"sursa": "seed din git (isu/seed)", "construit_la": built_at},
+                                                          ensure_ascii=False)))
+            db.execute("INSERT INTO datasets (built_at, run_id, payload) VALUES (?,?,?)", (built_at, cursor.lastrowid, payload))
+            added["set_de_date"] = True
+    db.commit()
+    return added
+
+
+def export_seed(db: sqlite3.Connection) -> dict:
+    """Writes the seed from this database (stable order, so git only sees real changes)."""
+    SEED.mkdir(parents=True, exist_ok=True)
+    rows = db.execute("SELECT id, source, url, title, listing, text, fetched_at FROM documents "
+                      "WHERE text IS NOT NULL ORDER BY id").fetchall()
+    with open(SEED_DOCUMENTS, "w", encoding="utf-8", newline="\n") as f:
+        for row in rows:
+            f.write(json.dumps(dict(row), ensure_ascii=False, separators=(",", ":")) + "\n")
+    latest = latest_dataset(db)
+    if latest is not None:
+        SEED_DATASET.write_text(latest["payload"] + "\n", encoding="utf-8", newline="\n")
+    return {"documente": len(rows), "construit_la": latest["built_at"] if latest else None}
 
 
 def documents(db: sqlite3.Connection) -> dict[str, sqlite3.Row]:
@@ -105,7 +161,9 @@ def latest_dataset(db: sqlite3.Connection) -> sqlite3.Row | None:
 
 
 def latest_extras(db: sqlite3.Connection) -> dict | None:
-    row = db.execute("SELECT payload FROM extras ORDER BY dataset_id DESC LIMIT 1").fetchone()
+    """Article texts and geocoding report of the newest dataset; None for a dataset imported from the seed."""
+    row = db.execute("SELECT extras.payload FROM extras JOIN (SELECT max(id) AS id FROM datasets) AS newest "
+                     "ON extras.dataset_id = newest.id").fetchone()
     return json.loads(row["payload"]) if row else None
 
 

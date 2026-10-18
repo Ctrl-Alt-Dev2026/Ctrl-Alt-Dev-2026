@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, untracked, viewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { lei, participantLabel, PRECISE } from '../../../core/format/labels';
 import { StreetMetric } from '../../../core/models/streets';
@@ -21,6 +21,8 @@ import { StreetPanel } from '../street-panel/street-panel';
 export class MapPage {
   protected readonly store = inject(DataStore);
   private readonly router = inject(Router);
+  private readonly panel = viewChild<ElementRef<HTMLElement>>('panel');
+  private readonly host = inject(ElementRef<HTMLElement>).nativeElement;
 
   // Bound from the route /locatie/:id.
   readonly id = input<string>();
@@ -78,6 +80,23 @@ export class MapPage {
     effect(() => {
       this.store.state();
       this.store.select(this.id() ?? null);
+    });
+    // A new street or location opens at the top of the panel, not at the list's scroll position.
+    effect(() => {
+      this.store.selectedStreetId();
+      this.store.selectedId();
+      untracked(() => {
+        // The panel's content component (street list/detail, dossier) is the element that scrolls.
+        const panel = this.panel()?.nativeElement;
+        for (const el of [panel, ...Array.from(panel?.children ?? [])]) el?.scrollTo({ top: 0 });
+      });
+    });
+    // Stacked layout: the list sits under the map, so bring the map back into view to show the camera move.
+    effect(() => {
+      const street = this.store.selectedStreetId();
+      untracked(() => {
+        if (street && !matchMedia('(min-width: 56rem)').matches) this.host.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     });
 
     const wide = matchMedia('(min-width: 56rem)');

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "backend": "python scripts/backend.py",
+    "backend:share": "python scripts/backend.py --share",
     "build": "ng build",
     "build:local": "node scripts/build-local.mjs --base-href /ui/"
   },

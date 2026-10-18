@@ -4,7 +4,7 @@ from dataclasses import dataclass
 import math
 
 
-VEHICLES = {"car", "bus", "tram", "truck", "motorcycle", "bicycle"}
+VEHICLES = {"car", "bus", "tram", "rail_vehicle", "truck", "motorcycle", "bicycle"}
 
 
 def center(box):
@@ -67,7 +67,10 @@ class Analytics:
         self.tracks = {key: track for key, track in self.tracks.items() if timestamp - track.seen <= 2.5}
         self.cooldowns = {key: value for key, value in self.cooldowns.items() if timestamp - value < 600}
         current = self._associate(detections, timestamp)
-        light = self._light(frame, crosswalks, detections)
+        # Weak one-frame predictions stay internal until observed twice. High-confidence
+        # objects appear immediately. This suppresses flicker, not persistent false objects.
+        visible = [d for d, track in zip(detections, current) if track.hits >= 2 or d["score"] >= .8]
+        light = self._light(frame, crosswalks, visible)
         signals = self._incidents(current, timestamp)
         for region in light["crosswalks"]:
             key = f"light:{region['id']}"
@@ -78,7 +81,7 @@ class Analytics:
                     signals.append(self._signal(key, "iluminat", "Trecere slab vizibilă — de verificat", "Luminozitate redusă persistentă în zona trecerii marcate; nu este o măsurare în lux.", [region["box"]]))
             else:
                 self.dark_since.pop(key, None)
-        return detections, light, signals, reset
+        return visible, light, signals, reset
 
     def _associate(self, detections, timestamp):
         # One-to-one global greedy association; a previous ID cannot match two detections.

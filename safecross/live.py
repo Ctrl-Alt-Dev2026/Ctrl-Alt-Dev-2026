@@ -36,6 +36,7 @@ class SessionConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
     camera_id: str = Field(min_length=1, max_length=100, pattern=r"^[a-zA-Z0-9_-]+$")
     crosswalks: list[Crosswalk] = Field(default_factory=list, max_length=8)
+    detection_region: Crosswalk | None = None
 
     @model_validator(mode="after")
     def unique_ids(self):
@@ -130,7 +131,19 @@ class LiveVision:
             started = time.perf_counter()
             if self.detector is None:
                 self.detector = self.detector_factory()
-            detections, model = self.detector.detect(frame)
+            region = session.config.detection_region
+            if region is None:
+                detections, model = self.detector.detect(frame)
+            else:
+                polygon = np.array([[round(x * (width - 1)), round(y * (height - 1))] for x, y in region.polygon], dtype=np.int32)
+                left, top, rw, rh = cv2.boundingRect(polygon)
+                if rw < 32 or rh < 32:
+                    raise VisionError(422, "detection_region_small", "Zona de detecție este prea mică. Marchează o zonă mai largă a străzii.")
+                detections, model = self.detector.detect(frame[top:top + rh, left:left + rw])
+                for detection in detections:
+                    detection["box"][0] += left
+                    detection["box"][1] += top
+                detections = [d for d in detections if cv2.pointPolygonTest(polygon, (d["box"][0] + d["box"][2] / 2, d["box"][1] + d["box"][3]), False) >= 0]
             detections, light, signals, reset = session.analytics.update(detections, frame, media_time, [region.model_dump() for region in session.config.crosswalks])
             session.sequence, session.media_time = sequence, media_time
             session.touched = time.monotonic()

@@ -1,15 +1,16 @@
-"""Offline YOLO-World inference; vocabulary is embedded by live_setup, once."""
+"""Traffic detection with a conditional, cropped tram classification pass."""
 
 import importlib.util
 import os
+import time
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "runtime/models/traffic-world.pt"
 TRAFFIC_MODEL_PATH = ROOT / "runtime/models/yolo11s.pt"
-TRAFFIC_CLASSES = {0: "person", 1: "bicycle", 2: "car", 3: "motorcycle", 5: "bus", 7: "truck"}
-LABELS = ("person", "car", "bus", "tram", "truck", "motorcycle", "bicycle")
+TRAFFIC_CLASSES = {0: "person", 1: "bicycle", 2: "car", 3: "motorcycle", 5: "bus", 6: "train", 7: "truck"}
+LABELS = ("person", "car", "bus", "tram", "rail_vehicle", "truck", "motorcycle", "bicycle")
 PROMPTS = ("person", "car", "bus", "tram streetcar", "truck", "motorcycle", "bicycle")
 
 
@@ -51,21 +52,17 @@ class LiveDetector:
         os.environ["YOLO_OFFLINE"] = "true"
         try:
             import torch
-            from ultralytics import YOLO, YOLOWorld
+            from ultralytics import YOLO
             from ultralytics import settings
 
             settings.update({"sync": False, "weights_dir": str(ROOT / "runtime/models"), "runs_dir": str(ROOT / "runtime/runs")})
             torch.set_num_threads(min(4, os.cpu_count() or 1))
-            self.model = YOLOWorld(str(model_path()))
+            self.model = None  # Most frames have no bus/rail candidate; avoid loading/running CLIP-derived detection.
             self.traffic = YOLO(str(traffic_model_path()))
             if any(self.traffic.names.get(key) != value for key, value in TRAFFIC_CLASSES.items()):
                 raise ValueError("Unexpected traffic classes")
-            names = self.model.names
-            actual = list(names.values()) if isinstance(names, dict) else list(names)
-            if actual != list(PROMPTS):
-                raise ValueError("Unexpected vocabulary")
             self.device = os.environ.get("SAFEIASI_VISION_DEVICE", "0" if torch.cuda.is_available() else "cpu")
-            self.imgsz = int(os.environ.get("SAFEIASI_VISION_IMGSZ", "1280"))
+            self.imgsz = int(os.environ.get("SAFEIASI_VISION_IMGSZ", "960"))
             if self.imgsz not in (640, 960, 1280):
                 raise ValueError("SAFEIASI_VISION_IMGSZ must be 640, 960 or 1280")
         except Exception as error:
@@ -74,6 +71,12 @@ class LiveDetector:
     def detect(self, frame):
         import cv2
         import numpy as np
+        import torch
+
+        # FastAPI can execute each frame on a different worker thread. Apply the CPU
+        # limit in that thread too; constructor-only settings do not cover new workers.
+        if self.device == "cpu":
+            torch.set_num_threads(4)
 
         # Improve local contrast for detection only. Lighting always uses the original.
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -83,22 +86,21 @@ class LiveDetector:
             lab = cv2.cvtColor(frame, cv2.COLOR_BGR2LAB)
             lab[:, :, 0] = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(lab[:, :, 0])
             image = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+        started = time.perf_counter()
         try:
             traffic = self.traffic.predict(
                 image, imgsz=self.imgsz, conf=.35, iou=.45, max_det=150,
                 classes=list(TRAFFIC_CLASSES), device=self.device, verbose=False,
             )[0]
-            trams = self.model.predict(
-                image, imgsz=min(960, self.imgsz), conf=.5, iou=.45, max_det=20,
-                classes=[3], device=self.device, verbose=False,
-            )[0]
         except Exception as error:
             raise VisionError(503, "vision_inference_failed", "Inferența locală a eșuat. Verifică memoria și dispozitivul YOLO.") from error
         height, width = frame.shape[:2]
         detections = []
-        for result, vocabulary in ((traffic, TRAFFIC_CLASSES), (trams, {3: "tram"})):
+        for result, vocabulary in ((traffic, TRAFFIC_CLASSES),):
             for xyxy, confidence, class_id in zip(result.boxes.xyxy.cpu().tolist(), result.boxes.conf.cpu().tolist(), result.boxes.cls.cpu().tolist()):
                 label = vocabulary[int(class_id)]
+                if label == "train":
+                    label = "rail_vehicle"
                 if label == "person" and confidence < .5:
                     continue
                 x1, y1, x2, y2 = xyxy
@@ -106,9 +108,41 @@ class LiveDetector:
                 if x2 - x1 < 3 or y2 - y1 < 3:
                     continue
                 detections.append({"label": label, "score": round(confidence, 4), "box": [x1, y1, x2 - x1, y2 - y1]})
+        traffic_ms = round((time.perf_counter() - started) * 1000)
+        candidates = sorted([d for d in detections if d["label"] in {"bus", "rail_vehicle"}], key=lambda d: -d["score"])[:2]
+        tram_started = time.perf_counter()
+        if candidates:
+            try:
+                self._classify_trams(image, candidates)
+            except Exception as error:
+                raise VisionError(503, "vision_tram_failed", "Clasificatorul de tramvaie nu poate fi încărcat. Verifică modelul pregătit local.") from error
+        return detections, {
+            "name": "YOLO11s + conditional tram classifier", "device": self.device, "input_size": self.imgsz,
+            "low_light_enhanced": enhanced, "traffic_ms": traffic_ms,
+            "tram_ms": round((time.perf_counter() - tram_started) * 1000), "tram_candidates": len(candidates),
+        }
+
+    def _classify_trams(self, image, candidates):
+        from ultralytics import YOLOWorld
         from safecross.live_analytics import iou
 
-        # A confidently proposed tram replaces an overlapping generic bus/truck box.
-        tram_boxes = [d["box"] for d in detections if d["label"] == "tram"]
-        detections = [d for d in detections if d["label"] not in {"bus", "truck", "car"} or not any(iou(d["box"], box) > .5 for box in tram_boxes)]
-        return detections, {"name": "YOLO11s + YOLO-World trams", "device": self.device, "input_size": self.imgsz, "low_light_enhanced": enhanced}
+        if self.model is None:
+            model = YOLOWorld(str(model_path()))
+            names = model.names
+            if (list(names.values()) if isinstance(names, dict) else list(names)) != list(PROMPTS):
+                raise ValueError("Unexpected tram vocabulary")
+            self.model = model
+        height, width = image.shape[:2]
+        for detection in candidates:
+            x, y, w, h = detection["box"]
+            left, top = max(0, int(x - w * .1)), max(0, int(y - h * .1))
+            right, bottom = min(width, round(x + w * 1.1)), min(height, round(y + h * 1.1))
+            crop = image[top:bottom, left:right]
+            result = self.model.predict(crop, imgsz=384, conf=.65, iou=.45, max_det=5, classes=[3], device=self.device, verbose=False)[0]
+            for box, confidence in zip(result.boxes.xyxy.cpu().tolist(), result.boxes.conf.cpu().tolist()):
+                x1, y1, x2, y2 = box
+                if iou(detection["box"], [x1 + left, y1 + top, x2 - x1, y2 - y1]) >= .4:
+                    detection["label"] = "tram"
+                    detection["score"] = round(min(detection["score"], confidence), 4)
+                    detection["classification"] = "open_vocabulary_proposal"
+                    break

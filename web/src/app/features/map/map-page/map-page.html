@@ -26,7 +26,7 @@
   <app-camera-viewer class="camera glass" [camera]="c" (close)="store.selectedCameraId.set(null)" />
 }
 
-<aside class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
+<aside #panel class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
   @if (store.state() === 'loading') {
     <div class="dataset-status" role="status"><h2>Se încarcă datele…</h2><p class="muted">Ultimul set colectat de server.</p></div>
   } @else if (store.state() === 'error') {

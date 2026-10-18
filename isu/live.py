@@ -23,6 +23,8 @@ REFRESH_MIN = max(5, int(os.environ.get("SAFEIASI_REFRESH_MIN", "30")))
 PRESS_DIR = Path(os.environ.get("SAFEIASI_PRESS_DIR", config.REPO / "runtime" / "presa"))
 PRESS_SAMPLE = config.REPO / "scraping" / "articole_extrase_accident_clean.csv"
 SCRAPE_PRESS = os.environ.get("SAFEIASI_SCRAPE_PRESS", "1") != "0"
+# Whoever shares the data sets this (or runs `python -m isu --seed`): each run then refreshes isu/seed/ for git.
+WRITE_SEED = os.environ.get("SAFEIASI_WRITE_SEED", "0") == "1"
 # One run must end well before the next one: a few listing pages and at most 40 articles, 5 s apart.
 SCRAPER_ARGS = ["--noutati", "--de-la", "2026-01-01", "--pauza", "5", "--max-taskuri", "40"]
 SCRAPER_TIMEOUT_S = 15 * 60
@@ -56,9 +58,11 @@ def run_once() -> dict | None:
             run_id = store.start_run(db)
             try:
                 press = scrape_press()
-                dataset, extras, fetched = build(db, [PRESS_SAMPLE, PRESS_DIR / "candidati.csv"])
+                dataset, extras, fetched = build(db, [PRESS_SAMPLE, store.SEED_PRESS, PRESS_DIR / "candidati.csv"])
                 built_at = store.save_dataset(db, run_id, dataset, extras)
                 detail = {"isu": fetched, "presa": press, "evenimente": len(dataset["accidents"]), "construit_la": built_at}
+                if WRITE_SEED:
+                    detail["seed"] = write_seed(db)
                 store.finish_run(db, run_id, "ok", detail)
                 return detail
             except Exception as error:
@@ -66,6 +70,29 @@ def run_once() -> dict | None:
                 raise
     finally:
         _run_lock.release()
+
+
+def write_seed(db) -> dict:
+    """Refreshes isu/seed/: release texts and newest dataset from the database, plus the press articles the
+    local scraper found, added to those already in the seed (one row per URL)."""
+    import csv
+
+    info = store.export_seed(db)
+    rows: dict[str, dict] = {}
+    fields: list[str] = []
+    for path in (store.SEED_PRESS, PRESS_DIR / "candidati.csv"):
+        if path.exists():
+            with open(path, encoding="utf-8-sig", newline="") as f:
+                reader = csv.DictReader(f)
+                fields = fields or list(reader.fieldnames or [])
+                rows |= {row["url"]: row for row in reader}
+    if rows:
+        with open(store.SEED_PRESS, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(rows[url] for url in sorted(rows))
+    info["articole_presa"] = len(rows)
+    return info
 
 
 class Scheduler:

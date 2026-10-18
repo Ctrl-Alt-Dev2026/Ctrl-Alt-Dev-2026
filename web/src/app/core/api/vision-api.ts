@@ -11,10 +11,10 @@ export class VisionApiError extends Error {
 export class VisionApi {
   private readonly base = environment.api.baseUrl.replace(/\/$/, '');
 
-  async open(cameraId: string, crosswalks: Crosswalk[], signal: AbortSignal): Promise<string> {
+  async open(cameraId: string, crosswalks: Crosswalk[], signal: AbortSignal, detectionRegion: Crosswalk | null = null): Promise<string> {
     const result = await this.request<{ session_id: string }>(VISION_ENDPOINTS.sessions, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ camera_id: cameraId, crosswalks }), signal,
+      body: JSON.stringify({ camera_id: cameraId, crosswalks, detection_region: detectionRegion }), signal,
     });
     return result.session_id;
   }

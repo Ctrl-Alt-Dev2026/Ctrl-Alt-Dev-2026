@@ -4,7 +4,8 @@ import copy
 import importlib.util
 import struct
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
+from types import SimpleNamespace
 
 from fastapi.testclient import TestClient
 
@@ -12,6 +13,7 @@ from api.main import create_app
 from safecross.live import LiveVision, MAX_FRAME_BYTES, MAX_SESSIONS, SessionConfig, jpeg_dimensions
 from safecross.live_analytics import Analytics
 from safecross.live_detector import VisionError
+from safecross.live_detector import LiveDetector
 
 
 VIDEO_READY = all(importlib.util.find_spec(name) for name in ("cv2", "numpy"))
@@ -113,6 +115,33 @@ class LiveApiTests(unittest.TestCase):
         with TestClient(self.app, base_url="http://127.0.0.1", client=("192.0.2.5", 50000)) as remote:
             self.assertEqual(403, remote.get("/api/v1/vision/status").status_code)
 
+    def test_detection_region_crops_inference_and_restores_frame_coordinates(self):
+        seen = []
+        def focused(frame):
+            seen.append(frame.shape[:2])
+            return [{"label": "car", "score": .9, "box": [8., 8., 16., 16.]}], {"name": "synthetic-region-test"}
+        self.app.state.live_vision.detector = SimpleNamespace(detect=focused)
+        response = self.frame(self.open(detection_region=REGION))
+        self.assertEqual(200, response.status_code, response.text)
+        result = response.json()
+        self.assertEqual([(49, 65)], seen)
+        self.assertEqual([24., 20., 16., 16.], result["detections"][0]["box"])
+        self.assertEqual((160, 120), (result["width"], result["height"]))
+
+    def test_detection_region_excludes_observations_outside_polygon(self):
+        region = {"id": "triangle", "polygon": [[0, 0], [.8, 0], [0, .8]]}
+        self.app.state.live_vision.detector = SimpleNamespace(detect=lambda frame: (
+            [{"label": "car", "score": .9, "box": [100., 65., 20., 20.]}], {"name": "synthetic-region-test"}))
+        result = self.frame(self.open(detection_region=region))
+        self.assertEqual(200, result.status_code)
+        self.assertEqual([], result.json()["detections"])
+
+    def test_small_detection_region_returns_actionable_error(self):
+        region = {"id": "tiny", "polygon": [[0, 0], [.1, 0], [.1, .1], [0, .1]]}
+        result = self.frame(self.open(detection_region=region))
+        self.assertEqual(422, result.status_code)
+        self.assertEqual("detection_region_small", result.json()["detail"]["code"])
+
 
 @unittest.skipUnless(VIDEO_READY, "Optional OpenCV/NumPy are not installed")
 class AnalyticsTests(unittest.TestCase):
@@ -173,6 +202,47 @@ class AnalyticsTests(unittest.TestCase):
         self.update([detection], 0)
         result = self.update([detection, dict(detection)], .5)
         self.assertEqual(2, len({d["track_id"] for d in result[0]}))
+
+    def test_weak_detections_need_two_observations_before_display(self):
+        detection = {"label": "car", "box": [20, 30, 80, 40], "score": .45}
+        self.assertEqual([], self.update([detection], 0)[0])
+        self.assertEqual(1, len(self.update([detection], .25)[0]))
+        self.assertEqual([], self.update([detection], 5)[0])
+
+    def test_high_confidence_detections_appear_immediately(self):
+        detection = {"label": "person", "box": [20, 30, 20, 40], "score": .9}
+        self.assertEqual(1, len(self.update([detection], 0)[0]))
+
+
+@unittest.skipUnless(VIDEO_READY and importlib.util.find_spec("torch"), "Optional detector dependencies are not installed")
+class ConditionalDetectorTests(unittest.TestCase):
+    def make_detector(self, class_ids):
+        tensor = lambda value: SimpleNamespace(cpu=lambda: SimpleNamespace(tolist=lambda: value))
+        boxes = SimpleNamespace(
+            xyxy=tensor([[20., 20., 80., 80.] for _ in class_ids]),
+            conf=tensor([.9] * len(class_ids)), cls=tensor(class_ids),
+        )
+        detector = object.__new__(LiveDetector)
+        detector.traffic = SimpleNamespace(predict=Mock(return_value=[SimpleNamespace(boxes=boxes)]))
+        detector.device, detector.imgsz = "cpu", 960
+        detector._classify_trams = Mock()
+        return detector
+
+    def test_car_only_frames_skip_secondary_model(self):
+        import numpy as np
+        detector = self.make_detector([2])
+        detections, metadata = detector.detect(np.full((120, 160, 3), 150, dtype=np.uint8))
+        detector._classify_trams.assert_not_called()
+        self.assertEqual("car", detections[0]["label"])
+        self.assertEqual(0, metadata["tram_candidates"])
+
+    def test_bus_and_rail_candidates_are_bounded_and_never_called_trams_implicitly(self):
+        import numpy as np
+        detector = self.make_detector([5, 6, 5])
+        detections, metadata = detector.detect(np.full((120, 160, 3), 150, dtype=np.uint8))
+        detector._classify_trams.assert_called_once()
+        self.assertEqual(2, metadata["tram_candidates"])
+        self.assertEqual(["bus", "rail_vehicle", "bus"], [d["label"] for d in detections])
 
 
 if __name__ == "__main__":

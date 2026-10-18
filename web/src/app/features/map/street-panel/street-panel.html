@@ -52,6 +52,7 @@
             @if (a.participanti.length === 0) {participanți nemenționați}
             · {{ precise.has(a.precizie_loc) ? 'loc precis' : 'doar strada' }}
             @if (sameAs(a); as same) { · {{ same }}}
+            @if (a.extractie) { · {{ a.extractie }}}
           </p>
           @if (a.dovezi['gravitate']; as quote) {
             <blockquote>„{{ quote }}”</blockquote>
@@ -75,7 +76,7 @@
     </div>
     @switch (store.streetMetric()) {
       @case ('isu') { <p class="muted">Intervenții ale pompierilor la accidente rutiere, oct. 2024 – oct. 2026, din comunicatele ISU Iași.</p> }
-      @case ('presa') { <p class="muted">Accidente relatate de BZI și Ziarul de Iași în 2026. Extracție provizorie cu reguli, până la rezultatul modulului AI.</p> }
+      @case ('presa') { <p class="muted">Pietoni loviți, relatați de BZI și Ziarul de Iași în 2026. Selectați și extrași de Gemini (rezultat salvat, reluare), neverificați manual.</p> }
       @case ('pmud') { <p class="muted">Accidente pe artere, date IPJ Iași publicate în PMUD Iași 2022 (tabelul 2.11), ordonate după 2021.</p> }
     }
   </header>
@@ -108,7 +109,12 @@
   <footer class="muted">
     @if (store.manifest()?.statistici; as st) {
       @if (store.streetMetric() === 'presa') {
-        <p>{{ st['presa_evenimente'] }} accidente din {{ st['presa_articole'] }} articole reținute, {{ st['presa_municipiu'] }} în municipiu. Cele fără stradă nu apar în listă.</p>
+        <p>
+          {{ st['presa_evenimente'] }} accidente cu pietoni din {{ st['presa_articole'] }} articole citite, {{ st['presa_municipiu'] }} în municipiu.
+          @if (st['presa_ai_neclare']) { Alte {{ st['presa_ai_neclare'] }} articole sunt neclare pentru Gemini și rămân de verificat manual. }
+          @if (st['presa_reguli']) { {{ st['presa_reguli'] }} vin din articole noi, fără răspuns Gemini, extrase cu reguli provizorii. }
+          Cele fără stradă nu apar în listă.
+        </p>
       } @else if (store.streetMetric() === 'isu') {
         <p>
           {{ st.evenimente_municipiu }} intervenții ISU în municipiu: {{ st.evenimente_municipiu - st.municipiu_fara_loc }} cu stradă cunoscută,

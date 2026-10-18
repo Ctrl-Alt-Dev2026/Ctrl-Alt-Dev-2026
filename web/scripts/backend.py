@@ -4,6 +4,9 @@
 
 The server collects ISU releases and press articles into runtime/safeiasi.sqlite3 at start (unless the stored
 data is younger than 30 minutes) and then every 30 minutes; the UI reads /api/v1/live/*.
+A fresh clone starts from the committed seed (isu/seed/), so the map shows real data at once.
+
+    python web/scripts/backend.py --share   # also refresh isu/seed/ after every collection; commit it to share
 Uses the repo's .venv and creates it on first run. Port 8000 matches web/proxy.conf.json.
 """
 import argparse
@@ -35,10 +38,14 @@ def ensure_venv() -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--share", action="store_true", help="refresh isu/seed/ after each collection (then commit it)")
     args = parser.parse_args()
 
     ensure_venv()
     env = {**os.environ, "SAFEIASI_LIVE": "1", "PYTHONUTF8": "1"}
+    if args.share:
+        env["SAFEIASI_WRITE_SEED"] = "1"
+        print("backend: --share: isu/seed/ is rewritten after each collection; commit it so colleagues get the data")
     print("backend: collection every 30 min into runtime/safeiasi.sqlite3; then `npm start` -> http://localhost:4200")
     try:
         run(PYTHON, "-m", "uvicorn", "api.main:app", "--host", "127.0.0.1", "--port", str(args.port), env=env)

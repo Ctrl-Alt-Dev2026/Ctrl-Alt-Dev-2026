@@ -8,11 +8,12 @@ import { Camera } from '../../../core/models/camera';
 import { Box, Crosswalk, Detection, LightReport, Point, VisionSignal } from '../../../core/models/live-vision';
 import { LABEL_RO, VEHICLES } from './vision';
 
-const DETECT_EVERY_MS = 500;
+const DETECT_EVERY_MS = 250;
+const MAX_ANNOTATION_AGE_S = 1.5;
 const MAX_SIGNALS = 20;
 interface ShownSignal extends VisionSignal { at: Date; thumb: string | null }
 
-/** HLS playback and sampled, frame-aligned annotations from the local Python backend. */
+/** Continuous HLS playback, recent backend observations, and optional exact-frame inspection. */
 @Component({
   selector: 'app-camera-stage',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -29,6 +30,7 @@ export class CameraStage {
   private readonly video = viewChild.required<ElementRef<HTMLVideoElement>>('video');
   private readonly overlay = viewChild.required<ElementRef<HTMLCanvasElement>>('overlay');
   private readonly scratch = document.createElement('canvas');
+  private readonly analysedFrame = document.createElement('canvas');
 
   protected readonly playing = signal(false);
   protected readonly analysing = signal(true);
@@ -42,6 +44,10 @@ export class CameraStage {
   protected readonly latencyMs = signal<number | null>(null);
   protected readonly enhanced = signal(false);
   protected readonly drawing = signal(false);
+  protected readonly drawingKind = signal<'crosswalk' | 'detection'>('crosswalk');
+  protected readonly detectionRegion = signal<Crosswalk | null>(null);
+  protected readonly synchronized = signal(false);
+  protected readonly annotationsFresh = signal(false);
   protected readonly points = signal<Point[]>([]);
   protected readonly crosswalks = signal<Crosswalk[]>([]);
   protected readonly vehicles = computed(() => this.detections().filter((d) => VEHICLES.has(d.label)).length);
@@ -51,6 +57,7 @@ export class CameraStage {
   private hls?: Hls;
   private stopped = false;
   private timer?: ReturnType<typeof setTimeout>;
+  private annotationTimer?: ReturnType<typeof setTimeout>;
   private abort?: AbortController;
   private session: string | null = null;
   private generation = 0;
@@ -70,6 +77,7 @@ export class CameraStage {
     inject(DestroyRef).onDestroy(() => {
       this.stopped = true;
       clearTimeout(this.timer);
+      clearTimeout(this.annotationTimer);
       this.resetSession();
       document.removeEventListener('fullscreenchange', onFs);
       if (this.fullscreen()) void document.exitFullscreen().catch(() => undefined);
@@ -89,8 +97,13 @@ export class CameraStage {
     this.signals.update((list) => list.filter((s) => s.id !== id));
   }
   protected retryModel(): void { this.resetSession(); }
-  protected toggleDrawing(): void {
-    this.drawing.update((v) => !v);
+  protected toggleSynchronized(): void {
+    this.synchronized.update((value) => !value);
+    this.draw();
+  }
+  protected toggleDrawing(kind: 'crosswalk' | 'detection' = 'crosswalk'): void {
+    this.drawing.set(!this.drawing() || this.drawingKind() !== kind);
+    this.drawingKind.set(kind);
     this.points.set([]);
     this.resetSession();
   }
@@ -108,13 +121,14 @@ export class CameraStage {
   }
   protected saveCrosswalk(): void {
     const polygon = this.points();
-    if (polygon.length < 3 || this.crosswalks().length >= 8) return;
+    if (polygon.length < 3 || (this.drawingKind() === 'crosswalk' && this.crosswalks().length >= 8)) return;
     const area = Math.abs(polygon.reduce((sum, [x, y], i) => {
       const next = polygon[(i + 1) % polygon.length];
       return sum + x * next[1] - next[0] * y;
     }, 0)) / 2;
     if (area < .0001) return;
-    this.crosswalks.update((list) => [...list, { id: crypto.randomUUID(), polygon }]);
+    if (this.drawingKind() === 'detection') this.detectionRegion.set({ id: 'detection-zone', polygon });
+    else this.crosswalks.update((list) => [...list, { id: crypto.randomUUID(), polygon }]);
     this.drawing.set(false);
     this.points.set([]);
     this.persistCrosswalks();
@@ -127,8 +141,18 @@ export class CameraStage {
     this.persistCrosswalks();
     this.resetSession();
   }
+  protected clearDetectionRegion(): void {
+    this.detectionRegion.set(null);
+    this.points.set([]);
+    this.drawing.set(false);
+    this.persistCrosswalks();
+    this.resetSession();
+  }
   private persistCrosswalks(): void {
-    try { localStorage.setItem(`safeiasi-crosswalks:${this.camera().id}`, JSON.stringify(this.crosswalks())); } catch { /* Storage is optional. */ }
+    try {
+      localStorage.setItem(`safeiasi-crosswalks:${this.camera().id}`, JSON.stringify(this.crosswalks()));
+      localStorage.setItem(`safeiasi-detection-region:${this.camera().id}`, JSON.stringify(this.detectionRegion()));
+    } catch { /* Storage is optional. */ }
   }
   private restoreCrosswalks(): void {
     try {
@@ -139,6 +163,11 @@ export class CameraStage {
           Array.isArray(p) && p.length === 2 && p.every((v: unknown) => typeof v === 'number' && Number.isFinite(v) && v >= 0 && v <= 1)))) {
         this.crosswalks.set(saved as Crosswalk[]);
       }
+      const region = JSON.parse(localStorage.getItem(`safeiasi-detection-region:${this.camera().id}`) ?? 'null');
+      if (region?.id === 'detection-zone' && Array.isArray(region.polygon) && region.polygon.length >= 3 && region.polygon.length <= 12
+        && region.polygon.every((p: unknown) => Array.isArray(p) && p.length === 2 && p.every((v: unknown) => typeof v === 'number' && Number.isFinite(v) && v >= 0 && v <= 1))) {
+        this.detectionRegion.set(region as Crosswalk);
+      }
     } catch { /* Ignore corrupt or unavailable local storage. */ }
   }
   private resetSession(): void {
@@ -147,6 +176,8 @@ export class CameraStage {
     if (this.session) this.api.close(this.session);
     this.session = null;
     this.lastMediaTime = -1;
+    clearTimeout(this.annotationTimer);
+    this.annotationsFresh.set(false);
     this.detections.set([]);
     this.light.set(null);
     this.model.set('off');
@@ -161,6 +192,7 @@ export class CameraStage {
     video.addEventListener('playing', () => this.playing.set(true));
     for (const name of ['waiting', 'pause', 'ended']) video.addEventListener(name, () => {
       this.playing.set(false);
+      this.annotationsFresh.set(false);
       this.hasFrame = false;
       this.detections.set([]);
       this.draw();
@@ -189,7 +221,7 @@ export class CameraStage {
     const started = performance.now();
     const video = this.video().nativeElement;
     const generation = this.generation;
-    if (video.readyState >= 2 && !video.paused && video.videoWidth && this.analysing() && !this.drawing() && this.model() !== 'error') {
+    if (!document.hidden && video.readyState >= 2 && !video.paused && video.videoWidth && this.analysing() && !this.drawing() && this.model() !== 'error') {
       let timeout: ReturnType<typeof setTimeout> | undefined;
       try {
         const abort = new AbortController();
@@ -197,20 +229,21 @@ export class CameraStage {
         timeout = setTimeout(() => abort.abort(), 90_000);
         if (!this.session) {
           this.model.set('loading');
-          const session = await this.api.open(this.camera().id, this.crosswalks(), abort.signal);
+          const session = await this.api.open(this.camera().id, this.crosswalks(), abort.signal, this.detectionRegion());
           if (this.stopped || generation !== this.generation) { this.api.close(session); return; }
           this.session = session;
         }
         const mediaTime = video.currentTime;
         if (mediaTime < this.lastMediaTime) { this.resetSession(); return; }
         if (mediaTime === this.lastMediaTime) return;
-        const scale = Math.min(1, 1600 / video.videoWidth, 900 / video.videoHeight);
+        const t = performance.now();
+        const captureWidth = this.detectionRegion() ? 1600 : 1280;
+        const scale = Math.min(1, captureWidth / video.videoWidth, (captureWidth * 9 / 16) / video.videoHeight);
         this.scratch.width = Math.round(video.videoWidth * scale);
         this.scratch.height = Math.round(video.videoHeight * scale);
         this.scratch.getContext('2d')!.drawImage(video, 0, 0, this.scratch.width, this.scratch.height);
-        const jpeg = await new Promise<Blob>((resolve, reject) => this.scratch.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Cadrul camerei nu poate fi citit.')), 'image/jpeg', .88));
+        const jpeg = await new Promise<Blob>((resolve, reject) => this.scratch.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Cadrul camerei nu poate fi citit.')), 'image/jpeg', .85));
         if (abort.signal.aborted) return;
-        const t = performance.now();
         const result = await this.api.frame(this.session, jpeg, this.sequence++, mediaTime, abort.signal);
         if (this.stopped || generation !== this.generation || !this.playing()) return;
         this.lastMediaTime = mediaTime;
@@ -221,6 +254,16 @@ export class CameraStage {
         this.detections.set(result.detections);
         this.light.set(result.light);
         this.activeSignalBoxes = result.signals.flatMap((s) => s.boxes);
+        this.analysedFrame.width = this.scratch.width;
+        this.analysedFrame.height = this.scratch.height;
+        this.analysedFrame.getContext('2d')!.drawImage(this.scratch, 0, 0);
+        clearTimeout(this.annotationTimer);
+        const age = video.currentTime - mediaTime;
+        this.annotationsFresh.set(age >= 0 && age < MAX_ANNOTATION_AGE_S);
+        this.annotationTimer = setTimeout(() => {
+          this.annotationsFresh.set(false);
+          this.draw();
+        }, Math.max(0, (MAX_ANNOTATION_AGE_S - age) * 1000));
         if (result.signals.length) {
           const fresh = result.signals.map((s) => ({ ...s, at: new Date(), thumb: this.thumbnail(s) }));
           this.signals.update((list) => [...fresh.reverse(), ...list].slice(0, MAX_SIGNALS));
@@ -238,12 +281,13 @@ export class CameraStage {
           this.error.set(error instanceof VisionApiError ? error.message : 'Analiza nu a răspuns sau cadrul nu poate fi citit. Verifică backend-ul Python și accesul CORS la cameră.');
         }
         this.hasFrame = false;
+        this.annotationsFresh.set(false);
         this.detections.set([]);
         this.light.set(null);
         this.draw();
       } finally {
         clearTimeout(timeout);
-        if (!this.stopped) this.timer = setTimeout(() => void this.loop(), Math.max(250, DETECT_EVERY_MS - (performance.now() - started)));
+        if (!this.stopped) this.timer = setTimeout(() => void this.loop(), Math.max(40, DETECT_EVERY_MS - (performance.now() - started)));
       }
       return;
     }
@@ -268,13 +312,13 @@ export class CameraStage {
     const canvas = this.overlay().nativeElement;
     const video = this.video().nativeElement;
     if (!video.videoWidth) return;
-    const width = this.hasFrame ? this.scratch.width : video.videoWidth;
-    const height = this.hasFrame ? this.scratch.height : video.videoHeight;
+    const width = this.hasFrame ? this.analysedFrame.width : video.videoWidth;
+    const height = this.hasFrame ? this.analysedFrame.height : video.videoHeight;
     canvas.width = width;
     canvas.height = height;
     const ctx = canvas.getContext('2d')!;
-    // Paint the exact analysed sample under its boxes, preventing inference-latency drift.
-    if (this.hasFrame && this.analysing()) ctx.drawImage(this.scratch, 0, 0);
+    // Default: continuous HLS video. Exact sampled-frame inspection remains available.
+    if (this.hasFrame && this.analysing() && this.synchronized()) ctx.drawImage(this.analysedFrame, 0, 0);
     const unit = width / 640;
     ctx.font = `600 ${10 * unit}px Archivo, system-ui, sans-serif`;
     ctx.textBaseline = 'bottom';
@@ -298,14 +342,16 @@ export class CameraStage {
       ctx.fillText(report ? `Trecere · ${report.low_light ? 'lumină slabă' : 'vizibilitate'} · ${report.people} pers.` : 'Trecere marcată', x * width, Math.max(14 * unit, y * height - 3 * unit));
     }
     polygon(this.points(), '#8ed8ed', false);
-    if (!this.hasFrame || !this.analysing()) return;
+    const region = this.detectionRegion();
+    if (region) polygon(region.polygon, '#a5b4fc', true);
+    if (!this.hasFrame || !this.analysing() || (!this.synchronized() && !this.annotationsFresh())) return;
     for (const d of this.detections()) {
       const [x, y, w, h] = d.box;
       const colour = d.label === 'person' ? '#ffb347' : d.label === 'tram' ? '#8ed8ed' : '#e8edf4';
       ctx.strokeStyle = colour;
       ctx.lineWidth = 2 * unit;
       ctx.strokeRect(x, y, w, h);
-      const text = `${LABEL_RO[d.label] ?? d.label} #${d.track_id} ${Math.round(d.score * 100)}%`;
+      const text = `${LABEL_RO[d.label] ?? d.label}${d.classification ? '?' : ''} #${d.track_id} ${Math.round(d.score * 100)}%`;
       const tw = ctx.measureText(text).width + 6 * unit;
       const top = Math.max(0, y - 14 * unit);
       ctx.fillStyle = colour;

@@ -19,7 +19,7 @@ Interfața are o singură variantă, online: citește setul de date pe care serv
 | `npm run build` | Build cu baza implicită (folosit de imaginea nginx) |
 | `docker compose up --build` (din rădăcină) | api + web (nginx) pe http://localhost:8080, datele într-un volum |
 
-Prima colectare pe o bază goală durează câteva minute; pagina afișează „Prima colectare rulează” și se completează singură.
+După `git clone` sau `git pull`, serverul pornește din datele reale salvate în `isu/seed/` (fără descărcări), apoi colectează doar ce e nou. Ca să-ți partajezi datele colegilor: `npm run backend:share` (sau `python -m isu --seed`) și fă commit la `isu/seed/`.
 
 Camerele live folosesc backend-ul Python pentru detecție YOLO11/YOLO-World, tracking și semnale de verificat. Instalare separată din rădăcină: `.venv\Scripts\python.exe -m pip install -r requirements-vision.txt`, apoi `.venv\Scripts\python.exe -m safecross.live_setup`. În cameră, marchează conturul trecerii pentru verificarea luminii în zona ei. [Configurare și limite](../docs/LIVE_VISION.md).
 

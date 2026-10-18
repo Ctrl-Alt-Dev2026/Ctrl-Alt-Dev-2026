@@ -1,6 +1,9 @@
 export type Box = [number, number, number, number];
 export type Point = [number, number];
-export interface Detection { label: string; score: number; box: Box; track_id: number }
+export interface Detection {
+  label: string; score: number; box: Box; track_id: number;
+  classification?: 'open_vocabulary_proposal';
+}
 export interface Crosswalk { id: string; polygon: Point[] }
 export interface CrosswalkLight extends Crosswalk {
   box: Box; median: number; darkShare: number; low_light: boolean; people: number;

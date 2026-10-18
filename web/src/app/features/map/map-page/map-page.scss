@@ -253,9 +253,11 @@
   .panel.collapsed {
     order: 2;
   }
+  // flex: none, or the column squeezes the map to a strip and the page never scrolls.
   .map {
     position: relative;
     display: block;
+    flex: none;
     height: 55svh;
   }
   .panel,
@@ -268,6 +270,7 @@
     opacity: 1;
     pointer-events: auto;
     max-height: none;
+    flex: none;
   }
   .list-toggle,
   .legend {
