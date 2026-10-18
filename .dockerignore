@@ -12,3 +12,6 @@ isu/cache
 research
 docs
 context/cache
+# Secrets never go into an image (ai/GEMINI.md).
+ai/gemini.local.json
+**/.env

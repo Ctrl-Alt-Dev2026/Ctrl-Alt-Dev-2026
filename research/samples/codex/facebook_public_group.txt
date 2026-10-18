@@ -1,7 +1,0 @@
-{
-  "url": "https://www.facebook.com/groups/InfoTraficIasi",
-  "status": 200,
-  "content_type": "text/html",
-  "sample_observation": "Public landing title: INFO TRAFIC jud. IASI; no logged-in posts collected.",
-  "retention_note": "Page payload removed after source inspection."
-}
