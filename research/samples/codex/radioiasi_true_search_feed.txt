@@ -1,0 +1,17 @@
+{
+  "id": "radioiasi_true_search_feed",
+  "url": "https://www.radioiasi.ro/search/accident/feed/rss2/",
+  "checked_utc": "2026-10-17T21:46:17.689958+00:00",
+  "status": 200,
+  "final_url": "https://www.radioiasi.ro/search/accident/feed/rss2/",
+  "content_type": "application/rss+xml; charset=UTF-8",
+  "bytes": 22212,
+  "sample": {
+    "title": "Siguranța rutieră prin experiență directă: TUIAȘI Motorsport la Salonul Auto București",
+    "link": "https://www.radioiasi.ro/stiri/regional/siguranta-rutiera-prin-experienta-directa-tuiasi-motorsport-la-salonul-auto-bucuresti/",
+    "pubDate": "Fri, 16 Oct 2026 09:39:57 +0000"
+  },
+  "content_characters": 0,
+  "item_count": 12,
+  "retention_note": "Article bodies removed after feasibility inspection; source metadata retained."
+}

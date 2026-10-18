@@ -13,7 +13,6 @@ const environment = {
 };
 
 for (const arguments_ of [
-  ['scripts/sync-data.mjs'],
   ['node_modules/@angular/cli/bin/ng.js', 'build', ...process.argv.slice(2)],
 ]) {
   const result = spawnSync(process.execPath, arguments_, { cwd: directory, env: environment, stdio: 'inherit' });

@@ -1,7 +1,7 @@
 # UI plan — SafeIași (Person 6)
 
 Angular front-end for the three screens + export described in `Planificare.md` §1 and §8 (Persoana 6).
-Local API v0.7 is now connected. The default build uses **HTTP** at `/api/v1`; published views share one frozen publication, and import/review uses the versioned operator API. Explicit mock builds preserve the original synthetic prototype for static hosting. The planning notes below retain the earlier design decisions; implementation updates are marked.
+**Update 2026-10-18: the UI is online only.** It reads the dataset the server collects every 30 minutes (`/api/v1/live/*`, `isu/` + `api/live_router.py`); there is no mock build, no static data and no observed/synthetic switch. The publication/review endpoints below still exist in the backend but the UI no longer calls them. The planning notes below retain the earlier design decisions; implementation updates are marked.
 
 Sources of truth, in order: `Planificare.md` §4 (data contract) → §5 (score, *read-only for UI*) → §7 (measures) → §11 (pre-demo checks).
 `Punct Negru Iași.html` is an early prototype, not a reference for look or content. Its claims ("−55% accidente",
@@ -9,7 +9,7 @@ Sources of truth, in order: `Planificare.md` §4 (data contract) → §5 (score,
 
 **Scope decisions (with the user, 17 Oct):** all road accidents reported in the press, participants as a filter
 (pedestrians are one); a real 3D map. Live cameras (decided 17 Oct, evening): public Iași webcams on the map through
-their HLS stream, analysed live in the browser (COCO-SSD objects, brightness grid, rule-based signals for an operator),
+their HLS stream, analysed by the Python backend (YOLO11s traffic, YOLO-World tram proposals, tracking and marked-crossing brightness),
 as a proof of concept for city-hall CCTV. Fallback: the provider's embed player, no analysis. Product name is provisional (`APP_NAME` in `top-bar.ts`).
 
 ---
@@ -33,10 +33,9 @@ No NgRx, no Material, no Tailwind — not worth the setup time in a 24h hackatho
 
 ```
 web/
-  scripts/sync-data.mjs        copies ../false_data (later ../data) → public/data, normalises names
-  public/data/                 manifest.json, accidents.json, hotspots.json, crossings.geojson, measures.json
-  public/data/replay/          saved extractions for "mod reluare" (extract-001.json …)
-  src/environments/            environment.ts { api: { mode: 'mock' | 'http', baseUrl } }
+  scripts/backend.py           starts the API with the 30-minute collector (SAFEIASI_LIVE=1)
+  public/data/cameras.json     static public-webcam list (the only file left in public/data)
+  src/environments/            environment.ts { api: { baseUrl } }
   src/app/
     core/models/               TS interfaces 1:1 with Planificare.md §4 (Romanian field names kept)
     core/api/                  endpoints.ts · data-api.ts (abstract) · mock-data-api.ts · http-data-api.ts
@@ -49,41 +48,30 @@ web/
     features/report/           fisa-page: printable verification sheet
 ```
 
-## 3. Current local API endpoints (v0.7)
+## 3. API endpoints used by the UI
 
-Paths are centralized in `core/api/endpoints.ts`. `DataApi` provides publication reads; `ReviewApi` provides operator actions. Components never call `HttpClient` directly. Models preserve backend field names; the adapter in `core/models/publication.ts` maps the published contracts into the existing map view without recalculating scores.
+Paths are centralized in `core/api/endpoints.ts`; `DataApi` is the only class that calls `HttpClient` for data. Models keep the backend field names.
 
 | Method | Path relative to `/api/v1` | Returns / use |
 |---|---|---|
-| GET | `/publications/latest?data_mode=…` | One `PublicationSnapshot`, including canonical events, locations and provenance |
-| GET | `/publications/:snapshot_id?data_mode=…` | Explicit immutable URL-pinned publication |
-| GET | `/locations/:id?data_mode=…&snapshot_id=…` | Version-pinned location dossier; Angular normally derives it from the already loaded snapshot |
-| GET | `/locations/:id/export?format=json\|html&data_mode=…&snapshot_id=…` | Version-pinned JSON or printable HTML |
-| GET | `/candidates?data_mode=…` | Review candidates; distinct from published events |
-| GET | `/candidates/:id?data_mode=…` | Current candidate and source article |
-| POST | `/imports` | Persist article and extracted candidates, with request ID and explicit mode |
-| GET | `/imports/:id?data_mode=…` | Archived article, extraction result and processing mode |
-| PATCH | `/candidates/:id` | Version-checked corrections, operator and reason |
-| POST | `/candidates/:id/geocoding/preview` | Geocoding suggestion and provenance; no approval |
-| POST | `/candidates/:id/geocoding/apply` | Explicitly confirmed, version-checked suggestion application |
-| POST | `/candidates/:id/review` | Approve, reject or link to a canonical event; requires operator checks |
-| GET | `/reviewed-events?data_mode=…` | Canonical working events, not an automatic map publication |
-| GET | `/publication-context?data_mode=…&q=…&offset=…&limit=…` | Paginated infrastructure for explicit location association |
-| POST | `/publications/preview` | Eligibility diagnostics and deterministic scores without publishing |
-| POST | `/publications` | Immutable release after explicit source, duplicate and association checks |
+| GET | `/live/status` | `LiveStatus`: when the stored dataset was built, next collection, last run outcome. Polled every 2 min (20 s while the first collection runs) |
+| GET | `/live/dataset` | `LiveDataset`: manifest, accidents, hotspots, crossings, measures, streets. Downloaded only when `construit_la` changes. 503 `dataset_not_ready` = first collection still running |
+| POST | `/live/refresh` | Local only (`require_local`): start a collection now. Not called by the UI |
 | GET | `data/cameras.json` (static UI asset) | Public camera metadata, separate from accident sources |
+| GET | `/vision/status` | Local live detector readiness (no model load) |
+| POST | `/vision/sessions` | Camera tracking session and normalized crossing polygons |
+| POST | `/vision/sessions/:id/frames?sequence=…&media_time=…` | Raw JPEG → detections, lighting, unverified signals and frame timing |
+| DELETE | `/vision/sessions/:id` | Release camera tracking state |
 
-The first publication read feeds all headline counts and display layers. Event IDs are canonical; article counts use distinct source IDs. Backend ranks remain fixed when participant filters hide locations. Locations with null score/rank remain available as unranked dossiers. Empty or unavailable observed data never selects synthetic data automatically. URL query `data_mode=synthetic` is an explicit synthetic selection; omitting it selects observed. `snapshot_id` can pin an older publication.
+A refresh keeps filters and selections. If the server stops answering, the data already on screen stays and the top bar says so; an empty page shows an error with "Încearcă din nou".
 
-A specific `publication_not_found` 404 is shown as an empty publication; a 503 remains a visible error. The router and import/review stay usable. Approval is not publication: the operator explicitly selects event versions and infrastructure associations, checks the preview, and publishes. Exports use the exact displayed snapshot ID.
+Run `python scripts/backend.py` (API + collector on :8000) and `npm start` (proxy `/api` to `127.0.0.1:8000`, `changeOrigin: false`), or `npm run build:local` and open the API's `/ui/` route, or `docker compose up --build` at the repo root (nginx on :8080 proxies `/api`).
 
-Run `npm start` for the dev server with `/api` proxy to `127.0.0.1:8000` (`changeOrigin: false`), or `npm run build:local` and open the API's `/ui/` route. Relative API requests then preserve the same origin. `npm run build:mock` and `npm run build:pages` explicitly produce the static synthetic prototype; import/review is read-only in those builds.
-
-**Historical proposals:** the former `/api/manifest`, `/api/accidents`, `/api/hotspots`, `/api/crossings`, `/api/measures`, `/api/extract`, `/api/events/:id/review` and `/api/report` table described the initial mock prototype. They are not the current backend contract. `ExtractionResult` remains a legacy mock shape; real imports preserve their source article, structured candidate fields and extraction mode separately. The original plan to approve directly onto the map is superseded by explicit publication. The sourced measure catalog remains pending; empty measures are not filled with mock recommendations.
+**Historical:** the v0.7 publication endpoints (`/publications/*`, `/locations/*`, `/candidates/*`, `/imports`) and the mock-first `/api/manifest`… table described earlier designs. The UI no longer uses them.
 
 ## 4. Contract mismatches to raise with Person 1
 
-1. Mock data lives in `false_data/`, plan says `data/`. → `sync-data.mjs` reads either.
+1. (Resolved 2026-10-18) The UI no longer reads files; it reads the server's collected dataset (`/api/v1/live/dataset`).
 2. `false_data/measure.json` vs contract `measures.json`. → script renames on copy.
 3. Two schemas in docs (`Planificare.md` v2 vs `docs/HACKATHON_PLAN.md` v1). Fixtures follow **v2**; UI follows v2.
 4. The initial `/extract` and review proposals differed from the backend. → The current versioned API is documented in §3; imports, candidates and canonical working events remain separate from published releases.
@@ -140,9 +128,7 @@ Matches the timetable: phases 0–2 Saturday by 20:00; 3–4 overnight / Sunday 
 
 ```
 cd web
-npm run sync-data     # refresh public/data from ../false_data or ../data
-npm start             # ng serve, http://localhost:4200
-npm run build:local   # HTTP production build served by FastAPI at /ui/
-npm run build:mock    # explicit static synthetic prototype, read-only import
-npm run build:pages   # explicit mock build with base-href for GitHub Pages
+npm run backend       # API + 30-minute collector on :8000
+npm start             # ng serve, http://localhost:4200 (proxy /api)
+npm run build:local   # production build served by FastAPI at /ui/
 ```

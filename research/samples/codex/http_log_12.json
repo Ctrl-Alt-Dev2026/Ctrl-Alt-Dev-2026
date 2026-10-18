@@ -1,0 +1,132 @@
+[
+  {
+    "id": "mai_esigur",
+    "url": "https://www.mai.gov.ro/precizare-de-presa-22/",
+    "checked_utc": "2026-10-17T21:46:15.709410+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 422073,
+    "final_url": "https://www.mai.gov.ro/precizare-de-presa-22/",
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "police_infotrafic",
+    "url": "https://politiaromana.ro/ro/info-trafic",
+    "checked_utc": "2026-10-17T21:46:15.710413+00:00",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 202326,
+    "final_url": "https://politiaromana.ro/ro/info-trafic",
+    "tls_verified": false,
+    "emails": [],
+    "links": [
+      "https://politiaromana.ro/ro/info-trafic/judetul-ilfov-trafic-ingreunat-pe-autostrada-2",
+      "https://politiaromana.ro/ro/info-trafic/judetul-bihor-trafic-ingreunat-pe-dn-11792234176",
+      "https://politiaromana.ro/ro/info-trafic/judetul-brasov-trafic-ingreunat-pe-dn-11792234184",
+      "https://politiaromana.ro/ro/info-trafic/transporturi-agabaritice1792159432",
+      "https://politiaromana.ro/ro/info-trafic/judetul-dambovita-circulatie-intrerupta-pe-dn-711792154604",
+      "https://politiaromana.ro/ro/info-trafic/situatia-traficului-la-ora-06-301792121895",
+      "https://politiaromana.ro/ro/info-trafic/judetul-valcea-circulatie-dirijata-pe-dn-71792089182",
+      "https://politiaromana.ro/ro/info-trafic/transporturi-agabaritice1792070848",
+      "https://politiaromana.ro/ro/info-trafic/judetul-bacau-trafic-oprit-pe-dn-15-din-cauza-unui-accident",
+      "https://politiaromana.ro/ro/info-trafic/recomandari-utile-pentru-un-trafic-in-siguranta-informatii-de-sezon"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ipj_letter_mirror",
+    "url": "https://bit24.ro/wp-content/uploads/2025/05/ADRESA-IPJ-INREG.NR_.10242-24.04.2025.pdf",
+    "checked_utc": "2026-10-17T21:46:15.710413+00:00",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 1381789,
+    "final_url": "https://bit24.ro/wp-content/uploads/2025/05/ADRESA-IPJ-INREG.NR_.10242-24.04.2025.pdf",
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "ngo_worldstreet",
+    "url": "https://worldstreet.ro/alarmant-in-iasi-s-au-produs-peste-90-de-accidente-cu-biciclisti-in-acest-an-vezi-grafica/",
+    "checked_utc": "2026-10-17T21:46:15.711408+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 43666,
+    "final_url": "https://worldstreet.ro/alarmant-in-iasi-s-au-produs-peste-90-de-accidente-cu-biciclisti-in-acest-an-vezi-grafica/",
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "radioiasi_true_search_feed",
+    "url": "https://www.radioiasi.ro/search/accident/feed/rss2/",
+    "checked_utc": "2026-10-17T21:46:17.689958+00:00",
+    "status": 200,
+    "content_type": "application/rss+xml; charset=UTF-8",
+    "bytes": 22212,
+    "final_url": "https://www.radioiasi.ro/search/accident/feed/rss2/",
+    "tls_verified": true,
+    "item_count": 12,
+    "sample": {
+      "title": "Siguranța rutieră prin experiență directă: TUIAȘI Motorsport la Salonul Auto București",
+      "link": "https://www.radioiasi.ro/stiri/regional/siguranta-rutiera-prin-experienta-directa-tuiasi-motorsport-la-salonul-auto-bucuresti/",
+      "pubDate": "Fri, 16 Oct 2026 09:39:57 +0000"
+    },
+    "content_characters": 0,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "radioiasi_true_feed",
+    "url": "https://www.radioiasi.ro/feed/",
+    "checked_utc": "2026-10-17T21:46:25.508100+00:00",
+    "status": 200,
+    "content_type": "application/rss+xml; charset=UTF-8",
+    "bytes": 24999,
+    "final_url": "https://www.radioiasi.ro/feed/",
+    "tls_verified": true,
+    "item_count": 12,
+    "sample": {
+      "title": "(UPDATE) Incendiul de la CET Iași a fost lichidat. Orașul rămâne fără apă caldă și căldură până la remedierea avariei",
+      "link": "https://www.radioiasi.ro/stiri/regional/update-incendiul-de-la-cet-iasi-a-fost-lichidat-orasul-ramane-fara-apa-calda-si-caldura-pana-la-remedierea-avariei/",
+      "pubDate": "Sat, 17 Oct 2026 16:14:02 +0000"
+    },
+    "content_characters": 0,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "cestrin_contact",
+    "url": "https://www.cestrin.ro/contact.html",
+    "checked_utc": "2026-10-17T21:46:17.742960+00:00",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 15039,
+    "final_url": "https://www.cestrin.ro/contact.html",
+    "tls_verified": true,
+    "emails": [
+      "office@cestrin.ro"
+    ],
+    "links": [],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "strategy_action_plan2023",
+    "url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G396VQJMD6L8HU363SVQOGAHMMQ",
+    "checked_utc": "2026-10-17T21:46:17.841964+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 755072,
+    "final_url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G396VQJMD6L8HU363SVQOGAHMMQ",
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "gdpr",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+    "checked_utc": "2026-10-17T21:46:17.849965+00:00",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 1071069,
+    "final_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+    "tls_verified": true,
+    "requests_verify_parameter": true
+  }
+]

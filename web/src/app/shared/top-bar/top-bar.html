@@ -6,31 +6,39 @@
     }
   </div>
   <p>
-    Accidente rutiere raportate în presă@if (period(); as p) {, {{ p }}}
+    {{ isIsu() ? 'Accidente rutiere din comunicatele ISU Iași și din presă' : 'Accidente rutiere raportate în presă' }}@if (period(); as p) {, {{ p }}}
   </p>
   @if (store.manifest(); as m) {
-    <p class="muted coverage">
-      <b>{{ m.nr_evenimente }}</b> evenimente unice din <b>{{ m.nr_articole }}</b> articole,
-      <b>{{ m.nr_localizate_precis }}</b> localizate precis, <b>{{ m.nr_verificate }}</b> verificate manual
-    </p>
-  }
-  @if (store.isHttp) {
-    <div class="mode-switch" role="group" aria-label="Setul de date">
-      <button type="button" [attr.aria-pressed]="store.session.dataMode() === 'observed'" (click)="setMode('observed')">Date observate</button>
-      <button type="button" [attr.aria-pressed]="store.session.dataMode() === 'synthetic'" (click)="setMode('synthetic')">Demo sintetic</button>
-    </div>
-    @if (store.publication(); as publication) {
-      <p class="version muted" title="{{ publication.snapshot_id }}">Versiune publicată: {{ publication.snapshot_id.slice(0, 12) }}… · clasament fix pe perioadă</p>
+    @if (m.statistici; as st) {
+      <p class="muted coverage">
+        <b>{{ st['evenimente_judet'] }}</b> intervenții ISU (județ),
+        <b>{{ st.evenimente_municipiu }}</b> în municipiu; <b>{{ st['presa_evenimente'] }}</b> din presă; extrase automat, <b>{{ m.nr_verificate }}</b> verificate manual
+      </p>
+    } @else {
+      <p class="muted coverage">
+        <b>{{ m.nr_evenimente }}</b> evenimente unice din <b>{{ m.nr_articole }}</b> articole,
+        <b>{{ m.nr_localizate_precis }}</b> localizate precis, <b>{{ m.nr_verificate }}</b> verificate manual
+      </p>
     }
-    @if (store.state() === 'loading') { <p class="muted" role="status">Se încarcă versiunea publicată…</p> }
-    @if (store.state() === 'empty') { <p class="muted" role="status">Nicio versiune publicată în acest mod. Importul și verificarea sunt disponibile.</p> }
-    @if (store.state() === 'error') { <p class="load-error" role="alert">Publicația nu s-a încărcat: {{ store.error() }}</p> }
+  }
+  @if (store.error(); as error) {
+    <p class="load-error" role="alert">{{ error }}@if (updated(); as u) { Afișăm datele colectate la {{ u }}.}</p>
+  } @else if (store.status(); as s) {
+    <p class="live muted" [class.busy]="s.ruleaza" role="status">
+      <i aria-hidden="true"></i>
+      <span>
+        @if (s.ruleaza) { Colectare în curs… } @else if (updated(); as u) { Actualizat {{ u }} }
+        @if (s.colectare_automata) {
+          · automat la {{ s.interval_minute }} min@if (!s.ruleaza && next(); as n) {, următoarea {{ n }}}
+        } @else { · colectarea automată e oprită pe server }
+        @if (lastRunFailed()) { · ultima colectare a eșuat, rămân datele anterioare }
+      </span>
+    </p>
   }
 </header>
 
 <nav class="nav glass" aria-label="Ecrane">
   <a routerLink="/" [class.active]="onMap()" [attr.aria-current]="onMap() ? 'page' : null">Hartă</a>
-  <a routerLink="/import" routerLinkActive="active">Import cu AI</a>
   <a routerLink="/fisa" routerLinkActive="active">Fișa pentru primărie</a>
   <button type="button" class="about-btn" [attr.aria-expanded]="aboutOpen()" (click)="aboutOpen.set(!aboutOpen())">
     Despre date
@@ -42,13 +50,15 @@
     @if (store.isSynthetic()) {
       <p class="warn">{{ store.manifest()?.avertisment ?? 'DATE SINTETICE: scenariu de demonstrație, fără accidente observate.' }}</p>
     }
-    <p>Presa scrie selectiv, mai ales despre accidentele grave. Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
+    @if (isIsu()) {
+      <p>{{ store.manifest()?.avertisment }}</p>
+      <p>Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
+    } @else {
+      <p>Presa scrie selectiv, mai ales despre accidentele grave. Lipsa unui accident din date nu înseamnă că zona e sigură.</p>
+    }
     <p>Scorul e o regulă de prioritizare pe acest eșantion, nu o probabilitate de accident.</p>
     <p>Măsurile sunt candidate, de verificat în teren. Decizia aparține Comisiei de circulație.</p>
-    @if (store.publication(); as publication) {
-      <p>Context: {{ publication.provenance.context.attribution }}</p>
-      <p class="muted">Versiune integrală: {{ publication.snapshot_id }}</p>
-    }
+    <p>Datele sunt colectate de server la fiecare 30 de minute și sunt aceleași pentru toți cei care deschid pagina.</p>
     <button type="button" class="btn" (click)="aboutOpen.set(false)">Închide</button>
   </section>
 }

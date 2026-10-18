@@ -14,12 +14,13 @@ import {
 } from '@angular/core';
 import type { Color, PickingInfo } from '@deck.gl/core';
 import { HexagonLayer } from '@deck.gl/aggregation-layers';
-import { IconLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
+import { IconLayer, PathLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
 import { MapboxOverlay } from '@deck.gl/mapbox';
 import { GeoJSONSource, IControl, Map as MlMap, NavigationControl, StyleSpecification } from 'maplibre-gl';
 import { dateRo, GRAVITATE, PRECISE } from '../../../core/format/labels';
 import { Camera } from '../../../core/models/camera';
 import { Accident, Hotspot } from '../../../core/models/contract';
+import { StreetFeature, StreetMetric, StreetProps } from '../../../core/models/streets';
 
 // Free, keyless basemap with OSM building heights; DEM tiles only shade the hills
 // (true 3D terrain would bury deck.gl columns on Copou/Bucium).
@@ -68,6 +69,14 @@ const APPLIED_LEVEL = 0.15;
 const PULSE_MS = 2400;
 const CLOSE_UP_ZOOM = 15;
 
+// One drawable polyline of a street (a street is a MultiLineString).
+interface StreetPath {
+  id: string;
+  path: [number, number][];
+  value: number;
+  props: StreetProps;
+}
+
 /**
  * deck.gl draws the data (hexagon columns, event dots, rank labels) on its own canvas above the map,
  * synced to the camera (interleaved mode clears the MapLibre 5 canvas). deck layers are only rebuilt
@@ -99,6 +108,12 @@ export class CityMap {
   readonly flyToPoint = input<[number, number] | null>(null);
   readonly cameras = input<Camera[]>([]);
   readonly selectedCameraId = input<string | null>(null);
+  readonly streets = input<StreetFeature[]>([]);
+  // Figure per street in the current source; null = not in that source (drawn nowhere).
+  readonly streetValue = input<Map<string, number | null>>(new Map());
+  readonly streetMetric = input<StreetMetric>('isu');
+  readonly selectedStreetId = input<string | null>(null);
+  readonly selectStreet = output<string>();
 
   readonly selectCamera = output<string>();
 
@@ -125,7 +140,14 @@ export class CityMap {
       this.rankOf();
       this.cameras();
       this.selectedCameraId();
+      this.streets();
+      this.streetValue();
+      this.selectedStreetId();
       untracked(() => this.render());
+    });
+    effect(() => {
+      const id = this.selectedStreetId();
+      untracked(() => this.focusStreet(id));
     });
     effect(() => {
       const id = this.selectedId();
@@ -327,11 +349,38 @@ export class CityMap {
     // Street level (or one location selected): columns would fill the screen, so each event shows
     // as a dot coloured by severity instead.
     const focused = selected !== null || this.closeUp;
+    const streetValue = this.streetValue();
+    const selectedStreet = this.selectedStreetId();
+    const paths: StreetPath[] = this.streets().flatMap((f) => {
+      const value = streetValue.get(f.properties.id);
+      return value == null ? [] : f.geometry.coordinates.map((path) => ({ id: f.properties.id, path, value, props: f.properties }));
+    });
+    const maxStreet = Math.max(1, ...paths.map((p) => p.value));
+    const streetColor = (p: StreetPath): Color =>
+      p.id === selectedStreet ? ACCENT_RGB : HEAT[Math.min(3, Math.floor((p.value / maxStreet) * 3.999))];
     const eventColor = (a: Accident): Color =>
       a.gravitate === 'deces' ? HEAT[3] : a.gravitate === 'grav' ? HEAT[2] : a.gravitate === 'usor' ? HEAT[1] : MUTED;
 
     this.overlay.setProps({
       layers: [
+        // Streets under everything else: the source figure sets colour and width, never a sum of sources.
+        new PathLayer<StreetPath>({
+          id: 'streets',
+          data: paths,
+          getPath: (p) => p.path,
+          getColor: streetColor,
+          getWidth: (p) => (p.id === selectedStreet ? 26 : 8 + 22 * (p.value / maxStreet)),
+          widthUnits: 'meters',
+          widthMinPixels: 2,
+          capRounded: true,
+          jointRounded: true,
+          opacity: 0.85,
+          pickable: true,
+          onClick: (info) => {
+            if (info.object) this.selectStreet.emit(info.object.id);
+          },
+          updateTriggers: { getColor: [selectedStreet, maxStreet], getWidth: [selectedStreet, maxStreet] },
+        }),
         new HexagonLayer<Accident>({
           id: 'density',
           data: precise,
@@ -442,7 +491,12 @@ export class CityMap {
     const o = info.object as (Accident & { count?: number; points?: unknown[] }) | undefined;
     if (!o) return null;
     let text: string;
-    if (info.layer?.id === 'density') {
+    if (info.layer?.id === 'streets') {
+      const p = (o as unknown as StreetPath).props;
+      const lines = [p.nume, `${p.isu_evenimente} intervenții ISU (2024–2026)`, `${p.presa_evenimente} relatări în presă (2026)`];
+      lines.push(p.pmud_2021 !== null ? `IPJ, PMUD: ${p.pmud_2020} accidente în 2020, ${p.pmud_2021} în 2021` : 'Nu apare în tabelul PMUD');
+      text = [...lines, 'Clic pentru detalii'].join('\n');
+    } else if (info.layer?.id === 'density') {
       const n = o.count ?? o.points?.length ?? 0;
       text = `${n} ${n === 1 ? 'eveniment localizat precis' : 'evenimente localizate precis'} în această zonă`;
     } else if (info.layer?.id.startsWith('camera')) {
@@ -477,6 +531,22 @@ export class CityMap {
     } else {
       this.map.flyTo({ ...HOME, padding, duration, essential: true });
     }
+  }
+
+  private focusStreet(id: string | null): void {
+    if (!this.map || !this.ready || !id) return;
+    const f = this.streets().find((s) => s.properties.id === id);
+    if (!f) return;
+    const pts = f.geometry.coordinates.flat();
+    const lons = pts.map((p) => p[0]);
+    const lats = pts.map((p) => p[1]);
+    this.map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], {
+      padding: { top: 120, bottom: 140, left: 60, right: this.rightInset() + 40 },
+      pitch: 55,
+      maxZoom: 16.2,
+      duration: this.reducedMotion ? 0 : 2400,
+      essential: true,
+    });
   }
 
   // Pulse through MapLibre paint properties; deck is rebuilt only while columns are moving.

@@ -1,0 +1,475 @@
+[
+  {
+    "id": "pmud_2022_current",
+    "url": "https://zmi.ro/wp-content/uploads/2026/06/PMUD-Iasi-Reactualizare-2022.pdf",
+    "checked_utc": "2026-10-17T21:32:22.646722+00:00",
+    "status": 200,
+    "final_url": "https://zmi.ro/wp-content/uploads/2026/06/PMUD-Iasi-Reactualizare-2022.pdf",
+    "content_type": "application/pdf",
+    "bytes": 21217528,
+    "tls_verified": true,
+    "sample_note": "Large PDF held in memory; extracted text only saved",
+    "file": "research\\samples\\codex\\pmud_2022_current_extracted.txt",
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "tempo_accidents_metadata",
+    "url": "http://statistici.insse.ro:8077/tempo-ins/matrix/TRN104A",
+    "checked_utc": "2026-10-17T21:32:26.679617+00:00",
+    "status": 200,
+    "final_url": "http://statistici.insse.ro:8077/tempo-ins/matrix/TRN104A",
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 4893,
+    "tls_verified": null,
+    "file": "research\\samples\\codex\\tempo_accidents_metadata.json",
+    "preview": "{\"ancestors\":[{\"name\":\"home\",\"code\":\"\",\"childrenUrl\":\"context\",\"comment\":null,\"url\":\"context\"},{\"name\":\"B. STATISTICA ECONOMICA\",\"code\":\"2\",\"childrenUrl\":\"context\",\"comment\":null,\"url\":\"context\"},{\"name\":\"TRANSPORTURI <a href=\\\"https://insse.ro/cms/ro/comunicate-de-presa-view?field_categorie_value_i",
+    "requests_verify_parameter": true,
+    "transport_note": "Plain HTTP, TLS not used"
+  },
+  {
+    "id": "tempo_casualties_metadata",
+    "url": "http://statistici.insse.ro:8077/tempo-ins/matrix/TRN105B",
+    "checked_utc": "2026-10-17T21:32:27.947334+00:00",
+    "status": 200,
+    "final_url": "http://statistici.insse.ro:8077/tempo-ins/matrix/TRN105B",
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 8059,
+    "tls_verified": null,
+    "file": "research\\samples\\codex\\tempo_casualties_metadata.json",
+    "preview": "{\"ancestors\":[{\"name\":\"home\",\"code\":\"\",\"childrenUrl\":\"context\",\"comment\":null,\"url\":\"context\"},{\"name\":\"B. STATISTICA ECONOMICA\",\"code\":\"2\",\"childrenUrl\":\"context\",\"comment\":null,\"url\":\"context\"},{\"name\":\"TRANSPORTURI <a href=\\\"https://insse.ro/cms/ro/comunicate-de-presa-view?field_categorie_value_i",
+    "requests_verify_parameter": true,
+    "transport_note": "Plain HTTP, TLS not used"
+  },
+  {
+    "id": "igpr_2025_page",
+    "url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2025",
+    "checked_utc": "2026-10-17T21:32:29.214792+00:00",
+    "status": 200,
+    "final_url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2025",
+    "content_type": "text/html",
+    "bytes": 48253,
+    "tls_verified": false,
+    "file": "research\\samples\\codex\\igpr_2025_page.txt",
+    "emails": [],
+    "links": [
+      "http://www.politiaromana.ro/files/pages_files/Acord_Sindicate_2013_si_Protocol.pdf",
+      "https://politiaromana.ro/ro/legislatie/responsabil-legea-544",
+      "https://politiaromana.ro/ro/contact",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2025",
+      "https://politiaromana.ro/ro/print?modul=pagina&link=buletinul-sigurantei-rutiere-raport-anul-2025",
+      "https://politiaromana.ro/files/pages_files/Raport_Buletinul_sigurantei_rutiere_2025.pdf",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF",
+      "https://www.mai.gov.ro/wp-content/uploads/2026/10/20240-din-29.09.2026.pdf",
+      "https://politiaromana.ro/ro/contact"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "igpr_2024_page",
+    "url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2024",
+    "checked_utc": "2026-10-17T21:32:30.725670+00:00",
+    "status": 200,
+    "final_url": "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2024",
+    "content_type": "text/html",
+    "bytes": 48310,
+    "tls_verified": false,
+    "file": "research\\samples\\codex\\igpr_2024_page.txt",
+    "emails": [],
+    "links": [
+      "http://www.politiaromana.ro/files/pages_files/Acord_Sindicate_2013_si_Protocol.pdf",
+      "https://politiaromana.ro/ro/legislatie/responsabil-legea-544",
+      "https://politiaromana.ro/ro/contact",
+      "https://politiaromana.ro/ro/prevenire/buletinul-sigurantei-rutiere/buletinul-sigurantei-rutiere-raport-anul-2024",
+      "https://politiaromana.ro/ro/print?modul=pagina&link=buletinul-sigurantei-rutiere-raport-anul-2024",
+      "https://politiaromana.ro/files/pages_files/BSR_2025_WEB.pdf",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF",
+      "https://www.mai.gov.ro/wp-content/uploads/2026/10/20240-din-29.09.2026.pdf",
+      "https://politiaromana.ro/ro/contact"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "ipj_544",
+    "url": "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+    "checked_utc": "2026-10-17T21:32:32.321676+00:00",
+    "status": 200,
+    "final_url": "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+    "content_type": "text/html",
+    "bytes": 42537,
+    "tls_verified": false,
+    "file": "research\\samples\\codex\\ipj_544.txt",
+    "emails": [
+      "ipjiasi@is.politiaromana.ro"
+    ],
+    "links": [
+      "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+      "https://is.politiaromana.ro/ro/contact",
+      "https://is.politiaromana.ro/ro/informatii-publice/responsabil-legea-544-2001",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_Legea_544_pentru_anul_2025_IPJ_IASI.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_Legea_544_pentru_anul_2024_IPJ_IASI.pdf",
+      "https://is.politiaromana.ro/files/pages_files/25-11-11-03-53-33Comunicat_de_presa_SAFEBORDER.pdf",
+      "https://is.politiaromana.ro/files/pages_files/RAPORT_EVALUARE__Legea_544_din_2001_pentru_anul_2023.pdf",
+      "https://is.politiaromana.ro/files/pages_files/RAPORT_EVALUARE__Legea_544_din_2001_pentru_anul_2022.docx",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_544_-_2021.docx",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_544_-_anul_2020.docx",
+      "https://is.politiaromana.ro/files/pages_files/20-03-04-11-18-32Raport_evaluare_544_-_2019.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_544_-_2018.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_implementare_Legea_544.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Raport_Evaluare_Legea_544_din_2001_pt_anul_2015.pdf",
+      "https://is.politiaromana.ro/files/pages_files/15-05-04-02-00-09RAPORT_DE_EVALUARE_A_IMPLEMENTÄRII_LEGII_NR._5442001_ÃN_ANUL_2014.pdf",
+      "https://is.politiaromana.ro/files/pages_files/15-05-05-03-01-131._Lista_documentelor_de_interes_public_emise.pdf",
+      "https://is.politiaromana.ro/files/pages_files/2._Lista_documentelor_produse_si-sau_gestionate_potrivit_legii.pdf",
+      "https://is.politiaromana.ro/files/pages_files/Raport_evaluare_Legea_544_IPJ_Iasi_pt_anul_2016.docx",
+      "https://is.politiaromana.ro/files/pages_files/15-01-27-02-27-16RAPORT_L_544_2013.pdf",
+      "https://is.politiaromana.ro/files/pages_files/RAPORT_L_544_2012.pdf",
+      "https://is.politiaromana.ro/files/pages_files/18-01-09-10-54-29Legea_nr_544_din_2001_actualiz.doc",
+      "http://www.politiaromana.ro/files/pages_files/14-09-01-09-13-10SISII.PDF",
+      "https://is.politiaromana.ro/ro/contact"
+    ],
+    "requests_verify_parameter": false
+  },
+  {
+    "id": "local_police_home",
+    "url": "https://politialocala-iasi.ro/",
+    "checked_utc": "2026-10-17T21:32:33.824548+00:00",
+    "status": 200,
+    "final_url": "https://politialocala-iasi.ro/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 226172,
+    "tls_verified": true,
+    "file": "research\\samples\\codex\\local_police_home.txt",
+    "emails": [
+      "politialocalais@yahoo.com"
+    ],
+    "links": [
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/",
+      "https://politialocala-iasi.ro/date-de-contact-2/74/",
+      "https://politialocala-iasi.ro/raport-de-evaluare-a-rezultatelor-activitatilor-desfasurate-de-politia-locala-iasi-2025/16593/",
+      "https://politialocala-iasi.ro/raport-de-evaluare-a-rezultatelor-activitatilor-desfasurate-de-politia-locala-iasi-2025/16593/",
+      "https://politialocala-iasi.ro/raport-de-evaluare-a-rezultatelor-activitatilor-desfasurate-de-politia-locala-iasi-2025/16593/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/raport-privind-actualizarea-si-schimbarii-uniformei-politiei-locale-in-romania/16729/",
+      "https://politialocala-iasi.ro/raport-privind-actualizarea-si-schimbarii-uniformei-politiei-locale-in-romania/16729/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/author/contact/",
+      "https://politialocala-iasi.ro/wp-content/uploads/2021/08/04082021.pdf",
+      "https://politialocala-iasi.ro/wp-content/uploads/2024/04/politica-interna-PLI-hartuire-1-1.pdf",
+      "https://politialocala-iasi.ro/solicitarea-informatiilor-de-interes-public/",
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/",
+      "https://politialocala-iasi.ro/date-de-contact-2/74/",
+      "https://politialocala-iasi.ro/solicitarea-informatiilor-de-interes-public/",
+      "https://politialocala-iasi.ro/category/bilanturi/",
+      "https://politialocala-iasi.ro/rapoarte-evaluare-legea-544-2001/",
+      "https://politialocala-iasi.ro/date-de-contact-2/74/"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "city_home",
+    "url": "https://www.primaria-iasi.ro/",
+    "checked_utc": "2026-10-17T21:32:37.095534+00:00",
+    "status": 200,
+    "final_url": "https://www.primaria-iasi.ro/",
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 127291,
+    "tls_verified": true,
+    "file": "research\\samples\\codex\\city_home.txt",
+    "emails": [
+      "informatii@primaria-iasi.ro"
+    ],
+    "links": [
+      "/dm_iasi/portal.nsf/atasament/57ADEF574947F20BC2258E64002CECD9/$FILE/Anunt reprogramare tratamente DDD din 18.08.2026 in 01.09.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/57ADEF574947F20BC2258E64002CECD9/$FILE/Anunt reprogramare tratamente DDD din 18.08.2026 in 01.09.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/3161678EF35023D1C2258E5E0027C10F/$FILE/Anunt ajutor .pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/3161678EF35023D1C2258E5E0027C10F/$FILE/Anunt ajutor .pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/941000C318943A2FC2258E4F0031DB71/$FILE/Anunt modificare tratamente DDD din 06.08.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/941000C318943A2FC2258E4F0031DB71/$FILE/Anunt modificare tratamente DDD din 06.08.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/D4B53107837A5BEDC2258E490031628F/$FILE/Anunt.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/D4B53107837A5BEDC2258E490031628F/$FILE/Anunt.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/6BDECFCB41605F2CC2258E340030A2AB/$FILE/Tratamente DDD IULIE- AUGUST.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/6BDECFCB41605F2CC2258E340030A2AB/$FILE/Tratamente DDD IULIE- AUGUST.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/BBC14DC6136FEAFEC2258E2C002BBB18/$FILE/Anunt.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/BBC14DC6136FEAFEC2258E2C002BBB18/$FILE/Anunt.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/C754A1D05A2A6EE9C2258E280024D183/$FILE/Anunt buletine 28 si 29.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/C754A1D05A2A6EE9C2258E280024D183/$FILE/Anunt buletine 28 si 29.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/62CE788553652F12C2258E2100289A92/$FILE/Anunt modificare tratamente DDD din 16.06.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/62CE788553652F12C2258E2100289A92/$FILE/Anunt modificare tratamente DDD din 16.06.2026.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/6356BEF856C0C989C2258E21002CB0E0/$FILE/ANUNT Buletine 26 si 17.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/6356BEF856C0C989C2258E21002CB0E0/$FILE/ANUNT Buletine 26 si 17.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/FBAECDD76F17369FC2258C6800403A98/$FILE/Raport de activitate al primarului Mihai Chirica pentru anul  2024.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/FBAECDD76F17369FC2258C6800403A98/$FILE/Raport de activitate al primarului Mihai Chirica pentru anul  2024.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/828F8155A1016384C2258AF60024F0A6/$FILE/Raportul de activitate al primarului Mihai Chirica - anul 2023.pdf?Open",
+      "/dm_iasi/portal.nsf/atasament/828F8155A1016384C2258AF60024F0A6/$FILE/Raportul de activitate al primarului Mihai Chirica - anul 2023.pdf?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2022-00033482?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2022-00033482?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2021-0001453A?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2021-0001453A?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2020-0001454A?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+2020-0001454A?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+20162020-00014552?Open?Open",
+      "/dm_iasi/portal.nsf/pagini/raportul+primarului+municipiului+iasi+20162020-00014552?Open?Open"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "ckan_procurement",
+    "url": "https://data.gov.ro/api/3/action/package_search?q=achizitii&rows=5",
+    "checked_utc": "2026-10-17T21:32:39.389194+00:00",
+    "status": 200,
+    "final_url": "https://data.gov.ro/api/3/action/package_search?q=achizitii&rows=5",
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 103648,
+    "tls_verified": true,
+    "file": "research\\samples\\codex\\ckan_procurement.json",
+    "datasets": [
+      {
+        "id": "achizitii",
+        "title": "Achizitii",
+        "licence": "uk-ogl",
+        "resources": [
+          [
+            "Planul anual de achizitii publice - 2012",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/2df0a28b-697a-49dc-b948-096f6a5d1118/download/planachiz2012.pdf"
+          ],
+          [
+            "Planul anual de achizitii publice - 2013",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/eb8c77b1-e1b4-4900-81a9-63705e9982a4/download/planachiz2013.pdf"
+          ],
+          [
+            "Planul anual de achizitii publice - 2014",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/9efdb2d2-f0c4-4efb-b06f-b1a8cd4c17d9/download/paap-2014.pdf"
+          ],
+          [
+            "Planul anual de achizitii publice - 2015",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/c7e1162b-733f-47df-bca7-e9a060c6bfa0/download/paap2015.pdf"
+          ],
+          [
+            "Planul anual de achizitii publice - 2016",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/70787679-f465-4483-90a8-9f908a0d0621/download/paap-2016-a-ii-a-forma.pdf"
+          ],
+          [
+            "Achizitii publice realizate de MT",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/55e1e8d4-204b-4341-89cc-d9d2fae4e03d/download/situatie-achizitii-publice-2013.pdf"
+          ],
+          [
+            "Achizitii publice directe",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/00ee4f0d-2286-4e83-860b-589dd90a3008/download/achizitii-directe-2012-dgea.pdf"
+          ],
+          [
+            "Achizitii publice directe",
+            "https://data.gov.ro/dataset/bd905181-523e-4296-b577-0690bb809443/resource/12a4df4b-745b-446c-bc28-80b560ff5f91/download/achizitii-directe-2013-doc.pdf"
+          ]
+        ]
+      },
+      {
+        "id": "achizitiipublice",
+        "title": "Achizitii publice",
+        "licence": "uk-ogl",
+        "resources": [
+          [
+            "Plan achizitii publice MTS_1",
+            "https://data.gov.ro/dataset/9c4f4935-9dc9-4fdb-b949-6b03531c4fc4/resource/012ccfbb-3d4c-4fdc-84cd-cd4400ccebd1/download/paap-2016-vp-2016-09-26.xlsx"
+          ],
+          [
+            "Plan achizitii publice MTS_2",
+            "https://data.gov.ro/dataset/9c4f4935-9dc9-4fdb-b949-6b03531c4fc4/resource/41ab93d7-e447-42f4-9787-cf39d8b25ce8/download/paap-2016-10-19.xls"
+          ],
+          [
+            "Centralizator achizitii publice MTS",
+            "https://data.gov.ro/dataset/9c4f4935-9dc9-4fdb-b949-6b03531c4fc4/resource/b5209ba5-8100-4f33-85df-1fe0be3a7c29/download/centralizator-achiziii-publice2016110816.30.xls"
+          ]
+        ]
+      },
+      {
+        "id": "advsvds",
+        "title": "ACHIZITII PUBLICE",
+        "licence": "CC-BY-4.0",
+        "resources": [
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziţii publice (semestrul I 2017).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/5e24718e-531d-4349-893b-ae17e37e6063/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziţii publice (semestrul I 2018).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/d49054ef-ad9a-4096-ab9b-448159c6abf6/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziții publice (semestrul I 2019).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/ccade905-4b0c-4f8d-86c9-3dac4b4896f3/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziţii publice (semestrul I 2020).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/b5b5ec76-136d-4571-8574-5e60434070ee/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziţii publice (semestrul I 2021).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/bf7d50b8-91b5-4ab0-b97e-baf8efc67811/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziţii publice (semestrul I 2022).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/d2aca36a-cc71-4c62-9914-9e5ff692e00e/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziții publice (semestrul I 2023).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/40676d4c-97ef-4b18-a98b-571720df1197/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ],
+          [
+            "Centralizatorul achizițiilor publice - situația executării contractelor de achiziții publice (semestrul I 2024).xlsx",
+            "https://data.gov.ro/dataset/649a6fec-9d82-4fa9-8388-03c11569085a/resource/115ab3e6-a3c0-48ab-a031-381bd27e1805/download/centralizatorul-achiziiilor-publice-situaia-executrii-contractelor-de-achiziii-publice-semestru.xlsx"
+          ]
+        ]
+      },
+      {
+        "id": "raport-achizitii-publice-2019",
+        "title": "RAPORT ACHIZITII PUBLICE 2019",
+        "licence": "uk-ogl",
+        "resources": [
+          [
+            "RAPORT ACHIZITII PUBLICE 2019",
+            "https://data.gov.ro/dataset/ee9b114d-b5a1-460c-962f-102da9c493a4/resource/7f146cd2-c58e-431d-9df2-3be1561e0eed/download/ap2019-l544-site.xml"
+          ]
+        ]
+      },
+      {
+        "id": "achiziti-publice-2019",
+        "title": "Achizitii publice 2019",
+        "licence": "uk-ogl",
+        "resources": [
+          [
+            "Achizitii directe 2019 - T1",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/4deb36c1-e977-487d-88a9-58a0beaab064/download/achizitiidirecte2019t1.xlsx"
+          ],
+          [
+            "Anunturi initiere 2019 - T1",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/480ecc2d-616b-4f6d-9581-88ce82cc6a6e/download/anunturiinitiere2019t1.xlsx"
+          ],
+          [
+            "Contracte 2019 - T1",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/04345127-97ea-4524-bae1-e43d19c58c5d/download/raport-t-1-2019.xls"
+          ],
+          [
+            "Achizitii directe 2019 - T2",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/858ba60e-dc7a-44fa-a6d2-f14d1b4a9037/download/achizitiidirecte2019t2.xlsx"
+          ],
+          [
+            "Anunturi initiere 2019 - T2",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/d5c27dd2-7d2e-47b2-9329-4f2a9037f86e/download/anunturiinitiere2019t2.xlsx"
+          ],
+          [
+            "Contracte 2019 - T2",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/cd2de7fc-44a7-457b-8315-3e0a92720aa3/download/raport-t-2-2019.xls"
+          ],
+          [
+            "Contracte 2019 - T3",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/522c1615-9898-4843-84da-b49fea56a3d1/download/raport-t-3-2019.xls"
+          ],
+          [
+            "Anunturi initiere 2019 - T3",
+            "https://data.gov.ro/dataset/a9e34187-e414-431a-bf1a-53ebf9611656/resource/ab0de2df-c5f3-4a78-8fa7-b61b4d15d734/download/anunturiinitiere2019t3.xlsx"
+          ]
+        ]
+      }
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "cnairow_blackspots_candidate",
+    "url": "https://www.cnadnr.ro/ro/puncte-negre",
+    "checked_utc": "2026-10-17T21:32:41.217004+00:00",
+    "status": 404,
+    "final_url": "https://www.cnadnr.ro/ro/puncte-negre",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 65575,
+    "tls_verified": true,
+    "file": "research\\samples\\codex\\cnairow_blackspots_candidate.txt",
+    "emails": [
+      "office@andnet.ro",
+      "registraturacnair@andnet.ro"
+    ],
+    "links": [
+      "http://www.cnadnr.ro/ro/transparenta/raport%C4%83ri-contabile-semestriale",
+      "/ro/compania/raport-anual-cu-privire-la-remuneratiile-si-alte-avantaje-acordate-administratorilor-si",
+      "/ro/compania/raport-final-25032026",
+      "http://www.cnadnr.ro/ro/transparenta/raportul-administratorilor-0",
+      "/ro/compania/raportul-anual-al-intreprinderii-publice",
+      "http://www.cnadnr.ro/ro/transparenta/raportul-auditorului-independent",
+      "http://www.cnadnr.ro/sites/default/files/CNAIR_Proiecte%20in%20regie%20proprie_0.pdf",
+      "http://www.cnadnr.ro/sites/default/files/siguranta_circulatiei_final.pdf",
+      "/ro/transparenta/situa%C8%9Bii-financiare-%C8%99i-raport%C4%83ri",
+      "/ro/transparenta/raportul-administratorilor-0",
+      "/ro/transparenta/raportul-auditorului-independent",
+      "/ro/transparenta/raport%C4%83ri-contabile-semestriale",
+      "http://www.cnadnr.ro/sites/default/files/STADIULPROIECTELORDEINFRASTRUCTURA.pdf",
+      "/ro/e-cerere-544",
+      "/ro/contact",
+      "https://cnadnr.ro/sites/default/files/ISO%202026.pdf"
+    ],
+    "requests_verify_parameter": true
+  },
+  {
+    "id": "court_soap_ucidere",
+    "url": "http://portalquery.just.ro/query.asmx",
+    "checked_utc": "2026-10-17T21:32:43.059134+00:00",
+    "subject": "ucidere din culpa",
+    "status": 200,
+    "content_type": "text/xml; charset=utf-8",
+    "bytes": 46604,
+    "count": 3,
+    "redacted_sample": [
+      {
+        "numar": "776/245/2025",
+        "data": "2025-01-13T14:41:00",
+        "institutie": "JudecatoriaIASI",
+        "departament": "NCPP Sectia Penala",
+        "categorieCaz": "Penal",
+        "stadiuProcesual": "Fond",
+        "obiect": "ucidere din culpă (art.192 NCP)"
+      },
+      {
+        "numar": "1130/245/2025",
+        "data": "2025-01-15T14:55:00",
+        "institutie": "JudecatoriaIASI",
+        "departament": "NCPP Sectia Penala",
+        "categorieCaz": "Penal",
+        "stadiuProcesual": "Fond",
+        "obiect": "ucidere din culpă (art.192 NCP)"
+      }
+    ],
+    "privacy": "Response with parties not persisted; only non-party case metadata retained",
+    "fault": []
+  },
+  {
+    "id": "court_soap_vatamarea",
+    "url": "http://portalquery.just.ro/query.asmx",
+    "checked_utc": "2026-10-17T21:32:44.387681+00:00",
+    "subject": "vatamarea corporala din culpa",
+    "status": 200,
+    "content_type": "text/xml; charset=utf-8",
+    "bytes": 9888,
+    "count": 1,
+    "redacted_sample": [
+      {
+        "numar": "1691/245/2025",
+        "data": "2025-01-20T14:37:00",
+        "institutie": "JudecatoriaIASI",
+        "departament": "NCPP Sectia Penala",
+        "categorieCaz": "Penal",
+        "stadiuProcesual": "Fond",
+        "obiect": "vătămarea corporală din culpă (art.196 NCP) punerea în circulaţie sau conducerea unui autovehicul neînmatriculat (art.334 NCP); refuzul sau sustragerea de la prelevarea de mostre biologice (art.337 NCP); părăsirea locului accidentului ori modif"
+      }
+    ],
+    "privacy": "Response with parties not persisted; only non-party case metadata retained",
+    "fault": []
+  }
+]

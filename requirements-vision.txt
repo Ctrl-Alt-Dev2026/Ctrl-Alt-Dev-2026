@@ -1,0 +1,5 @@
+# Optional live camera inference. Install separately from the lightweight API.
+ultralytics==8.4.181
+openai-clip==1.0.1
+# openai-clip imports pkg_resources, removed in setuptools 81.
+setuptools<81

@@ -1,17 +1,18 @@
 import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, inject, input, signal } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { lei, participantLabel, PRECISE } from '../../../core/format/labels';
+import { StreetMetric } from '../../../core/models/streets';
 import { DataStore } from '../../../core/state/data.store';
 import { LocationDossier } from '../../location/location-dossier/location-dossier';
+import { AttentionDrawer } from '../attention-drawer/attention-drawer';
 import { CameraViewer } from '../camera-viewer/camera-viewer';
 import { CityMap } from '../city-map/city-map';
 import { HotspotList } from '../hotspot-list/hotspot-list';
-
-const TOUR_STEP_MS = 7000;
+import { StreetPanel } from '../street-panel/street-panel';
 
 @Component({
   selector: 'app-map-page',
-  imports: [CityMap, HotspotList, LocationDossier, CameraViewer, RouterLink],
+  imports: [CityMap, HotspotList, LocationDossier, CameraViewer, StreetPanel, AttentionDrawer],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './map-page.html',
   styleUrl: './map-page.scss',
@@ -25,20 +26,20 @@ export class MapPage {
   readonly id = input<string>();
 
   protected readonly applied = signal(false);
-  protected readonly touring = signal(false);
+  protected readonly attentionOpen = signal(false);
+  protected readonly streetLegend: Record<StreetMetric, string> = {
+    isu: 'stradă: intervenții ISU 2024–2026',
+    presa: 'stradă: relatări în presă 2026',
+    pmud: 'arteră: accidente IPJ 2021 (PMUD)',
+  };
   protected readonly basemapFailed = signal(false);
   protected readonly panelOpen = signal(true);
-  private tourTimer?: ReturnType<typeof setTimeout>;
+  // Streets (ISU + PMUD layer) or scored locations; tabs only when the dataset has both.
+  protected readonly view = signal<'streets' | 'locations'>('streets');
+  protected readonly hasStreets = computed(() => this.store.streets().features.length > 0);
+  protected readonly showStreets = computed(() => this.hasStreets() && (this.view() === 'streets' || this.store.hotspots().length === 0));
 
   protected readonly participantLabel = participantLabel;
-  protected readonly added = computed(() => {
-    const a = this.store.lastAdded();
-    return a && a.lat !== null && a.lon !== null ? a : null;
-  });
-  protected readonly addedPoint = computed<[number, number] | null>(() => {
-    const a = this.added();
-    return a ? [a.lon!, a.lat!] : null;
-  });
   protected readonly rank = computed(() => this.store.rankOf().get(this.store.selectedId() ?? '') ?? 0);
   protected readonly approxCount = computed(
     () => this.store.mappable().filter((a) => !PRECISE.has(a.precizie_loc)).length,
@@ -78,11 +79,6 @@ export class MapPage {
       this.store.state();
       this.store.select(this.id() ?? null);
     });
-    effect(() => {
-      this.store.session.dataMode();
-      this.applied.set(false);
-      this.stopTour();
-    });
 
     const wide = matchMedia('(min-width: 56rem)');
     const measure = () => {
@@ -91,23 +87,22 @@ export class MapPage {
     };
     measure();
     addEventListener('resize', measure);
-    inject(DestroyRef).onDestroy(() => {
-      removeEventListener('resize', measure);
-      clearTimeout(this.tourTimer);
-    });
+    inject(DestroyRef).onDestroy(() => removeEventListener('resize', measure));
+  }
+
+  protected openStreet(id: string): void {
+    this.panelOpen.set(true);
+    this.view.set('streets');
+    this.store.selectedStreetId.set(id);
+    if (this.store.selectedId()) this.router.navigate(['/']);
   }
 
   protected open(id: string): void {
-    this.store.lastAdded.set(null);
+    this.store.selectedStreetId.set(null);
     this.router.navigate(['/locatie', id]);
   }
 
-  protected dismissAdded(): void {
-    this.store.lastAdded.set(null);
-  }
-
   protected close(): void {
-    this.stopTour();
     this.router.navigate(['/']);
   }
 
@@ -119,36 +114,14 @@ export class MapPage {
     this.applied.update((v) => !v);
   }
 
-  protected startTour(): void {
-    const ids = this.store.visibleHotspots().map((h) => h.id);
-    if (!ids.length) return;
-    this.touring.set(true);
-    this.panelOpen.set(true);
-    const step = (i: number) => {
-      if (!this.touring()) return;
-      if (i >= ids.length) {
-        this.stopTour();
-        this.router.navigate(['/']);
-        return;
-      }
-      this.open(ids[i]);
-      this.tourTimer = setTimeout(() => step(i + 1), TOUR_STEP_MS);
-    };
-    step(0);
-  }
-
   protected toggleCameras(): void {
     this.store.showCameras.update((v) => !v);
     if (!this.store.showCameras()) this.store.selectedCameraId.set(null);
   }
 
   protected onEscape(): void {
+    if (this.attentionOpen()) return; // the dialog closes itself on Escape
     if (this.store.selectedCameraId()) this.store.selectedCameraId.set(null);
-    else this.stopTour();
-  }
-
-  protected stopTour(): void {
-    this.touring.set(false);
-    clearTimeout(this.tourTimer);
+    else if (this.store.selectedStreetId()) this.store.selectedStreetId.set(null);
   }
 }

@@ -1,0 +1,7 @@
+{
+  "url": "https://worldstreet.ro/alarmant-in-iasi-s-au-produs-peste-90-de-accidente-cu-biciclisti-in-acest-an-vezi-grafica/",
+  "status": 200,
+  "content_type": "text/html",
+  "sample_observation": "2017 article attributes 92 cyclist-involved crashes in the first nine months of 2017 to IPJ Iasi; aggregate, not events.",
+  "retention_note": "Page payload removed after source inspection."
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "source": "https://apix.ro/tomesti-primaria-a-comandat-un-studiu-de-trafic-pentru-105-000-lei/",
+    "browser_observation": "Article rendered during this session",
+    "http_status": null,
+    "sample": {
+      "buyer": "Primaria Tomesti",
+      "supplier": "Horand Company SRL",
+      "value_ron_ex_vat_reported": 105000,
+      "article_date": "2021-09-28",
+      "award_date": null
+    },
+    "provenance": "Secondary reporting; primary contract not independently verified"
+  },
+  {
+    "source": "https://transparenta24.ro/achizitie/4233874-municipiul-buzau/35752863-urban-scope/DA40578469",
+    "browser_observation": "Page rendered; direct HTTP attempt returned403",
+    "http_status": null,
+    "sample": {
+      "buyer": "MUNICIPIUL BUZAU",
+      "supplier": "URBAN SCOPE",
+      "value_ron_reported": 223000,
+      "publication_date": "2026-06-09",
+      "completion_date": "2026-06-11",
+      "id": "DA40578469"
+    },
+    "provenance": "Secondary civic mirror; primary amount unverified"
+  },
+  {
+    "source": "https://www.licitatia.ro/servicii-de-realizare-audit-de-siguranta-rutiera-stadiul---pentru-obiectivul-de-investitii-varianta-de-ocolire-ardud-lungime------km-7890387-restricted.html",
+    "browser_observation": "Public summary rendered; paid remainder not accessed",
+    "http_status": null,
+    "sample": {
+      "object": "Road safety audit stage1, Ardud bypass5.780km",
+      "value_ron_reported": 17340,
+      "mirror_tender_date": "2024-01-18",
+      "mirror_publication_date": "2024-01-22"
+    },
+    "provenance": "Date differs from primary award; official record takes precedence"
+  },
+  {
+    "source": "https://support.google.com/waze/partners/answer/9320528?hl=en",
+    "browser_observation": "Failed browser fetch; guessed answer ID not established",
+    "http_status": null,
+    "sample": null,
+    "provenance": "UNVERIFIED; replaced with official linked answer10618477"
+  }
+]

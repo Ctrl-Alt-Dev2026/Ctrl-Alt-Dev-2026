@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+
+<title>Autoritatea Rutieră Română</title>
+<meta name="description" content="Autoritatea Rutieră Română" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<meta name="keywords" content="arr, autoritatea rutiera romana, Autoritatea Rutieră Română - ARR" >
+<meta name="author" content="Autoritatea Rutieră Română - ARR" >
+<meta name="rating" content="safe for kids" >
+<meta name="revisit-after" content="4 days" >
+<meta name="robots" content="index, follow all, all" >
+
+<meta name="geo.region" content="RO-B" />
+<meta name="geo.placename" content="București" />
+<meta name="geo.position" content="" />
+<meta name="ICBM" content="" />
+
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+  <!-- Bootstrap core CSS -->
+
+ <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/bootstrap/bootstrap.min.css" />
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/animate/animate.min.css"/>
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/magnific-popup/magnific-popup.css" />
+
+    <!-- Template Style -->
+    <link rel="stylesheet" href="_design_templates/arr2021/assets_lcd/css/style.css" />
+       <link href="_design_templates/arr2021/js/includes/font-awesome/css/font-awesome.min.css?v=1234" rel="stylesheet">   
+     <meta name="theme-color" content="#98cd68">
+   
+     
+     	<link href="_design_templates/arr2021/css/main-front.css" rel="stylesheet">
+        <link href="_design_templates/arr2021/css/main-front-1200.css" rel="stylesheet">
+        <link href="_design_templates/arr2021/css/main-front-768.css" rel="stylesheet">
+        <link href="_design_templates/arr2021/css/main-front-990.css" rel="stylesheet">
+        <link href="_design_templates/arr2021/css/main-front-992.css" rel="stylesheet">
+    		
+     
+</head>
+
+<body class="header-sticky header-over header-fixed">
+
+<div id="wrapper">
+
+  <div class="nav-wrapper" > 
+
+<!--=================================
+    header -->
+    <header class="header header-style-02">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-lg-between align-items-center">
+                <div class="social d-inline-block">
+                    <ul class="list-unstyled">
+                      
+                      <li><a href="https://www.arr.ro"><img class="img-fluid" src="_design_templates/arr2021/images/flag-ro.png"> </a></li>
+                      <li><a href="https://www.arr.ro"><img class="img-fluid" src="_design_templates/arr2021/images/flag-en.png"> </a> </li>
+                   
+                    </ul>
+                  </div>
+                <a class="navbar-brand logo-light" href="https://www.arr.ro">
+                <img class="img-fluid" src="_design_templates/arr2021/images/logo-arr-complet.png" alt="Logo {{@meta_titlu}}">
+              </a>
+              <a class="navbar-brand logo-dark" href="https://www.arr.ro">
+                <img class="img-fluid" src="_design_templates/arr2021/images/logo-arr.png" alt="Logo {{@meta_titlu}}">
+              </a>
+                <a href="arr_doc_1_contact_pg_0.htm" class="btn btn-primary-square text-white btn-square d-none d-lg-block">Contactați-ne</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <nav class="navbar navbar-static-top navbar-expand-lg">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+               <li class="nav-item  "><a class="nav-link" href="#"><i class="fa fa-home fa-lg " aria-hidden="true"></i></a></li>
+               
+              <li class="dropdown nav-item">
+                <a href="arr_doc_7_despre-autoritatea-rutiera-romana-arr_pg_0.htm" class="nav-link" data-toggle="dropdown">Despre</a>
+                  <ul class="dropdown-menu megamenu dropdown-menu-lg">
+                    <li>
+                      <div class="row">
+                        
+                        <div class="col-lg-4">
+                          <ul class="pl-0">
+                           <li><a class="dropdown-item" href="arr_doc_7_despre-autoritatea-rutiera-romana-arr_pg_0.htm"><i class="fas fa-arrow-right"></i>Despre instituție</a></li>
+                               <li><a class="dropdown-item" href="arr_doc_227_conducere_pg_0.htm"><i class="fas fa-arrow-right"></i>Conducere</a></li> 
+                               <li><a class="dropdown-item" href="arr_doc_541_agenda-conducerii_pg_0.htm"><i class="fas fa-arrow-right"></i>Agenda conducerii</a></li> 
+                            
+                              <li><a class="dropdown-item border-0 pb-lg-0" href="arr_doc_228_organizare_pg_0.htm"><i class="fas fa-arrow-right"></i>Organizare</a></li>
+                        </ul>
+                        </div>
+                         <div class="col-lg-4">
+                          <ul class="pl-0">
+                            <li><a class="dropdown-item" href="arr_doc_229_programe-si-strategii_pg_0.htm"><i class="fas fa-arrow-right"></i>Programe și strategii</a></li>
+                         
+                            <li><a class="dropdown-item" href="arr_doc_230_rapoarte-si-studii_pg_0.htm"><i class="fas fa-arrow-right"></i>Rapoarte și studii</a></li>
+							  
+							   <li><a class="dropdown-item border-0 pb-lg-0" href="https://www.arr.ro/gdpr"><i class="fas fa-arrow-right"></i>GDPR</a></li>
+                          </ul>
+                        </div> 
+                          
+                        <div class="col-lg-4">
+                          <ul class="pl-0">
+                          <li><a class="dropdown-item" href="ctg_15_agentiile-teritoriale-arr_pg_0.htm"><i class="fas fa-arrow-right"></i>Agenții teritoriale ARR</a></li>
+                          <li><a class="dropdown-item border-0 pb-lg-0" href="https://www.arr.ro/arr_doc_1_contact_pg_0.htm"><i class="fas fa-arrow-right"></i>Date de contact</a></li>
+                        </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="arr_doc_133_solicitare-informatii_pg_0.htm" class="nav-link" data-toggle="dropdown">Info publice</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="arr_doc_133_solicitare-informatii_pg_0.htm"><i class="fas fa-arrow-right"></i>Solicitare informații</a></li>
+                 <li><a class="dropdown-item" href="arr_doc_223_buletinul-informativ-legea-544-2001_pg_0.htm"><i class="fas fa-arrow-right"></i>Buletinul informativ </a></li>
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle " href="#"><i class="fas fa-arrow-right"></i>Date financiare
+                      <!-- toggle icon -->
+                      <span class="toggle-icon fas fa-chevron-right"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="arr_doc_224_buget_pg_0.htm"><i class="fas fa-arrow-right"></i>Buget</a></li>
+                      <li><a class="dropdown-item" href="arr_doc_225_bilanturi-contabile_pg_0.htm"><i class="fas fa-arrow-right"></i>Bilanțuri contabile</a></li>
+                      <li><a class="dropdown-item border-0 pb-lg-0" href="arr_doc_135_achizitii-publice_pg_0.htm"><i class="fas fa-arrow-right"></i>Achiziții publice</a></li>
+                    </ul>
+                  </li>
+                     <li><a class="dropdown-item" href="arr_doc_226_model-cereri-formulare-tipizate_pg_0.htm"><i class="fas fa-arrow-right"></i>Model cereri/formulare tipizate</a></li>
+                    <li><a class="dropdown-item  border-0 pb-lg-0" href="arr_doc_136_declaratii-de-avere-si-interese_pg_0.htm"><i class="fas fa-arrow-right"></i>Declaraţii de avere şi interese </a></li> 
+                    
+                   
+                    
+                </ul>
+              </li>
+                    <li class="dropdown nav-item">
+                <a href="arr_doc_162_servicii_pg_0.htm" class="nav-link" data-toggle="dropdown">Servicii</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="servicii_doc_163_eliberare-licente-transport_pg_0.htm"><i class="fas fa-arrow-right"></i>Eliberare licenţe transport </a></li>
+                 <li><a class="dropdown-item" href="servicii_doc_164_eliberare-atestate_pg_0.htm"><i class="fas fa-arrow-right"></i>Eliberare atestate </a></li>
+                
+                     <li><a class="dropdown-item" href="servicii_doc_165_activitati-conexe_pg_0.htm"><i class="fas fa-arrow-right"></i>Activităţi conexe </a></li>
+                     <li><a class="dropdown-item" href="servicii_doc_166_cartele-tahografe-digitale_pg_0.htm"><i class="fas fa-arrow-right"></i>Cartele tahografe digitale  </a></li>
+                     <li><a class="dropdown-item" href="servicii_doc_658_profesii-reglementate_pg_0.htm"><i class="fas fa-arrow-right"></i>Profesii Reglementate </a></li>
+                    
+                    
+                    <li><a class="dropdown-item border-0 pb-lg-0" href="arr_doc_142_tarife_pg_0.htm"><i class="fas fa-arrow-right"></i>Tarife</a></li> 
+                </ul>
+              </li> 
+                    
+                    <li class="dropdown nav-item">
+                <a href="arr_doc_144_transport_pg_0.htm" class="nav-link" data-toggle="dropdown">Transport</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="arr_doc_849_brexit_pg_0.htm"><i class="fas fa-arrow-right"></i>BREXIT </a></li>
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle " href="#"><i class="fas fa-arrow-right"></i>Transport persoane
+                      <!-- toggle icon -->
+                      <span class="toggle-icon fas fa-chevron-right"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="transport_doc_147_transport-rutier-public_pg_0.htm"><i class="fas fa-arrow-right"></i>Transport rutier public</a></li>
+                      <li><a class="dropdown-item" href="transport_doc_582_transport-in-regim-de-inchiriere_pg_0.htm"><i class="fas fa-arrow-right"></i>Transport în regim de închiriere</a></li>
+                        <li><a class="dropdown-item" href="transport_doc_610_transport-alternativ_pg_0.htm"><i class="fas fa-arrow-right"></i>Transport alternativ</a></li>
+                      <li><a class="dropdown-item border-0 pb-lg-0" href="transport_doc_148_transport-international_pg_0.htm"><i class="fas fa-arrow-right"></i>Transport internaţional</a></li>
+                    </ul>
+                  </li>
+                     <li class="dropdown-submenu border-0 pb-lg-0">
+                    <a class="dropdown-item dropdown-toggle " href="#"><i class="fas fa-arrow-right"></i>Transport marfă
+                      <!-- toggle icon -->
+                      <span class="toggle-icon fas fa-chevron-right"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="transport_doc_145_c-e-m-t_pg_0.htm"><i class="fas fa-arrow-right"></i>C.E.M.T.</a></li>
+                     
+                      <li><a class="dropdown-item border-0 pb-lg-0" href="transport_doc_143_transport-marfuri-periculoase_pg_0.htm"><i class="fas fa-arrow-right"></i>Transport mărfuri periculoase - ADR</a></li>
+                    </ul>
+                  </li>
+                    
+                    
+                </ul>
+              </li>  
+                    
+                   <li class="nav-item  "><a class="nav-link" href="https://www.arr.ro/arr_doc_149_scoli-conducatori-auto_pg_0.htm">Școli auto</a></li>  
+                    <li class="dropdown nav-item">
+                <a href="arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm" class="nav-link" data-toggle="dropdown"><abbr title="Siguranţa Infrastructurii Rutiere">S.I.R.</abbr></a>
+                <ul class="dropdown-menu">
+                 
+                 <li><a class="dropdown-item" href="https://www.arr.ro/ctg_19_s-i-r-legislatie_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Legislaţie</a></li>
+          <li><a href="http://sir.arr.ro/" title='' target="_blank" class="dropdown-item"><i class="fas fa-arrow-right"></i> Anunturi proiecte</a></li>
+          <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_156_formare_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Formare</a></li>
+          <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_150_r-a-i-s-r_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> <abbr title="Registrul auditorilor/inspectorilor de siguranţă rutieră">R.A.I.S.R.</abbr></a></li>
+          <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_218_r-a-a-i-s-r_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> <abbr title="">R.A.A.I.S.R.</abbr></a></li>
+          <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_171_tarife_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Tarife</a></li>
+          <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_152_clasificari-ale-retelei-rutiere_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Clasificări ale reţelei rutiere</a></li>
+			
+			 <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_472_definire-punct-negru_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Definire Punct Negru</a></li>
+			
+			<li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_512_costuri-medii-ale-accidentelor-cu-persoane-decedate-si-ale-accidentelor-rutiere-grave_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Costuri sociale</a></li>
+           <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_153_publicatii_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Publicaţii</a>
+           
+           
+            <li><a class="dropdown-item" href="https://www.arr.ro/s-i-r_doc_219_liste-cadru-de-verificare_pg_0.htm" title=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-arrow-right"></i> Liste Cadru de Verificare</a></li>
+           
+           
+        <li><a class="dropdown-item border-0 pb-lg-0" href="https://www.arr.ro/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+              </li>
+                    
+                    <li class="dropdown nav-item">
+                <a href="#" class="nav-link" data-toggle="dropdown">UTILE</a>
+                <ul class="dropdown-menu">
+              <li><a  class="dropdown-item " href="https://www.arr.ro/arr_doc_132_formulare_pg_0.htm" title="Formulare"><i class="fas fa-arrow-right"></i> Formulare</a></li>
+   
+			
+
+			<li><a  class="dropdown-item " href="https://www.arr.ro/ctg_5_legislatie-nationala_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Legislaţie naţională</a></li>
+          <li><a class="dropdown-item " href="https://www.arr.ro/ctg_6_reglementari-ue_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Reglementari UE</a></li>
+           <li><a class="dropdown-item " href="https://www.arr.ro/ctg_22_arhiva-legislatie_pg_0.htm" title='Arhivă legislaţie'><i class="fas fa-arrow-right"></i> Arhivă legislaţie</a></li>
+          			<li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_1298_calendarul-de-examinare-teoretica-pentru-perioada-01-01-2026-31-12-2026_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Calendar examinare teoretica</a></li>
+        	
+			<li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_638_informatii-utile-raportari-online_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Informații utile raportări online</a></li>
+			
+          <li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_122_info-operatori-transport-persoane_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Informaţii utile transport persoane</a></li>
+          <li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_123_info-operatori-transport-marfuri_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Informaţii utile transport mărfuri</a></li>
+          <li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_124_info-operatori-transport-cont-propriu_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Informaţii utile transport cont propriu</a></li>
+			<li><a class="dropdown-item " href="https://www.arr.ro/arr_doc_561_informatii-utile-referitoare-la-restituirea-de-accize_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Informaţii utile restituire accize</a></li>
+			
+          <li><a class="dropdown-item "  href="https://www.arr.ro/ctg_14_intrebari-frecvente_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Întrebări frecvente</a></li>
+          <li><a class="dropdown-item border-0 pb-lg-0" href="https://www.arr.ro/arr_doc_125_legaturi-utile_pg_0.htm" title=''><i class="fas fa-arrow-right"></i> Legături utile</a></li>
+         
+                </ul>
+              </li>
+                    
+                    
+                   <li class="nav-item  "><a class="nav-link" href="https://www.arr.ro/ctg_2_noutati_pg_0.htm">Noutăți</a></li>
+                 
+             
+                    
+               <li class="nav-item  "><a class="nav-link" href="https://www.arr.ro/arr_doc_1003_integritate-institutionala_pg_0.htm">Integritate</a></li>  
+					
+					<li class="nav-item  "><a class="nav-link" href="https://www.arr.ro/ctg_45_comunicate-de-presa_pg_0.htm">Comunicate de presă</a></li> 
+            </ul>
+                  
+                  
+                <div class="d-none d-lg-flex ml-auto mr-5 mr-lg-0 pr-4 pr-lg-0">
+                <ul class="nav ml-5 ml-lg-0 align-self-center">
+                  <li class="header-search nav-item">
+                    <div class="search">
+                      <a class="search-btn not_click" href="javascript:void(0);"></a>
+                      <div class="search-box not-click">
+                        
+                          
+                          <!-- Search start -->
+										
+											<input class="not-click form-control" type="search" placeholder="Căutare" id="qs" value="">
+                                             <a href="javascript:;" class="search-button" id="lnkcautasite"> <i class="fa fa-search not-click"></i></a>
+                                         <!-- Search end -->
+										
+                          
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--=================================
+    header -->
+      
+      </div>   
+ <!--=================================
+    banner -->
+    <section class="banner slider-02">
+      <div class="swiper-container">
+        <div class="swiper-wrapper h-500 h-sm-500" >
+            
+			<div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/plati-online.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11 col-sm-12 text-center">
+                  <h2 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s"> PLĂȚI ONLINE TARIFE DE CĂTRE PERSOANE FIZICE</h2>
+                  <h5 data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s" class="text-white">Autoritatea Rutiera Romana – ARR accepta plata cu cardul prin platforma www.roviniete.ro</h5>
+					
+					<a href="https://www.youtube.com/watch?v=Z3GqN5q2V0k" target="_blank" class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.5s" data-delay="1s">Instrucțiuni <i class="fa fa-angle-right pl-3"></i></a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="https://www.roviniete.ro/ro/tarife" target="_blank" class="btn btn-white pulse" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="1.75s">Plătește acum ONLINE<i class="fa fa-angle-right pl-3"></i></a>
+					
+                </div>
+              </div>
+            </div>
+          </div>
+			
+			
+			
+			<div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/transport-persoane.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11 col-sm-12 text-center">
+                  <h2 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Monitorizarea prin GPS a curselor efectuate prin servicii regulate interjudețene</h2>
+                  <h5 data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s" class="text-white">Autoritatea Rutieră Română – ARR a finalizat aplicația de monitorizare</h5>
+					<a href="https://www.arr.ro/arr_doc_1314_monitorizare-curse-prin-servicii-regulate-interjudetene_pg_0.htm" target="_blank" class="btn btn-white pulse" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="1.75s">Află mai multe<i class="fa fa-angle-right pl-3"></i></a>
+					
+                </div>
+              </div>
+            </div>
+          </div>
+
+			<div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/transport-persoane.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Rețeaua de mobilitate rutieră națională</h1>
+                  <h5 data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s" class="text-white">Destinata NUMAI autogarilor si operatorilor de transport rutier de persoane care solicita curse regulate interjudetene</h5>
+					<p  data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s" ><strong><a class="case-study-services text-success mb-0" href="https://www.arr.ro/noutati_doc_1340_anunt-important-functionalitati-noi-in-platforma-informatica-reteaua-de-mobilitate-rutiera_pg_0.htm" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i> Funcționalități noi conform OMTI nr. 418/2026</a></strong></p>
+					
+                  <a href="https://bit.ly/4hCFOir" class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s">Află mai multe <i class="fa fa-angle-right pl-3"></i></a>
+					&nbsp;&nbsp;&nbsp;
+					
+					<a href="https://www.arr.ro/arr_doc_1262_instructiuni-utilizare-aplicatie-reteaua-de-mobilitate-rutiera-nationala_pg_0.htm" class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.5s" data-delay="1s">Instrucțiuni <i class="fa fa-angle-right pl-3"></i></a>
+					&nbsp;&nbsp;&nbsp;
+					<a href="https://reteamobilitate.arr.ro" target="_blank" class="btn btn-white pulse" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="1.75s">Accesați APLICAȚIA ONLINE<i class="fa fa-angle-right pl-3"></i></a>
+					
+                </div>
+              </div>
+            </div>
+          </div>
+			
+			
+			<div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/calendar-examinare.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Testare.arr.ro</h1>
+                  <h5 data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s" class="text-white">Examenele sunt disponibile acum și în limba engleză pentru conducători auto în regim de taxi/închiriere și CPI marfă/persoane.<br>
+                    <br>
+                  The exams are now available in English for Taxi/Rental Drivers and Driver initial qualification - CPI for carriage of goods/passengers.</h5>
+                  <a href="https://testare.arr.ro/" target="_blank" class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s">Află mai multe / Find out more<i class="fa fa-angle-right pl-3"></i></a>
+					&nbsp;&nbsp;&nbsp;
+						<a href="https://www.youtube.com/watch?v=-M67Q4x5vRY" target="_blank" class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.5s" data-delay="1s">Instrucțiuni <i class="fa fa-angle-right pl-3"></i></a>
+					
+					
+                </div>
+              </div>
+            </div>
+          </div>
+			
+             <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/instructiuni-eliberare-docs.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row">
+                <div class="col-xl-8 col-md-11 col-sm-12">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Eliberare documente ARR</h1>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Instrucțiuni eliberare documente ARR</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/ctg_44_instructiuni-eliberare-documente_pg_0.htm">ACTE NECESARE - ELIBERARE DOCUMENTE<i class="fa fa-angle-right pl-3"></i></a> &nbsp;&nbsp;&nbsp; <a href="https://www.licentierearr.ro:8443/" target="_blank" class="btn btn-white pulse" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s">Depunere online - Licențiere<i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--
+          <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/calendar-examinare.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+<div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Examinare teoretică 2023</h1>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Calendarul de examinare teoretică pentru perioada 01.01.2023-31.12.2023</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/arr_doc_1044_calendarul-de-examinare-teoretica-pentru-perioada-01-01-2023-31-12-2023_pg_0.htm">Detalii <i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/calendar-examinare.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+<div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Examinare teoretică 2024</h1>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Calendarul de examinare teoretică pentru perioada 01.01.2024-31.12.2024</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/arr_doc_1150_calendarul-de-examinare-teoretica-pentru-perioada-01-01-2024-31-12-2024_pg_0.htm">Detalii <i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/calendar-examinare.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+<div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Examinare teoretică 2025</h1>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Calendarul de examinare teoretică pentru perioada 01.01.2025-31.12.2025</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/arr_doc_1221_calendarul-de-examinare-teoretica-pentru-perioada-01-01-2025-31-12-2025_pg_0.htm">Detalii <i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+-->
+          <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/calendar-examinare.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+<div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Examinare teoretică 2026</h1>
+		  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Ai de dat un examen teoretic in 2026? Nu uita sa achiti noul tarif de examinare in cuantum de 100 de lei!</h6>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Calendarul de examinare teoretică pentru perioada 01.01.2026-31.12.2026</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/arr_doc_1298_calendarul-de-examinare-teoretica-pentru-perioada-01-01-2026-31-12-2026_pg_0.htm">Detalii calendar si tarif actualizat<i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/aplicatii-arr.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row">
+                <div class="col-xl-8 col-md-11 col-sm-12">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Aplicații online ARR</h1>
+                  <h6 data-swiper-animation="fadeInLeft" data-duration="1.2s" data-delay="0.40s">Toate aplicațiile ARR într-un singur loc.</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="#aplicatii">Vezi aplicațiile <i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="swiper-slide align-items-center d-flex responsive-overlap-md bg-overlay-black-50" style="background-image:url(_design_templates/arr2021/images/slider/harta-agentii-arr.jpg); background-size: cover; background-position: center center;">
+            <div class="swipeinner container">
+              <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-11 col-sm-12 text-center">
+                  <h1 class="text-white" data-swiper-animation="fadeInDown" data-duration="1.2s" data-delay="0.30s">Agențiile teritoriale ARR</h1>
+                  <h6 data-swiper-animation="fadeInRight" data-duration="1.2s" data-delay="0.40s">Începând de luni, 15.02.2021, se reiau activitățile de lucru cu publicul pentru registratura generală și registraturile agențiilor teritoriale ale A.R.R</h6>
+                  <a class="btn btn-white" data-swiper-animation="fadeInUp" data-duration="1.2s" data-delay="0.75s" href="https://www.arr.ro/ctg_15_agentiile-teritoriale-arr_pg_0.htm">Vezi harta agențiilor <i class="fa fa-angle-right pl-3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+            
+          
+            
+            
+            
+            
+            
+        </div>
+        <div class="swiper-button-prev"><i class="fa fa-arrow-left icon-btn"></i></div>
+        <div class="swiper-button-next"><i class="fa fa-arrow-right icon-btn"></i></div>
+           <div class="swiper-pagination"></div>
+          
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+    <!--=================================
+    about -->
+    <section class="space-ptb prezentare_lab">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center pb-4">
+			<div class="col-lg-12 mb-4 mt-0 mb-lg-0">
+			<p>
+				<div class='embed-container'><iframe src='https://www.youtube.com/embed/Z3GqN5q2V0k' frameborder='0' allowfullscreen></iframe></div> </p>
+			</div>
+			
+			<div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="row">
+              <div class="col-sm-6 col-xs-6 col-sm-6">
+                <img class="img-fluid border-radius mb-4 mt-0 mt-sm-4" src="_design_templates/arr2021/images/sofer-autobuz.jpg" alt="">
+                <img class="img-fluid border-radius mb-4 mb-sm-0" src="_design_templates/arr2021/images/masini-pe-autostrada.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-xs-6 col-sm-6">
+                <img class="img-fluid border-radius mb-4" src="_design_templates/arr2021/images/masini-pe-strad.jpg" alt="">
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pl-xl-5 mb-5 mb-lg-0 mt-4 mt-md-0 info_content">
+            <h2 class="mb-4">Autoritatea Rutieră Română - ARR</h2>
+            <p class="mb-4"><i class="fa fa-info-circle text-warning" aria-hidden="true"></i>
+ Informații referitoare la stadiul eliberării documentelor solicitate, se pot obține telefonic sau prin emailul agenției teritoriale ARR la care s-a transmis cererea. Datele de contact ale agentiilor teritoriale ARR se regasesc la <strong>butonul de mai jos - Harta Agențiilor ARR</strong>.  </p>
+            <ul class="list list-unstyled ckeck-list mb-4">
+              <li class="d-flex"><i class="fas fa-check pr-2 pt-1 text-primary"></i><span> <a href="https://www.arr.ro/solicitare-online">Formular solicitare online</a> </span></li>
+              <li class="d-flex"><i class="fas fa-check pr-2 pt-1 text-primary"></i><span><a href="https://www.arr.ro/arr_doc_1_contact_pg_0.htm" target="_blank">Contactați-ne</a></span></li>
+              <li class="d-flex"><i class="fas fa-check pr-2 pt-1 text-primary"></i><span> <a href="https://www.arr.ro/solicitare-online" target="_blank">relatii_publice@arr.ro</a></span></li>
+             <!-- <li class="d-flex"><i class="fas fa-check pr-2 pt-1 text-primary"></i><span> <a href="https://www.arr.ro/solicitare-online" target="_blank">arutiera@arr.ro</a></span></li> -->
+             <li class="d-flex"><i class="fas fa-check pr-2 pt-1 text-primary"></i><span>  <a href="arr_doc_1_contact_pg_0.htm#formPetitie">E-Petiţie</a></span></li>
+              </ul>
+            <a href="https://www.arr.ro/ctg_15_agentiile-teritoriale-arr_pg_0.htm" class="btn btn-primary-square btn-square">Harta agențiilor ARR <i class="fa fa-map pl-3"></i></a>
+          </div>
+			
+			<div class="col-lg-12 mb-0 mt-4 mb-lg-0 text-center">
+			  <p><a href="https://www.arr.ro/noutati_doc_1229_comunicat-privind-sustinerea-unor-examene-in-limba-engleza-information-about-exams-held-in-english_pg_0.htm"  class="btn btn-primary-square  btn-square"><img src="https://www.arr.ro/images/flag-ro.png" alt="Versiune RO"  height="20" /> Comunicat privind susținerea unor examene în limba engleză / <img src="https://www.arr.ro/images/flag-en.png" alt="English Version"  height="20" />Information about exams held in English
+			    </a></p>
+			  
+			</div>
+			
+        </div>
+        
+      </div>
+    </section>
+    <!--=================================
+    about -->
+    
+     <section class="space-pb info_content">
+      <div class="container">
+        <div class="row mb-5 mb-md-4">
+          <div class="col-xl-6">
+            <div class="section-title">
+              <h2> <span class="bg-brush-primary">Noutăți</span> ARR</h2>
+              <p>Anunțuri, știri, informări recente.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+         
+         <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 text-center">
+            <div class="owl-carousel testimonial owl-stiri" data-nav-arrow="false" data-nav-dots="true" data-items="3" data-lg-items="4" data-md-items="2" data-sm-items="1" data-space="0" data-autoheight="false" data-autoplay="false" data-loop="false">
+                
+                
+                	
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 15 Octombrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1372_programul-sesiunilor-de-examinare-teoretica-din-data-de-17-10-2026-si-18-10-2026_pg_0.htm" >Programul sesiunilor de examinare teoretica din data de 17.10.2026 si 18.10.2026 </a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1372_programul-sesiunilor-de-examinare-teoretica-din-data-de-17-10-2026-si-18-10-2026_pg_0.htm" title='Programul sesiunilor de examinare teoretica din data de 17.10.2026 si 18.10.2026 ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 08 Octombrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1371_programul-sesiunilor-de-examinare-teoretica-din-data-de-09-10-2026-10-10-2026-si-11-10-2026_pg_0.htm" >Programul sesiunilor de examinare teoretica din data de 09.10.2026, 10.10.2026 si 11.10.2026</a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1371_programul-sesiunilor-de-examinare-teoretica-din-data-de-09-10-2026-10-10-2026-si-11-10-2026_pg_0.htm" title='Programul sesiunilor de examinare teoretica din data de 09.10.2026, 10.10.2026 si 11.10.2026' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 07 Octombrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/noutati_doc_1370_mutarea-agentiei-teritoriale-arr-bucuresti-in-noua-locatie-din-sector-6_pg_0.htm" >Mutarea Agenției Teritoriale ARR București în noua locație din Sector 6</a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/noutati_doc_1370_mutarea-agentiei-teritoriale-arr-bucuresti-in-noua-locatie-din-sector-6_pg_0.htm" title='Mutarea Agenției Teritoriale ARR București în noua locație din Sector 6' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 01 Octombrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1369_programul-sesiunilor-de-examinare-teoretica-din-data-de-03-10-2026-si-04-10-2026_pg_0.htm" >Programul sesiunilor de examinare teoretica din data de 03.10.2026 si 04.10.2026 </a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1369_programul-sesiunilor-de-examinare-teoretica-din-data-de-03-10-2026-si-04-10-2026_pg_0.htm" title='Programul sesiunilor de examinare teoretica din data de 03.10.2026 si 04.10.2026 ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 28 Septembrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1368_comunicat-privind-emiterea-autorizatiilor-de-transport-alternativ_pg_0.htm" >COMUNICAT privind emiterea autorizatiilor de transport alternativ</a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1368_comunicat-privind-emiterea-autorizatiilor-de-transport-alternativ_pg_0.htm" title='COMUNICAT privind emiterea autorizatiilor de transport alternativ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 24 Septembrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1367_programul-sesiunilor-de-examinare-teoretica-din-data-de-26-09-2026-si-27-09-2026_pg_0.htm" >Programul sesiunilor de examinare teoretica din data de 26.09.2026 si 27.09.2026 </a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1367_programul-sesiunilor-de-examinare-teoretica-din-data-de-26-09-2026-si-27-09-2026_pg_0.htm" title='Programul sesiunilor de examinare teoretica din data de 26.09.2026 si 27.09.2026 ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 17 Septembrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1365_comunicat-privind-digitalizarea-completa-a-eliberarii-documentelor-pentru-efectuarea-transportului-alternativ_pg_0.htm" >Comunicat privind digitalizarea completă a eliberării documentelor pentru efectuarea transportului alternativ</a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1365_comunicat-privind-digitalizarea-completa-a-eliberarii-documentelor-pentru-efectuarea-transportului-alternativ_pg_0.htm" title='Comunicat privind digitalizarea completă a eliberării documentelor pentru efectuarea transportului alternativ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+				
+            
+             <div class="item">
+                <div class="stire-item">
+                    <div class="stire-data"><i class="fa fa-calendar" aria-hidden="true"></i> 17 Septembrie 2026</div>
+                  <div class="stire-titlu">
+                    <a href="https://www.arr.ro/arr_doc_1364_programul-sesiunilor-de-examinare-teoretica-din-data-de-19-09-2026-si-20-09-2026_pg_0.htm" >Programul sesiunilor de examinare teoretica din data de 19.09.2026 si 20.09.2026 </a>
+                  </div>
+                  <div class="stire-lnk">
+                    <a href="https://www.arr.ro/arr_doc_1364_programul-sesiunilor-de-examinare-teoretica-din-data-de-19-09-2026-si-20-09-2026_pg_0.htm" title='Programul sesiunilor de examinare teoretica din data de 19.09.2026 si 20.09.2026 ' class="btn btn-sm btn-primary-square btn-square">Mai multe detalii <i class="fa fa-angle-right pl-3"></i>  </a>
+                  </div>
+                </div>
+              </div>
+            
+			                
+                
+             
+              
+            </div>
+          </div>
+        </div>
+      </div>
+         
+         
+         
+ </section>
+    
+    
+
+ <a id="aplicatii"></a>
+
+    <!--=================================
+    Recent work -->
+    <section class="space-pb info_content">
+      <div class="container">
+        <div class="row mb-5 mb-md-4">
+          <div class="col-xl-6">
+            <div class="section-title">
+              <h2> <span class="bg-brush-primary">Aplicațiile online</span> ARR</h2>
+              <p>Disponibile non-stop.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="owl-carousel text-left" data-autoplay="false" data-loop="false" data-nav-dots="true" data-items="5" data-md-items="4" data-sm-items="3" data-xs-items="1" data-xx-items="1">
+                <div class="items">
+                <div class="case-study case-study-style-02 ">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/retea-de-mobilitate.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="https://reteamobilitate.arr.ro" target="_blank">Rețeaua de mobilitate rutieră</a>
+                    <a class="case-study-services text-dark mb-0" href="https://reteamobilitate.arr.ro" target="_blank">reteamobilitate.arr.ro</a>
+					  
+					  <a class="case-study-services text-success mb-0" href="https://www.arr.ro/noutati_doc_1340_anunt-important-functionalitati-noi-in-platforma-informatica-reteaua-de-mobilitate-rutiera_pg_0.htm" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i> Funcționalități noi cf. OMTI nr. 418/2026</a>
+                  </div>
+                </div>
+              </div>
+				<div class="items">
+                <div class="case-study case-study-style-02 mt-5">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/testare.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="http://testare.arr.ro/" target="_blank">Testare online</a>
+                    <a class="case-study-services text-dark mb-0" href="http://testare.arr.ro/" target="_blank">testare.arr.ro</a>
+                  </div>
+                </div>
+              </div>
+				
+                <div class="items">
+                <div class="case-study case-study-style-02 ">
+                  <div class="case-study-img case-study-lg" style="background-image: url('_design_templates/arr2021/images/aplicatii/programari.arr.ro.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="http://aplicatii.arr.ro/programare" target="_blank">Programare pentru examenul de vizare certificat TAXI/Închiriere</a>
+                    <a class="case-study-services text-dark mb-0" href="http://aplicatii.arr.ro/programare" target="_blank">aplicatii.arr.ro/programare</a>
+                  </div>
+                </div>
+              </div>
+                
+                
+                
+              <div class="items">
+                <div class="case-study case-study-style-02 mt-5">
+                  <div class="case-study-img case-study-lg" style="background-image: url('_design_templates/arr2021/images/aplicatii/transport-alternativ.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="http://ta.arr.ro" target="_blank">Verificarea datelor privind Transportul alternativ</a>
+                    <a class="case-study-services text-dark mb-0" href="http://ta.arr.ro" target="_blank">ta.arr.ro</a>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="case-study case-study-style-02">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/depunere-licentiere.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="https://www.licentierearr.ro:8443/" target="_blank">Depunerea documentelor în vederea licențierii</a>
+                    <a class="case-study-services text-dark mb-0" href="https://www.licentierearr.ro:8443/" target="_blank">licentiereARR.ro</a>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="case-study case-study-style-02 mt-5">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/mersul-autobuzelor.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="http://mersulautobuzelor.arr.ro/" target="_blank">Mersul interjudețean al autobuzelor</a>
+                    <a class="case-study-services text-dark mb-0" href="http://mersulautobuzelor.arr.ro/" target="_blank">mersulautobuzelor.arr.ro</a>
+                  </div>
+                </div>
+              </div>
+              
+                
+                
+                <div class="items">
+                <div class="case-study case-study-style-02 ">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/rezultate-examene.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="https://www.arr.ro/rezultate-examene.htm" target="_blank">Rezultatele examenelor susținute în vederea obținerii atestatelor/certificatelor de pregătire profesională</a>
+                    <a class="case-study-services text-dark mb-0" href="https://www.arr.ro/rezultate-examene.htm" target="_blank">arr.ro/rezultate-examene.htm</a>
+                  </div>
+                </div>
+              </div>
+                
+                <div class="items">
+                <div class="case-study case-study-style-02 mt-5">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/raportari-online-arr.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="https://www.raportarionlinearr.ro/" target="_blank">Raportări online ARR</a>
+                    <a class="case-study-services text-dark mb-0" href="https://www.raportarionlinearr.ro/" target="_blank">raportarionlineARR.ro</a>
+                  </div>
+                </div>
+              </div>
+                
+                <div class="items">
+                <div class="case-study case-study-style-02">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/registrul-national.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="https://www.raportarionlinearr.ro/rap_sca/index.php" target="_blank">Registrul național al cursanților</a>
+                    <a class="case-study-services text-dark mb-0" href="https://www.raportarionlinearr.ro/rap_sca/index.php" target="_blank">raportarionlineARR.ro/rap_sca</a>
+                  </div>
+                </div>
+              </div>
+                
+                
+                
+                
+                
+                
+                <div class="items">
+                <div class="case-study case-study-style-02 ">
+                  <div class="case-study-img case-study-lg bg-holder" style="background-image: url('_design_templates/arr2021/images/aplicatii/verificare-timp-real.jpg');">
+                  </div>
+                  <div class="case-study-info">
+                    <a class="case-study-title font-weight-bold text-primary" href="http://licente.arr.ro/" target="_blank">Verificare în timp real operatori de transport</a>
+                    <a class="case-study-services text-dark mb-0" href="http://licente.arr.ro/" target="_blank">licente.arr.ro</a>
+                  </div>
+                </div>
+              </div>
+                
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Recent work -->
+
+   <!--=================================
+    Category -->
+    <section class="space-ptb bg-light info_content">
+      <div class="container">
+        <div class="row dark-background align-items-center justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="text-dark mb-3 mb-lg-0">Utile</h2>
+          </div>
+        </div>
+        <div class="row light-background mt-4 mt-md-5">
+          <div class="col-md-6 col-sm-12 mb-5 mb-md-0">
+              <a href="https://www.arr.ro/servicii_doc_164_eliberare-atestate_pg_0.htm">
+            <div class="feature-info feature-info-style-03">
+              <div class="feature-info-img">
+                <img class="img-fluid" src="_design_templates/arr2021/images/certificare-atestate.jpg" alt="">
+              </div>
+              <div class="feature-info-number mb-0">
+                <div class="feature-contant">
+                  <h5 class="feature-info-title mb-1">Informații certificate/atestate</h5>
+                  <p>Eliberare atestate ARR</p>
+                </div>
+                
+              </div>
+            </div></a>
+          </div>
+          
+          <div class="col-md-6 col-sm-12"> <a href="http://www.arr.ro/arr_doc_151_directia-siguranta-infrastructurii-rutiere_pg_0.htm">
+            <div class="feature-info feature-info-style-03">
+              <div class="feature-info-img">
+                <img class="img-fluid" src="_design_templates/arr2021/images/siguranta-rutiera.jpg" alt="">
+              </div>
+              <div class="feature-info-number mb-0">
+                <div class="feature-contant">
+                  <h5 class="feature-info-title mb-1">Sigurantă rutieră</h5>
+                  <p>Direcţia Siguranţa Infrastructurii Rutiere </p>
+                </div>
+               
+              </div>
+            </div></a>
+          </div>
+            
+            
+            
+          <div class="col-md-4 col-sm-6"> <a href="https://www.arr.ro/arr_doc_486_informare-privind-restituirea-de-accize-2018_pg_0.htm">
+            <div class="feature-info feature-info-style-03">
+              <div class="feature-info-img">
+                <img class="img-fluid" src="_design_templates/arr2021/images/accize.jpg" alt="">
+              </div>
+              <div class="feature-info-number mb-0">
+                <div class="feature-contant">
+                  <h5 class="feature-info-title mb-1">Ajutor de stat</h5>
+                  <p>Compensare combustibil</p>
+                </div>
+               
+              </div>
+            </div></a>
+          </div>
+            
+            <div class="col-md-4 col-sm-6"> <a href="https://www.arr.ro/servicii_doc_166_cartele-tahografe-digitale_pg_0.htm">
+            <div class="feature-info feature-info-style-03">
+              <div class="feature-info-img">
+                <img class="img-fluid" src="_design_templates/arr2021/images/cartele-taho.jpg" alt="">
+              </div>
+              <div class="feature-info-number mb-0">
+                <div class="feature-contant">
+                  <h5 class="feature-info-title mb-1">Tahograf digital</h5>
+                  <p>Cartele tahografe digitale  </p>
+                </div>
+                
+              </div>
+            </div></a>
+          </div>
+            
+            <div class="col-md-4 col-sm-6"> <a href="https://www.arr.ro/transport_doc_144_transport_pg_0.htm">
+            <div class="feature-info feature-info-style-03">
+              <div class="feature-info-img">
+                <img class="img-fluid" src="_design_templates/arr2021/images/info-operatori-transport.jpg" alt="">
+              </div>
+              <div class="feature-info-number mb-0">
+                <div class="feature-contant">
+                  <h5 class="feature-info-title mb-1">Operatori transport</h5>
+                  <p>Informaţii pentru operatori</p>
+                </div>
+                
+              </div>
+            </div></a>
+          </div>
+            
+           
+            
+            
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Category -->
+ <!--=================================
+    footer-->
+    <footer class="space-pt footer bg-dark">
+      <div class="container pb-4">
+        <div class="row">
+            
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+           
+            
+            <p class="text-white">Conform H.G. nr. 625/1998 privind organizarea şi funcţionarea Autoritãţii Rutiere Române - A.R.R., cu modificările și completările ulterioare, <strong>Autoritatea Rutieră Română - A.R.R.</strong> este organismul tehnic specializat al Ministerul Transporturilor și Infrastructurii pentru transportul rutier.</p>
+            <p><a href="https://www.arr.ro/arr_doc_7_despre-autoritatea-rutiera-romana-arr_pg_0.htm" class="btn btn-white btn-sm">Află mai multe  <i class="fa fa-angle-right pl-3"></i></a></p>
+          </div> 
+            
+            
+            
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <h5 class="text-primary mb-2 mb-sm-4">Date de contact</h5>
+            
+            <div class="contact-address mt-4">
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p class="ml-3 text-white">Bd. Dinicu Golescu nr. 38, Etaj 8, Sector 1, Bucureşti, Cod poştal 010873, România</p>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a class="text-white ml-3 font-weight-bold" href="https://www.arr.ro/solicitare-online" target="_blank">Formular solicitare online</a>
+                </div>
+              <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <h5 class="mb-0 font-weight-bold ml-3"><a href="https://www.arr.ro/arr_doc_1_contact_pg_0.htm" class="text-white" target="_blank">Contactați-ne</a></h5>
+                </div>
+                
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+            <h5 class="text-primary mb-2 mb-sm-4">Link-uri rapide</h5>
+            <div class="footer-link">
+              <ul class="list-unstyled mb-0">
+                
+               <li><a href="https://www.arr.ro/arr_doc_7_despre-autoritatea-rutiera-romana-arr_pg_0.htm">Despre noi</a></li>
+               <li><a href="https://www.arr.ro/arr_doc_1_contact_pg_0.htm">Contact</a></li>
+               <li><a href="https://www.arr.ro/arr_doc_464_termeni-si-conditii-de-utilizare-a-siteului-www-arr-ro_pg_0.htm">Termeni şi condiţii de utilizare a siteului</a></li>
+               <li><a href="https://www.arr.ro/arr_doc_465_politica-de-cookie-uri_pg_0.htm">Politica de Cookie-uri</a></li>
+               <li><a href="https://www.arr.ro/gdpr">GDPR</a></li>
+                  <li><a href="http://arhiva.arr.ro/" target="_blank">Arhivă website</a></li>
+              </ul>
+              
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <h5 class="text-primary mb-2 mb-sm-4">Rețele sociale</h5>
+           <div class="footer-link">
+                
+               <ul class="list-unstyled mb-0">
+                 <li><a href="https://www.facebook.com/ARR.romania" target="_blank"><i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i> Facebook</a></li>
+                 <li><a href="https://www.instagram.com/arr.romania" target="_blank"><i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i> Instagram</a></li>
+                 <li><a href="https://www.tiktok.com/@arr.romania" target="_blank"><i class="fa fa-tumblr fa-lg fa-fw" aria-hidden="true"></i> TikTok</a></li>
+                 <li><a href="https://www.youtube.com/@arr_ro" target="_blank"><i class="fa fa-youtube fa-lg fa-fw" aria-hidden="true"></i> YouTube</a></li>
+               </ul>
+                         
+            </div>
+          </div>
+          
+            
+            <div class="col-sm-12 col-lg-12 mt-4 mb-lg-0 text-center">
+            
+                <p><a href="https://www.arr.ro/arr_doc_849_brexit_pg_0.htm" target="_blank"><img src="images/brexit1-s.jpg" height="60" /></a> &nbsp; &nbsp; <a href="https://europa.eu/youreurope/index.htm#en" target="_blank"><img src="images/Logo-Your-Europe.jpg"  height="60" /></a>
+    
+    &nbsp; &nbsp; <a href="http://conect.gov.ro" target="_blank"><img src="images/conect-banner-index.jpg"  alt="CONECT – Catalogul Organizațiilor Neguvernamentale pentru Evidență, Consultare și Transparență" height="60" /></a>
+					
+					
+					&nbsp; &nbsp; <a href="https://fiipregatit.ro/" target="_blank"><img src="images/fiipregatitro.jpg"  alt="Fii pregătit
+pentru
+situații de urgență" height="60" /></a>
+					
+    </p>
+            
+            </div>
+            
+           <div class="col-sm-12 col-lg-12 mt-4 mb-lg-0 parteneri text-center">
+               
+               
+            
+            <a href="http://www.mt.ro/" target="_blank" title="Ministerul Transporturilor" class="lnk_partener"><img src="images/parteneri/logo-mc.jpg" alt=""/></a>
+     
+     <a href="http://www.isctr-mt.ro/" target="_blank" title="Inspectoratul de Stat pentru Controlul in Transportul Rutier" class="lnk_partener"><img src="images/parteneri/logo-isctr.jpg" alt=""/></a>
+     
+     <a href="http://www.cnadnr.ro/" target="_blank" title="Compania Nationala De Autostrazi Si Drumuri Nationale din România" class="lnk_partener"><img src="images/parteneri/logo-cnadnr.jpg" alt=""/></a>
+     
+     <a href="http://www.rarom.ro/" target="_blank" title="Registrul Auto Român" class="lnk_partener"><img src="images/parteneri/logo-rar.jpg" alt=""/></a>
+     <a href="http://www.politiaromana.ro/" target="_blank" title="Inspectoratului General al Poliției Române" class="lnk_partener"><img src="images/parteneri/logo-politia-rom.jpg" alt=""/></a>
+     
+     
+     
+     
+     <a href="http://www.cisr.ro/" target="_blank" title="Secretariatul Consiliului Interministerial pentru Siguranţă Rutieră" class="lnk_partener"><img src="images/parteneri/logo-cisr.jpg" alt=""/></a>
+     
+     
+     <a href="http://www.iscir.ro/" target="_blank" title="Inspectia de Stat pentru Controlul Cazanelor, Recipientelor sub Presiune si Instalatiilor de Ridicat" class="lnk_partener"><img src="images/parteneri/logo-iscir.jpg" alt=""/></a>
+     
+     <a href="http://www.srac.ro/ro/inspectii-tped" target="_blank" title="SRAC" class="lnk_partener"><img src="images/parteneri/logo-srac.png" alt=""/></a>
+     
+     <a href="http://www.unece.org/trans/danger/publi/adr/country-info_e.html" title="European Agreement concerning the International Carriage of Dangerous Goods by Road" target="_blank"><img src="images/parteneri/logo-unece.jpg" alt=""/></a>
+     
+     <a href="http://eur-lex.europa.eu/homepage.html;ELX_SESSIONID=jp5vJV7JRHQDLX8CgYWLxBMykWyZF5pvjbTv3lPkLSZphPL1n9MX!2020151018?locale=ro" target="_blank" title="Access to European Union law" ><img src="images/parteneri/logo-eurlex.jpg" alt="" /></a>
+     
+      <a href="http://ec.europa.eu/transport/road_safety/specialist/index_en.htm" title="European Road Safety Observatory" target="_blank"><img src="images/parteneri/logo-erso.jpg" alt=""/></a>
+      
+       <a href="http://etsc.eu/" target="_blank" title="European Transport Safety Council" ><img src="images/parteneri/logo-etsc.jpg" alt=""/></a>
+    
+    <a href="http://www.grsproadsafety.org/" target="_blank" title="Global Road Safety Partnership" ><img src="images/parteneri/logo-grsp.jpg" alt="" /></a>
+    
+    <a href="http://www.euro-controle-route.eu/site/" title="Euro Control Route (ECR)" target="_blank"><img src="images/parteneri/logo-ecr.jpg" alt=""/></a>
+    
+     <a href="http://www.cncir.eu/" title="Compania Naţională pentru Controlul Cazanelor, Instalaţiilor de Ridicat şi Recipientelor sub Presiune S.A." target="_blank"><img src="images/parteneri/cncir.jpg" alt=""/></a>
+   
+		   
+		
+   <a href="http://www.adrinspect.ro/" title="ADR Inspect" target="_blank"><img src="images/parteneri/adr-inspect.png" alt="ADR Inspect"/></a>
+		
+		 <a href="https://atmpinspect.ro" title="ATMP INSPECT SRL " target="_blank"><img src="images/parteneri/atmp-inspect.jpg" alt="ATMP INSPECT SRL "/></a>
+	
+		 <a href="http://www.iprochim.ro" title="IPROCHIM SA " target="_blank"><img src="images/parteneri/iprochim.jpg" alt="IPROCHIM SA "/></a>
+	
+		
+		
+		
+		<a href="http://stopsomnolenta.ro/" title="Stop Somnolenta" target="_blank"><img src="images/parteneri/STOP-Ziua-Somnului.jpg" alt="Stop Somnolenta"/></a>
+   
+		<a href="http://www.112.ro/" target="_blank" title="Sistemul Naţional Unic pentru Apeluri de Urgenţă" class="lnk_partener"><img src="images/parteneri/logo-112.jpg" alt=""/></a>
+                    
+                 
+            </div> 
+        </div>
+      </div>
+      <div class="footer-bottom py-3">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-left">
+            <a class="footer-logo py-0" href="#"><img class="img-fluid" src="_design_templates/arr2021/images/logo-arr-white.png" alt="Logo Autoritatea Rutieră Română - ARR"></a>
+          </div>
+            <div class="col-lg-6 text-lg-right text-center mt-0">
+              <p class="mb-0 text-white">© Copyright 2026 - Autoritatea Rutieră Română - ARR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=================================
+    footer-->
+         
+	
+</div> 
+
+
+    
+<!--=================================
+    Back To Top-->
+    <div id="back-to-top" class="back-to-top"><i class="fas fa-angle-up"></i></div>
+    <!--=================================
+    Back To Top-->
+
+
+	 <script src="https://code.responsivevoice.org/responsivevoice.js?key=od2Lj7px"></script>	
+        
+         <!-- JS Global Compulsory (Do not remove)-->
+    <script src="_design_templates/arr2021/assets_lcd/js/jquery-3.5.1.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/popper/popper.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="_design_templates/arr2021/assets_lcd/js/jquery.appear.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/swiper/swiper.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/swiperanimation/SwiperAnimation.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/counter/jquery.countTo.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/jarallax/jarallax.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/jarallax/jarallax-video.min.js"></script>
+    <script src="_design_templates/arr2021/assets_lcd/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Template Scripts (Do not remove)-->
+    <script src="_design_templates/arr2021/assets_lcd/js/custom.js"></script>
+        
+        
+        
+		<script src="_design_templates/arr2021/js/js_actions.js"></script>	
+
+   
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-13077577-31', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-right",
+  "content": {
+    "message": "Acest site foloseşte cookies. Navigând în continuare vă exprimaţi acordul asupra folosirii cookie-urilor. ",
+    "dismiss": "Sunt de acord",
+    "link": "Detalii",
+    "href": "https://www.arr.ro/arr_doc_465_politica-de-cookie-uri_pg_0.htm"
+  }
+})});
+</script>
+
+
+
+
+<div class="accesibility_options">
+<div class="btn_accesibilitate">
+    <a href="javascript:;" id="lnk_open_accesibility" title="Accesibilitate website">
+        <i class="fa fa-universal-access" aria-hidden="true"></i>
+    </a>
+</div>
+<div class="accesibility_functions">
+    <ul>
+      <li><a href="javascript:;" id="lnk_mare_txt" title="Mărește text"><i class="fa fa-search-plus" aria-hidden="true"></i> Mărește text </a></li>
+        <li><a href="javascript:;" id="lnk_mic_txt" title="Micșorează text"><i class="fa fa-search-minus" aria-hidden="true"></i> Micșorează text </a></li>
+        <li><a href="javascript:;" id="lnk_contrast" title="Contrast"><i class="fa fa-adjust" aria-hidden="true"></i> Contrast </a></li>
+       
+        <li><a href="javascript:;" id="lnk_ev_lnk" title="Evidențiază link-uri"><i class="fa fa-link" aria-hidden="true"></i> Evidențiază link-uri </a></li>
+        <li><a href="javascript:;" id="lnk_citeste_txt" title="Citește text"><i class="fa fa-volume-up" aria-hidden="true"></i> Citește text </a></li>
+        <li><a href="javascript:;" id="lnk_citeste_txt_stop" title="Pauză audio"><i class="fa fa-volume-off" aria-hidden="true"></i> Pauză citire </a></li>
+        
+    </ul>
+  </div>    
+</div> <div class="modal fade" id="popup_event">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title text-left" ><strong>ANUNTURI IMPORTANTE</strong></h5>
+      </div>
+      <div class="modal-body ">
+
+        <div class="row" > <div class="col-md-12">
+<!--
+<div class="col-md-12">
+<p><strong><a href="https://www.arr.ro/arr_doc_1163_in-atentia-operatorilor-de-transport-rutier-detinatori-de-licente-pentru-transportul-rutier-international-de-marfuri-contra-cost-in-numele-unui-tert-si-copii-conforme_pg_0.htm">Referitor vehicule pentru transport rutier de marfă închiriate din alte state membre ale Uniunii Europene conform art.25<sup>1</sup> din O.G. nr.27/2011</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1185_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-ialomia-din-data-de-08-06-2024-in-data-de-16-06-2024_pg_0.htm">Anunţ privind reprogramarea sesiunii de examinare teoretică din <strong>județul IALOMITA din data de 08.06.2024 în data de 16.06.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1184_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-gorj-din-data-de-08-06-2024-in-data-de-15-06-2024_pg_0.htm">Anunţ privind reprogramarea sesiunii de examinare teoretică din <strong>județul GORJ din data de 08.06.2024 în data de 15.06.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1183_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-hunedoara-din-data-de-08-06-2024-in-data-de-16-06-2024_pg_0.htm">Anunţ privind reprogramarea sesiunii de examinare teoretică din <strong>județul HUNEDOARA din data de 08.06.2024 în data de 16.06.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1182_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-neam-din-data-de-09-06-2024-in-data-de-16-06-2024_pg_0.htm">Anunţ privind reprogramarea sesiunii de examinare teoretică din <strong>județul NEAMT din data de 09.06.2024 în data de 16.06.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p>În conformitate cu prevederile Hotărârii Guvernului nr. 1307 din 21 decembrie 2023 privind stabilirea zilelor lucrătoare pentru care se acordă zile libere, zile care precedă și/sau care succedă zilelor de sărbătoare legală în care nu se lucrează, pentru anul 2024, publicată în Monitorul Oficial al României nr. 1172 din 22 decembrie 2023, <strong>nu se lucrează în data de 16 august 2024.</strong></p>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1200_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-braila-din-data-de-07-09-2024-in-data-de-01-09-2024_pg_0.htm">Anunţ privind reprogramarea sesiunii de examinare teoretică din <strong>județul BRAILA din data de 07.09.2024 în data de 01.09.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1198_locatie-pentru-desfasurarea-sesiunii-de-examinare-din-judetul-constanta-incepand-cu-data-de-24-08-2024_pg_0.htm">Locatie pentru desfasurarea sesiunii de examinare din judetul CONSTANTA incepand cu data de 24.08.2024</a></strong></p>
+</div>
+
+<div class="col-md-12">
+<h5><p><a href="https://www.arr.ro/files/angajari/2025/a1/Anun%C8%9B%20concurs.pdf"><strong>Autoritatea Rutieră Română - A.R.R. angajează personal!</strong> Află cum poți aplica pentru un post chiar <strong>aici</a></strong>.</p></h5>
+</div>
+
+<div class="col-md-12">
+<p>În conformitate cu prevederile Contractului Colectiv de Muncă aplicabil la nivel de unitate, a 3-a zi de Crăciun, respectiv vineri 27 decembrie 2024, este zi liberă pentru salariații Autorității Rutiere Române - A.R.R.</p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1230_locatie-pentru-desfasurarea-sesiunii-de-examinare-din-judetul-timis-incepand-cu-data-de-11-01-2025_pg_0.htm">Noua locatie de examinare teoretica pentru judetul TIMIS (click pentru detalii)</p>
+</div>
+
+<div class="col-md-12">
+<h5><p><a href="https://www.arr.ro/files/angajari/2025/a1/Anun%C8%9B%20concurs.pdf"><strong>Autoritatea Rutieră Română - A.R.R. angajează personal!</strong> Află cum poți aplica pentru un post chiar <strong>aici</a></strong>.</p></h5>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1236_locatie-pentru-desfasurarea-sesiunii-de-examinare-din-judetul-galai-incepand-cu-data-de-15-02-2025_pg_0.htm">Noua locatie de examinare teoretica pentru judetul GALATI (click pentru detalii)</a></p>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/transport_doc_610_transport-alternativ_pg_0.htm">Referitor la noțiunea de SEDIU prevăzută la art.12 alin.(1) din O.U.G. nr.49/2019 privind activităţile de transport alternativ cu autoturism şi conducător auto (click pentru detalii)</a></p>
+</div>
+<div class="col-md-12">
+<h5>Prelungire schema de ajutor de stat instituita prin HG nr. 153/2024</h5>
+<p>Aducem la cunostinta operatorilor de transport rutier faptul ca <strong>schema de ajutor de stat instituita prin H.G. nr. 153/2024 a fost modificata prin H.G. nr. 1673/2024</strong> si prin urmare exista posibilitatea <strong>depunerii de cereri de compensare pentru a doua jumatate a trimestrului 4 din 2024 (16.11.2024 - 31.12.2024) incepand cu data de 08 ianuarie 2025 termenul limita de depunere fiind 30 ianuarie 2025.</strong></p>
+</div>
+<div class="col-md-12">
+<p>Începând cu data de <strong>04.11.2024</strong> depunerea și procesarea cererilor precum și eliberarea în format electronic a atestatelor/certificatelor cu valabilitate nationala (cu exceptia Managerului de transport in regim de TAXI/INCHIRIERE) se va realiza NUMAI prin intermediul sistemului informatic disponibil la adresa <strong><a href="https://atestate.arr.ro">https://atestate.arr.ro</a>.</p>
+<p> Prin urmare se vor depune cereri in sistemul informatic NUMAI pentru obtinerea/vizarea urmatoarelor documente:
+<ul>
+<li> certificatelor profesionale ale conducătorilor auto care efectuează <strong>transport de persoane în regim de taxi sau transport în regim de închiriere</strong>;</li>
+<li> atestatului de <strong>instructor auto, precum și profesor de legislație rutieră</strong>;</li>
+<li> certificatului pentru <strong>transport cu troleibuzul</strong>;</li>
+<li> certificatului pentru <strong>transport de vehicule avariate</strong>,</ul></li>
+</p>
+<p  style="background-color:tomato;">MANUALUL DE UTILIZARE ESTE DISPONIBIL <a href="https://www.arr.ro/files/servicii/eliberare-atestate/manual-utilizare-atestate.arr_v2.pdf">aici</a></strong>.</p>
+<p>
+ATENTIE! Cererile pentru obtinerea/vizarea documentelor de mai sus, transmise prin alta cale decat aplicatia atestate.arr.ro, vor fi returnate solicitantilor.
+
+<div class="col-md-12">
+<p>In data de 01.04.2025 incepand cu ora 16:00, serviciile asociate sistemelor informatice furnizate de Autoritatea Rutiera Romana - A.R.R. vor fi indisponibile pana la ora 17:30, in vederea efectuarii unor operatiuni de mentenanta.
+</p>
+</div>
+
+
+<div class="col-md-12">
+<p>În conformitate cu prevederile art. 59 alin.(1) lit. i) din Contractul Colectiv de Muncă nr. 10/18.01.2023, ziua de miercuri 1 octombrie 2025 (ziua instituției) este zi liberă pentru salariații Autorității Rutiere Române - A.R.R..
+</p>
+</div>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1292_locatie-noua-pentru-desfasurarea-sesiunii-de-examinare-din-bucuresti-incepand-cu-data-de-08-11-2025_pg_0.htm">NOUA adresa pentru desfasurarea sesiunii de examinare din BUCURESTI incepand cu data de 08.11.2025:
+Sectorul 4, Bulevardul Metalurgiei, Nr. 78, (langă Kom Fitness Metalurgiei).(click pentru detalii)</a></p>
+</div>
+
+<div class="col-md-12">
+<p>In perioada <strong>28.11.2025 - 30.11.2025</strong>, serviciile asociate sistemelor informatice furnizate de Autoritatea Rutiera Romana - A.R.R. <strong>vor fi indisponibile</strong>, in vederea efectuarii unor operatiuni de mentenanta.</p>
+<p><strong><a href="https://www.arr.ro/noutati_doc_1299_intrerupere-servicii-on-line-in-perioada-28-11-2025-30-11-2025_pg_0.htm">Apasa aici pentru a vedea lista aplicatiilor ce urmeaza a fi indisponibile.</strong></a></p>
+</div>
+-->
+<!--
+<div class="col-md-12">
+<center><u><h4 style="color: rgb(0, 204, 255);"><a href="https://www.arr.ro/arr_doc_1314_monitorizare-curse-prin-servicii-regulate-interjudetene_pg_0.htm">MONITORIZAREA PRIN GPS A CURSELOR EFECTUATE PRIN SERVICII REGULATE INTERJUDETENE - APASA AICI</a></h4></u></center>
+</div>
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1315_locatie-noua-pentru-desfasurarea-sesiunii-de-examinare-din-judetul-bacau-incepand-cu-data-de-07-02-2026_pg_0.htm">Noua locatie de examinare teoretica pentru judetul BACAU(click pentru detalii)</a></p>
+</div>
+
+<div class="col-md-12">
+<p><strong><a href="https://legislatie.just.ro/Public/DetaliiDocument/305847" target="_blank">Noile tarife specifice serviciilor prestate de Autoritatea Rutiera Romana - A.R.R. intra in vigoare cu data de 30.12.2025 cu ocazia publicarii in Monitorul Oficial al Romaniei a OMTI nr. 2.274/2025, act normativ ce poate fi consultat prin apasarea acestui paragraf.</a></p>
+</div>
+<div class="col-md-12">
+<p>
+Vă informăm faptul că urmare intrarii in vigoare a OMTI nr. 2.269/2025, începând cu următoarea sesiune de examinare teoretică (sesiune din 10-11.01.2026), <strong>tariful pentru susținerea examinării/evaluării teoretice va fi în <u>cuantum de 100 de lei</u></strong> pentru fiecare probă teoretică susținută, <strong>nefiind permisă achitarea fracționată a tarifului.</strong> asa cum prevede Art. II din actul normativ mentionat anterior.
+</p>
+<p>
+Reiterăm faptul că dovada achitării tarifului <u>trebuie să conțină în mod obligatoriu următoarele elemente de identificare:</u>
+<ul>
+<li>numele candidatului și/sau CNP, data achitării tarifului,
+<li>denumirea agenției teritoriale al ARR în contul căreia se face plata,
+<li>codul fiscal și contul IBAN ale agenției,
+</ul>
+<strong> precum și suma de <u>100 de lei sau multiplu de 100 de lei.</u></strong></p>
+<p><strong>Susținerea examenului sau a evaluării teoretice de către candidat este condiționată de <u>achitarea integrală a noului tarif.</u></strong>
+</p>
+</div>
+
+
+<div class="col-md-12">
+<p><a href="https://www.arr.ro/arr_doc_1323_anunt-privind-reprogramarea-sesiunii-de-examinare-teoretica-din-judetul-salaj-din-data-de-07-03-2025-in-data-de-08-03-2025_pg_0.htm">Anunt privind reprogramarea sesiunii de examinare teoretica din judetul SALAJ din data de 07.03.2025 in data de 08.03.2025</a></strong></p>
+</div>
+
+<p><center><a href="https://www.roviniete.ro/ro/tarife" target="_blank" class="btn btn-info">PLĂTEȘTE ACUM ONLINE</a></center> </p>
+
+
+<p>Autoritatea Rutiera Romana - ARR informeaza ca persoanele fizice care doresc:</p>
+<ul>
+    <li><strong>sustinerea examenelor teoretice</strong> in vederea obtinerii atestatelor/certificatelor de pregatire profesionala;</li>
+    <li><strong>eliberarea cartelei tahograf</strong>;</li>
+    <li><strong>eliberarea certificatelor tip card</strong> (CPI, CPC, ADR);</li>
+    <li><strong>eliberarea atestatelor/certificatelor cu valabilitate națională</strong> prin platforma atestate.arr.ro;</li>
+</ul>
+<p>pot achita <strong>tarifele specifice</strong> prestării serviciilor de mai sus și <strong>online prin card bancar</strong> la link-ul disponibil <a href="http://www.roviniete.ro/ro/tarife">aici </a>sau la butonul de mai jos, mecanism agreat de către instituția noastră prin site-ul roviniete.ro.</p>
+<p>Enumerăm o serie de <strong>avantaje</strong>:</p>
+<ul>
+    <li><strong>reducerea riscurilor </strong>de efectuare a unor plati catre Autoritatea Rutiera Romana - ARR care nu ajung sa fie procesate in conturile de trezorerie din cauza <strong>conturilor IBAN sau a altor detalii completate gresit</strong> (cod fiscal, beneficiar, nume incorect platitor etc) cazuri in care examenul teoretic este <strong>ANULAT;</strong></li>
+    <li><strong>reducerea timpului de procesare a documentelor de plata</strong> cu ocazia sustinerii examenelor teoretice, implicit <strong>intrarea candidatilor in salile de examen mult mai rapid</strong>;</li>
+    <li>In cazul persoanelor care au <strong>achitat tariful de sustinere online cu cardul bancar</strong>, <strong>NU mai este nevoie sa prezentati</strong> comisiilor de examinare <strong>dovada achitarii tarifului de sustinere a examenului</strong>.</li>
+    <li><strong>reducerea timpului de asteptare in vederea eliberarii atestatelor/certificatelor</strong> de pregatire profesionala, platile online fiind procesate si confirmate instant, fata de platile achitate prin alte modalitati care de obicei incasarile se confirma dupa cel putin 3 zile lucratoare de asteptare.</li>
+</ul>
+<p>In concluzie, persoanele care achita online pot beneficia de <strong>prioritate in vederea sustinerii examenelor teoretice (prin scurtarea timpului de asteptare de la predarea documentelor si pana la intrarea in examen)</strong> iar in cazul eliberarii documentelor online de <strong>scurtarea timpului de asteptare de la transmiterea completa a cererii si pana la emiterea documentului solicitat</strong>.</p>
+<center>
+  <p><a href="https://www.arr.ro/files/comunicate/comunicat_digitalizare_alternativ_final.pdf" target="_blank" class="btn btn-info">PLĂTEȘTE ACUM ONLINE</a></p>
+  
+</center>
+
+
+        </div>
+
+
+<p>Începând cu data de 18.09.2026, se lansează noul sistem informatic dedicat operatorilor de transport alternativ, prin care întregul proces de depunere a documentelor și de emitere a autorizațiilor, copiilor conforme și a ecusoanelor se va desfășura exclusiv online.</p>
+<center>
+  <p><a href="https://www.arr.ro/files/comunicate/ANUNT_privind_ajustarea%20calendarului%20de%20implementare.pdf" target="_blank" class="btn btn-info">VEZI RECTIFICARE CALENDAR DE IMPLEMENTARE</a></p>
+  
+</center>
+-->
+<center>
+  <p><a href="https://www.arr.ro/files/comunicate/comunicat_ag_28_09.2028%20.pdf" target="_blank" class="btn btn-info">VEZI COMUNICAT privind emiterea autorizatiilor de transport alternativ in format digital</a></p>
+</center>
+<div class="alert alert-success">
+<p><strong>Sistemul informatic destinat autorizarii operatorilor de transport alternativ este disponibil la link: <a href="https://transport-alternativ.arr.ro">https://transport-alternativ.arr.ro</a></strong> iar instructiunile pot fi vizualizate <a href="https://www.arr.ro/arr_doc_1366_instructiuni-utilizare-aplicatie-transport-alternativ-arr-ro_pg_0.htm"><strong>aici</strong></a></p>
+</div>
+
+<div class="alert alert-warning">
+<p><strong>NU solicitati crearea de conturi de acces pe platforma https://www.licentierearr.ro:8443. In acest sistem informatic nu se transmit cereri pentru eliberarea autorizatiei de transport alternativ, copii conforme sau ecusoane.</strong></p>
+</div>
+
+<!--
+<div class="col-md-12">
+<p>În conformitate cu prevederile art. 59 alin.(1) lit. h) din Contractul Colectiv de Muncă nr. 10/18.01.2023, a 3-a zi de Paște, respectiv marți 14 aprilie 2026, este zi liberă pentru salariații Autorității Rutiere Române - A.R.R..
+</p>
+</div>
+-->
+      </div></div>
+		</div>
+      <div class="modal-footer">
+     
+      
+      <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Închide fereastra <i class="fa fa-window-close-o" aria-hidden="true"></i></button></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+</body>
+</html>

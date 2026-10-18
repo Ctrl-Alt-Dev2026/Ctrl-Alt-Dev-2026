@@ -1,0 +1,21 @@
+{
+  "id": "salutiasi_api",
+  "url": "https://www.salutiasi.ro/wp-json/wp/v2/posts?search=accident&per_page=1&_fields=id,date,link,title,content",
+  "checked_utc": "2026-10-17T21:33:46.571758+00:00",
+  "status": 200,
+  "final_url": "https://www.salutiasi.ro/wp-json/wp/v2/posts?search=accident&per_page=1&_fields=id,date,link,title,content",
+  "format": "application/json; charset=UTF-8",
+  "bytes": 7582,
+  "total": "1732",
+  "total_pages": "1732",
+  "sample": {
+    "id": 130947,
+    "date": "2026-10-17T02:16:11",
+    "link": "https://salutiasi.ro/carnea-secretul-unei-vieti-pana-la-100-de-ani-ce-au-descoperit-cercetatorii-despre-vegetarieni/",
+    "title": {
+      "rendered": "Carnea, secretul unei vieți până la 100 de ani? Ce au descoperit cercetătorii despre vegetarieni"
+    }
+  },
+  "content_characters": 5731,
+  "retention_note": "Article bodies removed after feasibility inspection; source metadata retained."
+}

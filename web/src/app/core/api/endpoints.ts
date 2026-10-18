@@ -1,37 +1,14 @@
-// Every backend path in one place. API v0.7 is documented in docs/FRONTEND_HANDOFF.md.
-export const BACKEND_ENDPOINTS = {
-  latestPublication: '/publications/latest',
-  publications: '/publications',
-  publicationPreview: '/publications/preview',
-  publication: (id: string) => `/publications/${encodeURIComponent(id)}`,
-  locations: '/locations',
-  locationMap: '/locations.geojson',
-  locationDossier: (id: string) => `/locations/${encodeURIComponent(id)}`,
-  locationExport: (id: string) => `/locations/${encodeURIComponent(id)}/export`,
-  publicationContext: '/publication-context',
-  imports: '/imports',
-  import: (id: string) => `/imports/${encodeURIComponent(id)}`,
-  candidates: '/candidates',
-  candidate: (id: string) => `/candidates/${encodeURIComponent(id)}`,
-  candidateReview: (id: string) => `/candidates/${encodeURIComponent(id)}/review`,
-  geocodingPreview: (id: string) => `/candidates/${encodeURIComponent(id)}/geocoding/preview`,
-  geocodingApply: (id: string) => `/candidates/${encodeURIComponent(id)}/geocoding/apply`,
-  reviewedEvents: '/reviewed-events',
-  replay: (id: string) => `/ai/replays/${encodeURIComponent(id)}`,
+// Every backend path in one place (relative to environment.api.baseUrl). See api/live_router.py.
+export const ENDPOINTS = {
+  liveStatus: '/live/status',
+  liveDataset: '/live/dataset',
+  // Served by the UI itself (public/data), relative to <base href>.
+  cameras: 'data/cameras.json',
 } as const;
 
-export const ENDPOINTS = {
-  publicationLatest: { http: BACKEND_ENDPOINTS.latestPublication },
-  publication: { http: BACKEND_ENDPOINTS.publication },
-  locationDossier: { http: BACKEND_ENDPOINTS.locationDossier },
-  locationExport: { http: BACKEND_ENDPOINTS.locationExport },
-  manifest: { http: '/manifest', mock: 'data/manifest.json' },
-  accidents: { http: '/accidents', mock: 'data/accidents.json' },
-  hotspots: { http: '/hotspots', mock: 'data/hotspots.json' },
-  crossings: { http: '/crossings', mock: 'data/crossings.geojson' },
-  measures: { http: '/measures', mock: 'data/measures.json' },
-  extract: { http: '/extract', mock: 'data/replay/extract-001.json' },
-  cameras: { http: '/cameras', mock: 'data/cameras.json' },
-  review: { http: (id: string) => `/events/${id}/review` },
-  report: { http: (ids: string[]) => `/report?ids=${ids.join(',')}` },
+export const VISION_ENDPOINTS = {
+  status: '/vision/status',
+  sessions: '/vision/sessions',
+  session: (id: string) => `/vision/sessions/${encodeURIComponent(id)}`,
+  frames: (id: string) => `/vision/sessions/${encodeURIComponent(id)}/frames`,
 } as const;

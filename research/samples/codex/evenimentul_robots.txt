@@ -1,0 +1,68 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /app/cache/
+Disallow: /tmp/
+Disallow: /search
+
+Disallow: /stiri/Turism/cele-mai-spectaculoase-insule-din-grecia--37699.html
+Disallow: /stiri/categnume/asd--37699.html 
+
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_dosar.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_cultura.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_invatamant.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_sanatate.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_politica.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_sport.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_economie.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_moldova.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_fata-zilei.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_interviu.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_editorial.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_turism.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_reportaj.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_lifestyle.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_stiinta-si-tehnica.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_mistic.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_tabloid.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_timp-liber.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_auto.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_foto-video.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_actualitate.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/stiri_bancul-zilei.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_servicii.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_auto.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_locuri-de-munca.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_funerare.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_diverse-alte-anunturi.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_imobiliare.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_matrimoniale.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_imobiliare-inchirieri.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_anunturi-speciale.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/anunt_licitatii.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/general.xml
+Sitemap: https://www.ziarulevenimentul.ro/app/xml/news-sitemap.xml
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+User-agent: SemrushBot
+Crawl-delay: 10
+User-agent: MJ12bot
+Crawl-delay: 10
+User-agent: DotBot
+Crawl-delay: 10
+
+# OpenAI
+User-agent: GPTBot
+Allow: /stiri/
+Disallow: /anunturi/
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /stiri/
+Disallow: /anunturi/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /stiri/
+Disallow: /anunturi/

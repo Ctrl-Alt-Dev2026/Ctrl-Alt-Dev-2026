@@ -1,0 +1,13 @@
+{
+  "endpoint": "https://www.7iasi.ro/wp-json/wp/v2/posts?search=accident&per_page=1&_fields=id,date,link,title,content&order=asc&orderby=date",
+  "status": 200,
+  "oldest_matching_post": {
+    "id": 225,
+    "date": "2013-04-23T11:50:05",
+    "link": "https://www.7iasi.ro/accident-pe-dn-1-la-romanesti-traficul-este-restrictionat/",
+    "title": {
+      "rendered": "Accident pe DN 1, la Româneşti. Traficul este RESTRICŢIONAT"
+    }
+  },
+  "retention_note": "Article body removed; this is the oldest returned keyword match, not the publisher founding date."
+}

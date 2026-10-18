@@ -1,0 +1,127 @@
+@if (store.selectedStreet(); as s) {
+  <header>
+    <button type="button" class="back" (click)="store.selectedStreetId.set(null)">← Toate străzile</button>
+    <h2>{{ s.properties.nume }}</h2>
+  </header>
+
+  <div class="sources">
+    <section class="source">
+      <h3>Intervenții ISU</h3>
+      <p class="figure">{{ s.properties.isu_evenimente }}</p>
+      <p class="muted">oct. 2024 – oct. 2026@if (s.properties.isu_deces > 0) {, {{ s.properties.isu_deces }} cu decese}@if (s.properties.isu_grav > 0) {, {{ s.properties.isu_grav }} cu răniți grav}</p>
+    </section>
+    <section class="source">
+      <h3>Relatări în presă</h3>
+      <p class="figure">{{ s.properties.presa_evenimente }}</p>
+      <p class="muted">BZI, Ziarul de Iași, 2026</p>
+    </section>
+    <section class="source">
+      <h3>Accidente IPJ</h3>
+      @if (s.properties.pmud_2021 !== null) {
+        <p class="figure">{{ s.properties.pmud_2020 }}<small> / </small>{{ s.properties.pmud_2021 }}</p>
+        <p class="muted">2020 / 2021, PMUD</p>
+      } @else {
+        <p class="figure muted">—</p>
+        <p class="muted">nu apare în PMUD</p>
+      }
+    </section>
+  </div>
+  <p class="note muted">Sursele nu se adună: ISU numără intervențiile pompierilor, presa ce a relatat, IPJ accidentele înregistrate de poliție. Același accident poate apărea în mai multe.</p>
+  @if (s.properties.pmud_nota) {
+    <p class="note muted">Potrivire PMUD: {{ s.properties.pmud_nota }}</p>
+  }
+
+  <h3 class="list-title">Evenimente pe această stradă</h3>
+  @if (store.streetEvents().length === 0) {
+    <p class="empty">Niciun eveniment cu filtrul selectat.</p>
+  } @else {
+    <ol class="events">
+      @for (a of store.streetEvents(); track a.event_id) {
+        <li>
+          <p class="when">
+            <span class="tag" [attr.data-src]="a.sursa_tip">{{ a.sursa_tip === 'presa' ? 'Presă' : 'ISU' }}</span>
+            @if (a.data_eveniment) {
+              <b>{{ dateRo(a.data_eveniment) }}</b>, {{ a.ora ?? 'oră necunoscută' }}
+            } @else {
+              <b>dată necunoscută</b>@if (a.publicat_la) {, publicat {{ dateRo(a.publicat_la) }}}
+            }
+            <span class="sev" [attr.data-g]="a.gravitate">{{ gravitate[a.gravitate] }}</span>
+          </p>
+          <p class="muted">
+            @for (p of a.participanti; track p; let last = $last) {{{ participantLabel(p) }}@if (!last) {, }}
+            @if (a.participanti.length === 0) {participanți nemenționați}
+            · {{ precise.has(a.precizie_loc) ? 'loc precis' : 'doar strada' }}
+            @if (sameAs(a); as same) { · {{ same }}}
+          </p>
+          @if (a.dovezi['gravitate']; as quote) {
+            <blockquote>„{{ quote }}”</blockquote>
+          }
+          <p class="links">
+            @for (url of a.urls; track url; let i = $index) {
+              <a [href]="url" target="_blank" rel="noopener">{{ linkLabel(a, i) }}</a>
+            }
+          </p>
+        </li>
+      }
+    </ol>
+  }
+} @else {
+  <header>
+    <h2>Străzi</h2>
+    <div class="metric" role="group" aria-label="Sursa afișată pe hartă și în listă">
+      @for (m of metrics; track m) {
+        <button type="button" [attr.aria-pressed]="store.streetMetric() === m" (click)="setMetric(m)">{{ sourceLabel[m] }}</button>
+      }
+    </div>
+    @switch (store.streetMetric()) {
+      @case ('isu') { <p class="muted">Intervenții ale pompierilor la accidente rutiere, oct. 2024 – oct. 2026, din comunicatele ISU Iași.</p> }
+      @case ('presa') { <p class="muted">Accidente relatate de BZI și Ziarul de Iași în 2026. Extracție provizorie cu reguli, până la rezultatul modulului AI.</p> }
+      @case ('pmud') { <p class="muted">Accidente pe artere, date IPJ Iași publicate în PMUD Iași 2022 (tabelul 2.11), ordonate după 2021.</p> }
+    }
+  </header>
+
+  @if (store.rankedStreets().length === 0) {
+    <p class="empty">Nicio stradă cu date în această sursă și cu filtrul selectat.</p>
+  } @else {
+    <ol class="streets">
+      @for (f of store.rankedStreets(); track f.properties.id) {
+        <li>
+          <button type="button" (click)="store.selectedStreetId.set(f.properties.id)">
+            <span class="body">
+              <span class="name">{{ f.properties.nume }}</span>
+              <span class="meta">
+                @switch (store.streetMetric()) {
+                  @case ('pmud') { 2020: {{ f.properties.pmud_2020 }} · 2021: {{ f.properties.pmud_2021 }} · ISU: {{ f.properties.isu_evenimente }} }
+                  @case ('presa') { {{ count(f.properties.id) }} {{ count(f.properties.id) === 1 ? 'relatare' : 'relatări' }} · ISU: {{ f.properties.isu_evenimente }} }
+                  @default { {{ count(f.properties.id) }} {{ count(f.properties.id) === 1 ? 'intervenție' : 'intervenții' }}@if (f.properties.pmud_2021 !== null) { · IPJ 2021: {{ f.properties.pmud_2021 }}} }
+                }
+              </span>
+            </span>
+            <span class="bar" aria-hidden="true"><i [style.inline-size.%]="(value(f.properties.id) / max()) * 100"></i></span>
+            <span class="value">{{ value(f.properties.id) }}</span>
+          </button>
+        </li>
+      }
+    </ol>
+  }
+
+  <footer class="muted">
+    @if (store.manifest()?.statistici; as st) {
+      @if (store.streetMetric() === 'presa') {
+        <p>{{ st['presa_evenimente'] }} accidente din {{ st['presa_articole'] }} articole reținute, {{ st['presa_municipiu'] }} în municipiu. Cele fără stradă nu apar în listă.</p>
+      } @else if (store.streetMetric() === 'isu') {
+        <p>
+          {{ st.evenimente_municipiu }} intervenții ISU în municipiu: {{ st.evenimente_municipiu - st.municipiu_fara_loc }} cu stradă cunoscută,
+          {{ st.municipiu_fara_loc }} fără stradă în comunicat (nu apar pe hartă).
+        </p>
+      }
+    }
+    <p>
+      Surse:
+      @for (src of sources(); track src.id; let last = $last) {
+        <a [href]="src.url" target="_blank" rel="noopener">{{ src.nume }}</a>@if (!last) { · }
+      }
+    </p>
+    <p>Un număr pe stradă nu e un risc pe kilometru: străzile lungi și aglomerate adună mai multe evenimente.</p>
+  </footer>
+}

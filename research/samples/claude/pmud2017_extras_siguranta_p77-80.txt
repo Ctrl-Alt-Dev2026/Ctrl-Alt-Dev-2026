@@ -1,0 +1,176 @@
+2.6.2 Siguranța în trafic
+
+Pentru polul de creștere Iași, Inspectoratul Județean de Poliție Iaşi – Serviciul
+Rutier a pus la dispoziție baza de date a accidentelor rutiere din perioada 2010 –
+2014 (v. Secțiunea 4.4).
+
+Deşi colectarea coordonatelor GPS a fost impusă începând cu anul 2011, această
+bază de date nu conține coordonatele în sistem GIS (decât pentru ultimele două
+luni ale anului 2014) care să poată permite localizarea cât mai precisă a
+accidentelor rutiere, ci doar descrierea locaţiilor în funcție de anumite repere. În
+această situație derularea procesului de identificare a tuturor punctelor sensibile
+de la nivelul rețelei rutiere/stradale analizate a fost extrem de dificilă.
+
+Figura 37: Distribuția accidentelor de circulație pe ansamblul rețelei stradale a municipiului Iași
+
+În tabelul de mai jos sunt prezentate statistici ale accidentelor rutiere din zona
+polului de creștere Iași, atât pentru zona urbană, cât și pentru localitățile din
+proximitate ce fac parte din polul de creștere.
+
+Nr.   Localitate  Număr accidente         Număr Decedați  Număr Răniți Grav           Număr Răniți Ușor
+Crt.
+                  2010 2011 2012 2013 2014 2010 2011 2012 2013 2014 2010 2011 2012 2013 2014 2010 2011 2012 2013 2014
+
+1 Aroneanu        03243000000123002023
+
+2 Bârnova         86445000106143349282
+
+3 Ciurea          14 12 9 7 19 3 3 0 1 0 8 2 1 6 9 7 16 11 8 15
+
+4 Holboca         11 8 9 10 11 1 0 0 0 0 4 4 2 2 2 7 5 8 9 13
+
+5 Iasi            420 468 415 419 470 10 8 7 9 8 129 127 124 125 124 347 443 374 381 415
+
+6 Lețcani         28 12 17 13 16 6 0 2 1 1 11 8 8 10 8 26 13 16 19 18
+
+7 Miroslava       15 12 18 14 17 3 1 4 13 0 5 1 11 3 10 16 15 18 11 11
+
+8 Popricani       17 14 7 16 10 0 1 2 1 0 7 6 2 8 2 18 20 13 16 14
+
+9 Rediu           25231000100101045211
+
+10 Schitu Duca 16 13 13 10 6 2 1 2 2 1 4 7 8 2 3 17 17 19 7 4
+
+11 Tomești        19 25 19 13 13 2 3 5 0 4 6 13 2 11 4 16 29 20 9 18
+
+12 Ungheni        30456000111011520334
+
+13 Valea Lupului 13 10 9 9 14 0 1 0 0 0 2 1 3 5 4 19 10 8 8 14
+
+14 Victoria       04111000000201102100
+
+Tabelul 12: Statistica generală a accidentelor rutiere zona polului de creștere Iași
+
+ PMUD Romania – Consorțiu Lot 2. Sep-17                                                             Pag. 77/403
+PMUD – Lot 2; Raport Final. PMUD Iași.Actualizare                                       Analiza situaţiei existente
+
+                    Număr accidente rutiere                          Număr persoane decedate în
+                                                                            accidente rutiere
+800
+
+600                                                    40
+
+                                               Iași    30
+
+400                                                    20                                      Iași
+
+200                                            Comune  10                                      Comune
+
+0                                                       0
+    2010 2011 2012 2013 2014                                 2010 2011 2012 2013 2014
+
+Figura 38: Statistici accidente rutiere şi persoane decedate în zona polului de creștere Iași
+
+               Număr persoane rănite grav în                         Număr persoane rănite ușor în
+                       accidente rutiere                                     accidente rutiere
+
+200                                                    800
+
+150                                                    600
+
+100                                            Iași    400                                       Iași
+
+50                                             Comune  200                                       Comune
+
+0                                                          0
+    2010 2011 2012 2013 2014                                   2010 2011 2012 2013 2014
+
+Figura 39: Statistici persoane rănite grav şi rănite uşor în accidente rutiere în zona polului de creștere Iași
+
+După cum se poate observa și din graficele de mai sus, mai bine de 60% din
+numărul de accidente rutiere au fost înregistrate în Iași, deși numărul persoanelor
+decedate este cu mult mai mic raportat la comunele din zona polului de creștere,
+unde viteza de circulație pe drumurile naționale/județene este mai mare, de unde
+și creșterea gravității accidentelor rutiere.
+
+Clasificarea accidentelor de circulație
+
+În baza datelor primite de la Direcția Rutieră Iași pentru perioada de analiză 2010-
+2014 s-a realizat o clasificare a accidentelor de circulație după modul de
+producere al acestora, conform tabelului de mai jos.
+
+Tip accident (mod             Număr accidente        Număr Decedați  Număr Răniți Grav   Număr Răniți Ușor
+
+          producere)          2010 2011 2012 2013 2014 2010 2011 2012 2013 2014 2010 2011 2012 2013 2014 2010 2011 2012 2013 2014
+
+Acroșare                      1 16 0 1 0 0 0 0 0 0 1 3 0 1 0 1 18 0 0 0
+
+Altele                        2 9 0 4 3 0 3 0 1 0 1 4 0 3 0 1 10 0 5 3
+
+Cadere in afara drumului      00002000000000000002
+
+Cădere din vehicul            8 7 7 3 30 3 0 0 0 0 5 3 7 2 14 4 5 3 5 23
+
+Cadere in vehicul             0 0 6 5 10 0 0 0 0 0 0 0 0 4 1 0 0 9 6 13
+
+Coliziune față-spate          25 33 25 26 39 1 1 1 2 0 12 14 7 8 3 12 23 20 21 42
+
+Coliziune frontală            91 44 30 27 32 5 3 1 0 1 29 6 9 4 7 76 39 29 25 29
+
+Coliziune în lanț             12 14 26 28 20 0 1 0 0 0 2 5 6 10 5 13 19 24 27 19
+
+Coliziune laterală            54 105 81 107 109 1 1 2 2 1 20 33 22 27 32 40 97 78 108 98
+
+Coliziune vehicul în staționare 6 19 13 1 9 0 2 0 0 1 3 6 7 0 4 4 15 14 1 10
+
+Coliziune urmata de rasturnare 0 0 10 6 6 0 0 0 0 0 0 0 1 2 0 0 0 10 5 6
+
+Derapare                      11100000000000011100
+
+Lovire animal                 01221000000100100220
+
+Lovire obstacol în afara
+
+carosabilului                 34 35 23 34 20 0 0 0 2 0 11 13 7 7 7 26 25 20 30 15
+
+Lovire obstacol pe carosabil  42713000000130041615
+
+Lovire pieton                 296 276 264 257 285 15 3 13 22 10 90 73 92 99 91 267 308 246 228 248
+
+Răsturnare                    32 30 34 26 23 2 4 5 1 2 8 12 7 14 10 33 25 34 18 19
+
+Tabelul 13: Clasificarea accidentelor rutiere în zona polului de creștere Iași
+
+ PMUD Romania – Consorțiu Lot 2. Sep-17                                                         Pag. 78/403
+PMUD – Lot 2; Raport Final. PMUD Iași.Actualizare  Analiza situaţiei existente
+
+Astfel, la nivelul polului de creștere Iași, cauza principală a accidentelor rutiere
+implică lovirea pietonilor, cu un număr total de 1379 accidente în urma cărora și-
+au pierdut viața 63 de persoane, 445 au fost grav rănite și alte 1297 au fost rănite
+ușor în perioada 2010-2014. Din păcate, deși până la nivelul anului 2013 s-au
+înregistrat scăderi ale numărului de accidente ce implicau pietoni, în 2014
+numărul lor a crescut din nou.
+
+Ca și frecvență și gravitate, următoarea cauză este reprezentată de coliziunea
+frontală dintre două autovehicule, cu un număr total de 224 accidente pentru
+perioada de analiză, cu 10 persoane decedate și 55 rănite ușor. Se poate observa
+însă o îmbunătățire a statisticilor pentru coliziunile frontale, cu o scădere de
+aproximativ 60% în ultimii 5 ani.
+
+Din păcate acest lucru nu se poate afirma și în cazul accidentelor produse prin
+coliziuni laterale, care s-au înregistrat în număr de 456 și au avut ca rezultat 7
+persoane decedate și 134 rănite grav. În urma analizei s-a constat că în ultimii 5
+ani s-a dublat numărul accidentelor rutiere care au avut la bază coliziunile
+laterale.
+
+O altă cauză a accidentelor rutiere ce este des ignorată o reprezintă lovirea unui
+obstacol în afara carosabilului. Au fost înregistrate 146 accidente rutiere în ultimii
+5 ani, cu 2 persoane decedate și 45 persoane rănite grav. Deși din punct de
+vedere statistic se poate observa o scădere a numărului de accidente ce au avut
+la bază această cauză, numărul persoanelor ce au avut de suferit a rămas
+aproape constant de-a lungul perioadei.
+
+Pentru a înțelege mai bine modul de producere al accidentelor rutiere de la nivelul
+polului de creștere Iași, este bine de avut în vedere și mediul în care au avut loc
+acestea – în localitate sau în afara localității, după cum este prezentat în graficele
+de mai jos:

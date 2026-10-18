@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width">
+    <title>
+            </title>
+    <meta name="author" content="http://www.wink.ro" />
+    <meta name="keywords"
+        content="" />
+    <meta name="description"
+        content="" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-mini.css">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800,800italic,600italic,700italic,600,300italic&subset=latin,latin-ext'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/ratp.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom-tmce.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/css/jquery.ui.custom.css">-->
+    <link rel="stylesheet" type="text/css" href="/css/public/jquery.nice-file-input.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!--		<script type="text/javascript" src="/js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/js/jquery.ui.min.js"></script>
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" src="/js/public/jquery.nice-file-input.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+    <!--		<script src="/js/zoom/jquery.panzoom.js"></script>
+		<script src="/js/zoom/jquery.mousewheel.js"></script>-->
+
+    <script type="text/javascript" src="https://rawgit.com/timmywil/jquery.panzoom/master/dist/jquery.panzoom.js">
+    </script>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-107116412-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="page">
+            <a class="logo" href="/"><img
+                    src="/images/sigla_ctp.svg" /></a>
+            <input type="checkbox" id="menu-aktivator">
+            <label class="menu-mobile" for="menu-aktivator" id="nav-icon4">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="menu-zone">
+                                <a class="menuelement "
+                    href="/">Acasă</a>
+                                <input type="radio" name="submenuradio"
+                    checked                    class="submenu-aktivator" id="submenu2" />
+                <label class="menuelement" for="submenu2">
+                    Despre                    <span class="opened-submenu">
+                                                <a class=""
+                            href="/despre/regie"
+                            title="Despre CTP">Despre CTP</a>
+                                                <a class=""
+                            href="/despre/chestionar"
+                            title="Chestionar">Chestionar</a>
+                                                <a class=""
+                            href="/despre/proiecte-colaborari"
+                            title="Proiecte și colaborări">Proiecte și colaborări</a>
+                                                <a class=""
+                            href="https://sctpiasi.ro/stiri/evenimente.html"
+                            title="Evenimente">Evenimente</a>
+                                                <a class=""
+                            href="/stiri"
+                            title="Știri">Știri</a>
+                                                <a class=""
+                            href="/informatii/calatorim"
+                            title="Cum călătorim">Cum călătorim</a>
+                                                <a class=""
+                            href="/informatii/controlul-calatorilor"
+                            title="Control">Control</a>
+                                                <a class=""
+                            href="/servicii/avize"
+                            title="Avize amplasament">Avize amplasament</a>
+                                                <a class="activ"
+                            href="/servicii/opendata"
+                            title="Open Data">Open Data</a>
+                                            </span>
+                </label>
+                                <input type="radio" name="submenuradio"
+                                        class="submenu-aktivator" id="submenu3" />
+                <label class="menuelement" for="submenu3">
+                    Interes public                    <span class="opened-submenu">
+                                                <a class=""
+                            href="/informatii/legislatie"
+                            title="Legislație">Legislație</a>
+                                                <a class=""
+                            href="/organizare"
+                            title="Organizare">Organizare</a>
+                                                <a class=""
+                            href="/cariere"
+                            title="Cariere">Cariere</a>
+                                                <a class=""
+                            href="/informatii/legislatie-si-documente"
+                            title="Declarații de avere și de interese">Declarații de avere și de interese</a>
+                                                <a class=""
+                            href="/interes"
+                            title="Informații de interes public">Informații de interes public</a>
+                                                <a class=""
+                            href="/integritate"
+                            title="Integritate instituțională">Integritate instituțională</a>
+                                                <a class=""
+                            href="/transparenta"
+                            title="Transparență decizională">Transparență decizională</a>
+                                                <a class=""
+                            href="/economic"
+                            title="Informații economice">Informații economice</a>
+                                            </span>
+                </label>
+                                <input type="radio" name="submenuradio"
+                                        class="submenu-aktivator" id="submenu4" />
+                <label class="menuelement" for="submenu4">
+                    Trasee                    <span class="opened-submenu">
+                                                <a class=""
+                            href="/trasee"
+                            title="Toate traseele">Toate traseele</a>
+                                                <a class=""
+                            href="/harta"
+                            title="Harta">Harta</a>
+                                                <a class=""
+                            href="/trasee/planificare"
+                            title="Planificare">Planificare</a>
+                                                <a class=""
+                            href="/trasee/conexiuni"
+                            title="Conexiuni">Conexiuni</a>
+                                                <a class=""
+                            href="/trasee/turistice"
+                            title="Obiective turistice">Obiective turistice</a>
+                                                <a class=""
+                            href="/trasee/traseul50"
+                            title="Traseul 50 aeroport">Traseul 50 aeroport</a>
+                                            </span>
+                </label>
+                                <input type="radio" name="submenuradio"
+                                        class="submenu-aktivator" id="submenu92" />
+                <label class="menuelement" for="submenu92">
+                    Tarife                    <span class="opened-submenu">
+                                                <a class=""
+                            href="/tarife/tarife-bilete-calatorie"
+                            title="Bilete și abonamente">Bilete și abonamente</a>
+                                                <a class=""
+                            href="/tarife/puncte-de-vanzare"
+                            title="Puncte de vânzare">Puncte de vânzare</a>
+                                                <a class=""
+                            href="/tarife/e-ticketing"
+                            title="Sistemul E-ticketing">Sistemul E-ticketing</a>
+                                                <a class=""
+                            href="/tarife/pos"
+                            title="Plata în mijlocul de transport">Plata în mijlocul de transport</a>
+                                                <a class=""
+                            href="/tarife/24pay"
+                            title="24pay">24pay</a>
+                                                <a class=""
+                            href="/tarife/24payelevi"
+                            title="24pay - elevi">24pay - elevi</a>
+                                                <a class=""
+                            href="/servicii/promovare"
+                            title="Publicitate">Publicitate</a>
+                                                <a class=""
+                            href="/servicii/itp"
+                            title="ITP">ITP</a>
+                                                <a class=""
+                            href="/servicii/inchirieri"
+                            title="Prestări servicii">Prestări servicii</a>
+                                            </span>
+                </label>
+                                <a class="menuelement "
+                    href="/guvernanta">guvernanță corporativă</a>
+                                <a class="menuelement "
+                    href="/contact">Contact</a>
+                            </div>
+            <div class="verde-lang">
+                                <span class="language-selector"><span>RO</span>
+                    <ul>
+                                                <li><a
+                                href="/en">EN</a>
+                        </li>
+                                            </ul>
+                </span>
+                                <span class="verde-info">TelVerde <b>0 800 110 427</b> <small>*gratuit în rețelele mobile și Telekom</small>
+
+                    <span class="social-container">
+                        <a href="https://www.facebook.com/ctpiasi/" target="_blank"><img
+                                src="/images/social-icons/facebook_2.png"></a>
+                        <a href="https://twitter.com/ctp_iasi" target="_blank"><img
+                                src="/images/social-icons/twitter.png"></a>
+                        <a href="https://www.linkedin.com/company/compania-de-transport-public-iasi/"
+                            target="_blank"><img src="/images/social-icons/linkedin.png"></a>
+                        <a href="https://www.instagram.com/ctpiasi/" target="_blank"><img
+                                src="/images/social-icons/instagram.png"></a>
+                        <a href="https://www.youtube.com/channel/UCph5qgVzSC-YdOpQhpX7b8A" target="_blank"><img
+                                src="/images/social-icons/youtube.png"></a>
+                    </span>
+
+                </span>
+            </div>
+            <div class="angled-border"></div>
+        </div>
+    </header>
+    <section class="headerpict">
+        <div class="page">
+            <div class="submenu"></div>
+            <div class="bg_image">
+                                <img alt="bg-picture" src="/images/headers/header_despre.jpg" />
+                                <!--<img alt="bg-picture" src="/images/headers/header_despre.jpg" />-->
+                <div class="wrapper_angle">
+                    <div class="angle-border2"></div>
+                </div>
+            </div>
+            <div class="search-route">
+                <h1>Unde vrei să ajungi?</h1>
+                <form action="/viewroute"
+                    method="POST">
+                    <span class="swapDirections" id="swapDirections"></span>
+                    <span class="relative block">
+                        <input id="plecare" type="text" name="plecare" placeholder="Plecare"
+                            value="" autocomplete="off" autofocus />
+                        <span id="departureCtp" class="autocomplete-options absolute hidden">
+                        </span>
+                    </span>
+                    <span class="relative block">
+                        <input id="sosire" type="text" name="sosire" placeholder="Sosire"
+                            value="" autocomplete="off" />
+                        <span id="arrivalCtp" class="autocomplete-options absolute hidden">
+                        </span>
+                    </span>
+                    <div class="szone">
+                        <input id="buton_form_search_route" type="submit" class="cauta_rute" value="Caută rute" disabled>
+                        <div style="clear:both"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+	<section class="inside pagetip2 specificpage82">
+		<div class="page centered palat">
+			<h1 class="mainh1">Portal de date deschise (Open Data) în transportul public ieșean</h1>
+												<div class="content">
+				<h1 style="text-align: left;">&nbsp;</h1>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><br />Compania de Transport Public Iaşi, alӑturi de Primӑria Municipiului Iaşi, anunţӑ implementarea platformei tranzy.ai ca instrument de management esenţial pentru digitalizarea şi organizarea activitӑţii, operaţiunilor, proceselor zilnice de planificare transport public şi informarea cӑlӑtorilor. CTP Iaşi acceseazӑ &icirc;n mod gratuit platforma şi funcţiile de bazӑ pentru organizare resurselor de exploatare: vehicule, şoferi, staţii, garaje ș.a. Utilizarea platformei permite CTP Iaşi sӑ automatizeze o serie de procese şi operațiuni zilnice pentru mai mult de 300 de vehicule şi resurse implicate &icirc;n transportul de cӑlӑtori, folosind, totodatӑ, şi o suitӑ de soluţii specifice activitӑţii de transport public, cu titlu gratuit spre utilizare, &icirc;n baza colaborӑrii cu tranzy.ai.</p>
+<p style="text-align: left;">Acest parteneriat strategic cu tranzy.ai inaugureazӑ şi un portal de Open Data prin care sunt puse la dispoziţie seturi de date legate de transportul &icirc;n comun din Iaşi - vehicule şi toate detaliile aferente &icirc;n timp real, staţii, rute ş.a. Datele publice deschise sunt datele care pot fi accesate, utilizate, refolosite și redistribuite gratuit şi liber de către oricine este interesat - supuse doar, cel mult, cerinței de atribuire și distribuire &icirc;n condiții similare.</p>
+<p style="text-align: left;">Seturile de date de transport publice deschise sunt furnizate &icirc;n format GTFS (General Transit Feed Standard), sunt date procesate, disponibile la interval de 20 secunde şi pot fi accesate pe <a href="https://tranzy.ai/opendata">https://tranzy.ai/opendata</a> . Informaţiile sunt extrase din platforma de management de flotӑ tranzy.ai pe care CTP Iaşi o opereazӑ şi sunt corelate direct cu toate operaţiunile pe care angajaţii CTP Iaşi le realizeazӑ zilnic &ndash; stabilirea traseelor şi a staţiilor aferente, stabilirea orarelor, planificarea şi alocarea la traseu.</p>
+<p style="text-align: left;"><br />Un exemplu de produs sau serviciu dezvoltat &icirc;n baza datelor publice deschise existente este harta live cu rute şi poziţia &icirc;n timp real a vehiculelor, lansatӑ odatӑ cu portalul Open Data. Harta poate fi consultatӑ pe www.sctpiasi.ro, cuprinde traseele tuturor mijloacelor de transport şi este disponibilӑ şi &icirc;n tranzy.app, odatӑ cu noul update disponibil pe Android şi iOS.</p>
+<p style="text-align: left;"><br />CTP Iaşi acceseazӑ &icirc;n mod gratuit spre utilizare, prin colaborarea cu tranzy.ai, şi o suitӑ de soluţii specifice activitӑţii de transport public, cum sunt: soluţia de management de flotӑ/software AVL, aplicaţie mobilӑ pentru dispeceri, soluţia de generare alerte de parcurs asociate traseelor, aplicaţia tranzy.app ce transformӑ &icirc;n beneficii procesele şi operaţiunile digitalizate ale operatorilor de transport public, dar şi portalul de date deschise (Open Data).</p>
+<p style="text-align: left;">Aplicaţia de mobil pentru călători &ndash; tranzy.app - este un exemplu de funcționalitate pe care platforma tranzy.ai o furnizează gratuit, prin procesarea datelor din soluții proprii, terțe și operarea lor &icirc;n timp real de către companiile și regiile de transport public. Tranzy.app este utilizată de peste 152.000 călători zilnic &icirc;n Iași, &icirc;n Cluj-Napoca şi, &icirc;ncep&acirc;nd din luna martie, şi &icirc;n Botoşani şi Municipiul Chişinӑu.</p>
+<p style="text-align: left;">Prin &icirc;ncheierea unui protocol de colaborare cu tranzy.ai pentru digitalizarea şi operarea proceselor de transport cӑlӑtori şi utilizarea unor instrumente software de managementul flotei, digitalizarea activelor şi operarea graficelor de transport şi a orarelor &icirc;n mod digital, oraşul Iaşi se alӑturӑ iniţiativei tranzy.ai de digitalizare a proceselor de mobilitate urbanӑ, platforma funcţion&acirc;nd cu datele critice din serviciile de GPS tracking furnizate &icirc;n prezent de Orange Business Services şi a datelor introduse şi operate de CTP Iaşi.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">Termeni și condiții:<br />&nbsp; &nbsp; &nbsp; 1. C.T.P. vă acordă drepturi scutite de redevențe și netransferabile pentru accesarea, vizualizarea și descărcarea &icirc;n masă a datelor furnizate.</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; 2. Datele nu pot fi folosite sau exploatate &icirc;n următoarele moduri:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a. pentru comunicarea, prin orice mijloace, de materiale publicitare sau de marketing (care includ, dar fără a se limita la acestea, servicii referitoare la mărcile UE) care se adresează unor anumite persoane fizice sau &icirc;ntreprinderi;</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b. &icirc;ntr-un mod care &icirc;ncalcă drepturile individuale sau de proprietate ale unor terți din datele respective descărcate;</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c. pentru orice acțiuni ilegale.</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; 3. C.T.P. &icirc;și rezervă toate drepturile de proprietate intelectuală de care beneficiază &icirc;n baza sa de date electronică.</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp;4. C.T.P. nu garantează corectitudinea sau integralitatea datelor și nici disponibilitatea permanentă a acestei opțiuni de descărcare, iar prin prezenta sunt excluse toate garanțiile sau interpretările implicite &icirc;n acest sens.</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; 5. C.T.P. nu are niciun fel de obligație, sarcină sau responsabilitate prin contract, prin declarații false sau prin alte cauze care decurge din descărcarea acestor date.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">&nbsp;</p>			</div>
+						<div style="clear:both"></div>
+		</div>	
+	</section>
+    <footer>
+        <div class="page ">
+            <div class="row">
+                <div class=" col-md-8 footer-left-content">
+                    <div class="footer-container">
+                        <h5>Navigare</h5>
+                        <span class="inline-block footer-navigation">
+                                                        <a class="" href="/"
+                                title="Prestări servicii">Acasă</a>
+                                                        <br /><br />
+                                                        <label class="block">Despre</label>
+                                                        <a href="/despre/regie"
+                                title="Despre CTP">Despre CTP</a><br>
+                                                        <a href="/despre/chestionar"
+                                title="Chestionar">Chestionar</a><br>
+                                                        <a href="/despre/proiecte-colaborari"
+                                title="Proiecte și colaborări">Proiecte și colaborări</a><br>
+                                                        <a href="https://sctpiasi.ro/stiri/evenimente.html"
+                                title="Evenimente">Evenimente</a><br>
+                                                        <a href="/stiri"
+                                title="Știri">Știri</a><br>
+                                                        <a href="/informatii/calatorim"
+                                title="Cum călătorim">Cum călătorim</a><br>
+                                                        <a href="/informatii/controlul-calatorilor"
+                                title="Control">Control</a><br>
+                                                        <a href="/servicii/avize"
+                                title="Avize amplasament">Avize amplasament</a><br>
+                                                        <a href="/servicii/opendata"
+                                title="Open Data">Open Data</a><br>
+                                                    </span><span class="inline-block footer-navigation">
+                                                        <label class="block">Interes public</label>
+                                                        <a href="/informatii/legislatie"
+                                title="Legislație">Legislație</a><br>
+                                                        <a href="/organizare"
+                                title="Organizare">Organizare</a><br>
+                                                        <a href="/cariere"
+                                title="Cariere">Cariere</a><br>
+                                                        <a href="/informatii/legislatie-si-documente"
+                                title="Declarații de avere și de interese">Declarații de avere și de interese</a><br>
+                                                        <a href="/interes"
+                                title="Informații de interes public">Informații de interes public</a><br>
+                                                        <a href="/integritate"
+                                title="Integritate instituțională">Integritate instituțională</a><br>
+                                                        <a href="/transparenta"
+                                title="Transparență decizională">Transparență decizională</a><br>
+                                                        <a href="/economic"
+                                title="Informații economice">Informații economice</a><br>
+                                                    </span><span class="inline-block footer-navigation">
+                                                        <label class="block">Trasee</label>
+                                                        <a href="/trasee"
+                                title="Toate traseele">Toate traseele</a><br>
+                                                        <a href="/harta"
+                                title="Harta">Harta</a><br>
+                                                        <a href="/trasee/planificare"
+                                title="Planificare">Planificare</a><br>
+                                                        <a href="/trasee/conexiuni"
+                                title="Conexiuni">Conexiuni</a><br>
+                                                        <a href="/trasee/turistice"
+                                title="Obiective turistice">Obiective turistice</a><br>
+                                                        <a href="/trasee/traseul50"
+                                title="Traseul 50 aeroport">Traseul 50 aeroport</a><br>
+                                                    </span><span class="inline-block footer-navigation">
+                                                        <label class="block">Tarife</label>
+                                                        <a href="/tarife/tarife-bilete-calatorie"
+                                title="Bilete și abonamente">Bilete și abonamente</a><br>
+                                                        <a href="/tarife/puncte-de-vanzare"
+                                title="Puncte de vânzare">Puncte de vânzare</a><br>
+                                                        <a href="/tarife/e-ticketing"
+                                title="Sistemul E-ticketing">Sistemul E-ticketing</a><br>
+                                                        <a href="/tarife/pos"
+                                title="Plata în mijlocul de transport">Plata în mijlocul de transport</a><br>
+                                                        <a href="/tarife/24pay"
+                                title="24pay">24pay</a><br>
+                                                        <a href="/tarife/24payelevi"
+                                title="24pay - elevi">24pay - elevi</a><br>
+                                                        <a href="/servicii/promovare"
+                                title="Publicitate">Publicitate</a><br>
+                                                        <a href="/servicii/itp"
+                                title="ITP">ITP</a><br>
+                                                        <a href="/servicii/inchirieri"
+                                title="Prestări servicii">Prestări servicii</a><br>
+                                                    </span><span class="inline-block footer-navigation">
+                                                        <a class="" href="/guvernanta"
+                                title="Prestări servicii">guvernanță corporativă</a>
+                                                        <a class="" href="/contact"
+                                title="Prestări servicii">Contact</a>
+                                                        <br /><br />
+                                                    </span>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-right-content">
+                    <div class="footer-container">
+
+                        <h5>Parteneri</h5>
+                        <a href="http://www.primaria-iasi.ro/" target="_blank"><img src="/images/primaria-iasi.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+                         <!--
+Test 20.03
+-->       
+        <div id="a11y-widget">
+  <button id="a11y-toggle"
+          aria-label="Open accessibility settings"
+          aria-haspopup="dialog"
+          aria-controls="a11y-panel"
+          aria-expanded="false">
+    ♿
+  </button>
+
+  <div id="a11y-panel"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="a11y-title"
+       hidden>
+<!--    <select id="language-select">-->
+<!--  <option value="ro">Română</option>-->
+<!--  <option value="en">English</option>-->
+<!--</select>-->
+
+    <div class="a11y-header">
+      <h2 id="a11y-title">Setări accesibilitate</h2>
+      <button id="a11y-close" aria-label="Close accessibility panel">✕</button>
+    </div>
+
+    <div class="a11y-option">
+      <button onclick="changeFont(1)" id="increase-text">Mărește text</button>
+      <button onclick="changeFont(-1)" id="decrease-text">Micșorează text</button>
+    </div>
+
+    <div class="a11y-option">
+      <label>
+        <input type="checkbox" data-option="contrast">
+        Mărește contrastul
+      </label>
+    </div>
+
+    <div class="a11y-option">
+      <label>
+        <input type="checkbox" data-option="grayscale">
+        Alb-negru
+      </label>
+    </div>
+
+    <div class="a11y-option">
+      <label>
+        <input type="checkbox" data-option="readable">
+        Ajustare font
+      </label>
+    </div>
+
+    <div class="a11y-option">
+      <label>
+        <input type="checkbox" data-option="underline">
+        Subliniază link-uri
+      </label>
+    </div>
+    <div class="a11y-option a11y-tts">
+  <strong>Text redat prin vorbire</strong>
+
+  <div class="tts-controls">
+    <button id="tts-play">▶ Play</button>
+    <button id="tts-pause">⏸ Pauză  </button>
+    <button id="tts-stop">⏹ Stop</button>
+  </div>
+
+  <label id="speed-label">
+    Viteză
+    <input type="range" id="tts-speed" min="0.5" max="2" step="0.1" value="1">
+  </label>
+</div>
+    <button class="a11y-reset" id="reset">Resetează setările</button>
+  </div>
+</div>
+<!--
+Test 20.03
+-->
+    <script>
+    /**
+     * Set some variables
+     */
+    var $oArrival = $('#sosire'),
+        $oDeparture = $('#plecare'),
+        iArrivalTimer,
+        iDepartureTimer,
+        autocompleteService,
+        sAutocompleteContainerID,
+        $oAutocompleteContainer,
+        oPlacesSources = {},
+        oSelectedStation = {},
+        minLength = 3,
+        sDepartureLatitude,
+        sDepartureLongitude,
+        sDepartureplace,
+        sArrivalLatitude,
+        sArrivalLongitude,
+        sArrivalPlace;
+
+
+    /**
+     * Create tabs
+     */
+    $("#check_tabs").tabs();
+
+    function is_touch_device() {
+        return 'ontouchstart' in window ||
+            navigator.maxTouchPoints;
+    };
+
+    $.urlParam = function(name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results == null) {
+            return null;
+        } else {
+            return decodeURI(unescape(results[1])) || 0;
+        }
+    }
+    var urlNominatim = 'https://m-nominatim.wink.ro/search/';
+
+
+
+
+    function displaySuggestions(suggestions) {
+        var bContainerIsHidden = true;
+
+        if (undefined != suggestions) {
+            $oAutocompleteContainer.removeClass('hidden');
+
+            // $oAutocompleteContainer.html('')
+
+            suggestions.forEach(function(item, i) {
+                $oAutocompleteContainer.append(
+                    '<span class="ctp-autocomplete inline-block width-100p border-box no-margin no-border" data-container-id="' +
+                    i + '" data-latitude="' + item.coords[0] +
+                    '" data-longitude="' + item.coords[1] + '">' + item.alias +
+                    '</span>');
+            });
+
+            bContainerIsHidden = false;
+        }
+    }
+
+    function loadStations($oInput) {
+        var sValue = $oInput.val();
+
+        $oAutocompleteContainer = $('#' + sAutocompleteContainerID);
+
+        $oAutocompleteContainer.addClass('hidden').html('');
+
+        $.get({
+            url: urlNominatim + sValue +
+                '?format=json&addressdetails=1&viewbox=27.450552,47.041204,27.747869,47.22012&bounded=1',
+            method: "GET",
+        }, function(b) {
+            var info = b;
+            var gasite = [];
+            var adaugate = [];
+
+            info = filterPlaces(info);
+            for (var i = 0; i < info.length; i++) {
+
+                gasite.push({
+                    // alias: generateAlias(info[i].address, info[i].type),
+                    alias: info[i].display_name,
+                    coords: [info[i].lat, info[i].lon]
+                })
+                if (undefined == oPlacesSources[sAutocompleteContainerID]) oPlacesSources[
+                    sAutocompleteContainerID] = {};
+                oPlacesSources[sAutocompleteContainerID].local = adaugate;
+                clearSameAlias(gasite);
+                displaySuggestions(gasite);
+            }
+            // launchMessage('reverseGeo', gasite)
+        })
+    }
+
+    function filterPlaces(adrese) {
+        return adrese.filter(filterByType);
+    }
+
+    function locationInPolygon(location) {
+        return ((location.lat > 47.0193 && location.lat < 47.2655) && (location.lon > 27.4499 && location.lon <
+            27.7214))
+    }
+
+    function filterByType(place) {
+        return !(place.type === 'administrative' || place.type === 'hamlet');
+    }
+
+    function clearSameAlias(adrese) {
+        for (var i = 0; i < adrese.length - 1; i++)
+            for (var j = 0; j < adrese.length; j++)
+                if (adrese[i].alias === adrese[j].alias) {
+                    adrese.splice(j, 1);
+                    j--;
+                }
+    }
+
+    function generateAlias(address, type) {
+        var deReturnat = '';
+        if (address[type] && type !== 'residential')
+            deReturnat += address[type] + ', ';
+        if (address.building)
+            deReturnat += address.building + ', ';
+        if (address.road) {
+            deReturnat += address.road + ', ';
+            if (address.house_number)
+                deReturnat += ' nr. ' + address.house_number + ', ';
+        }
+        if (address.suburb)
+            deReturnat += address.suburb + ', ';
+        if (address.city)
+            deReturnat += address.city + ', ';
+        return deReturnat.substr(0, deReturnat.length - 2);
+    }
+
+    function no_fill() {
+        return ($oArrival.val() != '' && $oDeparture.val() != '') ? false : true;
+    }
+
+    $oArrival.keydown(function(event) {
+        if (event.keyCode == 13) {
+            if ($($('.pac-container')[1]).find('.pac-item:first-child').length) {
+                var $oQuerySpan = $($('.pac-container')[1]).find('.pac-item:first-child').find(
+                    'span.pac-item-query');
+
+                $oArrival.val($oQuerySpan[0].innerText + ', ' + $oQuerySpan.next()[0].innerText);
+            }
+
+            if (no_fill()) {
+                event.preventDefault();
+
+                return false;
+            }
+        }
+    });
+
+    $oArrival.on('keyup', function(event) {
+        var $this = $(this);
+
+
+        if (iArrivalTimer)
+            clearTimeout(iArrivalTimer);
+
+        if ($this.val().length >= minLength) {
+
+            iArrivalTimer = setTimeout(function() {
+                sAutocompleteContainerID = 'arrivalCtp';
+                loadStations($this);
+            }, 250);
+        }
+
+    });
+
+    $oDeparture.keydown(function(event) {
+
+        if (event.keyCode == 13) {
+            if ($($('.pac-container')[0]).find('.pac-item:first-child').length) {
+                var valfinal = '',
+                    $oFirstChild = $($('.pac-container')[0]).find('.pac-item:first-child'),
+                    $oQuerySpan = $oFirstChild.find('span.pac-item-query');
+
+                $oFirstChild.trigger('click');
+            }
+
+            if (no_fill()) {
+                event.preventDefault();
+
+                return false;
+            }
+        }
+    });
+
+    $oDeparture.on('keyup', function(event) {
+
+        var $this = $(this);
+
+        if (iDepartureTimer)
+            clearTimeout(iDepartureTimer);
+
+        if ($this.val().length >= minLength) {
+
+            iDepartureTimer = setTimeout(function() {
+                sAutocompleteContainerID = 'departureCtp';
+                loadStations($this);
+            }, 250);
+        }
+
+    });
+
+    $('body').off('click', 'span.ctp-autocomplete').on('click', 'span.ctp-autocomplete', function() {
+        lat = '';
+        lng = '';
+        var $this = $(this);
+        console.log('Click autocomplete');
+        console.log( $this.data());
+        _addData($this)
+        $this.parent().html('').addClass('hidden');
+        return true;
+    });
+
+
+
+    function _addData($this, sLatitude, sLongitude, iAddCity) {
+        oSelectedStation[sAutocompleteContainerID] = {
+            latitude: $this.data('latitude'),
+            longitude: $this.data('longitude'),
+            place: $.trim($this.text())
+        };
+        console.log(sAutocompleteContainerID);
+        console.log(oSelectedStation);
+        switch (sAutocompleteContainerID) {
+            case 'arrivalCtp':
+                $('#sosire').val(oSelectedStation[sAutocompleteContainerID].place);
+                $('input.cauta_rute').focus();
+                break;
+            case 'departureCtp':
+                $('#plecare').val(oSelectedStation[sAutocompleteContainerID].place);
+                $('#sosire').focus();
+                break;
+            default:
+                break;
+                
+        }
+        if($('#plecare').val()!=='' && $('#sosire').val()!=='' && oSelectedStation['arrivalCtp'] && oSelectedStation['departureCtp']){
+            $('#buton_form_search_route').prop('disabled', false);
+            $('#buton_form_search_route').addClass('cauta_rute_hover');
+        }
+
+
+    }
+
+    $('#swapDirections').on('click', function() {
+        var sArrival = $oArrival.val();
+        sDepartureLatitude = $.urlParam('arrivalLatitude');
+        sDepartureLongitude = $.urlParam('arrivalLongitude');
+        sDepartureplace = $.urlParam('arrivalPlace');
+        sArrivalLatitude = $.urlParam('departureLatitude');
+        sArrivalLongitude = $.urlParam('departureLongitude');
+        sArrivalPlace = $.urlParam('departurePlace');
+
+        $oArrival.val($oDeparture.val());
+
+        $oDeparture.val(sArrival);
+    });
+
+    $('body').on('click', function(event) {
+        var $oEventTarget = $(event.target),
+            $oActivator = $('.submenu-aktivator:checked');
+
+        if (!$oEventTarget.is('.ctp-autocomplete')) $('.autocomplete-options').html('').addClass('hidden');
+
+
+
+                if ($oEventTarget.is('.menuelement')) {
+            $('.menuelement.activ').removeClass('activ');
+
+            var sRadioInput = $oEventTarget.attr('for');
+
+            if (undefined != sRadioInput) {
+                var $oRadioInput = $('#' + sRadioInput);
+
+                if ($oRadioInput.prop('checked')) {
+                    event.stopPropagation();
+
+                    event.preventDefault();
+
+                    $oRadioInput.prop('checked', false);
+
+                    return 1;
+                }
+            }
+        }
+    });
+
+    $('body').off('click', 'input.cauta_rute').on('click', 'input.cauta_rute', function(event) {
+
+
+        event.preventDefault();
+
+        event.stopPropagation();
+        var $this = $(this),
+            $oForm = $this.closest('form');
+        sDepartureLatitude = sDepartureLatitude == undefined ? '' : sDepartureLatitude;
+        sDepartureLongitude = sDepartureLongitude == undefined ? '' :
+            sDepartureLongitude;
+        sDepartureplace = sDepartureplace == undefined ? '' : sDepartureplace;
+        sArrivalLatitude = sArrivalLatitude == undefined ? '' : sArrivalLatitude;
+        sArrivalLongitude = sArrivalLongitude == undefined ? '' : sArrivalLongitude;
+        sArrivalPlace = sArrivalPlace == undefined ? '' : sArrivalPlace;
+
+        if (object_size(oSelectedStation) > 0) {
+
+            $.each(oSelectedStation, function(sContainerID, oCoordinates) {
+
+                if (sContainerID == 'departureCtp') {
+                    sDepartureLatitude = (oCoordinates.latitude ? oCoordinates.latitude : '');
+
+                    sDepartureLongitude = (oCoordinates.longitude ? oCoordinates.longitude : '');
+
+                    sDepartureplace = oCoordinates.place;
+                }
+
+                if (sContainerID == 'arrivalCtp') {
+                    sArrivalLatitude = (oCoordinates.latitude ? oCoordinates.latitude : '');
+
+                    sArrivalLongitude = (oCoordinates.longitude ? oCoordinates.longitude : '');
+
+                    sArrivalPlace = oCoordinates.place;
+                }
+            });
+        } else {
+            sArrivalPlace = $oArrival.val();
+
+            if (!sArrivalPlace.match(/Ia(s|ș)i/ig)) {
+                sArrivalPlace = 'Iasi,' + sArrivalPlace;
+
+                $oArrival.val(sArrivalPlace);
+            }
+
+            sDepartureplace = $oDeparture.val();
+
+            if (!sDepartureplace.match(/Ia(s|ș)i/ig)) {
+                sDepartureplace = 'Iasi,' + sDepartureplace;
+
+                $oDeparture.val(sDepartureplace);
+            }
+        }
+
+        var sOldAction = $oForm.attr('action');
+
+        $oForm.attr('action', sOldAction + '?departureLatitude=' + sDepartureLatitude + '&departureLongitude=' +
+            sDepartureLongitude + '&departurePlace=' + sDepartureplace + '&arrivalLatitude=' +
+            sArrivalLatitude + '&arrivalLongitude=' + sArrivalLongitude + '&arrivalPlace=' + sArrivalPlace);
+
+        $oForm.submit();
+    });
+
+    $( document ).ready(function() {
+
+        if($('#plecare').val()!=='' && $('#sosire').val()!==''){
+            $('#buton_form_search_route').prop('disabled', false);
+            $('#buton_form_search_route').addClass('cauta_rute_hover');
+        }
+
+    });
+    /**
+     * test 20.03
+     */
+     const toggleBtn = document.getElementById("a11y-toggle");
+const panel = document.getElementById("a11y-panel");
+const closeBtn = document.getElementById("a11y-close");
+const resetBtn = document.querySelector(".a11y-reset");
+let fontLevel = 0;
+
+toggleBtn.addEventListener("click", openPanel);
+closeBtn.addEventListener("click", closePanel);
+// const translations = {
+//   ro: {
+//     title: "Setări Accesibilitate",
+//     increase: "Mărește textul",
+//     decrease: "Micșorează textul",
+//     contrast: "Contrast ridicat",
+//     grayscale: "Tonuri de gri",
+//     readable: "Font lizibil",
+//     underline: "Subliniază link-urile",
+//     tts: "Text în vorbire",
+//     play: "Redă",
+//     pause: "Pauză",
+//     stop: "Stop",
+//     speed: "Viteză:",
+//     reset: "Resetează setările"
+//   },
+//   en: {
+//     title: "Accessibility Settings",
+//     increase: "Increase Text",
+//     decrease: "Decrease Text",
+//     contrast: "High Contrast",
+//     grayscale: "Grayscale",
+//     readable: "Readable Font",
+//     underline: "Underline Links",
+//     tts: "Text to Speech",
+//     play: "Play",
+//     pause: "Pause",
+//     stop: "Stop",
+//     speed: "Speed:",
+//     reset: "Reset Settings"
+//   }
+// };
+
+// const langSelect = document.getElementById("language-select");
+
+// function setLanguage(lang) {
+//   document.getElementById("title").innerText = translations[lang].title;
+//   document.getElementById("increase-text").innerText = translations[lang].increase;
+//   document.getElementById("decrease-text").innerText = translations[lang].decrease;
+//   document.getElementById("high-contrast").innerText = translations[lang].contrast;
+//   document.getElementById("grayscale").innerText = translations[lang].grayscale;
+//   document.getElementById("readable-font").innerText = translations[lang].readable;
+//   document.getElementById("underline-links").innerText = translations[lang].underline;
+//   document.getElementById("tts-title").innerText = translations[lang].tts;
+//   document.getElementById("tts-play").innerText = translations[lang].play;
+//   document.getElementById("tts-pause").innerText = translations[lang].pause;
+//   document.getElementById("tts-stop").innerText = translations[lang].stop;
+//   document.getElementById("speed-label").innerText = translations[lang].speed;
+//   document.getElementById("reset").innerText = translations[lang].reset;
+// }
+
+// // schimbare limbă
+// langSelect.addEventListener("change", (e) => {
+//   const lang = e.target.value;
+//   setLanguage(lang);
+//   localStorage.setItem("lang", lang);
+// });
+
+// // limbă implicită (salvată)
+// const savedLang = localStorage.getItem("lang") || "ro";
+// langSelect.value = savedLang;
+// setLanguage(savedLang);
+
+function openPanel() {
+  panel.hidden = false;
+  toggleBtn.setAttribute("aria-expanded", "true");
+  panel.querySelector("button, input").focus();
+  trapFocus(panel);
+}
+
+function closePanel() {
+  panel.hidden = true;
+  toggleBtn.setAttribute("aria-expanded", "false");
+  toggleBtn.focus();
+}
+
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && !panel.hidden) closePanel();
+});
+
+
+function changeFont(step){
+  fontLevel += step;
+  document.body.style.fontSize = (100 + fontLevel*10) + "%";
+  localStorage.setItem("fontLevel", fontLevel);
+}
+
+document.querySelectorAll("input[data-option]").forEach(input=>{
+  input.addEventListener("change", e=>{
+    const opt = e.target.dataset.option;
+    document.body.classList.toggle(opt, e.target.checked);
+    const page = document.getElementById("page-content");
+page.classList.toggle(opt, e.target.checked);
+  });
+});
+
+resetBtn.addEventListener("click", ()=>{
+  if(confirm("Reset all accessibility settings?")){
+  document.body.className="";
+  document.body.style.fontSize="100%";
+  localStorage.clear();
+  fontLevel=0;
+  location.reload();}
+});
+
+function trapFocus(element){
+  const focusable = element.querySelectorAll("button, input");
+  const first = focusable[0];
+  const last = focusable[focusable.length-1];
+
+  element.addEventListener("keydown", e=>{
+    if(e.key==="Tab"){
+      if(e.shiftKey && document.activeElement===first){
+        e.preventDefault();
+        last.focus();
+      } else if(!e.shiftKey && document.activeElement===last){
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+}
+
+(function(){
+  fontLevel=parseInt(localStorage.getItem("fontLevel"))||0;
+  document.body.style.fontSize=(100+fontLevel*10)+"%";
+
+  ["contrast","grayscale","readable","underline"].forEach(opt=>{
+    if(localStorage.getItem(opt)==="true"){
+        document.getElementById("page-content").classList.add(opt);
+    //   document.body.classList.add(opt);
+      document.querySelector(`[data-option="${opt}"]`).checked=true;
+    }
+  });
+})();
+let speech = null;
+
+function getTextToRead() {
+  const selection = window.getSelection().toString();
+  if (selection.length > 0) return selection;
+
+  return document.body.innerText;
+}
+
+document.getElementById("tts-play").addEventListener("click", () => {
+  if (speechSynthesis.speaking) speechSynthesis.cancel();
+
+  speech = new SpeechSynthesisUtterance(getTextToRead());
+
+  const speed = document.getElementById("tts-speed").value;
+  speech.rate = speed;
+
+  speech.lang = "ro-RO"; 
+
+  speechSynthesis.speak(speech);
+});
+
+document.getElementById("tts-pause").addEventListener("click", () => {
+  if (speechSynthesis.speaking) {
+    speechSynthesis.pause();
+  }
+});
+
+document.getElementById("tts-stop").addEventListener("click", () => {
+  speechSynthesis.cancel();
+});
+
+document.getElementById("tts-speed").addEventListener("input", (e) => {
+  localStorage.setItem("ttsSpeed", e.target.value);
+});
+
+(function(){
+  const savedSpeed = localStorage.getItem("ttsSpeed");
+  if(savedSpeed){
+    document.getElementById("tts-speed").value = savedSpeed;
+  }
+})();
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+Waze for Cities Data Program
+The Waze for Cities Data program is a free, two-way data exchange empowering public sector decision makers to
+achieve concrete community impact. Launched in October 2014 with 10 city partners, the program has expanded to
+over 1,500 partners including city, state, and country government agencies, academic institutions, and ﬁrst responders.
+
+
+
+
+                                                            +
+       WAZE provides real-time, anonymous,                                 PARTNERS provide real-time and advance
+         proprietary incident and slow-down                                 information on construction, crash, and
+    information directly from drivers themselves.                                     road closure data.
+
+
+
+
+Benefits
+TO WAZERS             The Waze map evolves with every driver and data point added. The Waze for Cities Data program
+                      provides drivers with information about major traffic events directly from the government entities that
+                      are managing streets and highways.
+
+
+
+
+TO PARTNERS           Situational awareness: Partners receive real-time incident information faster than other reporting
+                      methods and accurately pinpoint where incidents occur, creating faster response and clearing times,
+                      potentially saving lives.
+
+                      Two-way driver communication: Partners use Waze to inform drivers of major traffic events and
+                      drivers communicate back real-time road insights through the app.
+
+                      Infrastructure planning: Insights into locations with frequent congestion or hazards yields smarter
+                      urban planning.
+
+                      Community: Waze convenes partners online via in-person events to share best practices and
+                      exchange ideas to improve mobility in communities around the globe.
+
+                      Streamlining data inputs: Partners can utilize data standards designed by Waze for closure and
+                      incident reporting to reduce data fragmentation and promote transport and government data
+                      aggregation.
+
+
+
+
+   1900+                                 Motorway
+                                        Operators in                       40                             25+
+      partners on                       Europe and                 U.S. state departments              emergency
+    five continents                       LATAM                       of transportation            management agencies
+Getting Data from Waze
+FEEDS       TRAFFIC INCIDENTS INCLUDING:                    SYSTEM-GENERATED TRAFFIC JAMS:
+
+            Jams, crashes, hazards, construction,           Location and speed data associated with slow
+            potholes, roadkill, stopped vehicles,           downs below average speed for a particular
+            objects on road, and missing signs              segment for the time of day/day of week
+
+            Reported by our community of                    Identified by analyzing anonymized user
+            mobile users                                    GPS signals in aggregate
+
+
+
+GOOGLE      Waze for Cities data is available via feeds or Google Cloud. The Cloud integration provides Waze
+CLOUD       for Cities partners access to best-in-class data warehouse tool BigQuery and data visualization
+            tool Data Studio. These tools make our data easy to interpret and communicate to non-
+            technical audiences.
+
+            Partners have access to 1+ years of historical Waze traffic data via Cloud and can analyze up
+            to 1TB of data and store up to 10 GB of their own data for free each month. This integration
+            allows partners to securely and privately store and analyze their own data sets, marrying them
+            with Waze for Cities data as needed to find relationships and trends. As with all Google Cloud
+            partners and customers, Waze for Cities partners will remain in complete control of their data.
+
+
+
+
+Giving Data to Waze
+FROM        Waze asks that Waze for Cities Data             WAZE CAN ALSO ACCEPT UNIQUE DATA SETS ON:
+PARTNERS    partners share data about road closures
+                                                            1.   Crisis centers
+            (both planned and in real-time), traffic
+                                                            2.   Dynamic speed limits
+            incidents (construction, crashes, etc),
+                                                            3.   Business locations
+            and major traffic events (e.g. marathons,
+                                                            4.   Parking locations
+            parades, VIP visits, or disasters).
+                                                            5.   Real-time snow plow/garbage truck feeds
+
+
+
+
+  To get more information on the Waze for Cities program and see case
+  studies from our partners, visit waze.com/wazeforcities
+

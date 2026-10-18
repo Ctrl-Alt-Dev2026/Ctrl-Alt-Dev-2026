@@ -1,0 +1,18 @@
+{
+  "id": "salutiasi_rss",
+  "url": "https://www.salutiasi.ro/?s=accident&feed=rss2",
+  "checked_utc": "2026-10-17T21:33:55.466346+00:00",
+  "status": 200,
+  "final_url": "https://www.salutiasi.ro/?s=accident&feed=rss2",
+  "format": "application/rss+xml; charset=UTF-8",
+  "bytes": 48893,
+  "sample": {
+    "title": "Carnea, secretul unei vieți până la 100 de ani? Ce au descoperit cercetătorii despre vegetarieni",
+    "link": "https://salutiasi.ro/carnea-secretul-unei-vieti-pana-la-100-de-ani-ce-au-descoperit-cercetatorii-despre-vegetarieni/?utm_source=rss&utm_medium=rss&utm_campaign=carnea-secretul-unei-vieti-pana-la-100-de-ani-ce-au-descoperit-cercetatorii-despre-vegetarieni",
+    "pubDate": "Sat, 17 Oct 2026 00:16:11 +0000"
+  },
+  "full_content_characters": 6043,
+  "description_characters": 484,
+  "item_count": 10,
+  "retention_note": "Article bodies removed after feasibility inspection; source metadata retained."
+}

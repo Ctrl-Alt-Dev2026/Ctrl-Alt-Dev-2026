@@ -1,0 +1,109 @@
+// A drawer from the right edge, above the map and the panel.
+dialog {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(34rem, 100%);
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-m) 0 0 var(--radius-m);
+  color: var(--ink);
+  overflow: auto;
+  &::backdrop {
+    background: rgb(4 7 11 / 0.55);
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  h2 {
+    font-size: var(--step-2);
+  }
+}
+
+.rule {
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: var(--step--1);
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    padding: var(--space-4) 0;
+    border-top: var(--hair) solid var(--line);
+  }
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  h3 {
+    font-size: var(--step-1);
+  }
+}
+.rank {
+  font-size: var(--step-2);
+  font-weight: 700;
+  font-stretch: 75%;
+  color: var(--heat-3);
+  text-align: center;
+}
+
+.figures {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0 calc(2rem + var(--space-3));
+  div {
+    display: flex;
+    gap: var(--space-1);
+    align-items: baseline;
+  }
+  dt {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+  dd {
+    margin: 0;
+    font-weight: 700;
+    font-stretch: 75%;
+    font-size: var(--step-1);
+  }
+}
+
+h4,
+ul {
+  margin-left: calc(2rem + var(--space-3));
+}
+h4 {
+  margin-top: var(--space-3);
+  font-size: var(--step--1);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+ul {
+  margin-top: var(--space-1);
+  margin-bottom: 0;
+  padding-left: 1rem;
+  font-size: var(--step--1);
+  li + li {
+    margin-top: var(--space-1);
+  }
+}
+
+.empty,
+.foot {
+  font-size: var(--step--1);
+}
+.foot {
+  margin-top: var(--space-4);
+}

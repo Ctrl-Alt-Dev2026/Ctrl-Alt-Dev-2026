@@ -1,0 +1,19 @@
+# docker compose up --build  ->  http://localhost:8080
+# The api collects ISU releases and press articles at start and every 30 minutes into the `data` volume;
+# everyone who opens the page sees the same dataset. The first collection takes a few minutes.
+services:
+  api:
+    build: { context: ., dockerfile: deploy/api.Dockerfile }
+    environment:
+      SAFEIASI_REFRESH_MIN: "30"
+    volumes:
+      - data:/data
+    restart: unless-stopped
+  web:
+    build: { context: ., dockerfile: deploy/web.Dockerfile }
+    ports:
+      - "8080:80"
+    depends_on: [api]
+    restart: unless-stopped
+volumes:
+  data:

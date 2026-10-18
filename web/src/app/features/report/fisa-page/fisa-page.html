@@ -1,116 +1,106 @@
 <article class="sheet">
   <header>
     <h1>Fișă de verificare pentru primărie</h1>
-    @if (publication(); as p) {
-      <p>Accidente rutiere raportate în presă, {{ dateRo(p.period.start) }} – {{ dateRo(p.period.end) }}.</p>
-      <p>{{ p.events.length }} evenimente distincte din {{ publishedArticleCount() }} articole în versiunea publicată; {{ p.locations.length }} locații. Verificarea operatorului privește informațiile și asocierea, fără audit în teren.</p>
-      @if (p.data_mode === 'synthetic') {
-        <p class="synthetic"><strong>DATE SINTETICE.</strong> Scenariu fictiv, fără dovezi despre accidente sau infrastructură reale.</p>
-      }
-      <p class="version">Versiune: {{ p.snapshot_id }} · publicată local: {{ sourceDate(p.published_at) }}.</p>
-    } @else if (store.manifest(); as m) {
-      <p>Accidente rutiere raportate în presă, {{ dateRo(m.perioada[0]) }} – {{ dateRo(m.perioada[1]) }}. {{ m.nr_evenimente }} evenimente unice din {{ m.nr_articole }} articole.</p>
+    @if (store.manifest(); as m) {
+      <p>Străzile cu cele mai multe semnale independente în comunicatele ISU Iași, presa locală și totalurile IPJ din PMUD Iași 2022@if (period(); as p) {, {{ p }}}.</p>
       @if (m.data_mode === 'synthetic') {
         <p class="synthetic"><strong>DATE SINTETICE.</strong> Fișa nu descrie accidente reale.</p>
       }
-      <p>Prototip static; informațiile din această fișă nu reprezintă o publicare nouă din backend.</p>
+      <p class="version">Date colectate automat de server@if (builtAt(); as at) { la {{ at }}}; extrase cu reguli fixe, {{ m.nr_verificate }} verificate manual.</p>
     }
-    <p class="limits">Fișă de sprijin pentru verificare, fără certificarea unui audit rutier. Presa relatează selectiv: absența din date nu dovedește o zonă sigură. Scorul este o regulă de prioritizare pe eșantion, nu probabilitate validată de accident. Decizia aparține Comisiei de circulație.</p>
+    <p class="limits">Fișă de sprijin pentru verificare, fără certificarea unui audit rutier. Sursele nu se adună și pot descrie același accident; lipsa unui accident din date nu dovedește o zonă sigură. Ordinea e o regulă de verificare, nu un scor de risc. Decizia aparține Comisiei de circulație.</p>
     @if (store.state() === 'ready') {
-      <button type="button" class="btn primary no-print" (click)="print()">Tipărește rezumatul sau salvează PDF</button>
+      <button type="button" class="btn primary no-print" (click)="print()">Tipărește sau salvează PDF</button>
     }
   </header>
 
-  @if (publication(); as p) {
-    <fieldset class="selector no-print">
-      <legend>Locații incluse în rezumat</legend>
-      <div class="selection-actions">
-        <button type="button" class="btn" (click)="selectAll()">Toate</button>
-        <button type="button" class="btn" (click)="selectNone()">Niciuna</button>
-      </div>
-      @for (location of p.locations; track location.location_id) {
-        <label><input type="checkbox" [checked]="included(location.location_id)" (change)="toggle(location.location_id)" />{{ location.feature.properties.nume || location.location_id }} @if (location.rank === null) { <span>(neclasat)</span> }</label>
-      }
-      <p>{{ publishedRows().length }} locații selectate. Exporturile individuale includ sursele, dovezile și istoricul din versiunea afișată.</p>
-    </fieldset>
-    @if (unknownRequestedIds().length > 0) {
-      <p class="gaps">Locații absente din versiunea încărcată: {{ unknownRequestedIds().join(', ') }}.</p>
+  @if (store.state() === 'loading') {
+    <p role="status">Se încarcă datele…</p>
+  } @else if (store.state() === 'waiting') {
+    <p role="status">Prima colectare a serverului nu s-a încheiat. Fișa se completează automat după ea.</p>
+  } @else if (store.state() === 'error') {
+    <p role="alert">{{ store.error() }}</p>
+  } @else {
+    @if (streets().length > 0) {
+      <fieldset class="selector no-print">
+        <legend>Străzi incluse în fișă</legend>
+        <div class="selection-actions">
+          <button type="button" class="btn" (click)="selectAll()">Toate</button>
+          <button type="button" class="btn" (click)="selectNone()">Niciuna</button>
+        </div>
+        @for (s of streets(); track s.f.properties.id) {
+          <label><input type="checkbox" [checked]="included(s.f.properties.id)" (change)="toggle(s.f.properties.id)" />{{ s.f.properties.nume }}</label>
+        }
+        <p>{{ selectedStreets().length }} din {{ streets().length }} străzi selectate.</p>
+      </fieldset>
     }
 
-    @for (r of publishedRows(); track r.location.location_id) {
+    @for (s of selectedStreets(); track s.f.properties.id) {
       <section class="loc">
-        <h2>@if (r.location.rank !== null) { <span class="rank">{{ r.location.rank }}.</span> }{{ r.location.feature.properties.nume || r.location.location_id }}</h2>
-        <p class="score">@if (r.location.score !== null) { Scor în eșantion: {{ r.location.score }} } @else { Neclasat · scor necalculat } · {{ r.location.event_count }} evenimente distincte · {{ r.location.source_article_count }} articole</p>
-        <p>{{ r.location.score_details?.explicatie ?? 'Date insuficiente pentru clasament: sunt necesare minimum două evenimente la aceeași locație.' }}</p>
-        <h3>Dovezi și surse</h3>
+        <h2><span class="rank">{{ s.f.properties.prioritate }}.</span> {{ s.f.properties.nume }}</h2>
+        <p class="score">
+          ISU: {{ s.f.properties.isu_evenimente }} {{ s.f.properties.isu_evenimente === 1 ? 'intervenție' : 'intervenții' }} ·
+          presă: {{ s.f.properties.presa_evenimente }} {{ s.f.properties.presa_evenimente === 1 ? 'relatare' : 'relatări' }} ·
+          IPJ 2020 / 2021: @if (s.f.properties.pmud_2021 !== null) { {{ s.f.properties.pmud_2020 }} / {{ s.f.properties.pmud_2021 }} } @else { nu apare în PMUD }
+        </p>
+        <h3>De ce</h3>
+        <ul>@for (sig of s.f.properties.semnale; track sig.text) { <li>{{ sig.text }}</li> }</ul>
+        <h3>De verificat în teren</h3>
+        <ul>@for (c of s.f.properties.de_verificat; track c) { <li>{{ c }}</li> }</ul>
+        <h3>Evenimente și surse ({{ s.events.length }})</h3>
         <ul>
-          @for (event of r.events; track event.event_id) {
+          @for (e of s.events; track e.event_id) {
             <li class="event">
-              <strong>{{ dateRo(event.fields.data_eveniment) }}, {{ event.fields.ora | nullLabel: 'oră necunoscută' }}</strong>: „{{ event.fields.loc_text | nullLabel }}”.
-              <p>Cauză relatată: {{ cause(event.fields.cauza_raportata) | nullLabel: 'nespecificată' }}. Dovada localizării: {{ event.fields.location_evidence | nullLabel }}.</p>
-              <ul>
-                @for (article of event.source_articles; track article.article_id) {
-                  <li>
-                    @if (safeUrl(article.url); as url) {
-                      <a [href]="url" target="_blank" rel="noopener noreferrer">{{ article.titlu }}</a>
-                    } @else { <span>{{ article.titlu }} · {{ article.url }}</span> }
-                    <span class="source-meta">{{ article.sursa }} · publicat: {{ sourceDate(article.publicat_la) }} · colectat: {{ sourceDate(article.colectat_la) }}</span>
-                  </li>
-                }
-              </ul>
-            </li>
-          }
-        </ul>
-        <h3>Măsuri candidate</h3>
-        <p>Catalogul de măsuri cu surse și verificarea aplicabilității nu sunt încă integrate. Nu sunt estimate costuri sau efecte pentru această locație.</p>
-        @if (r.location.unknowns.length > 0) {
-          <p class="gaps">Necunoscute: {{ r.location.unknowns.join('; ') }}.</p>
-        }
-        @if (r.location.score_details?.date_lipsa?.length) {
-          <p class="gaps">Date lipsă: {{ r.location.score_details!.date_lipsa.join('; ') }}.</p>
-        }
-        <div class="exports no-print">
-          <a class="btn primary" [href]="r.htmlExport" target="_blank" rel="noopener noreferrer">Fișa completă HTML / tipărire</a>
-          <a class="btn" [href]="r.jsonExport">Descarcă dosarul JSON</a>
-        </div>
-      </section>
-    } @empty {
-      <p>Nicio locație selectată pentru rezumat.</p>
-    }
-    <footer>
-      <p>Context: {{ p.provenance.context.attribution }}. Lipsa unui tag OSM nu demonstrează absența infrastructurii.</p>
-      <p class="version">SHA-256 al versiunii: {{ p.content_sha256 }}</p>
-    </footer>
-  } @else if (store.state() === 'loading') {
-    <p role="status">Se încarcă versiunea publicată…</p>
-  } @else if (store.state() === 'error') {
-    <p role="alert">Nu există o versiune publicată disponibilă în modul ales. {{ store.error() }} Datele demonstrative nu sunt încărcate automat.</p>
-  } @else if (store.state() === 'empty') {
-    <p role="status">Nu există încă o versiune publicată în modul ales. Publică explicit evenimentele aprobate din ecranul de import pentru a genera fișele.</p>
-  } @else {
-    @for (r of rows(); track r.h.id) {
-      <section class="loc">
-        <h2><span class="rank">{{ r.rank }}</span> {{ r.h.nume }} <span class="score">scor {{ r.h.scor }}</span></h2>
-        <p>{{ r.h.explicatie }}</p>
-        <h3>Dovezi ({{ r.events.length }} evenimente)</h3>
-        <ul>
-          @for (e of r.events; track e.event_id) {
-            <li>
-              {{ dateRo(e.data_eveniment) }}, {{ e.ora | nullLabel: 'oră necunoscută' }}: „{{ e.loc_text }}”.
-              @for (url of e.urls; track url) {
-                @if (safeUrl(url); as source) { <a [href]="source" target="_blank" rel="noopener noreferrer">{{ url }}</a> }
+              <strong>{{ source(e) }}, {{ e.data_eveniment ? dateRo(e.data_eveniment) : 'dată necunoscută' }}, {{ e.ora | nullLabel: 'oră necunoscută' }}</strong>:
+              „{{ e.loc_text }}”. {{ gravitate[e.gravitate] }}; {{ participants(e) }}.
+              @for (url of e.urls; track url; let i = $index) {
+                @if (safeUrl(url); as link) { <a [href]="link" target="_blank" rel="noopener noreferrer">sursa {{ i + 1 }}</a> }
               }
             </li>
           }
         </ul>
-        <h3>Măsuri candidate și ce trebuie verificat</h3>
-        @for (m of r.measures; track m.measure_id) {
-          <p class="measure"><strong>{{ m.name }}</strong> ({{ m.cost | nullLabel: 'cost nedocumentat' }}). {{ m.motiv }}. De verificat: {{ m.de_verificat.join('; ') }}.</p>
-        } @empty { <p>Nicio măsură documentată pentru această locație.</p> }
-        @if (r.h.date_lipsa.length > 0) { <p class="gaps">Date lipsă: {{ r.h.date_lipsa.join('; ') }}.</p> }
+        @if (s.f.properties.pmud_nota) {
+          <p class="gaps">Potrivire PMUD: {{ s.f.properties.pmud_nota }}</p>
+        }
       </section>
     } @empty {
-      <p>Nicio locație de inclus în fișă.</p>
+      <p>{{ streets().length ? 'Nicio stradă selectată.' : 'Nicio stradă nu are cel puțin două semnale în datele actuale.' }}</p>
     }
+
+    @if (locations().length > 0) {
+      <h2 class="part">Locații cu scor (Planificare §5)</h2>
+      @for (r of locations(); track r.h.id) {
+        <section class="loc">
+          <h2><span class="rank">{{ r.rank }}.</span> {{ r.h.nume }} <span class="score">scor {{ r.h.scor }}</span></h2>
+          <p>{{ r.h.explicatie }}</p>
+          <h3>Dovezi ({{ r.events.length }} evenimente)</h3>
+          <ul>
+            @for (e of r.events; track e.event_id) {
+              <li>
+                {{ dateRo(e.data_eveniment) }}, {{ e.ora | nullLabel: 'oră necunoscută' }}: „{{ e.loc_text }}”.
+                @for (url of e.urls; track url; let i = $index) {
+                  @if (safeUrl(url); as link) { <a [href]="link" target="_blank" rel="noopener noreferrer">sursa {{ i + 1 }}</a> }
+                }
+              </li>
+            }
+          </ul>
+          <h3>Măsuri candidate și ce trebuie verificat</h3>
+          @for (m of r.measures; track m.measure_id) {
+            <p class="measure"><strong>{{ m.name }}</strong> ({{ m.cost | nullLabel: 'cost nedocumentat' }}). {{ m.motiv }}. De verificat: {{ m.de_verificat.join('; ') }}.</p>
+          } @empty { <p>Nicio măsură documentată pentru această locație.</p> }
+          @if (r.h.date_lipsa.length > 0) { <p class="gaps">Date lipsă: {{ r.h.date_lipsa.join('; ') }}.</p> }
+        </section>
+      }
+    }
+
+    <footer>
+      <p>
+        Surse:
+        @for (src of store.manifest()?.surse ?? []; track src.id; let last = $last) {
+          {{ src.nume }} (<a [href]="src.url" target="_blank" rel="noopener noreferrer">{{ src.url }}</a>)@if (!last) {; }
+        }
+      </p>
+      <p>Un număr pe stradă nu e un risc pe kilometru: străzile lungi și aglomerate adună mai multe evenimente.</p>
+    </footer>
   }
 </article>

@@ -6,21 +6,17 @@
   [selectedId]="store.selectedId()"
   [applied]="applied()"
   [rightInset]="rightInset()"
-  [flyToPoint]="addedPoint()"
   [cameras]="store.showCameras() ? store.cameras() : []"
   [selectedCameraId]="store.selectedCameraId()"
+  [streets]="store.streets().features"
+  [streetValue]="store.streetValue()"
+  [streetMetric]="store.streetMetric()"
+  [selectedStreetId]="store.selectedStreetId()"
+  (selectStreet)="openStreet($event)"
   (selectCamera)="store.selectedCameraId.set($event)"
   (select)="open($event)"
   (basemapFailed)="basemapFailed.set(true)"
 />
-
-@if (added(); as a) {
-  <div class="added glass" role="status">
-    <p><b>Eveniment adăugat pe hartă:</b> „{{ a.loc_text }}”. Confirmă că pinul e la locul potrivit.</p>
-    <p class="muted">Scorul locațiilor se actualizează la următoarea rulare a analizei.</p>
-    <button type="button" class="btn" (click)="dismissAdded()">Am verificat</button>
-  </div>
-}
 
 @if (basemapFailed()) {
   <p class="notice glass" role="status">Harta de bază nu s-a încărcat (fără internet?). Datele sunt afișate pe fundal simplu.</p>
@@ -32,19 +28,27 @@
 
 <aside class="panel glass" [class.collapsed]="!panelOpen()" aria-label="Locații">
   @if (store.state() === 'loading') {
-    <div class="dataset-status" role="status"><h2>Se încarcă publicația…</h2><p class="muted">Harta și dosarele vor folosi aceeași versiune.</p></div>
+    <div class="dataset-status" role="status"><h2>Se încarcă datele…</h2><p class="muted">Ultimul set colectat de server.</p></div>
   } @else if (store.state() === 'error') {
-    <div class="dataset-status" role="alert"><h2>Publicația este indisponibilă</h2><p>{{ store.error() }}</p><button type="button" class="btn" (click)="store.load()">Încearcă din nou</button><p><a routerLink="/import">Deschide importul și verificarea</a></p></div>
-  } @else if (store.state() === 'empty') {
-    <div class="dataset-status"><h2>Nicio versiune publicată</h2><p>În modul {{ store.isSynthetic() ? 'sintetic' : 'observat' }} nu există încă evenimente publicate. Aprobarea unui candidat nu îl publică automat.</p><a class="btn" routerLink="/import">Importă și verifică surse</a></div>
-  } @else if (store.selectedLocation(); as location) {
-    <app-location-dossier [locationId]="location.location_id" [hotspot]="store.selected()" [rank]="rank() || null" (close)="close()" />
+    <div class="dataset-status" role="alert"><h2>Serverul nu răspunde</h2><p>{{ store.error() }}</p><button type="button" class="btn" (click)="store.poll()">Încearcă din nou</button></div>
+  } @else if (store.state() === 'waiting') {
+    <div class="dataset-status" role="status"><h2>Prima colectare rulează</h2><p class="muted">Serverul descarcă comunicatele ISU și articolele de presă. Harta se completează singură când termină.</p></div>
   } @else if (store.selected(); as h) {
-    <app-location-dossier [hotspot]="h" [rank]="rank()" (close)="close()" />
+    <app-location-dossier [hotspot]="h" [rank]="rank() || null" (close)="close()" />
   } @else if (id()) {
-    <div class="dataset-status"><h2>Locație negăsită</h2><p>Identificatorul nu apare în versiunea publicată selectată.</p><button type="button" class="btn" (click)="close()">Înapoi la listă</button></div>
+    <div class="dataset-status"><h2>Locație negăsită</h2><p>Identificatorul nu apare în datele actuale.</p><button type="button" class="btn" (click)="close()">Înapoi la listă</button></div>
   } @else {
-    <app-hotspot-list [hotspots]="store.visibleHotspots()" [excludedCount]="approxCount()" (select)="open($event)" />
+    @if (hasStreets() && store.hotspots().length > 0) {
+      <div class="tabs" role="tablist" aria-label="Vedere">
+        <button type="button" role="tab" [attr.aria-selected]="view() === 'streets'" (click)="view.set('streets')">Străzi</button>
+        <button type="button" role="tab" [attr.aria-selected]="view() === 'locations'" (click)="view.set('locations')">Locații cu scor</button>
+      </div>
+    }
+    @if (showStreets()) {
+      <app-street-panel />
+    } @else {
+      <app-hotspot-list [hotspots]="store.visibleHotspots()" [excludedCount]="approxCount()" (select)="open($event)" />
+    }
   }
 </aside>
 
@@ -54,9 +58,16 @@
     <span class="ends"><span>mai puține</span><span>mai multe evenimente</span></span>
   </div>
   <ul>
-    <li><i class="rank-chip" aria-hidden="true">1</i>locație clasată (după scor)</li>
-    <li><i class="dot" aria-hidden="true"></i>eveniment localizat precis</li>
-    <li><i class="ring" aria-hidden="true"></i>localizat aproximativ, în afara clasamentului</li>
+    @if (hasStreets()) {
+      <li><i class="street" aria-hidden="true"></i>{{ streetLegend[store.streetMetric()] }}</li>
+    }
+    @if (store.hotspots().length > 0) {
+      <li><i class="rank-chip" aria-hidden="true">1</i>locație clasată (după scor)</li>
+    }
+    @if (store.mappable().length > approxCount()) {
+      <li><i class="dot" aria-hidden="true"></i>eveniment localizat precis</li>
+    }
+    <li><i class="ring" aria-hidden="true"></i>{{ hasStreets() ? 'eveniment pe stradă, loc exact necunoscut' : 'localizat aproximativ, în afara clasamentului' }}</li>
     @if (store.showCameras()) {
       <li><i class="cam" aria-hidden="true"></i>cameră publică (clic pentru imagine)</li>
     }
@@ -88,11 +99,9 @@
     </div>
     <div class="actions">
       <button type="button" class="btn list-toggle" [attr.aria-pressed]="panelOpen()" (click)="panelOpen.set(!panelOpen())">Listă</button>
-      @if (touring()) {
-        <button type="button" class="btn" (click)="stopTour()">Oprește turul</button>
-      } @else {
-        <button type="button" class="btn" (click)="startTour()" [disabled]="store.visibleHotspots().length === 0">
-          Tur prin top {{ store.visibleHotspots().length }}
+      @if (store.attentionStreets().length > 0) {
+        <button type="button" class="btn attention" (click)="attentionOpen.set(true)">
+          Străzi de verificat <b>{{ store.attentionStreets().length }}</b>
         </button>
       }
       @if (store.cameras().length > 0) {
@@ -106,3 +115,7 @@
     </div>
   </div>
 </div>
+
+@if (attentionOpen()) {
+  <app-attention-drawer (show)="openStreet($event)" (closed)="attentionOpen.set(false)" />
+}

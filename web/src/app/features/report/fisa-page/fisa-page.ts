@@ -1,11 +1,12 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
-import { BackendSession } from '../../../core/api/backend-session';
-import { CAUZA, dateRo, lei } from '../../../core/format/labels';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { dateRo, GRAVITATE, lei, participantLabel } from '../../../core/format/labels';
 import { NullLabelPipe } from '../../../core/format/null-label.pipe';
 import { Accident } from '../../../core/models/contract';
 import { DataStore } from '../../../core/state/data.store';
 
-// The server exports the complete dossier from the same immutable publication as this summary.
+const CLOCK = new Intl.DateTimeFormat('ro-RO', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Bucharest' });
+
+// Printable sheet from the same collected dataset as the map: the "Străzi de verificat" list, then any scored locations.
 @Component({
   selector: 'app-fisa-page',
   imports: [NullLabelPipe],
@@ -15,63 +16,71 @@ import { DataStore } from '../../../core/state/data.store';
 })
 export class FisaPage {
   protected readonly store = inject(DataStore);
-  private readonly session = inject(BackendSession);
-  readonly ids = input<string>();
-  private readonly chosen = signal<string[] | null>(null);
   protected readonly dateRo = dateRo;
-  protected readonly publication = this.store.publication;
-  protected readonly selectedIds = computed(() => this.chosen() ??
-    (this.ids()?.split(',').filter(Boolean) ?? this.store.locations().map((location) => location.location_id)));
-  protected readonly publishedRows = computed(() => {
-    const publication = this.publication();
-    if (!publication) return [];
-    const wanted = new Set(this.selectedIds());
-    return publication.locations.filter((location) => wanted.has(location.location_id)).map((location) => ({
-      location,
-      events: publication.events.filter((event) => location.event_ids.includes(event.event_id)),
-      jsonExport: this.session.exportUrl(location.location_id, 'json'),
-      htmlExport: this.session.exportUrl(location.location_id, 'html'),
+  protected readonly gravitate = GRAVITATE;
+  protected readonly participantLabel = participantLabel;
+  // null = every street on the list; a set once the user unticks one.
+  private readonly chosen = signal<Set<string> | null>(null);
+
+  protected readonly builtAt = computed(() => {
+    const at = this.store.builtAt();
+    return at ? CLOCK.format(new Date(at)) : null;
+  });
+  protected readonly period = computed(() => {
+    const p = this.store.manifest()?.perioada;
+    return p?.[0] && p[1] ? `${dateRo(p[0])} – ${dateRo(p[1])}` : null;
+  });
+  protected readonly streets = computed(() => {
+    const byId = this.store.accidentById();
+    return this.store.attentionStreets().map((f) => ({
+      f,
+      events: [...f.properties.isu_event_ids, ...f.properties.presa_event_ids]
+        .map((id) => byId.get(id))
+        .filter((a): a is Accident => !!a)
+        .sort((a, b) => (b.data_eveniment ?? b.publicat_la ?? '').localeCompare(a.data_eveniment ?? a.publicat_la ?? '')),
     }));
   });
-  protected readonly publishedArticleCount = computed(() =>
-    new Set(this.publication()?.events.flatMap((event) => event.article_ids) ?? []).size);
-  protected readonly unknownRequestedIds = computed(() =>
-    this.selectedIds().filter((id) => !this.store.locationById().has(id)));
-
-  // Explicit static demo mode keeps its original read-only sheet.
-  protected readonly rows = computed(() => {
-    const wanted = this.ids()?.split(',').filter(Boolean);
-    return this.store.ranked().map((h, i) => ({ h, rank: i + 1 }))
-      .filter(({ h }) => !wanted?.length || wanted.includes(h.id))
-      .map(({ h, rank }) => ({
-        h, rank,
-        events: h.event_ids.map((id) => this.store.accidentById().get(id)).filter((event) => !!event),
-        measures: h.masuri.map((measure) => {
-          const def = this.store.measureById().get(measure.measure_id);
-          const cost = def && def.cost_lei_min !== null && def.cost_lei_max !== null
-            ? `${lei(def.cost_lei_min)} – ${lei(def.cost_lei_max)}` : null;
-          return { ...measure, name: def?.nume ?? measure.measure_id, cost };
-        }),
-      }));
+  protected readonly selectedStreets = computed(() => {
+    const chosen = this.chosen();
+    return this.streets().filter((s) => !chosen || chosen.has(s.f.properties.id));
   });
+  protected readonly locations = computed(() => this.store.ranked().map((h, i) => ({
+    h,
+    rank: h.rank ?? i + 1,
+    events: h.event_ids.map((id) => this.store.accidentById().get(id)).filter((a): a is Accident => !!a),
+    measures: h.masuri.map((measure) => {
+      const def = this.store.measureById().get(measure.measure_id);
+      const cost = def && def.cost_lei_min !== null && def.cost_lei_max !== null
+        ? `${lei(def.cost_lei_min)} – ${lei(def.cost_lei_max)}` : null;
+      return { ...measure, name: def?.nume ?? measure.measure_id, cost };
+    }),
+  })));
 
   protected included(id: string): boolean {
-    return this.selectedIds().includes(id);
+    return this.chosen()?.has(id) ?? true;
   }
 
   protected toggle(id: string): void {
-    const selected = new Set(this.selectedIds());
-    if (selected.has(id)) selected.delete(id);
-    else selected.add(id);
-    this.chosen.set([...selected]);
+    const next = new Set(this.chosen() ?? this.streets().map((s) => s.f.properties.id));
+    if (next.has(id)) next.delete(id);
+    else next.add(id);
+    this.chosen.set(next);
   }
 
   protected selectAll(): void {
-    this.chosen.set(this.store.locations().map((location) => location.location_id));
+    this.chosen.set(null);
   }
 
   protected selectNone(): void {
-    this.chosen.set([]);
+    this.chosen.set(new Set());
+  }
+
+  protected source(a: Accident): string {
+    return a.sursa_tip === 'presa' ? 'Presă' : 'ISU';
+  }
+
+  protected participants(a: Accident): string {
+    return a.participanti.length ? a.participanti.map(participantLabel).join(', ') : 'participanți nemenționați';
   }
 
   protected safeUrl(value: string): string | null {
@@ -79,14 +88,6 @@ export class FisaPage {
       const url = new URL(value);
       return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? value : null;
     } catch { return null; }
-  }
-
-  protected sourceDate(value: string | null): string {
-    return value ? dateRo(value.slice(0, 10)) : 'dată necunoscută';
-  }
-
-  protected cause(value: Accident['cauza_raportata']): string | null {
-    return value ? CAUZA[value] : null;
   }
 
   protected print(): void {

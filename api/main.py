@@ -14,7 +14,9 @@ from ai.patterns.router import register_patterns
 from api.review_router import register_review
 from api.publication_router import register_publication
 from api.safecross_router import register_safecross
+from api.vision_router import register_vision
 from api.frontend import register_frontend
+from api.live_router import register_live, start_live
 from safecross.setup import MODEL_PATH
 from api.snapshots import SnapshotError, load_snapshot
 
@@ -57,7 +59,11 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
             application.state.snapshot = load_snapshot(directory)
         except SnapshotError as error:
             application.state.snapshot_error = error
+        # Collected ISU/press data, refreshed every 30 minutes when SAFEIASI_LIVE=1 (api/live_router.py).
+        scheduler = start_live(application)
         yield
+        if scheduler is not None:
+            scheduler.stop()
 
     application = FastAPI(
         title="SafeIași API", version="0.7.0", lifespan=lifespan,
@@ -139,7 +145,8 @@ def create_app(snapshot_directory: str | Path | None = None, review_directory: s
         return snapshot_or_error(request).events_payload()
 
     register_frontend(application, frontend_directory)
-    return register_publication(register_patterns(register_safecross(register_review(register_ai(application)))))
+    register_vision(application)
+    return register_live(register_publication(register_patterns(register_safecross(register_review(register_ai(application))))))
 
 
 app = create_app()
